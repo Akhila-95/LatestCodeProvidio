@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Providio Regression Test]">
+  <test thread-count="5" name="SmokeTest(failed)">
+    <classes>
+      <class name="browser.launchBrowsering">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="verifychromeBrowserLacuching"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- browser.launchBrowsering -->
+      <class name="testScripts.PaymentPageTests">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="VerifedThatAllTheErrorsInCreditCard"/>
+          <include name="VerifedThatPaymentDetails"/>
+          <include name="VerifedThatTheCreditcardWithValidDetails"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testScripts.PaymentPageTests -->
+      <class name="testScripts.LoginPageTest">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="VerifyingLoginWithValidCredentials"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testScripts.LoginPageTest -->
+    </classes>
+  </test> <!-- SmokeTest(failed) -->
+</suite> <!-- Failed suite [Providio Regression Test] -->

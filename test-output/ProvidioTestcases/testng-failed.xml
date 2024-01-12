@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ProvidioTestcases]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Automation(failed)">
+    <classes>
+      <class name="com.GuestUserWith_CreditCard.tc__Bundle_GcAndAllPromotions_Guest_InCC">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="bundle_GcAndAllPromotions"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_CreditCard.tc__Bundle_GcAndAllPromotions_Guest_InCC -->
+      <class name="com.GuestUserWith_CreditCard.tc__BySearchingProduct_GuestUser_InCC">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="bySearchingProduct"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_CreditCard.tc__BySearchingProduct_GuestUser_InCC -->
+      <class name="com.GuestUserWith_CreditCard.tc__ShippingAndBillingAddressDiffer_Guest_InCc">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="shippingAndBillingAddressDiffer_Guest"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_CreditCard.tc__ShippingAndBillingAddressDiffer_Guest_InCc -->
+    </classes>
+  </test> <!-- Automation(failed) -->
+</suite> <!-- Failed suite [ProvidioTestcases] -->

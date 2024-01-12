@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Providio Regression Test">
+
+	 <test name="SmokeTest">
+        <classes>
+			<class name="browser.launchBrowsering"/>
+			<!--  
+			   <class name="testScripts.FindAStoreTest"/>
+			 
+			 <methods>			  		                  
+             	<include name="verifyFindAStore"></include>
+                  
+             
+                </methods>
+             
+                <class name="testScripts.FooterPageTest"  />
+                	<methods> 
+                	
+                		 <include name ="verifyingResourceFooterLinks"> </include>
+                		 <include name="verifyingSubscriptionInFooter"></include> 
+                		 <include name= "verifyErrorMsgsInGiftCard"></include> 
+                		 <include name= "verifytheErrorsFromName_Recipients_confirmRecipientEMail"></include>
+                		 <include name= "verifyTheErrorsRecipientEmailAndConfirmEmail"></include>
+                		 <include name= "verifyErrorsForConfirmMail"></include>
+                		
+                		
+                	</methods>
+              
+           
+                <class name ="testScripts.CreateAccountPageTest"></class>
+                <methods>
+                  
+                	<include name= "verifyCreateAccountPage"></include>                               		           
+                	<include name="verifyEmailAndConfirmEmail"></include> 	
+                	<include name="verifyEmailAndConfirmEmail"></include>
+                	<include name="verifyPasswordMismatch"></include>
+                	<include name="verifyPhoneNumError"></include>
+                	<include name="verifyEmailformatError"></include>               	
+                	<include name= "verifyCreateAccountWithValidCredentials"></include> 
+                
+                </methods>
+               
+                -->
+              <!--
+              <class name ="testScripts.LoginPageTest"/>
+             <methods>
+   		
+             		<include name ="VerifyingLoginFailureWithIncorrectCredentials"/>          		       	
+             		 <include name ="VerifyingLoginFailureWithEmptyEmailAndPassword"/> 
+             		<include name ="VerifyingLoginFailureWithInvalidEmailFormat"/> 
+             		<include name ="VerifyingLoginFailureWithEmptyEmail"/> 
+             		<include name ="VerifyingLoginFailureWithEmptyPassword"/>     
+             		<include name ="VerifyingLoginWithValidCredentials"/> 
+             		 
+             </methods>
+            -->
+            <!--  
+                <class name="testScripts.ShippingAddressPageTests"/>       
+		     <methods>
+		     
+		     	  <include name="VerifedThatEnteredtheshippingDetailsInShippingPage" />	     	
+				  <include name="VerifedAllErrorsInShippingForm" />
+				  <include name="VerifedTheErrorsInFirstName" />
+				   <include name="VerifedTheErrorsInLastName" />
+				  <include name="VerifedTheErrorsAddress" />
+				  <include name="VerifedphoneNumberError" />
+				  <include name="VerifedWithValidAddress" />
+				
+			 </methods>
+			-->
+				<class name ="testScripts.PaymentPageTests"/> 
+				 <methods>
+					  <include name="VerifedThatPaymentDetails" />
+					  <include name="VerifedThatAllTheErrorsInCreditCard" />
+					   <!--<include name="VerifedThatThecardCvvAndExpErrorInCreditCard" /> 					
+					  <include name="VerifedThatThecardCvvErrorInCreditCard" />--> 
+					  <include name="VerifedThatTheCreditcardWithValidDetails" />
+				</methods>  
+				  
+			
+				
+        </classes>
+    </test>
+</suite>

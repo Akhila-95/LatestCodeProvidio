@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Providio Smoke Test]">
+  <test thread-count="5" name="SmokeTest(failed)">
+    <classes>
+      <class name="testScripts.HomePageTests">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="VerifedThatSearchFunctionality"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testScripts.HomePageTests -->
+      <class name="testScripts.MiniCartPageTests">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="VerifedThatCheckOutBtnClickInMiniCart"/>
+          <include name="VerifedThatViewCartBtnClickInMiniCart"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testScripts.MiniCartPageTests -->
+    </classes>
+  </test> <!-- SmokeTest(failed) -->
+</suite> <!-- Failed suite [Providio Smoke Test] -->

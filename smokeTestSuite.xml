@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Providio Smoke Test">
+
+	 <test name="SmokeTest">
+        <classes>
+			<class name="browser.launchBrowsering"/>
+			<class name="testScripts.HomePageTests"/>
+			 <methods>
+                    <include name="VerifedThatMegaMenuSelectionInHeaderSection" />
+                    <include name="VerifedThatSingInLink" />
+                    <include name="VerifedThatWishListLink" />
+                     <include name="VerifedThatSearchFunctionality" />
+                     <include name="VerifedThatGiftCardLink" />
+                    
+                    <include name="VerifedThatMIniCartBtnClick" />
+                    <!-- Add more method names if needed -->
+                </methods>
+			<class name="testScripts.ProductListingPageTest"/>
+			<methods>
+				 <include name="VerifedThatSortByFunctionalityInPLP" />
+			     <include name="VerifedThatFiltersFunctionalityInPLP" />
+                 <include name="VerifedThatResetFunctionalityInPLP" />
+			     <include name="VerifedThataddToWishListFunctionalityInPLP" />
+			     <include name="VerifedThatQuickshopBtnFunctionalityInPLP" />
+			     <include name="VerifedThatProductLinkFunctionalityInPLP" />
+			 </methods>
+			 <class name="testScripts.ProductDetailPageTest"/>
+		     <methods>
+				 <include name="VerifedThatWishlistFunctionalityInPDP" />
+			     <include name="VerifedThatAddtoCartFunctionalityInPDP" />
+			 </methods>
+			 <class name="testScripts.MiniCartPageTests"/>
+		     <methods>
+				 <include name="VerifedThatViewCartBtnClickInMiniCart" />
+			     <include name="VerifedThatCheckOutBtnClickInMiniCart" />
+			 </methods>
+			 <class name="testScripts.ViewCartPageTests"/>
+		     <methods>
+				 <include name="VerifedThatCheckOutBtnClickInViewCart" />
+			 </methods>
+			 <class name="testScripts.CheckOutPageTests"/>
+		     <methods>
+				 <include name="VerifedThatGuestLoginFuncitonalityInCheckOutPage" />
+			 </methods>
+			 <class name="testScripts.ShippingAddressPageTests"/>
+		     <methods>
+				 <include name="VerifedThatEnteredtheShippingAddressInShippingPage" />
+			 </methods>
+			 <class name="testScripts.PaymentPageTests"/>
+		     <methods>
+				 <include name="VerifedThatPaymentDetailsEnteredInPayMentPage" />
+			 </methods>
+			 <class name="testScripts.OrderDetailsTests"/>
+		     <methods>
+				 <include name="VerifedThatOrderIsPlaced" />
+			 </methods>
+			 
+        </classes>
+    </test>
+</suite>
