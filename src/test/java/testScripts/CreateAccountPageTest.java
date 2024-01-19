@@ -9,50 +9,44 @@ import tasks.CreateAccountPageTasks;
 public class CreateAccountPageTest extends baseClass{
 
 	
-
-	@Test
-	public static void verifyCreateAccountPage() throws Exception {
-		CreateAccountPageTasks.createAccPage();
-	}
-	
-	@Test
+	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	public static void verifyCreateAccountWithValidCredentials() throws Exception {
 		CreateAccountPageTasks.createAccountWithValidCredientials() ;
 	}
 	
 
-	@Test
+	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	public static void verifyEmailAndConfirmEmail() throws Exception {
 		CreateAccountPageTasks.validateEmailAndConfirmEmail();
 	}
 	
-	@Test
+	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	public static void verifyPasswordMismatch() throws Exception {
 		CreateAccountPageTasks.validatePasswordMismatch();
 	}
 	
-	@Test
+	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	public static void verifyemptyText() throws Exception {
 		CreateAccountPageTasks.validateEmptyText();
 	}
 	
-	@Test
+	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	public static void verifyPasswordStrength() throws Exception {
 		CreateAccountPageTasks.validatePasswordStrength();
 	}
 	
-	@Test
+	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	public static void verifyWithExistingAccount() throws Exception {
 		CreateAccountPageTasks.validatingWithExistingAccount();
 	}
 	
 
-	@Test
+	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	public static void verifyPhoneNumError() throws Exception {
 		CreateAccountPageTasks.validatingPhoneNumError();
 	}
 	
-	@Test
+	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	public static void verifyEmailformatError() throws Exception {
 		CreateAccountPageTasks.ValidatingEmailformatError();
 	}

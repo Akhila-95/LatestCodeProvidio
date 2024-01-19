@@ -6,31 +6,31 @@ import tasks.LoginPageTasks;
 
 public class LoginPageTest extends baseClass {
 
-	  @Test(groups = {"regression"})
+	  @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	    public void VerifyingLoginFailureWithIncorrectCredentials()throws Exception {
 		  LoginPageTasks.loginFailureWithIncorrectCredentials();
 	    }
 	  
-	  @Test(groups = {"regression"})
+	  @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	    public void VerifyingLoginFailureWithEmptyEmailAndPassword()throws Exception {
 		  LoginPageTasks.loginFailureWithEmptyEmailAndPassword();
 	    }
 
-	  @Test(groups = {"regression"})
+	  @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	    public void VerifyingLoginFailureWithInvalidEmailFormat()throws Exception {
 		  LoginPageTasks.loginFailureWithInvalidEmailFormat();
 	    }
-	  @Test(groups = {"regression"})
+	  @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	    public void VerifyingLoginFailureWithEmptyEmail()throws Exception {
 		  LoginPageTasks.verifyLoginFailureWithEmptyEmail();
 	    }
 	  
-	  @Test(groups = {"regression"})
+	  @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	    public void VerifyingLoginFailureWithEmptyPassword()throws Exception {
 		  LoginPageTasks.loginFailureWithEmptyPassword();
 	    }
 
-	  @Test(groups = {"regression"})
+	  @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	    public void VerifyingLoginWithValidCredentials()throws Exception {
 		  LoginPageTasks.verifyThatuserLogin();
 	    }

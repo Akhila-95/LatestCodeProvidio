@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +23,13 @@ public class CheckOutPage extends baseClass{
 	public WebElement getSelectGuestCheckoutBtn(){
 		return GuestCheckoutBtn;
 	}
+	
+	//Guest login btn
+		@FindBy(xpath ="//button[contains(text(), 'Guest Checkout')]")
+		List<WebElement> GuestCheckoutBtnList; 
+		public List<WebElement> getSelectGuestCheckoutBtnList(){
+			return GuestCheckoutBtnList;
+		}
 	
 	//Guest login email input
 	@FindBy(xpath ="//input[@id='email-guest']")

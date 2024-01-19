@@ -13,23 +13,20 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.providio.testcases.baseClass;
 
+import pageObjects.ProductListingPage;
+
+
 
 public class Actionsss extends baseClass{
 	
-	// To enter the text value in any input field
-		 public static void waitAndType(WebElement element, String value){
-			 element.sendKeys(value);
-		 }
-		  
-		 //to click the element
-//		 public static void click(WebElement element) {
-//			 element.click();
-//		 }
+	 private static ProductListingPage PLP = new ProductListingPage(driver);
+
+	static int addtoBagRandomIndex = 0;
 		 //to hower the action
 		 public static void hover(WebElement element) {
 		        Actions actions = new Actions(driver);
 		        actions.moveToElement(element).perform();
-		    }
+		 }
 
 		 // To click any button 
 		 public static void waitAndClick(WebElement element){		   
@@ -43,14 +40,8 @@ public class Actionsss extends baseClass{
 			 select.selectByValue(value);
 		 }
 		 
-		  // To click any button
-		    public static String waitAndVisibleGetText(WebElement locatorName) {
-			        Waits.waitAndVisibility(locatorName);
-			        String locatorNameText = "";
-			        locatorNameText = locatorName.getText();
-		        return locatorNameText;
-		    }
-		
+
+		 
 		 // for force click 
 		 public static void javascriptClick(WebElement element) throws Exception{
 				
@@ -82,7 +73,6 @@ public class Actionsss extends baseClass{
 		        js.executeScript("window.scrollBy(0, arguments[0])", value);
 		    }
 
-		    
 		    protected static String locatorNameText = "";
 
 		    // Scroll an element into view
@@ -116,40 +106,6 @@ public class Actionsss extends baseClass{
 		        }
 		    }
 
-		    public static void selectByOptions(List<WebElement> e) throws InterruptedException {    	
-  
-		     // Generate a random index to click on a link
-		        Random random = new Random();
-		        int randomIndex = random.nextInt(e.size());
-
-		        // Get the text of the randomly selected link
-		         selectedLinkText = e.get(randomIndex).getText();
-
-		         JavascriptExecutor js = (JavascriptExecutor)driver;
-				 js.executeScript("arguments[0].click();",e.get(randomIndex));
-		        // Click on the randomly selected link
-		       // e.get(randomIndex).click();   
-		        logger.info(selectedLinkText);
-
-		    }
-		    
-		    public  static void randomElementFromList(List<WebElement> e) throws InterruptedException {
-		    	// Use the Random class to generate a random index
-		        Random random = new Random();
-		     // Check if the list is not empty before generating a random index
-		        if (e.size() > 0) {
-		            int randomIndex = random.nextInt(e.size());
-		            
-		            WebElement randomElement = e.get(randomIndex);
-		            
-		            logger.info(randomElement);
-
-		            JavascriptExecutor js = (JavascriptExecutor) driver;
-		            js.executeScript("arguments[0].click();", randomElement);
-		            Thread.sleep(2000);
-		        }			
-			}
-		    
 		    // Check if a list of elements has a size greater than 0
 		    public static boolean elementSize(List<WebElement> locatorName) throws InterruptedException {
 		        boolean flag = false;
@@ -165,15 +121,9 @@ public class Actionsss extends baseClass{
 		    }
 
 		    // Scroll into view and click an element using JavaScriptExecutor
-		    public static boolean scrollIntoViewAndClick(WebElement element) {
-		        try {
-		            JavascriptExecutor executor = (JavascriptExecutor) driver;
-		            executor.executeScript("arguments[0].click();", element);
-		            return true;
-		        } catch (Exception e) {
-		            logger.error("Error while scrolling into view and clicking: " + e.getMessage());
-		            return false;
-		        }
+		    public static void scrollIntoCenterView(WebElement element) {
+		    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+
 		    }
 
 		    // Check if an element is displayed
@@ -218,12 +168,24 @@ public class Actionsss extends baseClass{
 		        return locatorNameText;
 		    }
 
+		    // Perform a mouse hover action on an element
+		    public static void mouseOverElement(WebElement element) {
+		        try {
+		            new Actions(driver).moveToElement(element).build().perform();
+		            Thread.sleep(1000);
+		            logger.info("Hovered on element ");
+
+		        } catch (Exception e) {
+		            e.printStackTrace();
+		        }
+		    }
 
 		    // Send keys to an element after clearing its existing content
 		    public static boolean sendKeys(WebElement ele, String value, String elementName) throws InterruptedException {
 		        Thread.sleep(2000);
 		        boolean flag = false;
 		        try {
+		        	test.info("Verify " + elementName +" of sendKeys");
 		            ele.clear();
 		            ele.sendKeys(value);
 		            logger.info("Successfully send keys of "+elementName);
@@ -235,7 +197,50 @@ public class Actionsss extends baseClass{
 		            return false;
 		        }
 		    }
+		    
+		 // Send keys to an element after clearing its existing content
+		    public static boolean SendKeys(WebElement ele, int input, String elementName) throws InterruptedException {
+		        Thread.sleep(2000);
+		        boolean flag = false;
+		        try {
+		        	test.info("Verify " + elementName +" of sendKeys");
+		            ele.clear();
+		            ele.sendKeys(Integer.toString(input));
+		            ele.sendKeys(Keys.ENTER);
+		            logger.info("Successfully send keys of " + elementName);
+		            test.pass("Successfully send keys of " + elementName);
+		            flag = true;
+		            return true;
+		        } catch (Exception e) {
+		            logger.info("Keys not sent to " + elementName);
+		            return false;
+		        }
+		    }
+		    // Switch to a frame by its ID
+		    public static boolean switchToFrameById(WebElement ele) {
+		        boolean flag = false;
+		        try {
+		            driver.switchTo().frame(ele);
+		            logger.info("frame with id ");
+		            flag = true;
+		            return true;
+		        } catch (Exception e) {
+		            return false;
+		        }
+		    }
 
+		    // Switch back to the default content
+		    public static boolean switchToDefault() {
+		        boolean flag = false;
+		        try {
+		            driver.switchTo().defaultContent();
+		            logger.info("switched to default ");
+		            flag = true;
+		            return true;
+		        } catch (Exception e) {
+		            return false;
+		        }
+		    }
 
 		    // Enter a random address from a dropdown
 		    public static void addressFromDropDown(WebElement locatorName) throws InterruptedException {
@@ -260,11 +265,102 @@ public class Actionsss extends baseClass{
 		        test.info("The address entered is " + shippingaddress);
 		    }
 		    
+		    public static void scrollUp() {
+		        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		        // Scroll up by a certain number of pixels or to the top of the page
+		        jsExecutor.executeScript("window.scrollTo(0, 0);");
+		    }
+		    
+		    public static void scrollDown() {
+		        JavascriptExecutor js = (JavascriptExecutor) driver;
+		        // Scroll up by a certain number of pixels or to the top of the page
+		        js.executeScript("window.scrollBy(0,500)");
+		    }
+		    
+		    public static void scrollMedium() {
+		        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		        // Scroll up by a certain number of pixels or to the top of the page
+		        jsExecutor.executeScript("window.scrollTo(0, 0);");
+		    }
+		    
+		 // Check if an element is displayed
+		    public static boolean countofElements(List<WebElement> ele) {
+				return ele.size()>0;
+		    }
+		    
+		    public static boolean DisplyedandClick(List<WebElement> ele) {
+				return ele.size()>0;
+		    }
+		    
+		    public  static void randomElementFromListScrollIntoView(List<WebElement> e) throws InterruptedException {
+				// Use the Random class to generate a random index
+		        Random random = new Random();
+		        int randomIndex = random.nextInt(e.size());
+		        WebElement randomElement= e.get(randomIndex);
+		        scrollIntoCenterView(randomElement);
+		        Thread.sleep(2000);
+		        CombinedClick(randomElement);			
+			}
+		
+		    
+		    public  static void randomElementFromList(List<WebElement> e) throws InterruptedException {
+				// Use the Random class to generate a random index
+		        Random random = new Random();
+		        int randomIndex = random.nextInt(e.size());
+		        WebElement randomElement= e.get(randomIndex);
+		        Thread.sleep(2000);
+		        CombinedClick(randomElement);			
+			}
+		    
+		    
+		    public  static void randomElementFromListHover(List<WebElement> e) throws InterruptedException {
+				// Use the Random class to generate a random index
+		        int randomIndex = random.nextInt(e.size());
+		        WebElement randomElement= e.get(randomIndex);
+		        scrollIntoCenterView(randomElement);
+		        Thread.sleep(2000);
+		        hover(randomElement);
+		        
+			}
+		    
+		    
+//		    
+//		    public  static void randomElementFromListforSortBy(List<WebElement> e ) throws InterruptedException {
+//				// Use the Random class to generate a random index
+//		        Random random = new Random();
+//		        int randomIndex = random.nextInt(e.size());
+//		        WebElement randomElement= e.get(randomIndex);
+//		        click(randomElement);	
+//		        Thread.sleep(3000);
+//		        nameofSelectedSortby = randomElement.getText();   
+//			}
+		    
+		    public static String waitAndVisibleGetText(WebElement locatorName) {
+		        Waits.waitAndVisibility(locatorName);
+		        String locatorNameText = "";
+		        locatorNameText = locatorName.getText();
+	            return locatorNameText;
+	    }
 		    public static void scrollUp(WebDriver driver) {
 		        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		        // Scroll up by a certain number of pixels or to the top of the page
 		        jsExecutor.executeScript("window.scrollTo(0, 0);");
 		    }
-		
+		   public static void selectByOptions(List<WebElement> e) throws InterruptedException {    	
+			     // Generate a random index to click on a link
+			        Random random = new Random();
+			        int randomIndex = random.nextInt(e.size());
+	 
+			        // Get the text of the randomly selected link
+			         selectedLinkText = e.get(randomIndex).getText();
+	 
+			         JavascriptExecutor js = (JavascriptExecutor)driver;
+					 js.executeScript("arguments[0].click();",e.get(randomIndex));
+			        // Click on the randomly selected link
+			       // e.get(randomIndex).click();   
+			        logger.info(selectedLinkText);
+	 
+			    }
+
 
 }

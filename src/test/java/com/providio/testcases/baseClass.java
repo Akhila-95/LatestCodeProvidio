@@ -58,6 +58,7 @@ public class baseClass {
 		protected static String   fakelastName = "";
 		protected static String   fakePhoneNum= "";
 		protected static String   fakeFullName= "";
+		protected  String   editedEmail= "";
 	
 		protected static String  addresses  = "";
 		
@@ -125,7 +126,6 @@ public class baseClass {
 	// Flags for tracking test state
 	protected static boolean isLoggedIn = false; // Flag indicating whether the user is logged in
 	protected static boolean isLogOut= true;
-	protected static boolean CheckoutProcessClick = false; // Flag indicating whether the checkout process was clicked
 	protected static boolean isBrowserLaunched = false; // Flag indicating whether the browser is launched
 
 	// Menu related variable

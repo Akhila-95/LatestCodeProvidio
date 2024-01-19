@@ -171,15 +171,49 @@ public class PaymentPage extends baseClass{
     
     @FindBy(css = "button.add-payment")
     private WebElement addPaymentCybersource;
-
     public WebElement getAddPaymentCybersource() {
         return addPaymentCybersource;
     }
+    
     @FindBy(xpath = "//input[@name='dwfrm_billing_creditCardFields_email']")
     private WebElement emailInReg;
-
     public WebElement getEmailInRegInCybersource() {
         return emailInReg;
+    }
+    
+    // errros msg in cybersource
+    @FindBy(xpath = "//div[contains(text(),'This field is required.')]")
+    private List<WebElement> errorMsgsInCybersource;
+    public List<WebElement> getErrorMsgsInCybersource() {
+        return errorMsgsInCybersource;
+    }
+    // errros msg in cybersource
+    @FindBy(xpath = "//div[contains(text(),'This field is required.')]")
+    private WebElement errorMsgInCybersource;
+    public WebElement getErrorMsgInCybersource() {
+        return errorMsgInCybersource;
+    }
+    
+    // error msg for sec code
+    @FindBy(xpath = "//div[contains(text(),'A security code is required.')]")
+    private WebElement errorMsgForSecurityCodeInCybersource;
+    public WebElement getErrorMsgForSecurityCodeInCybersource() {
+        return errorMsgForSecurityCodeInCybersource;
+    }
+    
+    
+    // error msg for card num
+    @FindBy(xpath = "//div[contains(text(),'Invalid Credit Card Number')]")
+    private WebElement errorMsgForInvalidCreditCardInCybersource;
+    public WebElement getErrorMsgForInvalidCreditCardInCybersource() {
+        return errorMsgForInvalidCreditCardInCybersource;
+    }
+    
+    // error msg for sec code
+    @FindBy(xpath = "//div[contains(text(),'Invalid Security Code')]")
+    private WebElement errorMsgForInvalidSecurityCodeInCybersource;
+    public WebElement getErrorMsgForInvalidSecurityCodeInCybersource() {
+        return errorMsgForInvalidSecurityCodeInCybersource;
     }
     
     
@@ -237,17 +271,31 @@ public class PaymentPage extends baseClass{
     }
     
     @FindBy(xpath = "//div[contains(text(),'Credit Card')]")
-    private List<WebElement> clickOnSalesforceCreditCard;
+    private List<WebElement> clickOnSalesforceCreditCardButton;
 
     public List<WebElement> getClickOnSalesforceCreditCard() {
-        return clickOnSalesforceCreditCard;
+        return clickOnSalesforceCreditCardButton;
     }
     @FindBy(xpath = "//div[contains(text(),'Credit Card')]")
-    private WebElement clickOnSalesforce;
+    private WebElement clickOnSalesforceButton;
 
     public WebElement getSalesforceCreditCard() {
-        return clickOnSalesforce;
+        return clickOnSalesforceButton;
     }
+    
+    @FindBy(xpath = "//div[contains(text(),'Your card number is invalid.')]")
+    WebElement salesforceCardInvalidError;
+    
+    public WebElement getSalesforceCardInvalidError() {
+    	return salesforceCardInvalidError;
+    }
+    @FindBy(css = "div.sfpp-payment-method-card-expiry-error")
+    WebElement salesforceExpInvalidError;
+    
+    public WebElement getSalesforceExpInvalidError() {
+    	return salesforceExpInvalidError;
+    }
+    
     
     
     //stripe
@@ -330,6 +378,13 @@ public class PaymentPage extends baseClass{
     public WebElement getStripeCreditCard() {
         return stripeCreditCard;
     }
+    @FindBy(id = "switch-to-saved-cards")
+    private WebElement switchToSavedCardsStripe;
+
+    public WebElement getswitchToSavedCardsStripe() {
+        return  switchToSavedCardsStripe;
+    }
+    
    
     
     
@@ -355,8 +410,73 @@ public class PaymentPage extends baseClass{
         return  salesforceCreditCardCvvError;
     }
 	
+    //STRIPE
+    //error messages in stripecarrd invalid card num
+    @FindBy(id="card-errors")
+    WebElement stripeCardInvalidCardError;
+    
+    public WebElement getStripeCardInvalidCardError() {
+    	return stripeCardInvalidCardError;
+    }
+    //error msg for incomplete EXP DATE details
+    @FindBy(id="card-errors")
+    WebElement stripeCardExpDateInvalid;
+    
+    public WebElement getStripeCardExpDateInvalid() {
+    	return stripeCardExpDateInvalid;
+    }  
+    
+   
+ 
+    //error msg for incomplete details
+    @FindBy(xpath="//div[@id='card-errors']")
+    WebElement stripeCardCardNumInComplete;
+    
+    public WebElement getStripeCardCardNumInComplete() {
+    	return stripeCardCardNumInComplete;
+    }
+    
+    //error msg for exp year
+    @FindBy(xpath="//div[@id='card-errors']")
+    WebElement stripeCardExpYearIncompleteError;
+    
+    public WebElement getStripeCardExpYearIncompleteError() {
+    	return stripeCardExpYearIncompleteError;
+    }
+    
+    //Error msg for incomplete details
+    @FindBy(id="card-errors")
+    WebElement stripeCardSecurityCodeIncomplete;
+    
+    public WebElement getStripeCardSecurityCodeIncompleteError() {
+    	return stripeCardSecurityCodeIncomplete;
+    } 
+    
+    //error msg for incomplete details
+    @FindBy(xpath="//div[contains(text(),'Your postal code is incomplete.')]")
+    WebElement stripeCardPostalCodeInComplete;
+    
+    public WebElement getStripeCardPostalCodeInComplete() {
+    	return stripeCardPostalCodeInComplete;
+    }
+    
+    
+    @FindBy(xpath="(//div[@id='new-card-form-container'])[2]")
+    WebElement clickOnStripeContainer;
+    
+    public WebElement getClickOnStripeContainer() {
+    	return clickOnStripeContainer;
+    }
+    
+    @FindBy(css="div.CardField-input-wrapper")
+    WebElement stripeContainer;
+    
+    public WebElement getstripeContainer() {
+    	return stripeContainer;
+    }
     @FindBy(xpath ="//button[contains(text(),'Place Order')]")
   	WebElement PlaceOrderBtn; 
+    
   	public WebElement getSelectPlaceOrderBtn(){
   		return PlaceOrderBtn;
   	} 
@@ -370,288 +490,105 @@ public class PaymentPage extends baseClass{
         return reviewOrderBtn;
     }
    
-	/*
-	//BrainTree credit card  of xpaths, actionMethods and passing card details
-	//braintree newcarddropdown 
-	@FindBy(xpath ="//select[@id='braintreeCreditCardList']")
-    WebElement newcard;
-	public void selectnewcardindropdown() throws InterruptedException {
-    Select newcardselect = new Select(newcard);
-    newcardselect.selectByIndex(0);
-    Thread.sleep(3000);
     
+    //adyen payment
+    @FindBy(xpath = "//li[@data-method-id='AdyenComponent']")
+    List<WebElement> adyenPayment;
+    
+    public List<WebElement> getAdyenPayment() {
+		return adyenPayment;
+	}
+    @FindBy(xpath = "//iframe[@title='Iframe for card number']")
+    WebElement adyenCardNumIframe;
+	public WebElement getAdyenCardNumIframe() {
+		return adyenCardNumIframe;
 	}
 	
-	//Braintree cardname
-	@FindBy(xpath ="//input[@id = 'cardholder-name']")
-	WebElement entercname;
-    public void setcardholdername() throws InterruptedException {	    	
-    	driver.switchTo().frame("braintree-hosted-field-cardholderName");
-    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", entercname);
-    	entercname.sendKeys("Test123");
-    	driver.switchTo().defaultContent();
-    }
-    //Braintree cardnumber 
-	@FindBy(xpath ="//input[@id = 'credit-card-number']")
-	WebElement entercnumber;
-    public void setcardnumber(  ) throws InterruptedException {	    	
-    	driver.switchTo().frame("braintree-hosted-field-number");
-    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", entercnumber);
-    	String[] cardNumbers = {
-
-                "378282246310005",
-     	       "371449635398431",
-     	       "36259600000004",
-     	       "6011000991300009",
-     	       "3530111333300000",
-     	       "6304000000000000",
-     	       "5555555555554444",	        
-     	      "2223000048400011",
-     	       "4111111111111111",
-     	       "4005519200000004",
-     	       "4009348888881881",
-     	       "4012000033330026",
-     	       "4012000077777777",
-     	       "4012888888881881",	        
-     	       "4217651111111119",
-     	       "4500600000000061",
-     	       "6243030000000001",
-     	       "6221261111117766",
-     	       "6223164991230014"
-                // Add more card numbers here
-            };
-
-    	// Generate a random index to select a card number
-       
-        int randomIndex = random.nextInt(cardNumbers.length);
-        // Send the randomly selected card number
-        entercnumber.sendKeys(cardNumbers[randomIndex]);
-    	
-    	driver.switchTo().defaultContent();
-    }
-    //Braintree cvv
-	@FindBy(xpath ="//input[@id = 'cvv']")
-	WebElement entercvv;
-    public void setcardcvv(  ) throws InterruptedException {	    	
-    	driver.switchTo().frame("braintree-hosted-field-cvv");
-    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  entercvv);
-    	entercvv.sendKeys("123");
-    	driver.switchTo().defaultContent();
-    }
-    //Braintree exp
-	@FindBy(xpath ="//input[@id = 'expiration']")
-	WebElement enterexp;
-    public void setcardexp(  ) throws InterruptedException {	    	
-    	driver.switchTo().frame("braintree-hosted-field-expirationDate");
-    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",enterexp);
-    	enterexp.sendKeys("1230");
-    	driver.switchTo().defaultContent();
-    }
-    
-    //Braintree savecardbutton
-	@FindBy(xpath ="//input[@id='braintreeSaveCreditCard']")
-	WebElement savebutton;
-    public void unchecksavecard(  ) throws InterruptedException {	    	
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
-    	js.executeScript("arguments[0].click();", savebutton);	
-    }
-    
-    
-    //Cybersource credit card Xpaths, actionMethods and passing the card details
-    
-    //CyberSource cardNumber
-    @FindBy(xpath ="//input[@id ='cardNumber']")
-    WebElement newCreditcard;
-    public void latestcardnumber() throws InterruptedException {	    	
-    	String[] cardNumbers = {
-   			 "4111 1111 1111 1111",
-		         "4242 4242 4242 4242",
-		         "5555 5555 5555 4444",
-		         "5200 8282 8282 8210",
-		         "3714 4963 539 8431"
-               // Add more card numbers here
-           };
-
-   	// Generate a random index to select a card number
-       
-       int randomIndex = random.nextInt(cardNumbers.length);
-       // Send the randomly selected card number
-       newCreditcard.sendKeys(cardNumbers[randomIndex]);
-        Thread.sleep(2000);
-    }
-    //CyberSource exp month
-    @FindBy(xpath ="//select[@id ='expirationMonth']")
-    WebElement newExpmonth;
-    public void latestExpDate(  ) throws InterruptedException {
-    	Select newcardselect = new Select(newExpmonth);
-        newcardselect.selectByIndex(9);
-        Thread.sleep(3000);
-
-    }
-    //CyberSource exp year
-    @FindBy(xpath ="//select[@id ='expirationYear']")
-    WebElement newExpYear;
-    public void latestExpYear(  ) throws InterruptedException {	
-    	Select newcardselect = new Select(newExpYear);
-        newcardselect.selectByIndex(7);
-        Thread.sleep(3000);
-    }
-    //CyberSource cvv
-    @FindBy(xpath ="//input[@id ='securityCode']")
-    WebElement newSceuritycode;
-    public void latestSceuritycode(  ) throws InterruptedException {	  
-    	newSceuritycode.sendKeys("789");
-        Thread.sleep(2000);
-    }
-    
-    //cybersource 
-  //CyberSource cvv
-    @FindBy(xpath ="//button[contains(@class,'add-payment')]")
-    WebElement AddpaymentBtn;
-    public void cyberAddpaymentBtn(  ) throws InterruptedException {	 
-    	js.executeScript("arguments[0].click();", AddpaymentBtn);
-    	//AddpaymentBtn.click();
-        Thread.sleep(2000);
-    }
+	@FindBy(xpath = "//input[@data-fieldtype='encryptedCardNumber']")
+    WebElement adyenCardNumInput;
+	public WebElement getAdyenCardNumInput() {
+		return adyenCardNumInput;
+	}
 	
-    
-   //salesForce CreditCard xpaths, actionMethods and passing the details of the card
-    
-    //SalesForce credit cardName
-    @FindBy(xpath ="//input[@autocomplete='cc-number' and @inputmode='numeric']")
-    WebElement cardNumber;
-    public void cardNumber() throws InterruptedException {	
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card number input frame']")));
-        Thread.sleep(2000);
-        String[] cardNumbers = {
-
-        		"4111 1111 1111 1111",
- 		        "4242 4242 4242 4242",
- 		        "2223 0031 2200 3222",
- 		        "4000 0566 5566 5556",
- 		        "5555 5555 5555 4444",
- 		        "5200 8282 8282 8210",
- 		        "3714 4963 539 8431"
-
-                // Add more card numbers here
-            };
-
-    	// Generate a random index to select a card number
-        
-        int randomIndex = random.nextInt(cardNumbers.length);
-
-        // Send the randomly selected card number
-        cardNumber.sendKeys(cardNumbers[randomIndex]);
-        Thread.sleep(2000);
-        driver.switchTo().defaultContent();
-    }
-    
-    //SalesForce Exp Date
-    @FindBy(xpath ="//input[@autocomplete='cc-exp' and @inputmode='numeric']")
-    WebElement expiryDate;
-    public void expiryDate() throws InterruptedException {		    	
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure expiration date input frame']")));
-    	expiryDate.sendKeys("1225");
-        Thread.sleep(2000);
-        driver.switchTo().defaultContent();
-    }
-    //SalesFroce cvv
-    @FindBy(xpath ="//input[@autocomplete='cc-csc' and @inputmode='numeric']")
-    WebElement cvc;
-    public void cvc(  ) throws InterruptedException {	  
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure CVC input frame']")));
-    	 cvc.sendKeys("123");
-        Thread.sleep(2000);
-        driver.switchTo().defaultContent();
-    }
-    
-    //Salesforce reg credit card button
-    @FindBy(xpath="//div[text()='Credit Card']")
-    WebElement creditCardBtn;
-    public void creditCard(  ) {
-
-		js.executeScript("arguments[0].click();", creditCardBtn);
-    	//creditCardBtn.click();
-    }
-    
-    
-    //Stripe credit card of xpaths, actionMethods and passing the card details
-    JavascriptExecutor js = (JavascriptExecutor) driver;
-    //add new card button for register 
-    @FindBy(xpath="//a[text()='Add a new card']")
-    WebElement addNewCardBtn;
-    public void newCardbtn(  ) {
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", addNewCardBtn);
-    	//addNewCardBtn.click();
-    }
-    
-    
-    //stripe  CardNumber
-    @FindBy(xpath="//input[@autocomplete='cc-number' and @inputmode='numeric']")
-    WebElement newCardNumber;
-    public void cardNum() {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
-        String[] cardNumbers = {
-
-        		"4111 1111 1111 1111",
- 		        "4242 4242 4242 4242",
- 		        "2223 0031 2200 3222",
- 		        "4000 0566 5566 5556",
- 		        "5555 5555 5555 4444",
- 		        "5200 8282 8282 8210",
- 		        "3714 4963 539 8431"
-
-                // Add more card numbers here
-            };
-    	// Generate a random index to select a card number
-        int randomIndex = random.nextInt(cardNumbers.length);
-        // Send the randomly selected card number
-        newCardNumber.sendKeys(cardNumbers[randomIndex]);
-    	 driver.switchTo().defaultContent();
-    }
-    //stripe exp date
-    @FindBy(xpath="//input[@autocomplete='cc-exp' and @inputmode='numeric']")
-    WebElement expDate;
-    public void expDate(  ) {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
-    	newCardNumber.sendKeys("11 33");
-    }
-    //stripe cvv
-    @FindBy(xpath="//input[@autocomplete='cc-csc' and @inputmode='numeric']")
-    WebElement cvv;
-    public void cvv() {
-    	cvv.sendKeys("987");
-    }
-    //stripe postal code
-    @FindBy(name="postal")
-    WebElement postalCode;
-    public void postalCode() {
-    	postalCode.sendKeys("958475");
-    	driver.switchTo().defaultContent();
-    }
-    
-    
-    //stripe save my card
-    @FindBy(xpath="//span[text()='Save Card to Account']")
-    WebElement stripeSaveCard;
-    public void stripeSaveCreditCard(  ) {
-    	js.executeScript("arguments[0].click();", stripeSaveCard);	
-    	//stripeSaveCard.click();
-    }
-    
-    //use save cards for stripe payment method
-    @FindBy(xpath="//a[text()='Add a new card']")
-    WebElement useSaveCardsLink;
-    public void useSaveCardsLinksStripe(  ) {
-    	useSaveCardsLink.click();
-    }
-    
-  //Phone
-  	*/
+	@FindBy(xpath = "//iframe[@title='Iframe for expiry date']")
+    WebElement adyenExpDateIframe;
+	public WebElement getAdyenExpDateIframe() {
+		return adyenExpDateIframe;
+	}
+	
+	
+	@FindBy(xpath = "//input[@data-fieldtype='encryptedExpiryDate']")
+    WebElement adyenExpDateInput;
+	public WebElement getAdyenExpDateInput() {
+		return adyenExpDateInput;
+	}
+	
+	@FindBy(xpath = "//iframe[@title='Iframe for security code']")
+    WebElement adyenSecCodeIframe;
+	public WebElement getAdyenSecCodeIframe() {
+		return adyenSecCodeIframe;
+	}
+	
+	@FindBy(xpath = "//input[@data-fieldtype='encryptedSecurityCode']")
+    WebElement adyenSecCodeInput;
+	public WebElement getAdyenSecCodeInput() {
+		return adyenSecCodeInput;
+	}
+	
+	@FindBy(css= "input.adyen-checkout__card__holderName__input ")
+    WebElement adyenHolderNameInput;
+	public WebElement getAdyenHolderNameInput() {
+		return adyenHolderNameInput;
+	}
+	
+	//error msgs
+	@FindBy(xpath= "//span[contains(text(),'Enter the expiry date')]")
+    WebElement adyenExpiryDateError;
+	public WebElement getAdyenExpiryDateError() {
+		return adyenExpiryDateError;
+	}
+	
+	@FindBy(xpath= "//span[contains(text(),'Enter the security code')]")
+    WebElement adyenSecurityCodeError;
+	public WebElement getAdyenSecurityCodeError() {
+		return adyenSecurityCodeError;
+	}
+	
+	@FindBy(xpath= "//span[contains(text(),'Enter name as shown on card')]")
+    WebElement adyenHolderNameError;
+	public WebElement getAdyenHolderNameError() {
+		return adyenHolderNameError;
+	}
+	
+	@FindBy(xpath= "//span[contains(text(),'Enter a valid card number')]")
+    WebElement adyenInvalidCardNumError;
+	public WebElement getAdyenInvalidCardNumError() {
+		return adyenInvalidCardNumError;
+	}
+	
+	@FindBy(xpath= "//span[contains(text(),'Enter a valid expiry date')]")
+    WebElement adyenInvalidExpiryDateError;
+	public WebElement getAdyenInvalidExpiryDateError() {
+		return adyenInvalidExpiryDateError;
+	}
+	
+	@FindBy(xpath= "//span[contains(text(),'Enter the complete card number')]")
+    WebElement adyenIncompleteCardNumberError;
+	public WebElement getAdyenIncompleteCardNumberError() {
+		return adyenIncompleteCardNumberError;
+	}
+	
+	@FindBy(xpath= "//span[contains(text(),'Enter the complete expiry date')]")
+    WebElement adyenIncompleteExpYearError;
+	public WebElement getAdyenIncompleteExpYearError() {
+		return adyenIncompleteExpYearError;
+	}
+	
+	@FindBy(xpath= "//span[contains(text(),'Enter the complete security code')]")
+    WebElement adyenIncompleteSecurityCodeError;
+	public WebElement getAdyenIncompleteSecurityCodeError() {
+		return adyenIncompleteSecurityCodeError;
+	}
 }
+
+

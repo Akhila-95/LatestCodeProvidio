@@ -5,20 +5,22 @@
 	 <test name="SmokeTest">
         <classes>
 			<class name="browser.launchBrowsering"/>
-			<!--  
-			   <class name="testScripts.FindAStoreTest"/>
-			 
-			 <methods>			  		                  
-             	<include name="verifyFindAStore"></include>
-                  
-             
-                </methods>
-             
+		  
+				   <class name="testScripts.FindAStoreTest"/>
+				 
+				  <methods>	
+				 		  		                  
+	             	<include name="verifyFindAStore"></include>   
+	             	        
+	             </methods>
+           
                 <class name="testScripts.FooterPageTest"  />
                 	<methods> 
                 	
                 		 <include name ="verifyingResourceFooterLinks"> </include>
-                		 <include name="verifyingSubscriptionInFooter"></include> 
+                		 <include name="verifyingValidEmailInSighUpBoxInFooter"></include> 
+                		 <include name="verifyingWithoutEnteringEmailInSignupBoxInFooter"></include> 
+                		 <include name="verifyinginvalidEmailInEmailSignUpBox"></include> 
                 		 <include name= "verifyErrorMsgsInGiftCard"></include> 
                 		 <include name= "verifytheErrorsFromName_Recipients_confirmRecipientEMail"></include>
                 		 <include name= "verifyTheErrorsRecipientEmailAndConfirmEmail"></include>
@@ -26,40 +28,48 @@
                 		
                 		
                 	</methods>
-              
+            
+     		 <class name ="testScripts.LoginPageTest"/>
            
+             <methods> 
+   		   
+             		 <include name ="VerifyingLoginFailureWithIncorrectCredentials"/>          		       	
+             		 <include name ="VerifyingLoginFailureWithEmptyEmailAndPassword"/> 
+             		<include name ="VerifyingLoginFailureWithInvalidEmailFormat"/> 
+             		<include name ="VerifyingLoginFailureWithEmptyEmail"/> 
+             		<include name ="VerifyingLoginFailureWithEmptyPassword"/>     	 
+             		<include name ="VerifyingLoginWithValidCredentials"/>  
+             		 
+             </methods>
+             
                 <class name ="testScripts.CreateAccountPageTest"></class>
                 <methods>
-                  
+                 
                 	<include name= "verifyCreateAccountPage"></include>                               		           
                 	<include name="verifyEmailAndConfirmEmail"></include> 	
                 	<include name="verifyEmailAndConfirmEmail"></include>
                 	<include name="verifyPasswordMismatch"></include>
                 	<include name="verifyPhoneNumError"></include>
-                	<include name="verifyEmailformatError"></include>               	
+                	<include name="verifyEmailformatError"></include>          	
                 	<include name= "verifyCreateAccountWithValidCredentials"></include> 
                 
                 </methods>
-               
-                -->
-              <!--
-              <class name ="testScripts.LoginPageTest"/>
-             <methods>
-   		
-             		<include name ="VerifyingLoginFailureWithIncorrectCredentials"/>          		       	
-             		 <include name ="VerifyingLoginFailureWithEmptyEmailAndPassword"/> 
-             		<include name ="VerifyingLoginFailureWithInvalidEmailFormat"/> 
-             		<include name ="VerifyingLoginFailureWithEmptyEmail"/> 
-             		<include name ="VerifyingLoginFailureWithEmptyPassword"/>     
-             		<include name ="VerifyingLoginWithValidCredentials"/> 
-             		 
-             </methods>
-            -->
-            <!--  
+       
+        	<class name ="testScripts.CheckOutPage2Test"/>
+				 <methods>
+				 	<include name ="verifyingNavigationToCOP2_Page"></include>
+				 	<include name ="verifyingCustomerInfoDisplayInCOP2_Page"></include>
+				 	<include name ="verifyinggetCutomerInfoDisplayInCOP2_Page"></include>
+				 	<include name ="verifyingOrderSummaryDisplayInCOP2_Page"></include>
+				 	<include name ="verifyingNextPaymentButtonDisplayInCOP2_Page"></include>
+				 	<include name =" verifyingEtgLogoDisplayInCOP2_Page"></include>
+	
+				 </methods>
+        
                 <class name="testScripts.ShippingAddressPageTests"/>       
 		     <methods>
 		     
-		     	  <include name="VerifedThatEnteredtheshippingDetailsInShippingPage" />	     	
+		     	 <include name="VerifedThatEnteredtheshippingDetailsInShippingPage" />	      	
 				  <include name="VerifedAllErrorsInShippingForm" />
 				  <include name="VerifedTheErrorsInFirstName" />
 				   <include name="VerifedTheErrorsInLastName" />
@@ -68,17 +78,26 @@
 				  <include name="VerifedWithValidAddress" />
 				
 			 </methods>
-			-->
+			 
+			 
 				<class name ="testScripts.PaymentPageTests"/> 
 				 <methods>
-					  <include name="VerifedThatPaymentDetails" />
-					  <include name="VerifedThatAllTheErrorsInCreditCard" />
-					   <!--<include name="VerifedThatThecardCvvAndExpErrorInCreditCard" /> 					
-					  <include name="VerifedThatThecardCvvErrorInCreditCard" />--> 
-					  <include name="VerifedThatTheCreditcardWithValidDetails" />
+					  <include name="verifyingPaymentDetails" />
+					   <include name="verifyingAllTheErrorsInCreditCard" />
+					   <include name="verifyingCvvAndExpErrorInCreditCard" /> 					
+					   <include name="verifyingCvvErrorInCreditCard" />				
+					  <include name ="verifyingCreditcardNumberInValidError"></include>
+			  		  <include name ="verifyingCreditCardExpDateInValid"></include>
+				 	  <include name ="verifyingCreditCardNumberInCompleteError"></include>
+					  <include name ="verifyingCreditCardInCompleteExpYearError"></include>
+					  <include name ="verifyingCreditCardInCompleteCvvError"></include>  		 
+					  <include name="verifyingAddnewCreditCard" />	 
+					  <include name="verifyingCreditcardWithValidDetails" /> 
+					
+             		
 				</methods>  
-				  
-			
+				  -->
+		
 				
         </classes>
     </test>

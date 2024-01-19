@@ -32,20 +32,16 @@ public class PaymentPageTasks extends baseClass{
 		Actionsss.click(MCP.getSelectviewCartBtn());
 		MiniCartValidation.VerifiedThatViewcartBtnClick();
 		Actionsss.click(VCP.getSelectcheckOutBtn());
-		MiniCartValidation.VerifiedThatCheckOutBtnClick();
+		MiniCartValidation.VerifiedThatCheckOutBtnClick();		
 		Actionsss.click(CP.getSelectGuestCheckoutBtn());
-		Thread.sleep(1000);
-		Actionsss.sendKeys(CP.getSelectGuestEmailInput(), guestmail, Email);
-		Thread.sleep(1000);
-		Actionsss.click(CP.getSelectContinueasGuesttBtn());
-		CheckOutPageValidation.VerifiedThatGuestLogin();
+		CheckOutPageTasks.guestCheckout();
 		Thread.sleep(2000);
 		AddressSelection.Address();
 		Actionsss.CombinedClick(SAP.getSelectNextPaymentBtn());
 		Thread.sleep(2000);
 		ShippingAddressPageValidation.VerifiedThatNextpaymentBtnClick();
 		Thread.sleep(2000);
-		PaymentDetails.payment();
+		PaymentDetails.positiveCreditCardDetails();
 		Actionsss.CombinedClick(PMP.getSelectPlaceOrderBtn());
 		Thread.sleep(5000);
 		PaymentPageValidation.VerifiedThatPlaceOrderClick();
@@ -59,13 +55,10 @@ public class PaymentPageTasks extends baseClass{
 		MiniCartValidation.VerifiedThatViewcartBtnClick();
 		Actionsss.click(VCP.getSelectcheckOutBtn());
 		MiniCartValidation.VerifiedThatCheckOutBtnClick();
-		Actionsss.click(CP.getSelectGuestCheckoutBtn());
-		Thread.sleep(1000);
-		Actionsss.sendKeys(CP.getSelectGuestEmailInput(), guestmail, Email);
-		Thread.sleep(1000);
-		Actionsss.click(CP.getSelectContinueasGuesttBtn());
-		CheckOutPageValidation.VerifiedThatGuestLogin();
+		
+		CheckOutPageTasks.guestCheckout();
 		Thread.sleep(2000);
+		
 		AddressSelection.Address();
 		Actionsss.CombinedClick(SAP.getSelectNextPaymentBtn());
 		Thread.sleep(2000);
@@ -86,14 +79,47 @@ public class PaymentPageTasks extends baseClass{
 		}
 	}
 
-	public static void CreditCardCvvErrorMessage() throws InterruptedException {
+	public static void CreditCardCvvErrorMessage() throws Exception {
 		if(paymentPage) {
 			PaymentDetailsofGuestandReg.creditCvvError();
 		}
 	}
+	public static void creditcardNumberInValidError() throws Exception {
+		if(paymentPage) {
+			PaymentDetailsofGuestandReg.creditcardNumberInValidError();
+		}
+	}
+	
+	public static void creditCardExpDateInValid() throws Exception {
+		if(paymentPage) {
+			PaymentDetailsofGuestandReg.creditCardExpMonthInValid();
+		}
+	}
+	
+	public static void creditCardNumberInCompleteError() throws Exception {
+		if(paymentPage) {
+			PaymentDetailsofGuestandReg.creditCardNumberInCompleteError();
+		}
+	}
+	public static void creditCardInCompleteExpYearError() throws Exception {
+		if(paymentPage) {
+			PaymentDetailsofGuestandReg.creditCardNumberInCompleteExpYearError();
+		}
+	}
+	public static void creditCardInCompleteCvvError() throws Exception {
+		if(paymentPage) {
+			PaymentDetailsofGuestandReg.creditCardInCompleteCvvError();
+		}
+	}
+	
 	public static void  creditCardWithValidDetails() throws Exception {
 		if(paymentPage) {
 			PaymentDetails.positiveCreditCardDetails();
+		}
+	}
+	public static void  addNewCreditCard() throws Exception {
+		if(paymentPage) {
+			PaymentDetails.addNewCardThoughExistingCards();
 		}
 	}
 }

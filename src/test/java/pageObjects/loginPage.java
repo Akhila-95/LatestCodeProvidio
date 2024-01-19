@@ -19,80 +19,18 @@ public class loginPage extends baseClass{
         lDriver = rDriver;
         PageFactory.initElements(rDriver, this);
     }
-/*
-    // Element for Sign In button
-    @FindBy(xpath = "//span[contains(text(), 'Sign In')]")
-    WebElement signIn;
 
-    // Method to click on the Sign In button
-    public void clickSign() {
-        signIn.click();
-    }
-
-    // Element for email input field
-    @FindBy(name = "loginEmail")
-    WebElement email;
-
-    // Method to set the email input field
-    public void setEmail(String name) {
-        email.clear();
-        email.sendKeys(name);
-        test.pass("Entered the mail");
-    }
-
-    // Element for password input field
-    @FindBy(name = "loginPassword")
-    WebElement Password;
-
-    // Method to set the password input field
-    public void setPassword(String password) {
-        Password.clear();
-        Password.sendKeys(password);
-        test.pass("Entered the password");
-    }
-
-    // Element for Login button
-    @FindBy(xpath = "//button[contains(text(), 'Login')]")
-    WebElement btnLogin;
-	public WebElement getLoginBtn() throws InterruptedException {
-		return btnLogin;
-	}
-
-    // Method to click the Login button with a sleep
-    public void clickSubmit() throws InterruptedException {
-        btnLogin.click();
-        Thread.sleep(10000);
-    }
-
-    // Element for Login button (JavaScript click)
-    @FindBy(xpath = "//button[contains(text(), 'Login')]")
-    WebElement btnLoginjs;
-
-    // Method to click the Login button using JavaScript with a sleep
-    public void clickSubmitjs(WebDriver driver) throws InterruptedException {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", btnLoginjs);
-        btnLogin.click();
-        Thread.sleep(10000);
-    }
-
-    // Element for Home page logo
-    @FindBy(xpath = "//img[@class='logo']")
-    WebElement forHomePage;
-
-    // Method to click on the Home page logo using JavaScript with a sleep
-    public void clickOnLogo(WebDriver driver) throws InterruptedException {
-        Thread.sleep(5000);
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", forHomePage);
-    }
-    */
 
     @FindBy(xpath = "//h1[contains(text(),'Login')]")
     WebElement loginPage;
     public WebElement getLoginPage() {
     	return loginPage;
+    }
+    
+    @FindBy(xpath = "//h1[contains(text(),'Login')]")
+    List<WebElement> loginPageList;
+    public List<WebElement> getLoginPageList() {
+    	return loginPageList;
     }
     // Element for Sign In button
     @FindBy(xpath = "//span[contains(text(), 'Sign In')]")
@@ -108,9 +46,20 @@ public class loginPage extends baseClass{
     List<WebElement> signInList;
 
     // Method to click on the Sign In button
-    public List<WebElement> clickSignList() {
+    public List<WebElement> getSignInList() {
        return signInList;
     }
+    
+    // Element for Sign In button
+    @FindBy(xpath = "//a[@aria-label='Login to your account']")
+    WebElement loginSignIn;
+
+    // Method to click on the Sign In button
+    public WebElement getLoginSignIn() {
+       return loginSignIn;
+
+    }
+    
  // Element for email input field
     @FindBy(name = "loginEmail")
     private WebElement email;

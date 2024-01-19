@@ -11,7 +11,7 @@ import validations.browserValidation;
 public class launchBrowsering extends baseClass{
 	
 	@Test(groups = {"smoke", "regression"})
-	public void verifychromeBrowserLacuching() throws InterruptedException {
+	public void verifyHomePageLaunching() throws InterruptedException {
 		
 		logger.info("this is lauching page");
 		//launching the browser and passing the url into it

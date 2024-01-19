@@ -10,38 +10,74 @@ import tasks.PaymentPageTasks;
 public class PaymentPageTests extends baseClass{
 	
 	// Test method to verify sortby
-    @Test(groups = {"regression"})
-    public void VerifedThatPaymentDetailsEnteredInPayMentPage() throws Exception {
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingThatPaymentDetailsEnteredInPayMentPage() throws Exception {
         // Call the verifythatButtonClick method from homePageTasks class
     	PaymentPageTasks.EnteringPaymentDetails();
     }
 
-    @Test(groups = {"regression"})
-    public void VerifedThatPaymentDetails() throws Exception {
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingPaymentDetails() throws Exception {
         // Call the verifythatButtonClick method from homePageTasks class
     	PaymentPageTasks.paymentDetails();
     }
 
-    @Test(groups = {"regression"})
-    public void VerifedThatAllTheErrorsInCreditCard() throws Exception {
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingAllTheErrorsInCreditCard() throws Exception {
         
     	PaymentPageTasks.allErrorsInCreditCard();
     }
     
-    @Test(groups = {"regression"})
-    public void VerifedThatThecardCvvAndExpErrorInCreditCard() throws Exception {
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingCvvAndExpErrorInCreditCard() throws Exception {
         
     	PaymentPageTasks.CreditCardCvvAndExpErrorMessage();
     }
-    @Test(groups = {"regression"})
-    public void VerifedThatThecardCvvErrorInCreditCard() throws Exception {
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingCvvErrorInCreditCard() throws Exception {
         
     	PaymentPageTasks.CreditCardCvvErrorMessage();
     }
     
-    @Test(groups = {"regression"})
-    public void VerifedThatTheCreditcardWithValidDetails() throws Exception {
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingCreditcardNumberInValidError() throws Exception {
+        
+    	PaymentPageTasks.creditcardNumberInValidError() ;
+    }
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingCreditCardExpDateInValid() throws Exception {
+        
+    	PaymentPageTasks.creditCardExpDateInValid();
+    }
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingCreditCardNumberInCompleteError() throws Exception {
+        
+    	PaymentPageTasks.creditCardNumberInCompleteError();
+    }
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingCreditCardInCompleteExpYearError() throws Exception {
+        
+    	PaymentPageTasks.creditCardInCompleteExpYearError();
+    }
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingCreditCardInCompleteCvvError() throws Exception {
+        
+    	PaymentPageTasks.creditCardInCompleteCvvError();
+    }
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingCreditcardWithValidDetails() throws Exception {
         
     	PaymentPageTasks.creditCardWithValidDetails();
+    }
+    
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingAddnewCreditCard() throws Exception {
+        
+    	PaymentPageTasks.addNewCreditCard();
     }
 }

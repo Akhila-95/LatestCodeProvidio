@@ -1,54 +1,18 @@
 package data;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import com.providio.paymentmethods.allPaymentMethods;
 import com.providio.testcases.baseClass;
+
 import functionality.Actionsss;
 import pageObjects.PaymentPage;
 
 
 public class PaymentDetails extends baseClass{
 	
-	public static void payment() throws Exception {
-		
-		/*
-		// Brain Tree
-		List<WebElement> creditcardscheck = driver.findElements(By.xpath("//a[@class ='nav-link creditcard-tab active']"));
-	    // Credit Card Salesforce
-		List<WebElement> creditcardsSalesForce = driver.findElements(By.xpath("//div[@class='sfpp-payment-method-header sfpp-payment-method-header-card']"));
-	    // Stripe
-	    List<WebElement> stripePayment = driver.findElements(By.xpath("(//div[contains(@class,'StripeElement')])[1]"));
-	    // CyberSource
-	    List<WebElement> cyberSourcePayment = driver.findElements(By.xpath("//li[@data-method-id='CREDIT_CARD']"));
+	private static final 	PaymentPage pp = new PaymentPage(driver);
 
-	    // Determine the payment method and proceed accordingly
-	    if(creditcardscheck.size()>0) {
-	    	PDGR.BrainTreeMethod();
-	    	
-	    } else if(creditcardsSalesForce.size()>0) {
-	    	PDGR.salesFroce();
-	    	
-	    } else if(stripePayment.size()>0) {
-	    	PDGR.stripe();
-	    	
-	    } else if(cyberSourcePayment.size()>0){
-	    	PDGR.cyberSource();	
-	    }*/
-	    
-		Actionsss.scrollWindowsByPixel(900);
-		
-		// negative validation for credit card 
-		//PaymentDetailsofGuestandReg. allErrorsInCreditCard();
-		
-	}
 	public static void positiveCreditCardDetails() throws InterruptedException, Exception {
-		
-		PaymentPage pp = new PaymentPage(driver);
-		
+
+		test.info("Verifying by entering the valid credit card details");
 		if(Actionsss.elementSize(pp.getBrainTree())) {
 			
 			PaymentDetailsofGuestandReg.brainTreeMethod();
@@ -64,7 +28,51 @@ public class PaymentDetails extends baseClass{
 		}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
 			
 			PaymentDetailsofGuestandReg.cyberSource();
+			
+		}else if(Actionsss.elementSize(pp.getAdyenPayment())) {
+			
+			PaymentDetailsofGuestandReg.adyen();
+		}
+		
+		
+		if(Actionsss.displayElement(pp.getSelectPlaceOrderBtn())) {
+			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
+			
+		}else {
+			Actionsss.CombinedClick(pp.getReviewOrderBtn());
+		}
+	}
+	
+	public static void addNewCardThoughExistingCards() throws Exception {
+		
+		if(!Actionsss.elementSize(pp.getContinueAsAGuest())) {
+			
+			test.info("User is checked in as registered and also have saved card even though, adding a saved card to account to check the add payment functionality in register user.");
+			
+			if(Actionsss.elementSize(pp.getBrainTree())) {
+				
+				//PaymentDetailsofGuestandReg.brainTreeMethod();
+				 
+			}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+				
+				PaymentDetailsofGuestandReg.addNewCardThoughExistingCardsInSalesforce() ;
+				
+			}else if (Actionsss.elementSize(pp.getStripePayment())) {
+				
+				PaymentDetailsofGuestandReg.addNewCardThoughExistingCardsInStripe();
+				PaymentDetailsofGuestandReg.useSaveCardInStripe();
+				 
+			}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
+				
+				PaymentDetailsofGuestandReg.addNewCardThoughExistingCardsInCybersource();
+			}else {
+				test.pass("No add new payment is configured in adyen payment");
+			}
+		}else {
+			test.info("User is guest check-in ");
+			test.pass("No User will have saved cards ");
 		}
 	}
 	}
+
 

@@ -1,5 +1,10 @@
 package tasks;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
@@ -24,5 +29,19 @@ public class ViewCartPageTasks extends baseClass{
 		Actionsss.click(homePage.clickOnLogo());
 	}
 
+	public static void viewCartpage() throws Exception {
+		// Check if the PLP (Product Listing Page) or PDP (Product Detail Page) is already loaded.
+     	List<WebElement> viewCartPage = driver.findElements(By.xpath("//div[contains(@class, 'cart-page')]"));
+     	List<WebElement> viewCartPageproducts = driver.findElements(By.xpath("//div[contains(@class, 'card product-info')]"));
+     	logger.info(viewCartPage.size());
+     	if (viewCartPage.size()>0 && viewCartPageproducts.size()>0) {
+     	    logger.info("View cart page is already loaded");
+     	}else {
+     		HomePageTasks.miniCartBtnClick();
+    		Actionsss.click(MCP.getSelectviewCartBtn());
+    		MiniCartValidation.VerifiedThatViewcartBtnClick();
+ 
+     	}
+	}
 
 }

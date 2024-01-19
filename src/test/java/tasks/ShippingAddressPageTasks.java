@@ -31,13 +31,12 @@ public class ShippingAddressPageTasks extends baseClass{
 		MiniCartValidation.VerifiedThatCheckOutBtnClick();
 		Actionsss.click(CP.getSelectGuestCheckoutBtn());
 		Thread.sleep(1000);
-		Actionsss.sendKeys(CP.getSelectGuestEmailInput(), guestmail, Email);
-		Thread.sleep(1000);
-		Actionsss.click(CP.getSelectContinueasGuesttBtn());
-		CheckOutPageValidation.VerifiedThatGuestLogin();
+		CheckOutPageTasks.guestCheckout();
 		Thread.sleep(2000);
 
 		AddressSelection.Address();
+		
+		
 		
 		Actionsss.CombinedClick(SAP.getSelectNextPaymentBtn());
 		Thread.sleep(2000);
@@ -54,11 +53,7 @@ public class ShippingAddressPageTasks extends baseClass{
 		Actionsss.click(VCP.getSelectcheckOutBtn());
 		MiniCartValidation.VerifiedThatCheckOutBtnClick();
 		Actionsss.click(CP.getSelectGuestCheckoutBtn());
-		Thread.sleep(1000);
-		Actionsss.sendKeys(CP.getSelectGuestEmailInput(), guestmail, Email);
-		Thread.sleep(1000);
-		Actionsss.click(CP.getSelectContinueasGuesttBtn());
-		CheckOutPageValidation.VerifiedThatGuestLogin();
+		CheckOutPageTasks.guestCheckout();
 		Thread.sleep(2000);
 		
 		shippingAddressPage=true;

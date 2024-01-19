@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
-
+import pageObjects.PaymentPage;
 import pageObjects.ShippingAddressPage;
 
 public class AddressSelection extends baseClass{
@@ -16,6 +16,7 @@ public class AddressSelection extends baseClass{
 	private static final String lName = "LastName";
 	private static final String Phone = "PhoneNumber";
 	private static ShippingAddressPage SAP = new ShippingAddressPage(driver);
+	private static PaymentPage pp = new PaymentPage(driver);
 	static AddressSelection addresSelect = new AddressSelection();
 	
 	public static void Address() throws Exception {
@@ -51,98 +52,113 @@ public class AddressSelection extends baseClass{
 	
 	
 	public static void negativeValidationForShippingAddress() throws Exception {
-		  
-		test.info("Verify the display of all error messages for shipping address");		
-		addresSelect.selectPaymentMethod();
-		 Thread.sleep(1000);
-		if(Actionsss.displayElement(SAP.getFirstNameErrorMsg()) && Actionsss.displayElement(SAP.getlastNameErrorMsg()) && Actionsss.displayElement(SAP.getAddress1ErrorMsg())
-				&& Actionsss.displayElement(SAP.getStateErrorMsg()) && Actionsss.displayElement(SAP.getCityErrorMsg()) && Actionsss.displayElement(SAP.getZipCodeErrorMsg())
-				&& Actionsss.displayElement(SAP.getphoneNumberErrorMsg())) {
-			test.pass("Successfully all the error messages are displayed for shipping address,first name, last name phone number");
-			logger.info("Successfully all the error messages are displayed for shipping address,first name, last name phone number");
+		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {	  		
+			test.info("Verify the display of all error messages for shipping address when user is clicked on next payment button without entering all the mandatory details and checked-in as guest");		
+			addresSelect.selectPaymentMethod();
+			 Thread.sleep(1000);
+			if(Actionsss.displayElement(SAP.getFirstNameErrorMsg()) && Actionsss.displayElement(SAP.getlastNameErrorMsg()) && Actionsss.displayElement(SAP.getAddress1ErrorMsg())
+					&& Actionsss.displayElement(SAP.getStateErrorMsg()) && Actionsss.displayElement(SAP.getCityErrorMsg()) && Actionsss.displayElement(SAP.getZipCodeErrorMsg())
+					&& Actionsss.displayElement(SAP.getphoneNumberErrorMsg())) {
+				test.pass("Successfully all the error messages are displayed for shipping address,first name, last name phone number");
+				logger.info("Successfully all the error messages are displayed for shipping address,first name, last name phone number");
+			}else {
+				test.fail("No error messages are displayed for shipping address,first name, last name phone number");
+				logger.info("No the error messages are displayed for shipping address,first name, last name phone number");
+			}
 		}else {
-			test.fail("No error messages are displayed for shipping address,first name, last name phone number");
-			logger.info("No the error messages are displayed for shipping address,first name, last name phone number");
+			test.info("User is checked in as registered verifying the  display of all error messages for shipping address when user is clicked on next payment button in guest user");
 		}
 	  }
 	public static void firstNameError() throws Exception {
-		
-		test.info("Verify the display of error message for first Name");
-		Actionsss.clearText(SAP.getSelectfirstNameInput());
-		Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
-		Actionsss.addressFromDropDown(SAP.getShippingAddress());			
-		Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
-		Thread.sleep(3000);
-		addresSelect.selectPaymentMethod();
-		Thread.sleep(1000);
-		if(Actionsss.displayElement(SAP.getFirstNameErrorMsg())) {
-			test.pass("Successfully  the error messages are displayed for first name.");
-			logger.info("Successfully the error messages are displayed for first name.");
+		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {		
+			test.info("User is checked-in as guest  verifying the display of error message for first Name by entering all the mandataory details expect first name.");
+			Actionsss.clearText(SAP.getSelectfirstNameInput());
+			Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
+			Actionsss.addressFromDropDown(SAP.getShippingAddress());			
+			Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+			Thread.sleep(3000);
+			addresSelect.selectPaymentMethod();
+			Thread.sleep(1000);
+			if(Actionsss.displayElement(SAP.getFirstNameErrorMsg())) {
+				test.pass("Successfully  the error messages are displayed for first name.");
+				logger.info("Successfully the error messages are displayed for first name.");
+			}else {
+				test.fail("No error messages are displayed for first name.");
+				logger.info("No error messages are displayed for first name.");
+			}	
 		}else {
-			test.fail("No error messages are displayed for first name.");
-			logger.info("No error messages are displayed for first name.");
-		}		
+			test.info("User is checked in as registered verifying the display of error message for first Name by entering all the mandataory details expect first name in guest user.");
+		}
 	}
 	
 	public static void lastNameError() throws Exception {
-		
-		test.info("Verify the display of error message for last Name");
-		
-		Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);
-		Actionsss.clearText(SAP.getSelectLastNameInput());
-		Actionsss.addressFromDropDown(SAP.getShippingAddress());			
-		Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
-		Thread.sleep(3000);
-		addresSelect.selectPaymentMethod();
-		Thread.sleep(1000);
-		if(Actionsss.displayElement(SAP.getlastNameErrorMsg())) {
-			test.pass("Successfully  the error messages are displayed for last name.");
-			logger.info("Successfully the error messages are displayed for last name.");
+		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+			test.info("User is checked-in as guest  verifying the display of error message for last Name by entering all the mandataory details expect last name.");
+			
+			Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);
+			Actionsss.clearText(SAP.getSelectLastNameInput());
+			Actionsss.addressFromDropDown(SAP.getShippingAddress());			
+			Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+			Thread.sleep(3000);
+			addresSelect.selectPaymentMethod();
+			Thread.sleep(1000);
+			if(Actionsss.displayElement(SAP.getlastNameErrorMsg())) {
+				test.pass("Successfully  the error messages are displayed for last name.");
+				logger.info("Successfully the error messages are displayed for last name.");
+			}else {
+				test.fail("No error messages are displayed for last name.");
+				logger.info("No error messages are displayed for last name.");
+			}
 		}else {
-			test.fail("No error messages are displayed for last name.");
-			logger.info("No error messages are displayed for last name.");
+			test.info("User is checked in as registered verifying the display of error message for last Name by entering all the mandataory details expect last name for guest user.");
 		}
 	}
 	
 	public static void addressMessageError() throws Exception {
-		
-		test.info("Verify the display of error message for last Name");
-		
-		Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);
-		Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
-		Actionsss.clearText(SAP.getShippingAddress());	
-		Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
-		
-		Thread.sleep(3000);
-		addresSelect.selectPaymentMethod();
-		Thread.sleep(1000);
-		if(Actionsss.displayElement(SAP.getAddress1ErrorMsg())){
-			test.pass("Successfully the error messages are displayed for shipping address");
-			logger.info("Successfully the error messages are displayed for shipping address");
+		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+			test.info("User is checked-in as guest  verifying the display of error message for address Message by entering all the mandataory details expect address.");
+			
+			Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);
+			Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
+			Actionsss.clearText(SAP.getShippingAddress());	
+			Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+			
+			Thread.sleep(3000);
+			addresSelect.selectPaymentMethod();
+			Thread.sleep(1000);
+			if(Actionsss.displayElement(SAP.getAddress1ErrorMsg())){
+				test.pass("Successfully the error messages are displayed for shipping address");
+				logger.info("Successfully the error messages are displayed for shipping address");
+			}else {
+				test.fail("No error messages are displayed for shipping address");
+				logger.info("No the error messages are displayed for shipping address");
+			}
 		}else {
-			test.fail("No error messages are displayed for shipping address");
-			logger.info("No the error messages are displayed for shipping address");
+			test.info("User is checked-in as registered verifying the display of error message for address Message by entering all the mandataory details expect address for guest user.");
 		}
 	}
 	
 	public static void phoneNumberError() throws Exception {
-		
-		test.info("Verify the display of error message for phone number");
-		
-		Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);
-		Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
-		Actionsss.addressFromDropDown(SAP.getShippingAddress());
-		Actionsss.clearText(SAP.getSelectPhoneInput());
-		Thread.sleep(3000);
-		addresSelect.selectPaymentMethod();
-		Thread.sleep(1000);
-		if(Actionsss.displayElement(SAP.getphoneNumberErrorMsg())) {
-			test.pass("Successfully the error messages are displayed for  phone number");
-			logger.info("Successfully the error messages are displayed for  phone number");
+		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+			test.info("User is checked-in as guest verifying the display of error message for phone number by entering all the mandataory details expect phone number.");
+			
+			Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);
+			Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
+			Actionsss.addressFromDropDown(SAP.getShippingAddress());
+			Actionsss.clearText(SAP.getSelectPhoneInput());
+			Thread.sleep(3000);
+			addresSelect.selectPaymentMethod();
+			Thread.sleep(1000);
+			if(Actionsss.displayElement(SAP.getphoneNumberErrorMsg())) {
+				test.pass("Successfully the error messages are displayed for  phone number");
+				logger.info("Successfully the error messages are displayed for  phone number");
+			}else {
+				test.fail("No error messages are displayed for  phone number");
+				logger.info("No the error messages are displayed for  phone number");
+			}
 		}else {
-			test.fail("No error messages are displayed for  phone number");
-			logger.info("No the error messages are displayed for  phone number");
-		}			
+			test.info("User is checked-in as registered verifying the display of error message for phone number by entering all the mandataory details expect phone number. for guest user.");
+		}
 	}
 	
 	public static void selectingRandomSavedShippingAddress() throws InterruptedException {

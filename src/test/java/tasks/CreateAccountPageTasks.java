@@ -35,284 +35,226 @@ public class CreateAccountPageTasks extends baseClass{
 	
 	public static void createAccPage() throws InterruptedException {
 		
-		Thread.sleep(2000);
-		 // Navigate to the login page
-       Actionsss.click(lp.clickSign());
-
-       // Navigate to the Create Account page
-       Actionsss.click(cap.getCreateAccountLink());
- 
-       CreateAccountValidation.createAccountPageValidation();     
+		if(Actionsss.elementSize(lp.getLoginPageList())) {
+			logger.info("Create account already loaded");		
+		}else {
+			if(Actionsss.elementSize(lp.getSignInList())) {
+				
+				logger.info("Create account  page not loaded");
+				 Actionsss.click(lp.clickSign());
+				// Navigate to the Create Account page
+			       Actionsss.click(cap.getCreateAccountLink());
+			 
+			       CreateAccountValidation.createAccountPageValidation();  
+			        
+			}else {
+				logger.info("user logged in");
+				LogOutTasks.verifyLogout();
+				
+				if(Actionsss.displayElement(lp.clickSign())) {
+					
+					 Actionsss.click(lp.clickSign());					 
+					 Actionsss.click(cap.getCreateAccountLink());
+					 
+					 CreateAccountValidation.createAccountPageValidation();  
+				}
+			}
+		}
 	}
 	
 	public static void validateEmailAndConfirmEmail() throws Exception {
-		
-		if(isCreateAccount &&  isLogOut) {
-    		LogOutTasks.verifyLogout(); 
-        	
-        	emailAndConfirmEmail();
-		}else {
-			emailAndConfirmEmail();
-		}
+		createAccPage();
+	    
+	    test.info("Validating the Email And ConfirmEmail in create account");
+
+	    // Scroll the window by 300 pixels
+	    //Actionsss.scrollWindowsByPixel(300);
+
+	    // Enter user details
+	    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
+	    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
+	    Actionsss.sendKeys(cap.getPhone(), "6789765567",phonenumber);
+	    Actionsss.sendKeys(cap.getEmail(), fakeEmail,CreateAccEmail);
+	    Actionsss.sendKeys(cap.getConfirmEmail(), "akhila.m@etg.digital",CreateAccConfirmEmail);
+	    Actionsss.sendKeys(cap.getPassword(), "Akhireddy@07",CreateAccPassword);
+	    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy@07",CreateAccConfirmPassword);
+
+	    // Trigger the Create Account action using JavaScript click
+	    Actionsss.javascriptClick(cap.getCreateAccountButton());
+
+	    // Pause for 3 seconds to allow the validation to complete
+	    Thread.sleep(3000);
+
+	    // Validate the Email and Confirm Email fields
+	    CreateAccountValidation.validateEmailAndConfirmEmail();
+	    Thread.sleep(2000);
 
 	}
-	
-	public static void emailAndConfirmEmail() throws Exception {
-		    createAccPage();
-		    
-		    test.info("Validating the Email And ConfirmEmail");
-	
-		    // Scroll the window by 300 pixels
-		    //Actionsss.scrollWindowsByPixel(300);
-	
-		    // Enter user details
-		    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
-		    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
-		    Actionsss.sendKeys(cap.getPhone(), "6789765567",phonenumber);
-		    Actionsss.sendKeys(cap.getEmail(), fakeEmail,CreateAccEmail);
-		    Actionsss.sendKeys(cap.getConfirmEmail(), "akhila.m@etg.digital",CreateAccConfirmEmail);
-		    Actionsss.sendKeys(cap.getPassword(), "Akhireddy@07",CreateAccPassword);
-		    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy@07",CreateAccConfirmPassword);
-	
-		    // Trigger the Create Account action using JavaScript click
-		    Actionsss.javascriptClick(cap.getCreateAccountButton());
-	
-		    // Pause for 3 seconds to allow the validation to complete
-		    Thread.sleep(3000);
-	
-		    // Validate the Email and Confirm Email fields
-		    CreateAccountValidation.validateEmailAndConfirmEmail();
-		    Thread.sleep(2000);
-	}
-	
-	
+
 	public static void validatePasswordMismatch() throws Exception {
 
-		if(isCreateAccount &&  isLogOut) {
-    		LogOutTasks.verifyLogout(); 
-        	
-        	passwordMismatch();
-         }else{
-        	 passwordMismatch();
-         }		
-	}
-	public static void passwordMismatch() throws Exception {
+		createAccPage();
+	    test.info("Validating the password mismatch error in create account");
 
-			createAccPage();
-		    test.info("Validating the password mismatch error");
-	
-		    // Enter user details
-		    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
-		    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
-		    Actionsss.sendKeys(cap.getPhone(), "6789765567",phonenumber);
-		    Actionsss.sendKeys(cap.getEmail(), fakeEmail,CreateAccEmail);
-		    Actionsss.sendKeys(cap.getConfirmEmail(), fakeEmail,CreateAccConfirmEmail);
-		    Actionsss.sendKeys(cap.getPassword(), "Akhireddy@07",CreateAccPassword);
-		    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy@017",CreateAccConfirmPassword);
-	
-		    // Trigger the Create Account action using JavaScript click
-		    Actionsss.javascriptClick(cap.getCreateAccountButton());
-	
-		    // Pause for 3 seconds to allow the validation to complete
-		    Thread.sleep(3000);
-	
-		    // Validate the password mismatch error
-		    CreateAccountValidation.validatePasswordMismatch();
-		    Thread.sleep(2000);
-		
+	    // Enter user details
+	    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
+	    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
+	    Actionsss.sendKeys(cap.getPhone(), "6789765567",phonenumber);
+	    Actionsss.sendKeys(cap.getEmail(), fakeEmail,CreateAccEmail);
+	    Actionsss.sendKeys(cap.getConfirmEmail(), fakeEmail,CreateAccConfirmEmail);
+	    Actionsss.sendKeys(cap.getPassword(), "Akhireddy@07",CreateAccPassword);
+	    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy@017",CreateAccConfirmPassword);
+
+	    // Trigger the Create Account action using JavaScript click
+	    Actionsss.javascriptClick(cap.getCreateAccountButton());
+
+	    // Pause for 3 seconds to allow the validation to complete
+	    Thread.sleep(3000);
+
+	    // Validate the password mismatch error
+	    CreateAccountValidation.validatePasswordMismatch();
+	    Thread.sleep(2000);	
 	}
+	
 	
 	public static void validateEmptyText() throws Exception {
 		
+		createAccPage();
+	    test.info("Validating the error if empty text is passed in create account");
 
-		if(isCreateAccount &&  isLogOut) {
-    		LogOutTasks.verifyLogout(); 
-        	
-        	emptyText();
-		}else {
-			emptyText();
-		}
-		
-		
-	}
-	
-	public static void emptyText() throws Exception {
-			createAccPage();
-		    test.info("Validating the error if empty text is passed");
-	
-		    // Enter empty text for user details
-		    Actionsss.sendKeys(cap.getFirstName(), "",firstNameEmpty);
-		    Actionsss.sendKeys(cap.getLastName(), "",lastNameEmpty);
-		    Actionsss.sendKeys(cap.getPhone(), "",phonenumberEmpty);
-		    Actionsss.sendKeys(cap.getEmail(), "",CreateAccEmailEmpty);
-		    Actionsss.sendKeys(cap.getConfirmEmail(), "",CreateAccConfirmEmailEmpty);
-		    Actionsss.sendKeys(cap.getPassword(), "",CreateAccPasswordEmpty);
-		    Actionsss.sendKeys(cap.getConfirmPassword(), "",CreateAccConfirmPasswordEmpty);
-	
-		    // Trigger the Create Account action using JavaScript click
-		    Actionsss.javascriptClick(cap.getCreateAccountButton());
-	
-		    // Pause for 3 seconds to allow the validation to complete
-		    Thread.sleep(3000);
-	
-		    // Validate all errors for empty text fields
-		    CreateAccountValidation.validateAllErrors();
-		    Thread.sleep(2000);
+	    // Enter empty text for user details
+	    Actionsss.sendKeys(cap.getFirstName(), "",firstNameEmpty);
+	    Actionsss.sendKeys(cap.getLastName(), "",lastNameEmpty);
+	    Actionsss.sendKeys(cap.getPhone(), "",phonenumberEmpty);
+	    Actionsss.sendKeys(cap.getEmail(), "",CreateAccEmailEmpty);
+	    Actionsss.sendKeys(cap.getConfirmEmail(), "",CreateAccConfirmEmailEmpty);
+	    Actionsss.sendKeys(cap.getPassword(), "",CreateAccPasswordEmpty);
+	    Actionsss.sendKeys(cap.getConfirmPassword(), "",CreateAccConfirmPasswordEmpty);
+
+	    // Trigger the Create Account action using JavaScript click
+	    Actionsss.javascriptClick(cap.getCreateAccountButton());
+
+	    // Pause for 3 seconds to allow the validation to complete
+	    Thread.sleep(3000);
+
+	    // Validate all errors for empty text fields
+	    CreateAccountValidation.validateAllErrors();
+	    Thread.sleep(2000);
 		
 	}
+	
+	
 	public static void validatePasswordStrength() throws Exception {
 
-		if(isCreateAccount &&  isLogOut) {
-    		LogOutTasks.verifyLogout(); 
-    		passwordStrength();
-		}else {
-			
-		}passwordStrength();
+		createAccPage();
+	    test.info("Validating password strength in create account");
+
+	    // Enter user details with a password that doesn't meet strength criteria
+	    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
+	    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
+	    Actionsss.sendKeys(cap.getPhone(), "6789765567",phonenumber);
+	    Actionsss.sendKeys(cap.getEmail(), fakeEmail,CreateAccEmail);
+	    Actionsss.sendKeys(cap.getConfirmEmail(), fakeEmail,CreateAccConfirmEmail);
+	    Actionsss.sendKeys(cap.getPassword(), "Akhireddy07",CreateAccPassword);
+	    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy07",CreateAccConfirmPassword);
+
+	    // Trigger the Create Account action using JavaScript click
+	    Actionsss.javascriptClick(cap.getCreateAccountButton());
+
+	    // Pause for 3 seconds to allow the validation to complete
+	    Thread.sleep(3000);
+
+	    // Validate the password strength error
+	    CreateAccountValidation.passwordStrengthError();
+	    Thread.sleep(2000);
 		
 		
 	}
 
-	public static void passwordStrength() throws Exception {
-			createAccPage();
-		    test.info("Validating password strength");
-	
-		    // Enter user details with a password that doesn't meet strength criteria
-		    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
-		    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
-		    Actionsss.sendKeys(cap.getPhone(), "6789765567",phonenumber);
-		    Actionsss.sendKeys(cap.getEmail(), fakeEmail,CreateAccEmail);
-		    Actionsss.sendKeys(cap.getConfirmEmail(), fakeEmail,CreateAccConfirmEmail);
-		    Actionsss.sendKeys(cap.getPassword(), "Akhireddy07",CreateAccPassword);
-		    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy07",CreateAccConfirmPassword);
-	
-		    // Trigger the Create Account action using JavaScript click
-		    Actionsss.javascriptClick(cap.getCreateAccountButton());
-	
-		    // Pause for 3 seconds to allow the validation to complete
-		    Thread.sleep(3000);
-	
-		    // Validate the password strength error
-		    CreateAccountValidation.passwordStrengthError();
-		    Thread.sleep(2000);
-		
-	}
+
 	public static void validatingWithExistingAccount() throws Exception {
-		if(isCreateAccount &&  isLogOut) {
-			
-    		LogOutTasks.verifyLogout(); 
-    		existingAccount();
-    		
-		}else {
-			existingAccount();
-		}
+		createAccPage();
+	    test.info("Verifying the error with an already created account");
+
+	    // Enter user details with an email address that already exists
+	    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
+	    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
+	    Actionsss.sendKeys(cap.getPhone(), "6789765567",phonenumber);
+	    Actionsss.sendKeys(cap.getEmail(), "akhila.m@etg.digital",CreateAccEmail);
+	    Actionsss.sendKeys(cap.getConfirmEmail(), "akhila.m@etg.digital",CreateAccConfirmEmail);
+	    Actionsss.sendKeys(cap.getPassword(), "Akhireddy@07",CreateAccPassword);
+	    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy@07",CreateAccConfirmPassword);
+
+	    // Trigger the Create Account action using JavaScript click
+	    Actionsss.javascriptClick(cap.getCreateAccountButton());
+
+	    // Pause for 3 seconds to allow the validation to complete
+	    Thread.sleep(3000);
+
+	    // Validate the error indicating an existing account with the provided email address
+	    CreateAccountValidation.alreadyExistsMail();
+	    Thread.sleep(2000);
+	
 		
 	}
 	
-	public static void existingAccount() throws Exception {
-			createAccPage();
-		    test.info("Verifying the error with an already created account");
-	
-		    // Enter user details with an email address that already exists
-		    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
-		    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
-		    Actionsss.sendKeys(cap.getPhone(), "6789765567",phonenumber);
-		    Actionsss.sendKeys(cap.getEmail(), "akhila.m@etg.digital",CreateAccEmail);
-		    Actionsss.sendKeys(cap.getConfirmEmail(), "akhila.m@etg.digital",CreateAccConfirmEmail);
-		    Actionsss.sendKeys(cap.getPassword(), "Akhireddy@07",CreateAccPassword);
-		    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy@07",CreateAccConfirmPassword);
-	
-		    // Trigger the Create Account action using JavaScript click
-		    Actionsss.javascriptClick(cap.getCreateAccountButton());
-	
-		    // Pause for 3 seconds to allow the validation to complete
-		    Thread.sleep(3000);
-	
-		    // Validate the error indicating an existing account with the provided email address
-		    CreateAccountValidation.alreadyExistsMail();
-		    Thread.sleep(2000);
-		
-	}
+
 	public static void validatingPhoneNumError() throws Exception {
-		if(isCreateAccount &&  isLogOut) {			
-    		LogOutTasks.verifyLogout(); 
-    		phoneNumError();
-		}else {
-			phoneNumError();
-		}
+		createAccPage();
+	    test.info("Verifying phone number error in create account");
+
+	    // Enter user details with an invalid phone number
+	    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
+	    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
+	    Actionsss.sendKeys(cap.getPhone(), "678977",phonenumber);
+	    Actionsss.sendKeys(cap.getEmail(), fakeEmail,CreateAccEmail);
+	    Actionsss.sendKeys(cap.getConfirmEmail(), fakeEmail,CreateAccConfirmEmail);
+	    Actionsss.sendKeys(cap.getPassword(), "Akhireddy@07",CreateAccPassword);
+	    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy@07",CreateAccConfirmPassword);
+
+	    // Trigger the Create Account action using JavaScript click
+	    Actionsss.javascriptClick(cap.getCreateAccountButton());
+
+	    // Pause for 3 seconds to allow the validation to complete
+	    Thread.sleep(3000);
+
+	    // Validate the error indicating an invalid phone number
+	    CreateAccountValidation.phoneNumber();
+	    Thread.sleep(2000);		
 		
 	}
 	
-	public static void phoneNumError() throws Exception{
-			createAccPage();
-		    test.info("Verifying phone number error");
-	
-		    // Enter user details with an invalid phone number
-		    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
-		    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
-		    Actionsss.sendKeys(cap.getPhone(), "678977",phonenumber);
-		    Actionsss.sendKeys(cap.getEmail(), fakeEmail,CreateAccEmail);
-		    Actionsss.sendKeys(cap.getConfirmEmail(), fakeEmail,CreateAccConfirmEmail);
-		    Actionsss.sendKeys(cap.getPassword(), "Akhireddy@07",CreateAccPassword);
-		    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy@07",CreateAccConfirmPassword);
-	
-		    // Trigger the Create Account action using JavaScript click
-		    Actionsss.javascriptClick(cap.getCreateAccountButton());
-	
-		    // Pause for 3 seconds to allow the validation to complete
-		    Thread.sleep(3000);
-	
-		    // Validate the error indicating an invalid phone number
-		    CreateAccountValidation.phoneNumber();
-		    Thread.sleep(2000);		
-	}
+
 	public static void ValidatingEmailformatError() throws Exception {
 		
-		if(isCreateAccount &&  isLogOut) {			
-    		LogOutTasks.verifyLogout(); 
-    		 emailformatError() ;
-		}else {
-			 emailformatError();
-		}
-		
+		createAccPage();
+	    test.info("Verifying email format error in create account");
+
+	    // Enter user details with an invalid email format
+	    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
+	    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
+	    Actionsss.sendKeys(cap.getPhone(), "6784567977",phonenumber);
+	    Actionsss.sendKeys(cap.getEmail(), "akhila.metg.digital",CreateAccEmail);
+	    Actionsss.sendKeys(cap.getConfirmEmail(), "akhila.metg.digital",CreateAccConfirmEmail);
+	    Actionsss.sendKeys(cap.getPassword(), "Akhireddy@07",CreateAccPassword);
+	    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy@07",CreateAccConfirmPassword);
+
+	    // Trigger the Create Account action using JavaScript click
+	    Actionsss.javascriptClick(cap.getCreateAccountButton());
+
+	    // Pause for 3 seconds to allow the validation to complete
+	    Thread.sleep(3000);
+
+	    // Validate the error indicating an invalid email format
+	    CreateAccountValidation.emailFormat();
+	    Thread.sleep(2000);
 		
 	}
 
-	public static void emailformatError() throws Exception {
-			createAccPage();
-		    test.info("Verifying email format error");
-	
-		    // Enter user details with an invalid email format
-		    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
-		    Actionsss.sendKeys(cap.getLastName(), fakelastName,lastName);
-		    Actionsss.sendKeys(cap.getPhone(), "6784567977",phonenumber);
-		    Actionsss.sendKeys(cap.getEmail(), "akhila.metg.digital",CreateAccEmail);
-		    Actionsss.sendKeys(cap.getConfirmEmail(), "akhila.metg.digital",CreateAccConfirmEmail);
-		    Actionsss.sendKeys(cap.getPassword(), "Akhireddy@07",CreateAccPassword);
-		    Actionsss.sendKeys(cap.getConfirmPassword(), "Akhireddy@07",CreateAccConfirmPassword);
-	
-		    // Trigger the Create Account action using JavaScript click
-		    Actionsss.javascriptClick(cap.getCreateAccountButton());
-	
-		    // Pause for 3 seconds to allow the validation to complete
-		    Thread.sleep(3000);
-	
-		    // Validate the error indicating an invalid email format
-		    CreateAccountValidation.emailFormat();
-		    Thread.sleep(2000);
-	
-	}
 	public static void createAccountWithValidCredientials() throws Exception {
 		
-		if(isCreateAccount &&  isLogOut) {			
-    		LogOutTasks.verifyLogout(); 
-    		validCredientials();
-		}else {
-			validCredientials();
-		}
-	}
-	public static void validCredientials() throws Exception{
 		createAccPage();
-	    test.info("Verifying with valid data");
+	    test.info("Verifying the account creation with valid details ");
 
 	    // Enter valid user details
 	    Actionsss.sendKeys(cap.getFirstName(), fakeFirstName,firstName);
@@ -335,5 +277,4 @@ public class CreateAccountPageTasks extends baseClass{
 	    
 	    isCreateAccount=true;
 	}
-
 }

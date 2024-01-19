@@ -13,27 +13,25 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 	private static PaymentMethods pm = new PaymentMethods();
 	private static PaymentPageValidation ppv = new PaymentPageValidation();
 	private static AllPayments allPay = new AllPayments();
-	private static final String cardNum = "cardNumber";
-	private static final String  expDate = "Expired date";
-	private static final String  creditCardCvv= "Cvv";
-	
+
 	
  public static void brainTreeMethod() throws InterruptedException {
 
 		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
-
+			test.info("User is in guest-check in so entering a random credit card details");
 			pm.braintree();
 			
 		}else {
 			if(Actionsss.elementSize(pp.getSavedCardsBrainTree())) {
 				
 				//if user is registered and have saved cards then  this if will execute
-				 pm.savedCardsBrainTree();
+				test.info("User is checked-in as registered and have saved cards so randomly selecting a saved card");
+				allPay.savedCardsBrainTree();
 				
 			}else {
 				
 				//new user without saved cards in account 
-				test.info("User don't have saved cards");
+				test.info("User is checked-in as registered but don't have saved cards so entering the random credit card details");
 				pm.braintree();
 				
 			}
@@ -43,17 +41,19 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 	//cyberSource
 	public static void cyberSource() throws Exception {
 
-		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
-			
+		if(!Actionsss.elementSize(pp.getContinueAsAGuest())) {
+			test.info("User is in guest-check in so entering a random credit card details");
 			pm.cyberSource();
 			
 		}else {
 			if(Actionsss.elementSize(pp.getSavedCardsCyberSource())) {
 				
 				//if user is registered and have saved cards then  this if will execute
+				test.info("User is checked-in as registered and have saved cards so randomly selecting a saved card");
 				allPay.savedCardsCyberSource();
 			}else {
 				//if user want to add new card  into account without having the saved cards
+				test.info("User is checked-in as registered but don't have saved cards so entering the random credit card details");
 				allPay.withoutSavedCardsCyberReg();
 
 			}
@@ -65,16 +65,19 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 	
 			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
 											
-				//guest user payment				
+				//guest user payment	
+				test.info("User is in guest-check in so entering a random credit card details");
 				pm.salesforcePayment();
 		
 			}else {
 
 				if(Actionsss.elementSize(pp.getSavedCardsSalesforce())) {
 					//if user is registered and have saved cards then  this if will execute
+					test.info("User is checked-in as registered and have saved cards so randomly selecting a saved card");
 					allPay.savedCardsSalesforce();
 				}else {
 					//new user without saved cards and user saves the new card to account
+					test.info("User is checked-in as registered but don't have saved cards so entering the random credit card details");
 					allPay.withoutSavedCardSalesforceReg();
 				}
 			}
@@ -83,24 +86,45 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 		  //stripe payment method
 	  	public static void stripe() throws Exception {
 
+	  		Actionsss.scrollWindowsByPixel(300);
 	  		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
 	  		  //guest user payment
+	  			test.info("User is in guest-check in so entering a random credit card details");
 	  			pm.stripePayment();
 	  		}else {
-	  		//if user is registered and have saved cards then  this if will execute
-	  			if(Actionsss.elementSize(pp.getStripeSavedCards())) {
-	  				allPay.savedCardsStripe();
-	  			}else {
-	  				allPay.withoutSavedCardStripeReg();
+	  				//if user is registered and have saved cards then  this if will execute
+	  				if(Actionsss.elementSize(pp.getStripeSavedCards())) {
+	  					test.info("User is checked-in as registered and have saved cards so randomly selecting a saved card");
+	  					allPay.savedCardsStripe();
+	  				}else {
+	  					//new user without saved cards and user saves the new card to account
+	  					test.info("User is checked-in as registered but don't have saved cards so entering the random credit card details");
+	  					allPay.withoutSavedCardStripeReg();
 	  			}
 	  		}
 	  	}
 		
+	  	
+	  	//adyen payment
+	  	public static void adyen() throws Exception {
+	  		Actionsss.scrollWindowsByPixel(700);
+	  		Thread.sleep(3000);
+	  		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+		  		  //guest user payment
+		  			test.info("User is checked in as guest  so entering a random credit card details");
+		  			pm.adyenPayment();
+	  		}else {
+	  			test.info("User is checked in as register and saving the card to account is not configured in providio adyen payment  ");
+	  			pm.adyenPayment();
+	  		}
+	  	}
 		
 		public static void allErrorsInCreditCard() throws Exception {
-
+	
+			Actionsss.scrollWindowsByPixel(300);
+			
 			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
-				
+				test.info("Verifying all the error messages without entering any credit card details in required fileds when user is guest");
 				if(Actionsss.elementSize(pp.getBrainTree())) {
 					//brain tree negative 
 					ppv.brainTreeAllPaymentsError();
@@ -111,22 +135,167 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
+					// pop up in stripe unable to inpect that pop up 
 					
 				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
 					//cybersource 
+					ppv.getallErrosInCybersource();
+				}else {
+					//adyen payment
+					ppv.getallErrorsInAdyen();
+				}
+			}else {
+				test.info("Verifying the error validation when user is checked as guest");
+			}
+		}
+		
+
+		public static void creditcardNumberInValidError() throws InterruptedException, Exception {
+			
+			test.info("Verifying the invalid card number error by entering invalid  credit card details ");
+			
+			Actionsss.scrollWindowsByPixel(400);
+			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+				
+				if(Actionsss.elementSize(pp.getBrainTree())) {
+					//brain tree negative 
+					ppv.brainTreeAllPaymentsError();
+					
+				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+					//salesforce negative
+					ppv.salesforceInvalidCardNumber();
+					
+				}else if (Actionsss.elementSize(pp.getStripePayment())) {
+					//stripe 
+					ppv.stripeCardInvalidCardError();
+					
+				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
+					//cybersource -- have to check this bug issue 
+					 ppv.getcreditCardNumberInvalidErrorInCybersource();
+				}else {
+					ppv.getcreditCardNumberInvalidErrorInAdyen();
+				}
+			}
+		}
+		
+		public static void creditCardExpMonthInValid() throws Exception {
+			
+			test.info("Verifying the invalid expiry month/year error by entering the invalid month/year in credit card ");
+			
+			Actionsss.scrollWindowsByPixel(300);
+			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+				
+				if(Actionsss.elementSize(pp.getBrainTree())) {
+					//brain tree negative 
+					ppv.brainTreeAllPaymentsError();
+					
+				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+					//salesforce negative
+					ppv.salesforceInvalidExpYear();
+					
+				}else if (Actionsss.elementSize(pp.getStripePayment())) {
+					//stripe 
+					ppv.stripeCardInvalidExpDate();
+					
+				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
+					//cybersource 
+					test.pass("No validation for invalid expiry year/month for cybersource ");
+				}else {
+					ppv.getcreditCardExpMonthInValidInAdyen();
 				}
 			}
 		}
 		
 
-		
-		public static void creditCardCvvAndExpError() throws Exception {
+		public static void creditCardNumberInCompleteError() throws Exception {
 
+			test.info("Verifying the incomplete card number error by entering  incomplete card number in credit card ");
+			Actionsss.scrollWindowsByPixel(300);
+			
 			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
 				
 				if(Actionsss.elementSize(pp.getBrainTree())) {
 					//brain tree negative 
+					ppv.brainTreeAllPaymentsError();
 					
+				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+					//salesforce negative
+					//ppv.salesforceCvvAndExpError();
+					
+				}else if (Actionsss.elementSize(pp.getStripePayment())) {
+					//stripe 
+					ppv.stripeIncompleteCardError();
+					
+				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
+					//cybersource 
+					ppv.getcreditCardNumberInCompleteErrorInCybersource();
+				}else {
+					//adyen
+					ppv.getCreditCardNumberInCompleteErrorInAdyen();
+				}
+			}
+		}
+		
+		public static void creditCardNumberInCompleteExpYearError() throws Exception {
+
+			test.info("Verifying the incomplete expiry year error by entering the incomplete expiry year in credit card");
+			
+			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+				
+				if(Actionsss.elementSize(pp.getBrainTree())) {
+					//brain tree negative 
+					ppv.brainTreeAllPaymentsError();
+					
+				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+					//salesforce negative
+					//ppv.salesforceCvvAndExpError();
+					
+				}else if (Actionsss.elementSize(pp.getStripePayment())) {
+					//stripe 
+					ppv.stripeIncompleteExpYearError();
+				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
+					//cybersource 
+					test.pass("No validation for incomplete expiry year/month for cybersource ");
+				}else {
+					
+				}
+			}
+		}
+		
+		public static void creditCardInCompleteCvvError() throws Exception {
+			
+			test.info("Verifying the incomplete Cvv error by entering the incomplete cvv in credit card");
+			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+				
+				if(Actionsss.elementSize(pp.getBrainTree())) {
+					//brain tree negative 
+					ppv.brainTreeAllPaymentsError();
+					
+				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+					//salesforce negative
+					//ppv.salesforceCvvAndExpError();
+					
+				}else if (Actionsss.elementSize(pp.getStripePayment())) {
+					//stripe 
+					ppv.getStripeCardSecurityCodeIncompleteError();
+					//ppv.getStripeCardPostalCodeInComplete();
+					
+				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
+					//cybersource 
+					ppv.getIncompleteSecurityCodeErrorInCybersource();
+				}else {
+					ppv.getCreditCardInCompleteCvvError();
+				}
+			}
+		}
+		
+		public static void creditCardCvvAndExpError() throws Exception {
+			test.info("Verifying the  cvv and expiry year error without entering the cvv and expiry year by entering credit card number ");
+			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+				
+				if(Actionsss.elementSize(pp.getBrainTree())) {
+					//brain tree negative 
+					ppv.brainTreeAllPaymentsError();
 					
 				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
 					//salesforce negative
@@ -134,21 +303,27 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
+					//pop up
 					
 				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
 					//cybersource 
+					//ppv.getCreditCardCvvAndExpMonthYearErrorInCybersource();
+					ppv.getCreditCardCvvAndExpYearErrorInCybersource();
+				}else {
+					ppv.getCreditCardCvvAndExpErrorMessage();
 				}
 			}
 		}
 		
-		public static void creditCvvError() throws InterruptedException {
+		public static void creditCvvError() throws Exception {
 			
-			PaymentPage pp = new PaymentPage(driver);
+			test.info("Verifying with cvv error without entering cvv by entering the card number, expiry m in credit card");
 			
 			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
 				
 				if(Actionsss.elementSize(pp.getBrainTree())) {
 					//brain tree negative 
+					ppv.brainTreeAllPaymentsError();
 					
 				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
 					//salesforce negative
@@ -159,16 +334,56 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
 					//cybersource 
+					ppv.getCreditCardCvvErrorInCybersource();
+				}else {
+					ppv.getCreditCardCvvErrorMessage();
 				}
 			}
 		}
 
 		public static void brainTreeReguser() throws InterruptedException {
 			PaymentPage pp = new PaymentPage(driver);
-			Actionsss.selectValue(pp.getBrainTreeNewCardDropdown(), "0");
+			Actionsss.selectValue(pp.getBrainTreeNewCardDropdown());
 			Thread.sleep(3000);
 		}
 
 
+		//new cards
+	    public static void addNewCardThoughExistingCardsInStripe() throws Exception {
+	    	//clicks on credit card label			
+			// Actionsss.javascriptClick(pp.getStripeCreditCard());
+			
+			 Actionsss.javascriptClick(pp.getAddNewCardStripe());
+			 //enters paymnet details 
+			 pm.stripePayment();
+			
+			 //clicking on save button 
+			 Actionsss.javascriptClick(pp.getStripeSaveCardsButtons());
+			 Thread.sleep(2000);
+     }  
 	    
+		public static void addNewCardThoughExistingCardsInCybersource() throws Exception {
+
+			if(!Actionsss.elementSize(pp.getContinueAsAGuest())) {
+		
+					//clicks on add paymnet		 
+					 Actionsss.javascriptClick(pp.getAddPaymentCybersource());
+					 //credit card details
+					 pm.cyberSource();
+					Actionsss.sendKeys(pp.getEmailInRegInCybersource(),"akhila.m@etg.digital", "Email id ");
+				
+			}
+		}
+	    public static void useSaveCardInStripe() throws Exception {
+	    	Actionsss.javascriptClick(pp.getswitchToSavedCardsStripe());
+	    	Actionsss.randomElementFromList(pp.getCountOfSavedCards());
+	    }
+	    
+	    // salesforce
+	    public static void addNewCardThoughExistingCardsInSalesforce() throws Exception {
+	    	Actionsss.javascriptClick(pp.getSalesforceCreditCard());
+	    	pm.salesforcePayment();
+	    	
+	    	Actionsss.CombinedClick(pp.getSaveToaccountInSalesforce());
+	    }
 }

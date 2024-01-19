@@ -22,186 +22,125 @@ public class LoginPageTasks extends baseClass {
 	private static final  LogoutPage lop = new LogoutPage(driver);
 	private static homepage homePage = new homepage(driver);
 	
+	
+	
+	public static void loginPageView() throws InterruptedException {
+			
+			if(Actionsss.elementSize(lp.getLoginPageList())) {
+				logger.info("Login page already loaded");
+			}else {
+			//	Actionsss.hover(lop.getHoverMyAccount());
+				if(Actionsss.elementSize(lop.getHoverMyAccountList())) {
+					
+					logger.info("user logged in");
+					LogOutTasks.verifyLogout();
+					
+					if(Actionsss.displayElement(lp.clickSign())) {
+						 Actionsss.click(lp.clickSign());
+						 // login page pagination 
+					        lv.loginPageValidation();
+					}
+       
+				}else {
+					logger.info("Login page not loaded");
+					 Actionsss.click(lp.clickSign());
+					 // login page pagination 
+				        lv.loginPageValidation();
+				}
+			}
+		}
     public static void loginFailureWithIncorrectCredentials() throws InterruptedException {
-        test.info("Verify with invalid credentials");
-        Actionsss.click(homePage.clickOnLogo());
-        if(isLoggedIn && isLogOut) {
-        	LogOutTasks.verifyLogout();	
-        	
-        	incorrectCredentials();
-        	      	
-        }else {
-        	incorrectCredentials();
-        }
+    	loginPageView();
+    	
+    	 test.info("Verify with invalid credentials");
+         // Enter invalid email and valid password
+          Actionsss.sendKeys(lp.getEmail(), "invalid@etg.digital",invalidMail);        
+          Actionsss.sendKeys(lp.getPassword(), "Akhireddy@07", password);
+        
+         // Click the login button
+          Actionsss.click(lp.btnLogin);
+
+         // Validate invalid login scenario       
+          lv.invalidLoginError();
+        
     }
-    public static void incorrectCredentials() throws InterruptedException {
-    	  // Click the sign-in button
-        Actionsss.click(lp.clickSign());
+  
+    
+    public static void loginFailureWithEmptyEmailAndPassword() throws Exception {
+    	loginPageView();
+    	 test.info("Verify login failure with empty email and password");
+         
         
-        // login page pagination 
-        lv.loginPageValidation();
+         Actionsss.clearText(lp.getEmail());
+         Actionsss.clearText(lp.getPassword());
+         
+         // Click the login button
+         Actionsss.click(lp.btnLogin);
+         // Validate empty email and password login scenario   
+         lv.emptyMailAndPwd();
+    }
+
+  
+    public static void loginFailureWithInvalidEmailFormat() throws InterruptedException {
+    	loginPageView();
+    	test.info("Verify login failure with invalid email format");
+
         
-        // Enter invalid email and valid password
-        Actionsss.sendKeys(lp.getEmail(), "invalid@etg.digital",invalidMail);
+        // Enter an email with an invalid format
+        Actionsss.sendKeys(lp.getEmail(), "akhila.metg.digital",invalidEmail);        
+        // Provide a valid password
+        Actionsss.sendKeys(lp.getPassword(), "Akhireddy@07",password);
         
-        Actionsss.sendKeys(lp.getPassword(), "Akhireddy@07", password);
+        // Click the login button
+        Actionsss.click(lp.btnLogin);
+
+        // Validate invalid email format login scenario  
+        lv.invalidEmailFormat();
+    }
+    
+   
+    public static void verifyLoginFailureWithEmptyEmail() throws InterruptedException {
+    	
+    	 loginPageView();     
+    	 test.info("Verify login failure with empty email");
+
+	        // Provide an empty email
+	        Actionsss.sendKeys(lp.getEmail(), "",emptyEmail);	      
+	        // Enter a valid password
+	        Actionsss.sendKeys(lp.getPassword(), "Akhireddy@07",emptyPassword);
+	      
+	        // Click the login button
+	        Actionsss.click(lp.btnLogin);
+
+	        // Validate login failure with empty email scenario       
+	        lv.loginFailureWithEmptyEmail();
+    }
+
+	
+    public static void loginFailureWithEmptyPassword() throws InterruptedException {
+    	loginPageView();
+    	test.info("Verify login failure with empty password");
+        
+        // Enter a valid email
+        Actionsss.sendKeys(lp.getEmail(), "akhila.m@etg.digital",email);        
+        // Provide an empty password
+        Actionsss.sendKeys(lp.getPassword(), "",emptyPassword);
        
         // Click the login button
         Actionsss.click(lp.btnLogin);
 
-        // Validate invalid login scenario       
-        lv.invalidLoginError();
+        // Validate login failure with empty password scenario   
+        lv.loginFailureWithEmptyPassword();
     }
     
-    public static void loginFailureWithEmptyEmailAndPassword() throws InterruptedException {
-    	Thread.sleep(2000);
-    	 Actionsss.click(homePage.clickOnLogo());
-    	if(isLoggedIn && isLogOut) {
-    		LogOutTasks.verifyLogout();
-               	
-        	emptyEmailAndPassword();
-        	
-    	}else {
-    		emptyEmailAndPassword();
-    	}
-    }
-
-    public static  void emptyEmailAndPassword() throws InterruptedException{
-    	 test.info("Verify login failure with empty email and password");
-
-         // Click the sign-in button
-         Actionsss.click(lp.clickSign());
-
-         // login page pagination 
-         lv.loginPageValidation();
-
-         // Leave both email and password fields empty
-         Actionsss.sendKeys(lp.getEmail(), "",emptyEmail);
-        
-         Actionsss.sendKeys(lp.getPassword(), "",emptyPassword);
-        
-         // Click the login button
-         Actionsss.click(lp.btnLogin);
-         
-         // Validate empty email and password login scenario   
-         lv.emptyMailAndPwd();
-    }
-    public static void loginFailureWithInvalidEmailFormat() throws InterruptedException {
-    	 Actionsss.click(homePage.clickOnLogo());
-    	if(isLoggedIn && isLogOut) {
-    		LogOutTasks.verifyLogout();
-        	
-        	
-        	invalidEmailFormat();
-    	}else {
-    		invalidEmailFormat();
-    	}
-    }
-    
-    public static void invalidEmailFormat() throws InterruptedException {
-    	 test.info("Verify login failure with invalid email format");
-
-         // Click the sign-in button
-         Actionsss.click(lp.clickSign());
-
-         // login page pagination 
-         lv.loginPageValidation();
-         
-         // Enter an email with an invalid format
-         Actionsss.sendKeys(lp.getEmail(), "akhila.metg.digital",invalidEmail);
-         
-         // Provide a valid password
-         Actionsss.sendKeys(lp.getPassword(), "Akhireddy@07",password);
-         
-         // Click the login button
-         Actionsss.click(lp.btnLogin);
-
-         // Validate invalid email format login scenario  
-         lv.invalidEmailFormat();
-    }
-    
-    public static void verifyLoginFailureWithEmptyEmail() throws InterruptedException {
-    	 Actionsss.click(homePage.clickOnLogo());
-    	if(isLoggedIn && isLogOut) {
-    		LogOutTasks.verifyLogout();
-        	
-        	
-        	emptyEmail();
-    	}else {
-    		emptyEmail();
-    	}      
-    }
-
-    	public static void emptyEmail() throws InterruptedException{
-    		 test.info("Verify login failure with empty email");
-
-    	        // Click the sign-in button
-    	        Actionsss.click(lp.clickSign());
-
-    	        // login page pagination 
-    	        lv.loginPageValidation();
-    	        
-    	        // Provide an empty email
-    	        Actionsss.sendKeys(lp.getEmail(), "",emptyEmail);
-    	      
-    	        // Enter a valid password
-    	        Actionsss.sendKeys(lp.getPassword(), "Akhireddy@07",emptyPassword);
-    	      
-    	        // Click the login button
-    	        Actionsss.click(lp.btnLogin);
-
-    	        // Validate login failure with empty email scenario       
-    	        lv.loginFailureWithEmptyEmail();
-    	}
-    public static void loginFailureWithEmptyPassword() throws InterruptedException {
-    	 Actionsss.click(homePage.clickOnLogo());
-    	if(isLoggedIn && isLogOut) {
-    		LogOutTasks.verifyLogout();
-        	
-        	emptyPassword();
-    	}else {
-    		emptyPassword();
-    	}
-     
-    }
-    
-    public static void emptyPassword() throws InterruptedException{
-    	 test.info("Verify login failure with empty password");
-         // Click the sign-in button
-         Actionsss.click(lp.clickSign());
-
-         // login page pagination 
-         lv.loginPageValidation();
-
-         // Enter a valid email
-         Actionsss.sendKeys(lp.getEmail(), "akhila.m@etg.digital",email);
-         
-         // Provide an empty password
-         Actionsss.sendKeys(lp.getPassword(), "",emptyPassword);
-        
-         // Click the login button
-         Actionsss.click(lp.btnLogin);
-
-         // Validate login failure with empty password scenario   
-         lv.loginFailureWithEmptyPassword();
-    }
-    
-    //login
+   
     public static void verifyThatuserLogin() throws Exception {
-    	 Actionsss.click(homePage.clickOnLogo());
+    	loginPageView();
     	test.info("Verify with valid credentials");
-    	 
-	    // Click on the "Gift Card" link
-    	  Actionsss.click(lp.clickSign());
-	   
-    	 // login page pagination 
-          lv.loginPageValidation();
-
+    	   
         // Enter valid email and password
-        Actionsss.sendKeys(lp.getEmail(), "akhila.m+4@etg.digital",mail);
-      
-        Actionsss.sendKeys(lp.getPassword(), "Akhireddy@07",password);
-       
+        Actionsss.sendKeys(lp.getEmail(), "akhila.m+4@etg.digital",mail);      
+        Actionsss.sendKeys(lp.getPassword(), "Akhireddy@07",password);      
 
         // Click the login button
         Actionsss.click(lp.btnLogin);
@@ -209,7 +148,7 @@ public class LoginPageTasks extends baseClass {
 	    // Verify the result of clicking on the "Gift Card" link
         lv.positiveValidation();
         
-       isLoggedIn=true;
-	}
-    
+        isLoggedIn=true;
+    }
+
 }

@@ -27,6 +27,8 @@ public class AllPayments extends baseClass{
 	private static final String  expDate = "Expired date";
 	private static final String  creditCardCvv= "Cvv";
 	
+	
+	
 	public  void brainTreeCardHolderName() throws InterruptedException {
 		// card holder name
 		driver.switchTo().frame("braintree-hosted-field-cardholderName");
@@ -74,15 +76,21 @@ public class AllPayments extends baseClass{
 		driver.switchTo().defaultContent();
 	}
 	
-	public void brainTreeSavedCards() throws InterruptedException {
-		
+	
+	//register user and select the new card and save the card
+	public void savedCardsBrainTree() throws InterruptedException {
+
+		test.info("User already have saved cards");
 		Actionsss.click(pp.getBrainTreeNewCardDropdown());
-																																																			
+		
 		Actionsss.randomElementFromList(pp.getSavedCardsBrainTree()); 
+	
+		logger.info("Selectd the new card");
+		pm.braintree();
 		
 	}
 	
-	public  void salesforceCardNumber() throws InterruptedException {
+	public  void salesforceCardNumber() throws Exception {
 		PaymentPage pp = new PaymentPage(driver);    
 
 		 String[] cardNumbers = {
@@ -105,7 +113,8 @@ public class AllPayments extends baseClass{
 	      //  Actionss.waitForIframe(5,pp.getcardNumberIframe());
 	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card number input frame']"))); 
-			Actionsss.sendKeys(pp.getSalesforceCardNumber(),cardNumbers[randomIndex],cardNum);
+	        Actionsss.clearText(pp.getStripeCardNumber());
+	        Actionsss.sendKeys(pp.getSalesforceCardNumber(),cardNumbers[randomIndex],cardNum);
 			String cardNumber = pp.getSalesforceCardNumber().getAttribute("value");
 			test.info("Credit card number entered is " + cardNumber);
 			driver.switchTo().defaultContent();
@@ -133,6 +142,14 @@ public class AllPayments extends baseClass{
 		driver.switchTo().defaultContent();
 	}
     
+	
+	
+	
+	
+	
+	
+	
+	
 	public void stripeCardNumber() throws InterruptedException {
 		Random random = new Random();
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -152,24 +169,28 @@ public class AllPayments extends baseClass{
     	// Generate a random index to select a card number
         int randomIndex = random.nextInt(cardNumbers.length);
         // Send the randomly selected card number
+        test.info("Credit card number entered is " + cardNumbers[randomIndex]);
      Actionsss.sendKeys(pp.getStripeCardNumber(),cardNumbers[randomIndex],cardNum);
- 	 driver.switchTo().defaultContent();
+ 	 
  
 	}
 	
 	public void stripeExpDate() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+//        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
+        test.info("Credit card expiry date entered is " +"11 33");
     	Actionsss.sendKeys(pp.getStripeExpDate(), "11 33 ",  expDate);
 	}
 	
 	public void stripeCvv() throws InterruptedException {
-		 Actionsss.sendKeys(pp.getStripeCvv(), "748",creditCardCvv);
+		test.info("Credit card expiry date entered is " + "748");
+		Actionsss.sendKeys(pp.getStripeCvv(), "748",creditCardCvv);
 	}
 	
-	public void stripePostalCode() {	 
+	public void stripePostalCode() throws InterruptedException {	 
 	 	 //POSTAL CODE
-	 	 Actionsss.selectValue(pp.getPostalCodeInStripe(), "98777890044");
+		test.info("Credit card expiry date entered is " + "8777890044");
+	 	 Actionsss.sendKeys(pp.getPostalCodeInStripe(), "98777890044", "postal code");
 	 	 driver.switchTo().defaultContent();
 	}
 	
@@ -192,7 +213,7 @@ public class AllPayments extends baseClass{
 	   }
 	
 	
-	public  void cyberSourceCardNumber() throws InterruptedException {
+	public  void cyberSourceCardNumber() throws Exception {
 	
 		//card number 
 		String[] cardNumbers = {
@@ -201,22 +222,26 @@ public class AllPayments extends baseClass{
           };
 		
 	     int randomIndex = rand.nextInt(cardNumbers.length);
-	         
+	      test.info("Entered credit card number is " +cardNumbers[randomIndex] );
+	     Actionsss.clearText(pp.getCyberSourceCreditcard());
 	     Actionsss.sendKeys(pp.getCyberSourceCreditcard(),cardNumbers[randomIndex],cardNum);
 	     Thread.sleep(2000);
 	}
 	public void cyberSourceExpMonth() throws InterruptedException {
 		
-		Actionsss.selectValue(pp.getCyberSourceExpmonth(), "10");
+		Actionsss.selectValue(pp.getCyberSourceExpmonth());
 	}
 	public  void cyberSourceExpYear() throws InterruptedException {
 		
-		Actionsss.selectValue(pp.getCyberSourceExpYear(),"5" );
+		Actionsss.selectValue(pp.getCyberSourceExpYear());
 	}
-	public  void cyberSourceSecurityCode() throws InterruptedException {
-		
+	public  void cyberSourceSecurityCode() throws Exception {
+		test.info("Entered cvv is  2345");
+		Actionsss.clearText(pp.getCyberSourceSceuritycode());
 		Actionsss.sendKeys(pp.getCyberSourceSceuritycode(),"2345",creditCardCvv);
 	}
+	
+
 	
 	public void savedCardsCyberSource() throws Exception {
 	
@@ -249,7 +274,7 @@ public class AllPayments extends baseClass{
             }
 	}
 	
-	public  void withoutSavedCardsCyberReg() throws InterruptedException {
+	public  void withoutSavedCardsCyberReg() throws Exception {
 		
 	
 		pm.cyberSource();
@@ -257,6 +282,7 @@ public class AllPayments extends baseClass{
 		// save card to account is already enabled
 		Actionsss.click(pp.getCyberSourceAddPaymentBtn());
 	}
+	
 	  public void savedCardsStripe() throws InterruptedException {
 	 		// to randomaize the saved cards -randomly pick any saved card 
 		    	 List<WebElement> countOfSavedCards= driver.findElements(By.xpath("//input[@name='saved_card_id']"));
@@ -273,33 +299,78 @@ public class AllPayments extends baseClass{
 	    	 Actionsss.javascriptClick(pp.getStripeSaveCardsButtons());
 	     }
 	     
-	     public void addNewCardThoughExistingCardsInStripe() throws Exception {
-		    	
-		   	    test.info("Though user have saved cards want to add new card");
-		    	PaymentPage pp = new PaymentPage(driver);
-		    	//clicks on credit card label
-		    	Actionsss.javascriptClick(pp.getStripeCreditCard());
-		    	
-		    	//add new card
-		    	Actionsss.javascriptClick(pp.getAddNewCardStripe());
-		    	
-		    	 //enters paymnet details 
-		    	pm.stripePayment();
-				 
-				//clicking on save button 
-				 Actionsss.javascriptClick(pp.getStripeSaveCardsButtons());
-		    	
-		    }
-		    public void addNewCardThoughExistingCardsInCyberSource() throws Exception {
-		    	
-		   	    test.info("Though user have saved cards want to add new card");
-		    	PaymentPage pp = new PaymentPage(driver);
-		    	//clicks on add paymnet
-		    	Actionsss.javascriptClick(pp.getAddPaymentCybersource());
-		    	
-		   	   //credit card details
-		    	pm.cyberSource();
-				 
-				 Actionsss.sendKeys(pp.getEmailInRegInCybersource(), "akhila.m@etg.digital","mail");
-		    }
+	     
+     public void addNewCardThoughExistingCardsInStripe() throws Exception {
+	    	
+	   	    test.info("Though user have saved cards want to add new card");
+	    	PaymentPage pp = new PaymentPage(driver);
+	    	//clicks on credit card label
+	    	Actionsss.javascriptClick(pp.getStripeCreditCard());
+	    	
+	    	//add new card
+	    	Actionsss.javascriptClick(pp.getAddNewCardStripe());
+	    	
+	    	 //enters paymnet details 
+	    	pm.stripePayment();
+			 
+			//clicking on save button 
+			 Actionsss.javascriptClick(pp.getStripeSaveCardsButtons());
+	    	
+	    }
+	    public void addNewCardThoughExistingCardsInCyberSource() throws Exception {
+	    	
+	   	    test.info("Though user have saved cards want to add new card");
+	    	PaymentPage pp = new PaymentPage(driver);
+	    	//clicks on add paymnet
+	    	Actionsss.javascriptClick(pp.getAddPaymentCybersource());
+	    	
+	   	   //credit card details
+	    	pm.cyberSource();
+			 
+			 Actionsss.sendKeys(pp.getEmailInRegInCybersource(), "akhila.m@etg.digital","mail");
+	    }
+		    
+		    
+		//adyen payment
+	    public void cardNumberInAdyenPayment() throws Exception {
+	    	//card number 
+			String[] cardNumbers = {
+	  			 	 "3700 0000 0000 002",
+			         "3700 0000 0100 018",
+			         "4035 5010 0000 0008",
+			         "4360 0000 0100 0005",
+	          };
+			
+		     int randomIndex = rand.nextInt(cardNumbers.length);
+		      test.info("Entered credit card number is " +cardNumbers[randomIndex] );
+		     
+		     driver.switchTo().frame(pp.getAdyenCardNumIframe());
+		     Actionsss.clearText(pp.getAdyenCardNumInput());
+		     Actionsss.sendKeys(pp.getAdyenCardNumInput(),cardNumbers[randomIndex],cardNum);
+		     driver.switchTo().defaultContent();
+	    }
+	    
+		public  void expDateInAdyen() throws Exception {
+
+		     test.info("Entered expiry date for card number is 03 30"  );		     
+		     driver.switchTo().frame(pp. getAdyenExpDateIframe());
+		     Actionsss.clearText(pp.getAdyenExpDateInput());
+		     Actionsss.sendKeys(pp.getAdyenExpDateInput(),"03 30","Expiry date");
+		     driver.switchTo().defaultContent();
+		}
+		public  void secCodeInAdyen() throws Exception {
+
+		     test.info("Entered security code for card number is 7373"  );		     
+		     driver.switchTo().frame(pp.getAdyenSecCodeIframe());
+		     Actionsss.clearText(pp.getAdyenSecCodeInput());
+		     Actionsss.sendKeys(pp.getAdyenSecCodeInput(),"7373","Security code");
+		     driver.switchTo().defaultContent();
+		}
+		public  void holderNameInAdyen() throws Exception {
+
+		     test.info("Entered holder name for card number is " +fakeEmail  );		     		   
+		     Actionsss.clearText(pp.getAdyenHolderNameInput());
+		     Actionsss.sendKeys(pp.getAdyenHolderNameInput(),fakeEmail,"holder name");
+		    
+		}
 }

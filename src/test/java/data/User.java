@@ -16,6 +16,9 @@ public class User extends baseClass {
 	 String randomFullName="";
 	 String randomFakeEmail="";
 	 String phoneNumber ="";
+	 
+	String editedEmail="";
+	
 	
 	@Test
 	public void userFakeFirstName() {		
@@ -47,14 +50,20 @@ public class User extends baseClass {
         fakeEmail=email;
 
 	}
-	
-	
-	
+
 	public void allFakeData() {
 		userFakeFirstName();
 		userFakeLastName() ;
 		userFakeGmail() ;		
 		userFakeFullName();
+		editedEmail();
 		
 	}
+	 
+	 public  void editedEmail() {
+		 // Generate a fake email address				
+	        String email = randomFirstName + "Edited@etg.digital";        
+	        editedEmail=email;
+	        logger.info(editedEmail);
+	 }
 }

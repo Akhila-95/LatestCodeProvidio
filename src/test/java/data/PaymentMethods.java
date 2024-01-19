@@ -20,68 +20,67 @@ public class PaymentMethods extends baseClass{
 	//brain tree payment method of guest user
 	public  void braintree() throws InterruptedException {
 		 allPay.brainTreeCardHolderName();
-		logger.info("entered card name");
+		logger.info("Entered card name for brain tree payment");
 		 allPay.brainTreeCardNumber();
-		logger.info("entered card number");
+		logger.info("Entered card number for brain tree payment ");
 		 allPay.brainTreeCvv();
-		logger.info("entered cvv");
+		logger.info("Entered cvv for brain tree payment");
 		 allPay.brainTreeExpDate();
-		logger.info("entered exp");
+		logger.info("Entered exp for brain tree payment");
 		
 	}
-	
-	//register user and select the new card and save the card
-	public void savedCardsBrainTree() throws InterruptedException {
 
-		test.info("User already have saved cards");
-		allPay.brainTreeSavedCards();  
-		logger.info("Selectd the new card");
-		braintree();
-		
-	}
-	
-	
 	//payment of cyber source  of guest user
-	public void cyberSource() throws InterruptedException {
+	public void cyberSource() throws Exception {
         allPay.cyberSourceCardNumber();
-        logger.info("entered card number");
+        logger.info("Entered card number for cybersource payment");
         allPay.cyberSourceExpMonth();
-        logger.info("entered exp month");
+        logger.info("Entered exp month for cybersource payment");
         allPay.cyberSourceExpYear();
-        logger.info("entered exp year");
+        logger.info("Entered exp year for cybersource payment");
         allPay.cyberSourceSecurityCode() ;
-        logger.info("entered scecode");
+        logger.info("Entered scecode for cybersource paymentS");
 		
 	}
 
 	//salesforce payment method
-	public void salesforcePayment() throws InterruptedException {
+	public void salesforcePayment() throws Exception {
 		allPay.salesforceCardNumber();
-    	logger.info("entered card number");
+    	logger.info("Entered card number for salesforce payment");
     	allPay.salesforceExpDate();
-    	logger.info("entered cvv");
+    	logger.info("Entered cvv for salesforce payment");
     	allPay.salesforceCvv();
-    	logger.info("entered exp");
+    	logger.info("Entered exp for salesforce payment");
 	}
 	
-
- 
-    
 
  
      //stripe payment method
      public void stripePayment() throws InterruptedException {
  		
     	allPay.stripeCardNumber();
- 		test.info("entered card number");
+ 		test.info("Entered card number for stripe payment");
  		allPay.stripeExpDate();
- 		test.info("entered exp date");		
+ 		test.info("Entered exp date for stripe payment");		
  		allPay.stripeCvv();
- 		test.info("entered cvv");
+ 		test.info("Entered cvv for stripe payment");
  		allPay.stripePostalCode();
- 		test.info("entered postal code");
+ 		test.info("Entered postal code for stripe payment");
+ 		
  	}
      
+     //adyen paymnet
+     public void adyenPayment() throws Exception {
+    	 allPay.cardNumberInAdyenPayment();
+    	 test.info("Entered card number for adyen payment");
+    	 allPay.expDateInAdyen();
+    	 test.info("Entered exp date for adyen payment");	
+    	 allPay.secCodeInAdyen();
+    	 test.info("Entered cvv for adyen payment");
+    	 allPay.holderNameInAdyen();
+    	 test.info("Entered holder name for adyen payment");
+    	 
+     }
      //stripe payment method
  /*    public void stripePaymentReguser() throws InterruptedException {
     	Thread.sleep(2000); 

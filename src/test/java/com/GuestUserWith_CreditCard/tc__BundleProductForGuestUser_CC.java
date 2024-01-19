@@ -4,8 +4,6 @@ import org.testng.asserts.SoftAssert;
 
 import com.providio.Scenarios.BundleProduct;
 import com.providio.launchingbrowser.launchBrowsering;
-import com.providio.paymentProccess.CreditCardPaymentProcess;
-import com.providio.paymentProccess.MiniCartChekoutButton;
 import com.providio.testcases.baseClass;
 
 public class tc__BundleProductForGuestUser_CC  extends baseClass{

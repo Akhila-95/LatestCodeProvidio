@@ -6,35 +6,23 @@
       <class name="browser.launchBrowsering">
         <methods>
           <include name="setUpforReport"/>
-          <include name="verifychromeBrowserLacuching"/>
-          <include name="afterMethod"/>
+          <include name="verifyHomePageLaunching"/>
           <include name="setUp"/>
+          <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- browser.launchBrowsering -->
-      <class name="testScripts.PaymentPageTests">
+      <class name="testScripts.CheckOutPage2Test">
         <methods>
           <include name="setUpforReport"/>
-          <include name="VerifedThatAllTheErrorsInCreditCard"/>
-          <include name="VerifedThatPaymentDetails"/>
-          <include name="VerifedThatTheCreditcardWithValidDetails"/>
-          <include name="afterMethod"/>
-          <include name="setUp"/>
-          <include name="afterClass"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testScripts.PaymentPageTests -->
-      <class name="testScripts.LoginPageTest">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="VerifyingLoginWithValidCredentials"/>
+          <include name="verifyingEditEmailInCheckoutPage2"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testScripts.LoginPageTest -->
+      </class> <!-- testScripts.CheckOutPage2Test -->
     </classes>
   </test> <!-- SmokeTest(failed) -->
 </suite> <!-- Failed suite [Providio Regression Test] -->
