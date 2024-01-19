@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="7" passed="1" failed="1" skipped="0">
+<testng-results ignored="20" total="59" passed="39" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-19T16:17:48 IST" name="Providio Regression Test" finished-at="2024-01-19T16:19:06 IST" duration-ms="78069">
+  <suite started-at="2024-01-19T17:48:48 IST" name="Providio Regression Test" finished-at="2024-01-19T17:59:32 IST" duration-ms="644211">
     <groups>
       <group name="regression">
-        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@427a12b6]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
+        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@5be052ca]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
+        <method signature="ShippingAddressPageTests.VerifedAllErrorsInShippingForm()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedAllErrorsInShippingForm" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedThatEnteredtheshippingDetailsInShippingPage()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedThatEnteredtheshippingDetailsInShippingPage" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedTheErrorsAddress()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedTheErrorsAddress" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedTheErrorsInFirstName()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedTheErrorsInFirstName" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedTheErrorsInLastName()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedTheErrorsInLastName" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedWithValidAddress()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedWithValidAddress" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedphoneNumberError()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedphoneNumberError" class="testScripts.ShippingAddressPageTests"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@427a12b6]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
+        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@5be052ca]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
+        <method signature="ShippingAddressPageTests.VerifedAllErrorsInShippingForm()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedAllErrorsInShippingForm" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedThatEnteredtheshippingDetailsInShippingPage()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedThatEnteredtheshippingDetailsInShippingPage" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedTheErrorsAddress()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedTheErrorsAddress" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedTheErrorsInFirstName()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedTheErrorsInFirstName" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedTheErrorsInLastName()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedTheErrorsInLastName" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedWithValidAddress()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedWithValidAddress" class="testScripts.ShippingAddressPageTests"/>
+        <method signature="ShippingAddressPageTests.VerifedphoneNumberError()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" name="VerifedphoneNumberError" class="testScripts.ShippingAddressPageTests"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-01-19T16:17:48 IST" name="SmokeTest" finished-at="2024-01-19T16:19:06 IST" duration-ms="78069">
+    <test started-at="2024-01-19T17:48:48 IST" name="SmokeTest" finished-at="2024-01-19T17:59:32 IST" duration-ms="644211">
       <class name="browser.launchBrowsering">
-        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:browser.launchBrowsering@427a12b6]" started-at="2024-01-19T16:17:43 IST" name="setUpforReport" finished-at="2024-01-19T16:17:48 IST" duration-ms="5306" status="PASS">
+        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:browser.launchBrowsering@5be052ca]" started-at="2024-01-19T17:48:42 IST" name="setUpforReport" finished-at="2024-01-19T17:48:48 IST" duration-ms="5950" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpforReport -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:browser.launchBrowsering@427a12b6]" started-at="2024-01-19T16:17:48 IST" name="setUp" finished-at="2024-01-19T16:17:50 IST" duration-ms="2051" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:browser.launchBrowsering@5be052ca]" started-at="2024-01-19T17:48:48 IST" name="setUp" finished-at="2024-01-19T17:48:50 IST" duration-ms="2047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:browser.launchBrowsering@427a12b6]" started-at="2024-01-19T16:17:50 IST" name="afterClass" finished-at="2024-01-19T16:17:50 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:browser.launchBrowsering@5be052ca]" started-at="2024-01-19T17:48:50 IST" name="afterClass" finished-at="2024-01-19T17:48:50 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,112 +46,1056 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method signature="verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@427a12b6]" started-at="2024-01-19T16:17:50 IST" name="verifyHomePageLaunching" finished-at="2024-01-19T16:17:56 IST" duration-ms="5533" status="PASS">
+        <test-method signature="verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@5be052ca]" started-at="2024-01-19T17:48:50 IST" name="verifyHomePageLaunching" finished-at="2024-01-19T17:48:56 IST" duration-ms="6264" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePageLaunching -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:browser.launchBrowsering@427a12b6]" started-at="2024-01-19T16:17:56 IST" name="afterMethod" finished-at="2024-01-19T16:17:56 IST" duration-ms="32" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:browser.launchBrowsering@5be052ca]" started-at="2024-01-19T17:48:56 IST" name="afterMethod" finished-at="2024-01-19T17:48:56 IST" duration-ms="25" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@427a12b6] output={null}]]]>
+                <![CDATA[[TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@5be052ca] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:browser.launchBrowsering@427a12b6]" started-at="2024-01-19T16:19:06 IST" name="tearDown" finished-at="2024-01-19T16:19:14 IST" duration-ms="7768" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:browser.launchBrowsering@5be052ca]" started-at="2024-01-19T17:59:32 IST" name="tearDown" finished-at="2024-01-19T17:59:40 IST" duration-ms="8636" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- browser.launchBrowsering -->
-      <class name="testScripts.CheckOutPage2Test">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.CheckOutPage2Test@173f1614]" started-at="2024-01-19T16:17:56 IST" name="setUp" finished-at="2024-01-19T16:17:58 IST" duration-ms="2021" status="PASS">
+      <class name="testScripts.LogOutTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.LogOutTest@3a17b2e3]" started-at="2024-01-19T17:53:27 IST" name="setUp" finished-at="2024-01-19T17:53:29 IST" duration-ms="2004" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.CheckOutPage2Test@173f1614]" started-at="2024-01-19T16:17:58 IST" name="afterClass" finished-at="2024-01-19T16:17:58 IST" duration-ms="1" status="PASS">
+        <test-method signature="verifyLogout()[pri:0, instance:testScripts.LogOutTest@3a17b2e3]" started-at="2024-01-19T17:53:29 IST" name="verifyLogout" finished-at="2024-01-19T17:53:40 IST" duration-ms="10551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogout -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.LogOutTest@3a17b2e3]" started-at="2024-01-19T17:53:29 IST" name="afterClass" finished-at="2024-01-19T17:53:29 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testScripts.CheckOutPage2Test.verifyingEditEmailInCheckoutPage2() throws java.lang.Exception]]>
+                <![CDATA[public void testScripts.LogOutTest.verifyLogout() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method signature="verifyingEditEmailInCheckoutPage2()[pri:0, instance:testScripts.CheckOutPage2Test@173f1614]" started-at="2024-01-19T16:17:58 IST" name="verifyingEditEmailInCheckoutPage2" finished-at="2024-01-19T16:19:05 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="67701" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
-at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
-at functionality.Actionsss.CombinedClick(Actionsss.java:93)
-at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:57)
-at tasks.CheckOutPageTask2.checkOutPage2(CheckOutPageTask2.java:26)
-at tasks.CheckOutPageTask2.editEmailInCheckoutPage2(CheckOutPageTask2.java:35)
-at testScripts.CheckOutPage2Test.verifyingEditEmailInCheckoutPage2(CheckOutPage2Test.java:16)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyingEditEmailInCheckoutPage2 -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.CheckOutPage2Test@173f1614]" started-at="2024-01-19T16:19:05 IST" name="afterMethod" finished-at="2024-01-19T16:19:06 IST" duration-ms="653" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.LogOutTest@3a17b2e3]" started-at="2024-01-19T17:53:40 IST" name="afterMethod" finished-at="2024-01-19T17:53:40 IST" duration-ms="9" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyingEditEmailInCheckoutPage2 status=FAILURE method=CheckOutPage2Test.verifyingEditEmailInCheckoutPage2()[pri:0, instance:testScripts.CheckOutPage2Test@173f1614] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLogout status=SUCCESS method=LogOutTest.verifyLogout()[pri:0, instance:testScripts.LogOutTest@3a17b2e3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testScripts.CheckOutPage2Test -->
+      </class> <!-- testScripts.LogOutTest -->
+      <class name="testScripts.CreateAccountPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:51:11 IST" name="setUp" finished-at="2024-01-19T17:51:13 IST" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyEmailAndConfirmEmail()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:51:13 IST" name="verifyEmailAndConfirmEmail" finished-at="2024-01-19T17:52:01 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="47523" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailAndConfirmEmail -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:51:13 IST" name="afterClass" finished-at="2024-01-19T17:51:13 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.CreateAccountPageTest.verifyEmailAndConfirmEmail() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:52:01 IST" name="afterMethod" finished-at="2024-01-19T17:52:01 IST" duration-ms="17" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyEmailAndConfirmEmail status=SUCCESS method=CreateAccountPageTest.verifyEmailAndConfirmEmail()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyPasswordMismatch()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:52:01 IST" name="verifyPasswordMismatch" finished-at="2024-01-19T17:52:22 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="21179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordMismatch -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:52:01 IST" name="afterClass" finished-at="2024-01-19T17:52:01 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.CreateAccountPageTest.verifyPasswordMismatch() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:52:22 IST" name="afterMethod" finished-at="2024-01-19T17:52:22 IST" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPasswordMismatch status=SUCCESS method=CreateAccountPageTest.verifyPasswordMismatch()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyPhoneNumError()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:52:22 IST" name="verifyPhoneNumError" finished-at="2024-01-19T17:52:43 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="21144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPhoneNumError -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:52:22 IST" name="afterClass" finished-at="2024-01-19T17:52:22 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.CreateAccountPageTest.verifyPhoneNumError() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:52:43 IST" name="afterMethod" finished-at="2024-01-19T17:52:43 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPhoneNumError status=SUCCESS method=CreateAccountPageTest.verifyPhoneNumError()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyEmailformatError()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:52:43 IST" name="verifyEmailformatError" finished-at="2024-01-19T17:53:04 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="21064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailformatError -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:52:43 IST" name="afterClass" finished-at="2024-01-19T17:52:43 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.CreateAccountPageTest.verifyEmailformatError() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:53:04 IST" name="afterMethod" finished-at="2024-01-19T17:53:04 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyEmailformatError status=SUCCESS method=CreateAccountPageTest.verifyEmailformatError()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:53:04 IST" name="afterClass" finished-at="2024-01-19T17:53:04 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.CreateAccountPageTest.verifyCreateAccountWithValidCredentials() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyCreateAccountWithValidCredentials()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:53:04 IST" name="verifyCreateAccountWithValidCredentials" finished-at="2024-01-19T17:53:27 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="23084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreateAccountWithValidCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89]" started-at="2024-01-19T17:53:27 IST" name="afterMethod" finished-at="2024-01-19T17:53:27 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyCreateAccountWithValidCredentials status=SUCCESS method=CreateAccountPageTest.verifyCreateAccountWithValidCredentials()[pri:0, instance:testScripts.CreateAccountPageTest@dab1f89] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testScripts.CreateAccountPageTest -->
+      <class name="testScripts.LoginPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:49:57 IST" name="setUp" finished-at="2024-01-19T17:49:59 IST" duration-ms="2019" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="VerifyingLoginFailureWithIncorrectCredentials()[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:49:59 IST" name="VerifyingLoginFailureWithIncorrectCredentials" finished-at="2024-01-19T17:50:28 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="28955" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyingLoginFailureWithIncorrectCredentials -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:49:59 IST" name="afterClass" finished-at="2024-01-19T17:49:59 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.LoginPageTest.VerifyingLoginFailureWithIncorrectCredentials() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:28 IST" name="afterMethod" finished-at="2024-01-19T17:50:28 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyingLoginFailureWithIncorrectCredentials status=SUCCESS method=LoginPageTest.VerifyingLoginFailureWithIncorrectCredentials()[pri:0, instance:testScripts.LoginPageTest@66813e6e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifyingLoginFailureWithEmptyEmailAndPassword()[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:28 IST" name="VerifyingLoginFailureWithEmptyEmailAndPassword" finished-at="2024-01-19T17:50:33 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="5237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyingLoginFailureWithEmptyEmailAndPassword -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:28 IST" name="afterClass" finished-at="2024-01-19T17:50:28 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmailAndPassword() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:33 IST" name="afterMethod" finished-at="2024-01-19T17:50:33 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyingLoginFailureWithEmptyEmailAndPassword status=SUCCESS method=LoginPageTest.VerifyingLoginFailureWithEmptyEmailAndPassword()[pri:0, instance:testScripts.LoginPageTest@66813e6e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifyingLoginFailureWithInvalidEmailFormat()[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:33 IST" name="VerifyingLoginFailureWithInvalidEmailFormat" finished-at="2024-01-19T17:50:43 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="9404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyingLoginFailureWithInvalidEmailFormat -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:33 IST" name="afterClass" finished-at="2024-01-19T17:50:33 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.LoginPageTest.VerifyingLoginFailureWithInvalidEmailFormat() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:43 IST" name="afterMethod" finished-at="2024-01-19T17:50:43 IST" duration-ms="13" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyingLoginFailureWithInvalidEmailFormat status=SUCCESS method=LoginPageTest.VerifyingLoginFailureWithInvalidEmailFormat()[pri:0, instance:testScripts.LoginPageTest@66813e6e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifyingLoginFailureWithEmptyEmail()[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:43 IST" name="VerifyingLoginFailureWithEmptyEmail" finished-at="2024-01-19T17:50:52 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="9385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyingLoginFailureWithEmptyEmail -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:43 IST" name="afterClass" finished-at="2024-01-19T17:50:43 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmail() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:52 IST" name="afterMethod" finished-at="2024-01-19T17:50:52 IST" duration-ms="13" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyingLoginFailureWithEmptyEmail status=SUCCESS method=LoginPageTest.VerifyingLoginFailureWithEmptyEmail()[pri:0, instance:testScripts.LoginPageTest@66813e6e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifyingLoginFailureWithEmptyPassword()[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:52 IST" name="VerifyingLoginFailureWithEmptyPassword" finished-at="2024-01-19T17:51:02 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="9444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyingLoginFailureWithEmptyPassword -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:50:52 IST" name="afterClass" finished-at="2024-01-19T17:50:52 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyPassword() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:51:02 IST" name="afterMethod" finished-at="2024-01-19T17:51:02 IST" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyingLoginFailureWithEmptyPassword status=SUCCESS method=LoginPageTest.VerifyingLoginFailureWithEmptyPassword()[pri:0, instance:testScripts.LoginPageTest@66813e6e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifyingLoginWithValidCredentials()[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:51:02 IST" name="VerifyingLoginWithValidCredentials" finished-at="2024-01-19T17:51:11 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="9543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyingLoginWithValidCredentials -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:51:02 IST" name="afterClass" finished-at="2024-01-19T17:51:02 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.LoginPageTest.VerifyingLoginWithValidCredentials() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.LoginPageTest@66813e6e]" started-at="2024-01-19T17:51:11 IST" name="afterMethod" finished-at="2024-01-19T17:51:11 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyingLoginWithValidCredentials status=SUCCESS method=LoginPageTest.VerifyingLoginWithValidCredentials()[pri:0, instance:testScripts.LoginPageTest@66813e6e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testScripts.LoginPageTest -->
+      <class name="testScripts.ShippingAddressPageTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:53:40 IST" name="setUp" finished-at="2024-01-19T17:53:42 IST" duration-ms="2008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="VerifedThatEnteredtheshippingDetailsInShippingPage()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:53:42 IST" name="VerifedThatEnteredtheshippingDetailsInShippingPage" finished-at="2024-01-19T17:55:10 IST" duration-ms="88170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifedThatEnteredtheshippingDetailsInShippingPage -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:53:42 IST" name="afterClass" finished-at="2024-01-19T17:53:42 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.ShippingAddressPageTests.VerifedThatEnteredtheshippingDetailsInShippingPage() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:10 IST" name="afterMethod" finished-at="2024-01-19T17:55:10 IST" duration-ms="21" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifedThatEnteredtheshippingDetailsInShippingPage status=SUCCESS method=ShippingAddressPageTests.VerifedThatEnteredtheshippingDetailsInShippingPage()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifedAllErrorsInShippingForm()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:10 IST" name="VerifedAllErrorsInShippingForm" finished-at="2024-01-19T17:55:14 IST" duration-ms="4400" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifedAllErrorsInShippingForm -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:10 IST" name="afterClass" finished-at="2024-01-19T17:55:10 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.ShippingAddressPageTests.VerifedAllErrorsInShippingForm() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:14 IST" name="afterMethod" finished-at="2024-01-19T17:55:14 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifedAllErrorsInShippingForm status=SUCCESS method=ShippingAddressPageTests.VerifedAllErrorsInShippingForm()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifedTheErrorsInFirstName()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:14 IST" name="VerifedTheErrorsInFirstName" finished-at="2024-01-19T17:55:28 IST" duration-ms="13740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifedTheErrorsInFirstName -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:14 IST" name="afterClass" finished-at="2024-01-19T17:55:14 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.ShippingAddressPageTests.VerifedTheErrorsInFirstName() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:28 IST" name="afterMethod" finished-at="2024-01-19T17:55:28 IST" duration-ms="17" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifedTheErrorsInFirstName status=SUCCESS method=ShippingAddressPageTests.VerifedTheErrorsInFirstName()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:28 IST" name="afterClass" finished-at="2024-01-19T17:55:28 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.ShippingAddressPageTests.VerifedTheErrorsInLastName() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="VerifedTheErrorsInLastName()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:28 IST" name="VerifedTheErrorsInLastName" finished-at="2024-01-19T17:55:42 IST" duration-ms="13885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifedTheErrorsInLastName -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:42 IST" name="afterMethod" finished-at="2024-01-19T17:55:42 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifedTheErrorsInLastName status=SUCCESS method=ShippingAddressPageTests.VerifedTheErrorsInLastName()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifedTheErrorsAddress()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:42 IST" name="VerifedTheErrorsAddress" finished-at="2024-01-19T17:55:56 IST" duration-ms="13632" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifedTheErrorsAddress -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:42 IST" name="afterClass" finished-at="2024-01-19T17:55:42 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.ShippingAddressPageTests.VerifedTheErrorsAddress() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:56 IST" name="afterMethod" finished-at="2024-01-19T17:55:56 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifedTheErrorsAddress status=SUCCESS method=ShippingAddressPageTests.VerifedTheErrorsAddress()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifedphoneNumberError()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:56 IST" name="VerifedphoneNumberError" finished-at="2024-01-19T17:56:09 IST" duration-ms="13672" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifedphoneNumberError -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:55:56 IST" name="afterClass" finished-at="2024-01-19T17:55:56 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.ShippingAddressPageTests.VerifedphoneNumberError() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:56:09 IST" name="afterMethod" finished-at="2024-01-19T17:56:09 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifedphoneNumberError status=SUCCESS method=ShippingAddressPageTests.VerifedphoneNumberError()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="VerifedWithValidAddress()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:56:09 IST" name="VerifedWithValidAddress" finished-at="2024-01-19T17:56:39 IST" duration-ms="29406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifedWithValidAddress -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:56:09 IST" name="afterClass" finished-at="2024-01-19T17:56:09 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.ShippingAddressPageTests.VerifedWithValidAddress() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156]" started-at="2024-01-19T17:56:39 IST" name="afterMethod" finished-at="2024-01-19T17:56:39 IST" duration-ms="12" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifedWithValidAddress status=SUCCESS method=ShippingAddressPageTests.VerifedWithValidAddress()[pri:0, instance:testScripts.ShippingAddressPageTests@5e13f156] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testScripts.ShippingAddressPageTests -->
+      <class name="testScripts.FooterPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:12 IST" name="setUp" finished-at="2024-01-19T17:49:15 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:15 IST" name="afterClass" finished-at="2024-01-19T17:49:15 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.FooterPageTest.verifyingResourceFooterLinks() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingResourceFooterLinks()[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:15 IST" name="verifyingResourceFooterLinks" finished-at="2024-01-19T17:49:20 IST" duration-ms="5488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingResourceFooterLinks -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:20 IST" name="afterMethod" finished-at="2024-01-19T17:49:20 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingResourceFooterLinks status=SUCCESS method=FooterPageTest.verifyingResourceFooterLinks()[pri:0, instance:testScripts.FooterPageTest@75023c53] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:20 IST" name="afterClass" finished-at="2024-01-19T17:49:20 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.FooterPageTest.verifyingWithoutEnteringEmailInSignupBoxInFooter() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingWithoutEnteringEmailInSignupBoxInFooter()[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:20 IST" name="verifyingWithoutEnteringEmailInSignupBoxInFooter" finished-at="2024-01-19T17:49:20 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingWithoutEnteringEmailInSignupBoxInFooter -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:20 IST" name="afterMethod" finished-at="2024-01-19T17:49:20 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingWithoutEnteringEmailInSignupBoxInFooter status=SUCCESS method=FooterPageTest.verifyingWithoutEnteringEmailInSignupBoxInFooter()[pri:0, instance:testScripts.FooterPageTest@75023c53] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyinginvalidEmailInEmailSignUpBox()[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:20 IST" name="verifyinginvalidEmailInEmailSignUpBox" finished-at="2024-01-19T17:49:23 IST" duration-ms="3304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyinginvalidEmailInEmailSignUpBox -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:20 IST" name="afterClass" finished-at="2024-01-19T17:49:20 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.FooterPageTest.verifyinginvalidEmailInEmailSignUpBox() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:23 IST" name="afterMethod" finished-at="2024-01-19T17:49:23 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyinginvalidEmailInEmailSignUpBox status=SUCCESS method=FooterPageTest.verifyinginvalidEmailInEmailSignUpBox()[pri:0, instance:testScripts.FooterPageTest@75023c53] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:23 IST" name="afterClass" finished-at="2024-01-19T17:49:23 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.FooterPageTest.verifyErrorMsgsInGiftCard() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyErrorMsgsInGiftCard()[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:23 IST" name="verifyErrorMsgsInGiftCard" finished-at="2024-01-19T17:49:28 IST" duration-ms="4636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyErrorMsgsInGiftCard -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:28 IST" name="afterMethod" finished-at="2024-01-19T17:49:28 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyErrorMsgsInGiftCard status=SUCCESS method=FooterPageTest.verifyErrorMsgsInGiftCard()[pri:0, instance:testScripts.FooterPageTest@75023c53] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:28 IST" name="afterClass" finished-at="2024-01-19T17:49:28 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.FooterPageTest.verifytheErrorsFromName_Recipients_confirmRecipientEMail() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifytheErrorsFromName_Recipients_confirmRecipientEMail()[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:28 IST" name="verifytheErrorsFromName_Recipients_confirmRecipientEMail" finished-at="2024-01-19T17:49:35 IST" duration-ms="6851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifytheErrorsFromName_Recipients_confirmRecipientEMail -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:35 IST" name="afterMethod" finished-at="2024-01-19T17:49:35 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifytheErrorsFromName_Recipients_confirmRecipientEMail status=SUCCESS method=FooterPageTest.verifytheErrorsFromName_Recipients_confirmRecipientEMail()[pri:0, instance:testScripts.FooterPageTest@75023c53] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyTheErrorsRecipientEmailAndConfirmEmail()[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:35 IST" name="verifyTheErrorsRecipientEmailAndConfirmEmail" finished-at="2024-01-19T17:49:44 IST" duration-ms="9637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheErrorsRecipientEmailAndConfirmEmail -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:35 IST" name="afterClass" finished-at="2024-01-19T17:49:35 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.FooterPageTest.verifyTheErrorsRecipientEmailAndConfirmEmail() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:44 IST" name="afterMethod" finished-at="2024-01-19T17:49:44 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheErrorsRecipientEmailAndConfirmEmail status=SUCCESS method=FooterPageTest.verifyTheErrorsRecipientEmailAndConfirmEmail()[pri:0, instance:testScripts.FooterPageTest@75023c53] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyErrorsForConfirmMail()[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:44 IST" name="verifyErrorsForConfirmMail" finished-at="2024-01-19T17:49:57 IST" duration-ms="12506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyErrorsForConfirmMail -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:44 IST" name="afterClass" finished-at="2024-01-19T17:49:44 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.FooterPageTest.verifyErrorsForConfirmMail() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.FooterPageTest@75023c53]" started-at="2024-01-19T17:49:57 IST" name="afterMethod" finished-at="2024-01-19T17:49:57 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyErrorsForConfirmMail status=SUCCESS method=FooterPageTest.verifyErrorsForConfirmMail()[pri:0, instance:testScripts.FooterPageTest@75023c53] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testScripts.FooterPageTest -->
+      <class name="testScripts.FindAStoreTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.FindAStoreTest@10b4e7f8]" started-at="2024-01-19T17:48:56 IST" name="setUp" finished-at="2024-01-19T17:48:58 IST" duration-ms="2017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.FindAStoreTest@10b4e7f8]" started-at="2024-01-19T17:48:58 IST" name="afterClass" finished-at="2024-01-19T17:48:58 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public static void testScripts.FindAStoreTest.verifyFindAStore() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyFindAStore()[pri:0, instance:testScripts.FindAStoreTest@10b4e7f8]" started-at="2024-01-19T17:48:58 IST" name="verifyFindAStore" finished-at="2024-01-19T17:49:12 IST" duration-ms="14424" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFindAStore -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.FindAStoreTest@10b4e7f8]" started-at="2024-01-19T17:49:12 IST" name="afterMethod" finished-at="2024-01-19T17:49:12 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFindAStore status=SUCCESS method=FindAStoreTest.verifyFindAStore()[pri:0, instance:testScripts.FindAStoreTest@10b4e7f8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testScripts.FindAStoreTest -->
+      <class name="testScripts.PaymentPageTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:56:39 IST" name="setUp" finished-at="2024-01-19T17:56:41 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:56:41 IST" name="afterClass" finished-at="2024-01-19T17:56:41 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingPaymentDetails() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingPaymentDetails()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:56:41 IST" name="verifyingPaymentDetails" finished-at="2024-01-19T17:59:04 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="143115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingPaymentDetails -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="afterMethod" finished-at="2024-01-19T17:59:04 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingPaymentDetails status=SUCCESS method=PaymentPageTests.verifyingPaymentDetails()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyingAllTheErrorsInCreditCard()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="verifyingAllTheErrorsInCreditCard" finished-at="2024-01-19T17:59:04 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingAllTheErrorsInCreditCard -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="afterClass" finished-at="2024-01-19T17:59:04 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingAllTheErrorsInCreditCard() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="afterMethod" finished-at="2024-01-19T17:59:04 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingAllTheErrorsInCreditCard status=SUCCESS method=PaymentPageTests.verifyingAllTheErrorsInCreditCard()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyingCvvAndExpErrorInCreditCard()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="verifyingCvvAndExpErrorInCreditCard" finished-at="2024-01-19T17:59:04 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingCvvAndExpErrorInCreditCard -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="afterClass" finished-at="2024-01-19T17:59:04 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingCvvAndExpErrorInCreditCard() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="afterMethod" finished-at="2024-01-19T17:59:04 IST" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingCvvAndExpErrorInCreditCard status=SUCCESS method=PaymentPageTests.verifyingCvvAndExpErrorInCreditCard()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="afterClass" finished-at="2024-01-19T17:59:04 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingCvvErrorInCreditCard() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingCvvErrorInCreditCard()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="verifyingCvvErrorInCreditCard" finished-at="2024-01-19T17:59:04 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingCvvErrorInCreditCard -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="afterMethod" finished-at="2024-01-19T17:59:04 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingCvvErrorInCreditCard status=SUCCESS method=PaymentPageTests.verifyingCvvErrorInCreditCard()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="afterClass" finished-at="2024-01-19T17:59:04 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingCreditcardNumberInValidError() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingCreditcardNumberInValidError()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:04 IST" name="verifyingCreditcardNumberInValidError" finished-at="2024-01-19T17:59:09 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="4412" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingCreditcardNumberInValidError -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:09 IST" name="afterMethod" finished-at="2024-01-19T17:59:09 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingCreditcardNumberInValidError status=SUCCESS method=PaymentPageTests.verifyingCreditcardNumberInValidError()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyingCreditCardExpDateInValid()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:09 IST" name="verifyingCreditCardExpDateInValid" finished-at="2024-01-19T17:59:11 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="2316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingCreditCardExpDateInValid -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:09 IST" name="afterClass" finished-at="2024-01-19T17:59:09 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingCreditCardExpDateInValid() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:11 IST" name="afterMethod" finished-at="2024-01-19T17:59:11 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingCreditCardExpDateInValid status=SUCCESS method=PaymentPageTests.verifyingCreditCardExpDateInValid()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyingCreditCardNumberInCompleteError()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:11 IST" name="verifyingCreditCardNumberInCompleteError" finished-at="2024-01-19T17:59:13 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="2337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingCreditCardNumberInCompleteError -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:11 IST" name="afterClass" finished-at="2024-01-19T17:59:11 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingCreditCardNumberInCompleteError() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:13 IST" name="afterMethod" finished-at="2024-01-19T17:59:13 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingCreditCardNumberInCompleteError status=SUCCESS method=PaymentPageTests.verifyingCreditCardNumberInCompleteError()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyingCreditCardInCompleteExpYearError()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:13 IST" name="verifyingCreditCardInCompleteExpYearError" finished-at="2024-01-19T17:59:16 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="2313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingCreditCardInCompleteExpYearError -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:13 IST" name="afterClass" finished-at="2024-01-19T17:59:13 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingCreditCardInCompleteExpYearError() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:16 IST" name="afterMethod" finished-at="2024-01-19T17:59:16 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingCreditCardInCompleteExpYearError status=SUCCESS method=PaymentPageTests.verifyingCreditCardInCompleteExpYearError()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyingCreditCardInCompleteCvvError()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:16 IST" name="verifyingCreditCardInCompleteCvvError" finished-at="2024-01-19T17:59:18 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="2265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingCreditCardInCompleteCvvError -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:16 IST" name="afterClass" finished-at="2024-01-19T17:59:16 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingCreditCardInCompleteCvvError() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:18 IST" name="afterMethod" finished-at="2024-01-19T17:59:18 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingCreditCardInCompleteCvvError status=SUCCESS method=PaymentPageTests.verifyingCreditCardInCompleteCvvError()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyingAddnewCreditCard()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:18 IST" name="verifyingAddnewCreditCard" finished-at="2024-01-19T17:59:18 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingAddnewCreditCard -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:18 IST" name="afterClass" finished-at="2024-01-19T17:59:18 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingAddnewCreditCard() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:18 IST" name="afterMethod" finished-at="2024-01-19T17:59:18 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingAddnewCreditCard status=SUCCESS method=PaymentPageTests.verifyingAddnewCreditCard()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:18 IST" name="afterClass" finished-at="2024-01-19T17:59:18 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PaymentPageTests.verifyingCreditcardWithValidDetails() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingCreditcardWithValidDetails()[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:18 IST" name="verifyingCreditcardWithValidDetails" finished-at="2024-01-19T17:59:32 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="13792" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingCreditcardWithValidDetails -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTests@630bf683]" started-at="2024-01-19T17:59:32 IST" name="afterMethod" finished-at="2024-01-19T17:59:32 IST" duration-ms="21" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingCreditcardWithValidDetails status=SUCCESS method=PaymentPageTests.verifyingCreditcardWithValidDetails()[pri:0, instance:testScripts.PaymentPageTests@630bf683] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testScripts.PaymentPageTests -->
     </test> <!-- SmokeTest -->
   </suite> <!-- Providio Regression Test -->
 </testng-results>

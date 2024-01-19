@@ -6,7 +6,7 @@
         <classes>
 			<class name="browser.launchBrowsering"/>
 
-        <!--  
+        
         <class name ="testScripts.LoginPageTest"/>
            
              <methods> 
@@ -18,30 +18,30 @@
              		<include name ="VerifyingLoginFailureWithEmptyPassword"/>     	 
              		<include name ="VerifyingLoginWithValidCredentials"/>  
              		 
-             </methods>-->
-		<!--	
-				<class name ="testScripts.PaymentPageTests"/> 
-				 <methods>
-					   <include name="verifyingPaymentDetails" />
-					
-					  <include name="verifyingAllTheErrorsInCreditCard" />
-				 <include name="verifyingCvvAndExpErrorInCreditCard" />					
-					 <include name="verifyingCvvErrorInCreditCard" />				
-				     <include name ="verifyingCreditcardNumberInValidError"></include>
-			  		 <include name ="verifyingCreditCardExpDateInValid"></include>
-				 	 <include name ="verifyingCreditCardNumberInCompleteError"></include>
-				     <include name ="verifyingCreditCardInCompleteExpYearError"></include> 	
-					 <include name ="verifyingCreditCardInCompleteCvvError"></include>  
-					  <include name="verifyingAddnewCreditCard" />  
-					  <include name="verifyingCreditcardWithValidDetails" /> 
-				
-             		
-				</methods>   
-			 	  -->
+             </methods>
+		  
+			 	  
 				<class name="testScripts.CheckOutPage2Test"/>
 				<methods>				
 					<include name="verifyingEditEmailInCheckoutPage2"/>	
 				</methods>
+				-->
+					<class name ="testScripts.PaymentPageTests"/> 
+				 <methods>
+					  <include name="verifyingPaymentDetails" />
+					   <include name="verifyingAllTheErrorsInCreditCard" />
+					   <include name="verifyingCvvAndExpErrorInCreditCard" /> 					
+					   <include name="verifyingCvvErrorInCreditCard" />				
+					  <include name ="verifyingCreditcardNumberInValidError"></include>
+			  		  <include name ="verifyingCreditCardExpDateInValid"></include>
+				 	  <include name ="verifyingCreditCardNumberInCompleteError"></include>
+					  <include name ="verifyingCreditCardInCompleteExpYearError"></include>
+					  <include name ="verifyingCreditCardInCompleteCvvError"></include>  		 
+					  <include name="verifyingAddnewCreditCard" />	 
+					  <include name="verifyingCreditcardWithValidDetails" /> 
+					
+             		
+				</methods>  
 	
         </classes>
     </test>

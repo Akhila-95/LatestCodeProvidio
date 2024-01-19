@@ -66,11 +66,11 @@ public class CheckOutPageTasks extends baseClass{
 	public static void guestCheckout() throws InterruptedException {
 	//	if(Actionsss.elementSize(CP.getSelectGuestCheckoutBtnList())) {
 			test.info("User is guest");
-		
-			Actionsss.click(CP.getSelectGuestCheckoutBtn());
+			Actionsss.CombinedClick(CP.getSelectGuestCheckoutBtn());
+			Thread.sleep(1000);
 			Actionsss.sendKeys(CP.getSelectGuestEmailInput(), guestmail, Email);
-		
-			Actionsss.click(CP.getSelectContinueasGuesttBtn());
+			Thread.sleep(1000);
+			Actionsss.CombinedClick(CP.getSelectContinueasGuesttBtn());
 			CheckOutPageValidation.VerifiedThatGuestLogin();
 		
 	}

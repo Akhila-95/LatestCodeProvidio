@@ -41,7 +41,26 @@ public class Actionsss extends baseClass{
 		 }
 		 
 
-		 
+		 // To select value from select drop down
+			 public static void selectValue(WebElement element){	
+			        // Creating a Select object
+			        Select dropdown = new Select(element);
+	 
+			        // Get the list of options
+			        int numberOfOptions = dropdown.getOptions().size();
+	 
+			        // Generate a random index within the range of available options
+			        int randomIndex = new Random().nextInt(numberOfOptions);
+	 
+			        // Select the option at the random index
+			        dropdown.selectByIndex(randomIndex);
+	 
+			        // Get the value of the randomly selected option
+			        String selectedOptionValue = dropdown.getFirstSelectedOption().getAttribute("value");
+			        logger.info("Value of the randomly selected option: " + selectedOptionValue);
+			       test.pass(" The randomly selected option: " + selectedOptionValue);
+	 
+			 }
 		 // for force click 
 		 public static void javascriptClick(WebElement element) throws Exception{
 				

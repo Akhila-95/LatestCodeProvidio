@@ -16130,3 +16130,351 @@ Ending 9/2028
 2024-01-19 16:18:47,432 - Providio -INFO - Product is  added to cart
 2024-01-19 16:18:55,606 - Providio -INFO - Successfully Clicked on the MiniCart
 2024-01-19 16:19:02,649 - Providio -INFO - Successfully Clicked on the ViewCart
+2024-01-19 17:17:07,897 - Providio -INFO - this is lauching page
+2024-01-19 17:17:11,729 - Providio -INFO - Placing the order as guest user
+2024-01-19 17:17:14,304 - Providio -INFO - Browser launched succesfully
+2024-01-19 17:17:14,355 - Providio -INFO - Deandre
+2024-01-19 17:17:14,357 - Providio -INFO - Francis Klein
+2024-01-19 17:17:14,360 - Providio -INFO - DeandreEdited@etg.digital
+2024-01-19 17:17:16,557 - Providio -INFO - The count of the element is 1
+2024-01-19 17:17:29,882 - Providio -INFO - DOWNTOWN TV SHOP
+2024-01-19 17:17:30,889 - Providio -INFO - Selected store is DOWNTOWN TV SHOP
+2024-01-19 17:17:57,343 - Providio -INFO - click Success Mens of  DRESS SHIRTS
+2024-01-19 17:18:01,364 - Providio -INFO - 5
+2024-01-19 17:18:01,364 - Providio -INFO - 2
+2024-01-19 17:18:04,462 - Providio -INFO - Successfully clicked in the Quickshop link in plp
+2024-01-19 17:18:04,739 - Providio -INFO - selected color
+2024-01-19 17:18:10,880 - Providio -INFO - selected size
+2024-01-19 17:18:39,686 - Providio -INFO - click Success Mens of  DRESS SHIRTS
+2024-01-19 17:18:43,719 - Providio -INFO - 5
+2024-01-19 17:18:43,720 - Providio -INFO - 4
+2024-01-19 17:18:46,792 - Providio -INFO - Successfully clicked in the Quickshop link in plp
+2024-01-19 17:18:46,960 - Providio -INFO - selected color
+2024-01-19 17:18:49,121 - Providio -INFO - selected size
+2024-01-19 17:19:16,709 - Providio -INFO - click Success Mens of  DRESS SHIRTS
+2024-01-19 17:19:20,721 - Providio -INFO - 5
+2024-01-19 17:19:20,721 - Providio -INFO - 2
+2024-01-19 17:19:23,773 - Providio -INFO - Successfully clicked in the Quickshop link in plp
+2024-01-19 17:19:23,957 - Providio -INFO - selected color
+2024-01-19 17:19:30,092 - Providio -INFO - selected size
+2024-01-19 17:19:59,137 - Providio -INFO - click Success Mens of  DRESS SHIRTS
+2024-01-19 17:20:03,167 - Providio -INFO - 5
+2024-01-19 17:20:03,168 - Providio -INFO - 4
+2024-01-19 17:20:06,233 - Providio -INFO - Successfully clicked in the Quickshop link in plp
+2024-01-19 17:20:06,419 - Providio -INFO - selected color
+2024-01-19 17:20:12,549 - Providio -INFO - selected size
+2024-01-19 17:20:16,582 - Providio -INFO - Product is in stock
+2024-01-19 17:20:23,829 - Providio -INFO - Product is  added to cart
+2024-01-19 17:20:31,975 - Providio -INFO - Successfully Clicked on the MiniCart
+2024-01-19 17:20:40,545 - Providio -INFO - Successfully Clicked on the ViewCart
+2024-01-19 17:20:49,117 - Providio -INFO - Successfully Clicked on the CheckOut Btn
+2024-01-19 17:20:57,443 - Providio -INFO - Successfully send keys of GuestEmail
+2024-01-19 17:21:03,629 - Providio -INFO - Successfully Clicked on the GuestLogin
+2024-01-19 17:21:07,802 - Providio -INFO - Successfully send keys of FirstName
+2024-01-19 17:21:09,948 - Providio -INFO - Successfully send keys of LastName
+2024-01-19 17:21:12,169 - Providio -INFO - The address entered is 123 William Street, New York, NY
+2024-01-19 17:21:14,304 - Providio -INFO - Successfully send keys of PhoneNumber
+2024-01-19 17:21:17,499 - Providio -INFO - Successfully Clicked on the Nextpayment Btn
+2024-01-19 17:21:19,589 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:19,622 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:19,653 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:19,680 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:19,722 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:19,746 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:19,774 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:19,796 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:19,830 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:19,850 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:19,874 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:19,893 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:19,940 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:19,961 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:19,982 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:20,008 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:22,310 - Providio -INFO - Successfully send keys of Invalid cardNum
+2024-01-19 17:21:24,389 - Providio -INFO - Error msg displayed when invalid card  details are entered
+2024-01-19 17:21:24,427 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:24,448 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:24,475 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:24,499 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:26,737 - Providio -INFO - Successfully send keys of  invalid expDate
+2024-01-19 17:21:26,763 - Providio -INFO - Error msg displayed when invalid exp year details are entered
+2024-01-19 17:21:26,800 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:26,816 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:26,832 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:26,851 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:29,134 - Providio -INFO - Successfully send keys of Incomplete cardNum
+2024-01-19 17:21:29,191 - Providio -INFO - Error msg displayed when incomplete card details are entered
+2024-01-19 17:21:29,220 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:29,236 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:29,254 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:29,271 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:31,428 - Providio -INFO - Successfully send keys of  invalid expDate
+2024-01-19 17:21:31,463 - Providio -INFO - Error msg displayed when incomplete exp year details are entered
+2024-01-19 17:21:31,491 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:31,508 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:31,527 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:31,546 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:33,719 - Providio -INFO - Successfully send keys of Incomplete security code
+2024-01-19 17:21:33,761 - Providio -INFO - Error msg displayed when incomplete security code  details are entered
+2024-01-19 17:21:33,792 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:33,822 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:33,842 - Providio -INFO - The count of the element is 0
+2024-01-19 17:21:33,862 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:33,889 - Providio -INFO - The count of the element is 1
+2024-01-19 17:21:36,111 - Providio -INFO - Successfully send keys of cardNumber
+2024-01-19 17:21:38,239 - Providio -INFO - Successfully send keys of Expired date
+2024-01-19 17:21:40,370 - Providio -INFO - Successfully send keys of Cvv
+2024-01-19 17:21:42,528 - Providio -INFO - Successfully send keys of postal code
+2024-01-19 17:48:50,154 - Providio -INFO - this is lauching page
+2024-01-19 17:48:56,324 - Providio -INFO - Placing the order as guest user
+2024-01-19 17:48:56,351 - Providio -INFO - Browser launched succesfully
+2024-01-19 17:48:56,392 - Providio -INFO - Ronna
+2024-01-19 17:48:56,412 - Providio -INFO - Mimi Schroeder II
+2024-01-19 17:48:56,412 - Providio -INFO - RonnaEdited@etg.digital
+2024-01-19 17:48:58,636 - Providio -INFO - The count of the element is 1
+2024-01-19 17:49:11,978 - Providio -INFO - KAUFEN KAUFEN
+2024-01-19 17:49:12,979 - Providio -INFO - Selected store is KAUFEN KAUFEN
+2024-01-19 17:49:19,440 - Providio -INFO - Brands Test
+2024-01-19 17:49:22,706 - Providio -INFO - Successfully send keys of mail 
+2024-01-19 17:49:23,824 - Providio -INFO - Please provide a valid email Id
+2024-01-19 17:49:23,824 - Providio -INFO - Succesfully error message pop up for subscription sign up
+2024-01-19 17:49:28,472 - Providio -INFO - All the  error are displayed when no text is entered
+2024-01-19 17:49:34,050 - Providio -INFO - Successfully send keys of Dominica
+2024-01-19 17:49:35,149 - Providio -INFO - Please confirm Recipient's E-Mail
+2024-01-19 17:49:35,150 - Providio -INFO - Please confirm Recipient's E-Mail
+2024-01-19 17:49:35,221 - Providio -INFO - Please enter valid From Name
+2024-01-19 17:49:35,237 - Providio -INFO - Please enter valid Recipient's E-Mail
+2024-01-19 17:49:35,255 - Providio -INFO - Please confirm Recipient's E-Mail
+2024-01-19 17:49:35,278 - Providio -INFO - Please enter valid From Name
+2024-01-19 17:49:35,299 - Providio -INFO - Please enter valid Recipient's E-Mail
+2024-01-19 17:49:35,333 - Providio -INFO - Please confirm Recipient's E-Mail
+2024-01-19 17:49:35,333 - Providio -INFO - Error message is displayed as Please enter valid From NameandPlease enter valid Recipient's E-Mailand Please confirm Recipient's E-Mail
+2024-01-19 17:49:40,625 - Providio -INFO - Successfully send keys of Dominica
+2024-01-19 17:49:42,816 - Providio -INFO - Successfully send keys of Gift certificate from name
+2024-01-19 17:49:44,923 - Providio -INFO - Please enter valid Recipient's E-Mail
+2024-01-19 17:49:44,946 - Providio -INFO - Please confirm Recipient's E-Mail
+2024-01-19 17:49:44,965 - Providio -INFO - Please enter valid Recipient's E-Mail
+2024-01-19 17:49:44,982 - Providio -INFO - Please confirm Recipient's E-Mail
+2024-01-19 17:49:44,982 - Providio -INFO - Error message is displayed as Please enter valid Recipient's E-Mail andPlease confirm Recipient's E-Mail
+2024-01-19 17:49:51,152 - Providio -INFO - Successfully send keys of Dominica
+2024-01-19 17:49:53,254 - Providio -INFO - Successfully send keys of Gift certificate from name
+2024-01-19 17:49:55,379 - Providio -INFO - Successfully send keys of mail 
+2024-01-19 17:49:57,470 - Providio -INFO - Please confirm Recipient's E-Mail
+2024-01-19 17:49:57,494 - Providio -INFO - Please confirm Recipient's E-Mail
+2024-01-19 17:49:57,496 - Providio -INFO - Error message is displayed as Please confirm Recipient's E-Mail
+2024-01-19 17:49:59,570 - Providio -INFO - The count of the element is 0
+2024-01-19 17:49:59,594 - Providio -INFO - The count of the element is 0
+2024-01-19 17:49:59,595 - Providio -INFO - Login page not loaded
+2024-01-19 17:50:16,999 - Providio -INFO - Successfully navigated to login page
+2024-01-19 17:50:19,180 - Providio -INFO - Successfully send keys of Invalid Email
+2024-01-19 17:50:21,306 - Providio -INFO - Successfully send keys of password
+2024-01-19 17:50:28,481 - Providio -INFO - Invalid login error displayed successfully
+2024-01-19 17:50:28,511 - Providio -INFO - The count of the element is 1
+2024-01-19 17:50:28,512 - Providio -INFO - Login page already loaded
+2024-01-19 17:50:33,727 - Providio -INFO - Error displayed for empty email and password submission
+2024-01-19 17:50:33,762 - Providio -INFO - The count of the element is 1
+2024-01-19 17:50:33,763 - Providio -INFO - Login page already loaded
+2024-01-19 17:50:35,899 - Providio -INFO - Successfully send keys of invalid mail
+2024-01-19 17:50:38,005 - Providio -INFO - Successfully send keys of password
+2024-01-19 17:50:43,146 - Providio -INFO - Invalid email format error displayed successfully
+2024-01-19 17:50:43,180 - Providio -INFO - The count of the element is 1
+2024-01-19 17:50:43,180 - Providio -INFO - Login page already loaded
+2024-01-19 17:50:45,318 - Providio -INFO - Successfully send keys of Empty email
+2024-01-19 17:50:47,443 - Providio -INFO - Successfully send keys of Empty password
+2024-01-19 17:50:52,546 - Providio -INFO - Error displayed for login failure with empty email
+2024-01-19 17:50:52,580 - Providio -INFO - The count of the element is 1
+2024-01-19 17:50:52,580 - Providio -INFO - Login page already loaded
+2024-01-19 17:50:54,712 - Providio -INFO - Successfully send keys of 
+2024-01-19 17:50:56,851 - Providio -INFO - Successfully send keys of Empty password
+2024-01-19 17:51:02,004 - Providio -INFO - Error displayed for login failure with an empty password
+2024-01-19 17:51:02,043 - Providio -INFO - The count of the element is 1
+2024-01-19 17:51:02,044 - Providio -INFO - Login page already loaded
+2024-01-19 17:51:04,170 - Providio -INFO - Successfully send keys of  user Email
+2024-01-19 17:51:06,271 - Providio -INFO - Successfully send keys of password
+2024-01-19 17:51:11,472 - Providio -INFO - User logged in successfully
+2024-01-19 17:51:11,502 - Providio -INFO - Musku Akhila
+2024-01-19 17:51:11,520 - Providio -INFO - Musku Akhila
+2024-01-19 17:51:11,520 - Providio -INFO - Name of User name is Musku Akhila
+2024-01-19 17:51:11,547 - Providio -INFO - akhila.m+4@etg.digital
+2024-01-19 17:51:11,565 - Providio -INFO - akhila.m+4@etg.digital
+2024-01-19 17:51:11,566 - Providio -INFO - Email is akhila.m+4@etg.digital
+2024-01-19 17:51:13,615 - Providio -INFO - The count of the element is 0
+2024-01-19 17:51:13,640 - Providio -INFO - The count of the element is 0
+2024-01-19 17:51:13,640 - Providio -INFO - user logged in
+2024-01-19 17:51:40,030 - Providio -INFO - Successfully navigated to Create Account page
+2024-01-19 17:51:42,162 - Providio -INFO - Successfully send keys of First Name
+2024-01-19 17:51:44,279 - Providio -INFO - Successfully send keys of Last Name
+2024-01-19 17:51:46,421 - Providio -INFO - Successfully send keys of Phone Number
+2024-01-19 17:51:48,538 - Providio -INFO - Successfully send keys of Email
+2024-01-19 17:51:50,666 - Providio -INFO - Successfully send keys of Confirm Email
+2024-01-19 17:51:52,802 - Providio -INFO - Successfully send keys of Password
+2024-01-19 17:51:54,927 - Providio -INFO - Successfully send keys of Confirm Password
+2024-01-19 17:51:59,102 - Providio -INFO - Please enter the same value again.
+2024-01-19 17:51:59,103 - Providio -INFO - Error message is displayed
+2024-01-19 17:52:01,154 - Providio -INFO - The count of the element is 1
+2024-01-19 17:52:01,155 - Providio -INFO - Create account already loaded
+2024-01-19 17:52:03,282 - Providio -INFO - Successfully send keys of First Name
+2024-01-19 17:52:05,394 - Providio -INFO - Successfully send keys of Last Name
+2024-01-19 17:52:07,517 - Providio -INFO - Successfully send keys of Phone Number
+2024-01-19 17:52:09,631 - Providio -INFO - Successfully send keys of Email
+2024-01-19 17:52:11,817 - Providio -INFO - Successfully send keys of Confirm Email
+2024-01-19 17:52:13,995 - Providio -INFO - Successfully send keys of Password
+2024-01-19 17:52:16,167 - Providio -INFO - Successfully send keys of Confirm Password
+2024-01-19 17:52:20,304 - Providio -INFO - Does not match password
+2024-01-19 17:52:20,305 - Providio -INFO - Showing error message: Does not match password
+2024-01-19 17:52:22,360 - Providio -INFO - The count of the element is 1
+2024-01-19 17:52:22,361 - Providio -INFO - Create account already loaded
+2024-01-19 17:52:24,513 - Providio -INFO - Successfully send keys of First Name
+2024-01-19 17:52:26,626 - Providio -INFO - Successfully send keys of Last Name
+2024-01-19 17:52:28,755 - Providio -INFO - Successfully send keys of Phone Number
+2024-01-19 17:52:30,897 - Providio -INFO - Successfully send keys of Email
+2024-01-19 17:52:33,079 - Providio -INFO - Successfully send keys of Confirm Email
+2024-01-19 17:52:35,219 - Providio -INFO - Successfully send keys of Password
+2024-01-19 17:52:37,328 - Providio -INFO - Successfully send keys of Confirm Password
+2024-01-19 17:52:41,462 - Providio -INFO - Please enter a valid phone number
+2024-01-19 17:52:41,463 - Providio -INFO - Test case passed
+2024-01-19 17:52:43,503 - Providio -INFO - The count of the element is 1
+2024-01-19 17:52:43,503 - Providio -INFO - Create account already loaded
+2024-01-19 17:52:45,652 - Providio -INFO - Successfully send keys of First Name
+2024-01-19 17:52:47,760 - Providio -INFO - Successfully send keys of Last Name
+2024-01-19 17:52:49,899 - Providio -INFO - Successfully send keys of Phone Number
+2024-01-19 17:52:52,033 - Providio -INFO - Successfully send keys of Email
+2024-01-19 17:52:54,156 - Providio -INFO - Successfully send keys of Confirm Email
+2024-01-19 17:52:56,291 - Providio -INFO - Successfully send keys of Password
+2024-01-19 17:52:58,408 - Providio -INFO - Successfully send keys of Confirm Password
+2024-01-19 17:53:02,496 - Providio -INFO - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-19 17:53:02,496 - Providio -INFO - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-19 17:53:02,539 - Providio -INFO - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-19 17:53:02,539 - Providio -INFO - Test case passed
+2024-01-19 17:53:04,580 - Providio -INFO - The count of the element is 1
+2024-01-19 17:53:04,580 - Providio -INFO - Create account already loaded
+2024-01-19 17:53:06,714 - Providio -INFO - Successfully send keys of First Name
+2024-01-19 17:53:08,851 - Providio -INFO - Successfully send keys of Last Name
+2024-01-19 17:53:11,014 - Providio -INFO - Successfully send keys of Phone Number
+2024-01-19 17:53:13,138 - Providio -INFO - Successfully send keys of Email
+2024-01-19 17:53:15,291 - Providio -INFO - Successfully send keys of Confirm Email
+2024-01-19 17:53:17,423 - Providio -INFO - Successfully send keys of Password
+2024-01-19 17:53:19,550 - Providio -INFO - Successfully send keys of Confirm Password
+2024-01-19 17:53:25,635 - Providio -INFO - Dashboard
+2024-01-19 17:53:25,637 - Providio -INFO - Account created successfully
+2024-01-19 17:54:05,024 - Providio -INFO - click Success Mens of  DRESS SHIRTS
+2024-01-19 17:54:09,055 - Providio -INFO - 5
+2024-01-19 17:54:09,055 - Providio -INFO - 5
+2024-01-19 17:54:12,149 - Providio -INFO - Successfully clicked in the Quickshop link in plp
+2024-01-19 17:54:12,415 - Providio -INFO - selected color
+2024-01-19 17:54:18,551 - Providio -INFO - selected size
+2024-01-19 17:54:22,622 - Providio -INFO - Product is in stock
+2024-01-19 17:54:29,792 - Providio -INFO - Product is  added to cart
+2024-01-19 17:54:37,936 - Providio -INFO - Successfully Clicked on the MiniCart
+2024-01-19 17:54:45,264 - Providio -INFO - Successfully Clicked on the ViewCart
+2024-01-19 17:54:53,924 - Providio -INFO - Successfully Clicked on the CheckOut Btn
+2024-01-19 17:55:02,256 - Providio -INFO - Successfully send keys of GuestEmail
+2024-01-19 17:55:08,392 - Providio -INFO - Successfully Clicked on the GuestLogin
+2024-01-19 17:55:10,466 - Providio -INFO - The count of the element is 1
+2024-01-19 17:55:10,492 - Providio -INFO - The count of the element is 1
+2024-01-19 17:55:14,823 - Providio -INFO - Successfully all the error messages are displayed for shipping address,first name, last name phone number
+2024-01-19 17:55:14,850 - Providio -INFO - The count of the element is 1
+2024-01-19 17:55:17,030 - Providio -INFO - Successfully send keys of LastName
+2024-01-19 17:55:19,235 - Providio -INFO - The address entered is 123 William Street, New York, NY
+2024-01-19 17:55:21,401 - Providio -INFO - Successfully send keys of PhoneNumber
+2024-01-19 17:55:24,458 - Providio -INFO - The count of the element is 1
+2024-01-19 17:55:28,573 - Providio -INFO - Successfully the error messages are displayed for first name.
+2024-01-19 17:55:28,613 - Providio -INFO - The count of the element is 1
+2024-01-19 17:55:30,738 - Providio -INFO - Successfully send keys of FirstName
+2024-01-19 17:55:33,037 - Providio -INFO - The address entered is 123 William Street, New York, NY
+2024-01-19 17:55:35,208 - Providio -INFO - Successfully send keys of PhoneNumber
+2024-01-19 17:55:38,242 - Providio -INFO - The count of the element is 1
+2024-01-19 17:55:42,478 - Providio -INFO - Successfully the error messages are displayed for last name.
+2024-01-19 17:55:42,507 - Providio -INFO - The count of the element is 1
+2024-01-19 17:55:44,647 - Providio -INFO - Successfully send keys of FirstName
+2024-01-19 17:55:46,769 - Providio -INFO - Successfully send keys of LastName
+2024-01-19 17:55:48,921 - Providio -INFO - Successfully send keys of PhoneNumber
+2024-01-19 17:55:51,954 - Providio -INFO - The count of the element is 1
+2024-01-19 17:55:56,119 - Providio -INFO - Successfully the error messages are displayed for shipping address
+2024-01-19 17:55:56,154 - Providio -INFO - The count of the element is 1
+2024-01-19 17:55:58,263 - Providio -INFO - Successfully send keys of FirstName
+2024-01-19 17:56:00,433 - Providio -INFO - Successfully send keys of LastName
+2024-01-19 17:56:02,626 - Providio -INFO - The address entered is 123 William Street, New York, NY
+2024-01-19 17:56:05,685 - Providio -INFO - The count of the element is 1
+2024-01-19 17:56:09,807 - Providio -INFO - Successfully the error messages are displayed for  phone number
+2024-01-19 17:56:11,983 - Providio -INFO - Successfully send keys of FirstName
+2024-01-19 17:56:14,109 - Providio -INFO - Successfully send keys of LastName
+2024-01-19 17:56:16,308 - Providio -INFO - The address entered is 123 William Street, New York, NY
+2024-01-19 17:56:18,416 - Providio -INFO - Successfully send keys of PhoneNumber
+2024-01-19 17:56:25,544 - Providio -INFO - Successfully Clicked on the Nextpayment Btn
+2024-01-19 17:57:03,816 - Providio -INFO - click Success Mens of  DRESS SHIRTS
+2024-01-19 17:57:07,847 - Providio -INFO - 5
+2024-01-19 17:57:07,848 - Providio -INFO - 2
+2024-01-19 17:57:10,945 - Providio -INFO - Successfully clicked in the Quickshop link in plp
+2024-01-19 17:57:11,175 - Providio -INFO - selected color
+2024-01-19 17:57:17,329 - Providio -INFO - selected size
+2024-01-19 17:57:44,624 - Providio -INFO - click Success Mens of  DRESS SHIRTS
+2024-01-19 17:57:48,664 - Providio -INFO - 5
+2024-01-19 17:57:48,665 - Providio -INFO - 5
+2024-01-19 17:57:51,760 - Providio -INFO - Successfully clicked in the Quickshop link in plp
+2024-01-19 17:57:51,920 - Providio -INFO - selected color
+2024-01-19 17:57:58,036 - Providio -INFO - selected size
+2024-01-19 17:58:02,069 - Providio -INFO - Product is in stock
+2024-01-19 17:58:09,216 - Providio -INFO - Product is  added to cart
+2024-01-19 17:58:17,764 - Providio -INFO - Successfully Clicked on the MiniCart
+2024-01-19 17:58:25,491 - Providio -INFO - Successfully Clicked on the ViewCart
+2024-01-19 17:58:34,094 - Providio -INFO - Successfully Clicked on the CheckOut Btn
+2024-01-19 17:58:42,347 - Providio -INFO - Successfully send keys of GuestEmail
+2024-01-19 17:58:48,474 - Providio -INFO - Successfully Clicked on the GuestLogin
+2024-01-19 17:58:52,614 - Providio -INFO - Successfully send keys of FirstName
+2024-01-19 17:58:54,767 - Providio -INFO - Successfully send keys of LastName
+2024-01-19 17:58:56,985 - Providio -INFO - The address entered is 123 William Street, New York, NY
+2024-01-19 17:58:59,140 - Providio -INFO - Successfully send keys of PhoneNumber
+2024-01-19 17:59:02,362 - Providio -INFO - Successfully Clicked on the Nextpayment Btn
+2024-01-19 17:59:04,434 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:04,464 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:04,493 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:04,525 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:04,559 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:04,578 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:04,600 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:04,628 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:04,664 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:04,682 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:04,704 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:04,723 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:04,764 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:04,783 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:04,807 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:04,827 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:07,096 - Providio -INFO - Successfully send keys of Invalid cardNum
+2024-01-19 17:59:09,148 - Providio -INFO - Error msg displayed when invalid card  details are entered
+2024-01-19 17:59:09,181 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:09,204 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:09,225 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:09,246 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:11,445 - Providio -INFO - Successfully send keys of  invalid expDate
+2024-01-19 17:59:11,473 - Providio -INFO - Error msg displayed when invalid exp year details are entered
+2024-01-19 17:59:11,506 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:11,522 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:11,537 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:11,552 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:13,762 - Providio -INFO - Successfully send keys of Incomplete cardNum
+2024-01-19 17:59:13,817 - Providio -INFO - Error msg displayed when incomplete card details are entered
+2024-01-19 17:59:13,848 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:13,865 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:13,883 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:13,905 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:16,105 - Providio -INFO - Successfully send keys of  invalid expDate
+2024-01-19 17:59:16,140 - Providio -INFO - Error msg displayed when incomplete exp year details are entered
+2024-01-19 17:59:16,163 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:16,180 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:16,198 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:16,217 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:18,377 - Providio -INFO - Successfully send keys of Incomplete security code
+2024-01-19 17:59:18,412 - Providio -INFO - Error msg displayed when incomplete security code  details are entered
+2024-01-19 17:59:18,443 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:18,473 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:18,488 - Providio -INFO - The count of the element is 0
+2024-01-19 17:59:18,506 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:18,527 - Providio -INFO - The count of the element is 1
+2024-01-19 17:59:20,742 - Providio -INFO - Successfully send keys of cardNumber
+2024-01-19 17:59:22,896 - Providio -INFO - Successfully send keys of Expired date
+2024-01-19 17:59:24,976 - Providio -INFO - Successfully send keys of Cvv
+2024-01-19 17:59:27,143 - Providio -INFO - Successfully send keys of postal code

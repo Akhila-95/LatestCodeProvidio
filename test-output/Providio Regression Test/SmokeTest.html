@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>SmokeTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>39/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 19 16:17:48 IST 2024</td>
+<td>Started on:</td><td>Fri Jan 19 17:48:48 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>78 seconds (78069 ms)</td>
+<tr><td>Total time:</td><td>644 seconds (644211 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,86 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testScripts.CheckOutPage2Test.verifyingEditEmailInCheckoutPage2()'><b>verifyingEditEmailInCheckoutPage2</b><br>Test class: testScripts.CheckOutPage2Test</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
-	at functionality.Actionsss.CombinedClick(Actionsss.java:93)
-	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:57)
-	at tasks.CheckOutPageTask2.checkOutPage2(CheckOutPageTask2.java:26)
-	at tasks.CheckOutPageTask2.editEmailInCheckoutPage2(CheckOutPageTask2.java:35)
-	at testScripts.CheckOutPage2Test.verifyingEditEmailInCheckoutPage2(CheckOutPage2Test.java:16)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace303934490", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace303934490'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
-	at functionality.Actionsss.CombinedClick(Actionsss.java:93)
-	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:57)
-	at tasks.CheckOutPageTask2.checkOutPage2(CheckOutPageTask2.java:26)
-	at tasks.CheckOutPageTask2.editEmailInCheckoutPage2(CheckOutPageTask2.java:35)
-	at testScripts.CheckOutPage2Test.verifyingEditEmailInCheckoutPage2(CheckOutPage2Test.java:16)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>67</td>
-<td>testScripts.CheckOutPage2Test@173f1614</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -156,10 +76,200 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='browser.launchBrowsering.verifyHomePageLaunching()'><b>verifyHomePageLaunching</b><br>Test class: browser.launchBrowsering</td>
+<td title='testScripts.PaymentPageTests.verifyingCreditcardWithValidDetails()'><b>verifyingCreditcardWithValidDetails</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>13</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyPasswordMismatch()'><b>verifyPasswordMismatch</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>21</td>
+<td>testScripts.CreateAccountPageTest@dab1f89</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyinginvalidEmailInEmailSignUpBox()'><b>verifyinginvalidEmailInEmailSignUpBox</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>3</td>
+<td>testScripts.FooterPageTest@75023c53</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifytheErrorsFromName_Recipients_confirmRecipientEMail()'><b>verifytheErrorsFromName_Recipients_confirmRecipientEMail</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.FooterPageTest@75023c53</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyEmailAndConfirmEmail()'><b>verifyEmailAndConfirmEmail</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>47</td>
+<td>testScripts.CreateAccountPageTest@dab1f89</td></tr>
+<tr>
+<td title='testScripts.ShippingAddressPageTests.VerifedTheErrorsInLastName()'><b>VerifedTheErrorsInLastName</b><br>Test class: testScripts.ShippingAddressPageTests</td>
+<td></td>
+<td>13</td>
+<td>testScripts.ShippingAddressPageTests@5e13f156</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithIncorrectCredentials()'><b>VerifyingLoginFailureWithIncorrectCredentials</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>28</td>
+<td>testScripts.LoginPageTest@66813e6e</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTests.verifyingCreditCardExpDateInValid()'><b>verifyingCreditCardExpDateInValid</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmail()'><b>VerifyingLoginFailureWithEmptyEmail</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.LoginPageTest@66813e6e</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginWithValidCredentials()'><b>VerifyingLoginWithValidCredentials</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.LoginPageTest@66813e6e</td></tr>
+<tr>
+<td title='testScripts.LogOutTest.verifyLogout()'><b>verifyLogout</b><br>Test class: testScripts.LogOutTest</td>
+<td></td>
+<td>10</td>
+<td>testScripts.LogOutTest@3a17b2e3</td></tr>
+<tr>
+<td title='testScripts.ShippingAddressPageTests.VerifedWithValidAddress()'><b>VerifedWithValidAddress</b><br>Test class: testScripts.ShippingAddressPageTests</td>
+<td></td>
+<td>29</td>
+<td>testScripts.ShippingAddressPageTests@5e13f156</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyPassword()'><b>VerifyingLoginFailureWithEmptyPassword</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.LoginPageTest@66813e6e</td></tr>
+<tr>
+<td title='testScripts.ShippingAddressPageTests.VerifedAllErrorsInShippingForm()'><b>VerifedAllErrorsInShippingForm</b><br>Test class: testScripts.ShippingAddressPageTests</td>
+<td></td>
+<td>4</td>
+<td>testScripts.ShippingAddressPageTests@5e13f156</td></tr>
+<tr>
+<td title='testScripts.ShippingAddressPageTests.VerifedTheErrorsInFirstName()'><b>VerifedTheErrorsInFirstName</b><br>Test class: testScripts.ShippingAddressPageTests</td>
+<td></td>
+<td>13</td>
+<td>testScripts.ShippingAddressPageTests@5e13f156</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyingResourceFooterLinks()'><b>verifyingResourceFooterLinks</b><br>Test class: testScripts.FooterPageTest</td>
 <td></td>
 <td>5</td>
-<td>browser.launchBrowsering@427a12b6</td></tr>
+<td>testScripts.FooterPageTest@75023c53</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyingWithoutEnteringEmailInSignupBoxInFooter()'><b>verifyingWithoutEnteringEmailInSignupBoxInFooter</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.FooterPageTest@75023c53</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyErrorMsgsInGiftCard()'><b>verifyErrorMsgsInGiftCard</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>4</td>
+<td>testScripts.FooterPageTest@75023c53</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyTheErrorsRecipientEmailAndConfirmEmail()'><b>verifyTheErrorsRecipientEmailAndConfirmEmail</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.FooterPageTest@75023c53</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyErrorsForConfirmMail()'><b>verifyErrorsForConfirmMail</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>12</td>
+<td>testScripts.FooterPageTest@75023c53</td></tr>
+<tr>
+<td title='testScripts.ShippingAddressPageTests.VerifedphoneNumberError()'><b>VerifedphoneNumberError</b><br>Test class: testScripts.ShippingAddressPageTests</td>
+<td></td>
+<td>13</td>
+<td>testScripts.ShippingAddressPageTests@5e13f156</td></tr>
+<tr>
+<td title='browser.launchBrowsering.verifyHomePageLaunching()'><b>verifyHomePageLaunching</b><br>Test class: browser.launchBrowsering</td>
+<td></td>
+<td>6</td>
+<td>browser.launchBrowsering@5be052ca</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmailAndPassword()'><b>VerifyingLoginFailureWithEmptyEmailAndPassword</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.LoginPageTest@66813e6e</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTests.verifyingAllTheErrorsInCreditCard()'><b>verifyingAllTheErrorsInCreditCard</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>0</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyCreateAccountWithValidCredentials()'><b>verifyCreateAccountWithValidCredentials</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>23</td>
+<td>testScripts.CreateAccountPageTest@dab1f89</td></tr>
+<tr>
+<td title='testScripts.ShippingAddressPageTests.VerifedThatEnteredtheshippingDetailsInShippingPage()'><b>VerifedThatEnteredtheshippingDetailsInShippingPage</b><br>Test class: testScripts.ShippingAddressPageTests</td>
+<td></td>
+<td>88</td>
+<td>testScripts.ShippingAddressPageTests@5e13f156</td></tr>
+<tr>
+<td title='testScripts.ShippingAddressPageTests.VerifedTheErrorsAddress()'><b>VerifedTheErrorsAddress</b><br>Test class: testScripts.ShippingAddressPageTests</td>
+<td></td>
+<td>13</td>
+<td>testScripts.ShippingAddressPageTests@5e13f156</td></tr>
+<tr>
+<td title='testScripts.FindAStoreTest.verifyFindAStore()'><b>verifyFindAStore</b><br>Test class: testScripts.FindAStoreTest</td>
+<td></td>
+<td>14</td>
+<td>testScripts.FindAStoreTest@10b4e7f8</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyEmailformatError()'><b>verifyEmailformatError</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>21</td>
+<td>testScripts.CreateAccountPageTest@dab1f89</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyPhoneNumError()'><b>verifyPhoneNumError</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>21</td>
+<td>testScripts.CreateAccountPageTest@dab1f89</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTests.verifyingCvvErrorInCreditCard()'><b>verifyingCvvErrorInCreditCard</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>0</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTests.verifyingCreditcardNumberInValidError()'><b>verifyingCreditcardNumberInValidError</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>4</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTests.verifyingPaymentDetails()'><b>verifyingPaymentDetails</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>143</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTests.verifyingCreditCardNumberInCompleteError()'><b>verifyingCreditCardNumberInCompleteError</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTests.verifyingCvvAndExpErrorInCreditCard()'><b>verifyingCvvAndExpErrorInCreditCard</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>0</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTests.verifyingAddnewCreditCard()'><b>verifyingAddnewCreditCard</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>0</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithInvalidEmailFormat()'><b>VerifyingLoginFailureWithInvalidEmailFormat</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.LoginPageTest@66813e6e</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTests.verifyingCreditCardInCompleteCvvError()'><b>verifyingCreditCardInCompleteCvvError</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTests.verifyingCreditCardInCompleteExpYearError()'><b>verifyingCreditCardInCompleteExpYearError</b><br>Test class: testScripts.PaymentPageTests</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTests@630bf683</td></tr>
 </table><p>
 </body>
 </html>

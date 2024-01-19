@@ -28,7 +28,7 @@
                 		
                 		
                 	</methods>
-            
+          
      		 <class name ="testScripts.LoginPageTest"/>
            
              <methods> 
@@ -54,7 +54,13 @@
                 	<include name= "verifyCreateAccountWithValidCredentials"></include> 
                 
                 </methods>
-       
+                
+                <class name ="testScripts.LogOutTest"/>
+                <methods>
+                	<include name="verifyLogout" />
+                
+                </methods>
+        <!-- 
         	<class name ="testScripts.CheckOutPage2Test"/>
 				 <methods>
 				 	<include name ="verifyingNavigationToCOP2_Page"></include>
@@ -65,7 +71,7 @@
 				 	<include name =" verifyingEtgLogoDisplayInCOP2_Page"></include>
 	
 				 </methods>
-        
+        -->
                 <class name="testScripts.ShippingAddressPageTests"/>       
 		     <methods>
 		     
@@ -78,7 +84,7 @@
 				  <include name="VerifedWithValidAddress" />
 				
 			 </methods>
-			 
+			  
 			 
 				<class name ="testScripts.PaymentPageTests"/> 
 				 <methods>
@@ -96,9 +102,7 @@
 					
              		
 				</methods>  
-				  -->
-		
-				
-        </classes>
+
+         </classes>
     </test>
 </suite>
