@@ -69,6 +69,7 @@ public class FooterValidation extends baseClass{
 	
 	
 	public static void allErrorMsgsInGiftCard() throws Exception {
+		test.info("Verify the all the errors in gift card page");
 		Thread.sleep(2000);
 		if(Actionsss.displayElement(fp.getErrorForRecipientName()) || (Actionsss.displayElement(fp.getFromNameError())) || (Actionsss.displayElement(fp.getRecipientConfirmEmailError()) ||
 				(Actionsss.displayElement(fp.getRecipientEmailError())))) {
@@ -82,6 +83,7 @@ public class FooterValidation extends baseClass{
 	
 	
 	public static void errorsFromName_Recipients_confirmRecipientEMail() throws Exception {
+		test.info("Verify the error for Errors FromName ,Recipients mail, confirm Recipient EMail in gift card");
 		Thread.sleep(2000);
 		logger.info(Actionsss.getTextOfElement(fp.getRecipientConfirmEmailError()));
         if(Actionsss.displayElement(fp.getFromNameError()) || Actionsss.displayElement(fp.getRecipientEmailError()) || Actionsss.displayElement(fp.getRecipientConfirmEmailError())) {
@@ -94,7 +96,7 @@ public class FooterValidation extends baseClass{
 	}
 	
 	public static void errorsRecipientEmailAndConfirmEmail() {
-		
+		test.info("Verify the error for Recipients mail, confirm Recipient EMail in gift card"); 
 		if(Actionsss.displayElement(fp.getRecipientEmailError()) &&Actionsss.displayElement(fp.getRecipientConfirmEmailError())) {
 			test.pass("Error message is displayed as " +Actionsss.getTextOfElement(fp.getRecipientEmailError() )+ " and" +Actionsss.getTextOfElement(fp.getRecipientConfirmEmailError()));       	
         	logger.info("Error message is displayed as " +Actionsss.getTextOfElement(fp.getRecipientEmailError() )+ " and" +Actionsss.getTextOfElement(fp.getRecipientConfirmEmailError()));
@@ -105,6 +107,7 @@ public class FooterValidation extends baseClass{
 	}
 	
 	public static void errorsForConfirmMail() throws InterruptedException {
+		test.info("Verify the error for confirm Recipient EMail in gift card"); 
 		Thread.sleep(1000);
 		if(Actionsss.displayElement(fp.getRecipientConfirmEmailError())) {
 			test.pass("Error message is displayed as " +Actionsss.getTextOfElement(fp.getRecipientConfirmEmailError()));  

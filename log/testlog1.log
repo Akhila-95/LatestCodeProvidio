@@ -33675,3 +33675,2094 @@ Abel Mayer 123 William Street Manhattan New York NY 10038 and edited billing add
 2024-01-23 18:37:30,082 [main] INFO Providio - selected color
 2024-01-23 18:37:31,122 [main] INFO Providio - 1
 2024-01-23 18:37:31,223 [main] INFO Providio - selected size
+2024-01-23 19:51:38,647 [main] INFO Providio - this is lauching page
+2024-01-23 19:51:46,634 [main] INFO Providio - Placing the order as guest user
+2024-01-23 19:51:46,692 [main] INFO Providio - Browser launched succesfully
+2024-01-23 19:51:46,948 [main] INFO Providio - Mika
+2024-01-23 19:51:46,949 [main] INFO Providio - Epifania Schuppe
+2024-01-23 19:51:46,951 [main] INFO Providio - MikaEdited@etg.digital
+2024-01-23 19:51:49,165 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:51:59,689 [main] INFO Providio - WIRE-WIRE
+2024-01-23 19:52:00,703 [main] INFO Providio - Selected store is WIRE-WIRE
+2024-01-23 19:52:51,463 [main] INFO Providio - this is lauching page
+2024-01-23 19:52:58,721 [main] INFO Providio - Placing the order as guest user
+2024-01-23 19:52:58,753 [main] INFO Providio - Browser launched succesfully
+2024-01-23 19:52:58,827 [main] INFO Providio - Ofelia
+2024-01-23 19:52:58,839 [main] INFO Providio - Arletha O'Connell PhD
+2024-01-23 19:52:58,841 [main] INFO Providio - OfeliaEdited@etg.digital
+2024-01-23 19:53:01,146 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:53:11,721 [main] INFO Providio - KHALE STREET ELECTRONICS
+2024-01-23 19:53:12,733 [main] INFO Providio - Selected store is KHALE STREET ELECTRONICS
+2024-01-23 19:53:19,006 [main] INFO Providio - Brands Test
+2024-01-23 19:53:22,333 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 19:53:23,443 [main] INFO Providio - Please provide a valid email Id
+2024-01-23 19:53:23,444 [main] INFO Providio - Succesfully error message pop up for subscription sign up
+2024-01-23 19:53:30,542 [main] INFO Providio - All the  error are displayed when no text is entered
+2024-01-23 19:53:35,982 [main] INFO Providio - Successfully send keys of Dennis
+2024-01-23 19:53:39,100 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 19:53:39,101 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 19:53:39,164 [main] INFO Providio - Please enter valid From Name
+2024-01-23 19:53:39,193 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 19:53:39,215 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 19:53:39,241 [main] INFO Providio - Please enter valid From Name
+2024-01-23 19:53:39,264 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 19:53:39,286 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 19:53:39,287 [main] INFO Providio - Error message is displayed as Please enter valid From NameandPlease enter valid Recipient's E-Mailand Please confirm Recipient's E-Mail
+2024-01-23 19:53:44,489 [main] INFO Providio - Successfully send keys of Dennis
+2024-01-23 19:53:46,683 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 19:53:48,839 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 19:53:48,866 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 19:53:48,889 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 19:53:48,914 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 19:53:48,914 [main] INFO Providio - Error message is displayed as Please enter valid Recipient's E-Mail andPlease confirm Recipient's E-Mail
+2024-01-23 19:53:56,545 [main] INFO Providio - Successfully send keys of Dennis
+2024-01-23 19:53:58,684 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 19:54:00,901 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 19:54:02,995 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 19:54:03,019 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 19:54:03,019 [main] INFO Providio - Error message is displayed as Please confirm Recipient's E-Mail
+2024-01-23 19:54:05,113 [main] INFO Providio - The count of the element is 0
+2024-01-23 19:54:05,141 [main] INFO Providio - The count of the element is 0
+2024-01-23 19:54:05,141 [main] INFO Providio - Login page not loaded
+2024-01-23 19:54:20,656 [main] INFO Providio - Successfully navigated to login page
+2024-01-23 19:54:22,888 [main] INFO Providio - Successfully send keys of Invalid Email
+2024-01-23 19:54:25,099 [main] INFO Providio - Successfully send keys of password
+2024-01-23 19:54:28,660 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:54:28,660 [main] INFO Providio - Login page already loaded
+2024-01-23 19:54:33,950 [main] INFO Providio - Error displayed for empty email and password submission
+2024-01-23 19:54:33,986 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:54:33,986 [main] INFO Providio - Login page already loaded
+2024-01-23 19:54:36,187 [main] INFO Providio - Successfully send keys of invalid mail
+2024-01-23 19:54:38,360 [main] INFO Providio - Successfully send keys of password
+2024-01-23 19:54:39,480 [main] INFO Providio - Invalid email format error displayed successfully
+2024-01-23 19:54:39,519 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:54:39,520 [main] INFO Providio - Login page already loaded
+2024-01-23 19:54:41,650 [main] INFO Providio - Successfully send keys of Empty email
+2024-01-23 19:54:43,848 [main] INFO Providio - Successfully send keys of Empty password
+2024-01-23 19:54:48,938 [main] INFO Providio - Error displayed for login failure with empty email
+2024-01-23 19:54:48,971 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:54:48,972 [main] INFO Providio - Login page already loaded
+2024-01-23 19:54:51,195 [main] INFO Providio - Successfully send keys of valid email
+2024-01-23 19:54:53,321 [main] INFO Providio - Successfully send keys of Empty password
+2024-01-23 19:54:58,470 [main] INFO Providio - Error displayed for login failure with an empty password
+2024-01-23 19:54:58,507 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:54:58,507 [main] INFO Providio - Login page already loaded
+2024-01-23 19:55:00,735 [main] INFO Providio - Successfully send keys of  user Email
+2024-01-23 19:55:02,937 [main] INFO Providio - Successfully send keys of password
+2024-01-23 19:55:08,207 [main] INFO Providio - User logged in successfully
+2024-01-23 19:55:08,254 [main] INFO Providio - Musku Akhila
+2024-01-23 19:55:08,280 [main] INFO Providio - Musku Akhila
+2024-01-23 19:55:08,280 [main] INFO Providio - Name of User name is Musku Akhila
+2024-01-23 19:55:08,312 [main] INFO Providio - akhila.m+4@etg.digital
+2024-01-23 19:55:08,339 [main] INFO Providio - akhila.m+4@etg.digital
+2024-01-23 19:55:08,339 [main] INFO Providio - Email is akhila.m+4@etg.digital
+2024-01-23 19:55:10,431 [main] INFO Providio - The count of the element is 0
+2024-01-23 19:55:10,458 [main] INFO Providio - The count of the element is 0
+2024-01-23 19:55:10,458 [main] INFO Providio - user logged in
+2024-01-23 19:55:22,251 [main] INFO Providio - Successfully user logged out
+2024-01-23 19:55:34,963 [main] INFO Providio - Successfully navigated to Create Account page
+2024-01-23 19:55:37,201 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 19:55:39,396 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 19:55:41,571 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 19:55:43,744 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 19:55:45,950 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 19:55:48,152 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 19:55:50,323 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 19:55:54,505 [main] INFO Providio - Please enter the same value again.
+2024-01-23 19:55:54,506 [main] INFO Providio - Error message is displayed
+2024-01-23 19:55:56,582 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:55:56,583 [main] INFO Providio - Create account already loaded
+2024-01-23 19:55:58,786 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 19:56:00,987 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 19:56:03,194 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 19:56:05,403 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 19:56:07,607 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 19:56:09,806 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 19:56:11,977 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 19:56:16,188 [main] INFO Providio - Does not match password
+2024-01-23 19:56:16,189 [main] INFO Providio - Showing error message: Does not match password
+2024-01-23 19:56:18,237 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:56:18,238 [main] INFO Providio - Create account already loaded
+2024-01-23 19:56:20,439 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 19:56:22,621 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 19:56:24,811 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 19:56:26,988 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 19:56:29,198 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 19:56:31,460 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 19:56:33,635 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 19:56:37,759 [main] INFO Providio - Please enter a valid phone number
+2024-01-23 19:56:37,760 [main] INFO Providio - Test case passed
+2024-01-23 19:56:39,825 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:56:39,826 [main] INFO Providio - Create account already loaded
+2024-01-23 19:56:42,035 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 19:56:44,258 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 19:56:46,477 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 19:56:48,713 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 19:56:50,905 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 19:56:53,088 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 19:56:55,308 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 19:56:59,406 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 19:56:59,407 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 19:56:59,494 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 19:56:59,494 [main] INFO Providio - Test case passed
+2024-01-23 19:57:01,534 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:57:01,534 [main] INFO Providio - Create account already loaded
+2024-01-23 19:57:03,704 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 19:57:05,910 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 19:57:08,115 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 19:57:10,329 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 19:57:12,504 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 19:57:14,699 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 19:57:16,876 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 19:57:21,977 [main] INFO Providio - Dashboard
+2024-01-23 19:57:21,978 [main] INFO Providio - Account created successfully
+2024-01-23 19:57:38,264 [main] INFO Providio - Successfully user logged out
+2024-01-23 19:57:40,384 [main] INFO Providio - The count of the element is 0
+2024-01-23 19:57:40,464 [main] INFO Providio - 0
+2024-01-23 19:58:04,394 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 19:58:08,444 [main] INFO Providio - 5
+2024-01-23 19:58:08,445 [main] INFO Providio - 3
+2024-01-23 19:58:11,573 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 19:58:11,778 [main] INFO Providio - 1
+2024-01-23 19:58:13,936 [main] INFO Providio - selected color
+2024-01-23 19:58:15,024 [main] INFO Providio - 1
+2024-01-23 19:58:15,136 [main] INFO Providio - selected size
+2024-01-23 19:58:16,224 [main] INFO Providio - 1
+2024-01-23 19:58:18,376 [main] INFO Providio - selected width
+2024-01-23 19:58:22,440 [main] INFO Providio - Product is in stock
+2024-01-23 19:58:29,691 [main] INFO Providio - Product is  added to cart
+2024-01-23 19:58:37,845 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 19:58:48,754 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 19:58:58,303 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:59:02,637 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 19:59:04,744 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 19:59:04,773 [main] INFO Providio - Customer information is displayed in check out page 2
+2024-01-23 19:59:04,810 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:59:04,810 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 19:59:04,833 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:59:05,904 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 19:59:05,905 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 19:59:11,061 [main] INFO Providio - DonteEditedFromCOP2@etg.digital
+2024-01-23 19:59:13,322 [main] INFO Providio - Successfully send keys of Edited email
+2024-01-23 19:59:18,467 [main] INFO Providio - DonteEditedFromCOP2@etg.digital
+2024-01-23 19:59:18,469 [main] INFO Providio - DonteEditedFromCOP2@etg.digital
+2024-01-23 19:59:18,470 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is DonteEditedFromCOP2@etg.digital
+2024-01-23 19:59:18,525 [main] INFO Providio - The count of the element is 1
+2024-01-23 19:59:18,525 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 19:59:24,961 [main] INFO Providio - Succesfully paginated to PDP page by clicking the product from check out page 2
+2024-01-23 19:59:24,992 [main] INFO Providio - 0
+2024-01-23 19:59:48,110 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 19:59:52,449 [main] INFO Providio - 5
+2024-01-23 19:59:52,450 [main] INFO Providio - 2
+2024-01-23 19:59:55,542 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 19:59:55,744 [main] INFO Providio - 1
+2024-01-23 19:59:57,896 [main] INFO Providio - selected color
+2024-01-23 19:59:58,947 [main] INFO Providio - 1
+2024-01-23 19:59:59,200 [main] INFO Providio - selected size
+2024-01-23 20:00:26,118 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 20:00:30,140 [main] INFO Providio - 5
+2024-01-23 20:00:30,141 [main] INFO Providio - 1
+2024-01-23 20:00:33,266 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 20:00:33,462 [main] INFO Providio - 1
+2024-01-23 20:00:35,608 [main] INFO Providio - selected color
+2024-01-23 20:00:36,685 [main] INFO Providio - 1
+2024-01-23 20:00:36,832 [main] INFO Providio - selected size
+2024-01-23 20:00:40,869 [main] INFO Providio - Product is in stock
+2024-01-23 20:00:48,124 [main] INFO Providio - Product is  added to cart
+2024-01-23 20:00:56,301 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 20:01:03,654 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 20:01:03,713 [main] INFO Providio - 1
+2024-01-23 20:01:03,714 [main] INFO Providio - View cart page is already loaded
+2024-01-23 20:01:13,991 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:18,388 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 20:01:20,517 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 20:01:20,560 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:20,560 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:01:20,589 [main] INFO Providio - Next Payment Button  is displayed in check out page 2
+2024-01-23 20:01:20,627 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:20,628 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:01:20,653 [main] INFO Providio -  Etg logo  is displayed in check out page 2
+2024-01-23 20:01:20,685 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:20,685 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:01:20,711 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:20,741 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:25,202 [main] INFO Providio - Successfully all the error messages are displayed for shipping address,first name, last name phone number
+2024-01-23 20:01:25,239 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:25,240 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:01:25,260 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:27,460 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 20:01:29,731 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 20:01:31,929 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 20:01:34,996 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:40,172 [main] INFO Providio - Successfully the error messages are displayed for first name.
+2024-01-23 20:01:40,215 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:40,215 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:01:40,236 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:42,487 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 20:01:44,806 [main] INFO Providio - The address entered is 123 Edward Street North, Thunder Bay, ON, Canada
+2024-01-23 20:01:46,992 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 20:01:50,053 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:55,277 [main] INFO Providio - Successfully the error messages are displayed for last name.
+2024-01-23 20:01:55,322 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:55,323 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:01:55,347 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:01:57,579 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 20:01:59,754 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 20:02:02,024 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 20:02:05,057 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:02:10,193 [main] INFO Providio - Successfully the error messages are displayed for shipping address
+2024-01-23 20:02:10,230 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:02:10,231 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:02:10,253 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:02:12,449 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 20:02:14,624 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 20:02:16,891 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 20:02:20,000 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:02:25,212 [main] INFO Providio - Successfully the error messages are displayed for  phone number
+2024-01-23 20:02:25,248 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:02:25,248 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:02:27,485 [main] INFO Providio - Successfully send keys of FirstName
+2024-01-23 20:02:29,780 [main] INFO Providio - Successfully send keys of LastName
+2024-01-23 20:02:32,024 [main] INFO Providio - The address entered is 12300 Bermuda Road #123, Henderson, NV
+2024-01-23 20:02:34,223 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 20:02:42,630 [main] INFO Providio - Successfully Clicked on the Nextpayment Btn and navigated to payment page
+2024-01-23 20:02:44,771 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:02:44,803 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:02:48,876 [main] INFO Providio - Bermuda Road
+2024-01-23 20:02:48,876 [main] INFO Providio - Bermuda Road
+2024-01-23 20:02:54,040 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:02:56,270 [main] INFO Providio - Successfully send keys of edited first name
+2024-01-23 20:02:58,479 [main] INFO Providio - Successfully send keys of edited last name
+2024-01-23 20:03:01,768 [main] INFO Providio - The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+2024-01-23 20:03:03,975 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 20:03:11,173 [main] INFO Providio - Click failed
+2024-01-23 20:03:13,224 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 20:03:13,225 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 20:03:13,226 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 20:03:13,226 [main] INFO Providio - Bermuda Road
+2024-01-23 20:03:13,227 [main] INFO Providio - Successfully shipping addresss is edited the previous address is Bermuda Road and edited shipping address is  is 231 Fort York Boulevard
+2024-01-23 20:03:14,302 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:03:14,326 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:03:18,373 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:03:19,453 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 20:03:19,453 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 20:03:24,616 [main] INFO Providio - CarolEditedFromCOP3@etg.digital
+2024-01-23 20:03:26,876 [main] INFO Providio - Successfully send keys of Edited email form check out page 3
+2024-01-23 20:03:37,238 [main] INFO Providio - CarolEditedFromCOP3@etg.digital
+2024-01-23 20:03:37,239 [main] INFO Providio - CarolEditedFromCOP3@etg.digital
+2024-01-23 20:03:37,240 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 20:03:37,241 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is CarolEditedFromCOP3@etg.digital
+2024-01-23 20:03:37,281 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:03:48,815 [main] INFO Providio - Successfully send keys of gift message
+2024-01-23 20:03:58,025 [main] INFO Providio - Gift message is not displayed
+2024-01-23 20:03:58,074 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:03:58,127 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:04:00,176 [main] INFO Providio - Dennis Turner Bermuda Road Marco Island FL 34145
+- Existing Addresses -
+Ofelia Kling 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 20:04:00,176 [main] INFO Providio - Dennis Turner Bermuda Road Marco Island FL 34145
+- Existing Addresses -
+Ofelia Kling 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 20:04:06,322 [main] INFO Providio -  keys not send to 
+2024-01-23 20:04:08,377 [main] INFO Providio -  keys not send to 
+2024-01-23 20:04:08,624 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:08,646 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:04:10,748 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:10,777 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:10,807 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:10,838 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:10,879 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:10,911 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:04:12,971 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:13,001 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:13,033 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:13,060 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:13,097 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:13,125 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:04:15,185 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:15,212 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:15,234 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:15,257 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:15,291 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:15,314 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:04:17,408 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:17,437 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:17,462 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:17,490 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:25,773 [main] INFO Providio -  keys not send to 
+2024-01-23 20:04:27,820 [main] INFO Providio - Error msg displayed when invalid card details are entered
+2024-01-23 20:04:27,855 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:27,878 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:04:29,957 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:30,005 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:30,120 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:30,170 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:37,711 [main] INFO Providio - Successfully send keys of  invalid expDate
+2024-01-23 20:04:37,755 [main] INFO Providio - Error msg displayed when invalid exp year details are entered
+2024-01-23 20:04:37,809 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:37,830 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:04:39,906 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:39,934 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:39,956 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:39,987 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:47,409 [main] INFO Providio - Successfully send keys of Incomplete cardNum
+2024-01-23 20:04:47,473 [main] INFO Providio - Error msg displayed when incomplete card details are entered
+2024-01-23 20:04:47,518 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:47,542 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:04:49,587 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:49,614 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:49,639 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:49,664 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:57,044 [main] INFO Providio - Successfully send keys of  invalid expDate
+2024-01-23 20:04:57,102 [main] INFO Providio - Error msg displayed when incomplete exp year  details are entered
+2024-01-23 20:04:57,161 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:57,198 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:04:59,248 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:04:59,277 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:59,309 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:04:59,336 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:05:06,650 [main] INFO Providio - Successfully send keys of Incomplete security code
+2024-01-23 20:05:06,692 [main] INFO Providio - Error msg displayed when incomplete security code  details are entered
+2024-01-23 20:05:06,731 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:05:06,755 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:05:08,819 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:05:08,871 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:05:08,895 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:05:10,951 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:05:10,977 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:05:10,999 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:05:11,028 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:05:13,336 [main] INFO Providio - Successfully send keys of cardNumber
+2024-01-23 20:05:15,536 [main] INFO Providio - Successfully send keys of Expired date
+2024-01-23 20:05:17,717 [main] INFO Providio - Successfully send keys of Cvv
+2024-01-23 20:05:19,919 [main] INFO Providio - Successfully send keys of postal code
+2024-01-23 20:05:24,085 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:05:24,117 [main] INFO Providio - Successfully Clicked on the review order button
+2024-01-23 20:14:01,614 [main] INFO Providio - this is lauching page
+2024-01-23 20:14:07,747 [main] INFO Providio - Placing the order as guest user
+2024-01-23 20:14:07,769 [main] INFO Providio - Browser launched succesfully
+2024-01-23 20:14:07,855 [main] INFO Providio - Jeane
+2024-01-23 20:14:07,856 [main] INFO Providio - Mr. Frederic Medhurst
+2024-01-23 20:14:07,864 [main] INFO Providio - JeaneEdited@etg.digital
+2024-01-23 20:14:10,087 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:14:20,767 [main] INFO Providio - ELECTRO TURBO
+2024-01-23 20:14:21,785 [main] INFO Providio - Selected store is ELECTRO TURBO
+2024-01-23 20:14:29,921 [main] INFO Providio - Account
+2024-01-23 20:14:29,990 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:14:29,991 [main] INFO Providio - Login page already loaded
+2024-01-23 20:14:32,252 [main] INFO Providio - Successfully send keys of  user Email
+2024-01-23 20:14:34,432 [main] INFO Providio - Successfully send keys of password
+2024-01-23 20:14:51,379 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 20:14:52,505 [main] INFO Providio - Please provide a valid email Id
+2024-01-23 20:14:52,506 [main] INFO Providio - Succesfully error message pop up for subscription sign up
+2024-01-23 20:14:59,584 [main] INFO Providio - All the  error are displayed when no text is entered
+2024-01-23 20:15:05,738 [main] INFO Providio - Successfully send keys of Gilberto
+2024-01-23 20:15:08,883 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 20:15:08,884 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 20:15:08,943 [main] INFO Providio - Please enter valid From Name
+2024-01-23 20:15:08,972 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 20:15:08,995 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 20:15:09,022 [main] INFO Providio - Please enter valid From Name
+2024-01-23 20:15:09,047 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 20:15:09,075 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 20:15:09,075 [main] INFO Providio - Error message is displayed as Please enter valid From NameandPlease enter valid Recipient's E-Mailand Please confirm Recipient's E-Mail
+2024-01-23 20:15:15,874 [main] INFO Providio - Successfully send keys of Gilberto
+2024-01-23 20:15:18,102 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 20:15:20,253 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 20:15:20,277 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 20:15:20,307 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 20:15:20,330 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 20:15:20,331 [main] INFO Providio - Error message is displayed as Please enter valid Recipient's E-Mail andPlease confirm Recipient's E-Mail
+2024-01-23 20:15:25,477 [main] INFO Providio - Successfully send keys of Gilberto
+2024-01-23 20:15:27,692 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 20:15:29,912 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 20:15:32,108 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 20:15:32,150 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 20:15:32,151 [main] INFO Providio - Error message is displayed as Please confirm Recipient's E-Mail
+2024-01-23 20:15:34,204 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:15:34,241 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:15:34,242 [main] INFO Providio - Login page not loaded
+2024-01-23 20:15:42,162 [main] INFO Providio - Successfully navigated to login page
+2024-01-23 20:15:44,445 [main] INFO Providio - Successfully send keys of Invalid Email
+2024-01-23 20:15:46,611 [main] INFO Providio - Successfully send keys of password
+2024-01-23 20:15:50,064 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:15:50,064 [main] INFO Providio - Login page already loaded
+2024-01-23 20:15:55,325 [main] INFO Providio - Error displayed for empty email and password submission
+2024-01-23 20:15:55,392 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:15:55,393 [main] INFO Providio - Login page already loaded
+2024-01-23 20:15:57,593 [main] INFO Providio - Successfully send keys of invalid mail
+2024-01-23 20:15:59,767 [main] INFO Providio - Successfully send keys of password
+2024-01-23 20:16:00,892 [main] INFO Providio - Invalid email format error displayed successfully
+2024-01-23 20:16:00,928 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:16:00,928 [main] INFO Providio - Login page already loaded
+2024-01-23 20:16:03,090 [main] INFO Providio - Successfully send keys of Empty email
+2024-01-23 20:16:05,334 [main] INFO Providio - Successfully send keys of Empty password
+2024-01-23 20:16:10,455 [main] INFO Providio - Error displayed for login failure with empty email
+2024-01-23 20:16:10,493 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:16:10,493 [main] INFO Providio - Login page already loaded
+2024-01-23 20:16:12,690 [main] INFO Providio - Successfully send keys of valid email
+2024-01-23 20:16:14,822 [main] INFO Providio - Successfully send keys of Empty password
+2024-01-23 20:16:19,960 [main] INFO Providio - Error displayed for login failure with an empty password
+2024-01-23 20:16:20,006 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:16:20,006 [main] INFO Providio - Login page already loaded
+2024-01-23 20:16:22,232 [main] INFO Providio - Successfully send keys of  user Email
+2024-01-23 20:16:24,414 [main] INFO Providio - Successfully send keys of password
+2024-01-23 20:16:32,603 [main] INFO Providio - User logged in successfully
+2024-01-23 20:16:32,635 [main] INFO Providio - Musku Akhila
+2024-01-23 20:16:32,667 [main] INFO Providio - Musku Akhila
+2024-01-23 20:16:32,669 [main] INFO Providio - Name of User name is Musku Akhila
+2024-01-23 20:16:32,711 [main] INFO Providio - akhila.m+4@etg.digital
+2024-01-23 20:16:32,738 [main] INFO Providio - akhila.m+4@etg.digital
+2024-01-23 20:16:32,739 [main] INFO Providio - Email is akhila.m+4@etg.digital
+2024-01-23 20:16:34,828 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:16:34,855 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:16:34,855 [main] INFO Providio - user logged in
+2024-01-23 20:16:48,883 [main] INFO Providio - Successfully user logged out
+2024-01-23 20:17:02,276 [main] INFO Providio - Successfully navigated to Create Account page
+2024-01-23 20:17:04,446 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 20:17:06,629 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 20:17:08,804 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 20:17:10,963 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 20:17:13,227 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 20:17:15,417 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 20:17:17,594 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 20:17:21,725 [main] INFO Providio - Please enter the same value again.
+2024-01-23 20:17:21,726 [main] INFO Providio - Error message is displayed
+2024-01-23 20:17:23,777 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:17:23,778 [main] INFO Providio - Create account already loaded
+2024-01-23 20:17:25,942 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 20:17:28,126 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 20:17:30,317 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 20:17:32,515 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 20:17:34,739 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 20:17:36,907 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 20:17:39,158 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 20:17:43,289 [main] INFO Providio - Does not match password
+2024-01-23 20:17:43,290 [main] INFO Providio - Showing error message: Does not match password
+2024-01-23 20:17:45,340 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:17:45,340 [main] INFO Providio - Create account already loaded
+2024-01-23 20:17:47,501 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 20:17:49,686 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 20:17:51,848 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 20:17:54,055 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 20:17:56,255 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 20:17:58,429 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 20:18:00,622 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 20:18:04,729 [main] INFO Providio - Please enter a valid phone number
+2024-01-23 20:18:04,729 [main] INFO Providio - Test case passed
+2024-01-23 20:18:06,773 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:18:06,774 [main] INFO Providio - Create account already loaded
+2024-01-23 20:18:08,930 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 20:18:11,110 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 20:18:13,281 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 20:18:15,470 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 20:18:17,671 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 20:18:19,841 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 20:18:22,027 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 20:18:26,104 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 20:18:26,105 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 20:18:26,167 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 20:18:26,168 [main] INFO Providio - Test case passed
+2024-01-23 20:18:28,213 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:18:28,213 [main] INFO Providio - Create account already loaded
+2024-01-23 20:18:30,407 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 20:18:32,594 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 20:18:34,776 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 20:18:36,950 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 20:18:39,121 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 20:18:41,301 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 20:18:43,487 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 20:18:47,594 [main] INFO Providio - Click failed, and account not created
+2024-01-23 20:19:02,333 [main] INFO Providio - Successfully user logged out
+2024-01-23 20:19:04,442 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:19:04,543 [main] INFO Providio - 0
+2024-01-23 20:19:27,231 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 20:19:31,262 [main] INFO Providio - 5
+2024-01-23 20:19:31,262 [main] INFO Providio - 2
+2024-01-23 20:19:34,352 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 20:19:34,582 [main] INFO Providio - 1
+2024-01-23 20:19:36,741 [main] INFO Providio - selected color
+2024-01-23 20:19:37,794 [main] INFO Providio - 1
+2024-01-23 20:19:37,937 [main] INFO Providio - selected size
+2024-01-23 20:20:04,605 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 20:20:08,632 [main] INFO Providio - 5
+2024-01-23 20:20:08,633 [main] INFO Providio - 5
+2024-01-23 20:20:11,729 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 20:20:11,868 [main] INFO Providio - 1
+2024-01-23 20:20:13,972 [main] INFO Providio - selected color
+2024-01-23 20:20:15,018 [main] INFO Providio - 1
+2024-01-23 20:20:15,122 [main] INFO Providio - selected size
+2024-01-23 20:20:19,173 [main] INFO Providio - Product is in stock
+2024-01-23 20:20:26,423 [main] INFO Providio - Product is  added to cart
+2024-01-23 20:20:34,618 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 20:21:34,764 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 20:21:53,568 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:21:58,235 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 20:22:00,410 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 20:22:00,456 [main] INFO Providio - Customer information is displayed in check out page 2
+2024-01-23 20:22:00,514 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:22:00,514 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:22:00,540 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:22:01,589 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 20:22:01,589 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 20:22:06,762 [main] INFO Providio - DorseyEditedFromCOP2@etg.digital
+2024-01-23 20:22:09,060 [main] INFO Providio - Successfully send keys of Edited email
+2024-01-23 20:22:14,215 [main] INFO Providio - DorseyEditedFromCOP2@etg.digital
+2024-01-23 20:22:14,216 [main] INFO Providio - DorseyEditedFromCOP2@etg.digital
+2024-01-23 20:22:14,216 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is DorseyEditedFromCOP2@etg.digital
+2024-01-23 20:22:14,265 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:22:14,265 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:22:25,420 [main] INFO Providio - Succesfully paginated to PDP page by clicking the product from check out page 2
+2024-01-23 20:22:25,472 [main] INFO Providio - 0
+2024-01-23 20:22:49,925 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 20:22:53,958 [main] INFO Providio - 5
+2024-01-23 20:22:53,958 [main] INFO Providio - 5
+2024-01-23 20:22:57,077 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 20:22:57,363 [main] INFO Providio - 1
+2024-01-23 20:22:59,565 [main] INFO Providio - selected color
+2024-01-23 20:23:00,631 [main] INFO Providio - 1
+2024-01-23 20:23:00,783 [main] INFO Providio - selected size
+2024-01-23 20:23:04,810 [main] INFO Providio - Product is in stock
+2024-01-23 20:23:12,031 [main] INFO Providio - Product is  added to cart
+2024-01-23 20:23:20,208 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 20:23:30,845 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 20:23:30,916 [main] INFO Providio - 1
+2024-01-23 20:23:30,916 [main] INFO Providio - View cart page is already loaded
+2024-01-23 20:23:41,164 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:23:45,496 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 20:23:47,634 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 20:23:47,675 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:23:47,675 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:23:47,714 [main] INFO Providio - Next Payment Button  is displayed in check out page 2
+2024-01-23 20:23:47,754 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:23:47,754 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:23:47,791 [main] INFO Providio -  Etg logo  is displayed in check out page 2
+2024-01-23 20:23:47,834 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:23:47,835 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:23:47,872 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:23:47,906 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:23:52,411 [main] INFO Providio - Successfully all the error messages are displayed for shipping address,first name, last name phone number
+2024-01-23 20:23:52,455 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:23:52,455 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:23:52,488 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:23:54,761 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 20:23:57,021 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 20:23:59,244 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 20:24:02,274 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:07,422 [main] INFO Providio - Successfully the error messages are displayed for first name.
+2024-01-23 20:24:07,465 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:07,465 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:24:07,493 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:09,714 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 20:24:12,008 [main] INFO Providio - The address entered is 123 Edward Street North, Thunder Bay, ON, Canada
+2024-01-23 20:24:14,264 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 20:24:17,294 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:22,435 [main] INFO Providio - Successfully the error messages are displayed for last name.
+2024-01-23 20:24:22,479 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:22,480 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:24:22,515 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:24,737 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 20:24:26,933 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 20:24:29,221 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 20:24:32,259 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:37,386 [main] INFO Providio - Successfully the error messages are displayed for shipping address
+2024-01-23 20:24:37,435 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:37,435 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:24:37,462 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:39,691 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 20:24:41,913 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 20:24:44,175 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 20:24:47,285 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:52,390 [main] INFO Providio - Successfully the error messages are displayed for  phone number
+2024-01-23 20:24:52,430 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:24:52,430 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 20:24:54,646 [main] INFO Providio - Successfully send keys of FirstName
+2024-01-23 20:24:56,837 [main] INFO Providio - Successfully send keys of LastName
+2024-01-23 20:24:59,052 [main] INFO Providio - The address entered is 12300 Bermuda Road #123, Henderson, NV
+2024-01-23 20:25:01,257 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 20:25:09,527 [main] INFO Providio - Successfully Clicked on the Nextpayment Btn and navigated to payment page
+2024-01-23 20:25:11,646 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:25:11,690 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:25:15,755 [main] INFO Providio - Bermuda Road
+2024-01-23 20:25:15,755 [main] INFO Providio - Bermuda Road
+2024-01-23 20:25:20,947 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:25:23,135 [main] INFO Providio - Successfully send keys of edited first name
+2024-01-23 20:25:25,342 [main] INFO Providio - Successfully send keys of edited last name
+2024-01-23 20:25:28,632 [main] INFO Providio - The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+2024-01-23 20:25:30,877 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 20:25:38,051 [main] INFO Providio - Click failed
+2024-01-23 20:25:40,091 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 20:25:40,092 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 20:25:40,092 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 20:25:40,093 [main] INFO Providio - Bermuda Road
+2024-01-23 20:25:40,093 [main] INFO Providio - Successfully shipping addresss is edited the previous address is Bermuda Road and edited shipping address is  is 231 Fort York Boulevard
+2024-01-23 20:25:41,144 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:25:41,174 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:25:45,223 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:25:46,259 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 20:25:46,259 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 20:25:51,397 [main] INFO Providio - OdaEditedFromCOP3@etg.digital
+2024-01-23 20:25:53,635 [main] INFO Providio - Successfully send keys of Edited email form check out page 3
+2024-01-23 20:26:03,918 [main] INFO Providio - OdaEditedFromCOP3@etg.digital
+2024-01-23 20:26:03,918 [main] INFO Providio - OdaEditedFromCOP3@etg.digital
+2024-01-23 20:26:03,919 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 20:26:03,919 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is OdaEditedFromCOP3@etg.digital
+2024-01-23 20:26:03,963 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:15,462 [main] INFO Providio - Successfully send keys of gift message
+2024-01-23 20:26:26,680 [main] INFO Providio - Gift Message:
+Birthday gift
+2024-01-23 20:26:26,709 [main] INFO Providio - Gift Message:
+Birthday gift
+2024-01-23 20:26:26,709 [main] INFO Providio - Successfully the gift message is displayed asGift Message:
+Birthday gift
+2024-01-23 20:26:26,749 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:26,781 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:26:28,823 [main] INFO Providio - Gilberto Adams Bermuda Road Marco Island FL 34145
+- Existing Addresses -
+Jeane Pfannerstill 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 20:26:28,823 [main] INFO Providio - Gilberto Adams Bermuda Road Marco Island FL 34145
+- Existing Addresses -
+Jeane Pfannerstill 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 20:26:32,986 [main] INFO Providio -  keys not send to 
+2024-01-23 20:26:35,032 [main] INFO Providio -  keys not send to 
+2024-01-23 20:26:35,371 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:35,402 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:26:37,472 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:37,510 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:26:37,547 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:26:37,590 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:37,635 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:37,671 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:26:39,706 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:39,728 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:26:39,754 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:26:39,780 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:39,833 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:39,868 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:26:41,905 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:41,929 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:26:41,956 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:26:41,982 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:42,017 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:42,046 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:26:44,097 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:44,127 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:26:44,157 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:26:44,189 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:48,790 [main] INFO Providio - Successfully send keys of Invalid cardNum
+2024-01-23 20:26:50,836 [main] INFO Providio - Error msg displayed when invalid card  details are entered
+2024-01-23 20:26:50,874 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:50,907 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:26:52,954 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:26:52,985 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:26:53,016 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:26:53,049 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:00,490 [main] INFO Providio - Successfully send keys of  invalid expDate
+2024-01-23 20:27:00,529 [main] INFO Providio - Error msg displayed when invalid exp year details are entered
+2024-01-23 20:27:00,574 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:00,602 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:27:02,651 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:02,683 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:27:02,716 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:27:02,750 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:06,268 [main] INFO Providio - Successfully send keys of Incomplete cardNum
+2024-01-23 20:27:06,360 [main] INFO Providio - Error msg displayed when incomplete card details are entered
+2024-01-23 20:27:06,407 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:06,442 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:27:08,486 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:08,511 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:27:08,535 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:27:08,565 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:15,998 [main] INFO Providio - Successfully send keys of  invalid expDate
+2024-01-23 20:27:16,061 [main] INFO Providio - Error msg displayed when incomplete exp year details are entered
+2024-01-23 20:27:16,104 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:16,131 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:27:18,166 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:18,196 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:27:18,225 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:27:18,256 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:25,645 [main] INFO Providio - Successfully send keys of Incomplete security code
+2024-01-23 20:27:25,723 [main] INFO Providio - Error msg displayed when incomplete security code  details are entered
+2024-01-23 20:27:25,769 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:25,803 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:27:27,846 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:27,884 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:27,911 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 20:27:29,943 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:27:29,968 [main] INFO Providio - The count of the element is 0
+2024-01-23 20:27:29,991 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:30,052 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:32,454 [main] INFO Providio - Successfully send keys of cardNumber
+2024-01-23 20:27:34,677 [main] INFO Providio - Successfully send keys of Expired date
+2024-01-23 20:27:36,864 [main] INFO Providio - Successfully send keys of Cvv
+2024-01-23 20:27:39,084 [main] INFO Providio - Successfully send keys of postal code
+2024-01-23 20:27:43,280 [main] INFO Providio - The count of the element is 1
+2024-01-23 20:27:43,311 [main] INFO Providio - Successfully Clicked on the review order button
+2024-01-23 21:16:47,491 [main] INFO Providio - this is lauching page
+2024-01-23 21:17:11,562 [main] INFO Providio - Placing the order as guest user
+2024-01-23 21:17:11,591 [main] INFO Providio - Browser launched succesfully
+2024-01-23 21:17:11,683 [main] INFO Providio - Mindi
+2024-01-23 21:17:11,686 [main] INFO Providio - Miss Herb Grant
+2024-01-23 21:17:11,688 [main] INFO Providio - MindiEdited@etg.digital
+2024-01-23 21:17:14,063 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:17:14,174 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:17:14,295 [main] INFO Providio - 0
+2024-01-23 21:17:37,923 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 21:17:41,962 [main] INFO Providio - 5
+2024-01-23 21:17:41,963 [main] INFO Providio - 5
+2024-01-23 21:17:45,316 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 21:17:45,694 [main] INFO Providio - 1
+2024-01-23 21:17:47,937 [main] INFO Providio - selected color
+2024-01-23 21:17:49,014 [main] INFO Providio - 1
+2024-01-23 21:17:49,234 [main] INFO Providio - selected size
+2024-01-23 21:17:53,307 [main] INFO Providio - Product is in stock
+2024-01-23 21:18:00,699 [main] INFO Providio - Product is  added to cart
+2024-01-23 21:18:08,870 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 21:18:19,181 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 21:18:50,804 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:18:55,201 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 21:18:57,420 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 21:18:59,634 [main] INFO Providio - Successfully send keys of FirstName
+2024-01-23 21:19:01,821 [main] INFO Providio - Successfully send keys of LastName
+2024-01-23 21:19:04,088 [main] INFO Providio - The address entered is 123
+2024-01-23 21:19:06,283 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 21:19:14,573 [main] INFO Providio - Click failed
+2024-01-23 21:19:16,650 [main] INFO Providio - 
+2024-01-23 21:19:16,650 [main] INFO Providio - 
+2024-01-23 21:19:19,785 [main] INFO Providio -  keys not send to 
+2024-01-23 21:19:21,877 [main] INFO Providio -  keys not send to 
+2024-01-23 21:19:52,131 [main] INFO Providio - this is lauching page
+2024-01-23 21:20:11,818 [main] INFO Providio - Placing the order as guest user
+2024-01-23 21:20:11,858 [main] INFO Providio - Browser launched succesfully
+2024-01-23 21:20:11,999 [main] INFO Providio - Micheal
+2024-01-23 21:20:12,001 [main] INFO Providio - Kelley Cormier
+2024-01-23 21:20:12,007 [main] INFO Providio - MichealEdited@etg.digital
+2024-01-23 21:20:14,423 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:20:14,516 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:20:14,625 [main] INFO Providio - 0
+2024-01-23 21:20:38,894 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 21:20:42,958 [main] INFO Providio - 5
+2024-01-23 21:20:42,959 [main] INFO Providio - 2
+2024-01-23 21:20:46,101 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 21:20:46,321 [main] INFO Providio - 1
+2024-01-23 21:20:48,480 [main] INFO Providio - selected color
+2024-01-23 21:20:49,525 [main] INFO Providio - 1
+2024-01-23 21:20:49,673 [main] INFO Providio - selected size
+2024-01-23 21:21:16,406 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 21:21:20,448 [main] INFO Providio - 5
+2024-01-23 21:21:20,449 [main] INFO Providio - 2
+2024-01-23 21:21:23,558 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 21:21:23,720 [main] INFO Providio - 1
+2024-01-23 21:21:25,838 [main] INFO Providio - selected color
+2024-01-23 21:21:26,882 [main] INFO Providio - 1
+2024-01-23 21:21:26,995 [main] INFO Providio - selected size
+2024-01-23 21:21:53,321 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 21:21:57,365 [main] INFO Providio - 5
+2024-01-23 21:21:57,366 [main] INFO Providio - 3
+2024-01-23 21:22:00,478 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 21:22:00,645 [main] INFO Providio - 1
+2024-01-23 21:22:02,760 [main] INFO Providio - selected color
+2024-01-23 21:22:03,823 [main] INFO Providio - 1
+2024-01-23 21:22:03,934 [main] INFO Providio - selected size
+2024-01-23 21:22:04,994 [main] INFO Providio - 1
+2024-01-23 21:22:07,121 [main] INFO Providio - selected width
+2024-01-23 21:22:11,151 [main] INFO Providio - Product is in stock
+2024-01-23 21:22:18,434 [main] INFO Providio - Product is  added to cart
+2024-01-23 21:22:26,602 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 21:22:35,421 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 21:22:45,249 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:22:49,667 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 21:22:51,863 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 21:22:54,086 [main] INFO Providio - Successfully send keys of FirstName
+2024-01-23 21:22:56,326 [main] INFO Providio - Successfully send keys of LastName
+2024-01-23 21:22:58,581 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 21:23:00,815 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 21:23:09,102 [main] INFO Providio - Successfully Clicked on the Nextpayment Btn and navigated to payment page
+2024-01-23 21:23:11,164 [main] INFO Providio - New Address
+- Existing Addresses -
+Masako Kerluke 123 William Street Manhattan New York NY 10038
+2024-01-23 21:23:11,165 [main] INFO Providio - New Address
+- Existing Addresses -
+Masako Kerluke 123 William Street Manhattan New York NY 10038
+2024-01-23 21:23:15,369 [main] INFO Providio -  keys not send to 
+2024-01-23 21:23:17,441 [main] INFO Providio -  keys not send to 
+2024-01-23 21:26:18,772 [main] INFO Providio - this is lauching page
+2024-01-23 21:26:27,162 [main] INFO Providio - Placing the order as guest user
+2024-01-23 21:26:27,280 [main] INFO Providio - Browser launched succesfully
+2024-01-23 21:26:27,366 [main] INFO Providio - Chester
+2024-01-23 21:26:27,371 [main] INFO Providio - Selene Baumbach
+2024-01-23 21:26:27,373 [main] INFO Providio - ChesterEdited@etg.digital
+2024-01-23 21:26:29,736 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:26:29,975 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:26:30,206 [main] INFO Providio - 0
+2024-01-23 21:26:53,184 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 21:26:57,211 [main] INFO Providio - 5
+2024-01-23 21:26:57,212 [main] INFO Providio - 5
+2024-01-23 21:27:00,361 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 21:27:00,612 [main] INFO Providio - 1
+2024-01-23 21:27:02,794 [main] INFO Providio - selected color
+2024-01-23 21:27:03,873 [main] INFO Providio - 1
+2024-01-23 21:27:04,028 [main] INFO Providio - selected size
+2024-01-23 21:27:08,067 [main] INFO Providio - Product is in stock
+2024-01-23 21:27:15,375 [main] INFO Providio - Product is  added to cart
+2024-01-23 21:27:23,543 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 21:27:32,399 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 21:27:41,788 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:27:46,174 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 21:27:48,411 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 21:27:50,612 [main] INFO Providio - Successfully send keys of FirstName
+2024-01-23 21:27:52,780 [main] INFO Providio - Successfully send keys of LastName
+2024-01-23 21:27:55,024 [main] INFO Providio - The address entered is 123
+2024-01-23 21:27:57,247 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 21:28:05,558 [main] INFO Providio - Click failed
+2024-01-23 21:28:07,606 [main] INFO Providio - 
+2024-01-23 21:28:07,606 [main] INFO Providio - 
+2024-01-23 21:29:19,180 [main] INFO Providio -  keys not send to 
+2024-01-23 21:29:21,443 [main] INFO Providio -  keys not send to 
+2024-01-23 21:29:25,306 [main] INFO Providio - The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+2024-01-23 21:29:27,412 [main] INFO Providio -  keys not send to 
+2024-01-23 21:29:29,508 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:29:29,552 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:29:29,601 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:29:29,830 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:29:32,327 [main] INFO Providio - Successfully send keys of cardNumber
+2024-01-23 21:29:34,544 [main] INFO Providio - Successfully send keys of Expired date
+2024-01-23 21:29:36,714 [main] INFO Providio - Successfully send keys of Cvv
+2024-01-23 21:29:38,953 [main] INFO Providio - Successfully send keys of postal code
+2024-01-23 21:29:47,585 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:29:47,819 [main] INFO Providio - Successfully Clicked on the review order button
+2024-01-23 21:29:47,868 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 21:29:47,869 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 21:29:47,874 [main] INFO Providio - 
+2024-01-23 21:29:47,875 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 21:29:47,878 [main] INFO Providio - Successfully billing addresss  is edited the previous address is  and edited billing addresss  is  is 231 Fort York Boulevard
+2024-01-23 21:30:31,886 [main] INFO Providio - this is lauching page
+2024-01-23 21:30:40,759 [main] INFO Providio - Placing the order as guest user
+2024-01-23 21:30:40,851 [main] INFO Providio - Browser launched succesfully
+2024-01-23 21:30:41,043 [main] INFO Providio - Theodore
+2024-01-23 21:30:41,044 [main] INFO Providio - George Renner
+2024-01-23 21:30:41,082 [main] INFO Providio - TheodoreEdited@etg.digital
+2024-01-23 21:30:43,491 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:30:43,604 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:30:43,718 [main] INFO Providio - 0
+2024-01-23 21:31:06,593 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 21:31:10,642 [main] INFO Providio - 5
+2024-01-23 21:31:10,645 [main] INFO Providio - 1
+2024-01-23 21:31:13,780 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 21:31:14,040 [main] INFO Providio - 1
+2024-01-23 21:31:16,263 [main] INFO Providio - selected color
+2024-01-23 21:31:17,348 [main] INFO Providio - 1
+2024-01-23 21:31:17,502 [main] INFO Providio - selected size
+2024-01-23 21:31:21,571 [main] INFO Providio - Product is in stock
+2024-01-23 21:31:28,786 [main] INFO Providio - Product is  added to cart
+2024-01-23 21:31:36,945 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 21:31:47,623 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 21:31:58,218 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:32:02,611 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 21:32:04,829 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 21:32:06,998 [main] INFO Providio - Successfully send keys of FirstName
+2024-01-23 21:32:09,151 [main] INFO Providio - Successfully send keys of LastName
+2024-01-23 21:32:11,383 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 21:32:13,552 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 21:32:21,819 [main] INFO Providio - Successfully Clicked on the Nextpayment Btn and navigated to payment page
+2024-01-23 21:32:23,905 [main] INFO Providio - New Address
+- Existing Addresses -
+Theron Lockman 123 William Street Manhattan New York NY 10038
+2024-01-23 21:32:23,906 [main] INFO Providio - New Address
+- Existing Addresses -
+Theron Lockman 123 William Street Manhattan New York NY 10038
+2024-01-23 21:32:29,093 [main] INFO Providio -  keys not send to 
+2024-01-23 21:32:31,151 [main] INFO Providio -  keys not send to 
+2024-01-23 21:33:56,566 [main] INFO Providio - this is lauching page
+2024-01-23 21:34:03,387 [main] INFO Providio - Placing the order as guest user
+2024-01-23 21:34:03,417 [main] INFO Providio - Browser launched succesfully
+2024-01-23 21:34:03,550 [main] INFO Providio - Shon
+2024-01-23 21:34:03,553 [main] INFO Providio - Akiko Hudson
+2024-01-23 21:34:03,555 [main] INFO Providio - ShonEdited@etg.digital
+2024-01-23 21:34:06,172 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:34:06,310 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:34:06,541 [main] INFO Providio - 0
+2024-01-23 21:34:32,633 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 21:34:36,659 [main] INFO Providio - 5
+2024-01-23 21:34:36,660 [main] INFO Providio - 4
+2024-01-23 21:34:39,762 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 21:34:39,998 [main] INFO Providio - 1
+2024-01-23 21:34:42,170 [main] INFO Providio - selected color
+2024-01-23 21:34:43,306 [main] INFO Providio - 1
+2024-01-23 21:34:43,536 [main] INFO Providio - selected size
+2024-01-23 21:34:47,588 [main] INFO Providio - Product is in stock
+2024-01-23 21:34:54,801 [main] INFO Providio - Product is  added to cart
+2024-01-23 21:35:02,964 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 21:35:13,361 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 21:35:23,330 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:35:27,680 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 21:35:29,834 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 21:35:32,028 [main] INFO Providio - Successfully send keys of FirstName
+2024-01-23 21:35:34,188 [main] INFO Providio - Successfully send keys of LastName
+2024-01-23 21:35:36,413 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 21:35:38,664 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 21:35:46,975 [main] INFO Providio - Successfully Clicked on the Nextpayment Btn and navigated to payment page
+2024-01-23 21:35:49,025 [main] INFO Providio - New Address
+- Existing Addresses -
+Jarred Kutch 123 William Street Manhattan New York NY 10038
+2024-01-23 21:35:49,026 [main] INFO Providio - New Address
+- Existing Addresses -
+Jarred Kutch 123 William Street Manhattan New York NY 10038
+2024-01-23 21:35:55,175 [main] INFO Providio -  keys not send to 
+2024-01-23 21:35:57,233 [main] INFO Providio -  keys not send to 
+2024-01-23 21:37:02,015 [main] INFO Providio - this is lauching page
+2024-01-23 21:37:18,180 [main] INFO Providio - Placing the order as guest user
+2024-01-23 21:37:18,207 [main] INFO Providio - Browser launched succesfully
+2024-01-23 21:37:18,499 [main] INFO Providio - Earlie
+2024-01-23 21:37:18,500 [main] INFO Providio - Mrs. Chante King
+2024-01-23 21:37:18,502 [main] INFO Providio - EarlieEdited@etg.digital
+2024-01-23 21:37:20,790 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:37:20,864 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:37:20,964 [main] INFO Providio - 0
+2024-01-23 21:37:44,231 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 21:37:48,270 [main] INFO Providio - 5
+2024-01-23 21:37:48,270 [main] INFO Providio - 1
+2024-01-23 21:37:51,409 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 21:37:51,669 [main] INFO Providio - 1
+2024-01-23 21:37:53,831 [main] INFO Providio - selected color
+2024-01-23 21:37:54,912 [main] INFO Providio - 1
+2024-01-23 21:37:55,042 [main] INFO Providio - selected size
+2024-01-23 21:37:59,111 [main] INFO Providio - Product is in stock
+2024-01-23 21:38:06,327 [main] INFO Providio - Product is  added to cart
+2024-01-23 21:38:14,513 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 21:38:23,348 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 21:38:32,939 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:38:37,360 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 21:38:39,569 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 21:38:41,800 [main] INFO Providio - Successfully send keys of FirstName
+2024-01-23 21:38:44,001 [main] INFO Providio - Successfully send keys of LastName
+2024-01-23 21:38:46,261 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 21:38:48,481 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 21:38:56,731 [main] INFO Providio - Successfully Clicked on the Nextpayment Btn and navigated to payment page
+2024-01-23 21:38:58,771 [main] INFO Providio - New Address
+- Existing Addresses -
+Belle Mills 123 William Street Manhattan New York NY 10038
+2024-01-23 21:38:58,772 [main] INFO Providio - New Address
+- Existing Addresses -
+Belle Mills 123 William Street Manhattan New York NY 10038
+2024-01-23 21:39:09,098 [main] INFO Providio -  keys not send to 
+2024-01-23 21:39:11,146 [main] INFO Providio -  keys not send to 
+2024-01-23 21:39:14,464 [main] INFO Providio - The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+2024-01-23 21:39:16,511 [main] INFO Providio -  keys not send to 
+2024-01-23 21:39:18,574 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:39:18,605 [main] INFO Providio - The count of the element is 0
+2024-01-23 21:39:18,638 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:39:18,688 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:39:21,154 [main] INFO Providio - Successfully send keys of cardNumber
+2024-01-23 21:39:23,324 [main] INFO Providio - Successfully send keys of Expired date
+2024-01-23 21:39:25,480 [main] INFO Providio - Successfully send keys of Cvv
+2024-01-23 21:39:27,665 [main] INFO Providio - Successfully send keys of postal code
+2024-01-23 21:39:35,982 [main] INFO Providio - The count of the element is 1
+2024-01-23 21:39:36,019 [main] INFO Providio - Successfully Clicked on the review order button
+2024-01-23 21:39:36,061 [main] INFO Providio - 2315 Bristol Circle
+2024-01-23 21:39:36,062 [main] INFO Providio - 2315 Bristol Circle
+2024-01-23 21:39:36,063 [main] INFO Providio - New Address
+- Existing Addresses -
+Belle Mills 123 William Street Manhattan New York NY 10038
+2024-01-23 21:39:36,064 [main] INFO Providio - 2315 Bristol Circle
+2024-01-23 21:39:36,064 [main] INFO Providio - Successfully billing addresss  is edited the previous address is New Address
+- Existing Addresses -
+Belle Mills 123 William Street Manhattan New York NY 10038 and edited billing addresss  is  is 2315 Bristol Circle
+2024-01-23 21:56:53,143 [main] INFO Providio - this is lauching page
+2024-01-23 21:57:00,591 [main] INFO Providio - Placing the order as guest user
+2024-01-23 21:57:00,632 [main] INFO Providio - Browser launched succesfully
+2024-01-23 21:57:00,718 [main] INFO Providio - Jean
+2024-01-23 21:57:00,732 [main] INFO Providio - Shanell Bashirian
+2024-01-23 21:57:00,734 [main] INFO Providio - JeanEdited@etg.digital
+2024-01-23 21:57:14,360 [main] INFO Providio - All the  error are displayed when no text is entered
+2024-01-23 21:57:19,964 [main] INFO Providio - Successfully send keys of Alec
+2024-01-23 21:57:23,102 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 21:57:23,102 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 21:57:23,172 [main] INFO Providio - Please enter valid From Name
+2024-01-23 21:57:23,205 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 21:57:23,231 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 21:57:23,259 [main] INFO Providio - Please enter valid From Name
+2024-01-23 21:57:23,283 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 21:57:23,308 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 21:57:23,308 [main] INFO Providio - Error message is displayed as Please enter valid From NameandPlease enter valid Recipient's E-Mailand Please confirm Recipient's E-Mail
+2024-01-23 21:57:29,553 [main] INFO Providio - Successfully send keys of Alec
+2024-01-23 21:57:31,748 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 21:57:33,923 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 21:57:33,946 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 21:57:33,970 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 21:57:33,994 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 21:57:33,994 [main] INFO Providio - Error message is displayed as Please enter valid Recipient's E-Mail andPlease confirm Recipient's E-Mail
+2024-01-23 21:57:39,337 [main] INFO Providio - Successfully send keys of Alec
+2024-01-23 21:57:41,533 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 21:57:43,712 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 21:57:45,839 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 21:57:45,868 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 21:57:45,869 [main] INFO Providio - Error message is displayed as Please confirm Recipient's E-Mail
+2024-01-23 21:57:54,373 [main] INFO Providio - $30.00
+2024-01-23 21:57:56,515 [main] INFO Providio - Successfully send keys of friends name
+2024-01-23 21:57:58,686 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 21:58:00,903 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 21:58:03,123 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 21:58:05,363 [main] INFO Providio - Succesfully Gift Certificate added to cart
+2024-01-23 22:03:13,120 [main] INFO Providio - this is lauching page
+2024-01-23 22:03:24,604 [main] INFO Providio - Placing the order as guest user
+2024-01-23 22:03:24,730 [main] INFO Providio - Browser launched succesfully
+2024-01-23 22:03:24,915 [main] INFO Providio - Retta
+2024-01-23 22:03:24,920 [main] INFO Providio - Sparkle O'Connell
+2024-01-23 22:03:24,927 [main] INFO Providio - RettaEdited@etg.digital
+2024-01-23 22:03:27,713 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:03:38,068 [main] INFO Providio - ELECTRONICS SUPER STORE
+2024-01-23 22:03:39,074 [main] INFO Providio - Selected store is ELECTRONICS SUPER STORE
+2024-01-23 22:03:50,179 [main] INFO Providio - Check Order
+2024-01-23 22:03:52,445 [main] INFO Providio - Successfully send keys of invalid email 
+2024-01-23 22:03:53,542 [main] INFO Providio - 
+2024-01-23 22:03:53,543 [main] INFO Providio - No error message pop up for subscription sign up
+2024-01-23 22:04:01,710 [main] INFO Providio - All the  error are displayed when no text is entered
+2024-01-23 22:04:07,236 [main] INFO Providio - Successfully send keys of Fernanda
+2024-01-23 22:04:10,344 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:04:10,345 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:04:10,435 [main] INFO Providio - Please enter valid From Name
+2024-01-23 22:04:10,469 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 22:04:10,493 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:04:10,518 [main] INFO Providio - Please enter valid From Name
+2024-01-23 22:04:10,543 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 22:04:10,567 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:04:10,567 [main] INFO Providio - Error message is displayed as Please enter valid From NameandPlease enter valid Recipient's E-Mailand Please confirm Recipient's E-Mail
+2024-01-23 22:04:15,599 [main] INFO Providio - Successfully send keys of Fernanda
+2024-01-23 22:04:17,764 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 22:04:19,967 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 22:04:19,992 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:04:20,019 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 22:04:20,043 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:04:20,043 [main] INFO Providio - Error message is displayed as Please enter valid Recipient's E-Mail andPlease confirm Recipient's E-Mail
+2024-01-23 22:04:26,601 [main] INFO Providio - Successfully send keys of Fernanda
+2024-01-23 22:04:28,739 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 22:04:30,892 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 22:04:33,054 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:04:33,088 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:04:33,089 [main] INFO Providio - Error message is displayed as Please confirm Recipient's E-Mail
+2024-01-23 22:04:43,473 [main] INFO Providio - $20.00
+2024-01-23 22:04:45,768 [main] INFO Providio - Successfully send keys of friends name
+2024-01-23 22:04:47,923 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 22:04:50,129 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 22:04:53,347 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 22:04:55,578 [main] INFO Providio - this is lauching page
+2024-01-23 22:04:56,652 [main] INFO Providio - Succesfully Gift Certificate added to cart
+2024-01-23 22:04:58,759 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:04:58,797 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:04:58,798 [main] INFO Providio - Login page not loaded
+2024-01-23 22:05:01,708 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:05:01,767 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:05:01,767 [main] INFO Providio - Login page not loaded
+2024-01-23 22:05:04,152 [main] INFO Providio - Placing the order as guest user
+2024-01-23 22:05:04,203 [main] INFO Providio - Browser launched succesfully
+2024-01-23 22:05:04,503 [main] INFO Providio - Cristopher
+2024-01-23 22:05:04,612 [main] INFO Providio - Warner Pacocha
+2024-01-23 22:05:04,616 [main] INFO Providio - CristopherEdited@etg.digital
+2024-01-23 22:05:07,072 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:05:11,607 [main] INFO Providio - Successfully navigated to login page
+2024-01-23 22:05:12,942 [main] INFO Providio - Error not displayed for empty email and password submission
+2024-01-23 22:05:12,979 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:05:12,979 [main] INFO Providio - Login page already loaded
+2024-01-23 22:05:15,221 [main] INFO Providio - Successfully send keys of invalid mail
+2024-01-23 22:05:17,410 [main] INFO Providio - Successfully send keys of password
+2024-01-23 22:05:17,793 [main] INFO Providio - SPRINGFIELD MEDIA STORE
+2024-01-23 22:05:18,794 [main] INFO Providio - Selected store is SPRINGFIELD MEDIA STORE
+2024-01-23 22:05:22,557 [main] INFO Providio - Invalid email format error displayed successfully
+2024-01-23 22:05:22,596 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:05:22,596 [main] INFO Providio - Login page already loaded
+2024-01-23 22:05:24,770 [main] INFO Providio - Successfully send keys of Empty email
+2024-01-23 22:05:26,959 [main] INFO Providio - Successfully send keys of Empty password
+2024-01-23 22:05:32,094 [main] INFO Providio - Error displayed for login failure with empty email
+2024-01-23 22:05:32,138 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:05:32,138 [main] INFO Providio - Login page already loaded
+2024-01-23 22:05:34,385 [main] INFO Providio - Successfully send keys of valid email
+2024-01-23 22:05:36,519 [main] INFO Providio - Successfully send keys of Empty password
+2024-01-23 22:05:39,209 [main] INFO Providio - Account
+2024-01-23 22:05:39,279 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:05:39,280 [main] INFO Providio - Login page already loaded
+2024-01-23 22:05:41,489 [main] INFO Providio - Successfully send keys of  user Email
+2024-01-23 22:05:41,663 [main] INFO Providio - Error displayed for login failure with an empty password
+2024-01-23 22:05:41,700 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:05:41,701 [main] INFO Providio - Login page already loaded
+2024-01-23 22:05:43,682 [main] INFO Providio - Successfully send keys of password
+2024-01-23 22:05:43,935 [main] INFO Providio - Successfully send keys of  user Email
+2024-01-23 22:05:46,129 [main] INFO Providio - Successfully send keys of password
+2024-01-23 22:05:54,356 [main] INFO Providio - User logged in successfully
+2024-01-23 22:05:54,400 [main] INFO Providio - Musku Akhila
+2024-01-23 22:05:54,429 [main] INFO Providio - Musku Akhila
+2024-01-23 22:05:54,429 [main] INFO Providio - Name of User name is Musku Akhila
+2024-01-23 22:05:54,457 [main] INFO Providio - akhila.m+4@etg.digital
+2024-01-23 22:05:54,486 [main] INFO Providio - akhila.m+4@etg.digital
+2024-01-23 22:05:54,487 [main] INFO Providio - Email is akhila.m+4@etg.digital
+2024-01-23 22:05:56,571 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:05:56,596 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:05:56,596 [main] INFO Providio - user logged in
+2024-01-23 22:06:00,538 [main] INFO Providio - Successfully send keys of invalid email 
+2024-01-23 22:06:01,694 [main] INFO Providio - Please provide a valid email Id
+2024-01-23 22:06:01,695 [main] INFO Providio - Succesfully error message pop up for subscription sign up
+2024-01-23 22:06:09,250 [main] INFO Providio - Successfully user logged out
+2024-01-23 22:06:11,363 [main] INFO Providio - All the  error are displayed when no text is entered
+2024-01-23 22:06:17,072 [main] INFO Providio - Successfully send keys of Denna
+2024-01-23 22:06:20,178 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:06:20,178 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:06:20,258 [main] INFO Providio - Please enter valid From Name
+2024-01-23 22:06:20,292 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 22:06:20,318 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:06:20,350 [main] INFO Providio - Please enter valid From Name
+2024-01-23 22:06:20,380 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 22:06:20,408 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:06:20,409 [main] INFO Providio - Error message is displayed as Please enter valid From NameandPlease enter valid Recipient's E-Mailand Please confirm Recipient's E-Mail
+2024-01-23 22:06:21,794 [main] INFO Providio - Successfully navigated to Create Account page
+2024-01-23 22:06:23,993 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 22:06:25,669 [main] INFO Providio - Successfully send keys of Denna
+2024-01-23 22:06:26,223 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 22:06:27,823 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 22:06:28,406 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 22:06:29,980 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 22:06:30,004 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:06:30,029 [main] INFO Providio - Please enter valid Recipient's E-Mail
+2024-01-23 22:06:30,052 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:06:30,053 [main] INFO Providio - Error message is displayed as Please enter valid Recipient's E-Mail andPlease confirm Recipient's E-Mail
+2024-01-23 22:06:30,571 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 22:06:32,781 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 22:06:34,979 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 22:06:35,902 [main] INFO Providio - Successfully send keys of Denna
+2024-01-23 22:06:37,132 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 22:06:38,078 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 22:06:40,262 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 22:06:41,331 [main] INFO Providio - Please enter the same value again.
+2024-01-23 22:06:41,332 [main] INFO Providio - Error message is displayed
+2024-01-23 22:06:42,440 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:06:42,463 [main] INFO Providio - Please confirm Recipient's E-Mail
+2024-01-23 22:06:42,463 [main] INFO Providio - Error message is displayed as Please confirm Recipient's E-Mail
+2024-01-23 22:06:43,401 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:06:43,401 [main] INFO Providio - Create account already loaded
+2024-01-23 22:06:45,571 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 22:06:47,739 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 22:06:49,937 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 22:06:52,106 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 22:06:54,305 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 22:06:54,399 [main] INFO Providio - $10.00
+2024-01-23 22:06:56,496 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 22:06:56,576 [main] INFO Providio - Successfully send keys of friends name
+2024-01-23 22:06:58,687 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 22:06:58,753 [main] INFO Providio - Successfully send keys of Gift certificate from name
+2024-01-23 22:07:00,990 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 22:07:02,815 [main] INFO Providio - Does not match password
+2024-01-23 22:07:02,816 [main] INFO Providio - Showing error message: Does not match password
+2024-01-23 22:07:03,200 [main] INFO Providio - Successfully send keys of mail 
+2024-01-23 22:07:04,860 [main] INFO Providio - Succesfully Gift Certificate added to cart
+2024-01-23 22:07:04,880 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:07:04,880 [main] INFO Providio - Create account already loaded
+2024-01-23 22:07:06,936 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:07:06,969 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:07:06,970 [main] INFO Providio - Login page not loaded
+2024-01-23 22:07:07,046 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 22:07:08,349 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:07:08,374 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:07:08,375 [main] INFO Providio - Login page not loaded
+2024-01-23 22:07:09,220 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 22:07:09,731 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:07:09,754 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:07:09,755 [main] INFO Providio - Login page not loaded
+2024-01-23 22:07:11,967 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 22:07:14,136 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 22:07:16,297 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 22:07:17,093 [main] INFO Providio - Successfully navigated to login page
+2024-01-23 22:07:18,521 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 22:07:19,290 [main] INFO Providio - Successfully send keys of invalid mail
+2024-01-23 22:07:20,708 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 22:07:21,504 [main] INFO Providio - Successfully send keys of password
+2024-01-23 22:07:22,726 [main] INFO Providio - Invalid email format error not displayed
+2024-01-23 22:07:22,832 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:07:22,832 [main] INFO Providio - Login page already loaded
+2024-01-23 22:07:24,822 [main] INFO Providio - Please enter a valid phone number
+2024-01-23 22:07:24,822 [main] INFO Providio - Test case passed
+2024-01-23 22:07:24,965 [main] INFO Providio - Successfully send keys of Empty email
+2024-01-23 22:07:26,889 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:07:26,889 [main] INFO Providio - Create account already loaded
+2024-01-23 22:07:27,183 [main] INFO Providio - Successfully send keys of Empty password
+2024-01-23 22:07:29,069 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 22:07:31,208 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 22:07:32,331 [main] INFO Providio - Error displayed for login failure with empty email
+2024-01-23 22:07:32,367 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:07:32,367 [main] INFO Providio - Login page already loaded
+2024-01-23 22:07:33,413 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 22:07:34,576 [main] INFO Providio - Successfully send keys of valid email
+2024-01-23 22:07:35,630 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 22:07:36,747 [main] INFO Providio - Successfully send keys of Empty password
+2024-01-23 22:07:37,786 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 22:07:39,998 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 22:07:41,870 [main] INFO Providio - Error displayed for login failure with an empty password
+2024-01-23 22:07:41,924 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:07:41,924 [main] INFO Providio - Login page already loaded
+2024-01-23 22:07:42,235 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 22:07:44,156 [main] INFO Providio - Successfully send keys of  user Email
+2024-01-23 22:07:46,347 [main] INFO Providio - Successfully send keys of password
+2024-01-23 22:07:46,369 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 22:07:46,370 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 22:07:46,418 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 22:07:46,418 [main] INFO Providio - Test case passed
+2024-01-23 22:07:48,466 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:07:48,466 [main] INFO Providio - Create account already loaded
+2024-01-23 22:07:50,611 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 22:07:52,792 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 22:07:54,557 [main] INFO Providio - User logged in successfully
+2024-01-23 22:07:54,583 [main] INFO Providio - Musku Akhila
+2024-01-23 22:07:54,607 [main] INFO Providio - Musku Akhila
+2024-01-23 22:07:54,608 [main] INFO Providio - Name of User name is Musku Akhila
+2024-01-23 22:07:54,635 [main] INFO Providio - akhila.m+4@etg.digital
+2024-01-23 22:07:54,658 [main] INFO Providio - akhila.m+4@etg.digital
+2024-01-23 22:07:54,658 [main] INFO Providio - Email is akhila.m+4@etg.digital
+2024-01-23 22:07:54,939 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 22:07:56,748 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:07:56,772 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:07:56,773 [main] INFO Providio - user logged in
+2024-01-23 22:07:57,139 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 22:07:59,303 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 22:08:01,592 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 22:08:03,754 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 22:08:07,994 [main] INFO Providio - Dashboard
+2024-01-23 22:08:07,995 [main] INFO Providio - Account created successfully
+2024-01-23 22:08:10,635 [main] INFO Providio - Successfully user logged out
+2024-01-23 22:08:22,691 [main] INFO Providio - Successfully user logged out
+2024-01-23 22:08:23,287 [main] INFO Providio - Successfully navigated to Create Account page
+2024-01-23 22:08:24,796 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:08:24,893 [main] INFO Providio - 0
+2024-01-23 22:08:25,447 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 22:08:27,634 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 22:08:29,863 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 22:08:32,061 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 22:08:34,297 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 22:08:36,499 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 22:08:38,739 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 22:08:42,908 [main] INFO Providio - Please enter the same value again.
+2024-01-23 22:08:42,909 [main] INFO Providio - Error message is displayed
+2024-01-23 22:08:44,970 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:08:44,970 [main] INFO Providio - Create account already loaded
+2024-01-23 22:08:47,181 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 22:08:49,358 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 22:08:50,515 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 22:08:51,598 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 22:08:53,833 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 22:08:54,555 [main] INFO Providio - 5
+2024-01-23 22:08:54,556 [main] INFO Providio - 1
+2024-01-23 22:08:56,036 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 22:08:57,650 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 22:08:57,901 [main] INFO Providio - 1
+2024-01-23 22:08:58,219 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 22:09:00,055 [main] INFO Providio - selected color
+2024-01-23 22:09:00,418 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 22:09:01,107 [main] INFO Providio - 1
+2024-01-23 22:09:01,239 [main] INFO Providio - selected size
+2024-01-23 22:09:04,542 [main] INFO Providio - Does not match password
+2024-01-23 22:09:04,542 [main] INFO Providio - Showing error message: Does not match password
+2024-01-23 22:09:05,307 [main] INFO Providio - Product is in stock
+2024-01-23 22:09:06,596 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:09:06,597 [main] INFO Providio - Create account already loaded
+2024-01-23 22:09:08,784 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 22:09:10,948 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 22:09:12,525 [main] INFO Providio - Product is  added to cart
+2024-01-23 22:09:13,139 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 22:09:15,370 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 22:09:17,567 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 22:09:19,769 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 22:09:20,733 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 22:09:22,036 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 22:09:26,172 [main] INFO Providio - Please enter a valid phone number
+2024-01-23 22:09:26,173 [main] INFO Providio - Test case passed
+2024-01-23 22:09:28,238 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:09:28,238 [main] INFO Providio - Create account already loaded
+2024-01-23 22:09:30,447 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 22:09:30,926 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 22:09:32,618 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 22:09:34,819 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 22:09:37,094 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 22:09:39,312 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 22:09:39,564 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:09:41,509 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 22:09:43,703 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 22:09:44,111 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 22:09:46,237 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 22:09:46,266 [main] INFO Providio - Customer information is displayed in check out page 2
+2024-01-23 22:09:46,301 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:09:46,301 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:09:46,323 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:09:47,378 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:09:47,379 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:09:47,819 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 22:09:47,820 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 22:09:47,869 [main] INFO Providio - Please include an '@' in the email address. 'akhila.metg.digital' is missing an '@'.
+2024-01-23 22:09:47,869 [main] INFO Providio - Test case passed
+2024-01-23 22:09:49,944 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:09:49,945 [main] INFO Providio - Create account already loaded
+2024-01-23 22:09:52,289 [main] INFO Providio - Successfully send keys of First Name
+2024-01-23 22:09:52,512 [main] INFO Providio - MatthewEditedFromCOP2@etg.digital
+2024-01-23 22:09:54,496 [main] INFO Providio - Successfully send keys of Last Name
+2024-01-23 22:09:54,773 [main] INFO Providio - Successfully send keys of Edited email
+2024-01-23 22:09:56,677 [main] INFO Providio - Successfully send keys of Phone Number
+2024-01-23 22:09:58,891 [main] INFO Providio - Successfully send keys of Email
+2024-01-23 22:09:59,931 [main] INFO Providio - MatthewEditedFromCOP2@etg.digital
+2024-01-23 22:09:59,932 [main] INFO Providio - MatthewEditedFromCOP2@etg.digital
+2024-01-23 22:09:59,932 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is MatthewEditedFromCOP2@etg.digital
+2024-01-23 22:09:59,965 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:09:59,966 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:10:01,113 [main] INFO Providio - Successfully send keys of Confirm Email
+2024-01-23 22:10:03,317 [main] INFO Providio - Successfully send keys of Password
+2024-01-23 22:10:05,781 [main] INFO Providio - Successfully send keys of Confirm Password
+2024-01-23 22:10:07,548 [main] INFO Providio - Succesfully paginated to PDP page by clicking the product from check out page 2
+2024-01-23 22:10:07,585 [main] INFO Providio - 0
+2024-01-23 22:10:10,248 [main] INFO Providio - Dashboard
+2024-01-23 22:10:10,249 [main] INFO Providio - Account created successfully
+2024-01-23 22:10:25,251 [main] INFO Providio - Successfully user logged out
+2024-01-23 22:10:27,352 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:10:27,455 [main] INFO Providio - 0
+2024-01-23 22:10:30,348 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 22:10:34,399 [main] INFO Providio - 5
+2024-01-23 22:10:34,399 [main] INFO Providio - 2
+2024-01-23 22:10:37,519 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 22:10:37,732 [main] INFO Providio - 1
+2024-01-23 22:10:39,866 [main] INFO Providio - selected color
+2024-01-23 22:10:40,919 [main] INFO Providio - 1
+2024-01-23 22:10:41,038 [main] INFO Providio - selected size
+2024-01-23 22:10:51,750 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 22:10:55,811 [main] INFO Providio - 5
+2024-01-23 22:10:55,812 [main] INFO Providio - 4
+2024-01-23 22:10:58,946 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 22:10:59,156 [main] INFO Providio - 1
+2024-01-23 22:11:01,306 [main] INFO Providio - selected color
+2024-01-23 22:11:02,385 [main] INFO Providio - 1
+2024-01-23 22:11:02,527 [main] INFO Providio - selected size
+2024-01-23 22:11:06,562 [main] INFO Providio - Product is in stock
+2024-01-23 22:11:09,124 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 22:11:13,149 [main] INFO Providio - 5
+2024-01-23 22:11:13,150 [main] INFO Providio - 5
+2024-01-23 22:11:13,741 [main] INFO Providio - Product is  added to cart
+2024-01-23 22:11:16,242 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 22:11:16,395 [main] INFO Providio - 1
+2024-01-23 22:11:18,525 [main] INFO Providio - selected color
+2024-01-23 22:11:19,617 [main] INFO Providio - 1
+2024-01-23 22:11:19,728 [main] INFO Providio - selected size
+2024-01-23 22:11:21,922 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 22:11:23,776 [main] INFO Providio - Product is in stock
+2024-01-23 22:11:30,166 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 22:11:30,957 [main] INFO Providio - Product is  added to cart
+2024-01-23 22:11:39,116 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 22:11:41,038 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:11:45,447 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 22:11:46,922 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 22:11:47,174 [main] INFO Providio - 1
+2024-01-23 22:11:47,174 [main] INFO Providio - View cart page is already loaded
+2024-01-23 22:11:47,654 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 22:11:47,696 [main] INFO Providio - Customer information is displayed in check out page 2
+2024-01-23 22:11:47,729 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:11:47,729 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:11:47,748 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:11:48,794 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:11:48,794 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:11:53,943 [main] INFO Providio - BernadineEditedFromCOP2@etg.digital
+2024-01-23 22:11:55,509 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:11:56,227 [main] INFO Providio - Successfully send keys of Edited email
+2024-01-23 22:11:59,808 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 22:12:01,388 [main] INFO Providio - BernadineEditedFromCOP2@etg.digital
+2024-01-23 22:12:01,389 [main] INFO Providio - BernadineEditedFromCOP2@etg.digital
+2024-01-23 22:12:01,389 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is BernadineEditedFromCOP2@etg.digital
+2024-01-23 22:12:01,423 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:01,423 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:12:01,922 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 22:12:01,957 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:01,958 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:12:01,987 [main] INFO Providio - Next Payment Button  is displayed in check out page 2
+2024-01-23 22:12:02,024 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:02,024 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:12:02,065 [main] INFO Providio -  Etg logo  is displayed in check out page 2
+2024-01-23 22:12:02,100 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:02,100 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:12:02,125 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:02,196 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:06,871 [main] INFO Providio - Successfully all the error messages are displayed for shipping address,first name, last name phone number
+2024-01-23 22:12:06,919 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:06,919 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:12:06,957 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:08,472 [main] INFO Providio - Succesfully paginated to PDP page by clicking the product from check out page 2
+2024-01-23 22:12:08,524 [main] INFO Providio - 0
+2024-01-23 22:12:09,234 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 22:12:11,538 [main] INFO Providio - The address entered is 123
+2024-01-23 22:12:13,778 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 22:12:16,820 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:21,997 [main] INFO Providio - Successfully the error messages are displayed for first name.
+2024-01-23 22:12:22,048 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:22,049 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:12:22,076 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:24,225 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 22:12:26,573 [main] INFO Providio - The address entered is 123 Edward Street North, Thunder Bay, ON, Canada
+2024-01-23 22:12:28,798 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 22:12:30,897 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 22:12:31,830 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:34,934 [main] INFO Providio - 5
+2024-01-23 22:12:34,935 [main] INFO Providio - 3
+2024-01-23 22:12:37,000 [main] INFO Providio - Successfully the error messages are displayed for last name.
+2024-01-23 22:12:37,032 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:37,033 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:12:37,055 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:38,018 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 22:12:38,219 [main] INFO Providio - 1
+2024-01-23 22:12:39,233 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 22:12:40,368 [main] INFO Providio - selected color
+2024-01-23 22:12:41,398 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 22:12:41,429 [main] INFO Providio - 1
+2024-01-23 22:12:41,553 [main] INFO Providio - selected size
+2024-01-23 22:12:42,625 [main] INFO Providio - 1
+2024-01-23 22:12:43,649 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 22:12:44,763 [main] INFO Providio - selected width
+2024-01-23 22:12:46,712 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:48,798 [main] INFO Providio - Product is in stock
+2024-01-23 22:12:51,893 [main] INFO Providio - Successfully the error messages are displayed for shipping address
+2024-01-23 22:12:51,944 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:51,944 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:12:51,972 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:12:54,136 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 22:12:56,003 [main] INFO Providio - Product is  added to cart
+2024-01-23 22:12:56,323 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 22:12:58,520 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 22:13:01,621 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:04,138 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 22:13:06,759 [main] INFO Providio - Successfully the error messages are displayed for  phone number
+2024-01-23 22:13:06,851 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:06,852 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:13:09,076 [main] INFO Providio - Successfully send keys of FirstName
+2024-01-23 22:13:11,352 [main] INFO Providio - Successfully send keys of LastName
+2024-01-23 22:13:12,594 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 22:13:12,652 [main] INFO Providio - 1
+2024-01-23 22:13:12,653 [main] INFO Providio - View cart page is already loaded
+2024-01-23 22:13:13,633 [main] INFO Providio - The address entered is 12300 Bermuda Road #123, Henderson, NV
+2024-01-23 22:13:15,809 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 22:13:21,615 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:24,068 [main] INFO Providio - Successfully Clicked on the Nextpayment Btn and navigated to payment page
+2024-01-23 22:13:25,934 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 22:13:26,183 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:26,230 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:13:28,095 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 22:13:28,143 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:28,144 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:13:28,194 [main] INFO Providio - Next Payment Button  is displayed in check out page 2
+2024-01-23 22:13:28,288 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:28,289 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:13:28,363 [main] INFO Providio -  Etg logo  is displayed in check out page 2
+2024-01-23 22:13:28,400 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:28,400 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:13:28,426 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:28,449 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:30,341 [main] INFO Providio - Bermuda Road
+2024-01-23 22:13:30,341 [main] INFO Providio - Bermuda Road
+2024-01-23 22:13:32,843 [main] INFO Providio - Successfully all the error messages are displayed for shipping address,first name, last name phone number
+2024-01-23 22:13:32,874 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:32,874 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:13:32,894 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:35,131 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 22:13:35,500 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:37,384 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 22:13:37,664 [main] INFO Providio - Successfully send keys of edited first name
+2024-01-23 22:13:39,821 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 22:13:40,125 [main] INFO Providio - Successfully send keys of edited last name
+2024-01-23 22:13:42,882 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:43,469 [main] INFO Providio - The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+2024-01-23 22:13:45,697 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 22:13:48,028 [main] INFO Providio - Successfully the error messages are displayed for first name.
+2024-01-23 22:13:48,071 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:48,071 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:13:48,097 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:50,248 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 22:13:52,509 [main] INFO Providio - The address entered is 123 Edward Street North, Thunder Bay, ON, Canada
+2024-01-23 22:13:52,924 [main] INFO Providio - Click failed
+2024-01-23 22:13:54,690 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 22:13:54,966 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:13:54,967 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:13:54,967 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:13:54,967 [main] INFO Providio - Bermuda Road
+2024-01-23 22:13:54,968 [main] INFO Providio - Successfully shipping addresss is edited the previous address is Bermuda Road and edited shipping address is  is 231 Fort York Boulevard
+2024-01-23 22:13:56,002 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:13:56,027 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:13:57,722 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:00,062 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:01,104 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:14:01,104 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:14:02,930 [main] INFO Providio - Successfully the error messages are displayed for last name.
+2024-01-23 22:14:02,978 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:02,979 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:14:03,004 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:05,146 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 22:14:06,241 [main] INFO Providio - AdelineEditedFromCOP3@etg.digital
+2024-01-23 22:14:07,280 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 22:14:08,474 [main] INFO Providio - Successfully send keys of Edited email form check out page 3
+2024-01-23 22:14:09,856 [main] INFO Providio - Successfully send keys of phone number
+2024-01-23 22:14:12,892 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:17,995 [main] INFO Providio - Successfully the error messages are displayed for shipping address
+2024-01-23 22:14:18,033 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:18,033 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:14:18,059 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:18,832 [main] INFO Providio - AdelineEditedFromCOP3@etg.digital
+2024-01-23 22:14:18,833 [main] INFO Providio - AdelineEditedFromCOP3@etg.digital
+2024-01-23 22:14:18,833 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:14:18,834 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is AdelineEditedFromCOP3@etg.digital
+2024-01-23 22:14:18,865 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:20,202 [main] INFO Providio - Successfully send keys of first name
+2024-01-23 22:14:22,349 [main] INFO Providio - Successfully send keys of last name
+2024-01-23 22:14:24,573 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 22:14:27,725 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:30,341 [main] INFO Providio - Successfully send keys of gift message
+2024-01-23 22:14:32,889 [main] INFO Providio - Successfully the error messages are displayed for  phone number
+2024-01-23 22:14:32,924 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:32,924 [main] INFO Providio - Shipping page alreday loaded
+2024-01-23 22:14:35,079 [main] INFO Providio - Successfully send keys of FirstName
+2024-01-23 22:14:37,228 [main] INFO Providio - Successfully send keys of LastName
+2024-01-23 22:14:39,429 [main] INFO Providio - The address entered is 123 William Street, New York, NY
+2024-01-23 22:14:41,506 [main] INFO Providio - Gift message is not displayed
+2024-01-23 22:14:41,543 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:41,574 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:14:41,654 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 22:14:43,633 [main] INFO Providio - Fernanda Koch Bermuda Road Marco Island FL 34145
+- Existing Addresses -
+Retta Beatty 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 22:14:43,633 [main] INFO Providio - Fernanda Koch Bermuda Road Marco Island FL 34145
+- Existing Addresses -
+Retta Beatty 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 22:14:49,887 [main] INFO Providio - Successfully Clicked on the Nextpayment Btn and navigated to payment page
+2024-01-23 22:14:52,005 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:52,035 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:14:52,852 [main] INFO Providio -  keys not send to 
+2024-01-23 22:14:54,920 [main] INFO Providio -  keys not send to 
+2024-01-23 22:14:56,087 [main] INFO Providio - 123 William Street
+2024-01-23 22:14:56,087 [main] INFO Providio - 123 William Street
+2024-01-23 22:14:56,201 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:56,254 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:14:58,307 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:58,334 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:14:58,360 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:14:58,387 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:58,418 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:14:58,439 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:15:00,490 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:00,512 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:00,535 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:00,556 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:00,592 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:00,621 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:15:01,327 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:02,672 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:02,695 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:02,717 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:02,741 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:02,773 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:02,806 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:15:03,498 [main] INFO Providio - Successfully send keys of edited first name
+2024-01-23 22:15:04,870 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:04,896 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:04,921 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:04,941 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:05,694 [main] INFO Providio - Successfully send keys of edited last name
+2024-01-23 22:15:08,993 [main] INFO Providio - The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+2024-01-23 22:15:11,155 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 22:15:13,241 [main] INFO Providio -  keys not send to 
+2024-01-23 22:15:15,287 [main] INFO Providio - Error msg displayed when invalid card details are entered
+2024-01-23 22:15:15,325 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:15,362 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:15:17,397 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:17,420 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:17,444 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:17,483 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:18,319 [main] INFO Providio - Click failed
+2024-01-23 22:15:20,368 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:15:20,368 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:15:20,369 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:15:20,369 [main] INFO Providio - 123 William Street
+2024-01-23 22:15:20,370 [main] INFO Providio - Successfully shipping addresss is edited the previous address is 123 William Street and edited shipping address is  is 231 Fort York Boulevard
+2024-01-23 22:15:21,431 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:21,457 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:15:24,872 [main] INFO Providio - Successfully send keys of  invalid expDate
+2024-01-23 22:15:24,897 [main] INFO Providio - Error msg displayed when invalid exp year details are entered
+2024-01-23 22:15:24,933 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:24,961 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:15:25,522 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:26,564 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:15:26,565 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:15:27,041 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:27,068 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:27,094 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:27,122 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:31,697 [main] INFO Providio - GwynEditedFromCOP3@etg.digital
+2024-01-23 22:15:33,919 [main] INFO Providio - Successfully send keys of Edited email form check out page 3
+2024-01-23 22:15:34,540 [main] INFO Providio - Successfully send keys of Incomplete cardNum
+2024-01-23 22:15:34,603 [main] INFO Providio - Error msg displayed when incomplete card details are entered
+2024-01-23 22:15:34,639 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:34,674 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:15:36,711 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:36,733 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:36,755 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:36,781 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:44,150 [main] INFO Providio - Successfully send keys of  invalid expDate
+2024-01-23 22:15:44,157 [main] INFO Providio - GwynEditedFromCOP3@etg.digital
+2024-01-23 22:15:44,157 [main] INFO Providio - GwynEditedFromCOP3@etg.digital
+2024-01-23 22:15:44,158 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:15:44,158 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is GwynEditedFromCOP3@etg.digital
+2024-01-23 22:15:44,201 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:44,224 [main] INFO Providio - Error msg displayed when incomplete exp year details are entered
+2024-01-23 22:15:44,266 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:44,330 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:15:46,362 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:46,389 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:46,426 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:46,455 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:53,862 [main] INFO Providio - Successfully send keys of Incomplete security code
+2024-01-23 22:15:53,908 [main] INFO Providio - Error msg displayed when incomplete security code  details are entered
+2024-01-23 22:15:53,950 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:53,984 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:15:55,759 [main] INFO Providio - Successfully send keys of gift message
+2024-01-23 22:15:56,018 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:56,050 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:56,073 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:15:58,107 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:58,129 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:15:58,152 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:15:58,182 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:00,464 [main] INFO Providio - Successfully send keys of cardNumber
+2024-01-23 22:16:02,741 [main] INFO Providio - Successfully send keys of Expired date
+2024-01-23 22:16:04,914 [main] INFO Providio - Successfully send keys of Cvv
+2024-01-23 22:16:06,980 [main] INFO Providio - Gift message is not displayed
+2024-01-23 22:16:07,015 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:07,047 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:16:07,151 [main] INFO Providio - Successfully send keys of postal code
+2024-01-23 22:16:09,088 [main] INFO Providio - Denna Mohr 123 William Street Manhattan New York NY 10038
+- Existing Addresses -
+Cristopher Weber 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 22:16:09,088 [main] INFO Providio - Denna Mohr 123 William Street Manhattan New York NY 10038
+- Existing Addresses -
+Cristopher Weber 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 22:16:11,337 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:11,366 [main] INFO Providio - Successfully Clicked on the review order button
+2024-01-23 22:16:18,276 [main] INFO Providio -  keys not send to 
+2024-01-23 22:16:20,340 [main] INFO Providio -  keys not send to 
+2024-01-23 22:16:21,619 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:21,645 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:16:23,701 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:23,727 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:23,755 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:23,786 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:23,837 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:23,865 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:16:25,907 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:25,936 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:25,960 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:25,989 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:26,025 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:26,051 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:16:28,075 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:28,097 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:28,119 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:28,142 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:28,185 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:28,213 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:16:30,263 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:30,288 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:30,321 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:30,365 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:38,640 [main] INFO Providio -  keys not send to 
+2024-01-23 22:16:40,687 [main] INFO Providio - Error msg displayed when invalid card details are entered
+2024-01-23 22:16:40,720 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:40,748 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:16:42,798 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:42,828 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:42,861 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:42,892 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:50,364 [main] INFO Providio - Successfully send keys of  invalid expDate
+2024-01-23 22:16:50,392 [main] INFO Providio - Error msg displayed when invalid exp year details are entered
+2024-01-23 22:16:50,436 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:50,468 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:16:52,526 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:16:52,549 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:52,575 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:16:52,599 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:00,131 [main] INFO Providio - Successfully send keys of Incomplete cardNum
+2024-01-23 22:17:00,208 [main] INFO Providio - Error msg displayed when incomplete card details are entered
+2024-01-23 22:17:00,249 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:00,274 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:17:02,307 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:02,346 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:17:02,375 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:17:02,395 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:09,810 [main] INFO Providio - Successfully send keys of  invalid expDate
+2024-01-23 22:17:09,851 [main] INFO Providio - Error msg displayed when incomplete exp year details are entered
+2024-01-23 22:17:09,884 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:09,906 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:17:11,947 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:11,971 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:17:11,997 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:17:12,021 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:19,382 [main] INFO Providio - Successfully send keys of Incomplete security code
+2024-01-23 22:17:19,437 [main] INFO Providio - Error msg displayed when incomplete security code  details are entered
+2024-01-23 22:17:19,473 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:19,495 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:17:21,555 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:21,589 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:21,612 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:17:23,645 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:17:23,670 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:17:23,693 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:23,734 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:26,137 [main] INFO Providio - Successfully send keys of cardNumber
+2024-01-23 22:17:28,404 [main] INFO Providio - Successfully send keys of Expired date
+2024-01-23 22:17:30,679 [main] INFO Providio - Successfully send keys of Cvv
+2024-01-23 22:17:32,918 [main] INFO Providio - Successfully send keys of postal code
+2024-01-23 22:17:37,133 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:17:37,168 [main] INFO Providio - Successfully Clicked on the review order button
+2024-01-23 22:33:33,425 [main] INFO Providio - this is lauching page
+2024-01-23 22:33:39,995 [main] INFO Providio - Placing the order as guest user
+2024-01-23 22:33:40,195 [main] INFO Providio - Browser launched succesfully
+2024-01-23 22:33:40,347 [main] INFO Providio - Darrick
+2024-01-23 22:33:40,349 [main] INFO Providio - Erwin Becker
+2024-01-23 22:33:40,352 [main] INFO Providio - DarrickEdited@etg.digital
+2024-01-23 22:33:42,762 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:33:42,880 [main] INFO Providio - 0
+2024-01-23 22:34:05,695 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 22:34:09,747 [main] INFO Providio - 5
+2024-01-23 22:34:09,747 [main] INFO Providio - 1
+2024-01-23 22:34:12,870 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 22:34:13,093 [main] INFO Providio - 1
+2024-01-23 22:34:15,257 [main] INFO Providio - selected color
+2024-01-23 22:34:16,351 [main] INFO Providio - 1
+2024-01-23 22:34:16,482 [main] INFO Providio - selected size
+2024-01-23 22:34:20,522 [main] INFO Providio - Product is in stock
+2024-01-23 22:34:27,758 [main] INFO Providio - Product is  added to cart
+2024-01-23 22:34:35,905 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 22:34:48,438 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 22:34:57,728 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:35:02,087 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 22:35:04,270 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 22:35:04,308 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:35:05,362 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:35:05,363 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:35:10,526 [main] INFO Providio - JacksonEditedFromCOP2@etg.digital
+2024-01-23 22:35:12,807 [main] INFO Providio - Successfully send keys of Edited email
+2024-01-23 22:35:17,921 [main] INFO Providio - JacksonEditedFromCOP2@etg.digital
+2024-01-23 22:35:17,922 [main] INFO Providio - JacksonEditedFromCOP2@etg.digital
+2024-01-23 22:35:17,923 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is JacksonEditedFromCOP2@etg.digital
+2024-01-23 22:35:20,046 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:35:24,130 [main] INFO Providio - 
+2024-01-23 22:35:24,131 [main] INFO Providio - 
+2024-01-23 22:35:24,198 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:35:26,390 [main] INFO Providio - Successfully send keys of edited first name
+2024-01-23 22:35:28,571 [main] INFO Providio - Successfully send keys of edited last name
+2024-01-23 22:35:31,897 [main] INFO Providio - The address entered is 231
+2024-01-23 22:35:34,141 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 22:35:41,364 [main] INFO Providio - Click failed
+2024-01-23 22:35:43,412 [main] INFO Providio - 
+2024-01-23 22:35:43,413 [main] INFO Providio - 
+2024-01-23 22:35:43,414 [main] INFO Providio - 
+2024-01-23 22:35:43,414 [main] INFO Providio - 
+2024-01-23 22:35:43,415 [main] INFO Providio -  shipping addresss is not edited the previous address is  and edited shipping address is  is 
+2024-01-23 22:35:44,497 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:35:48,584 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:35:49,622 [main] INFO Providio - JacksonEditedFromCOP2@etg.digital
+2024-01-23 22:35:49,623 [main] INFO Providio - JacksonEditedFromCOP2@etg.digital
+2024-01-23 22:35:50,813 [main] INFO Providio - PerlaEditedFromCOP3@etg.digital
+2024-01-23 22:35:52,896 [main] INFO Providio -  keys not send to 
+2024-01-23 22:35:58,125 [main] INFO Providio - JacksonEditedFromCOP2@etg.digital
+2024-01-23 22:35:58,125 [main] INFO Providio - JacksonEditedFromCOP2@etg.digital
+2024-01-23 22:35:58,126 [main] INFO Providio - JacksonEditedFromCOP2@etg.digital
+2024-01-23 22:35:58,126 [main] INFO Providio - Successfully email id is edited the previous email is JacksonEditedFromCOP2@etg.digital and edited email is PerlaEditedFromCOP3@etg.digital
+2024-01-23 22:35:58,162 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:36:00,226 [main] INFO Providio - 
+2024-01-23 22:36:00,227 [main] INFO Providio - 
+2024-01-23 22:36:09,609 [main] INFO Providio - Successfully send keys of edited first name
+2024-01-23 22:36:11,826 [main] INFO Providio - Successfully send keys of edited last name
+2024-01-23 22:36:42,048 [main] INFO Providio - this is lauching page
+2024-01-23 22:37:22,849 [main] INFO Providio - Placing the order as guest user
+2024-01-23 22:37:22,889 [main] INFO Providio - Browser launched succesfully
+2024-01-23 22:37:23,024 [main] INFO Providio - Shirley
+2024-01-23 22:37:23,026 [main] INFO Providio - Alfonzo Grant
+2024-01-23 22:37:23,027 [main] INFO Providio - ShirleyEdited@etg.digital
+2024-01-23 22:37:25,432 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:37:25,710 [main] INFO Providio - 0
+2024-01-23 22:37:29,108 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:37:29,133 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:37:29,190 [main] INFO Providio - 0
+2024-01-23 22:37:29,519 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:37:29,556 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:37:29,612 [main] INFO Providio - 0
+2024-01-23 22:37:29,858 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:37:29,881 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:37:29,933 [main] INFO Providio - 0
+2024-01-23 22:37:55,093 [main] INFO Providio - this is lauching page
+2024-01-23 22:38:08,363 [main] INFO Providio - Placing the order as guest user
+2024-01-23 22:38:08,467 [main] INFO Providio - Browser launched succesfully
+2024-01-23 22:38:08,560 [main] INFO Providio - Jae
+2024-01-23 22:38:08,564 [main] INFO Providio - Jude Schmeler Jr.
+2024-01-23 22:38:08,566 [main] INFO Providio - JaeEdited@etg.digital
+2024-01-23 22:38:10,824 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:38:10,922 [main] INFO Providio - 0
+2024-01-23 22:38:33,626 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 22:38:37,665 [main] INFO Providio - 5
+2024-01-23 22:38:37,665 [main] INFO Providio - 1
+2024-01-23 22:38:40,791 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 22:38:41,012 [main] INFO Providio - 1
+2024-01-23 22:38:43,169 [main] INFO Providio - selected color
+2024-01-23 22:38:44,236 [main] INFO Providio - 1
+2024-01-23 22:38:44,374 [main] INFO Providio - selected size
+2024-01-23 22:38:48,437 [main] INFO Providio - Product is in stock
+2024-01-23 22:38:55,692 [main] INFO Providio - Product is  added to cart
+2024-01-23 22:39:03,850 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 22:39:14,922 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 22:39:23,453 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:39:27,901 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 22:39:30,083 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 22:39:30,108 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:39:31,170 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:39:31,172 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:39:36,362 [main] INFO Providio - ChristopherEditedFromCOP2@etg.digital
+2024-01-23 22:39:38,649 [main] INFO Providio - Successfully send keys of Edited email
+2024-01-23 22:39:43,807 [main] INFO Providio - ChristopherEditedFromCOP2@etg.digital
+2024-01-23 22:39:43,808 [main] INFO Providio - ChristopherEditedFromCOP2@etg.digital
+2024-01-23 22:39:43,809 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is ChristopherEditedFromCOP2@etg.digital
+2024-01-23 22:39:45,929 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:39:50,012 [main] INFO Providio - 
+2024-01-23 22:39:50,013 [main] INFO Providio - 
+2024-01-23 22:39:50,095 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:39:52,276 [main] INFO Providio - Successfully send keys of edited first name
+2024-01-23 22:39:54,483 [main] INFO Providio - Successfully send keys of edited last name
+2024-01-23 22:39:57,771 [main] INFO Providio - The address entered is 231
+2024-01-23 22:39:59,993 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 22:40:07,247 [main] INFO Providio - Click failed
+2024-01-23 22:40:09,293 [main] INFO Providio - 
+2024-01-23 22:40:09,294 [main] INFO Providio - 
+2024-01-23 22:40:09,295 [main] INFO Providio - 
+2024-01-23 22:40:09,296 [main] INFO Providio - 
+2024-01-23 22:40:09,296 [main] INFO Providio -  shipping addresss is not edited the previous address is  and edited shipping address is  is 
+2024-01-23 22:40:10,337 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:40:14,428 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:40:15,478 [main] INFO Providio - ChristopherEditedFromCOP2@etg.digital
+2024-01-23 22:40:15,479 [main] INFO Providio - ChristopherEditedFromCOP2@etg.digital
+2024-01-23 22:40:20,623 [main] INFO Providio - DewittEditedFromCOP3@etg.digital
+2024-01-23 22:40:22,883 [main] INFO Providio - Successfully send keys of Edited email form check out page 3
+2024-01-23 22:40:33,226 [main] INFO Providio - DewittEditedFromCOP3@etg.digital
+2024-01-23 22:40:33,227 [main] INFO Providio - DewittEditedFromCOP3@etg.digital
+2024-01-23 22:40:33,228 [main] INFO Providio - ChristopherEditedFromCOP2@etg.digital
+2024-01-23 22:40:33,233 [main] INFO Providio - Successfully email id is edited the previous email is ChristopherEditedFromCOP2@etg.digital and edited email is DewittEditedFromCOP3@etg.digital
+2024-01-23 22:40:33,304 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:40:35,385 [main] INFO Providio - New Address
+- Existing Addresses -
+Jae Schimmel 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 22:40:35,385 [main] INFO Providio - New Address
+- Existing Addresses -
+Jae Schimmel 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 22:40:41,611 [main] INFO Providio -  keys not send to 
+2024-01-23 22:40:43,705 [main] INFO Providio -  keys not send to 
+2024-01-23 22:40:47,098 [main] INFO Providio - The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+2024-01-23 22:40:49,189 [main] INFO Providio -  keys not send to 
+2024-01-23 22:40:51,289 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:40:51,315 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:40:51,343 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:40:51,393 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:40:53,772 [main] INFO Providio - Successfully send keys of cardNumber
+2024-01-23 22:40:55,958 [main] INFO Providio - Successfully send keys of Expired date
+2024-01-23 22:40:58,078 [main] INFO Providio - Successfully send keys of Cvv
+2024-01-23 22:41:00,284 [main] INFO Providio - Successfully send keys of postal code
+2024-01-23 22:41:04,456 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:41:04,488 [main] INFO Providio - Successfully Clicked on the review order button
+2024-01-23 22:41:04,523 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:41:04,523 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:41:04,524 [main] INFO Providio - New Address
+- Existing Addresses -
+Jae Schimmel 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 22:41:04,524 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:41:04,524 [main] INFO Providio - Successfully billing addresss  is edited the previous address is New Address
+- Existing Addresses -
+Jae Schimmel 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2 and edited billing addresss  is  is 231 Fort York Boulevard
+2024-01-23 22:41:47,353 [main] INFO Providio - this is lauching page
+2024-01-23 22:41:54,541 [main] INFO Providio - Placing the order as guest user
+2024-01-23 22:41:54,707 [main] INFO Providio - Browser launched succesfully
+2024-01-23 22:41:54,960 [main] INFO Providio - Gus
+2024-01-23 22:41:54,962 [main] INFO Providio - Dionna Kub
+2024-01-23 22:41:54,966 [main] INFO Providio - GusEdited@etg.digital
+2024-01-23 22:41:57,280 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:41:57,390 [main] INFO Providio - 0
+2024-01-23 22:42:27,375 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 22:42:31,432 [main] INFO Providio - 5
+2024-01-23 22:42:31,433 [main] INFO Providio - 3
+2024-01-23 22:42:34,591 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 22:42:34,835 [main] INFO Providio - 1
+2024-01-23 22:42:36,985 [main] INFO Providio - selected color
+2024-01-23 22:42:38,033 [main] INFO Providio - 1
+2024-01-23 22:42:38,175 [main] INFO Providio - selected size
+2024-01-23 22:42:39,249 [main] INFO Providio - 1
+2024-01-23 22:42:41,384 [main] INFO Providio - selected width
+2024-01-23 22:42:45,421 [main] INFO Providio - Product is in stock
+2024-01-23 22:42:52,647 [main] INFO Providio - Product is  added to cart
+2024-01-23 22:43:00,809 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 22:43:14,936 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 22:43:28,397 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:43:32,866 [main] INFO Providio - Successfully send keys of GuestEmail
+2024-01-23 22:43:35,048 [main] INFO Providio - Successfully Clicked on the GuestLogin
+2024-01-23 22:43:35,075 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:43:36,134 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:43:36,135 [main] INFO Providio - Upendra.y@gmail.com
+2024-01-23 22:43:41,293 [main] INFO Providio - ReedEditedFromCOP2@etg.digital
+2024-01-23 22:43:43,594 [main] INFO Providio - Successfully send keys of Edited email
+2024-01-23 22:43:48,725 [main] INFO Providio - ReedEditedFromCOP2@etg.digital
+2024-01-23 22:43:48,726 [main] INFO Providio - ReedEditedFromCOP2@etg.digital
+2024-01-23 22:43:48,727 [main] INFO Providio - Successfully email id is edited the previous email is Upendra.y@gmail.com and edited email is ReedEditedFromCOP2@etg.digital
+2024-01-23 22:43:50,832 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:43:54,925 [main] INFO Providio - 
+2024-01-23 22:43:54,925 [main] INFO Providio - 
+2024-01-23 22:43:54,995 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:43:57,235 [main] INFO Providio - Successfully send keys of edited first name
+2024-01-23 22:43:59,414 [main] INFO Providio - Successfully send keys of edited last name
+2024-01-23 22:44:02,752 [main] INFO Providio - The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+2024-01-23 22:44:04,978 [main] INFO Providio - Successfully send keys of PhoneNumber
+2024-01-23 22:44:12,150 [main] INFO Providio - Click failed
+2024-01-23 22:44:14,191 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:44:14,191 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:44:14,192 [main] INFO Providio - 231 Fort York Boulevard
+2024-01-23 22:44:14,192 [main] INFO Providio - 
+2024-01-23 22:44:14,193 [main] INFO Providio - Successfully shipping addresss is edited the previous address is  and edited shipping address is  is 231 Fort York Boulevard
+2024-01-23 22:44:15,238 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:44:15,264 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:44:19,314 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:44:20,379 [main] INFO Providio - ReedEditedFromCOP2@etg.digital
+2024-01-23 22:44:20,380 [main] INFO Providio - ReedEditedFromCOP2@etg.digital
+2024-01-23 22:44:25,532 [main] INFO Providio - GlennEditedFromCOP3@etg.digital
+2024-01-23 22:44:27,817 [main] INFO Providio - Successfully send keys of Edited email form check out page 3
+2024-01-23 22:44:38,124 [main] INFO Providio - GlennEditedFromCOP3@etg.digital
+2024-01-23 22:44:38,125 [main] INFO Providio - GlennEditedFromCOP3@etg.digital
+2024-01-23 22:44:38,126 [main] INFO Providio - ReedEditedFromCOP2@etg.digital
+2024-01-23 22:44:38,128 [main] INFO Providio - Successfully email id is edited the previous email is ReedEditedFromCOP2@etg.digital and edited email is GlennEditedFromCOP3@etg.digital
+2024-01-23 22:44:38,169 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:44:40,239 [main] INFO Providio - New Address
+- Existing Addresses -
+Gus Lemke 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 22:44:40,240 [main] INFO Providio - New Address
+- Existing Addresses -
+Gus Lemke 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 22:44:50,530 [main] INFO Providio -  keys not send to 
+2024-01-23 22:44:52,604 [main] INFO Providio -  keys not send to 
+2024-01-23 22:44:55,921 [main] INFO Providio - The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+2024-01-23 22:44:58,008 [main] INFO Providio -  keys not send to 
+2024-01-23 22:45:00,079 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:45:00,110 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:45:00,138 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:45:00,181 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:45:02,627 [main] INFO Providio - Successfully send keys of cardNumber
+2024-01-23 22:45:04,796 [main] INFO Providio - Successfully send keys of Expired date
+2024-01-23 22:45:06,954 [main] INFO Providio - Successfully send keys of Cvv
+2024-01-23 22:45:09,122 [main] INFO Providio - Successfully send keys of postal code
+2024-01-23 22:45:17,318 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:45:17,355 [main] INFO Providio - Successfully Clicked on the review order button
+2024-01-23 22:45:17,389 [main] INFO Providio - 2315 Bristol Circle
+2024-01-23 22:45:17,389 [main] INFO Providio - 2315 Bristol Circle
+2024-01-23 22:45:17,390 [main] INFO Providio - New Address
+- Existing Addresses -
+Gus Lemke 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2
+2024-01-23 22:45:17,390 [main] INFO Providio - 2315 Bristol Circle
+2024-01-23 22:45:17,391 [main] INFO Providio - Successfully billing addresss  is edited the previous address is New Address
+- Existing Addresses -
+Gus Lemke 231 Fort York Boulevard Old Toronto Toronto ON M5V 1B2 and edited billing addresss  is  is 2315 Bristol Circle
+2024-01-23 22:47:26,386 [main] INFO Providio - this is lauching page
+2024-01-23 22:47:30,605 [main] INFO Providio - Placing the order as guest user
+2024-01-23 22:47:40,634 [main] INFO Providio - Browser launched succesfully
+2024-01-23 22:47:40,702 [main] INFO Providio - Selma
+2024-01-23 22:47:40,704 [main] INFO Providio - Michale Swift
+2024-01-23 22:47:40,709 [main] INFO Providio - SelmaEdited@etg.digital
+2024-01-23 22:47:42,910 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:47:42,942 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:47:42,942 [main] INFO Providio - Login page not loaded
+2024-01-23 22:47:54,677 [main] INFO Providio - Successfully navigated to login page
+2024-01-23 22:47:57,037 [main] INFO Providio - Successfully send keys of  user Email
+2024-01-23 22:47:59,222 [main] INFO Providio - Successfully send keys of password
+2024-01-23 22:48:17,429 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:48:17,669 [main] INFO Providio - 0
+2024-01-23 22:48:41,897 [main] INFO Providio - Relaunching the browser
+2024-01-23 22:48:43,999 [main] INFO Providio - Relaunching the browser
+2024-01-23 22:49:43,676 [main] INFO Providio - this is lauching page
+2024-01-23 22:49:53,319 [main] INFO Providio - Placing the order as guest user
+2024-01-23 22:49:53,417 [main] INFO Providio - Browser launched succesfully
+2024-01-23 22:49:53,650 [main] INFO Providio - Despina
+2024-01-23 22:49:53,653 [main] INFO Providio - Loida Dickinson II
+2024-01-23 22:49:53,654 [main] INFO Providio - DespinaEdited@etg.digital
+2024-01-23 22:49:56,527 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:49:56,577 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:49:56,577 [main] INFO Providio - Login page not loaded
+2024-01-23 22:50:27,734 [main] INFO Providio - Successfully navigated to login page
+2024-01-23 22:50:29,989 [main] INFO Providio - Successfully send keys of  user Email
+2024-01-23 22:50:32,191 [main] INFO Providio - Successfully send keys of password
+2024-01-23 22:50:44,788 [main] INFO Providio - User logged in successfully
+2024-01-23 22:50:44,821 [main] INFO Providio - Musku Akhila
+2024-01-23 22:50:44,854 [main] INFO Providio - Musku Akhila
+2024-01-23 22:50:44,855 [main] INFO Providio - Name of User name is Musku Akhila
+2024-01-23 22:50:44,890 [main] INFO Providio - akhila.m+4@etg.digital
+2024-01-23 22:50:44,916 [main] INFO Providio - akhila.m+4@etg.digital
+2024-01-23 22:50:44,917 [main] INFO Providio - Email is akhila.m+4@etg.digital
+2024-01-23 22:50:47,148 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:50:47,247 [main] INFO Providio - 0
+2024-01-23 22:51:11,579 [main] INFO Providio - click Success Mens of  DRESS SHIRTS
+2024-01-23 22:51:15,615 [main] INFO Providio - 5
+2024-01-23 22:51:15,616 [main] INFO Providio - 1
+2024-01-23 22:51:18,717 [main] INFO Providio - Successfully clicked in the Quickshop link in plp
+2024-01-23 22:51:18,942 [main] INFO Providio - 1
+2024-01-23 22:51:21,090 [main] INFO Providio - selected color
+2024-01-23 22:51:22,158 [main] INFO Providio - 1
+2024-01-23 22:51:22,298 [main] INFO Providio - selected size
+2024-01-23 22:51:26,367 [main] INFO Providio - Product is in stock
+2024-01-23 22:51:33,616 [main] INFO Providio - Product is  added to cart
+2024-01-23 22:51:41,771 [main] INFO Providio - Successfully Clicked on the MiniCart
+2024-01-23 22:51:53,533 [main] INFO Providio - Successfully Clicked on the ViewCart
+2024-01-23 22:52:11,726 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:52:11,767 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:52:13,871 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:52:17,994 [main] INFO Providio - 
+2024-01-23 22:52:17,995 [main] INFO Providio - 
+2024-01-23 22:52:18,068 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:52:30,695 [main] INFO Providio - Click failed
+2024-01-23 22:52:32,734 [main] INFO Providio - 4331 Dominion Street
+2024-01-23 22:52:32,735 [main] INFO Providio - 4331 Dominion Street
+2024-01-23 22:52:32,735 [main] INFO Providio - 4331 Dominion Street
+2024-01-23 22:52:32,736 [main] INFO Providio - 
+2024-01-23 22:52:32,736 [main] INFO Providio - Successfully shipping addresss is edited the previous address is  and edited shipping address is  is 4331 Dominion Street
+2024-01-23 22:52:33,784 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:52:33,809 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:52:37,860 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:52:37,860 [main] INFO Providio - User is checked in as registered so edit button
+2024-01-23 22:52:37,903 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:52:37,927 [main] INFO Providio - Paymnet page is loaded
+2024-01-23 22:52:40,003 [main] INFO Providio - New Address
+- Existing Addresses -
+AKII AKII 4331 Dominion Street Burnaby BC V5G 3E3
+- Address Book -
+AKII AKII 4331 Dominion Street Burnaby BC V5G 3E3
+2024-01-23 22:52:40,004 [main] INFO Providio - New Address
+- Existing Addresses -
+AKII AKII 4331 Dominion Street Burnaby BC V5G 3E3
+- Address Book -
+AKII AKII 4331 Dominion Street Burnaby BC V5G 3E3
+2024-01-23 22:52:50,306 [main] INFO Providio -  keys not send to 
+2024-01-23 22:52:52,375 [main] INFO Providio -  keys not send to 
+2024-01-23 22:52:55,736 [main] INFO Providio - The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+2024-01-23 22:52:57,821 [main] INFO Providio -  keys not send to 
+2024-01-23 22:52:59,904 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:52:59,936 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:52:59,964 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:53:00,017 [main] INFO Providio - The count of the element is 0
+2024-01-23 22:53:00,064 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:53:15,569 [main] INFO Providio - The count of the element is 1
+2024-01-23 22:53:15,629 [main] INFO Providio - 
+2024-01-23 22:53:15,629 [main] INFO Providio - 
+2024-01-23 22:53:15,630 [main] INFO Providio - New Address
+- Existing Addresses -
+AKII AKII 4331 Dominion Street Burnaby BC V5G 3E3
+- Address Book -
+AKII AKII 4331 Dominion Street Burnaby BC V5G 3E3
+2024-01-23 22:53:15,630 [main] INFO Providio - 
+2024-01-23 22:53:15,630 [main] INFO Providio - Successfully billing addresss  is edited the previous address is New Address
+- Existing Addresses -
+AKII AKII 4331 Dominion Street Burnaby BC V5G 3E3
+- Address Book -
+AKII AKII 4331 Dominion Street Burnaby BC V5G 3E3 and edited billing addresss  is  is 

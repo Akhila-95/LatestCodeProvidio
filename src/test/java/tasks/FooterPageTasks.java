@@ -10,9 +10,7 @@ import validations.HomePageValidations;
 public class FooterPageTasks extends baseClass {
 
 	private static final FooterPage fp = new FooterPage(driver);
-	private static final String frndsName="friends name";
-	private static final String fromName="Gift certificate from name";
-	private static final String friendsMail="mail ";
+	
 	public static void resourceFooterLinks() throws Exception {
 
 		Actionsss.scrollIntoViewCenter(fp.getResourceFooter() );
@@ -28,7 +26,7 @@ public class FooterPageTasks extends baseClass {
 	
 		test.info("Entered valid email id in email sign up in footer");
 		
-		Actionsss.sendKeys(fp.getSubscribeSignUpInput(), fakeEmail, friendsMail);		
+		Actionsss.sendKeys(fp.getSubscribeSignUpInput(), fakeEmail, "friend email ");		
 		Actionsss.javascriptClick(fp.getSubscribeButton());
 		
 		//Thread.sleep(3000);
@@ -48,80 +46,13 @@ public class FooterPageTasks extends baseClass {
 		
 		test.info("Enter invalid email in sign up box in footer");
 		
-		Actionsss.sendKeys(fp.getSubscribeSignUpInput(), "akhilagmail", friendsMail);		
+		Actionsss.sendKeys(fp.getSubscribeSignUpInput(), "akhilagmail", "invalid email ");		
 		Actionsss.javascriptClick(fp.getSubscribeButton());
 		
 		FooterValidation.validatingSubscriptionSignUpError();
 	}
 	
-	public static void getAllErrorMsgsInGiftCard() throws Exception {
-		
-		Actionsss.javascriptClick(fp.getGiftRegistry());
-		
-		test.info("Verify the all the errors in gift card page");
-		
-		 Actionsss.javascriptClick(fp.getAddToCart());		 
-		 
-		 FooterValidation.allErrorMsgsInGiftCard();
-	}
 	
-	public static void gettheErrorsFromName_Recipients_confirmRecipientEMail() throws Exception {
-		test.info("Verify the error for Errors FromName ,Recipients mail, confirm Recipient EMail in gift card");
-		
-		Actionsss.javascriptClick(fp.getGiftRegistry());	      
-		Actionsss.sendKeys(fp.getGiftCardFriendsNameElement(),fakeFirstName,fname);
-		
-	   // Click on "Add to Cart" button
-        Actionsss.javascriptClick(fp.getAddToCart());
-        
-        FooterValidation.errorsFromName_Recipients_confirmRecipientEMail();
-	}
-	
-	public static void getErrorsRecipientEmailAndConfirmEmail() throws Exception {
-		test.info("Verify the error for Recipients mail, confirm Recipient EMail in gift card"); 
-		
-		Actionsss.javascriptClick(fp.getGiftRegistry());	      
-		Actionsss.sendKeys(fp.getGiftCardFriendsNameElement(),fakeFirstName,fname);
-		
-		Actionsss.sendKeys(fp.getGiftCardFromName(), fakelastName, fromName);
-	 // Click on "Add to Cart" button
-        Actionsss.javascriptClick(fp.getAddToCart());
-        Thread.sleep(1000);
-        FooterValidation.errorsRecipientEmailAndConfirmEmail();
-	}
-	
-	public static void getErrorOfConfirmMail() throws Exception {
-		test.info("Verify the error for confirm Recipient EMail in gift card"); 
-		
-		Actionsss.javascriptClick(fp.getGiftRegistry());
-	      
-		Actionsss.sendKeys(fp.getGiftCardFriendsNameElement(),fakeEmail,fname);		
-		Actionsss.sendKeys(fp.getGiftCardFromName(), fakelastName, fromName);		
-		Actionsss.sendKeys(fp.getGiftCardfriendsMail(), fakeEmail, friendsMail);
-		
-	 // Click on "Add to Cart" button
-        Actionsss.javascriptClick(fp.getAddToCart());
-        
-        FooterValidation.errorsForConfirmMail();
-	}
-	
-
-	public static void giftCertificateForm() throws Exception {
-		
-	//	HomePageValidations.verifyHomePagesingInLink();
-		
-		Actionsss.click(fp.getGiftCertificateAmount());
-		
-		Actionsss.selectByOptions(fp.getgiftCertificateAmountDropDown());		
-		Actionsss.sendKeys(fp.getGiftCardFriendsNameElement(), fakeFirstName,frndsName);		
-		Actionsss.sendKeys(fp.getGiftCardFromName(), fakelastName, fromName);		
-		Actionsss.sendKeys(fp.getGiftCardfriendsMail(), fakeEmail, friendsMail);		
-		Actionsss.sendKeys(fp.getgiftCardConfirmFriendsMail(), fakeEmail, friendsMail);
-		
-		Actionsss.javascriptClick(fp.getAddToCart());
-			
-		FooterValidation.validatingGiftCardAddtoCart();
-	}
 	
 	public static void getResourcesLinksFromFooter() throws Exception {
 		
@@ -163,8 +94,7 @@ public class FooterPageTasks extends baseClass {
 			
 			test.info("Verify the navigation of gift certificate page ");
 	  
-			  
-			  giftCertificateForm();
+			GiftCertificatePageTasks.giftCertificateForm();
 			
 		}else if(selectedLinkText.equals("Brands Test")) {
 			

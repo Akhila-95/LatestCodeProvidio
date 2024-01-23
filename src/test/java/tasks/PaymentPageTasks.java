@@ -103,7 +103,9 @@ public class PaymentPageTasks extends baseClass {
 		paymentPageView();
 		previousBillingAddress=Actionsss.getTextOfElement(cop3.getUpdateAddressBtnForBillingAddress());
 		logger.info(previousBillingAddress);
+		Thread.sleep(2000);
 		Actionsss.CombinedClick(cop2.getUpdateAddressBtn());
+		Thread.sleep(1000);
 		AddressSelection.editBillingAddress();
 		Thread.sleep(2000);
 		
@@ -115,6 +117,7 @@ public class PaymentPageTasks extends baseClass {
 			cop3v.updateBillingAddressValidation();
 		
 	}	
+	
 	
 	public static void allErrorsInCreditCard() throws Exception {
 			paymentPageView();

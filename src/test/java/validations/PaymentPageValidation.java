@@ -23,7 +23,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 
 		public static void displayOfGiftMessageInCheckoutPage3() throws InterruptedException {
 			test.info("Verifying the gift message in checkoutpage 3");
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			if(Actionsss.displayElement(cop3.getgiftMessageInCop3())) {
 				test.pass("Successfully the gift message is displayed as" + Actionsss.getTextOfElement(cop3.getgiftMessageInCop3()));
 				logger.info("Successfully the gift message is displayed as" + Actionsss.getTextOfElement(cop3.getgiftMessageInCop3()));

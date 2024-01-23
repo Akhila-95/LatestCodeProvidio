@@ -141,8 +141,7 @@ public class LoginPageTasks extends baseClass {
         // Enter valid email and password
         Actionsss.sendKeys(lp.getEmail(), "akhila.m+4@etg.digital",mail);      
         Actionsss.sendKeys(lp.getPassword(), "Akhireddy@07",password);      
-
-        // Click the login button
+        Thread.sleep(4000);     // Click the login button
         Actionsss.click(lp.btnLogin);
 
 	    // Verify the result of clicking on the "Gift Card" link

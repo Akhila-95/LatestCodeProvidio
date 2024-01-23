@@ -34,36 +34,5 @@ public class FooterPageTest extends baseClass{
 		 FooterPageTasks.invalidEmailInEmailSignUpBox();
 	}
 	
-	@Test//s(dependsOnMethods ="browser.launchBrowsering.verifyHomePageLaunching" )	
-	public static void  verifyErrorMsgsInGiftCard() throws Exception {
-		
-		 FooterPageTasks.getAllErrorMsgsInGiftCard();
-	}
 	
-	@Test//(dependsOnMethods ="browser.launchBrowsering.verifyHomePageLaunching")	
-	public static void verifytheErrorsFromName_Recipients_confirmRecipientEMail() throws Exception {
-		
-		FooterPageTasks.gettheErrorsFromName_Recipients_confirmRecipientEMail();
-	}
-	
-	@Test//(dependsOnMethods ="browser.launchBrowsering.verifyHomePageLaunching")	
-	public static void verifyTheErrorsRecipientEmailAndConfirmEmail() throws Exception {
-		
-		FooterPageTasks.getErrorsRecipientEmailAndConfirmEmail();
-	}
-	
-	@Test//(dependsOnMethods ="browser.launchBrowsering.verifyHomePageLaunching")	
-	public static void verifyErrorsForConfirmMail() throws Exception {
-		
-		FooterPageTasks.getErrorOfConfirmMail();
-	}
-	
-	@Test//(dependsOnMethods ="browser.launchBrowsering.verifyHomePageLaunching" )	
-	public static void verifyGiftCardToCart() throws Exception {
-		
-		FooterPage fp = new FooterPage(driver);
-		Actionsss.CombinedClick(fp.getGiftRegistry());
-		
-		FooterPageTasks.giftCertificateForm();
-	}
 }
