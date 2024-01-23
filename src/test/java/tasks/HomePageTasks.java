@@ -12,7 +12,7 @@ public class HomePageTasks extends baseClass{
 
 	private static homepage homePage = new homepage(driver);
 	private static loginPage lp = new loginPage(driver);	
-	private static final homepage hp = new homepage(driver);
+	
 	
 	//Home page mega menu
     public static void randomMegaMenu() throws InterruptedException {
@@ -103,31 +103,6 @@ public class HomePageTasks extends baseClass{
     
 
 	
-	public static  void getFindAtore() throws Exception {
-		
-		if(Actionsss.elementSize(hp.getLabelForFindAStoreList())) {
-			
-			 test.info("Bopis will available for Salesforce ,Stripe and Cybersource payments");
-			 
-			 Actionsss.javascriptClick(hp.getLabelForFindAStore());
-	 
-			 Actionsss.javascriptClick(hp.getFindStoreButton());			 
-			 Thread.sleep(2000);
-			 Actionsss.randomElementFromList(hp.getAnyRandomStore());
-			 
-			 Thread.sleep(2000);
-			 
-		 String nameOfStore =Actionsss.getTextOfElement(hp.getLabelForFindAStore());
-			 Thread.sleep(1000);
-			 logger.info("Selected store is "+ nameOfStore);
-			 
-			 test.pass("Selected store is "+ nameOfStore);
-			 
-			   
-			 
-		}else {
-			test.info("Brain tree payment is activated  so bopis are disabled");
-		}
-	}
+
     
 }

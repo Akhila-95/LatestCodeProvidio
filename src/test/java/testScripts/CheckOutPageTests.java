@@ -9,7 +9,7 @@ import tasks.CheckOutPageTasks;
 public class CheckOutPageTests extends baseClass{
 	
 	@Test(groups = {"smoke", "regression"})
-    public void VerifedThatGuestLoginFuncitonalityInCheckOutPage() throws Exception {
+    public void VerifyingThatGuestLoginFuncitonalityInCheckOutPage() throws Exception {
 		CheckOutPageTasks.GuestMailCheckOut();
     }
 

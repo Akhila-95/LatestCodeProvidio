@@ -31,23 +31,7 @@ public class ShippingAddressPage extends baseClass{
 	public WebElement getSelectLastNameInput(){
 		return lastNameInput;
 	}
-	
-	//Address 1
-	@FindBy(xpath ="//input[@id='shippingAddressOnedefault']")
-	WebElement Address1Input; 
-	public void getSelectAddress1Input() throws InterruptedException{
-		int randomNumber = 123; // Generates a random number between 100 and 999
-        address = String.valueOf(randomNumber);
-        Address1Input.sendKeys(address);
-        WebElement Address11 = driver.switchTo().activeElement();
-        //Actions actions = new Actions(driver);
-        Thread.sleep(1000);
-        Address11.sendKeys(Keys.ARROW_DOWN);
-        Thread.sleep(1000);
-        Address11.sendKeys(Keys.ARROW_DOWN);
-        Address11.sendKeys(Keys.ENTER);
-        Thread.sleep(2000);
-	}
+
 	
 	//Phone
 	@FindBy(xpath ="//input[@id='shippingPhoneNumberdefault']")
@@ -358,5 +342,11 @@ public class ShippingAddressPage extends baseClass{
     public WebElement getphoneNumberErrorMsg() {
         return  phoneNumberError;
     }
+    
+    @FindBy(xpath = "(//button[@class='text-center btn-show-details btn mx-2'])[1]")
+    private WebElement updateAddress;
 
+    public WebElement getUpdateAddress() {
+        return  updateAddress;
+    }
 }

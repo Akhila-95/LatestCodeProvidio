@@ -122,7 +122,7 @@ public class LoginPageTasks extends baseClass {
     	test.info("Verify login failure with empty password");
         
         // Enter a valid email
-        Actionsss.sendKeys(lp.getEmail(), "akhila.m@etg.digital",email);        
+        Actionsss.sendKeys(lp.getEmail(), "akhila.m@etg.digital","valid email");        
         // Provide an empty password
         Actionsss.sendKeys(lp.getPassword(), "",emptyPassword);
        

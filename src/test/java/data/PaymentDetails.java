@@ -4,13 +4,15 @@ import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
 import pageObjects.PaymentPage;
+import validations.PaymentPageValidation;
+import validations.PlaceOrderPageValidation;
 
 
 public class PaymentDetails extends baseClass{
 	
 	private static final 	PaymentPage pp = new PaymentPage(driver);
 
-	public static void positiveCreditCardDetails() throws InterruptedException, Exception {
+	public static void creditCardDetails() throws InterruptedException, Exception {
 
 		test.info("Verifying by entering the valid credit card details");
 		if(Actionsss.elementSize(pp.getBrainTree())) {
@@ -37,9 +39,14 @@ public class PaymentDetails extends baseClass{
 		
 		if(Actionsss.displayElement(pp.getSelectPlaceOrderBtn())) {
 			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
+			Thread.sleep(1000);
+			PaymentPageValidation.VerifiedThatPlaceOrderClick();
+			Thread.sleep(2000);
 			
 		}else {
 			Actionsss.CombinedClick(pp.getReviewOrderBtn());
+			Thread.sleep(3000);
+			PlaceOrderPageValidation.VerifyingReviewOrderBtn();
 		}
 	}
 	

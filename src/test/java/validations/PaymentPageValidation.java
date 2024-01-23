@@ -11,12 +11,66 @@ import com.providio.testcases.baseClass;
 
 import data.AllPayments;
 import functionality.Actionsss;
+import pageObjects.CheckOutPage3;
 import pageObjects.PaymentPage;
 
 public class PaymentPageValidation extends baseClass{
 	
 private static final PaymentPage pp = new PaymentPage(driver);	
 private static final AllPayments allPay = new AllPayments();
+
+private static CheckOutPage3 cop3= new CheckOutPage3(driver);
+
+		public static void displayOfGiftMessageInCheckoutPage3() throws InterruptedException {
+			test.info("Verifying the gift message in checkoutpage 3");
+			Thread.sleep(2000);
+			if(Actionsss.displayElement(cop3.getgiftMessageInCop3())) {
+				test.pass("Successfully the gift message is displayed as" + Actionsss.getTextOfElement(cop3.getgiftMessageInCop3()));
+				logger.info("Successfully the gift message is displayed as" + Actionsss.getTextOfElement(cop3.getgiftMessageInCop3()));
+			}else {
+				test.fail("Gift message is not displayed ");
+				logger.info("Gift message is not displayed");
+			}
+		}
+		public  void editEmailValidationInCOP3() {
+			test.info("Verifying that the email ID is being edited on checkout page 3");
+			  logger.info(editedEmailFromCop3);
+			  logger.info(previousMail);
+			  
+			if(!(previousMail.equals(emailEditedInCop3))) {
+				test.pass("Successfully email id is edited the previous email is " +previousMail +" and edited email is "+ emailEditedInCop3);
+				logger.info("Successfully email id is edited the previous email is " +previousMail +" and edited email is "+ emailEditedInCop3);
+			}else {
+				test.fail("Email id is not edited the previous email is " +previousMail +" and edited email is "+ emailEditedInCop3);
+				logger.info("Email id is not edited the previous email is " +previousMail +" and edited email is "+ emailEditedInCop3);
+			}
+		}
+	
+		public static  void editShippingValidationInCOP3() {
+			test.info("Verifying that the  shipping addres is being edited on checkout page 3");
+			  logger.info(editedAddress);
+			  logger.info( previousAddresses);
+			if(!(previousAddresses.equals(editedAddress))) {
+				test.pass("Successfully shipping addresss is edited the previous address is " + previousAddresses+" and edited shipping address is  is "+ editedAddress);
+				logger.info("Successfully shipping addresss is edited the previous address is " + previousAddresses+" and edited shipping address is  is "+ editedAddress);
+			}else {
+				test.fail("shipping addresss is not edited the previous address is " + previousAddresses+" and edited shipping address is  is "+ editedAddress);
+				logger.info(" shipping addresss is not edited the previous address is " + previousAddresses+" and edited shipping address is  is "+ editedAddress);
+			}
+		}
+		
+		public  void updateBillingAddressValidation() {
+			test.info("Verifying the update billing address");
+			  logger.info(previousBillingAddress );
+			  logger.info( editedBillingAddress);
+			if(!(previousBillingAddress.equals(editedBillingAddress))) {
+				test.pass("Successfully billing addresss is edited the previous address is " + previousBillingAddress +" and edited billing addresss  is  is "+ editedBillingAddress);
+				logger.info("Successfully billing addresss  is edited the previous address is " + previousBillingAddress +" and edited billing addresss  is  is "+ editedBillingAddress);
+			}else {
+				test.fail("Billing addresss  is not edited the previous address is " + previousBillingAddress +" and edited billing addresss  is  is "+ editedBillingAddress);
+				logger.info("Billing addresss  is not edited the previous address is " +previousBillingAddress +" and edited billing addresss  is  is "+ editedBillingAddress);
+			}
+		}
 
 
 	 	public  static void VerifiedThatPlaceOrderClick() {
@@ -31,6 +85,7 @@ private static final AllPayments allPay = new AllPayments();
 	     		test.fail("Click failed");
 	     	}
 	 	}
+	 	
 
 	public  void salesforcePaymentAllErrors() throws InterruptedException {
 			

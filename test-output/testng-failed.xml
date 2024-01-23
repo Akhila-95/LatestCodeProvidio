@@ -3,22 +3,12 @@
 <suite name="Failed suite [Providio Regression Test]">
   <test thread-count="5" name="SmokeTest(failed)">
     <classes>
-      <class name="browser.launchBrowsering">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="verifyHomePageLaunching"/>
-          <include name="setUp"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- browser.launchBrowsering -->
       <class name="testScripts.CheckOutPage2Test">
         <methods>
           <include name="setUpforReport"/>
-          <include name="verifyingEditEmailInCheckoutPage2"/>
-          <include name="setUp"/>
+          <include name="verifyingTheCustomerInfoInCheckoutPage2"/>
           <include name="afterMethod"/>
+          <include name="setUp"/>
           <include name="afterClass"/>
           <include name="tearDown"/>
         </methods>

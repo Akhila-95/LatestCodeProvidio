@@ -106,8 +106,9 @@ public class Actionsss extends baseClass{
 		            locatorName.click();
 		            Thread.sleep(1000);
 //		            test.pass("Successfully clicked on " + locatorName.getText());
-		            Thread.sleep(4000);
+		            
 		        } catch (Exception e) {
+		        	Thread.sleep(4000);
 		        	JavascriptExecutor executor = (JavascriptExecutor) driver;
 		            executor.executeScript("arguments[0].click();", locatorName);
 		            System.err.println("Exception while clicking the element: " + e.getMessage());
@@ -276,9 +277,37 @@ public class Actionsss extends baseClass{
 		        Thread.sleep(1000);
 		        shipping.sendKeys(Keys.ARROW_DOWN);
 
-		        shipping.sendKeys(Keys.ENTER);
+		       // shipping.sendKeys(Keys.ENTER);
 
 		        String shippingaddress = locatorName.getAttribute("value");
+		       // previousAddresses=shippingaddress;
+		        System.out.println("The address entered is " +  previousAddresses);
+		        logger.info("The address entered is " + shippingaddress);
+		        test.info("The address entered is " + shippingaddress);
+		    }
+		    
+		    
+		    // Enter a random address from a dropdown
+		    public static void editAddress(WebElement locatorName) throws InterruptedException {
+		    	locatorName.clear();
+		    	Thread.sleep(1000);
+		        Random random = new Random();
+		        int randomNumber = 231; // Generates a random number between 100 and 999
+		    //    random.nextInt(900) + 100;
+		        addresses = String.valueOf(randomNumber);
+		        Thread.sleep(1000);
+		        locatorName.sendKeys(addresses);
+
+		        // to perform the keyboard activities
+		        WebElement shipping = driver.switchTo().activeElement();
+
+		        Thread.sleep(1000);
+		        shipping.sendKeys(Keys.ARROW_DOWN);
+
+		       // shipping.sendKeys(Keys.ENTER);
+
+		        String shippingaddress = locatorName.getAttribute("value");
+		       // editedAddress=shippingaddress;
 		        System.out.println("The address entered is " + shippingaddress);
 		        logger.info("The address entered is " + shippingaddress);
 		        test.info("The address entered is " + shippingaddress);

@@ -86,34 +86,6 @@ public class homepage extends baseClass{
 		return signInLink;
 	}
 	
-	//to find the store icon
-	@FindBy(xpath = "//span[@class='header-store-name']")
-	List<WebElement> findAStoreLabelList;
-	public List<WebElement> getLabelForFindAStoreList()  {			
-		return findAStoreLabelList;
-	}
-	
-	//to find the store icon
-	@FindBy(xpath = "//span[@class='header-store-name']")
-	WebElement findAStoreLabel;
-	public WebElement getLabelForFindAStore()  {			
-		return findAStoreLabel;
-	}
-	
-	//to find the store button
-	@FindBy(xpath="//button[contains(@class,' storelocator-search')]")
-	WebElement findStores;
-	public WebElement getFindStoreButton() {
-		return findStores;
-	}
-	
-	//selected commerce cloud store
-	@FindBy(xpath="//button[contains(@class,' select-store')]")
-	List <WebElement> selectStore;
-
-	public List<WebElement> getAnyRandomStore(){
-		return selectStore;
-	}
 	
 	
 	

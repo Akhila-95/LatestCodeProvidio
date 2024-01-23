@@ -141,14 +141,7 @@ public class AllPayments extends baseClass{
 		test.info("Credit card cvv entered is " +cvv);
 		driver.switchTo().defaultContent();
 	}
-    
-	
-	
-	
-	
-	
-	
-	
+
 	
 	public void stripeCardNumber() throws InterruptedException {
 		Random random = new Random();

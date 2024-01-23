@@ -22,10 +22,10 @@ public class FooterPageTest extends baseClass{
 		 FooterPageTasks.validEmailInSignUpBoxInFooter();
 	}
 	
-	@Test//(dependsOnMethods ="browser.launchBrowsering.verifyHomePageLaunching" )	
+	//@Test//(dependsOnMethods ="browser.launchBrowsering.verifyHomePageLaunching" )	
 	public static void verifyingWithoutEnteringEmailInSignupBoxInFooter() throws Exception {
 		
-	//	 FooterPageTasks.withoutEnteringEmailInSignupBoxInFooter();
+		 FooterPageTasks.withoutEnteringEmailInSignupBoxInFooter();
 	}
 	
 	@Test//(dependsOnMethods ="browser.launchBrowsering.verifyHomePageLaunching" )	

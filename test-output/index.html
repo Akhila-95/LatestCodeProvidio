@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Providio_Regression_Test" class="navigator-link">
-              <span class="suite-name border-passed">Providio Regression Test</span>
+              <span class="suite-name border-failed">Providio Regression Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Providio_Regression_Test" class="navigator-link ">
-                    <span>C:\Users\user\Desktop\proVidioETG\RegressionTestSuite.xml</span>
+                    <span>C:\Users\user\Desktop\proVidioETG\GuestTestCases.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">39 methods,   39 passed</span>
+                    <span class="method-stats">44 methods, 1 failed,   43 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Providio_Regression_Test" class="hide-methods failed suite-Providio_Regression_Test"> (hide)</a> <!-- hide-methods failed suite-Providio_Regression_Test -->
+                      <a href="#" panel-name="suite-Providio_Regression_Test" class="show-methods failed suite-Providio_Regression_Test"> (show)</a> <!-- show-methods failed suite-Providio_Regression_Test -->
+                    </span>
+                    <div class="method-list-content failed suite-Providio_Regression_Test">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingTheCustomerInfoInCheckoutPage2">verifyingTheCustomerInfoInCheckoutPage2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Providio_Regression_Test -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,41 +115,6 @@
                       <a href="#" panel-name="suite-Providio_Regression_Test" class="show-methods passed suite-Providio_Regression_Test"> (show)</a> <!-- show-methods passed suite-Providio_Regression_Test -->
                     </span>
                     <div class="method-list-content passed suite-Providio_Regression_Test">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.ShippingAddressPageTests" class="method navigator-link" hash-for-method="VerifedAllErrorsInShippingForm">VerifedAllErrorsInShippingForm</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.ShippingAddressPageTests" class="method navigator-link" hash-for-method="VerifedThatEnteredtheshippingDetailsInShippingPage">VerifedThatEnteredtheshippingDetailsInShippingPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.ShippingAddressPageTests" class="method navigator-link" hash-for-method="VerifedTheErrorsAddress">VerifedTheErrorsAddress</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.ShippingAddressPageTests" class="method navigator-link" hash-for-method="VerifedTheErrorsInFirstName">VerifedTheErrorsInFirstName</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.ShippingAddressPageTests" class="method navigator-link" hash-for-method="VerifedTheErrorsInLastName">VerifedTheErrorsInLastName</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.ShippingAddressPageTests" class="method navigator-link" hash-for-method="VerifedWithValidAddress">VerifedWithValidAddress</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.ShippingAddressPageTests" class="method navigator-link" hash-for-method="VerifedphoneNumberError">VerifedphoneNumberError</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.LoginPageTest" class="method navigator-link" hash-for-method="VerifyingLoginFailureWithEmptyEmail">VerifyingLoginFailureWithEmptyEmail</a> <!-- method navigator-link -->
@@ -223,57 +202,92 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingAddnewCreditCard">verifyingAddnewCreditCard</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingAddnewCreditCard">verifyingAddnewCreditCard</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingAllTheErrorsInCreditCard">verifyingAllTheErrorsInCreditCard</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingAllErrorsInShippingForm">verifyingAllErrorsInShippingForm</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingCreditCardExpDateInValid">verifyingCreditCardExpDateInValid</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingAllTheErrorsInCreditCard">verifyingAllTheErrorsInCreditCard</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingCreditCardInCompleteCvvError">verifyingCreditCardInCompleteCvvError</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingCreditCardExpDateInValid">verifyingCreditCardExpDateInValid</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingCreditCardInCompleteExpYearError">verifyingCreditCardInCompleteExpYearError</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingCreditCardInCompleteCvvError">verifyingCreditCardInCompleteCvvError</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingCreditCardNumberInCompleteError">verifyingCreditCardNumberInCompleteError</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingCreditCardInCompleteExpYearError">verifyingCreditCardInCompleteExpYearError</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingCreditcardNumberInValidError">verifyingCreditcardNumberInValidError</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingCreditCardNumberInCompleteError">verifyingCreditCardNumberInCompleteError</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingCreditcardWithValidDetails">verifyingCreditcardWithValidDetails</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingCreditcardNumberInValidError">verifyingCreditcardNumberInValidError</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingCvvAndExpErrorInCreditCard">verifyingCvvAndExpErrorInCreditCard</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingCreditcardWithValidDetails">verifyingCreditcardWithValidDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingCvvErrorInCreditCard">verifyingCvvErrorInCreditCard</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingCvvAndExpErrorInCreditCard">verifyingCvvAndExpErrorInCreditCard</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTests" class="method navigator-link" hash-for-method="verifyingPaymentDetails">verifyingPaymentDetails</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingCvvErrorInCreditCard">verifyingCvvErrorInCreditCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingEditCustomerInfoFromCop3">verifyingEditCustomerInfoFromCop3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingEditEmailInCheckoutPage2">verifyingEditEmailInCheckoutPage2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingEditShippingAddress">verifyingEditShippingAddress</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page">verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingGiftMessage">verifyingGiftMessage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page">verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingPaginationOfProductsInCheckOutPage2">verifyingPaginationOfProductsInCheckOutPage2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -283,12 +297,32 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.FooterPageTest" class="method navigator-link" hash-for-method="verifyingWithoutEnteringEmailInSignupBoxInFooter">verifyingWithoutEnteringEmailInSignupBoxInFooter</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingTheAddressError">verifyingTheAddressError</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingTheErrorsInFirstName">verifyingTheErrorsInFirstName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingTheErrorsInLastName">verifyingTheErrorsInLastName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingWithValidShippingAddress">verifyingWithValidShippingAddress</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.FooterPageTest" class="method navigator-link" hash-for-method="verifyinginvalidEmailInEmailSignUpBox">verifyinginvalidEmailInEmailSignUpBox</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.CheckOutPage2Test" class="method navigator-link" hash-for-method="verifyingphoneNumberError">verifyingphoneNumberError</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -308,59 +342,212 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Providio_Regression_Test" class="panel Providio_Regression_Test">
-          <div class="suite-Providio_Regression_Test-class-passed">
+          <div class="suite-Providio_Regression_Test-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testScripts.ShippingAddressPageTests</span>
+              <img src="failed.png"/>
+              <span class="class-name">testScripts.CheckOutPage2Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifedAllErrorsInShippingForm">
-                  </a> <!-- VerifedAllErrorsInShippingForm -->
-                  <span class="method-name">VerifedAllErrorsInShippingForm</span>
+                  <a name="verifyingTheCustomerInfoInCheckoutPage2">
+                  </a> <!-- verifyingTheCustomerInfoInCheckoutPage2 -->
+                  <span class="method-name">verifyingTheCustomerInfoInCheckoutPage2</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;alert alert-success add-to-basket-alert text-center&apos;] (tried for 30 second(s) with 1000 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:261)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at validations.ProductListingPageValidations.validatingProductisAddtoCart(ProductListingPageValidations.java:123)
+	at tasks.ProductListingPageTasks.quickShop(ProductListingPageTasks.java:75)
+	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
+	at tasks.CheckOutPage2Tasks.checkOutPage2(CheckOutPage2Tasks.java:26)
+	at tasks.CheckOutPage2Tasks.getCutomerInfo(CheckOutPage2Tasks.java:31)
+	at testScripts.CheckOutPage2Test.verifyingTheCustomerInfoInCheckoutPage2(CheckOutPage2Test.java:13)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Providio_Regression_Test-class-failed -->
+          <div class="suite-Providio_Regression_Test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testScripts.PaymentPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingAddnewCreditCard">
+                  </a> <!-- verifyingAddnewCreditCard -->
+                  <span class="method-name">verifyingAddnewCreditCard</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifedThatEnteredtheshippingDetailsInShippingPage">
-                  </a> <!-- VerifedThatEnteredtheshippingDetailsInShippingPage -->
-                  <span class="method-name">VerifedThatEnteredtheshippingDetailsInShippingPage</span>
+                  <a name="verifyingAllTheErrorsInCreditCard">
+                  </a> <!-- verifyingAllTheErrorsInCreditCard -->
+                  <span class="method-name">verifyingAllTheErrorsInCreditCard</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifedTheErrorsAddress">
-                  </a> <!-- VerifedTheErrorsAddress -->
-                  <span class="method-name">VerifedTheErrorsAddress</span>
+                  <a name="verifyingCreditCardExpDateInValid">
+                  </a> <!-- verifyingCreditCardExpDateInValid -->
+                  <span class="method-name">verifyingCreditCardExpDateInValid</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifedTheErrorsInFirstName">
-                  </a> <!-- VerifedTheErrorsInFirstName -->
-                  <span class="method-name">VerifedTheErrorsInFirstName</span>
+                  <a name="verifyingCreditCardInCompleteCvvError">
+                  </a> <!-- verifyingCreditCardInCompleteCvvError -->
+                  <span class="method-name">verifyingCreditCardInCompleteCvvError</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifedTheErrorsInLastName">
-                  </a> <!-- VerifedTheErrorsInLastName -->
-                  <span class="method-name">VerifedTheErrorsInLastName</span>
+                  <a name="verifyingCreditCardInCompleteExpYearError">
+                  </a> <!-- verifyingCreditCardInCompleteExpYearError -->
+                  <span class="method-name">verifyingCreditCardInCompleteExpYearError</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifedWithValidAddress">
-                  </a> <!-- VerifedWithValidAddress -->
-                  <span class="method-name">VerifedWithValidAddress</span>
+                  <a name="verifyingCreditCardNumberInCompleteError">
+                  </a> <!-- verifyingCreditCardNumberInCompleteError -->
+                  <span class="method-name">verifyingCreditCardNumberInCompleteError</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifedphoneNumberError">
-                  </a> <!-- VerifedphoneNumberError -->
-                  <span class="method-name">VerifedphoneNumberError</span>
+                  <a name="verifyingCreditcardNumberInValidError">
+                  </a> <!-- verifyingCreditcardNumberInValidError -->
+                  <span class="method-name">verifyingCreditcardNumberInValidError</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingCreditcardWithValidDetails">
+                  </a> <!-- verifyingCreditcardWithValidDetails -->
+                  <span class="method-name">verifyingCreditcardWithValidDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingCvvAndExpErrorInCreditCard">
+                  </a> <!-- verifyingCvvAndExpErrorInCreditCard -->
+                  <span class="method-name">verifyingCvvAndExpErrorInCreditCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingCvvErrorInCreditCard">
+                  </a> <!-- verifyingCvvErrorInCreditCard -->
+                  <span class="method-name">verifyingCvvErrorInCreditCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingEditCustomerInfoFromCop3">
+                  </a> <!-- verifyingEditCustomerInfoFromCop3 -->
+                  <span class="method-name">verifyingEditCustomerInfoFromCop3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingEditShippingAddress">
+                  </a> <!-- verifyingEditShippingAddress -->
+                  <span class="method-name">verifyingEditShippingAddress</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingGiftMessage">
+                  </a> <!-- verifyingGiftMessage -->
+                  <span class="method-name">verifyingGiftMessage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Providio_Regression_Test-class-passed -->
+          <div class="suite-Providio_Regression_Test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testScripts.CheckOutPage2Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingAllErrorsInShippingForm">
+                  </a> <!-- verifyingAllErrorsInShippingForm -->
+                  <span class="method-name">verifyingAllErrorsInShippingForm</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingEditEmailInCheckoutPage2">
+                  </a> <!-- verifyingEditEmailInCheckoutPage2 -->
+                  <span class="method-name">verifyingEditEmailInCheckoutPage2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page">
+                  </a> <!-- verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page -->
+                  <span class="method-name">verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page">
+                  </a> <!-- verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page -->
+                  <span class="method-name">verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingPaginationOfProductsInCheckOutPage2">
+                  </a> <!-- verifyingPaginationOfProductsInCheckOutPage2 -->
+                  <span class="method-name">verifyingPaginationOfProductsInCheckOutPage2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingTheAddressError">
+                  </a> <!-- verifyingTheAddressError -->
+                  <span class="method-name">verifyingTheAddressError</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingTheErrorsInFirstName">
+                  </a> <!-- verifyingTheErrorsInFirstName -->
+                  <span class="method-name">verifyingTheErrorsInFirstName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingTheErrorsInLastName">
+                  </a> <!-- verifyingTheErrorsInLastName -->
+                  <span class="method-name">verifyingTheErrorsInLastName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingWithValidShippingAddress">
+                  </a> <!-- verifyingWithValidShippingAddress -->
+                  <span class="method-name">verifyingWithValidShippingAddress</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingphoneNumberError">
+                  </a> <!-- verifyingphoneNumberError -->
+                  <span class="method-name">verifyingphoneNumberError</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -491,91 +678,6 @@
           <div class="suite-Providio_Regression_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testScripts.PaymentPageTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingAddnewCreditCard">
-                  </a> <!-- verifyingAddnewCreditCard -->
-                  <span class="method-name">verifyingAddnewCreditCard</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingAllTheErrorsInCreditCard">
-                  </a> <!-- verifyingAllTheErrorsInCreditCard -->
-                  <span class="method-name">verifyingAllTheErrorsInCreditCard</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingCreditCardExpDateInValid">
-                  </a> <!-- verifyingCreditCardExpDateInValid -->
-                  <span class="method-name">verifyingCreditCardExpDateInValid</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingCreditCardInCompleteCvvError">
-                  </a> <!-- verifyingCreditCardInCompleteCvvError -->
-                  <span class="method-name">verifyingCreditCardInCompleteCvvError</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingCreditCardInCompleteExpYearError">
-                  </a> <!-- verifyingCreditCardInCompleteExpYearError -->
-                  <span class="method-name">verifyingCreditCardInCompleteExpYearError</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingCreditCardNumberInCompleteError">
-                  </a> <!-- verifyingCreditCardNumberInCompleteError -->
-                  <span class="method-name">verifyingCreditCardNumberInCompleteError</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingCreditcardNumberInValidError">
-                  </a> <!-- verifyingCreditcardNumberInValidError -->
-                  <span class="method-name">verifyingCreditcardNumberInValidError</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingCreditcardWithValidDetails">
-                  </a> <!-- verifyingCreditcardWithValidDetails -->
-                  <span class="method-name">verifyingCreditcardWithValidDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingCvvAndExpErrorInCreditCard">
-                  </a> <!-- verifyingCvvAndExpErrorInCreditCard -->
-                  <span class="method-name">verifyingCvvAndExpErrorInCreditCard</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingCvvErrorInCreditCard">
-                  </a> <!-- verifyingCvvErrorInCreditCard -->
-                  <span class="method-name">verifyingCvvErrorInCreditCard</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingPaymentDetails">
-                  </a> <!-- verifyingPaymentDetails -->
-                  <span class="method-name">verifyingPaymentDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Providio_Regression_Test-class-passed -->
-          <div class="suite-Providio_Regression_Test-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">testScripts.FooterPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -605,13 +707,6 @@
                   <a name="verifyingResourceFooterLinks">
                   </a> <!-- verifyingResourceFooterLinks -->
                   <span class="method-name">verifyingResourceFooterLinks</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyingWithoutEnteringEmailInSignupBoxInFooter">
-                  </a> <!-- verifyingWithoutEnteringEmailInSignupBoxInFooter -->
-                  <span class="method-name">verifyingWithoutEnteringEmailInSignupBoxInFooter</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -648,7 +743,7 @@
         </div> <!-- panel Providio_Regression_Test -->
         <div panel-name="test-xml-Providio_Regression_Test" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\user\Desktop\proVidioETG\RegressionTestSuite.xml</span>
+            <span class="header-content">C:\Users\user\Desktop\proVidioETG\GuestTestCases.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -701,20 +796,37 @@
           &lt;include name=&quot;verifyLogout&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- testScripts.LogOutTest --&gt;
-      &lt;class name=&quot;testScripts.ShippingAddressPageTests&quot;&gt;
+      &lt;class name=&quot;testScripts.CheckOutPage2Test&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;VerifedThatEnteredtheshippingDetailsInShippingPage&quot;/&gt;
-          &lt;include name=&quot;VerifedAllErrorsInShippingForm&quot;/&gt;
-          &lt;include name=&quot;VerifedTheErrorsInFirstName&quot;/&gt;
-          &lt;include name=&quot;VerifedTheErrorsInLastName&quot;/&gt;
-          &lt;include name=&quot;VerifedTheErrorsAddress&quot;/&gt;
-          &lt;include name=&quot;VerifedphoneNumberError&quot;/&gt;
-          &lt;include name=&quot;VerifedWithValidAddress&quot;/&gt;
+          &lt;include name=&quot;verifyingEditEmailInCheckoutPage2&quot;/&gt;
+          &lt;include name=&quot;verifyingCustomerInfoDisplayInCOP2_Page&quot;/&gt;
+          &lt;include name=&quot;verifyingOrderSummaryDisplayInCOP2_Page&quot;/&gt;
+          &lt;include name=&quot;verifyingNextPaymentButtonDisplayInCOP2_Page&quot;/&gt;
+          &lt;include name=&quot; verifyingEtgLogoDisplayInCOP2_Page&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testScripts.ShippingAddressPageTests --&gt;
-      &lt;class name=&quot;testScripts.PaymentPageTests&quot;&gt;
+      &lt;/class&gt; &lt;!-- testScripts.CheckOutPage2Test --&gt;
+      &lt;class name=&quot;testScripts.CheckOutPage2Test&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifyingPaymentDetails&quot;/&gt;
+          &lt;include name=&quot;verifyingTheCustomerInfoInCheckoutPage2&quot;/&gt;
+          &lt;include name=&quot;verifyingEditEmailInCheckoutPage2&quot;/&gt;
+          &lt;include name=&quot;verifyingPaginationOfProductsInCheckOutPage2&quot;/&gt;
+          &lt;include name=&quot; verifyingOrderSummaryDisplayInCheckOutPage2Tasks_Page&quot;/&gt;
+          &lt;include name=&quot;verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page&quot;/&gt;
+          &lt;include name=&quot;verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page&quot;/&gt;
+          &lt;include name=&quot;verifyingAllErrorsInShippingForm&quot;/&gt;
+          &lt;include name=&quot;verifyingTheErrorsInFirstName&quot;/&gt;
+          &lt;include name=&quot;verifyingTheErrorsInLastName&quot;/&gt;
+          &lt;include name=&quot;verifyingTheAddressError&quot;/&gt;
+          &lt;include name=&quot;verifyingphoneNumberError&quot;/&gt;
+          &lt;include name=&quot;verifyingphoneNumberError&quot;/&gt;
+          &lt;include name=&quot;verifyingWithValidShippingAddress&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testScripts.CheckOutPage2Test --&gt;
+      &lt;class name=&quot;testScripts.PaymentPageTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;verifyingEditShippingAddress&quot;/&gt;
+          &lt;include name=&quot;verifyingEditCustomerInfoFromCop3&quot;/&gt;
+          &lt;include name=&quot;verifyingGiftMessage&quot;/&gt;
           &lt;include name=&quot;verifyingAllTheErrorsInCreditCard&quot;/&gt;
           &lt;include name=&quot;verifyingCvvAndExpErrorInCreditCard&quot;/&gt;
           &lt;include name=&quot;verifyingCvvErrorInCreditCard&quot;/&gt;
@@ -726,7 +838,7 @@
           &lt;include name=&quot;verifyingAddnewCreditCard&quot;/&gt;
           &lt;include name=&quot;verifyingCreditcardWithValidDetails&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testScripts.PaymentPageTests --&gt;
+      &lt;/class&gt; &lt;!-- testScripts.PaymentPageTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- SmokeTest --&gt;
 &lt;/suite&gt; &lt;!-- Providio Regression Test --&gt;
@@ -740,7 +852,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">SmokeTest (8 classes)</span>
+                <span class="test-name">SmokeTest (9 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -754,35 +866,31 @@
               <span class="test-group-name">regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">VerifedAllErrorsInShippingForm</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedThatEnteredtheshippingDetailsInShippingPage</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedTheErrorsAddress</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedTheErrorsInFirstName</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedTheErrorsInLastName</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedWithValidAddress</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedphoneNumberError</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
                 <span class="method-in-group-name">verifyHomePageLaunching</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingAllErrorsInShippingForm</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingTheAddressError</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingTheErrorsInFirstName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingTheErrorsInLastName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingWithValidShippingAddress</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingphoneNumberError</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -790,35 +898,31 @@
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">VerifedAllErrorsInShippingForm</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedThatEnteredtheshippingDetailsInShippingPage</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedTheErrorsAddress</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedTheErrorsInFirstName</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedTheErrorsInLastName</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedWithValidAddress</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">VerifedphoneNumberError</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
                 <span class="method-in-group-name">verifyHomePageLaunching</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingAllErrorsInShippingForm</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingTheAddressError</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingTheErrorsInFirstName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingTheErrorsInLastName</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingWithValidShippingAddress</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyingphoneNumberError</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -838,168 +942,188 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(39);
+data.addRows(44);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyingPaymentDetails')
-data.setCell(0, 2, 'testScripts.PaymentPageTests')
-data.setCell(0, 3, 143115);
+data.setCell(0, 1, 'verifyingEditEmailInCheckoutPage2')
+data.setCell(0, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(0, 3, 89695);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'VerifedThatEnteredtheshippingDetailsInShippingPage')
-data.setCell(1, 2, 'testScripts.ShippingAddressPageTests')
-data.setCell(1, 3, 88170);
+data.setCell(1, 1, 'verifyingPaginationOfProductsInCheckOutPage2')
+data.setCell(1, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(1, 3, 80280);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyEmailAndConfirmEmail')
-data.setCell(2, 2, 'testScripts.CreateAccountPageTest')
-data.setCell(2, 3, 47523);
+data.setCell(2, 1, 'verifyingTheCustomerInfoInCheckoutPage2')
+data.setCell(2, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(2, 3, 78928);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'VerifedWithValidAddress')
-data.setCell(3, 2, 'testScripts.ShippingAddressPageTests')
-data.setCell(3, 3, 29406);
+data.setCell(3, 1, 'verifyEmailAndConfirmEmail')
+data.setCell(3, 2, 'testScripts.CreateAccountPageTest')
+data.setCell(3, 3, 46852);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'VerifyingLoginFailureWithIncorrectCredentials')
-data.setCell(4, 2, 'testScripts.LoginPageTest')
-data.setCell(4, 3, 28955);
+data.setCell(4, 1, 'verifyingEditShippingAddress')
+data.setCell(4, 2, 'testScripts.PaymentPageTest')
+data.setCell(4, 3, 28973);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyCreateAccountWithValidCredentials')
-data.setCell(5, 2, 'testScripts.CreateAccountPageTest')
-data.setCell(5, 3, 23084);
+data.setCell(5, 1, 'verifyingEditCustomerInfoFromCop3')
+data.setCell(5, 2, 'testScripts.PaymentPageTest')
+data.setCell(5, 3, 22552);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyPasswordMismatch')
+data.setCell(6, 1, 'verifyCreateAccountWithValidCredentials')
 data.setCell(6, 2, 'testScripts.CreateAccountPageTest')
-data.setCell(6, 3, 21179);
+data.setCell(6, 3, 22374);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyPhoneNumError')
+data.setCell(7, 1, 'verifyPasswordMismatch')
 data.setCell(7, 2, 'testScripts.CreateAccountPageTest')
-data.setCell(7, 3, 21144);
+data.setCell(7, 3, 21121);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyEmailformatError')
+data.setCell(8, 1, 'verifyPhoneNumError')
 data.setCell(8, 2, 'testScripts.CreateAccountPageTest')
-data.setCell(8, 3, 21064);
+data.setCell(8, 3, 21008);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyFindAStore')
-data.setCell(9, 2, 'testScripts.FindAStoreTest')
-data.setCell(9, 3, 14424);
+data.setCell(9, 1, 'verifyEmailformatError')
+data.setCell(9, 2, 'testScripts.CreateAccountPageTest')
+data.setCell(9, 3, 20984);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'VerifedTheErrorsInLastName')
-data.setCell(10, 2, 'testScripts.ShippingAddressPageTests')
-data.setCell(10, 3, 13885);
+data.setCell(10, 1, 'VerifyingLoginFailureWithIncorrectCredentials')
+data.setCell(10, 2, 'testScripts.LoginPageTest')
+data.setCell(10, 3, 20562);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyingCreditcardWithValidDetails')
-data.setCell(11, 2, 'testScripts.PaymentPageTests')
-data.setCell(11, 3, 13792);
+data.setCell(11, 1, 'verifyingGiftMessage')
+data.setCell(11, 2, 'testScripts.PaymentPageTest')
+data.setCell(11, 3, 16450);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'VerifedTheErrorsInFirstName')
-data.setCell(12, 2, 'testScripts.ShippingAddressPageTests')
-data.setCell(12, 3, 13740);
+data.setCell(12, 1, 'verifyingCreditcardWithValidDetails')
+data.setCell(12, 2, 'testScripts.PaymentPageTest')
+data.setCell(12, 3, 14979);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'VerifedphoneNumberError')
-data.setCell(13, 2, 'testScripts.ShippingAddressPageTests')
-data.setCell(13, 3, 13672);
+data.setCell(13, 1, 'verifyingTheErrorsInFirstName')
+data.setCell(13, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(13, 3, 14683);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'VerifedTheErrorsAddress')
-data.setCell(14, 2, 'testScripts.ShippingAddressPageTests')
-data.setCell(14, 3, 13632);
+data.setCell(14, 1, 'verifyingphoneNumberError')
+data.setCell(14, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(14, 3, 14582);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'verifyErrorsForConfirmMail')
-data.setCell(15, 2, 'testScripts.FooterPageTest')
-data.setCell(15, 3, 12506);
+data.setCell(15, 1, 'verifyingTheErrorsInLastName')
+data.setCell(15, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(15, 3, 14581);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'verifyLogout')
-data.setCell(16, 2, 'testScripts.LogOutTest')
-data.setCell(16, 3, 10551);
+data.setCell(16, 1, 'verifyingTheAddressError')
+data.setCell(16, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(16, 3, 14522);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'verifyTheErrorsRecipientEmailAndConfirmEmail')
-data.setCell(17, 2, 'testScripts.FooterPageTest')
-data.setCell(17, 3, 9637);
+data.setCell(17, 1, 'verifyingWithValidShippingAddress')
+data.setCell(17, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(17, 3, 12652);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'VerifyingLoginWithValidCredentials')
-data.setCell(18, 2, 'testScripts.LoginPageTest')
-data.setCell(18, 3, 9543);
+data.setCell(18, 1, 'verifyLogout')
+data.setCell(18, 2, 'testScripts.LogOutTest')
+data.setCell(18, 3, 12590);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'VerifyingLoginFailureWithEmptyPassword')
-data.setCell(19, 2, 'testScripts.LoginPageTest')
-data.setCell(19, 3, 9444);
+data.setCell(19, 1, 'verifyErrorsForConfirmMail')
+data.setCell(19, 2, 'testScripts.FooterPageTest')
+data.setCell(19, 3, 12253);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'VerifyingLoginFailureWithInvalidEmailFormat')
-data.setCell(20, 2, 'testScripts.LoginPageTest')
-data.setCell(20, 3, 9404);
+data.setCell(20, 1, 'verifyFindAStore')
+data.setCell(20, 2, 'testScripts.FindAStoreTest')
+data.setCell(20, 3, 11332);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'VerifyingLoginFailureWithEmptyEmail')
-data.setCell(21, 2, 'testScripts.LoginPageTest')
-data.setCell(21, 3, 9385);
+data.setCell(21, 1, 'verifyTheErrorsRecipientEmailAndConfirmEmail')
+data.setCell(21, 2, 'testScripts.FooterPageTest')
+data.setCell(21, 3, 10299);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'verifytheErrorsFromName_Recipients_confirmRecipientEMail')
-data.setCell(22, 2, 'testScripts.FooterPageTest')
-data.setCell(22, 3, 6851);
+data.setCell(22, 1, 'VerifyingLoginWithValidCredentials')
+data.setCell(22, 2, 'testScripts.LoginPageTest')
+data.setCell(22, 3, 9663);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'verifyHomePageLaunching')
-data.setCell(23, 2, 'browser.launchBrowsering')
-data.setCell(23, 3, 6264);
+data.setCell(23, 1, 'verifyingCreditCardNumberInCompleteError')
+data.setCell(23, 2, 'testScripts.PaymentPageTest')
+data.setCell(23, 3, 9513);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'verifyingResourceFooterLinks')
-data.setCell(24, 2, 'testScripts.FooterPageTest')
-data.setCell(24, 3, 5488);
+data.setCell(24, 1, 'verifyingCreditCardExpDateInValid')
+data.setCell(24, 2, 'testScripts.PaymentPageTest')
+data.setCell(24, 3, 9484);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'VerifyingLoginFailureWithEmptyEmailAndPassword')
+data.setCell(25, 1, 'VerifyingLoginFailureWithEmptyPassword')
 data.setCell(25, 2, 'testScripts.LoginPageTest')
-data.setCell(25, 3, 5237);
+data.setCell(25, 3, 9418);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'verifyErrorMsgsInGiftCard')
-data.setCell(26, 2, 'testScripts.FooterPageTest')
-data.setCell(26, 3, 4636);
+data.setCell(26, 1, 'verifyingCreditCardInCompleteExpYearError')
+data.setCell(26, 2, 'testScripts.PaymentPageTest')
+data.setCell(26, 3, 9416);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'verifyingCreditcardNumberInValidError')
-data.setCell(27, 2, 'testScripts.PaymentPageTests')
-data.setCell(27, 3, 4412);
+data.setCell(27, 1, 'verifyingCreditCardInCompleteCvvError')
+data.setCell(27, 2, 'testScripts.PaymentPageTest')
+data.setCell(27, 3, 9403);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'VerifedAllErrorsInShippingForm')
-data.setCell(28, 2, 'testScripts.ShippingAddressPageTests')
-data.setCell(28, 3, 4400);
+data.setCell(28, 1, 'VerifyingLoginFailureWithInvalidEmailFormat')
+data.setCell(28, 2, 'testScripts.LoginPageTest')
+data.setCell(28, 3, 9364);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'verifyinginvalidEmailInEmailSignUpBox')
-data.setCell(29, 2, 'testScripts.FooterPageTest')
-data.setCell(29, 3, 3304);
+data.setCell(29, 1, 'VerifyingLoginFailureWithEmptyEmail')
+data.setCell(29, 2, 'testScripts.LoginPageTest')
+data.setCell(29, 3, 9333);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'verifyingCreditCardNumberInCompleteError')
-data.setCell(30, 2, 'testScripts.PaymentPageTests')
-data.setCell(30, 3, 2337);
+data.setCell(30, 1, 'verifytheErrorsFromName_Recipients_confirmRecipientEMail')
+data.setCell(30, 2, 'testScripts.FooterPageTest')
+data.setCell(30, 3, 8547);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'verifyingCreditCardExpDateInValid')
-data.setCell(31, 2, 'testScripts.PaymentPageTests')
-data.setCell(31, 3, 2316);
+data.setCell(31, 1, 'verifyingCreditcardNumberInValidError')
+data.setCell(31, 2, 'testScripts.PaymentPageTest')
+data.setCell(31, 3, 8372);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'verifyingCreditCardInCompleteExpYearError')
-data.setCell(32, 2, 'testScripts.PaymentPageTests')
-data.setCell(32, 3, 2313);
+data.setCell(32, 1, 'verifyErrorMsgsInGiftCard')
+data.setCell(32, 2, 'testScripts.FooterPageTest')
+data.setCell(32, 3, 7616);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'verifyingCreditCardInCompleteCvvError')
-data.setCell(33, 2, 'testScripts.PaymentPageTests')
-data.setCell(33, 3, 2265);
+data.setCell(33, 1, 'VerifyingLoginFailureWithEmptyEmailAndPassword')
+data.setCell(33, 2, 'testScripts.LoginPageTest')
+data.setCell(33, 3, 5230);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'verifyingAllTheErrorsInCreditCard')
-data.setCell(34, 2, 'testScripts.PaymentPageTests')
-data.setCell(34, 3, 143);
+data.setCell(34, 1, 'verifyHomePageLaunching')
+data.setCell(34, 2, 'browser.launchBrowsering')
+data.setCell(34, 3, 5148);
 data.setCell(35, 0, 35)
-data.setCell(35, 1, 'verifyingCvvAndExpErrorInCreditCard')
-data.setCell(35, 2, 'testScripts.PaymentPageTests')
-data.setCell(35, 3, 90);
+data.setCell(35, 1, 'verifyingResourceFooterLinks')
+data.setCell(35, 2, 'testScripts.FooterPageTest')
+data.setCell(35, 3, 4597);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'verifyingCvvErrorInCreditCard')
-data.setCell(36, 2, 'testScripts.PaymentPageTests')
-data.setCell(36, 3, 78);
+data.setCell(36, 1, 'verifyingAllErrorsInShippingForm')
+data.setCell(36, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(36, 3, 4334);
 data.setCell(37, 0, 37)
-data.setCell(37, 1, 'verifyingAddnewCreditCard')
-data.setCell(37, 2, 'testScripts.PaymentPageTests')
-data.setCell(37, 3, 21);
+data.setCell(37, 1, 'verifyinginvalidEmailInEmailSignUpBox')
+data.setCell(37, 2, 'testScripts.FooterPageTest')
+data.setCell(37, 3, 3270);
 data.setCell(38, 0, 38)
-data.setCell(38, 1, 'verifyingWithoutEnteringEmailInSignupBoxInFooter')
-data.setCell(38, 2, 'testScripts.FooterPageTest')
-data.setCell(38, 3, 0);
+data.setCell(38, 1, 'verifyingCvvAndExpErrorInCreditCard')
+data.setCell(38, 2, 'testScripts.PaymentPageTest')
+data.setCell(38, 3, 2789);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'verifyingAllTheErrorsInCreditCard')
+data.setCell(39, 2, 'testScripts.PaymentPageTest')
+data.setCell(39, 3, 2190);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'verifyingCvvErrorInCreditCard')
+data.setCell(40, 2, 'testScripts.PaymentPageTest')
+data.setCell(40, 3, 2101);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'verifyingAddnewCreditCard')
+data.setCell(41, 2, 'testScripts.PaymentPageTest')
+data.setCell(41, 3, 2072);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page')
+data.setCell(42, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(42, 3, 58);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page')
+data.setCell(43, 2, 'testScripts.CheckOutPage2Test')
+data.setCell(43, 3, 41);
 window.suiteTableData['Providio_Regression_Test']= { tableData: data, tableDiv: 'times-div-Providio_Regression_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 minutes</span>
+              <span class="suite-total-time">Total running time: 12 minutes</span>
               <div id="times-div-Providio_Regression_Test">
               </div> <!-- times-div-Providio_Regression_Test -->
             </div> <!-- times-div -->
@@ -1018,13 +1142,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testScripts.ShippingAddressPageTests</span>
+              <span class="ignored-class-name">testScripts.CheckOutPage2Test</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">VerifedThatEnteredtheShippingAddressInShippingPage</span>
-                <br/>
                 <span class="ignored-method-name">setUpforReport</span>
                 <br/>
                 <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">verifyingOrderSummaryDisplayInCheckOutPage2Tasks_Page</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testScripts.PaymentPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+                <span class="ignored-method-name">verifyingUpdateBillingAddress</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -1040,15 +1175,15 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">testScripts.CreateAccountPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
                 <span class="ignored-method-name">verifyPasswordStrength</span>
-                <br/>
-                <span class="ignored-method-name">verifyWithExistingAccount</span>
                 <br/>
                 <span class="ignored-method-name">verifyemptyText</span>
                 <br/>
                 <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">verifyWithExistingAccount</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -1062,22 +1197,11 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testScripts.PaymentPageTests</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyingThatPaymentDetailsEnteredInPayMentPage</span>
-                <br/>
-                <span class="ignored-method-name">setUpforReport</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
               <span class="ignored-class-name">testScripts.FooterPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpforReport</span>
-                <br/>
                 <span class="ignored-method-name">verifyGiftCardToCart</span>
+                <br/>
+                <span class="ignored-method-name">setUpforReport</span>
                 <br/>
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
@@ -1086,9 +1210,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">testScripts.FindAStoreTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpforReport</span>
-                <br/>
                 <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setUpforReport</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -1107,531 +1231,593 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">5978 ms</span>
+                <span class="method-start">6520 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public void browser.launchBrowsering.verifyHomePageLaunching() throws java.lang.InterruptedException)</span>
-                <span class="method-start">8036 ms</span>
+                <span class="method-start">8593 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageLaunching</span>
-                <span class="method-start">8044 ms</span>
+                <span class="method-start">8605 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunch...)</span>
-                <span class="method-start">14382 ms</span>
+                <span class="method-start">13757 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScripts.FindAStoreTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">14430 ms</span>
+                <span class="method-start">13831 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public static void testScripts.FindAStoreTest.verifyFindAStore() throws java.lang.Exception)</span>
-                <span class="method-start">16449 ms</span>
+                <span class="method-start">15846 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyFindAStore</span>
-                <span class="method-start">16450 ms</span>
+                <span class="method-start">15847 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyFindAStore status=SUCCESS method=FindAStoreTest.verifyFindAStore()[pri:0, ins...)</span>
-                <span class="method-start">30877 ms</span>
+                <span class="method-start">27180 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScripts.FooterPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">30889 ms</span>
+                <span class="method-start">27190 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">afterClass(public static void testScripts.FooterPageTest.verifyingResourceFooterLinks() throws java.lang.Except...)</span>
-                <span class="method-start">32904 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyingResourceFooterLinks</span>
-                <span class="method-start">32905 ms</span>
+                <span class="method-start">29207 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public static void testScripts.FooterPageTest.verifyingResourceFooterLinks() throws java.lang.Except...)</span>
+                <span class="method-start">29207 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyingResourceFooterLinks status=SUCCESS method=FooterPageTest.verifyingResource...)</span>
-                <span class="method-start">38394 ms</span>
+                <span class="method-start">33804 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">afterClass(public static void testScripts.FooterPageTest.verifyingWithoutEnteringEmailInSignupBoxInFooter() thr...)</span>
-                <span class="method-start">38404 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyingWithoutEnteringEmailInSignupBoxInFooter</span>
-                <span class="method-start">38405 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingWithoutEnteringEmailInSignupBoxInFooter status=SUCCESS method=FooterPageTe...)</span>
-                <span class="method-start">38406 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">verifyinginvalidEmailInEmailSignUpBox</span>
-                <span class="method-start">38414 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public static void testScripts.FooterPageTest.verifyinginvalidEmailInEmailSignUpBox() throws java.la...)</span>
-                <span class="method-start">38414 ms</span>
+                <span class="method-start">33814 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyinginvalidEmailInEmailSignUpBox</span>
+                <span class="method-start">33814 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyinginvalidEmailInEmailSignUpBox status=SUCCESS method=FooterPageTest.verifyin...)</span>
-                <span class="method-start">41720 ms</span>
+                <span class="method-start">37085 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public static void testScripts.FooterPageTest.verifyErrorMsgsInGiftCard() throws java.lang.Exception)</span>
-                <span class="method-start">41729 ms</span>
+                <span class="method-start">37092 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyErrorMsgsInGiftCard</span>
-                <span class="method-start">41730 ms</span>
+                <span class="method-start">37093 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyErrorMsgsInGiftCard status=SUCCESS method=FooterPageTest.verifyErrorMsgsInGif...)</span>
-                <span class="method-start">46367 ms</span>
+                <span class="method-start">44710 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public static void testScripts.FooterPageTest.verifytheErrorsFromName_Recipients_confirmRecipientEMa...)</span>
-                <span class="method-start">46375 ms</span>
+                <span class="method-start">44718 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifytheErrorsFromName_Recipients_confirmRecipientEMail</span>
-                <span class="method-start">46376 ms</span>
+                <span class="method-start">44719 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifytheErrorsFromName_Recipients_confirmRecipientEMail status=SUCCESS method=Foot...)</span>
-                <span class="method-start">53228 ms</span>
+                <span class="method-start">53267 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public static void testScripts.FooterPageTest.verifyTheErrorsRecipientEmailAndConfirmEmail() throws ...)</span>
-                <span class="method-start">53239 ms</span>
+                <span class="method-start">53274 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyTheErrorsRecipientEmailAndConfirmEmail</span>
-                <span class="method-start">53239 ms</span>
+                <span class="method-start">53274 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyTheErrorsRecipientEmailAndConfirmEmail status=SUCCESS method=FooterPageTest.v...)</span>
-                <span class="method-start">62877 ms</span>
+                <span class="method-start">63573 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifyErrorsForConfirmMail</span>
-                <span class="method-start">62884 ms</span>
+                <span class="method-start">63580 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public static void testScripts.FooterPageTest.verifyErrorsForConfirmMail() throws java.lang.Exceptio...)</span>
-                <span class="method-start">62884 ms</span>
+                <span class="method-start">63580 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyErrorsForConfirmMail status=SUCCESS method=FooterPageTest.verifyErrorsForConf...)</span>
-                <span class="method-start">75390 ms</span>
+                <span class="method-start">75834 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScripts.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">75400 ms</span>
+                <span class="method-start">75842 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public void testScripts.LoginPageTest.VerifyingLoginFailureWithIncorrectCredentials() throws java.la...)</span>
-                <span class="method-start">77420 ms</span>
+                <span class="method-start">77855 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyingLoginFailureWithIncorrectCredentials</span>
-                <span class="method-start">77420 ms</span>
+                <span class="method-start">77856 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyingLoginFailureWithIncorrectCredentials status=SUCCESS method=LoginPageTest.V...)</span>
-                <span class="method-start">106376 ms</span>
+                <span class="method-start">98419 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public void testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmailAndPassword() throws java.l...)</span>
-                <span class="method-start">106385 ms</span>
+                <span class="method-start">98429 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyingLoginFailureWithEmptyEmailAndPassword</span>
-                <span class="method-start">106385 ms</span>
+                <span class="method-start">98429 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyingLoginFailureWithEmptyEmailAndPassword status=SUCCESS method=LoginPageTest....)</span>
-                <span class="method-start">111622 ms</span>
+                <span class="method-start">103660 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.LoginPageTest.VerifyingLoginFailureWithInvalidEmailFormat() throws java.lang...)</span>
-                <span class="method-start">111637 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyingLoginFailureWithInvalidEmailFormat</span>
-                <span class="method-start">111637 ms</span>
+                <span class="method-start">103669 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.LoginPageTest.VerifyingLoginFailureWithInvalidEmailFormat() throws java.lang...)</span>
+                <span class="method-start">103669 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyingLoginFailureWithInvalidEmailFormat status=SUCCESS method=LoginPageTest.Ver...)</span>
-                <span class="method-start">121041 ms</span>
+                <span class="method-start">113034 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public void testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmail() throws java.lang.Excepti...)</span>
-                <span class="method-start">121055 ms</span>
+                <span class="method-start">113043 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyingLoginFailureWithEmptyEmail</span>
-                <span class="method-start">121055 ms</span>
+                <span class="method-start">113043 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyingLoginFailureWithEmptyEmail status=SUCCESS method=LoginPageTest.VerifyingLo...)</span>
-                <span class="method-start">130441 ms</span>
+                <span class="method-start">122377 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">VerifyingLoginFailureWithEmptyPassword</span>
-                <span class="method-start">130455 ms</span>
+                <span class="method-start">122385 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public void testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyPassword() throws java.lang.Exce...)</span>
-                <span class="method-start">130455 ms</span>
+                <span class="method-start">122385 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyingLoginFailureWithEmptyPassword status=SUCCESS method=LoginPageTest.Verifyin...)</span>
-                <span class="method-start">139900 ms</span>
+                <span class="method-start">131804 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.LoginPageTest.VerifyingLoginWithValidCredentials() throws java.lang.Exceptio...)</span>
-                <span class="method-start">139917 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyingLoginWithValidCredentials</span>
-                <span class="method-start">139917 ms</span>
+                <span class="method-start">131812 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.LoginPageTest.VerifyingLoginWithValidCredentials() throws java.lang.Exceptio...)</span>
+                <span class="method-start">131812 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyingLoginWithValidCredentials status=SUCCESS method=LoginPageTest.VerifyingLog...)</span>
-                <span class="method-start">149460 ms</span>
+                <span class="method-start">141476 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScripts.CreateAccountPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">149471 ms</span>
+                <span class="method-start">141485 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">afterClass(public static void testScripts.CreateAccountPageTest.verifyEmailAndConfirmEmail() throws java.lang.E...)</span>
-                <span class="method-start">151483 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyEmailAndConfirmEmail</span>
-                <span class="method-start">151483 ms</span>
+                <span class="method-start">143495 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public static void testScripts.CreateAccountPageTest.verifyEmailAndConfirmEmail() throws java.lang.E...)</span>
+                <span class="method-start">143495 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyEmailAndConfirmEmail status=SUCCESS method=CreateAccountPageTest.verifyEmailA...)</span>
-                <span class="method-start">199007 ms</span>
+                <span class="method-start">190347 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">verifyPasswordMismatch</span>
-                <span class="method-start">199025 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public static void testScripts.CreateAccountPageTest.verifyPasswordMismatch() throws java.lang.Excep...)</span>
-                <span class="method-start">199025 ms</span>
+                <span class="method-start">190357 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPasswordMismatch</span>
+                <span class="method-start">190358 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyPasswordMismatch status=SUCCESS method=CreateAccountPageTest.verifyPasswordMi...)</span>
-                <span class="method-start">220205 ms</span>
+                <span class="method-start">211480 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">verifyPhoneNumError</span>
-                <span class="method-start">220226 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public static void testScripts.CreateAccountPageTest.verifyPhoneNumError() throws java.lang.Exceptio...)</span>
-                <span class="method-start">220226 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyPhoneNumError status=SUCCESS method=CreateAccountPageTest.verifyPhoneNumError...)</span>
-                <span class="method-start">241370 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">afterClass(public static void testScripts.CreateAccountPageTest.verifyEmailformatError() throws java.lang.Excep...)</span>
-                <span class="method-start">241379 ms</span>
+                <span class="method-start">211492 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyEmailformatError</span>
-                <span class="method-start">241379 ms</span>
+                <span class="method-name">verifyPhoneNumError</span>
+                <span class="method-start">211493 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyPhoneNumError status=SUCCESS method=CreateAccountPageTest.verifyPhoneNumError...)</span>
+                <span class="method-start">232502 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyEmailformatError</span>
+                <span class="method-start">232510 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public static void testScripts.CreateAccountPageTest.verifyEmailformatError() throws java.lang.Excep...)</span>
+                <span class="method-start">232510 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyEmailformatError status=SUCCESS method=CreateAccountPageTest.verifyEmailforma...)</span>
-                <span class="method-start">262444 ms</span>
+                <span class="method-start">253494 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public static void testScripts.CreateAccountPageTest.verifyCreateAccountWithValidCredentials() throw...)</span>
-                <span class="method-start">262454 ms</span>
+                <span class="method-start">253501 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCreateAccountWithValidCredentials</span>
-                <span class="method-start">262455 ms</span>
+                <span class="method-start">253502 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyCreateAccountWithValidCredentials status=SUCCESS method=CreateAccountPageTest...)</span>
-                <span class="method-start">285540 ms</span>
+                <span class="method-start">275878 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScripts.LogOutTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">285550 ms</span>
+                <span class="method-start">275890 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyLogout</span>
-                <span class="method-start">287554 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public void testScripts.LogOutTest.verifyLogout() throws java.lang.InterruptedException)</span>
-                <span class="method-start">287554 ms</span>
+                <span class="method-start">277905 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogout</span>
+                <span class="method-start">277906 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyLogout status=SUCCESS method=LogOutTest.verifyLogout()[pri:0, instance:testSc...)</span>
-                <span class="method-start">298105 ms</span>
+                <span class="method-start">290497 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.ShippingAddressPageTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testScripts.CheckOutPage2Test</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">298114 ms</span>
+                <span class="method-start">290506 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">VerifedThatEnteredtheshippingDetailsInShippingPage</span>
-                <span class="method-start">300123 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.ShippingAddressPageTests.VerifedThatEnteredtheshippingDetailsInShippingPage(...)</span>
-                <span class="method-start">300123 ms</span>
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingTheCustomerInfoInCheckoutPage2() throws java.lang...)</span>
+                <span class="method-start">292523 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=VerifedThatEnteredtheshippingDetailsInShippingPage status=SUCCESS method=ShippingAd...)</span>
-                <span class="method-start">388295 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">VerifedAllErrorsInShippingForm</span>
-                <span class="method-start">388317 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyingTheCustomerInfoInCheckoutPage2</span>
+                <span class="method-start">292524 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.ShippingAddressPageTests.VerifedAllErrorsInShippingForm() throws java.lang.E...)</span>
-                <span class="method-start">388317 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=VerifedAllErrorsInShippingForm status=SUCCESS method=ShippingAddressPageTests.Verif...)</span>
-                <span class="method-start">392718 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">VerifedTheErrorsInFirstName</span>
-                <span class="method-start">392728 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.ShippingAddressPageTests.VerifedTheErrorsInFirstName() throws java.lang.Exce...)</span>
-                <span class="method-start">392728 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=VerifedTheErrorsInFirstName status=SUCCESS method=ShippingAddressPageTests.VerifedT...)</span>
-                <span class="method-start">406470 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingTheCustomerInfoInCheckoutPage2 status=FAILURE method=CheckOutPage2Test.ver...)</span>
+                <span class="method-start">371455 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.ShippingAddressPageTests.VerifedTheErrorsInLastName() throws java.lang.Excep...)</span>
-                <span class="method-start">406487 ms</span>
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingEditEmailInCheckoutPage2() throws java.lang.Excep...)</span>
+                <span class="method-start">371991 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">VerifedTheErrorsInLastName</span>
-                <span class="method-start">406488 ms</span>
+                <span class="method-name">verifyingEditEmailInCheckoutPage2</span>
+                <span class="method-start">371991 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=VerifedTheErrorsInLastName status=SUCCESS method=ShippingAddressPageTests.VerifedTh...)</span>
-                <span class="method-start">420373 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingEditEmailInCheckoutPage2 status=SUCCESS method=CheckOutPage2Test.verifying...)</span>
+                <span class="method-start">461687 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">VerifedTheErrorsAddress</span>
-                <span class="method-start">420381 ms</span>
+                <span class="method-name">verifyingPaginationOfProductsInCheckOutPage2</span>
+                <span class="method-start">461699 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.ShippingAddressPageTests.VerifedTheErrorsAddress() throws java.lang.Exceptio...)</span>
-                <span class="method-start">420381 ms</span>
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingPaginationOfProductsInCheckOutPage2() throws java...)</span>
+                <span class="method-start">461699 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=VerifedTheErrorsAddress status=SUCCESS method=ShippingAddressPageTests.VerifedTheEr...)</span>
-                <span class="method-start">434014 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingPaginationOfProductsInCheckOutPage2 status=SUCCESS method=CheckOutPage2Tes...)</span>
+                <span class="method-start">541980 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.ShippingAddressPageTests.VerifedphoneNumberError() throws java.lang.Exceptio...)</span>
-                <span class="method-start">434029 ms</span>
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page...)</span>
+                <span class="method-start">541991 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">VerifedphoneNumberError</span>
-                <span class="method-start">434029 ms</span>
+                <span class="method-name">verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page</span>
+                <span class="method-start">541992 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=VerifedphoneNumberError status=SUCCESS method=ShippingAddressPageTests.Verifedphone...)</span>
-                <span class="method-start">447702 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page status=SUCCESS method=Ch...)</span>
+                <span class="method-start">542051 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.ShippingAddressPageTests.VerifedWithValidAddress() throws java.lang.Exceptio...)</span>
-                <span class="method-start">447710 ms</span>
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page() throws ...)</span>
+                <span class="method-start">542059 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">VerifedWithValidAddress</span>
-                <span class="method-start">447710 ms</span>
+                <span class="method-name">verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page</span>
+                <span class="method-start">542059 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=VerifedWithValidAddress status=SUCCESS method=ShippingAddressPageTests.VerifedWithV...)</span>
-                <span class="method-start">477116 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page status=SUCCESS method=CheckOutPage...)</span>
+                <span class="method-start">542101 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingAllErrorsInShippingForm() throws java.lang.Except...)</span>
+                <span class="method-start">542110 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingAllErrorsInShippingForm</span>
+                <span class="method-start">542110 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingAllErrorsInShippingForm status=SUCCESS method=CheckOutPage2Test.verifyingA...)</span>
+                <span class="method-start">546445 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingTheErrorsInFirstName() throws java.lang.Exception)</span>
+                <span class="method-start">546454 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingTheErrorsInFirstName</span>
+                <span class="method-start">546455 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingTheErrorsInFirstName status=SUCCESS method=CheckOutPage2Test.verifyingTheE...)</span>
+                <span class="method-start">561139 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingTheErrorsInLastName() throws java.lang.Exception)</span>
+                <span class="method-start">561149 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingTheErrorsInLastName</span>
+                <span class="method-start">561150 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingTheErrorsInLastName status=SUCCESS method=CheckOutPage2Test.verifyingTheEr...)</span>
+                <span class="method-start">575731 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingTheAddressError() throws java.lang.Exception)</span>
+                <span class="method-start">575741 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingTheAddressError</span>
+                <span class="method-start">575741 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingTheAddressError status=SUCCESS method=CheckOutPage2Test.verifyingTheAddres...)</span>
+                <span class="method-start">590264 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingphoneNumberError() throws java.lang.Exception)</span>
+                <span class="method-start">590274 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingphoneNumberError</span>
+                <span class="method-start">590275 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingphoneNumberError status=SUCCESS method=CheckOutPage2Test.verifyingphoneNum...)</span>
+                <span class="method-start">604857 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyingWithValidShippingAddress</span>
+                <span class="method-start">604868 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.CheckOutPage2Test.verifyingWithValidShippingAddress() throws java.lang.Excep...)</span>
+                <span class="method-start">604868 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingWithValidShippingAddress status=SUCCESS method=CheckOutPage2Test.verifying...)</span>
+                <span class="method-start">617520 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.PaymentPageTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testScripts.PaymentPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">477129 ms</span>
+                <span class="method-start">617526 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingPaymentDetails() throws java.lang.Exception)</span>
-                <span class="method-start">479143 ms</span>
+                <span class="method-name">afterClass(public static void testScripts.PaymentPageTest.verifyingEditShippingAddress() throws java.lang.Excep...)</span>
+                <span class="method-start">619544 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyingPaymentDetails</span>
-                <span class="method-start">479144 ms</span>
+                <span class="method-name">verifyingEditShippingAddress</span>
+                <span class="method-start">619545 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingPaymentDetails status=SUCCESS method=PaymentPageTests.verifyingPaymentDeta...)</span>
-                <span class="method-start">622261 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingEditShippingAddress status=SUCCESS method=PaymentPageTest.verifyingEditShi...)</span>
+                <span class="method-start">648518 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public static void testScripts.PaymentPageTest.verifyingEditCustomerInfoFromCop3() throws java.lang....)</span>
+                <span class="method-start">648525 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingEditCustomerInfoFromCop3</span>
+                <span class="method-start">648525 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingEditCustomerInfoFromCop3 status=SUCCESS method=PaymentPageTest.verifyingEd...)</span>
+                <span class="method-start">671077 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public static void testScripts.PaymentPageTest.verifyingGiftMessage() throws java.lang.Exception)</span>
+                <span class="method-start">671087 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingGiftMessage</span>
+                <span class="method-start">671087 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingGiftMessage status=SUCCESS method=PaymentPageTest.verifyingGiftMessage()[p...)</span>
+                <span class="method-start">687538 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifyingAllTheErrorsInCreditCard</span>
-                <span class="method-start">622276 ms</span>
+                <span class="method-start">687544 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingAllTheErrorsInCreditCard() throws java.lang.Except...)</span>
-                <span class="method-start">622276 ms</span>
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingAllTheErrorsInCreditCard() throws java.lang.Excepti...)</span>
+                <span class="method-start">687544 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingAllTheErrorsInCreditCard status=SUCCESS method=PaymentPageTests.verifyingA...)</span>
-                <span class="method-start">622420 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingAllTheErrorsInCreditCard status=SUCCESS method=PaymentPageTest.verifyingAl...)</span>
+                <span class="method-start">689736 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingCvvAndExpErrorInCreditCard() throws java.lang.Exce...)</span>
-                <span class="method-start">622432 ms</span>
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingCvvAndExpErrorInCreditCard() throws java.lang.Excep...)</span>
+                <span class="method-start">689742 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyingCvvAndExpErrorInCreditCard</span>
-                <span class="method-start">622432 ms</span>
+                <span class="method-start">689743 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingCvvAndExpErrorInCreditCard status=SUCCESS method=PaymentPageTests.verifyin...)</span>
-                <span class="method-start">622523 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingCvvAndExpErrorInCreditCard status=SUCCESS method=PaymentPageTest.verifying...)</span>
+                <span class="method-start">692533 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingCvvErrorInCreditCard() throws java.lang.Exception)</span>
-                <span class="method-start">622539 ms</span>
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingCvvErrorInCreditCard() throws java.lang.Exception)</span>
+                <span class="method-start">692538 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyingCvvErrorInCreditCard</span>
-                <span class="method-start">622540 ms</span>
+                <span class="method-start">692539 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingCvvErrorInCreditCard status=SUCCESS method=PaymentPageTests.verifyingCvvEr...)</span>
-                <span class="method-start">622618 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingCvvErrorInCreditCard status=SUCCESS method=PaymentPageTest.verifyingCvvErr...)</span>
+                <span class="method-start">694641 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingCreditcardNumberInValidError() throws java.lang.Ex...)</span>
-                <span class="method-start">622629 ms</span>
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingCreditcardNumberInValidError() throws java.lang.Exc...)</span>
+                <span class="method-start">694648 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyingCreditcardNumberInValidError</span>
-                <span class="method-start">622630 ms</span>
+                <span class="method-start">694648 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingCreditcardNumberInValidError status=SUCCESS method=PaymentPageTests.verify...)</span>
-                <span class="method-start">627043 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingCreditcardNumberInValidError status=SUCCESS method=PaymentPageTest.verifyi...)</span>
+                <span class="method-start">703021 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifyingCreditCardExpDateInValid</span>
-                <span class="method-start">627052 ms</span>
+                <span class="method-start">703028 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingCreditCardExpDateInValid() throws java.lang.Except...)</span>
-                <span class="method-start">627052 ms</span>
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingCreditCardExpDateInValid() throws java.lang.Excepti...)</span>
+                <span class="method-start">703028 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingCreditCardExpDateInValid status=SUCCESS method=PaymentPageTests.verifyingC...)</span>
-                <span class="method-start">629368 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingCreditCardExpDateInValid status=SUCCESS method=PaymentPageTest.verifyingCr...)</span>
+                <span class="method-start">712513 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifyingCreditCardNumberInCompleteError</span>
-                <span class="method-start">629375 ms</span>
+                <span class="method-start">712521 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingCreditCardNumberInCompleteError() throws java.lang...)</span>
-                <span class="method-start">629375 ms</span>
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingCreditCardNumberInCompleteError() throws java.lang....)</span>
+                <span class="method-start">712521 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingCreditCardNumberInCompleteError status=SUCCESS method=PaymentPageTests.ver...)</span>
-                <span class="method-start">631713 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingCreditCardNumberInCompleteError status=SUCCESS method=PaymentPageTest.veri...)</span>
+                <span class="method-start">722035 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingCreditCardInCompleteExpYearError() throws java.lang...)</span>
+                <span class="method-start">722041 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyingCreditCardInCompleteExpYearError</span>
-                <span class="method-start">631721 ms</span>
+                <span class="method-start">722041 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingCreditCardInCompleteExpYearError() throws java.lan...)</span>
-                <span class="method-start">631721 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingCreditCardInCompleteExpYearError status=SUCCESS method=PaymentPageTests.ve...)</span>
-                <span class="method-start">634035 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingCreditCardInCompleteExpYearError status=SUCCESS method=PaymentPageTest.ver...)</span>
+                <span class="method-start">731458 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingCreditCardInCompleteCvvError() throws java.lang.Ex...)</span>
-                <span class="method-start">634041 ms</span>
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingCreditCardInCompleteCvvError() throws java.lang.Exc...)</span>
+                <span class="method-start">731463 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyingCreditCardInCompleteCvvError</span>
-                <span class="method-start">634041 ms</span>
+                <span class="method-start">731463 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingCreditCardInCompleteCvvError status=SUCCESS method=PaymentPageTests.verify...)</span>
-                <span class="method-start">636307 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingCreditCardInCompleteCvvError status=SUCCESS method=PaymentPageTest.verifyi...)</span>
+                <span class="method-start">740867 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingAddnewCreditCard() throws java.lang.Exception)</span>
-                <span class="method-start">636316 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyingAddnewCreditCard</span>
-                <span class="method-start">636316 ms</span>
+                <span class="method-start">740873 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingAddnewCreditCard() throws java.lang.Exception)</span>
+                <span class="method-start">740873 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingAddnewCreditCard status=SUCCESS method=PaymentPageTests.verifyingAddnewCre...)</span>
-                <span class="method-start">636338 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingAddnewCreditCard status=SUCCESS method=PaymentPageTest.verifyingAddnewCred...)</span>
+                <span class="method-start">742945 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.PaymentPageTests.verifyingCreditcardWithValidDetails() throws java.lang.Exce...)</span>
-                <span class="method-start">636348 ms</span>
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingCreditcardWithValidDetails() throws java.lang.Excep...)</span>
+                <span class="method-start">742953 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyingCreditcardWithValidDetails</span>
-                <span class="method-start">636349 ms</span>
+                <span class="method-start">742953 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyingCreditcardWithValidDetails status=SUCCESS method=PaymentPageTests.verifyin...)</span>
-                <span class="method-start">650142 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingCreditcardWithValidDetails status=SUCCESS method=PaymentPageTest.verifying...)</span>
+                <span class="method-start">757933 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">browser.launchBrowsering</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">650205 ms</span>
+                <span class="method-start">757967 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

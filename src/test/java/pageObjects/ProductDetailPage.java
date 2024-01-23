@@ -29,4 +29,5 @@ public class ProductDetailPage extends baseClass{
 	public WebElement getSelectAddtoCartBtn(){
 		return addtoCartBtn;
 	}
+
 }

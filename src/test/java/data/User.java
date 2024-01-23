@@ -15,12 +15,15 @@ public class User extends baseClass {
 	 String randomLastName="";
 	 String randomFullName="";
 	 String randomFakeEmail="";
-	 String phoneNumber ="";
+	
+	 String randomEditedFirstName="";
+	 String randomEditedLastName="";
+	 String randomEditedFullName="";
 	 
 	String editedEmail="";
 	
 	
-	@Test
+	//@Test
 	public void userFakeFirstName() {		
 		 // Generate a fake first name 	
 		randomFirstName = faker.name().firstName();      
@@ -59,7 +62,29 @@ public class User extends baseClass {
 		editedEmail();
 		
 	}
+	//@Test
+	public void userEditedFirstName() {		
+		 // Generate a fake first name 	
+		randomEditedFirstName = faker.name().firstName();      
+		editedFirstName=randomEditedFirstName;
+		logger.info(fakeFirstName);
+	}
+	
+	
+	public void userEDitedLastName() {		
+		 // Generate a fake last name 	
+		randomEditedLastName = faker.name().lastName();  
+		editedlastName=randomEditedLastName;
+	}
+	
+	public void userEditedFullName() {		
+		 // Generate a fake first name 	
+		randomEditedFullName = faker.name().fullName();
+		editedFullName=randomEditedFullName;
+		logger.info(fakeFullName);
+	}
 	 
+	
 	 public  void editedEmail() {
 		 // Generate a fake email address				
 	        String email = randomFirstName + "Edited@etg.digital";        

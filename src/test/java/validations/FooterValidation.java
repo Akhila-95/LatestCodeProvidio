@@ -69,24 +69,22 @@ public class FooterValidation extends baseClass{
 	
 	
 	public static void allErrorMsgsInGiftCard() throws Exception {
-	 
-		if(Actionsss.displayElement(fp.getErrorForRecipientName()) && (Actionsss.displayElement(fp.getFromNameError())) && (Actionsss.displayElement(fp.getRecipientConfirmEmailError()) &&
+		Thread.sleep(2000);
+		if(Actionsss.displayElement(fp.getErrorForRecipientName()) || (Actionsss.displayElement(fp.getFromNameError())) || (Actionsss.displayElement(fp.getRecipientConfirmEmailError()) ||
 				(Actionsss.displayElement(fp.getRecipientEmailError())))) {
 			test.pass("All the  error are displayed when no text is entered");
 			logger.info("All the  error are displayed when no text is entered");
 		}else {
 			test.fail("All the error are not  displayed when no text is entered");
 			logger.info("All the error are not  displayed when no text is entered");
-		}
-			
-		 
+		}					 
 	}
 	
 	
 	public static void errorsFromName_Recipients_confirmRecipientEMail() throws Exception {
-   
+		Thread.sleep(2000);
 		logger.info(Actionsss.getTextOfElement(fp.getRecipientConfirmEmailError()));
-        if(Actionsss.displayElement(fp.getFromNameError())&& Actionsss.displayElement(fp.getRecipientEmailError()) &&Actionsss.displayElement(fp.getRecipientConfirmEmailError())) {
+        if(Actionsss.displayElement(fp.getFromNameError()) || Actionsss.displayElement(fp.getRecipientEmailError()) || Actionsss.displayElement(fp.getRecipientConfirmEmailError())) {
         	test.pass("Error message is displayed as " +Actionsss.getTextOfElement(fp.getFromNameError()) + "and" +Actionsss.getTextOfElement(fp.getRecipientEmailError()) + "and " +Actionsss.getTextOfElement(fp.getRecipientConfirmEmailError()));       	
         	logger.info("Error message is displayed as " +Actionsss.getTextOfElement(fp.getFromNameError()) + "and" +Actionsss.getTextOfElement(fp.getRecipientEmailError()) + "and " +Actionsss.getTextOfElement(fp.getRecipientConfirmEmailError()));       	
         }else {

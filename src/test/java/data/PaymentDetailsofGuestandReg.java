@@ -146,7 +146,8 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					ppv.getallErrorsInAdyen();
 				}
 			}else {
-				test.info("Verifying the error validation when user is checked as guest");
+				test.info("User is checked-in as Registered");
+				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
 		}
 		
@@ -168,6 +169,8 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
+					Actionsss.CombinedClick(pp.getStripeCreditCard());
+					Thread.sleep(1000);
 					ppv.stripeCardInvalidCardError();
 					
 				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
@@ -176,6 +179,9 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				}else {
 					ppv.getcreditCardNumberInvalidErrorInAdyen();
 				}
+			}else {
+				test.info("User is checked-in as Registered");
+				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
 		}
 		
@@ -196,6 +202,7 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
+					Actionsss.click(pp.getStripeCreditCard());
 					ppv.stripeCardInvalidExpDate();
 					
 				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
@@ -204,6 +211,9 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				}else {
 					ppv.getcreditCardExpMonthInValidInAdyen();
 				}
+			}else {
+				test.info("User is checked-in as Registered");
+				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
 		}
 		
@@ -224,7 +234,8 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					//ppv.salesforceCvvAndExpError();
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
-					//stripe 
+					//stripe
+					Actionsss.click(pp.getStripeCreditCard());
 					ppv.stripeIncompleteCardError();
 					
 				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
@@ -234,6 +245,9 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					//adyen
 					ppv.getCreditCardNumberInCompleteErrorInAdyen();
 				}
+			}else {
+				test.info("User is checked-in as Registered");
+				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
 		}
 		
@@ -253,13 +267,18 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
+					Actionsss.click(pp.getStripeCreditCard());
 					ppv.stripeIncompleteExpYearError();
 				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
 					//cybersource 
 					test.pass("No validation for incomplete expiry year/month for cybersource ");
 				}else {
+					//adyen 
 					
 				}
+			}else{
+				test.info("User is checked-in as Registered");
+				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
 		}
 		
@@ -278,6 +297,7 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
+					Actionsss.click(pp.getStripeCreditCard());
 					ppv.getStripeCardSecurityCodeIncompleteError();
 					//ppv.getStripeCardPostalCodeInComplete();
 					
@@ -287,6 +307,9 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				}else {
 					ppv.getCreditCardInCompleteCvvError();
 				}
+			}else {
+				test.info("User is checked-in as Registered");
+				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
 		}
 		
@@ -315,6 +338,9 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				}else {
 					ppv.getCreditCardCvvAndExpErrorMessage();
 				}
+			}else {
+				test.info("User is checked-in as Registered");
+				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
 		}
 		
@@ -343,6 +369,9 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				}else {
 					ppv.getCreditCardCvvErrorMessage();
 				}
+			}else {
+				test.info("User is checked-in as Registered");
+				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
 		}
 

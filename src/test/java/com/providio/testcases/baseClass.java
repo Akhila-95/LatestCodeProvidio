@@ -56,12 +56,20 @@ public class baseClass {
 		protected static String   fakeEmail = "";
 		protected static String   fakeFirstName = "";
 		protected static String   fakelastName = "";
-		protected static String   fakePhoneNum= "";
 		protected static String   fakeFullName= "";
-		protected  String   editedEmail= "";
-	
 		protected static String  addresses  = "";
 		
+	
+		protected static String  previousAddresses  = "";
+		protected static String   editedFirstName = "";
+		protected static String   editedlastName = "";
+		protected static String   editedFullName= "";
+		protected static String  editedAddress  = "";
+		protected static String  previousMail  = "";
+		protected  static String   editedEmailFromCop3= "";
+		
+		protected static String  previousBillingAddress  = "";
+		protected  static String   editedBillingAddress= "";
 		
 	
 	// Create an instance of the readConfig class to read configuration data
@@ -145,18 +153,11 @@ public class baseClass {
 	// Gift card flag
 	protected static boolean giftCard = false; // Flag indicating whether a gift card is used
 
-	// Edited details store
-	protected static String prviousEmail = ""; // Previous email before editing
-	protected static String email = ""; // Current email
-	protected static String emailEdited = ""; // Edited email
 
-	protected static String prviousAddress = ""; // Previous address before editing
-	protected static String Address = ""; // Current address
-	protected static String AddressEdited = ""; // Edited address
-
-	protected static String prviousShippingMethod = ""; // Previous shipping method before editing
-	protected static String shippingMethodtitle = ""; // Current shipping method
-	protected static String shippingMethodEdited = ""; // Edited shipping method
+	protected static String emailEditedInCop2 = ""; // Edited email in cop2
+	protected static String emailEditedInCop3 = ""; // Edited email in cop2
+	
+	protected static boolean giftMessageInCop2= false;
 
 	// ExtentReports and ExtentTest instances for reporting
 	protected static ExtentReports report = new ExtentReports();

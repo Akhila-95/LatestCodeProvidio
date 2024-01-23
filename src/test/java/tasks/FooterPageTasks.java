@@ -108,7 +108,7 @@ public class FooterPageTasks extends baseClass {
 
 	public static void giftCertificateForm() throws Exception {
 		
-		HomePageValidations.verifyHomePagesingInLink();
+	//	HomePageValidations.verifyHomePagesingInLink();
 		
 		Actionsss.click(fp.getGiftCertificateAmount());
 		

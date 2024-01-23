@@ -6,22 +6,28 @@ import com.providio.testcases.baseClass;
 
 import tasks.PaymentPageTasks;
 
+public class PaymentPageTest extends baseClass{
 
-public class PaymentPageTests extends baseClass{
+	@Test
+	public static void verifyingEditShippingAddress() throws Exception {
+		PaymentPageTasks.editShippindAddressAndUpdate();
+	}
 	
-	// Test method to verify sortby
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-    public void verifyingThatPaymentDetailsEnteredInPayMentPage() throws Exception {
-        // Call the verifythatButtonClick method from homePageTasks class
-    	PaymentPageTasks.EnteringPaymentDetails();
-    }
-
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-    public void verifyingPaymentDetails() throws Exception {
-        // Call the verifythatButtonClick method from homePageTasks class
-    	PaymentPageTasks.paymentDetails();
-    }
-
+	@Test
+	public static void verifyingGiftMessage() throws Exception {
+		PaymentPageTasks.editGiftMessageInCop2();
+	}
+	@Test
+	public static void verifyingEditCustomerInfoFromCop3() throws Exception {
+		PaymentPageTasks.editCustomerInfoFromCop3();
+	}
+	
+	@Test
+	public static void verifyingUpdateBillingAddress() throws Exception {
+		PaymentPageTasks.updateBillingAddress();
+	}
+	
+	//payment
     @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
     public void verifyingAllTheErrorsInCreditCard() throws Exception {
         

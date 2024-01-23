@@ -18,7 +18,7 @@ public class HomePageValidations extends baseClass{
 	//Home page banner and clp validation
 	public static void verifyHomePageBannersLinks() {
 		test.info("verify That HOme page clp pages");
-		// Check if the PLP (Product Listing Page) or PDP (Product Detail Page) is already loaded.
+		
     	List<WebElement> plpPagecheck = driver.findElements(By.xpath("//div[contains(@class, 'product-items-container')]"));
     	List<WebElement> pdpPagecheck = driver.findElements(By.xpath("//div[contains(@class,'product-main-block')]"));
     	if (plpPagecheck.size() > 0) {
@@ -35,8 +35,8 @@ public class HomePageValidations extends baseClass{
 	//Home page banner and clp validation
 	public static void verifyHomePageCLPLinks() {
 		test.info("verify That HOme page banners");
-		// Check if the PLP (Product Listing Page) or PDP (Product Detail Page) is already loaded.
-    	List<WebElement> plpPagecheck = driver.findElements(By.xpath("//div[contains(@class, 'product-items-container')]"));
+	
+	List<WebElement> plpPagecheck = driver.findElements(By.xpath("//div[contains(@class, 'product-items-container')]"));
     	List<WebElement> pdpPagecheck = driver.findElements(By.xpath("//div[contains(@class,'product-main-block')]"));
     	if (plpPagecheck.size() > 0) {
     	    logger.info("PLP page is already loaded");
@@ -52,7 +52,7 @@ public class HomePageValidations extends baseClass{
 	//Home page gift card validation
 	public static void verifyHomePageGiftCardLink() {
 		test.info("verify That GiftCard Link");
-		// Check if the PLP (Product Listing Page) or PDP (Product Detail Page) is already loaded.
+		
     	WebElement GiftCardHeader = driver.findElement(By.xpath("//div[contains(@class, 'page-title d-none')]"));
     	
     	if (GiftCardHeader.isDisplayed()) {
@@ -65,11 +65,11 @@ public class HomePageValidations extends baseClass{
 	
 	//Home page banner and clp validation
 	public static void verifyHomePagesingInLink() {
-		test.info("verify That singIn Link");
-		// Check if the PLP (Product Listing Page) or PDP (Product Detail Page) is already loaded.
-    	WebElement singInHeader = driver.findElement(By.xpath("//h1"));
+		test.info("verify That signn Link");
+	
+    	WebElement signInHeader = driver.findElement(By.xpath("//h1"));
     	
-    	if (singInHeader.isDisplayed()) {
+    	if (signInHeader.isDisplayed()) {
     	    logger.info("Successfully clicked on the singIn Link");
     	    test.pass("Successfully clicked on the singIn Link");
     	}else {

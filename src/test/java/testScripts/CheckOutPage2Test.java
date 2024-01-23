@@ -4,35 +4,67 @@ import org.testng.annotations.Test;
 
 import com.providio.testcases.baseClass;
 
-import tasks.CheckOutPageTask2;
+import tasks.CheckOutPage2Tasks;
 
-public class CheckOutPage2Test  extends baseClass{
+public class CheckOutPage2Test extends baseClass {
 
-private static final CheckOutPageTask2 cot2= new CheckOutPageTask2();
+	@Test
+	public  void verifyingTheCustomerInfoInCheckoutPage2() throws InterruptedException, Exception {
+		CheckOutPage2Tasks.getCutomerInfo();
+	}
 	
-	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	@Test
 	public void verifyingEditEmailInCheckoutPage2() throws Exception {
-		
-		CheckOutPageTask2.editEmailInCheckoutPage2();
+		CheckOutPage2Tasks.editEmailInCheckoutPage2();
 	}
 	
-	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyinggetCutomerInfoDisplayInCOP2_Page() throws Exception {
-		cot2.getshippingInfo();
+	@Test
+	public void verifyingPaginationOfProductsInCheckOutPage2() throws Exception {
+		CheckOutPage2Tasks.paginationOfProductsInCheckOutPage2();
 	}
 	
-	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyingOrderSummaryDisplayInCOP2_Page() throws Exception {
-		cot2.getOrderSummary();
+
+	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	public void verifyingOrderSummaryDisplayInCheckOutPage2Tasks_Page() throws Exception {
+		CheckOutPage2Tasks.getOrderSummary();
 	}
 	
-	@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyingNextPaymentButtonDisplayInCOP2_Page() throws Exception {
-		cot2.getNextPaymentButton();
+	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	public void verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page() throws Exception {
+		CheckOutPage2Tasks.getNextPaymentButton();
 	}
-	//@Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyingEtgLogoDisplayInCOP2_Page() throws Exception {
-		cot2.getEtgLogo();
+	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	public void verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page() throws Exception {
+		CheckOutPage2Tasks.getEtgLogo();
 	}
 
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingAllErrorsInShippingForm() throws Exception {
+		CheckOutPage2Tasks.allErrorsInShippingForm();
+    }	
+
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingTheErrorsInFirstName() throws Exception {
+		CheckOutPage2Tasks.firstNameError();
+    }
+	
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingTheErrorsInLastName() throws Exception {
+		CheckOutPage2Tasks.lastNameError();
+    }
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingTheAddressError() throws Exception {
+		CheckOutPage2Tasks.addressError();
+    }
+	
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingphoneNumberError() throws Exception {
+		CheckOutPage2Tasks.phoneNumberError();
+    }
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingWithValidShippingAddress() throws Exception {
+		CheckOutPage2Tasks.enterValidAddress();
+    }
+	
+	
 }
