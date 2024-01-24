@@ -69,5 +69,6 @@ public class GiftCertificatePageTasks extends baseClass{
 		Actionsss.javascriptClick(fp.getAddToCart());
 			
 		FooterValidation.validatingGiftCardAddtoCart();
+		Thread.sleep(3000);
 	}
 }

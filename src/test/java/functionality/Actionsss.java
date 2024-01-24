@@ -126,6 +126,13 @@ public class Actionsss extends baseClass{
 		        }
 		    }
 
+		    public static void doubleClick(WebElement locatorName) {	    	
+		        // Create an Actions object
+		        Actions actions = new Actions(driver);
+
+		        // Perform double-click action
+		        actions.doubleClick(locatorName).perform();
+		    }
 		    // Check if a list of elements has a size greater than 0
 		    public static boolean elementSize(List<WebElement> locatorName) throws InterruptedException {
 		        boolean flag = false;
@@ -264,20 +271,22 @@ public class Actionsss extends baseClass{
 
 		    // Enter a random address from a dropdown
 		    public static void addressFromDropDown(WebElement locatorName) throws InterruptedException {
+		    	locatorName.clear();
+		    	Thread.sleep(1000);
 		        Random random = new Random();
 		        int randomNumber = 123; // Generates a random number between 100 and 999
 		    //    random.nextInt(900) + 100;
 		        addresses = String.valueOf(randomNumber);
-		        Thread.sleep(1000);
+		      Thread.sleep(1000);
 		        locatorName.sendKeys(addresses);
 
 		        // to perform the keyboard activities
 		        WebElement shipping = driver.switchTo().activeElement();
 
-		        Thread.sleep(1000);
+		      Thread.sleep(1000);
 		        shipping.sendKeys(Keys.ARROW_DOWN);
 
-		       // shipping.sendKeys(Keys.ENTER);
+		        shipping.sendKeys(Keys.ENTER);
 
 		        String shippingaddress = locatorName.getAttribute("value");
 		       // previousAddresses=shippingaddress;
@@ -304,7 +313,7 @@ public class Actionsss extends baseClass{
 		        Thread.sleep(1000);
 		        shipping.sendKeys(Keys.ARROW_DOWN);
 
-		       // shipping.sendKeys(Keys.ENTER);
+		        shipping.sendKeys(Keys.ENTER);
 
 		        String shippingaddress = locatorName.getAttribute("value");
 		       // editedAddress=shippingaddress;

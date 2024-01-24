@@ -18,12 +18,23 @@ public class PaymentPage extends baseClass{
 	}
 	
 	@FindBy(xpath = "//label[contains(text(), 'Payment Method')]")
-    private WebElement paymentPage;	
-	
+    private WebElement paymentPage;		
 	public WebElement getPaymentPage() {
 		return paymentPage;
 	}
 
+	@FindBy(xpath = "//div[@class='js-payment-options ']")
+    private List<WebElement> creditCardDiv;		
+	public List<WebElement> getPaymentPagecreditCardDivList() {
+		return creditCardDiv;
+	}
+	
+	@FindBy(css= "input.sfpp-payment-method-radio-card")
+    private WebElement salesforceCreditcardRadioBtn;
+
+    public WebElement getSalesforceCreditcardRadioBtn() {
+        return salesforceCreditcardRadioBtn;
+    }
     
     @FindBy(xpath = "//div[@class='sfpp-payment-method-header sfpp-payment-method-header-card']")
     private List<WebElement> creditcardsSalesForce;
@@ -475,12 +486,16 @@ public class PaymentPage extends baseClass{
     	return stripeContainer;
     }
     @FindBy(xpath ="//button[contains(text(),'Place Order')]")
-  	WebElement PlaceOrderBtn; 
-    
+  	List<WebElement> PlaceOrderBtnList;    
+  	public List<WebElement> getSelectPlaceOrderBtnList(){
+  		return PlaceOrderBtnList;
+  	} 
+	
+    @FindBy(xpath ="//button[contains(text(),'Place Order')]")
+  	WebElement PlaceOrderBtn;    
   	public WebElement getSelectPlaceOrderBtn(){
   		return PlaceOrderBtn;
   	} 
-	
     // WebElement for Review Order button
     @FindBy(xpath = "//button[contains(text(), 'Next: Review Order')]")
     private WebElement reviewOrderBtn;
@@ -589,6 +604,63 @@ public class PaymentPage extends baseClass{
 	public WebElement getAdyenIncompleteSecurityCodeError() {
 		return adyenIncompleteSecurityCodeError;
 	}
+	
+	//GIFT CODES
+	@FindBy(xpath="//input[@id='giftCert']")
+ 	WebElement giftcertificate;
+ 	public WebElement getGiftcertificateInput() {
+ 		return giftcertificate;
+ 	}
+ 	//to apply gift card
+ 	@FindBy(xpath = "//button[@value='submit-gifrcert']")
+ 	WebElement applyGiftCard;
+ 	public WebElement getApplyGiftCardButton() {
+ 		return applyGiftCard;
+ 	}
+ 	
+ 	//check gift card bal 
+ 	@FindBy(xpath = "//button[@value='gift-cert-balance']")
+ 	WebElement giftcardCheckButtonBal;
+ 	public WebElement getGiftcardCheckButtonBal() {
+ 		return giftcardCheckButtonBal;
+ 	}	
+ 
+ 	@FindBy(xpath = "//div[contains(text(),'Insufficient Gift Certificate balance')]")
+ 	List<WebElement> insufficientGiftCodeBalError;
+ 	public List<WebElement> getInsufficientGiftCodeBalError() {
+ 		return insufficientGiftCodeBalError;
+ 	}
+ 	
+ 	@FindBy(xpath = "//div[contains(text(),'Gift card belongs to a different customer')]")
+ 	List<WebElement> gcBelongsToDifferentCustomerError;
+ 	public List<WebElement> getGcBelongsToDifferentCustomerError() {
+ 		return gcBelongsToDifferentCustomerError;
+ 	}
+ 	
+ 	@FindBy(xpath = "//div[contains(text(),'Invalid Gift Certificate Code.')]")
+ 	List<WebElement> invalidGcError;
+ 	public List<WebElement> getInvalidGcError() {
+ 		return invalidGcError;
+ 	}
+ 	
+ 	@FindBy(xpath = "//div[contains(text(),'Your order has been paid using gift certificates.')]")
+ 	List<WebElement> redemptionWithGcMsg;
+ 	public List<WebElement> getRedemptionWithGcMsg() {
+ 		return redemptionWithGcMsg;
+ 	}
+ 	
+	
+ 	@FindBy(xpath = "//div[@class='success giftcert-pi']")
+ 	List<WebElement> successGiftCodeRedemptionMsg;
+ 	public List<WebElement> getsuccessGiftCodeRedemptionMsg() {
+ 		return successGiftCodeRedemptionMsg;
+ 	}
+
+ 	@FindBy(xpath = "//label[@for='giftCert']")
+ 	List<WebElement> giftCertificateLabel;
+ 	public List<WebElement> getGiftCertificateLabel() {
+ 		return giftCertificateLabel;
+ 	}
 }
 
 

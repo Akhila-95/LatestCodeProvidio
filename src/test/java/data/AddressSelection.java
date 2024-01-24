@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
+import pageObjects.CheckOutPage2;
+import pageObjects.CheckOutPage3;
 import pageObjects.PaymentPage;
 import pageObjects.ShippingAddressPage;
 
@@ -16,7 +18,7 @@ public class AddressSelection extends baseClass{
 	private static final String lName = "LastName";
 	private static final String Phone = "PhoneNumber";
 	private static ShippingAddressPage SAP = new ShippingAddressPage(driver);
-	
+	private static final CheckOutPage3 cop3 = new CheckOutPage3(driver);
 
 	
 	public static void Address() throws Exception {
@@ -85,10 +87,10 @@ public class AddressSelection extends baseClass{
 		 
 	}
 	public static void editBillingAddress() throws InterruptedException {
-		Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fakeFirstName, "edited first name");
-		 Actionsss.sendKeys(SAP.getSelectLastNameInput(),fakelastName, "edited last name");
+		Actionsss.sendKeys(cop3.getBillingFName(), fakeFirstName, "Billing address first name");
+		Actionsss.sendKeys(cop3.getBillingLName(), fakelastName, "Billing address last name");
 		 Actionsss.editAddress(SAP.getBillingAddress());			
-		 Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+		 Actionsss.sendKeys(cop3.getBillingPhoneNumber(), "7868764789", "Billing phone number");
 	}
 	
 	public static void addressEdit() throws InterruptedException {

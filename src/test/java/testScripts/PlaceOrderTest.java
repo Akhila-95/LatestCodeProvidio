@@ -1,8 +1,14 @@
 package testScripts;
 
-public class PlaceOrderTest {
+import org.testng.annotations.Test;
 
-	public static void  verifyingTheReviewOrderBtn() {
-		
+import com.providio.testcases.baseClass;
+
+import tasks.PlaceOrderPageTask;
+
+public class PlaceOrderTest extends baseClass{
+	@Test
+	public static void  verifyingPlaceOrderButton() throws Exception {
+		PlaceOrderPageTask.clickPlaceOrderButton();
 	}
 }

@@ -51,7 +51,8 @@ public class baseClass {
 	
 	//test case type  
 	protected static boolean RegressionTestCase = false;
-
+	// Create an instance of the readConfig class to read configuration data
+	static readConfig readconfig = new readConfig();
 	// email
 		protected static String   fakeEmail = "";
 		protected static String   fakeFirstName = "";
@@ -70,10 +71,19 @@ public class baseClass {
 		
 		protected static String  previousBillingAddress  = "";
 		protected  static String   editedBillingAddress= "";
+		protected  static String  prevoiusBillingPhoneNumber= "";
+		protected  static String   editedBillingPhoneNumber= "";
+		
+		// Excel file locations
+		public  static String GiftCerificateCodeforGc = readconfig.GiftCerificateCodeforGc(); // Gift certificate code for Gift Card
+		public  static String GiftCerificateCodeCombination = readconfig.GiftCerificateCodeCombination();
+		
+		public static String Report = readconfig.Report(); // Location for the report
+		public static String ReportScreenshot = readconfig.ReportScreenshot(); // Location for report screenshots
+	
 		
 	
-	// Create an instance of the readConfig class to read configuration data
-	static readConfig readconfig = new readConfig();
+
 
 	// Login details
 	public String baseURL = readconfig.getApplicationURL(); // Base URL for the application
@@ -84,9 +94,9 @@ public class baseClass {
 	// Shipping details
 	public static String fname = readconfig.getFName(); // First name for shipping
 	public static String lname = readconfig.getLName(); // Last name for shipping
-	public String address = readconfig.getAddress(); // Address for shipping
-	public String cityname = readconfig.getCity(); // City for shipping
-	public String zipcode = readconfig.getzipcode(); // Zip code for shipping
+	//public String address = readconfig.getAddress(); // Address for shipping
+	//public String cityname = readconfig.getCity(); // City for shipping
+	//public String zipcode = readconfig.getzipcode(); // Zip code for shipping
 	public static String phonenumber = readconfig.getphone(); // Phone number for shipping
 
 	// Edit page details
@@ -121,11 +131,6 @@ public class baseClass {
 	public String reEnterMail = readconfig.getReEnterMail(); // Re-enter email for guest login
 
 	
-	// Excel file locations
-	public String GiftCerificateCodeforGc = readconfig.GiftCerificateCodeforGc(); // Gift certificate code for Gift Card
-	public String GiftCertificatesforPaypal = readconfig.GiftCertificatesforPaypal(); // Gift certificates for PayPal
-	public static String Report = readconfig.Report(); // Location for the report
-	public static String ReportScreenshot = readconfig.ReportScreenshot(); // Location for report screenshots
 
 	// WebDriver and logger instances
 	public static WebDriver driver; // WebDriver instance
@@ -297,7 +302,7 @@ public class baseClass {
 	    // co.addArguments("--remote-allow-origins=*");
 	    
 	    // Add the "--incognito" argument to open Chrome in incognito mode
-	    //co.addArguments("--incognito");
+	    co.addArguments("--incognito");
 	    
 	    // Create a new ChromeDriver with the configured ChromeOptions
 	    driver = new ChromeDriver(co);

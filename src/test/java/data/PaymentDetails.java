@@ -14,39 +14,39 @@ public class PaymentDetails extends baseClass{
 
 	public static void creditCardDetails() throws InterruptedException, Exception {
 
-		test.info("Verifying by entering the valid credit card details");
-		if(Actionsss.elementSize(pp.getBrainTree())) {
+		if(Actionsss.elementSize(pp.getPaymentPagecreditCardDivList())) {
 			
-			PaymentDetailsofGuestandReg.brainTreeMethod();
-			 
-		}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+			test.info("Verifying by entering the valid credit card details");
 			
-			PaymentDetailsofGuestandReg.salesForce();
-			
-		}else if (Actionsss.elementSize(pp.getStripePayment())) {
-			
-			PaymentDetailsofGuestandReg.stripe();
-			 
-		}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
-			
-			PaymentDetailsofGuestandReg.cyberSource();
-			
-		}else if(Actionsss.elementSize(pp.getAdyenPayment())) {
-			
-			PaymentDetailsofGuestandReg.adyen();
-		}
-		
-		
-		if(Actionsss.displayElement(pp.getSelectPlaceOrderBtn())) {
-			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
-			Thread.sleep(1000);
-			PaymentPageValidation.VerifiedThatPlaceOrderClick();
-			Thread.sleep(2000);
+			if(Actionsss.elementSize(pp.getBrainTree())) {			
+				PaymentDetailsofGuestandReg.brainTreeMethod();				 
+			}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+				Actionsss.javascriptClick(pp.getSalesforceCreditcardRadioBtn());
+				PaymentDetailsofGuestandReg.salesForce();				
+			}else if (Actionsss.elementSize(pp.getStripePayment())) {				
+				Actionsss.click(pp.getStripeCreditCard());
+				PaymentDetailsofGuestandReg.stripe();				 
+			}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {			
+				PaymentDetailsofGuestandReg.cyberSource();				
+			}else if(Actionsss.elementSize(pp.getAdyenPayment())) {				
+				PaymentDetailsofGuestandReg.adyen();
+			}
+					
+			if(Actionsss.displayElement(pp.getSelectPlaceOrderBtn())) {
+				Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
+				Thread.sleep(7000);
+				PaymentPageValidation.VerifiedThatPlaceOrderClick();
+				Thread.sleep(1000);				
+			}else {
+				Actionsss.CombinedClick(pp.getReviewOrderBtn());
+				Thread.sleep(3000);
+				PlaceOrderPageValidation.VerifyingReviewOrderBtn();
+			}
 			
 		}else {
-			Actionsss.CombinedClick(pp.getReviewOrderBtn());
-			Thread.sleep(3000);
-			PlaceOrderPageValidation.VerifyingReviewOrderBtn();
+			logger.info("Gift code was redemeed already");
+			test.info("Gift code was redemeed already");
+			test.pass("Gift code was redemeed already");
 		}
 	}
 	

@@ -1,51 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="ProvidioTestcases">
 
-  <!--  <listeners>
-		<listener class-name="com.providio.ExtentReports.ExtentReporterNG" />
-	</listeners> -->
-  <test thread-count="5" name="Automation" preserve-order="true">
- 	<!--  
-   <classes>
-  
-   				   			 			
-  			<class name= "com.GuestUserWith_GcAndCC.tc__simpleProduct_InCcAndGc"/>	
-  			<class name= "com.GuestUserWith_GcAndPaypal.tc__VariationProductForGuestUser_InGcAndPaypal"/>	
-  			
-   			<class name= "com.GuestUserWith_GiftCard.tc__OrderByGc_GuestUser"/>	 			 
-   			<class name= "com.GuestUserWith_Minicart_Paypal.tc__BundleProductForGuestUser_InMC_Paypal"/>	  			
-   			<class name= "com.GuestUserWith_ViewCart_Paypal.tc__SimpleProductsAndBundle_Gc_InVC_Paypal"/>
-   			<class name= "com.GuestUserWith_CreditCard.tc__BundleProductForGuestUser_CC"/> 			
-   			<class name= "com.GuestUserWith_CreditCard.tc__OnlyGiftCards"/>
-   		
-   </classes>
-  -->
-  <packages>	
-  				<!--  	<package name="com.GuestUserWith_Minicart_Paypal"></package>
-  			
-  				<package name="com.GuestUserWith_CreditCard"></package>
-  				<package name="com.GuestUserWith_GcAndCC"></package> 	
-  							
-  				<package name="com.GuestUserWith_GcAndPaypal"></package>		
-  				
-  				<package name="com.GuestUserWith_ViewCart_Paypal"></package>
-  				<package name="com.GuestUserWith_Checkout_Paypal"></package>
-  				
- -->
-  </packages>
-  
-  <classes>
-  			<class name= "com.providio.testcases.tc__LoginSc" />   
-  			
-	  		<class name= "com.RegUserWith_GiftCard.tc__BundleProductForReg_InGc" />
-	    	
-	    	<class name= "com.RegUserWith_GiftCard.tc__BySearchingProduct_Reg_InGc" />
-	  
-  </classes>
-   </test> 
-  
-</suite> <!-- 
+<suite name="Providio Regression Test">
 
-ProvidioTestcases -->
+	 <test name="SmokeTest">
+        <classes>
+     
+			<class name="browser.launchBrowsering"/>
+	 
+				<class name ="testScripts.PaymentPageTest"/> 
+				 <methods>
+			 
+			      <include name="verifyingEditShippingAddress" />					
+				  <include name="verifyingEditCustomerInfoFromCop3" />  					 
+		  		  <include name="verifyingUpdateBillingAddress" />					 				   
+				  <include name="verifyingAddNewBillingAddress" />	
+				  <include name="verifyingEditPhoneNumberInBillingAddress" />
+				  <include name="verifyingPaginationOfProductsFromPaymentPage" />	
+				  <include name="verifyingAllTheErrorsInCreditCard" />
+				  <include name="verifyingCvvAndExpErrorInCreditCard" /> 					
+				  <include name="verifyingCvvErrorInCreditCard" />				
+				  <include name ="verifyingCreditcardNumberInValidError"></include>
+		  		  <include name ="verifyingCreditCardExpDateInValid"></include>
+			 	  <include name ="verifyingCreditCardNumberInCompleteError"></include>
+				  <include name ="verifyingCreditCardInCompleteExpYearError"></include>
+				  <include name ="verifyingCreditCardInCompleteCvvError"></include>  		 
+				  <include name="verifyingAddnewCreditCard" />	 
+				  <include name="verifyingCreditcardWithValidDetails" /> 
+				 <!--  <include name="verifyingGcRedemption" />--> 
+             		
+				</methods>  
 
+
+		<class name ="testScripts.PlaceOrderTest"/>
+			<methods>
+				<include name="verifyingPlaceOrderButton"/>
+	
+			</methods>
+		
+		<class name ="testScripts.OrderDetailsTests"/>
+			<methods>
+				<include name="VerifyingOrderConfirmationPage"/>
+	
+			</methods>	
+			
+		<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
+			<methods>
+				 <include name="VerifingOrderIsPlacingWithCreditCard"/>				
+				<include name="VerifingOrderIsPlacingWithGiftCard"/>
+				<include name="VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>
+				<include name="VerifingOrderIsPlacingWithGiftCode"/>
+			</methods>	
+
+         </classes>
+    </test>
+</suite>

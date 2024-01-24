@@ -149,16 +149,19 @@ public class CheckOutPage3 {
 	    public WebElement getStateErrorMsg() {
 	        return stateError;
 	    }
+	    
 	    @FindBy(id = "defaultZipCode")
 	    private WebElement zipCodeError;
-
 	    public WebElement getZipCodeErrorMsg() {
 	        return zipCodeError;
 	    }
+	    
 	    @FindBy(id = "defaultTelephoneNumber")
 	    private WebElement phoneNumberError;
-
 	    public WebElement getphoneNumberErrorMsg() {
 	        return  phoneNumberError;
 	    }
+	    
+
+	    
 }

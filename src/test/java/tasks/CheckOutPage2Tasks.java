@@ -20,7 +20,8 @@ public class CheckOutPage2Tasks extends baseClass{
 	
 	public static void checkOutPage2() throws InterruptedException, Exception {
 		
-		if(Actionsss.elementSize(cop2.getshippingPage())) {
+		if(Actionsss.elementSize(cop2.getshippingPageList())) {
+			if(Actionsss.displayElement(cop2.getshippingPage()))
 			logger.info("Shipping page alreday loaded");
 		}else {
 			CheckOutPageTasks.GuestMailCheckOut();
@@ -61,6 +62,7 @@ public class CheckOutPage2Tasks extends baseClass{
 		ShippingPageValidation.pdpPageValidation();
 		ViewCartPageTasks.viewCartpage();
 		CheckOutPageTasks.GuestMailCheckOut();
+		//CheckOutPage2Tasks.enterValidAddress();
 	}
 	
 	public static void getBackToCart() throws Exception {	

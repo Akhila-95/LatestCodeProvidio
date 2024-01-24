@@ -27,6 +27,20 @@ public class PaymentPageTest extends baseClass{
 		PaymentPageTasks.updateBillingAddress();
 	}
 	
+	@Test
+	public static void verifyingAddNewBillingAddress() throws Exception {
+		PaymentPageTasks.addNewBillingAddress();
+	}
+	
+	@Test
+	public static void verifyingEditPhoneNumberInBillingAddress() throws Exception {
+		PaymentPageTasks.editPhoneNumber();
+	}
+	
+	@Test
+	public static void verifyingPaginationOfProductsFromPaymentPage() throws Exception {
+		PaymentPageTasks.paginationOfProductsFromPaymentPage();
+	}
 	//payment
     @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
     public void verifyingAllTheErrorsInCreditCard() throws Exception {
@@ -82,8 +96,18 @@ public class PaymentPageTest extends baseClass{
     
     
     @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-    public void verifyingAddnewCreditCard() throws Exception {
-        
+    public void verifyingAddnewCreditCard() throws Exception {       
     	PaymentPageTasks.addNewCreditCard();
     }
+    
+    //gc
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingGcRedemption() throws Exception {       
+    	PaymentPageTasks.gcRedemption();
+    	
+    }
+    
+    
+    
 }

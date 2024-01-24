@@ -51,11 +51,11 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			  logger.info(editedAddress);
 			  logger.info( previousAddresses);
 			if(!(previousAddresses.equals(editedAddress))) {
-				test.pass("Successfully shipping addresss is edited the previous address is " + previousAddresses+" and edited shipping address is  is "+ editedAddress);
-				logger.info("Successfully shipping addresss is edited the previous address is " + previousAddresses+" and edited shipping address is  is "+ editedAddress);
+				test.pass("Successfully shipping addresss is edited the previous address is " + previousAddresses+" and edited shipping address  is "+ editedAddress);
+				logger.info("Successfully shipping addresss is edited the previous address is " + previousAddresses+" and edited shipping address  is "+ editedAddress);
 			}else {
-				test.fail("shipping addresss is not edited the previous address is " + previousAddresses+" and edited shipping address is  is "+ editedAddress);
-				logger.info(" shipping addresss is not edited the previous address is " + previousAddresses+" and edited shipping address is  is "+ editedAddress);
+				test.fail("shipping addresss is not edited the previous address is " + previousAddresses+" and edited shipping address  is "+ editedAddress);
+				logger.info(" shipping addresss is not edited the previous address is " + previousAddresses+" and edited shipping address  is "+ editedAddress);
 			}
 		}
 		
@@ -64,14 +64,40 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			  logger.info(previousBillingAddress );
 			  logger.info( editedBillingAddress);
 			if(!(previousBillingAddress.equals(editedBillingAddress))) {
-				test.pass("Successfully billing addresss is edited the previous address is " + previousBillingAddress +" and edited billing addresss  is  is "+ editedBillingAddress);
-				logger.info("Successfully billing addresss  is edited the previous address is " + previousBillingAddress +" and edited billing addresss  is  is "+ editedBillingAddress);
+				test.pass("Successfully billing addresss is edited the previous address is " + previousBillingAddress +" and edited billing addresss    is "+ editedBillingAddress);
+				logger.info("Successfully billing addresss  is edited the previous address is " + previousBillingAddress +" and edited billing addresss    is "+ editedBillingAddress);
 			}else {
-				test.fail("Billing addresss  is not edited the previous address is " + previousBillingAddress +" and edited billing addresss  is  is "+ editedBillingAddress);
-				logger.info("Billing addresss  is not edited the previous address is " +previousBillingAddress +" and edited billing addresss  is  is "+ editedBillingAddress);
+				test.fail("Billing addresss  is not edited the previous address is " + previousBillingAddress +" and edited billing addresss    is "+ editedBillingAddress);
+				logger.info("Billing addresss  is not edited the previous address is " +previousBillingAddress +" and edited billing addresss   is "+ editedBillingAddress);
 			}
 		}
 
+		public  void addNewBillingAddressValidation() {
+			test.info("Verifying the add new  billing address");
+			  logger.info(previousBillingAddress );
+			  logger.info( editedBillingAddress);
+			if(!(previousBillingAddress.equals(editedBillingAddress))) {
+				test.pass("Successfully new billing addresss is added the previous address is " + previousBillingAddress +" and added new billing addresss    is "+ editedBillingAddress);
+				logger.info("Successfully new billing addresss is added the previous address is " + previousBillingAddress +" and added new billing addresss   is "+ editedBillingAddress);
+			}else {
+				test.fail("Successfully new billing addresss is added the previous address is " + previousBillingAddress +" and added new billing addresss    is "+ editedBillingAddress);
+				logger.info("Successfully new billing addresss is added the previous address is " + previousBillingAddress +" and added new billing addresss    is "+ editedBillingAddress);
+			}
+		}
+		
+
+		public  void phoneNumberInBillingAddressValidation() {
+			test.info("Verifying the phone number in billing address");
+			  logger.info(prevoiusBillingPhoneNumber );
+			  logger.info(editedBillingPhoneNumber);
+			if(!(prevoiusBillingPhoneNumber.equals(editedBillingPhoneNumber))) {
+				test.pass("Successfully phone number in billing addresss is edited, the previous address is " + prevoiusBillingPhoneNumber +" and added new billing addresss   is "+ editedBillingPhoneNumber);
+				logger.info("Successfully phone number in billing addresss is edited, the previous address is " + prevoiusBillingPhoneNumber +" and added new billing addresss   is "+ editedBillingPhoneNumber);
+			}else {
+				test.fail("Successfully phone number in billing addresss is edited, the previous address is " + prevoiusBillingPhoneNumber +" and added new billing addresss   is "+ editedBillingPhoneNumber);
+				logger.info("Successfully phone number in billing addresss is edited, the previous address is " + prevoiusBillingPhoneNumber +" and added new billing addresss   is "+ editedBillingPhoneNumber);
+			}
+		}
 
 	 	public  static void VerifiedThatPlaceOrderClick() {
 	 		test.info("Verified That placeOrder Btn click");
@@ -585,5 +611,15 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 				 logger.info("No Error msg displayed when  incomplete security code  is entered");  
 			  }
 			 
+		}
+		
+		public static void redemptionOfGcValidation() throws InterruptedException {
+			if(Actionsss.elementSize(pp.getRedemptionWithGcMsg())) {
+				 logger.info("Your order has been paid using gift certificates message is displayed.");	
+				 test.pass("Gc code got redeemed and this message is displayed as Your order has been paid using gift certificates message");
+			}else{
+				logger.info("No Gc code got redeemed and no message is displayed  as Your order has been paid using gift certificates message");	
+				 test.fail("No Gc code got redeemed and no message is displayed  as Your order has been paid using gift certificates message");
+			}
 		}
 	}

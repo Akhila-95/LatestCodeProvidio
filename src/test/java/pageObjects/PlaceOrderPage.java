@@ -33,4 +33,22 @@ public class PlaceOrderPage {
 	public WebElement getBillingAddress() {
 		return billingAddress;
 	}
+	
+	
+	@FindBy(css="span.order-summary-phone")
+	WebElement  phoneNumberInBillingAddress;
+	public WebElement getPhoneNumberInBillingAddress() {
+		return  phoneNumberInBillingAddress;
+	}
+	
+	@FindBy(xpath="//button[@aria-label='Edit Payment']")
+	List<WebElement>  editPaymentInPlaceOrderBtnPageList;
+	public List<WebElement> getEditPaymentInPlaceOrderBtnPageList() {
+		return  editPaymentInPlaceOrderBtnPageList;
+	}
+	@FindBy(xpath="//button[@aria-label='Edit Payment']")
+	WebElement  editPaymentInPlaceOrderBtnPage;
+	public WebElement getEditPaymentInPlaceOrderBtnPage() {
+		return  editPaymentInPlaceOrderBtnPage;
+	}
 }

@@ -7,7 +7,7 @@
      
 			<class name="browser.launchBrowsering"/>
 	
-		<!-- 
+	
 				   <class name="testScripts.FindAStoreTest"/>
 				 
 				  <methods>	
@@ -35,20 +35,20 @@
                 		<include name= "verifyGiftCardToCart"></include>
 					  
 				</methods>
-         -->
+       
      		 <class name ="testScripts.LoginPageTest"/>
            
              <methods> 
-   		   <!--
+   		   
              		 <include name ="VerifyingLoginFailureWithIncorrectCredentials"/>          		       	
              		 <include name ="VerifyingLoginFailureWithEmptyEmailAndPassword"/> 
              		<include name ="VerifyingLoginFailureWithInvalidEmailFormat"/> 
              		<include name ="VerifyingLoginFailureWithEmptyEmail"/> 
-             		<include name ="VerifyingLoginFailureWithEmptyPassword"/>    -->  	  
+             		<include name ="VerifyingLoginFailureWithEmptyPassword"/>
              		<include name ="VerifyingLoginWithValidCredentials"/>  
              		 
              </methods>
-             <!--
+           
                 <class name ="testScripts.CreateAccountPageTest"></class>
                 <methods>
                  
@@ -79,13 +79,13 @@
 	
 				 </methods>
    
-    -->
+    
     	<class name= "testScripts.CheckOutPage2Test"/>
     			<methods>
-					<!--
-    				<include name="verifyingTheCustomerInfoInCheckoutPage2"/>   -->
+					
+    				<include name="verifyingTheCustomerInfoInCheckoutPage2"/>   
     			 	<include name="verifyingEditEmailInCheckoutPage2"/> 
-    			 <!--	<include name="verifyingPaginationOfProductsInCheckOutPage2"/> 
+    			 	<include name="verifyingPaginationOfProductsInCheckOutPage2"/> 
     			 	<include name=" verifyingOrderSummaryDisplayInCheckOutPage2Tasks_Page"/> 
     			 	<include name="verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page"/> 
     				<include name="verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page"/> 						
@@ -96,20 +96,20 @@
 					<include name="verifyingphoneNumberError" />
 					<include name="verifyingphoneNumberError" />
 					<include name="verifyingWithValidShippingAddress" />
-    				 -->
+    				 
     			</methods>
       
 
 				<class name ="testScripts.PaymentPageTest"/> 
 				 <methods>
 				
-			  		<include name="verifyingEditShippingAddress" />					
-					<include name="verifyingEditCustomerInfoFromCop3" />  
-					 
-			  		<include name="verifyingUpdateBillingAddress" />	
-					   <!-- 
-					   
-					   <include name="verifyingGiftMessage" />	
+			  		  <include name="verifyingEditShippingAddress" />					
+					  <include name="verifyingEditCustomerInfoFromCop3" />  					 
+			  		  <include name="verifyingUpdateBillingAddress" />		
+			  		  <include name="verifyingAddNewBillingAddress" />
+			  		  <include name="verifyingEditPhoneNumberInBillingAddress" />	
+			  		   <include name="verifyingPaginationOfProductsFromPaymentPage" />					 				   
+					  <include name="verifyingGiftMessage" />	
 					  <include name="verifyingAllTheErrorsInCreditCard" />
 					  <include name="verifyingCvvAndExpErrorInCreditCard" /> 					
 					  <include name="verifyingCvvErrorInCreditCard" />				
@@ -120,10 +120,30 @@
 					  <include name ="verifyingCreditCardInCompleteCvvError"></include>  		 
 					  <include name="verifyingAddnewCreditCard" />	 
 					  <include name="verifyingCreditcardWithValidDetails" /> 
-					 
-             		-->
+					<!--  <include name="verifyingGcRedemption" /> --> 
+             		
 				</methods>  
 
+		<class name ="testScripts.PlaceOrderTest"/>
+			<methods>
+				<include name="verifyingPlaceOrderButton"/>
+	
+			</methods>
+		
+		<class name ="testScripts.OrderDetailsTests"/>
+			<methods>
+				<include name="VerifyingOrderConfirmationPage"/>
+	
+			</methods>	
+			
+		<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
+			<methods>
+				 <include name="VerifingOrderIsPlacingWithCreditCard"/>				
+				<include name="VerifingOrderIsPlacingWithGiftCard"/>
+				<include name="VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>
+				<include name="VerifingOrderIsPlacingWithGiftCode"/>
+			</methods>	
+			
          </classes>
     </test>
 </suite>

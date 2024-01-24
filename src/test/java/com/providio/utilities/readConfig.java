@@ -164,15 +164,22 @@ public class readConfig {
         String reEnterEmail = this.pro.getProperty("reEnterMail");
         return reEnterEmail;
     }
-    
-    public String GiftCerificateCodeforGc() {
-        String giftCerificateCodeforGc = this.pro.getProperty("GiftCerificateCodeforGc");
-        return giftCerificateCodeforGc;
+    public String  GiftCerificateCodeforGc() {
+        String gc = this.pro.getProperty("giftCodeForGc");
+        return gc;
     }
-    public String GiftCertificatesforPaypal() {
-        String giftCertificatesforPaypal = this.pro.getProperty("GiftCertificatesforPaypal");
-        return giftCertificatesforPaypal;
+    public String  GiftCerificateCodeCombination() {
+        String gcCombination = this.pro.getProperty("giftCodeForCombination");
+        return gcCombination;
     }
+//    public String GiftCerificateCodeforGc() {
+//        String giftCerificateCodeforGc = this.pro.getProperty("GiftCerificateCodeforGc");
+//        return giftCerificateCodeforGc;
+//    }
+//    public String GiftCertificatesforPaypal() {
+//        String giftCertificatesforPaypal = this.pro.getProperty("GiftCertificatesforPaypal");
+//        return giftCertificatesforPaypal;
+//    }
     public String Report() {
         String report = this.pro.getProperty("Report");
         return report;

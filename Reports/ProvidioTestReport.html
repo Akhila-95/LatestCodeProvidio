@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 23, 2024 10:49:33 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 24, 2024 06:49:41 PM</span></a>
 </li>
 </ul>
 </div>
@@ -61,25 +61,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 23, 2024 10:49:33 PM</h3>
+<h3>Jan 24, 2024 06:49:41 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 23, 2024 10:53:15 PM</h3>
+<h3>Jan 24, 2024 06:52:10 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>6</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -95,12 +95,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>6</b> tests passed
+<div><small data-tooltip='50%'>
+<b>1</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='50%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -118,10 +118,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='36%'><b>16</b> events passed</small></div>
+<div><small data-tooltip='33%'><b>20</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>28</b> others
+<small data-tooltip='5%'><b>3</b> events failed,
+<b data-tooltip='%'>36</b> others
 </small>
 </div>
 </div>
@@ -137,7 +137,7 @@
 </div></div>
 <script>
 var timeline = {
-"verifyHomePageLaunching":9.767,"VerifyingLoginWithValidCredentials":48.718,"verifyingEditEmailInCheckoutPage2":84.813,"verifyingEditShippingAddress":18.932,"verifyingEditCustomerInfoFromCop3":4.104,"verifyingUpdateBillingAddress":37.756
+"verifyHomePageLaunching":7.126,"VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard":132.537
 };
 </script>
 <div class="row">
@@ -146,8 +146,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 6,
-failParent: 0,
+passParent: 1,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -163,11 +163,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 16,
-failEvents: 0,
+passEvents: 20,
+failEvents: 3,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 28
+infoEvents: 36
 };
 </script><div class="test-wrapper row view test-view">
   <div class="test-list">
@@ -180,6 +180,7 @@ infoEvents: 28
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -194,7 +195,7 @@ infoEvents: 28
           <div class="test-detail">
             <p class="name">verifyHomePageLaunching</p>
             <p class="text-sm">
-              <span>10:49:43 PM</span> / <span>00:00:09:767</span>
+              <span>6:49:49 PM</span> / <span>00:00:07:126</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -203,9 +204,9 @@ infoEvents: 28
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyHomePageLaunching</h5>
-<span class='badge badge-success'>01.23.2024 10:49:43 PM</span>
-<span class='badge badge-danger'>01.23.2024 10:49:53 PM</span>
-<span class='badge badge-default'>00:00:09:767</span>
+<span class='badge badge-success'>01.24.2024 6:49:49 PM</span>
+<span class='badge badge-danger'>01.24.2024 6:49:56 PM</span>
+<span class='badge badge-default'>00:00:07:126</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -217,14 +218,14 @@ infoEvents: 28
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:49:53 PM</td>
+        <td>6:49:56 PM</td>
         <td>
           Verifying  the browser launched
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:49:53 PM</td>
+        <td>6:49:56 PM</td>
         <td>
           Browser launched succesfully
         </td>
@@ -234,25 +235,25 @@ infoEvents: 28
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="fail" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">VerifyingLoginWithValidCredentials</p>
+            <p class="name">VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard</p>
             <p class="text-sm">
-              <span>10:49:56 PM</span> / <span>00:00:48:718</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:49:58 PM</span> / <span>00:02:12:537</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">VerifyingLoginWithValidCredentials</h5>
-<span class='badge badge-success'>01.23.2024 10:49:56 PM</span>
-<span class='badge badge-danger'>01.23.2024 10:50:44 PM</span>
-<span class='badge badge-default'>00:00:48:718</span>
+<h5 class="test-status text-fail">VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard</h5>
+<span class='badge badge-success'>01.24.2024 6:49:58 PM</span>
+<span class='badge badge-danger'>01.24.2024 6:52:10 PM</span>
+<span class='badge badge-default'>00:02:12:537</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -263,433 +264,402 @@ infoEvents: 28
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:50:27 PM</td>
-        <td>
-          Successfully navigated to login page
-        </td>
-      </tr>
-      <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:50:27 PM</td>
-        <td>
-          Verify with valid credentials
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:50:29 PM</td>
-        <td>
-          Verify  user Email of sendKeys
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:50:29 PM</td>
-        <td>
-          Successfully send keys of  user Email
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:50:32 PM</td>
-        <td>
-          Verify password of sendKeys
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:50:32 PM</td>
-        <td>
-          Successfully send keys of password
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:50:44 PM</td>
-        <td>
-          User logged in successfully
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:50:44 PM</td>
-        <td>
-          Name of User name is Musku Akhila
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:50:44 PM</td>
-        <td>
-          Email is akhila.m+4@etg.digital
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="3"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyingEditEmailInCheckoutPage2</p>
-            <p class="text-sm">
-              <span>10:50:46 PM</span> / <span>00:01:24:813</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyingEditEmailInCheckoutPage2</h5>
-<span class='badge badge-success'>01.23.2024 10:50:46 PM</span>
-<span class='badge badge-danger'>01.23.2024 10:52:11 PM</span>
-<span class='badge badge-default'>00:01:24:813</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:51:11 PM</td>
+        <td>6:50:23 PM</td>
         <td>
           verify that Mens of  DRESS SHIRTS 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:51:11 PM</td>
+        <td>6:50:23 PM</td>
         <td>
           Successfully clicked on the Mens of  DRESS SHIRTS 
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:51:18 PM</td>
+        <td>6:50:30 PM</td>
         <td>
           verify That Plp Quickshop link
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:51:18 PM</td>
+        <td>6:50:30 PM</td>
         <td>
           Successfully clicked in the Quickshop link in plp
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:51:18 PM</td>
+        <td>6:50:30 PM</td>
         <td>
           Verified that Attributes are Selected
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:51:21 PM</td>
+        <td>6:50:32 PM</td>
         <td>
           Successfully selected the Color attribute
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:51:22 PM</td>
+        <td>6:50:33 PM</td>
         <td>
           Successfully selected the Size attribute
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:51:33 PM</td>
+        <td>6:50:45 PM</td>
         <td>
           Validating product is add to the cart
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:51:33 PM</td>
+        <td>6:50:45 PM</td>
         <td>
           Verify that the product is avaliable
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:51:33 PM</td>
+        <td>6:50:45 PM</td>
         <td>
           Product added to cart
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:51:41 PM</td>
+        <td>6:50:53 PM</td>
         <td>
           Verified That Mini-Cart click
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:51:41 PM</td>
+        <td>6:50:53 PM</td>
         <td>
           Successfully Clicked on the MiniCart
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:51:53 PM</td>
+        <td>6:51:01 PM</td>
         <td>
           Verified That View-Cart click
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:51:53 PM</td>
+        <td>6:51:01 PM</td>
         <td>
           Successfully Clicked on the ViewCart
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:11 PM</td>
+        <td>6:51:06 PM</td>
         <td>
-          User is registered
+          User is guest
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:11 PM</td>
+        <td>6:51:10 PM</td>
         <td>
-          User is checked in as registered so edit button 
+          Verify GuestEmail of sendKeys
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:52:11 PM</td>
+        <td>6:51:10 PM</td>
         <td>
-          No edit button to edit cutomer info for registered user
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="4"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyingEditShippingAddress</p>
-            <p class="text-sm">
-              <span>10:52:13 PM</span> / <span>00:00:18:932</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyingEditShippingAddress</h5>
-<span class='badge badge-success'>01.23.2024 10:52:13 PM</span>
-<span class='badge badge-danger'>01.23.2024 10:52:32 PM</span>
-<span class='badge badge-default'>00:00:18:932</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:18 PM</td>
-        <td>
-          User logged in and have saved  Address 
+          Successfully send keys of GuestEmail
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:23 PM</td>
+        <td>6:51:12 PM</td>
         <td>
-          Verify the shipping address entered in Registered user
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:30 PM</td>
-        <td>
-          Verified That Nextpayment Btn click
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:32 PM</td>
-        <td>
-          Verifying that the  shipping addres is being edited on checkout page 3
+          Verified That GuestLogin click
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:52:32 PM</td>
+        <td>6:51:12 PM</td>
         <td>
-          Successfully shipping addresss is edited the previous address is  and edited shipping address is  is 4331 Dominion Street
+          Successfully Clicked on the GuestLogin
         </td>
       </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="5"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyingEditCustomerInfoFromCop3</p>
-            <p class="text-sm">
-              <span>10:52:33 PM</span> / <span>00:00:04:104</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyingEditCustomerInfoFromCop3</h5>
-<span class='badge badge-success'>01.23.2024 10:52:33 PM</span>
-<span class='badge badge-danger'>01.23.2024 10:52:37 PM</span>
-<span class='badge badge-default'>00:00:04:104</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:37 PM</td>
+        <td>6:51:12 PM</td>
         <td>
-          User is checked in as registered so edit button
+          Verifed that shipping address is Entered in Guest user
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:51:14 PM</td>
+        <td>
+          Verify FirstName of sendKeys
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:52:37 PM</td>
+        <td>6:51:14 PM</td>
         <td>
-          No edit button to edit cutomer info for registered user
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="6"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">verifyingUpdateBillingAddress</p>
-            <p class="text-sm">
-              <span>10:52:37 PM</span> / <span>00:00:37:756</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">verifyingUpdateBillingAddress</h5>
-<span class='badge badge-success'>01.23.2024 10:52:37 PM</span>
-<span class='badge badge-danger'>01.23.2024 10:53:15 PM</span>
-<span class='badge badge-default'>00:00:37:756</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:50 PM</td>
-        <td>
-          Verify edited first name of sendKeys
+          Successfully send keys of FirstName
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:52 PM</td>
+        <td>6:51:16 PM</td>
         <td>
-          Verify edited last name of sendKeys
+          Verify LastName of sendKeys
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:51:17 PM</td>
+        <td>
+          Successfully send keys of LastName
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:55 PM</td>
+        <td>6:51:20 PM</td>
         <td>
-          The address entered is 231 Fort York Boulevard, Toronto, ON, Canada
+          The address entered is 123 William Street, New York, NY
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:57 PM</td>
+        <td>6:51:22 PM</td>
         <td>
           Verify PhoneNumber of sendKeys
         </td>
       </tr>
       <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:51:22 PM</td>
+        <td>
+          Successfully send keys of PhoneNumber
+        </td>
+      </tr>
+      <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:52:59 PM</td>
+        <td>6:51:30 PM</td>
+        <td>
+          Verified That Nextpayment Btn click
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:51:30 PM</td>
+        <td>
+          Successfully Clicked on the Nextpayment Btn  and navigated to payment page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:51:35 PM</td>
+        <td>
+          Verify PQZMTACKFORMRAKAgift code of sendKeys
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:51:35 PM</td>
+        <td>
+          Successfully send keys of PQZMTACKFORMRAKAgift code
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:51:42 PM</td>
+        <td>
+          Verify VPGZCGOJCCKMLOFYgift code of sendKeys
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:51:42 PM</td>
+        <td>
+          Successfully send keys of VPGZCGOJCCKMLOFYgift code
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:51:46 PM</td>
+        <td>
+          Gift certificate codes are applied
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:51:46 PM</td>
+        <td>
+          No Gc code got redeemed and no message is displayed  as Your order has been paid using gift certificates message
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:51:50 PM</td>
+        <td>
+          Verifying the review order Btn click
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:51:50 PM</td>
+        <td>
+          Click failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:51:52 PM</td>
         <td>
           Verifying by entering the valid credit card details
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:53:00 PM</td>
+        <td>6:51:58 PM</td>
         <td>
-          User is checked-in as registered and have saved cards so randomly selecting a saved card
+          User is in guest-check in so entering a random credit card details
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>10:53:15 PM</td>
+        <td>6:51:58 PM</td>
+        <td>
+          Credit card number entered is 5200 8282 8282 8210
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:00 PM</td>
+        <td>
+          Verify cardNumber of sendKeys
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:00 PM</td>
+        <td>
+          Successfully send keys of cardNumber
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:00 PM</td>
+        <td>
+          Entered card number for stripe payment
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:00 PM</td>
+        <td>
+          Credit card expiry date entered is 11 33
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:02 PM</td>
+        <td>
+          Verify Expired date of sendKeys
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:02 PM</td>
+        <td>
+          Successfully send keys of Expired date
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:02 PM</td>
+        <td>
+          Entered exp date for stripe payment
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:02 PM</td>
+        <td>
+          Credit card expiry date entered is 748
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:04 PM</td>
+        <td>
+          Verify Cvv of sendKeys
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:04 PM</td>
+        <td>
+          Successfully send keys of Cvv
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:04 PM</td>
+        <td>
+          Entered cvv for stripe payment
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:04 PM</td>
+        <td>
+          Credit card expiry date entered is 8777890044
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:06 PM</td>
+        <td>
+          Verify postal code of sendKeys
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:06 PM</td>
+        <td>
+          Successfully send keys of postal code
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:06 PM</td>
+        <td>
+          Entered postal code for stripe payment
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:10 PM</td>
         <td>
           Verifying the review order Btn click
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>10:53:15 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:52:10 PM</td>
         <td>
-          Verifying the update billing address
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:53:15 PM</td>
-        <td>
-          Successfully billing addresss is edited the previous address is New Address
-- Existing Addresses -
-AKII AKII 4331 Dominion Street Burnaby BC V5G 3E3
-- Address Book -
-AKII AKII 4331 Dominion Street Burnaby BC V5G 3E3 and edited billing addresss  is  is 
+          Click failed
         </td>
       </tr>
   </tbody>

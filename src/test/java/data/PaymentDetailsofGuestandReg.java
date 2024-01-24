@@ -120,7 +120,7 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 	  	}
 		
 		public static void allErrorsInCreditCard() throws Exception {
-	
+			if(Actionsss.elementSize(pp.getPaymentPagecreditCardDivList())) {
 			Actionsss.scrollWindowsByPixel(300);
 			
 			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
@@ -149,11 +149,16 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				test.info("User is checked-in as Registered");
 				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
+			}else {
+				logger.info("Gift code was redemeed already");
+				test.info("Gift code was redemeed already");
+				test.pass("Gift code was redemeed already");
+			}
 		}
 		
 
 		public static void creditcardNumberInValidError() throws InterruptedException, Exception {
-			
+			if(Actionsss.elementSize(pp.getPaymentPagecreditCardDivList())) {
 			test.info("Verifying the invalid card number error by entering invalid  credit card details ");
 			
 			Actionsss.scrollWindowsByPixel(400);
@@ -165,11 +170,12 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
 					//salesforce negative
+					Actionsss.javascriptClick(pp.getSalesforceCreditcardRadioBtn());
 					ppv.salesforceInvalidCardNumber();
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
-					Actionsss.CombinedClick(pp.getStripeCreditCard());
+					Actionsss.click(pp.getStripeCreditCard());
 					Thread.sleep(1000);
 					ppv.stripeCardInvalidCardError();
 					
@@ -183,10 +189,15 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				test.info("User is checked-in as Registered");
 				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
+			}else {
+				logger.info("Gift code was redemeed already");
+				test.info("Gift code was redemeed already");
+				test.pass("Gift code was redemeed already");
+			}
 		}
 		
 		public static void creditCardExpMonthInValid() throws Exception {
-			
+			if(Actionsss.elementSize(pp.getPaymentPagecreditCardDivList())) {
 			test.info("Verifying the invalid expiry month/year error by entering the invalid month/year in credit card ");
 			
 			Actionsss.scrollWindowsByPixel(300);
@@ -198,6 +209,7 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
 					//salesforce negative
+					Actionsss.javascriptClick(pp.getSalesforceCreditcardRadioBtn());
 					ppv.salesforceInvalidExpYear();
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
@@ -215,11 +227,16 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				test.info("User is checked-in as Registered");
 				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
+			}else {
+				logger.info("Gift code was redemeed already");
+				test.info("Gift code was redemeed already");
+				test.pass("Gift code was redemeed already");
+			}
 		}
 		
 
 		public static void creditCardNumberInCompleteError() throws Exception {
-
+			if(Actionsss.elementSize(pp.getPaymentPagecreditCardDivList())) {
 			test.info("Verifying the incomplete card number error by entering  incomplete card number in credit card ");
 			Actionsss.scrollWindowsByPixel(300);
 			
@@ -231,7 +248,8 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
 					//salesforce negative
-					//ppv.salesforceCvvAndExpError();
+					Actionsss.javascriptClick(pp.getSalesforceCreditcardRadioBtn());
+					ppv.salesforceCvvAndExpError();
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe
@@ -249,10 +267,15 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				test.info("User is checked-in as Registered");
 				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
+			}else {
+				logger.info("Gift code was redemeed already");
+				test.info("Gift code was redemeed already");
+				test.pass("Gift code was redemeed already");
+			}
 		}
 		
 		public static void creditCardNumberInCompleteExpYearError() throws Exception {
-
+			if(Actionsss.elementSize(pp.getPaymentPagecreditCardDivList())) {
 			test.info("Verifying the incomplete expiry year error by entering the incomplete expiry year in credit card");
 			
 			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
@@ -263,7 +286,8 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
 					//salesforce negative
-					//ppv.salesforceCvvAndExpError();
+					Actionsss.javascriptClick(pp.getSalesforceCreditcardRadioBtn());
+					ppv.salesforceCvvAndExpError();
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
@@ -280,10 +304,17 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				test.info("User is checked-in as Registered");
 				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
+			}else {
+				logger.info("Gift code was redemeed already");
+				test.info("Gift code was redemeed already");
+				test.pass("Gift code was redemeed already");
+			}
 		}
 		
 		public static void creditCardInCompleteCvvError() throws Exception {
 			
+			if(Actionsss.elementSize(pp.getPaymentPagecreditCardDivList())) {
+
 			test.info("Verifying the incomplete Cvv error by entering the incomplete cvv in credit card");
 			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
 				
@@ -293,7 +324,8 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
 					//salesforce negative
-					//ppv.salesforceCvvAndExpError();
+					Actionsss.javascriptClick(pp.getSalesforceCreditcardRadioBtn());
+					ppv.salesforceCvvAndExpError();
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
@@ -311,9 +343,15 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				test.info("User is checked-in as Registered");
 				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
-		}
+		}else {
+			logger.info("Gift code was redemeed already");
+			test.info("Gift code was redemeed already");
+			test.pass("Gift code was redemeed already");
+		}	
+	}
 		
 		public static void creditCardCvvAndExpError() throws Exception {
+			if(Actionsss.elementSize(pp.getPaymentPagecreditCardDivList())) {
 			test.info("Verifying the  cvv and expiry year error without entering the cvv and expiry year by entering credit card number ");
 			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
 				
@@ -323,6 +361,7 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
 					//salesforce negative
+					Actionsss.javascriptClick(pp.getSalesforceCreditcardRadioBtn());
 					ppv.salesforceCvvAndExpError();
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
@@ -342,10 +381,16 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				test.info("User is checked-in as Registered");
 				test.pass("Doing the  error validation when user is checked-in  as guest");
 			}
+			}else {
+				logger.info("Gift code was redemeed already");
+				test.info("Gift code was redemeed already");
+				test.pass("Gift code was redemeed already");
+			}
 		}
 		
 		public static void creditCvvError() throws Exception {
-			
+		
+			if(Actionsss.elementSize(pp.getPaymentPagecreditCardDivList())) {
 			test.info("Verifying with cvv error without entering cvv by entering the card number, expiry m in credit card");
 			
 			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
@@ -356,6 +401,7 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 					
 				}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
 					//salesforce negative
+					Actionsss.javascriptClick(pp.getSalesforceCreditcardRadioBtn());
 					ppv.salesforceCvvError();
 					
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
@@ -372,6 +418,11 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 			}else {
 				test.info("User is checked-in as Registered");
 				test.pass("Doing the  error validation when user is checked-in  as guest");
+			}
+			}else {
+				logger.info("Gift code was redemeed already");
+				test.info("Gift code was redemeed already");
+				test.pass("Gift code was redemeed already");
 			}
 		}
 

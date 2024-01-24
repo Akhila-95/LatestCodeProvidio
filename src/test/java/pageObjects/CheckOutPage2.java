@@ -17,11 +17,16 @@ public class CheckOutPage2 {
 		}
 		
 		@FindBy(xpath="//div[@class='card shipping-section']")
-		List<WebElement> shippingPage;
-		public List<WebElement> getshippingPage() {
-			return shippingPage;
+		List<WebElement> shippingPageList;
+		public List<WebElement> getshippingPageList() {
+			return shippingPageList;
 		}
 		
+		@FindBy(xpath="//div[@class='card shipping-section']")
+		WebElement shippingPage;
+		public WebElement getshippingPage() {
+			return shippingPage;
+		}
 		@FindBy(css="div.customer-summary")
 		WebElement customerInfo;
 		public WebElement getCustomerInfo() {
@@ -89,7 +94,11 @@ public class CheckOutPage2 {
 		public WebElement getUpdateAddressBtn() {
 			return updateAddressBtn;
 		}
-		
+		@FindBy(xpath = "(//button[contains(@class,'btn-add-new')])[3]")
+		WebElement newAddressBtn;
+		public WebElement getnewAddressBtn() {
+			return newAddressBtn;
+		}
 		
 	
 		//Fname
