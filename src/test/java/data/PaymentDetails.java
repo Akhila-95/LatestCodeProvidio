@@ -31,16 +31,13 @@ public class PaymentDetails extends baseClass{
 			}else if(Actionsss.elementSize(pp.getAdyenPayment())) {				
 				PaymentDetailsofGuestandReg.adyen();
 			}
-					
-			if(Actionsss.displayElement(pp.getSelectPlaceOrderBtn())) {
-				Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
-				Thread.sleep(7000);
-				PaymentPageValidation.VerifiedThatPlaceOrderClick();
-				Thread.sleep(1000);				
-			}else {
-				Actionsss.CombinedClick(pp.getReviewOrderBtn());
-				Thread.sleep(3000);
-				PlaceOrderPageValidation.VerifyingReviewOrderBtn();
+			
+			if(Actionsss.elementSize(pp.getReviewOrderBtnList())) {
+				if(Actionsss.displayElement(pp.getReviewOrderBtn())) {
+					Actionsss.CombinedClick(pp.getReviewOrderBtn());
+					Thread.sleep(3000);
+					PlaceOrderPageValidation.VerifyingReviewOrderBtn();		
+				}
 			}
 			
 		}else {

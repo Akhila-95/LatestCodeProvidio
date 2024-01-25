@@ -17,6 +17,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.providio.testcases.baseClass;
 
+import functionality.Actionsss;
+
 public class paymentpPage extends baseClass {
 	
 WebDriver lDriver;
@@ -562,17 +564,51 @@ WebDriver lDriver;
     WebElement  paypalCheckout;
 
     @FindBy(xpath = "//input[@name='login_email']")
-    List<WebElement> emailLogin;
+    List<WebElement> emailLoginList;
+	public List<WebElement> getEmailLoginList() {
+ 		return emailLoginList;
+ 	}
+	
+	@FindBy(xpath = "//input[@name='login_email']")
+    WebElement emailLogin;
+	public WebElement getEmailLogin() {
+ 		return emailLogin;
+ 	}
 
     @FindBy(css = "#btnNext")
-    List<WebElement> nextButton;
+    List<WebElement> nextButtonList;
+	public List<WebElement> getNextButtonList() {
+ 		return nextButtonList;
+ 	}
 
+	@FindBy(css = "#btnNext")
+    WebElement nextButton;
+	public WebElement getNextButton() {
+ 		return nextButton;
+ 	}
+		
     @FindBy(xpath = "//input[@id='password']")
-    List<WebElement> password;
+    List<WebElement> passwordList;
+	public List<WebElement> getPasswordList() {
+ 		return passwordList;
+ 	}
 
+	@FindBy(xpath = "//input[@id='password']")
+    WebElement password;
+	public WebElement getPassword() {
+ 		return password;
+ 	}
     @FindBy(xpath = "//button[contains(text(), 'Log In')]")
-    List<WebElement> loginbutton;
-
+    List<WebElement> loginbuttonList;
+	public List<WebElement> getloginbuttonList() {
+ 		return loginbuttonList;
+ 	}
+	
+	@FindBy(xpath = "//button[contains(text(), 'Log In')]")
+    WebElement loginbutton;
+	public WebElement getloginbutton() {
+ 		return loginbutton;
+ 	}
     @FindBy(xpath = "(//div[@class='FundingInstrument_item_3lQ2z'])[3]")
     WebElement cardParentDiv;
     
@@ -580,12 +616,35 @@ WebDriver lDriver;
     List<WebElement> changeTheAddressList;
 
     @FindBy(id = "payment-submit-btn")
-    List<WebElement> reviewOrderButton;
+    List<WebElement> reviewOrderButtonList;
+	public List<WebElement> getReviewOrderButtonList() {
+ 		return reviewOrderButtonList;
+ 	}
     
+	@FindBy(id = "payment-submit-btn")
+    WebElement reviewOrderButton;
+	public WebElement getReviewOrderButton() {
+ 		return reviewOrderButton;
+ 	}
+	
+	@FindBy(xpath= "//button[contains(text(), 'Complete Purchase')]")
+    WebElement completePurcharseButton;
+	public WebElement getCompletePurcharseButton() {
+ 		return completePurcharseButton;
+ 	}
+	
     @FindBy(xpath = "//button[contains(text(), 'Save and Continue')]")
-    List<WebElement> saveAndContinue;
+    List<WebElement> saveAndContinueList;
+	public List<WebElement> getSaveAndContinueList() {
+ 		return saveAndContinueList;
+ 	}
     
-    public void paypalPopup() throws InterruptedException {
+	@FindBy(xpath = "//button[contains(text(), 'Save and Continue')]")
+    WebElement saveAndContinue;
+	public WebElement getSaveAndContinue() {
+ 		return saveAndContinue;
+ 	}
+    public void paypalPopup() throws Exception {
     	
         String mainWindowHandle = driver.getWindowHandle();
         // Switch to the new window by iterating over all available window handles
@@ -599,48 +658,52 @@ WebDriver lDriver;
         //	List<WebElement> paypalPage = driver.findElements(By.id("headerText"));
         //	System.out.println("The url for payapal is " + paypalPage.size());
          Thread.sleep(3000);
-         if(emailLogin.size()>0) {
-        	 WebElement  emailLogin1=driver.findElement(By.xpath("//input[@name='login_email']")); 
-        	 emailLogin1.clear();
-        	 emailLogin1.sendKeys("rahulnaik@etisbew.com");
+         if(Actionsss.elementSize(getEmailLoginList())) {
+        	Actionsss.sendKeys( getEmailLogin(),"rahulnaik@etisbew.com", "User email");       	 
         	 test.info("Entered username");
          }
          Thread.sleep(3000);
-         if(nextButton.size()>0) {
-        	 WebElement nextButton1=driver.findElement(By.cssSelector("#btnNext"));
-             nextButton1.click();
+         if(Actionsss.elementSize(getNextButtonList())) {
+        	Actionsss.click(getNextButton());         
              Thread.sleep(1000);
          }
-         if(password.size()>0) {
-        	 WebElement password1=driver.findElement(By.xpath("//input[@id='password']"));
-        	// password1.clear();
-             password1.sendKeys("Etgsfcc245@");
+         if(Actionsss.elementSize(getPasswordList())) {
+        	 Actionsss.sendKeys(getPassword(),"Etgsfcc245@", "password");               
              test.info("Entered password");
              Thread.sleep(1000);
          }
-         if(loginbutton.size()>0) {
-        	 WebElement loginbutton1=driver.findElement(By.xpath("//button[contains(text(), 'Log In')]"));
-             loginbutton1.click();
+         if(Actionsss.elementSize(getloginbuttonList())) {
+        	 Actionsss.click(getloginbutton());           
              Thread.sleep(1000);
          }
         
 
          Thread.sleep(2000);
-         if(reviewOrderButton.size()>0) {
-        	WebElement reviewOrder=driver.findElement(By.id("payment-submit-btn"));
-        	reviewOrder.click();
-        	Thread.sleep(7000);
-        /*	if(reviewOrderButton.size()>0 && reviewOrder.isDisplayed()) {
-        	      JavascriptExecutor js = (JavascriptExecutor) driver;                       
-                  js.executeScript("arguments[0].click();", reviewOrder);
-                 
-        	}*/
-        	//reviewOrder.click();
+         if(Actionsss.elementSize(getReviewOrderButtonList())) {
+        	
+         	try {
+         		Actionsss.click(getReviewOrderButton());      		
+ 	            Thread.sleep(1000);
+ 	          //  Thread.sleep(4000);
+ 	        } catch (Exception e) {
+ 	        	Actionsss.javascriptClick(getReviewOrderButton());
+ 	            System.err.println("Exception while clicking the element: " + getReviewOrderButton());
+ 	        }
+         	
+         	logger.info("complete order");
+         	Thread.sleep(4000);
+   	
+            	try {
+            		Actionsss.click(getCompletePurcharseButton());
+ 	           		Thread.sleep(4000);
+            	} catch (Exception e) {
+	 	        	Actionsss.javascriptClick(getCompletePurcharseButton());
+	 	            System.err.println("Exception while clicking the element: " +getCompletePurcharseButton());
+            	}         	
         	                	
          }else {
-        	 if(saveAndContinue.size()>0) {
-        		 WebElement saveAndContinue1=driver.findElement(By.xpath("//button[contains(text(), 'Save and Continue')]"));
-        		 saveAndContinue1.click();
+        	 if(Actionsss.elementSize(getSaveAndContinueList())) {
+        		 Actionsss.click(getSaveAndContinue());
         	 }
          }                 
          driver.switchTo().window(mainWindowHandle);

@@ -41,6 +41,11 @@ public class PaymentPageTest extends baseClass{
 	public static void verifyingPaginationOfProductsFromPaymentPage() throws Exception {
 		PaymentPageTasks.paginationOfProductsFromPaymentPage();
 	}
+	
+	@Test
+	public static void verifyingBillingPhoneNumberError() throws Exception {
+		PaymentPageTasks. billingPhoneNumber();
+	}
 	//payment
     @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
     public void verifyingAllTheErrorsInCreditCard() throws Exception {
@@ -103,10 +108,43 @@ public class PaymentPageTest extends baseClass{
     //gc
     
     @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingEnterGiftCodeErrorMsg() throws Exception {       
+    	PaymentPageTasks.getEnterGiftCodeErrorMsg();
+    }
+    
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingInvalidGcErrorMsg() throws Exception {       
+    	PaymentPageTasks.getInvalidGcCode();
+    }
+    
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingCheckBalanceOfValidGc() throws Exception {       
+    	PaymentPageTasks.getCheckBalOfValidGc();
+    }
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingCheckBalanceOfInvalidGcErrorMsg() throws Exception {       
+    	PaymentPageTasks.getCheckBalOfInvalidGc();
+    }
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingSuccesMessageForValidGcApplied() throws Exception {       
+    	PaymentPageTasks.applyValidGc();
+    }
+    
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    public void verifyingRemovalOfAppliedGc() throws Exception {       
+    	PaymentPageTasks.removeAppliedGc();
+    }
+        
+    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
     public void verifyingGcRedemption() throws Exception {       
     	PaymentPageTasks.gcRedemption();
     	
     }
+ 
     
     
     

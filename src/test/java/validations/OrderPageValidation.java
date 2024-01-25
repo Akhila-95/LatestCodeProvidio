@@ -44,8 +44,8 @@ public class OrderPageValidation extends baseClass{
 		        //paymnet details
 			    String paymentDetails = Actionsss.getTextOfElement(orderPage.getPaymentDetailsInOrderConfirmationPage());
 		      
-		        test.pass("Payment is "+ paymentDetails);
-		        logger.info("Payment is "+ paymentDetails);
+		        test.pass("Payment is done with "+ paymentDetails);
+		        logger.info("Payment is done with"+ paymentDetails);
 		       // Thread.sleep(5000);
 					
 		}

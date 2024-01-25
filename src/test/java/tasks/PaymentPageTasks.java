@@ -3,6 +3,7 @@ package tasks;
 import com.github.javafaker.Faker;
 import com.providio.testcases.baseClass;
 
+import Payments.CheckOutPaypal;
 import Payments.GiftCertificateForGc;
 import Payments.GiftCertificateInCombination;
 import data.AddressSelection;
@@ -172,6 +173,14 @@ public class PaymentPageTasks extends baseClass {
 		AddressSelection.editShippingAddress();
 		Actionsss.CombinedClick(cop2.getNextPaymentButton());	
 	}
+	
+	public static void billingPhoneNumber() throws Exception {
+		paymentPageView();
+		Actionsss.clearText(cop3.getBillingPhoneNumber());
+		PaymentDetails.creditCardDetails();	
+		PaymentPageValidation.billingPhoneNumberErrorValidation();
+	}
+	
 	public static void allErrorsInCreditCard() throws Exception {
 			paymentPageView();
 			PaymentDetailsofGuestandReg.allErrorsInCreditCard();
@@ -228,44 +237,159 @@ public class PaymentPageTasks extends baseClass {
 	}
 	
 	
-	//gift card
-	public static void gcRedemption() throws Exception {
+	//ENTER gc code error
+	public static void getEnterGiftCodeErrorMsg() throws InterruptedException, Exception {
 		paymentPageView();
-		GiftCertificateForGc.giftCodeForGc();
-		PaymentPageValidation.redemptionOfGcValidation();
+		Actionsss.scrollWindowsByPixel(300);
+		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
+			 Actionsss.javascriptClick(pp.getApplyGiftCardButton());			
+			 PaymentPageValidation.enterGiftCodeErrorMsgValidation();
+		 }else {
+		    	test.info("Gift certificate is in cart");
+		    	test.pass("No Gift certificate div");
+		    }
 		
-		if(Actionsss.displayElement(pp.getSelectPlaceOrderBtn())) {
-			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
-			Thread.sleep(7000);
-			PaymentPageValidation.VerifiedThatPlaceOrderClick();
-			Thread.sleep(1000);
-			
-		}else {
-			Actionsss.CombinedClick(pp.getReviewOrderBtn());
-			Thread.sleep(3000);
-			PlaceOrderPageValidation.VerifyingReviewOrderBtn();
-
-		}
 	}
 	
+	//invalid gc
+	public static void getInvalidGcCode() throws Exception {
+		paymentPageView();
+		Actionsss.scrollWindowsByPixel(300);
+		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
+			 Actionsss.sendKeys(pp.getGiftcertificateInput(),"VODJMTWPTOAVVOZG", " VODJMTWPTOAVVOZG gift code");					         
+             Actionsss.javascriptClick(pp.getApplyGiftCardButton());
+             logger.info("Apply button is selected");
+             Thread.sleep(1000);
+             PaymentPageValidation.invalidGiftCodeErrorMsgValidation();
+		 }else {
+		    	test.info("Gift certificate is in cart");
+		    	test.pass("No Gift certificate div");
+		    }		
+	}
+	
+	//insufficient gc
+	public static void getInsufficientGcCode() throws Exception {
+		paymentPageView();
+		Actionsss.scrollWindowsByPixel(300);
+		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
+			 Actionsss.sendKeys(pp.getGiftcertificateInput(),"GLOIWCSCSCTVGYIF", "GLOIWCSCSCTVGYIF gift code");					         
+             Actionsss.javascriptClick(pp.getApplyGiftCardButton());
+             logger.info("Apply button is selected");
+             Thread.sleep(1000);
+             PaymentPageValidation.insufficientGiftCodeErrorMsgValidation();
+		 }else {
+		    	test.info("Gift certificate is in cart");
+		    	test.pass("No Gift certificate div");
+		    }		
+	}
+	//gc belongs to different customer
+	public static void getGcBelongsToDifferentCustomer() throws Exception {
+		paymentPageView();
+		Actionsss.scrollWindowsByPixel(300);
+		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
+			 Actionsss.sendKeys(pp.getGiftcertificateInput(),"GLOIWCSCSCTVGYIF", "GLOIWCSCSCTVGYIF gift code");					         
+            Actionsss.javascriptClick(pp.getApplyGiftCardButton());
+            logger.info("Apply button is selected");
+            Thread.sleep(1000);
+            PaymentPageValidation.insufficientGiftCodeErrorMsgValidation();
+		 }else {
+		    	test.info("Gift certificate is in cart");
+		    	test.pass("No Gift certificate div");
+		    }	
+	}
+	
+	//check bal with valid gc 
+	public static void getCheckBalOfValidGc() throws Exception {
+		paymentPageView();
+		Actionsss.scrollWindowsByPixel(300);
+		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
+			 Actionsss.sendKeys(pp.getGiftcertificateInput(),"JYKCFKIMMVAPOFDV", "JYKCFKIMMVAPOFDV gift code");					         
+			 Actionsss.javascriptClick(pp.getCheckBalanceButton());
+             logger.info("check button is selected");
+             Thread.sleep(2000);
+             PaymentPageValidation.checkBalOfValidGiftCodeValidation();
+		 }else {
+		    	test.info("Gift certificate is in cart");
+		    	test.pass("No Gift certificate div");
+		    }
+	}
+	//check bal with invalid gc 
+		public static void getCheckBalOfInvalidGc() throws Exception {
+			paymentPageView();
+			Actionsss.scrollWindowsByPixel(300);
+			 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
+				 Actionsss.sendKeys(pp.getGiftcertificateInput(),"VODJMTWPTOAVVOZG", "VODJMTWPTOAVVOZG gift code");					         
+	             Actionsss.javascriptClick(pp.getCheckBalanceButton());
+	             logger.info("check button is selected");
+	             Thread.sleep(1000);
+	             PaymentPageValidation.checkBalOfInvalidGiftCodeValidation();
+			 }else {
+			    	test.info("Gift certificate is in cart");
+			    	test.pass("No Gift certificate div");
+			    }
+		}
+		//check bal with valid gc 
+		public static void applyValidGc() throws Exception {
+			paymentPageView();
+			Actionsss.scrollWindowsByPixel(300);
+			 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
+				 Actionsss.sendKeys(pp.getGiftcertificateInput(),"HYWALAYACRIGHDWG", "HYWALAYACRIGHDWG gift code");					         
+	             Actionsss.javascriptClick(pp.getApplyGiftCardButton());
+	             logger.info("Apply button is selected");
+	             Thread.sleep(2000);
+	             PaymentPageValidation.succesMsgForValidGcAppliedValidation();
+			 }else {
+			    	test.info("Gift certificate is in cart");
+			    	test.pass("No Gift certificate div");
+			    }
+		}
+		
+		
+		public static void removeAppliedGc() throws Exception {
+			paymentPageView();
+			Actionsss.scrollWindowsByPixel(300);
+			 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
+				 Actionsss.sendKeys(pp.getGiftcertificateInput(),"HYWALAYACRIGHDWG", "HYWALAYACRIGHDWG gift code");					         
+	             Actionsss.javascriptClick(pp.getApplyGiftCardButton());
+	             Thread.sleep(1000);
+	             countOfGcApplied= Actionsss.getSizeOfList(pp.getRemoveGc());
+	 			 logger.info(countOfGcApplied);
+	             Actionsss.randomElementFromList(pp.getRemoveGc());
+	             logger.info("Apply button is selected");
+	             logger.info(countOfGcAppliedAfterItsRemoval);
+	             Thread.sleep(1000);
+	             PaymentPageValidation.gcRemoveValidation();
+			 }else {
+			    	test.info("Gift certificate is in cart");
+			    	test.pass("No Gift certificate div");
+			    }
+		}
+		
 	//gift card
-		public static void gcRedemptionInCombination() throws Exception {
+		public static void gcRedemption() throws Exception {
+			paymentPageView();
+			GiftCertificateForGc.giftCodeForGc();
+			PaymentPageValidation.redemptionOfGcValidation();	
+		}
+	
+	//gift card
+		public static void gcRedemptionInCombinationWithCreditCard() throws Exception {
 			paymentPageView();
 			GiftCertificateInCombination.giftCodesForCombination();
-			PaymentPageValidation.redemptionOfGcValidation();
-			
-//			if(Actionsss.displayElement(pp.getSelectPlaceOrderBtn())) {
-//				Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
-//				Thread.sleep(7000);
-//				PaymentPageValidation.VerifiedThatPlaceOrderClick();
-//				Thread.sleep(1000);
-//				
-//			}else {
-//				Actionsss.CombinedClick(pp.getReviewOrderBtn());
-//				Thread.sleep(3000);
-//				PlaceOrderPageValidation.VerifyingReviewOrderBtn();
-//
-//			}
+			PaymentPageValidation.partialRedemptionOfGcValidation();
+			PaymentPageTasks.creditCardWithValidDetails();
+		}
+		
+		public static void paypal() throws Exception {
+			paymentPageView();
+			CheckOutPaypal.paypalFromCheckout();
+		}
+		
+		public static void gcRedemptionInCombinationWithPaypal() throws Exception {
+			paymentPageView();		
+			GiftCertificateInCombination.giftCodesForCombination();
+			PaymentPageValidation.partialRedemptionOfGcValidation();
+			CheckOutPaypal.paypalFromCheckout();
 		}
 	
 }

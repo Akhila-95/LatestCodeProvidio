@@ -6,14 +6,15 @@
         <classes>
      
 			<class name="browser.launchBrowsering"/>
-	 
+	 			 
 				<class name ="testScripts.PaymentPageTest"/> 
 				 <methods>
-			 
+  <!--
 			      <include name="verifyingEditShippingAddress" />					
 				  <include name="verifyingEditCustomerInfoFromCop3" />  					 
 		  		  <include name="verifyingUpdateBillingAddress" />					 				   
 				  <include name="verifyingAddNewBillingAddress" />	
+				  <include name="verifyingBillingPhoneNumberError" />
 				  <include name="verifyingEditPhoneNumberInBillingAddress" />
 				  <include name="verifyingPaginationOfProductsFromPaymentPage" />	
 				  <include name="verifyingAllTheErrorsInCreditCard" />
@@ -26,10 +27,19 @@
 				  <include name ="verifyingCreditCardInCompleteCvvError"></include>  		 
 				  <include name="verifyingAddnewCreditCard" />	 
 				  <include name="verifyingCreditcardWithValidDetails" /> 
-				 <!--  <include name="verifyingGcRedemption" />--> 
+				 
+             		-->
              		
+             		<include name="verifyingEnterGiftCodeErrorMsg" />
+             		<include name="verifyingInvalidGcErrorMsg" />
+             		<include name="verifyingInsufficientGcErrorMsg" />             		
+             		<include name="verifyingCheckBalanceOfValidGc" />           		
+             		  <include name="verifyingCheckBalanceOfInvalidGcErrorMsg" />
+             		<include name="verifyingSuccesMessageForValidGcApplied" />
+             		<include name="verifyingRemovalOfAppliedGc" />
 				</methods>  
-
+				
+  <!-- 
 
 		<class name ="testScripts.PlaceOrderTest"/>
 			<methods>
@@ -42,13 +52,16 @@
 				<include name="VerifyingOrderConfirmationPage"/>
 	
 			</methods>	
-			
+			-->
+		  
 		<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
 			<methods>
-				 <include name="VerifingOrderIsPlacingWithCreditCard"/>				
-				<include name="VerifingOrderIsPlacingWithGiftCard"/>
-				<include name="VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>
-				<include name="VerifingOrderIsPlacingWithGiftCode"/>
+			
+			  	<include name="verifingOrderIsPlacingWithCreditCard"/>				
+				<include name="verifingOrderIsPlacingWithGiftCard"/>
+				<include name="verifingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>				
+				<include name="verifingOrderIsPlacingWithPaypalFromCheckoutPage"/>
+				<include name="verifingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
 			</methods>	
 
          </classes>

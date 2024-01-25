@@ -9,30 +9,50 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Providio Regression Test</th></tr>
-<tr><td><a href="#t0">SmokeTest</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">143,829</td><td></td><td></td></tr>
+<tr><td><a href="#t0">SmokeTest</a></td><td class="num">11</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">695,898</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Providio Regression Test</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SmokeTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">browser.launchBrowsering</td><td><a href="#m0">tearDown</a></td><td rowspan="1">1706102530820</td><td rowspan="1">269</td></tr><tr><th colspan="4">SmokeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">browser.launchBrowsering</td><td><a href="#m1">verifyHomePageLaunching</a></td><td rowspan="1">1706102389055</td><td rowspan="1">7155</td></tr><tr class="passedodd"><td rowspan="1">testScripts.OrderPlacingWithAllPaymentsTest</td><td><a href="#m2">VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard</a></td><td rowspan="1">1706102398245</td><td rowspan="1">132542</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Providio Regression Test</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SmokeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testScripts.OrderPlacingWithAllPaymentsTest</td><td><a href="#m0">verifingOrderIsPlacingWithCombinationOfGcAndPaypal</a></td><td rowspan="1">1706187320250</td><td rowspan="1">78431</td></tr><tr><th colspan="4">SmokeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">browser.launchBrowsering</td><td><a href="#m1">verifyHomePageLaunching</a></td><td rowspan="1">1706186705327</td><td rowspan="1">5690</td></tr><tr class="passedodd"><td rowspan="4">testScripts.OrderPlacingWithAllPaymentsTest</td><td><a href="#m2">verifingOrderIsPlacingWithCombinationOfGcAndCreditCard</a></td><td rowspan="1">1706187018950</td><td rowspan="1">136354</td></tr><tr class="passedodd"><td><a href="#m3">verifingOrderIsPlacingWithCreditCard</a></td><td rowspan="1">1706186849970</td><td rowspan="1">22487</td></tr><tr class="passedodd"><td><a href="#m4">verifingOrderIsPlacingWithGiftCard</a></td><td rowspan="1">1706186872468</td><td rowspan="1">146469</td></tr><tr class="passedodd"><td><a href="#m5">verifingOrderIsPlacingWithPaypalFromCheckoutPage</a></td><td rowspan="1">1706187155317</td><td rowspan="1">164921</td></tr><tr class="passedeven"><td rowspan="6">testScripts.PaymentPageTest</td><td><a href="#m6">verifyingCheckBalanceOfInvalidGcErrorMsg</a></td><td rowspan="1">1706186822475</td><td rowspan="1">6333</td></tr><tr class="passedeven"><td><a href="#m7">verifyingCheckBalanceOfValidGc</a></td><td rowspan="1">1706186815030</td><td rowspan="1">7432</td></tr><tr class="passedeven"><td><a href="#m8">verifyingEnterGiftCodeErrorMsg</a></td><td rowspan="1">1706186713097</td><td rowspan="1">95538</td></tr><tr class="passedeven"><td><a href="#m9">verifyingInvalidGcErrorMsg</a></td><td rowspan="1">1706186808650</td><td rowspan="1">6370</td></tr><tr class="passedeven"><td><a href="#m10">verifyingRemovalOfAppliedGc</a></td><td rowspan="1">1706186835167</td><td rowspan="1">10433</td></tr><tr class="passedeven"><td><a href="#m11">verifyingSuccesMessageForValidGcApplied</a></td><td rowspan="1">1706186828838</td><td rowspan="1">6314</td></tr></tbody>
 </table>
-<h2>SmokeTest</h2><h3 id="m0">browser.launchBrowsering#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=120.0.6099.225)
+<h2>SmokeTest</h2><h3 id="m0">testScripts.OrderPlacingWithAllPaymentsTest#verifingOrderIsPlacingWithCombinationOfGcAndPaypal</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : No details available for input: &quot;345&quot;}
+  (Session info: chrome=120.0.6099.225): No details available for input: &quot;345&quot;
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [944cc357c3be1a52874c140a64e2e9d0, get {url=C:\Users\user\git\ProvidioLapy\Reports\ProvidioTestReport.html}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.225, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63117}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63117/devtoo..., se:cdpVersion: 120.0.6099.225, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 944cc357c3be1a52874c140a64e2e9d0
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+Command: [8f6e98d23343ca90aeabe7cabc8a997a, findElement {using=xpath, value=//input[@id=&apos;shippingAddressOnedefault&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.225, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51992}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51992/devtoo..., se:cdpVersion: 120.0.6099.225, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f6e98d23343ca90aeabe7cabc8a997a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
-	at com.providio.testcases.baseClass.tearDown(baseClass.java:266)
-... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.getAttribute(Unknown Source)
+	at functionality.Actionsss.addressFromDropDown(Actionsss.java:291)
+	at data.AddressSelection.Address(AddressSelection.java:30)
+	at tasks.CheckOutPage2Tasks.enterValidAddress(CheckOutPage2Tasks.java:125)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
+	at tasks.PaymentPageTasks.gcRedemptionInCombinationWithPaypal(PaymentPageTasks.java:389)
+	at tasks.PlaceOrderWithDifferentPayments.OrderPlacingWithCombinationOfGcAndPaypal(PlaceOrderWithDifferentPayments.java:110)
+	at testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndPaypal(OrderPlacingWithAllPaymentsTest.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">browser.launchBrowsering#verifyHomePageLaunching</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testScripts.OrderPlacingWithAllPaymentsTest#VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testScripts.OrderPlacingWithAllPaymentsTest#verifingOrderIsPlacingWithCombinationOfGcAndCreditCard</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testScripts.OrderPlacingWithAllPaymentsTest#verifingOrderIsPlacingWithCreditCard</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testScripts.OrderPlacingWithAllPaymentsTest#verifingOrderIsPlacingWithGiftCard</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testScripts.OrderPlacingWithAllPaymentsTest#verifingOrderIsPlacingWithPaypalFromCheckoutPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testScripts.PaymentPageTest#verifyingCheckBalanceOfInvalidGcErrorMsg</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testScripts.PaymentPageTest#verifyingCheckBalanceOfValidGc</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testScripts.PaymentPageTest#verifyingEnterGiftCodeErrorMsg</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">testScripts.PaymentPageTest#verifyingInvalidGcErrorMsg</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">testScripts.PaymentPageTest#verifyingRemovalOfAppliedGc</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">testScripts.PaymentPageTest#verifyingSuccesMessageForValidGcApplied</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

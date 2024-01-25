@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Providio_Regression_Test" class="navigator-link">
-              <span class="suite-name border-passed">Providio Regression Test</span>
+              <span class="suite-name border-failed">Providio Regression Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">12 methods, 1 failed,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Providio_Regression_Test" class="hide-methods failed suite-Providio_Regression_Test"> (hide)</a> <!-- hide-methods failed suite-Providio_Regression_Test -->
+                      <a href="#" panel-name="suite-Providio_Regression_Test" class="show-methods failed suite-Providio_Regression_Test"> (show)</a> <!-- show-methods failed suite-Providio_Regression_Test -->
+                    </span>
+                    <div class="method-list-content failed suite-Providio_Regression_Test">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.OrderPlacingWithAllPaymentsTest" class="method navigator-link" hash-for-method="verifingOrderIsPlacingWithCombinationOfGcAndPaypal">verifingOrderIsPlacingWithCombinationOfGcAndPaypal</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Providio_Regression_Test -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,57 @@
                     <div class="method-list-content passed suite-Providio_Regression_Test">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.OrderPlacingWithAllPaymentsTest" class="method navigator-link" hash-for-method="VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard">VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.OrderPlacingWithAllPaymentsTest" class="method navigator-link" hash-for-method="verifingOrderIsPlacingWithCombinationOfGcAndCreditCard">verifingOrderIsPlacingWithCombinationOfGcAndCreditCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.OrderPlacingWithAllPaymentsTest" class="method navigator-link" hash-for-method="verifingOrderIsPlacingWithCreditCard">verifingOrderIsPlacingWithCreditCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.OrderPlacingWithAllPaymentsTest" class="method navigator-link" hash-for-method="verifingOrderIsPlacingWithGiftCard">verifingOrderIsPlacingWithGiftCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.OrderPlacingWithAllPaymentsTest" class="method navigator-link" hash-for-method="verifingOrderIsPlacingWithPaypalFromCheckoutPage">verifingOrderIsPlacingWithPaypalFromCheckoutPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Providio_Regression_Test" title="browser.launchBrowsering" class="method navigator-link" hash-for-method="verifyHomePageLaunching">verifyHomePageLaunching</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingCheckBalanceOfInvalidGcErrorMsg">verifyingCheckBalanceOfInvalidGcErrorMsg</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingCheckBalanceOfValidGc">verifyingCheckBalanceOfValidGc</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingEnterGiftCodeErrorMsg">verifyingEnterGiftCodeErrorMsg</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingInvalidGcErrorMsg">verifyingInvalidGcErrorMsg</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingRemovalOfAppliedGc">verifyingRemovalOfAppliedGc</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.PaymentPageTest" class="method navigator-link" hash-for-method="verifyingSuccesMessageForValidGcApplied">verifyingSuccesMessageForValidGcApplied</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Providio_Regression_Test -->
@@ -123,6 +182,52 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Providio_Regression_Test" class="panel Providio_Regression_Test">
+          <div class="suite-Providio_Regression_Test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testScripts.OrderPlacingWithAllPaymentsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifingOrderIsPlacingWithCombinationOfGcAndPaypal">
+                  </a> <!-- verifingOrderIsPlacingWithCombinationOfGcAndPaypal -->
+                  <span class="method-name">verifingOrderIsPlacingWithCombinationOfGcAndPaypal</span>
+                  <div class="stack-trace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : No details available for input: &quot;345&quot;}
+  (Session info: chrome=120.0.6099.225): No details available for input: &quot;345&quot;
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8f6e98d23343ca90aeabe7cabc8a997a, findElement {using=xpath, value=//input[@id=&apos;shippingAddressOnedefault&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.225, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51992}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51992/devtoo..., se:cdpVersion: 120.0.6099.225, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f6e98d23343ca90aeabe7cabc8a997a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.getAttribute(Unknown Source)
+	at functionality.Actionsss.addressFromDropDown(Actionsss.java:291)
+	at data.AddressSelection.Address(AddressSelection.java:30)
+	at tasks.CheckOutPage2Tasks.enterValidAddress(CheckOutPage2Tasks.java:125)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
+	at tasks.PaymentPageTasks.gcRedemptionInCombinationWithPaypal(PaymentPageTasks.java:389)
+	at tasks.PlaceOrderWithDifferentPayments.OrderPlacingWithCombinationOfGcAndPaypal(PlaceOrderWithDifferentPayments.java:110)
+	at testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndPaypal(OrderPlacingWithAllPaymentsTest.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Providio_Regression_Test-class-failed -->
           <div class="suite-Providio_Regression_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -146,9 +251,80 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard">
-                  </a> <!-- VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard -->
-                  <span class="method-name">VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard</span>
+                  <a name="verifingOrderIsPlacingWithCombinationOfGcAndCreditCard">
+                  </a> <!-- verifingOrderIsPlacingWithCombinationOfGcAndCreditCard -->
+                  <span class="method-name">verifingOrderIsPlacingWithCombinationOfGcAndCreditCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifingOrderIsPlacingWithCreditCard">
+                  </a> <!-- verifingOrderIsPlacingWithCreditCard -->
+                  <span class="method-name">verifingOrderIsPlacingWithCreditCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifingOrderIsPlacingWithGiftCard">
+                  </a> <!-- verifingOrderIsPlacingWithGiftCard -->
+                  <span class="method-name">verifingOrderIsPlacingWithGiftCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifingOrderIsPlacingWithPaypalFromCheckoutPage">
+                  </a> <!-- verifingOrderIsPlacingWithPaypalFromCheckoutPage -->
+                  <span class="method-name">verifingOrderIsPlacingWithPaypalFromCheckoutPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Providio_Regression_Test-class-passed -->
+          <div class="suite-Providio_Regression_Test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testScripts.PaymentPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingCheckBalanceOfInvalidGcErrorMsg">
+                  </a> <!-- verifyingCheckBalanceOfInvalidGcErrorMsg -->
+                  <span class="method-name">verifyingCheckBalanceOfInvalidGcErrorMsg</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingCheckBalanceOfValidGc">
+                  </a> <!-- verifyingCheckBalanceOfValidGc -->
+                  <span class="method-name">verifyingCheckBalanceOfValidGc</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingEnterGiftCodeErrorMsg">
+                  </a> <!-- verifyingEnterGiftCodeErrorMsg -->
+                  <span class="method-name">verifyingEnterGiftCodeErrorMsg</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingInvalidGcErrorMsg">
+                  </a> <!-- verifyingInvalidGcErrorMsg -->
+                  <span class="method-name">verifyingInvalidGcErrorMsg</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingRemovalOfAppliedGc">
+                  </a> <!-- verifyingRemovalOfAppliedGc -->
+                  <span class="method-name">verifyingRemovalOfAppliedGc</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingSuccesMessageForValidGcApplied">
+                  </a> <!-- verifyingSuccesMessageForValidGcApplied -->
+                  <span class="method-name">verifyingSuccesMessageForValidGcApplied</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -166,9 +342,24 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;SmokeTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;browser.launchBrowsering&quot;/&gt;
+      &lt;class name=&quot;testScripts.PaymentPageTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;verifyingEnterGiftCodeErrorMsg&quot;/&gt;
+          &lt;include name=&quot;verifyingInvalidGcErrorMsg&quot;/&gt;
+          &lt;include name=&quot;verifyingInsufficientGcErrorMsg&quot;/&gt;
+          &lt;include name=&quot;verifyingCheckBalanceOfValidGc&quot;/&gt;
+          &lt;include name=&quot;verifyingCheckBalanceOfInvalidGcErrorMsg&quot;/&gt;
+          &lt;include name=&quot;verifyingSuccesMessageForValidGcApplied&quot;/&gt;
+          &lt;include name=&quot;verifyingRemovalOfAppliedGc&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testScripts.PaymentPageTest --&gt;
       &lt;class name=&quot;testScripts.OrderPlacingWithAllPaymentsTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard&quot;/&gt;
+          &lt;include name=&quot;verifingOrderIsPlacingWithCreditCard&quot;/&gt;
+          &lt;include name=&quot;verifingOrderIsPlacingWithGiftCard&quot;/&gt;
+          &lt;include name=&quot;verifingOrderIsPlacingWithCombinationOfGcAndCreditCard&quot;/&gt;
+          &lt;include name=&quot;verifingOrderIsPlacingWithPaypalFromCheckoutPage&quot;/&gt;
+          &lt;include name=&quot;verifingOrderIsPlacingWithCombinationOfGcAndPaypal&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- testScripts.OrderPlacingWithAllPaymentsTest --&gt;
     &lt;/classes&gt;
@@ -184,7 +375,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">SmokeTest (2 classes)</span>
+                <span class="test-name">SmokeTest (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,7 +389,23 @@
               <span class="test-group-name">regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard</span>
+                <span class="method-in-group-name">verifingOrderIsPlacingWithCombinationOfGcAndCreditCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifingOrderIsPlacingWithCombinationOfGcAndPaypal</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifingOrderIsPlacingWithCreditCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifingOrderIsPlacingWithGiftCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifingOrderIsPlacingWithPaypalFromCheckoutPage</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
@@ -210,7 +417,23 @@
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard</span>
+                <span class="method-in-group-name">verifingOrderIsPlacingWithCombinationOfGcAndCreditCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifingOrderIsPlacingWithCombinationOfGcAndPaypal</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifingOrderIsPlacingWithCreditCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifingOrderIsPlacingWithGiftCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifingOrderIsPlacingWithPaypalFromCheckoutPage</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
@@ -234,20 +457,60 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard')
+data.setCell(0, 1, 'verifingOrderIsPlacingWithPaypalFromCheckoutPage')
 data.setCell(0, 2, 'testScripts.OrderPlacingWithAllPaymentsTest')
-data.setCell(0, 3, 132542);
+data.setCell(0, 3, 164921);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyHomePageLaunching')
-data.setCell(1, 2, 'browser.launchBrowsering')
-data.setCell(1, 3, 7155);
+data.setCell(1, 1, 'verifingOrderIsPlacingWithGiftCard')
+data.setCell(1, 2, 'testScripts.OrderPlacingWithAllPaymentsTest')
+data.setCell(1, 3, 146469);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifingOrderIsPlacingWithCombinationOfGcAndCreditCard')
+data.setCell(2, 2, 'testScripts.OrderPlacingWithAllPaymentsTest')
+data.setCell(2, 3, 136354);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyingEnterGiftCodeErrorMsg')
+data.setCell(3, 2, 'testScripts.PaymentPageTest')
+data.setCell(3, 3, 95538);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifingOrderIsPlacingWithCombinationOfGcAndPaypal')
+data.setCell(4, 2, 'testScripts.OrderPlacingWithAllPaymentsTest')
+data.setCell(4, 3, 78431);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifingOrderIsPlacingWithCreditCard')
+data.setCell(5, 2, 'testScripts.OrderPlacingWithAllPaymentsTest')
+data.setCell(5, 3, 22487);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyingRemovalOfAppliedGc')
+data.setCell(6, 2, 'testScripts.PaymentPageTest')
+data.setCell(6, 3, 10433);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyingCheckBalanceOfValidGc')
+data.setCell(7, 2, 'testScripts.PaymentPageTest')
+data.setCell(7, 3, 7432);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyingInvalidGcErrorMsg')
+data.setCell(8, 2, 'testScripts.PaymentPageTest')
+data.setCell(8, 3, 6370);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyingCheckBalanceOfInvalidGcErrorMsg')
+data.setCell(9, 2, 'testScripts.PaymentPageTest')
+data.setCell(9, 3, 6333);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyingSuccesMessageForValidGcApplied')
+data.setCell(10, 2, 'testScripts.PaymentPageTest')
+data.setCell(10, 3, 6314);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyHomePageLaunching')
+data.setCell(11, 2, 'browser.launchBrowsering')
+data.setCell(11, 3, 5690);
 window.suiteTableData['Providio_Regression_Test']= { tableData: data, tableDiv: 'times-div-Providio_Regression_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 11 minutes</span>
               <div id="times-div-Providio_Regression_Test">
               </div> <!-- times-div-Providio_Regression_Test -->
             </div> <!-- times-div -->
@@ -262,19 +525,62 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Providio_Regression_Test" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">23 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">testScripts.OrderPlacingWithAllPaymentsTest</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
                 <span class="ignored-method-name">setUpforReport</span>
                 <br/>
-                <span class="ignored-method-name">VerifingOrderIsPlacingWithCreditCard</span>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testScripts.PaymentPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">verifyingUpdateBillingAddress</span>
+                <br/>
+                <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+                <span class="ignored-method-name">verifyingEditCustomerInfoFromCop3</span>
+                <br/>
+                <span class="ignored-method-name">verifyingCreditcardNumberInValidError</span>
+                <br/>
+                <span class="ignored-method-name">verifyingCreditCardInCompleteCvvError</span>
+                <br/>
+                <span class="ignored-method-name">verifyingCvvErrorInCreditCard</span>
+                <br/>
+                <span class="ignored-method-name">verifyingAddNewBillingAddress</span>
+                <br/>
+                <span class="ignored-method-name">verifyingCreditCardNumberInCompleteError</span>
+                <br/>
+                <span class="ignored-method-name">verifyingCreditCardInCompleteExpYearError</span>
+                <br/>
+                <span class="ignored-method-name">verifyingAllTheErrorsInCreditCard</span>
+                <br/>
+                <span class="ignored-method-name">verifyingGcRedemption</span>
+                <br/>
+                <span class="ignored-method-name">verifyingEditShippingAddress</span>
                 <br/>
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
-                <span class="ignored-method-name">VerifingOrderIsPlacingWithGiftCard</span>
+                <span class="ignored-method-name">verifyingAddnewCreditCard</span>
+                <br/>
+                <span class="ignored-method-name">verifyingEditPhoneNumberInBillingAddress</span>
+                <br/>
+                <span class="ignored-method-name">verifyingGiftMessage</span>
+                <br/>
+                <span class="ignored-method-name">verifyingPaginationOfProductsFromPaymentPage</span>
+                <br/>
+                <span class="ignored-method-name">verifyingCreditCardExpDateInValid</span>
+                <br/>
+                <span class="ignored-method-name">verifyingCreditcardWithValidDetails</span>
+                <br/>
+                <span class="ignored-method-name">verifyingBillingPhoneNumberError</span>
+                <br/>
+                <span class="ignored-method-name">verifyingCvvAndExpErrorInCreditCard</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -293,47 +599,174 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">5080 ms</span>
+                <span class="method-start">6540 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public void browser.launchBrowsering.verifyHomePageLaunching() throws java.lang.InterruptedException)</span>
-                <span class="method-start">7141 ms</span>
+                <span class="method-start">8587 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageLaunching</span>
-                <span class="method-start">7146 ms</span>
+                <span class="method-start">8599 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunch...)</span>
-                <span class="method-start">14305 ms</span>
+                <span class="method-start">14300 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testScripts.PaymentPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">14352 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingEnterGiftCodeErrorMsg() throws java.lang.Exception)</span>
+                <span class="method-start">16369 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingEnterGiftCodeErrorMsg</span>
+                <span class="method-start">16369 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingEnterGiftCodeErrorMsg status=SUCCESS method=PaymentPageTest.verifyingEnter...)</span>
+                <span class="method-start">111908 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingInvalidGcErrorMsg() throws java.lang.Exception)</span>
+                <span class="method-start">111921 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingInvalidGcErrorMsg</span>
+                <span class="method-start">111922 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingInvalidGcErrorMsg status=SUCCESS method=PaymentPageTest.verifyingInvalidGc...)</span>
+                <span class="method-start">118293 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyingCheckBalanceOfValidGc</span>
+                <span class="method-start">118302 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingCheckBalanceOfValidGc() throws java.lang.Exception)</span>
+                <span class="method-start">118302 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingCheckBalanceOfValidGc status=SUCCESS method=PaymentPageTest.verifyingCheck...)</span>
+                <span class="method-start">125736 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingCheckBalanceOfInvalidGcErrorMsg() throws java.lang....)</span>
+                <span class="method-start">125746 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingCheckBalanceOfInvalidGcErrorMsg</span>
+                <span class="method-start">125747 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingCheckBalanceOfInvalidGcErrorMsg status=SUCCESS method=PaymentPageTest.veri...)</span>
+                <span class="method-start">132081 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingSuccesMessageForValidGcApplied() throws java.lang.E...)</span>
+                <span class="method-start">132109 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingSuccesMessageForValidGcApplied</span>
+                <span class="method-start">132110 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingSuccesMessageForValidGcApplied status=SUCCESS method=PaymentPageTest.verif...)</span>
+                <span class="method-start">138425 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.PaymentPageTest.verifyingRemovalOfAppliedGc() throws java.lang.Exception)</span>
+                <span class="method-start">138438 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingRemovalOfAppliedGc</span>
+                <span class="method-start">138439 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifyingRemovalOfAppliedGc status=SUCCESS method=PaymentPageTest.verifyingRemovalO...)</span>
+                <span class="method-start">148873 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScripts.OrderPlacingWithAllPaymentsTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">14326 ms</span>
+                <span class="method-start">151225 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifingOrderIsPlacingWithCreditCard</span>
+                <span class="method-start">153242 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.OrderPlacingWithAllPaymentsTest.VerifingOrderIsPlacingWithCombinationOfGcAnd...)</span>
-                <span class="method-start">16335 ms</span>
+                <span class="method-name">afterClass(public void testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCreditCard() throw...)</span>
+                <span class="method-start">153242 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifingOrderIsPlacingWithCreditCard status=SUCCESS method=OrderPlacingWithAllPayme...)</span>
+                <span class="method-start">175731 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifingOrderIsPlacingWithGiftCard</span>
+                <span class="method-start">175740 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithGiftCard() throws ...)</span>
+                <span class="method-start">175740 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifingOrderIsPlacingWithGiftCard status=SUCCESS method=OrderPlacingWithAllPayment...)</span>
+                <span class="method-start">322210 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifingOrderIsPlacingWithCombinationOfGcAndCreditCard</span>
+                <span class="method-start">322222 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAnd...)</span>
+                <span class="method-start">322222 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifingOrderIsPlacingWithCombinationOfGcAndCreditCard status=SUCCESS method=OrderP...)</span>
+                <span class="method-start">458577 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithPaypalFromCheckout...)</span>
+                <span class="method-start">458589 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard</span>
-                <span class="method-start">16336 ms</span>
+                <span class="method-name">verifingOrderIsPlacingWithPaypalFromCheckoutPage</span>
+                <span class="method-start">458589 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard status=SUCCESS method=OrderP...)</span>
-                <span class="method-start">148882 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifingOrderIsPlacingWithPaypalFromCheckoutPage status=SUCCESS method=OrderPlacing...)</span>
+                <span class="method-start">623511 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">afterClass(public void testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAnd...)</span>
+                <span class="method-start">623522 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifingOrderIsPlacingWithCombinationOfGcAndPaypal</span>
+                <span class="method-start">623522 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=verifingOrderIsPlacingWithCombinationOfGcAndPaypal status=FAILURE method=OrderPlaci...)</span>
+                <span class="method-start">701959 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">browser.launchBrowsering</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">148911 ms</span>
+                <span class="method-start">702459 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

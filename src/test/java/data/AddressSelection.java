@@ -128,6 +128,7 @@ public class AddressSelection extends baseClass{
 			  Thread.sleep(1000);	
 			  Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
 			  Actionsss.addressFromDropDown(SAP.getShippingAddress());
+			
 			  Thread.sleep(2000);	
 			  Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
  

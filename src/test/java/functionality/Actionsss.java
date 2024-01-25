@@ -274,7 +274,7 @@ public class Actionsss extends baseClass{
 		    	locatorName.clear();
 		    	Thread.sleep(1000);
 		        Random random = new Random();
-		        int randomNumber = 123; // Generates a random number between 100 and 999
+		        int randomNumber = 345; // Generates a random number between 100 and 999
 		    //    random.nextInt(900) + 100;
 		        addresses = String.valueOf(randomNumber);
 		      Thread.sleep(1000);

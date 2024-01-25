@@ -499,11 +499,17 @@ public class PaymentPage extends baseClass{
     // WebElement for Review Order button
     @FindBy(xpath = "//button[contains(text(), 'Next: Review Order')]")
     private WebElement reviewOrderBtn;
-
-    // Method to get the Review Order WebElement
     public WebElement getReviewOrderBtn() {
         return reviewOrderBtn;
     }
+    
+    // WebElement for Review Order button
+    @FindBy(xpath = "//button[contains(text(), 'Next: Review Order')]")
+    private List<WebElement> reviewOrderBtnList;
+    public List<WebElement> getReviewOrderBtnList() {
+        return reviewOrderBtnList;
+    }
+   
    
     
     //adyen payment
@@ -623,8 +629,33 @@ public class PaymentPage extends baseClass{
  	WebElement giftcardCheckButtonBal;
  	public WebElement getGiftcardCheckButtonBal() {
  		return giftcardCheckButtonBal;
- 	}	
- 
+ 	}
+ 	
+	//check gift card bal 
+ 	@FindBy(xpath = "//div[contains(@class,'balance success')]")
+ 	List<WebElement> giftCardBalMsgList;
+ 	public List<WebElement> getGiftCardBalMsgList() {
+ 		return giftCardBalMsgList;
+ 	}
+ 	
+	@FindBy(xpath = "//button[@value='gift-cert-balance']")
+ 	WebElement checkBalanceButton;
+ 	public WebElement getCheckBalanceButton() {
+ 		return checkBalanceButton;
+ 	}
+    
+ 	@FindBy(xpath = "//a[@class='remove']")
+ 	List<WebElement> removeGc;
+ 	public List<WebElement> getRemoveGc() {
+ 		return removeGc;
+ 	}
+//check gift card bal 
+ 	@FindBy(xpath = "//div[contains(@class,'balance success')]")
+ 	WebElement giftCardBalMsg;
+ 	public WebElement getGiftCardBalMsg() {
+ 		return giftCardBalMsg;
+ 	}
+ 	
  	@FindBy(xpath = "//div[contains(text(),'Insufficient Gift Certificate balance')]")
  	List<WebElement> insufficientGiftCodeBalError;
  	public List<WebElement> getInsufficientGiftCodeBalError() {
@@ -661,6 +692,128 @@ public class PaymentPage extends baseClass{
  	public List<WebElement> getGiftCertificateLabel() {
  		return giftCertificateLabel;
  	}
+ 	
+
+ 	@FindBy(xpath = "//div[contains(text(),'Please enter a gift certificate code.')]")
+ 	List<WebElement> enterGiftCodeErrorMsg;
+ 	public List<WebElement> getEnterGiftCodeErrorMsg() {
+ 		return enterGiftCodeErrorMsg;
+ 	}
+ 	
+
+ 	@FindBy(xpath = "//div[contains(text(),'Please enter a Phone Number.')]")
+ 	List<WebElement> billingPhoneNumberError;
+ 	public List<WebElement> getBillingPhoneNumberError() {
+ 		return billingPhoneNumberError;
+ 	}
+ 	
+ 	//paypal
+
+ 	@FindBy(xpath = "img[title='PayPal Credit']")
+ 	List<WebElement> brainPaypalAcc;
+ 	public List<WebElement> getBrainPaypalAcc() {
+ 		return brainPaypalAcc;
+ 	}
+ 	
+	@FindBy(xpath = "(//div[contains(@class, 'salesforce-paymentrequest-element')])[1]")
+ 	List<WebElement> salesforcePaypalList;
+ 	public List<WebElement> getSalesforcePaypalList() {
+ 		return salesforcePaypalList;
+ 	}
+ 	
+	@FindBy(xpath = "(//div[contains(@class, 'salesforce-paymentrequest-element')])[1]")
+ 	WebElement salesforcePaypal;
+ 	public WebElement getSalesforcePaypalButton() {
+ 		return salesforcePaypal;
+ 	}
+ 	@FindBy(xpath = "//img[@alt='PayPal Credit']")
+    WebElement brainTreePaypalButton;
+ 	public WebElement getBrainTreePaypalButton() {
+ 		return brainTreePaypalButton;
+ 	}
+ 	
+ 	 @FindBy(xpath = "//input[@name='login_email']")
+     List<WebElement> emailLoginList;
+ 	public List<WebElement> getEmailLoginList() {
+  		return emailLoginList;
+  	}
+ 	
+ 	@FindBy(xpath = "//input[@name='login_email']")
+     WebElement emailLogin;
+ 	public WebElement getEmailLogin() {
+  		return emailLogin;
+  	}
+
+     @FindBy(css = "#btnNext")
+     List<WebElement> nextButtonList;
+ 	public List<WebElement> getNextButtonList() {
+  		return nextButtonList;
+  	}
+
+ 	@FindBy(css = "#btnNext")
+     WebElement nextButton;
+ 	public WebElement getNextButton() {
+  		return nextButton;
+  	}
+ 		
+     @FindBy(xpath = "//input[@id='password']")
+     List<WebElement> passwordList;
+ 	public List<WebElement> getPasswordList() {
+  		return passwordList;
+  	}
+
+ 	@FindBy(xpath = "//input[@id='password']")
+     WebElement password;
+ 	public WebElement getPassword() {
+  		return password;
+  	}
+     @FindBy(xpath = "//button[contains(text(), 'Log In')]")
+     List<WebElement> loginbuttonList;
+ 	public List<WebElement> getloginbuttonList() {
+  		return loginbuttonList;
+  	}
+ 	
+ 	@FindBy(xpath = "//button[contains(text(), 'Log In')]")
+     WebElement loginbutton;
+ 	public WebElement getloginbutton() {
+  		return loginbutton;
+  	}
+     @FindBy(xpath = "(//div[@class='FundingInstrument_item_3lQ2z'])[3]")
+     WebElement cardParentDiv;
+     
+     @FindBy(xpath = "changeShippingAddress")
+     List<WebElement> changeTheAddressList;
+
+     @FindBy(id = "payment-submit-btn")
+     List<WebElement> reviewOrderButtonList;
+ 	public List<WebElement> getReviewOrderButtonList() {
+  		return reviewOrderButtonList;
+  	}
+     
+ 	@FindBy(id = "payment-submit-btn")
+     WebElement reviewOrderButton;
+ 	public WebElement getReviewOrderButton() {
+  		return reviewOrderButton;
+  	}
+ 	
+ 	@FindBy(xpath= "//button[contains(text(), 'Complete Purchase')]")
+     WebElement completePurcharseButton;
+ 	public WebElement getCompletePurcharseButton() {
+  		return completePurcharseButton;
+  	}
+ 	
+     @FindBy(xpath = "//button[contains(text(), 'Save and Continue')]")
+     List<WebElement> saveAndContinueList;
+ 	public List<WebElement> getSaveAndContinueList() {
+  		return saveAndContinueList;
+  	}
+     
+ 	@FindBy(xpath = "//button[contains(text(), 'Save and Continue')]")
+     WebElement saveAndContinue;
+ 	public WebElement getSaveAndContinue() {
+  		return saveAndContinue;
+  	}
+ 	
 }
 
 

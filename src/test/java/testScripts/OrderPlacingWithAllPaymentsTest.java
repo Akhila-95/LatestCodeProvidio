@@ -9,26 +9,29 @@ import tasks.PlaceOrderWithDifferentPayments;
 public class OrderPlacingWithAllPaymentsTest extends baseClass{
 
 	@Test(groups = {"smoke", "regression"})
-    public void VerifingOrderIsPlacingWithCreditCard() throws Exception {
+    public void verifingOrderIsPlacingWithCreditCard() throws Exception {
 		PlaceOrderWithDifferentPayments.OrderPlacingWithCreditCard();
     }
 	
-	//@Test(groups = {"smoke", "regression"})
-    public void VerifingOrderIsPlacingWithPayPal() throws Exception {
-		PlaceOrderWithDifferentPayments.OrderPlacingWithpayPal();
-    }
+
     
 	@Test(groups = {"smoke", "regression"})
-    public void VerifingOrderIsPlacingWithGiftCard() throws Exception {
+    public void verifingOrderIsPlacingWithGiftCard() throws Exception {
 		PlaceOrderWithDifferentPayments.OrderPlacingWithGiftCard();
     }
 	@Test(groups = {"smoke", "regression"})
-    public void VerifingOrderIsPlacingWithCombinationOfGcAndCreditCard() throws Exception {
+    public void verifingOrderIsPlacingWithCombinationOfGcAndCreditCard() throws Exception {
 		PlaceOrderWithDifferentPayments.OrderPlacingWithCombinationOfGcAndCreditCard();
+    }
+
+	
+	@Test(groups = {"smoke", "regression"})
+    public void verifingOrderIsPlacingWithPaypalFromCheckoutPage() throws Exception {
+		PlaceOrderWithDifferentPayments.orderPlacingWithPaypalFromCheckoutPage();
     }
 	
 	@Test(groups = {"smoke", "regression"})
-    public void VerifingOrderIsPlacingWithGiftCode() throws Exception {
-		PlaceOrderWithDifferentPayments.OrderPlacingWithGiftCard();
+    public void verifingOrderIsPlacingWithCombinationOfGcAndPaypal() throws Exception {
+		PlaceOrderWithDifferentPayments.OrderPlacingWithCombinationOfGcAndPaypal();
     }
 }

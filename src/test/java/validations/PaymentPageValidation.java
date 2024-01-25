@@ -622,4 +622,115 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 				 test.fail("No Gc code got redeemed and no message is displayed  as Your order has been paid using gift certificates message");
 			}
 		}
+		
+		public static void partialRedemptionOfGcValidation() throws InterruptedException {
+			if(Actionsss.getSizeOfList(pp.getsuccessGiftCodeRedemptionMsg())==1) {
+				 logger.info("One Gc code is redeemed ");	
+				 test.pass("One Gc code is redeemed ");
+			}else{
+				 logger.info("No Gc code is redeemed ");	
+				 test.fail("No Gc code is redeemed ");
+			}
+		}
+		
+		public static void enterGiftCodeErrorMsgValidation() throws InterruptedException {
+			test.info("Verifying the Please enter a gift certificate code message when no gc is entered");
+			if(Actionsss.elementSize(pp.getEnterGiftCodeErrorMsg())) {
+				 logger.info("Please enter a gift certificate code is displayed");	
+				 test.pass("Please enter a gift certificate code is displayed");
+			}else{
+				logger.info("No Please enter a gift certificate code is displayed");	
+				 test.fail("No Please enter a gift certificate code is displayed");
+			}			
+		}
+		
+		public static void invalidGiftCodeErrorMsgValidation() throws InterruptedException {
+			test.info("Verifying the Invalid Gift Certificate Code when invalid gc is entered");
+			if(Actionsss.elementSize(pp.getInvalidGcError())) {
+				 logger.info("Invalid Gift Certificate Code is displayed.");	
+				 test.pass("Invalid Gift Certificate Code is displayed.");
+			}else{
+				logger.info("No Invalid Gift Certificate Code is displayed.");	
+				 test.fail("No Invalid Gift Certificate Code is displayed.");
+			}			
+		}
+		
+		public static void insufficientGiftCodeErrorMsgValidation() throws InterruptedException {
+			test.info("Verifying the insufficient Gift Certificate Code when no balance in gc is entered");
+			if(Actionsss.elementSize(pp.getInsufficientGiftCodeBalError())) {
+				 logger.info("Insufficient Gift Certificate balance is displayed.");	
+				 test.pass("Insufficient Gift Certificate balance is displayed.");
+			}else{
+				logger.info("No Insufficient Gift Certificate balance is displayed.");	
+				 test.fail("No Insufficient Gift Certificate balance is displayed.");
+			}			
+		}
+		
+		public static void checkBalOfValidGiftCodeValidation() throws InterruptedException {
+			test.info("Verifying the check bal Gift Certificate Code when valid  gc is entered");
+			if(Actionsss.elementSize(pp.getGiftCardBalMsgList())) {
+				 logger.info("Check the balance message in gc  is displayed, bal in gc are " +Actionsss.getTextOfElement(pp.getGiftCardBalMsg()));	
+				 test.pass("Check the balance message in gc  is displayed, bal in gc are " +Actionsss.getTextOfElement(pp.getGiftCardBalMsg()));
+			}else{
+				 logger.info("No Check the balance message in gc  is displayed");	
+				 test.fail("No Check the balance message in gc  is displayed.");
+			}			
+		}
+		
+		public static void checkBalOfInvalidGiftCodeValidation() throws InterruptedException {
+			test.info("Verifying the error message for checking balance of invalid gc code ");
+			if(Actionsss.elementSize(pp.getInvalidGcError() )) {
+				 logger.info("The error message for checking balance of invalid gc code is displayed");	
+				 test.pass("The error message for checking balance of invalid gc code is displayed");
+			}else{
+				 logger.info("The error message for checking balance of invalid gc code is displayed");	
+				 test.fail("The error message for checking balance of invalid gc code is displayed");
+			}			
+		}
+		
+		public static void succesMsgForValidGcAppliedValidation() throws InterruptedException {
+			test.info("Verifying the success message when a valid Gc is applied ");
+			if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsg())) {
+				 logger.info("Success message is displayed when a valid Gc is applied ");	
+				 test.pass("Success message is displayed when a valid Gc is applied ");
+			}else{
+				 logger.info("No Success message is displayed when a valid Gc is applied ");	
+				 test.fail("No Success message is displayed when a valid Gc is applied ");
+			}	
+		}
+		
+		public static void gcBelongsToDifferentCutomerErrorValidation() throws InterruptedException {
+			test.info("Verifying the success message when a valid Gc is applied ");
+			if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsg())) {
+				 logger.info("Success message is displayed when a valid Gc is applied ");	
+				 test.pass("Success message is displayed when a valid Gc is applied ");
+			}else{
+				 logger.info("No Success message is displayed when a valid Gc is applied ");	
+				 test.fail("No Success message is displayed when a valid Gc is applied ");
+			}	
+		}
+		
+		public static void gcRemoveValidation() throws InterruptedException {
+			test.info("Verifying the removal of Gc when a valid Gc is applied ");
+			
+			if(!(countOfGcApplied==countOfGcAppliedAfterItsRemoval)) {
+				 logger.info("Successfully applied gc is removed  ");	
+				 test.pass("Successfully applied gc is removed");
+			}else{
+				 logger.info("No Successfully applied gc is removed ");	
+				 test.fail("No Successfully applied gc is removed ");
+			}	
+		}
+		
+		public static void billingPhoneNumberErrorValidation() throws InterruptedException {
+			test.info("Verifying the billing phone number when it is not entered and by entering credit card details clicks on review  orderbutton or place order button ");
+			
+			if(Actionsss.elementSize(pp.getBillingPhoneNumberError())) {
+				 logger.info("Successfully billing number error message is displayed ");	
+				 test.pass("Successfully billing number error message is displayed ");
+			}else{
+				 logger.info("No billing number error message is displayed ");	
+				 test.fail("No billing number error message is displayed ");
+			}	
+		}
 	}

@@ -74,6 +74,10 @@ public class baseClass {
 		protected  static String  prevoiusBillingPhoneNumber= "";
 		protected  static String   editedBillingPhoneNumber= "";
 		
+		// count of gc applied
+		protected  static int   countOfGcApplied= 0;
+		protected  static int   countOfGcAppliedAfterItsRemoval= 0;
+		
 		// Excel file locations
 		public  static String GiftCerificateCodeforGc = readconfig.GiftCerificateCodeforGc(); // Gift certificate code for Gift Card
 		public  static String GiftCerificateCodeCombination = readconfig.GiftCerificateCodeCombination();
