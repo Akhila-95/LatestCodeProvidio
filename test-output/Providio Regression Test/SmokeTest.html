@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>SmokeTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jan 25 18:15:03 IST 2024</td>
+<td>Started on:</td><td>Wed Jan 31 17:18:12 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>695 seconds (695898 ms)</td>
+<tr><td>Total time:</td><td>72 seconds (72459 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,65 +76,47 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndPaypal()'><b>verifingOrderIsPlacingWithCombinationOfGcAndPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
-<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : No details available for input: &quot;345&quot;}
-  (Session info: chrome=120.0.6099.225): No details available for input: &quot;345&quot;
+<td title='testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage()'><b>verifyingTheEditPaymentToPaypalFromPlaceOrderPage</b><br>Test class: testScripts.PlaceOrderTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;alert alert-success add-to-basket-alert text-center&apos;] (tried for 30 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8f6e98d23343ca90aeabe7cabc8a997a, findElement {using=xpath, value=//input[@id=&apos;shippingAddressOnedefault&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.225, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51992}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51992/devtoo..., se:cdpVersion: 120.0.6099.225, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8f6e98d23343ca90aeabe7cabc8a997a
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy17.getAttribute(Unknown Source)
-	at functionality.Actionsss.addressFromDropDown(Actionsss.java:291)
-	at data.AddressSelection.Address(AddressSelection.java:30)
-	at tasks.CheckOutPage2Tasks.enterValidAddress(CheckOutPage2Tasks.java:125)
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:261)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at validations.ProductListingPageValidations.validatingProductisAddtoCart(ProductListingPageValidations.java:123)
+	at tasks.ProductListingPageTasks.quickShop(ProductListingPageTasks.java:75)
+	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:30)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:132)
 	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-	at tasks.PaymentPageTasks.gcRedemptionInCombinationWithPaypal(PaymentPageTasks.java:389)
-	at tasks.PlaceOrderWithDifferentPayments.OrderPlacingWithCombinationOfGcAndPaypal(PlaceOrderWithDifferentPayments.java:110)
-	at testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndPaypal(OrderPlacingWithAllPaymentsTest.java:35)
+	at tasks.PaymentPageTasks.gcRedemption(PaymentPageTasks.java:418)
+	at tasks.PlaceOrderPageTask.placeOrderPage(PlaceOrderPageTask.java:26)
+	at tasks.PlaceOrderPageTask.editPaymentToPaypal(PlaceOrderPageTask.java:139)
+	at testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage(PlaceOrderTest.java:12)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1272615921", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1272615921'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : No details available for input: &quot;345&quot;}
-  (Session info: chrome=120.0.6099.225): No details available for input: &quot;345&quot;
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1321433666", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1321433666'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;alert alert-success add-to-basket-alert text-center&apos;] (tried for 30 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8f6e98d23343ca90aeabe7cabc8a997a, findElement {using=xpath, value=//input[@id=&apos;shippingAddressOnedefault&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.225, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51992}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51992/devtoo..., se:cdpVersion: 120.0.6099.225, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8f6e98d23343ca90aeabe7cabc8a997a
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy17.getAttribute(Unknown Source)
-	at functionality.Actionsss.addressFromDropDown(Actionsss.java:291)
-	at data.AddressSelection.Address(AddressSelection.java:30)
-	at tasks.CheckOutPage2Tasks.enterValidAddress(CheckOutPage2Tasks.java:125)
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:261)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at validations.ProductListingPageValidations.validatingProductisAddtoCart(ProductListingPageValidations.java:123)
+	at tasks.ProductListingPageTasks.quickShop(ProductListingPageTasks.java:75)
+	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:30)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:132)
 	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-	at tasks.PaymentPageTasks.gcRedemptionInCombinationWithPaypal(PaymentPageTasks.java:389)
-	at tasks.PlaceOrderWithDifferentPayments.OrderPlacingWithCombinationOfGcAndPaypal(PlaceOrderWithDifferentPayments.java:110)
-	at testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndPaypal(OrderPlacingWithAllPaymentsTest.java:35)
+	at tasks.PaymentPageTasks.gcRedemption(PaymentPageTasks.java:418)
+	at tasks.PlaceOrderPageTask.placeOrderPage(PlaceOrderPageTask.java:26)
+	at tasks.PlaceOrderPageTask.editPaymentToPaypal(PlaceOrderPageTask.java:139)
+	at testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage(PlaceOrderTest.java:12)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -164,8 +146,8 @@ Session ID: 8f6e98d23343ca90aeabe7cabc8a997a
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>78</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@33899f7a</td></tr>
+<td>58</td>
+<td>testScripts.PlaceOrderTest@15400fff</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -176,60 +158,15 @@ Session ID: 8f6e98d23343ca90aeabe7cabc8a997a
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCreditCard()'><b>verifingOrderIsPlacingWithCreditCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td title='testScripts.FindAStoreTest.verifyFindAStore()'><b>verifyFindAStore</b><br>Test class: testScripts.FindAStoreTest</td>
 <td></td>
-<td>22</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@33899f7a</td></tr>
-<tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithGiftCard()'><b>verifingOrderIsPlacingWithGiftCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
-<td></td>
-<td>146</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@33899f7a</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingCheckBalanceOfValidGc()'><b>verifyingCheckBalanceOfValidGc</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>7</td>
-<td>testScripts.PaymentPageTest@4b6d92e</td></tr>
-<tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndCreditCard()'><b>verifingOrderIsPlacingWithCombinationOfGcAndCreditCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
-<td></td>
-<td>136</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@33899f7a</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingCheckBalanceOfInvalidGcErrorMsg()'><b>verifyingCheckBalanceOfInvalidGcErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>6</td>
-<td>testScripts.PaymentPageTest@4b6d92e</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingInvalidGcErrorMsg()'><b>verifyingInvalidGcErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>6</td>
-<td>testScripts.PaymentPageTest@4b6d92e</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingRemovalOfAppliedGc()'><b>verifyingRemovalOfAppliedGc</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>10</td>
-<td>testScripts.PaymentPageTest@4b6d92e</td></tr>
+<td>0</td>
+<td>testScripts.FindAStoreTest@26cb5207</td></tr>
 <tr>
 <td title='browser.launchBrowsering.verifyHomePageLaunching()'><b>verifyHomePageLaunching</b><br>Test class: browser.launchBrowsering</td>
 <td></td>
-<td>5</td>
-<td>browser.launchBrowsering@60cf62ad</td></tr>
-<tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithPaypalFromCheckoutPage()'><b>verifingOrderIsPlacingWithPaypalFromCheckoutPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
-<td></td>
-<td>164</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@33899f7a</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingEnterGiftCodeErrorMsg()'><b>verifyingEnterGiftCodeErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>95</td>
-<td>testScripts.PaymentPageTest@4b6d92e</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingSuccesMessageForValidGcApplied()'><b>verifyingSuccesMessageForValidGcApplied</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>6</td>
-<td>testScripts.PaymentPageTest@4b6d92e</td></tr>
+<td>7</td>
+<td>browser.launchBrowsering@55e42449</td></tr>
 </table><p>
 </body>
 </html>

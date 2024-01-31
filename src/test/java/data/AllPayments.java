@@ -56,7 +56,8 @@ public class AllPayments extends baseClass{
         int randomIndex = rand.nextInt(cardNumbers.length);
         // Send the randomly selected card number
 		Actionsss.sendKeys(pp.getBrainTreeCardNum(),cardNumbers[randomIndex],cardNum);
-		   test.info("Entered card number");
+		creditCardNumber=cardNum;
+		test.info("Entered card number");
 		driver.switchTo().defaultContent();
 	}
 	
@@ -117,6 +118,7 @@ public class AllPayments extends baseClass{
 	        Actionsss.sendKeys(pp.getSalesforceCardNumber(),cardNumbers[randomIndex],cardNum);
 			String cardNumber = pp.getSalesforceCardNumber().getAttribute("value");
 			test.info("Credit card number entered is " + cardNumber);
+			creditCardNumber= cardNumber;
 			driver.switchTo().defaultContent();
 	}
 	public  void salesforceExpDate() throws InterruptedException {
@@ -139,7 +141,7 @@ public class AllPayments extends baseClass{
 		Actionsss.sendKeys(pp.getSalesforceCvv(), "345",creditCardCvv);
 		String cvv = pp.getSalesforceCvv().getAttribute("value");
 		test.info("Credit card cvv entered is " +cvv);
-		driver.switchTo().defaultContent();
+		 driver.switchTo().defaultContent();
 	}
 
 	
@@ -163,8 +165,8 @@ public class AllPayments extends baseClass{
         int randomIndex = random.nextInt(cardNumbers.length);
         // Send the randomly selected card number
         test.info("Credit card number entered is " + cardNumbers[randomIndex]);
-     Actionsss.sendKeys(pp.getStripeCardNumber(),cardNumbers[randomIndex],cardNum);
- 	 
+        Actionsss.sendKeys(pp.getStripeCardNumber(),cardNumbers[randomIndex],cardNum);
+        creditCardNumber=cardNum;
  
 	}
 	
@@ -328,10 +330,10 @@ public class AllPayments extends baseClass{
 	    public void cardNumberInAdyenPayment() throws Exception {
 	    	//card number 
 			String[] cardNumbers = {
-	  			 	 "3700 0000 0000 002",
+	  			 	// "3700 0000 0000 002",
 			         "3700 0000 0100 018",
-			         "4035 5010 0000 0008",
-			         "4360 0000 0100 0005",
+			        // "4035 5010 0000 0008",
+			       //  "4360 0000 0100 0005",			        
 	          };
 			
 		     int randomIndex = rand.nextInt(cardNumbers.length);
@@ -341,6 +343,7 @@ public class AllPayments extends baseClass{
 		     Actionsss.clearText(pp.getAdyenCardNumInput());
 		     Actionsss.sendKeys(pp.getAdyenCardNumInput(),cardNumbers[randomIndex],cardNum);
 		     driver.switchTo().defaultContent();
+		     creditCardNumber=cardNum;
 	    }
 	    
 		public  void expDateInAdyen() throws Exception {

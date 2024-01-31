@@ -83,4 +83,13 @@ public class ProductListingPageTasks extends baseClass{
 			PLP.selectRandomProduct();
 			ProductListingPageValidations.verifyPLPProductClick();
 		}
+		
+		//addTocartsBtns
+		public static void gpsProducts() throws Exception{		
+			//Actionsss.click(homePage.getCookies_Yes_Btn());
+			homePage.selectGpsNavigation();
+			Thread.sleep(4000);
+			PLP.selectRandomProduct();
+			ProductListingPageValidations.verifyPLPProductClick();
+		}
 }

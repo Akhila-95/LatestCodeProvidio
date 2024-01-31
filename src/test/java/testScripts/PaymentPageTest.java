@@ -5,9 +5,40 @@ import org.testng.annotations.Test;
 import com.providio.testcases.baseClass;
 
 import tasks.PaymentPageTasks;
+import tasks.ShippingPageTasks;
 
 public class PaymentPageTest extends baseClass{
 
+	@Test
+	public  void verifyingTheCustomerInfoInPaymntPage() throws InterruptedException, Exception {
+		PaymentPageTasks.getCutomerInfoInPaymentPage();
+	}
+	
+	@Test
+	public void verifyingPaginationOfProductsInPaymentPage() throws Exception {
+		PaymentPageTasks.paginationOfProductsInPaymentPage();
+	}
+	
+
+	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	public void verifyingOrderSummaryDisplayInPaymentPage() throws Exception {
+		PaymentPageTasks.getOrderSummary();
+	}
+	
+	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	public void verifyingPaymentInfoDisplayInPaymentPage() throws Exception {
+		PaymentPageTasks.getPaymentForm();
+	}
+	
+	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	public void verifyingEtgLogoDisplayInPaymentPage() throws Exception {
+		PaymentPageTasks.getEtgLogo();
+	}
+	
+	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	public void verifyingBackToCartInPaymentPage() throws Exception {
+		PaymentPageTasks.getBackToCart();
+	}
 	@Test
 	public static void verifyingEditShippingAddress() throws Exception {
 		PaymentPageTasks.editShippindAddressAndUpdate();
@@ -36,16 +67,13 @@ public class PaymentPageTest extends baseClass{
 	public static void verifyingEditPhoneNumberInBillingAddress() throws Exception {
 		PaymentPageTasks.editPhoneNumber();
 	}
-	
-	@Test
-	public static void verifyingPaginationOfProductsFromPaymentPage() throws Exception {
-		PaymentPageTasks.paginationOfProductsFromPaymentPage();
-	}
+
 	
 	@Test
 	public static void verifyingBillingPhoneNumberError() throws Exception {
 		PaymentPageTasks. billingPhoneNumber();
 	}
+	
 	//payment
     @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
     public void verifyingAllTheErrorsInCreditCard() throws Exception {
@@ -58,6 +86,7 @@ public class PaymentPageTest extends baseClass{
         
     	PaymentPageTasks.CreditCardCvvAndExpErrorMessage();
     }
+    
     @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
     public void verifyingCvvErrorInCreditCard() throws Exception {
         
@@ -69,6 +98,7 @@ public class PaymentPageTest extends baseClass{
         
     	PaymentPageTasks.creditcardNumberInValidError() ;
     }
+    
     @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
     public void verifyingCreditCardExpDateInValid() throws Exception {
         
@@ -139,13 +169,5 @@ public class PaymentPageTest extends baseClass{
     	PaymentPageTasks.removeAppliedGc();
     }
         
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-    public void verifyingGcRedemption() throws Exception {       
-    	PaymentPageTasks.gcRedemption();
-    	
-    }
- 
-    
-    
     
 }

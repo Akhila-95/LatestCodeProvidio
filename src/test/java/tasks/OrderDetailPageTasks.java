@@ -22,6 +22,7 @@ public class OrderDetailPageTasks extends baseClass{
 
 	public static void getOrderConfirmationPage() throws Exception {
 		OrderConfimrationPage();
+		Actionsss.scrollWindowsByPixel(400);
 		OrderPageValidation.validatePlacetheOrderPage();
 		OrderPageValidation.orderNumberAndOrderDate();
 	}

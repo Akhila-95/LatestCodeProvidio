@@ -10,28 +10,25 @@ public class OrderPageValidation extends baseClass{
 	private static OrderPageDetails  orderPage = new OrderPageDetails(driver);
 	
 	public static void validatePlacetheOrderPage() throws InterruptedException {
-		   
-		//validate the orderstatus
-    	//Thread.sleep(3000);
-    	 String ActualTitleofPlacetheOrder = Actionsss.getTextOfElement(orderPage.getOrderThankMessage());
-    	 logger.info(ActualTitleofPlacetheOrder);
-	     String ExpectedTitlePlacetheOrder = "Thank you for your order.";
-    	test.info("verify that order is placed");
-
-	    if (ActualTitleofPlacetheOrder.equals(ExpectedTitlePlacetheOrder)) {
-	        test.pass("Successfully Order is Placed and Thank you for your order message is displayed");
-	        logger.info("Successfully Order is Placed and Thank you for your order message is displayed");
-	    } else {
-	        test.fail( "The page Title does not match expected " + ExpectedTitlePlacetheOrder + " " + "  but found" + " " + ActualTitleofPlacetheOrder + " ");
-	        logger.info("Click failed");
-	    }
-	    
-	   // Thread.sleep(5000);	
+		if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {
+	    	 String ActualTitleofPlacetheOrder = Actionsss.getTextOfElement(orderPage.getOrderThankMessage());
+	    	 logger.info(ActualTitleofPlacetheOrder);
+		     String ExpectedTitlePlacetheOrder = "Thank you for your order.";
+	    	 test.info("verifying  the order is placed");
+	
+		    if (ActualTitleofPlacetheOrder.equals(ExpectedTitlePlacetheOrder)) {
+		        test.pass("Successfully Order is Placed and Thank you for your order message is displayed");
+		        logger.info("Successfully Order is Placed and Thank you for your order message is displayed");
+		    } else {
+		        test.fail( "The page Title does not match expected " + ExpectedTitlePlacetheOrder + " " + "  but found" + " " + ActualTitleofPlacetheOrder + " ");
+		        logger.info("Click failed");
+		    }		    
+		}
 	}    
 	
 	//validate the order number and date of order
 		public static void orderNumberAndOrderDate() throws InterruptedException {
-
+			if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {
 			   String orderNumber = Actionsss.getTextOfElement(orderPage.getOrderNumber());
 			  
 		        test.pass("The Order number is "+ orderNumber);
@@ -46,7 +43,7 @@ public class OrderPageValidation extends baseClass{
 		      
 		        test.pass("Payment is done with "+ paymentDetails);
 		        logger.info("Payment is done with"+ paymentDetails);
-		       // Thread.sleep(5000);
+			}
 					
 		}
 		

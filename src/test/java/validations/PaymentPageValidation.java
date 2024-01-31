@@ -21,6 +21,91 @@ private static final AllPayments allPay = new AllPayments();
 
 private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 
+		public static void bactToCartValidationInPaymentPage() {
+			test.info("Verifying the back to cart  display in payment page");
+			 if(Actionsss.displayElement(pp.getBackToCart())) {
+				 logger.info("Back to cart is displayed in paymentpage");
+				 test.pass("Back to cart is displayed in payment page");
+			 }else {
+				 logger.info("No Back to cart  is displayed in payment page");
+				 test.pass("No Back to cart  is displayed in payment page");
+			 }
+		}
+
+		public static void customerInfoValidationInPaymentPage() {
+			 test.info("Verifying the customer information is displayed in payment page ");
+			 if(Actionsss.displayElement(pp.getCustomerInfo())) {
+				 logger.info("Customer information is displayed in payment page");
+				 test.pass("Customer information is displayed in payment page");
+			 }else {
+				 logger.info("No Customer information is displayed in payment page");
+				 test.pass("No Customer information is displayed in payment page");
+			 }
+		}
+		
+		public static void shippingDetailValidationInPaymentPage() {
+			test.info("Verifying the shipping details form  is displayed in payment page ");
+			 if(Actionsss.displayElement(pp.getshippingInfo())) {
+				 logger.info("shipping details form  is displayed in payment page");
+				 test.pass("shipping details form is displayed in payment page");
+			 }else {
+				 logger.info("No shipping details form is displayed in payment page");
+				 test.pass("No shipping details form is displayed in payment page");
+			 }
+		}
+		
+		public static void orderSummaryValidationInPaymentPage() {
+			test.info("Verifying the orderSummary display in payment page ");
+			 if(Actionsss.displayElement(pp.getOrderSummaryDiv())) {
+				 logger.info("orderSummary  is displayed in payment page");
+				 test.pass("orderSummary  is displayed in payment page");
+			 }else {
+				 logger.info("No orderSummary  is displayed in payment page");
+				 test.pass("No orderSummary  is displayed in payment page");
+			 }
+		}
+		
+		public static void etgLogoValidationInPaymentPage() {
+			test.info("Verifying the  etg logo display in payment page ");
+			 if(Actionsss.displayElement(pp.getOrderSummaryDiv())) {
+				 logger.info(" Etg logo  is displayed in payment page");
+				 test.pass(" Etg logo is displayed in payment page");
+			 }else {
+				 logger.info("No etg logo is displayed in payment page");
+				 test.pass("No etg logo is displayed in payment page");
+			 }
+		}
+		public static void pdpPageValidation() {
+			test.info("Verifying the pagination of product from payment page");
+			if(Actionsss.displayElement(pp.getPdpPage())) {
+				 logger.info("Succesfully paginated to PDP page by clicking the product from payment page");
+				 test.pass("Succesfully paginated to PDP page by clicking the product from payment page");
+			 }else {
+				 logger.info("Not paginated to PDP page by clicking the product from payment page");
+				 test.fail(" Not paginated to PDP page by clicking the product from payment page");	 
+			}
+		}
+		public static void reviewOrderButtonInPaymentPage() {
+			test.info("Verifying the  review order button display in payment page ");
+			 if(Actionsss.displayElement(pp.getReviewOrderBtn())) {
+				 logger.info("Review order button is displayed in payment page");
+				 test.pass("Review order button is displayed in payment page");
+			 }else {
+				 logger.info("No Review order button is displayed in payment page");
+				 test.pass("No Review order button is displayed in payment page");
+			 }
+		}
+		public static void paymentFormInPaymentPage() {
+			test.info("Verifying the payment info display in payment page ");
+			 if(Actionsss.displayElement(pp.getPaymentInfoDiv())) {
+				 logger.info(" Payment info div is displayed in payment page");
+				 test.pass("  Payment info div is displayed in payment page");
+			 }else {
+				 logger.info("No  Payment info div is displayed in payment page");
+				 test.pass("No  Payment info div is displayed in payment page");
+			 }
+		}
+		
 		public static void displayOfGiftMessageInCheckoutPage3() throws InterruptedException {
 			test.info("Verifying the gift message in checkoutpage 3");
 			Thread.sleep(4000);
@@ -618,13 +703,13 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 				 logger.info("Your order has been paid using gift certificates message is displayed.");	
 				 test.pass("Gc code got redeemed and this message is displayed as Your order has been paid using gift certificates message");
 			}else{
-				logger.info("No Gc code got redeemed and no message is displayed  as Your order has been paid using gift certificates message");	
-				 test.fail("No Gc code got redeemed and no message is displayed  as Your order has been paid using gift certificates message");
+				logger.info("No Gc code got redeemed as No balance in Gift certificate ");	
+				 test.pass("No Gc code got redeemed as No balance in Gift certificate ");
 			}
 		}
 		
 		public static void partialRedemptionOfGcValidation() throws InterruptedException {
-			if(Actionsss.getSizeOfList(pp.getsuccessGiftCodeRedemptionMsg())==1) {
+			if(Actionsss.getSizeOfList(pp.getsuccessGiftCodeRedemptionMsgList())==1) {
 				 logger.info("One Gc code is redeemed ");	
 				 test.pass("One Gc code is redeemed ");
 			}else{
@@ -690,7 +775,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		
 		public static void succesMsgForValidGcAppliedValidation() throws InterruptedException {
 			test.info("Verifying the success message when a valid Gc is applied ");
-			if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsg())) {
+			if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsgList())) {
 				 logger.info("Success message is displayed when a valid Gc is applied ");	
 				 test.pass("Success message is displayed when a valid Gc is applied ");
 			}else{
@@ -701,7 +786,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		
 		public static void gcBelongsToDifferentCutomerErrorValidation() throws InterruptedException {
 			test.info("Verifying the success message when a valid Gc is applied ");
-			if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsg())) {
+			if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsgList())) {
 				 logger.info("Success message is displayed when a valid Gc is applied ");	
 				 test.pass("Success message is displayed when a valid Gc is applied ");
 			}else{

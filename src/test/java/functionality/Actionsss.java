@@ -295,6 +295,31 @@ public class Actionsss extends baseClass{
 		        test.info("The address entered is " + shippingaddress);
 		    }
 		    
+		    // Enter a random address from a dropdown
+		    public static void updateShippingAddress(WebElement locatorName) throws InterruptedException {
+		    	locatorName.clear();
+		    	Thread.sleep(1000);
+		        Random random = new Random();
+		        String randomNumber = "456"; // Generates a random number between 100 and 999
+		    //    random.nextInt(900) + 100;
+		       // addresses = String.valueOf(randomNumber);
+		        
+		        locatorName.sendKeys(randomNumber);
+		        Thread.sleep(2000);
+		        // to perform the keyboard activities
+		        WebElement shipping = driver.switchTo().activeElement();
+
+		        Thread.sleep(1000);
+		        shipping.sendKeys(Keys.ARROW_DOWN);
+		      //  shipping.sendKeys(Keys.ENTER);
+
+		        String shippingaddress = locatorName.getAttribute("value");
+		       // previousAddresses=shippingaddress;
+		        System.out.println("The address entered is " +  previousAddresses);
+		        logger.info("The address entered is " + shippingaddress);
+		        test.info("The address entered is " + shippingaddress);
+		    }
+		    
 		    
 		    // Enter a random address from a dropdown
 		    public static void editAddress(WebElement locatorName) throws InterruptedException {
@@ -363,10 +388,13 @@ public class Actionsss extends baseClass{
 		    public  static void randomElementFromList(List<WebElement> e) throws InterruptedException {
 				// Use the Random class to generate a random index
 		        Random random = new Random();
-		        int randomIndex = random.nextInt(e.size());
-		        WebElement randomElement= e.get(randomIndex);
+		        // Ensure that the random index is non-negative
+		        int randomIndex = Math.abs(random.nextInt(e.size()));
+		        
+		        WebElement randomElement = e.get(randomIndex);
 		        Thread.sleep(2000);
-		        CombinedClick(randomElement);			
+		        CombinedClick(randomElement);
+		        Thread.sleep(1000);
 			}
 		    
 		    

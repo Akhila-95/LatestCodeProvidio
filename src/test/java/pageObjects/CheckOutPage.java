@@ -25,11 +25,17 @@ public class CheckOutPage extends baseClass{
 	}
 	
 	//Guest login btn
-		@FindBy(xpath ="//button[contains(text(), 'Guest Checkout')]")
-		List<WebElement> GuestCheckoutBtnList; 
-		public List<WebElement> getSelectGuestCheckoutBtnList(){
-			return GuestCheckoutBtnList;
-		}
+	@FindBy(xpath ="//button[contains(text(), 'Guest Checkout')]")
+	List<WebElement> GuestCheckoutBtnList; 
+	public List<WebElement> getSelectGuestCheckoutBtnList(){
+		return GuestCheckoutBtnList;
+	}
+	
+	@FindBy(xpath ="//div[@data-customer-type='guest']")
+	List<WebElement> guestCheckout; 
+	public List<WebElement> getGuestCheckout(){
+		return guestCheckout;
+	}
 	
 	//Guest login email input
 	@FindBy(xpath ="//input[@id='email-guest']")

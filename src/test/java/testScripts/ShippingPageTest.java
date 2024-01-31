@@ -4,67 +4,83 @@ import org.testng.annotations.Test;
 
 import com.providio.testcases.baseClass;
 
-import tasks.CheckOutPage2Tasks;
+import tasks.ShippingPageTasks;
 
-public class CheckOutPage2Test extends baseClass {
+public class ShippingPageTest extends baseClass {
 
 	@Test
 	public  void verifyingTheCustomerInfoInCheckoutPage2() throws InterruptedException, Exception {
-		CheckOutPage2Tasks.getCutomerInfo();
+		ShippingPageTasks.getCutomerInfo();
 	}
 	
 	@Test
 	public void verifyingEditEmailInCheckoutPage2() throws Exception {
-		CheckOutPage2Tasks.editEmailInCheckoutPage2();
+		ShippingPageTasks.editEmailInCheckoutPage2();
+	}
+	
+	@Test
+	public void verifyingBackToCartFromShippingPage() throws Exception {
+		ShippingPageTasks.getBackToCart();
 	}
 	
 	@Test
 	public void verifyingPaginationOfProductsInCheckOutPage2() throws Exception {
-		CheckOutPage2Tasks.paginationOfProductsInCheckOutPage2();
+		ShippingPageTasks.paginationOfProductsInCheckOutPage2();
 	}
 	
 
 	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyingOrderSummaryDisplayInCheckOutPage2Tasks_Page() throws Exception {
-		CheckOutPage2Tasks.getOrderSummary();
+	public void verifyingOrderSummaryDisplayInShippingPageTasks_Page() throws Exception {
+		ShippingPageTasks.getOrderSummary();
 	}
 	
 	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyingNextPaymentButtonDisplayInCheckOutPage2Tasks_Page() throws Exception {
-		CheckOutPage2Tasks.getNextPaymentButton();
+	public void verifyingNextPaymentButtonDisplayInShippingPageTasks_Page() throws Exception {
+		ShippingPageTasks.getNextPaymentButton();
 	}
+	
 	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyingEtgLogoDisplayInCheckOutPage2Tasks_Page() throws Exception {
-		CheckOutPage2Tasks.getEtgLogo();
+	public void verifyingEtgLogoDisplayInShippingPageTasks_Page() throws Exception {
+		ShippingPageTasks.getEtgLogo();
 	}
 
 	@Test(groups = {"smoke", "regression"})
     public void verifyingAllErrorsInShippingForm() throws Exception {
-		CheckOutPage2Tasks.allErrorsInShippingForm();
+		ShippingPageTasks.allErrorsInShippingForm();
     }	
 
 	@Test(groups = {"smoke", "regression"})
     public void verifyingTheErrorsInFirstName() throws Exception {
-		CheckOutPage2Tasks.firstNameError();
+		ShippingPageTasks.firstNameError();
     }
 	
 	@Test(groups = {"smoke", "regression"})
     public void verifyingTheErrorsInLastName() throws Exception {
-		CheckOutPage2Tasks.lastNameError();
+		ShippingPageTasks.lastNameError();
     }
 	@Test(groups = {"smoke", "regression"})
     public void verifyingTheAddressError() throws Exception {
-		CheckOutPage2Tasks.addressError();
+		ShippingPageTasks.addressError();
     }
 	
 	@Test(groups = {"smoke", "regression"})
     public void verifyingphoneNumberError() throws Exception {
-		CheckOutPage2Tasks.phoneNumberError();
+		ShippingPageTasks.phoneNumberError();
     }
 	@Test(groups = {"smoke", "regression"})
     public void verifyingWithValidShippingAddress() throws Exception {
-		CheckOutPage2Tasks.enterValidAddress();
+		ShippingPageTasks.enterValidAddress();
     }
 	
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingAddNewShippingAddress() throws Exception {
+		ShippingPageTasks.addNewAddress();
+    }
+	
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingUpdateShippingAddress() throws Exception {
+		ShippingPageTasks.updateNewShippingAddress();
+
+	}
 	
 }

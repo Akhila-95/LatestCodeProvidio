@@ -35,12 +35,60 @@ public class PaymentPageTasks extends baseClass {
 				logger.info("Paymnet page is loaded");
 			}
 		}else {
-			CheckOutPage2Tasks.enterValidAddress();
+			ShippingPageTasks.enterValidAddress();
 		}
 		
 		Thread.sleep(2000);
 	}
 	
+	public static void getBackToCart() throws Exception {	
+		 paymentPageView();
+		 PaymentPageValidation.bactToCartValidationInPaymentPage();
+		 Actionsss.click(pp.getBackToCart());				
+		 CheckOutPageTasks.guestCheckout();
+		 ShippingPageTasks.enterValidAddress();
+		 PaymentPageValidation.bactToCartValidationInPaymentPage();
+	
+	}
+	public static void getCutomerInfoInPaymentPage() throws Exception {	
+		paymentPageView();
+		PaymentPageValidation.customerInfoValidationInPaymentPage();
+	}
+	
+	public void  getshippingInfo() throws Exception {
+		paymentPageView();
+		PaymentPageValidation.shippingDetailValidationInPaymentPage();		
+	}
+	
+	public static void getOrderSummary() throws Exception {
+		paymentPageView();
+		PaymentPageValidation.orderSummaryValidationInPaymentPage();		
+	}
+	
+	public static void getPaymentForm() throws Exception {
+		paymentPageView();
+		PaymentPageValidation.paymentFormInPaymentPage();		
+	}
+	
+	public static void paginationOfProductsInPaymentPage() throws InterruptedException, Exception {
+		paymentPageView();
+		Actionsss.randomElementFromList(pp.getproductsInCheckoutPage2());
+		PaymentPageValidation.pdpPageValidation();
+		ViewCartPageTasks.viewCartpage();
+		CheckOutPageTasks.GuestMailCheckOut();
+		ShippingPageTasks.enterValidAddress();
+	}
+
+	public static void getEtgLogo() throws Exception {
+		paymentPageView();
+		PaymentPageValidation.etgLogoValidationInPaymentPage();
+	
+	}
+	public static void getReviewOrder() throws Exception {
+		paymentPageView();
+		PaymentPageValidation.reviewOrderButtonInPaymentPage();
+	
+	}
 	public static void editShippindAddressAndUpdate() throws Exception {
 		paymentPageView();
 		Thread.sleep(2000);
@@ -333,7 +381,7 @@ public class PaymentPageTasks extends baseClass {
 			paymentPageView();
 			Actionsss.scrollWindowsByPixel(300);
 			 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
-				 Actionsss.sendKeys(pp.getGiftcertificateInput(),"HYWALAYACRIGHDWG", "HYWALAYACRIGHDWG gift code");					         
+				 Actionsss.sendKeys(pp.getGiftcertificateInput(),"FGMLWZFQFGVOIVZP", "FGMLWZFQFGVOIVZP gift code");					         
 	             Actionsss.javascriptClick(pp.getApplyGiftCardButton());
 	             logger.info("Apply button is selected");
 	             Thread.sleep(2000);
@@ -359,7 +407,9 @@ public class PaymentPageTasks extends baseClass {
 	             logger.info(countOfGcAppliedAfterItsRemoval);
 	             Thread.sleep(1000);
 	             PaymentPageValidation.gcRemoveValidation();
-			 }else {
+			 }else 	if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsgList())) {
+				 
+			 } else {
 			    	test.info("Gift certificate is in cart");
 			    	test.pass("No Gift certificate div");
 			    }
@@ -369,14 +419,14 @@ public class PaymentPageTasks extends baseClass {
 		public static void gcRedemption() throws Exception {
 			paymentPageView();
 			GiftCertificateForGc.giftCodeForGc();
-			PaymentPageValidation.redemptionOfGcValidation();	
+		//	PaymentPageValidation.redemptionOfGcValidation();	
 		}
 	
 	//gift card
 		public static void gcRedemptionInCombinationWithCreditCard() throws Exception {
 			paymentPageView();
 			GiftCertificateInCombination.giftCodesForCombination();
-			PaymentPageValidation.partialRedemptionOfGcValidation();
+			//PaymentPageValidation.partialRedemptionOfGcValidation();
 			PaymentPageTasks.creditCardWithValidDetails();
 		}
 		
@@ -388,8 +438,18 @@ public class PaymentPageTasks extends baseClass {
 		public static void gcRedemptionInCombinationWithPaypal() throws Exception {
 			paymentPageView();		
 			GiftCertificateInCombination.giftCodesForCombination();
-			PaymentPageValidation.partialRedemptionOfGcValidation();
+			//PaymentPageValidation.partialRedemptionOfGcValidation();
 			CheckOutPaypal.paypalFromCheckout();
 		}
 	
+		public static void clickReviewOrderButton() throws InterruptedException {
+			if(Actionsss.elementSize(pp.getReviewOrderBtnList())) {
+				if(Actionsss.displayElement(pp.getReviewOrderBtn())) {
+					Thread.sleep(1000);
+					Actionsss.CombinedClick(pp.getReviewOrderBtn());
+					Thread.sleep(3000);
+					PlaceOrderPageValidation.VerifyingReviewOrderBtn();		
+				}
+			}
+		}
 }

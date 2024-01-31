@@ -4,6 +4,7 @@ import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
 import pageObjects.PaymentPage;
+import tasks.PaymentPageTasks;
 
 public class GiftCertificateInCombination extends baseClass{
 
@@ -29,24 +30,27 @@ public class GiftCertificateInCombination extends baseClass{
                Actionsss.javascriptClick(pp.getApplyGiftCardButton());
                logger.info("Apply button is selected");
                Thread.sleep(2000);
-               	 int sizeOfGc = Actionsss.getSizeOfList(pp.getsuccessGiftCodeRedemptionMsg()); 
+               	 int sizeOfGc = Actionsss.getSizeOfList(pp.getsuccessGiftCodeRedemptionMsgList()); 
                	 logger.info(sizeOfGc);
                	    	
-							if(Actionsss.elementSize(pp.getInsufficientGiftCodeBalError())) {
-								logger.info("Insufficent funds in this " +gcCodes + " gift card" );
-								Actionsss.clearText(pp.getGiftcertificateInput());
-							}else if(Actionsss.elementSize(pp.getGcBelongsToDifferentCustomerError())){
-								logger.info("This " + gcCodes + "Gift Card belongs to different customer ");
-								Actionsss.clearText(pp.getGiftcertificateInput());
-							}else if (Actionsss.elementSize(pp.getInvalidGcError())){
-								logger.info("This " + gcCodes + "is invalid gift code");
-								Actionsss.clearText(pp.getGiftcertificateInput());
-							}else if(sizeOfGc==1) {
-			                    logger.info("Gift certificate codes are applied");
-			                    test.info("Gift certificate codes are applied");
-			                   // giftCertificate.clear();
-			                    break;					
-	             }
+					if(Actionsss.elementSize(pp.getInsufficientGiftCodeBalError())) {
+						logger.info("Insufficent funds in this " +gcCodes + " gift card" );
+						Actionsss.clearText(pp.getGiftcertificateInput());
+					}else if(Actionsss.elementSize(pp.getGcBelongsToDifferentCustomerError())){
+						logger.info("This " + gcCodes + "Gift Card belongs to different customer ");
+						Actionsss.clearText(pp.getGiftcertificateInput());
+					}else if (Actionsss.elementSize(pp.getInvalidGcError())){
+						logger.info("This " + gcCodes + "is invalid gift code");
+						Actionsss.clearText(pp.getGiftcertificateInput());
+					}else if(sizeOfGc==1) {
+	                    logger.info("Gift certificate codes are applied");
+	                    test.info("Gift certificate codes are applied");	                    
+	                    break;			                    
+	              }if(gcCodes.equals(dataArray[dataArray.length - 1])) {
+				        logger.info("Last iteration completed");
+				        test.info("No balance in Gift certicates ");				        
+				    }
+				      
 	        } 
 		 }else {
 		    	test.info("Gift certificate is in cart");

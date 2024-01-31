@@ -3,26 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="browser.launchBrowsering">
+      <class name="OrderRegression.OnlyGcInCart">
         <methods>
           <include name="setUpforReport"/>
-          <include name="verifyHomePageLaunching"/>
           <include name="afterMethod"/>
+          <include name="verifyingPlacingOrderWithCreditCardWhenOnlyGcInCart"/>
           <include name="setUp"/>
           <include name="afterClass"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- browser.launchBrowsering -->
-      <class name="testScripts.PaymentPageTests">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="verifyingThatPaymentDetailsEnteredInPayMentPage"/>
-          <include name="setUp"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testScripts.PaymentPageTests -->
+      </class> <!-- OrderRegression.OnlyGcInCart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

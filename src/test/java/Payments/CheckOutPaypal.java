@@ -19,41 +19,24 @@ public class CheckOutPaypal extends baseClass{
 	public static void paypalFromCheckout() throws InterruptedException, Exception {
 		
 		Actionsss.scrollWindowsByPixel(500);
-		
-		if(Actionsss.elementSize(pp.getBrainPaypalAcc())) {	    		
-    		test.info("Brain tree payment integration is activated");
-    		   
-    		Thread.sleep(2000);
+		 test.info("Verifying payment with checkout paypal");
+		if(Actionsss.elementSize(pp.getBrainPaypalAcc())) {	 
+			
+    		test.info("Brain tree payment integration is activated");    		   
+    		//
     		Actionsss.javascriptClick(pp.getBrainTreePaypalButton());
-    		Thread.sleep(2000);
+    		Thread.sleep(7000);
     		
     		if (Actionsss.displayElement(pp.getReviewOrderBtn())) {
     			Actionsss.javascriptClick(pp.getReviewOrderBtn());
 			}else  {
 				brainTreeAfterClick();
+				Thread.sleep(2000);
 				logger.info("A click to Enter into paypal");				
 				PaypalMethod.paypalPopup();
-		    	logger.info("Clicked on paypal button");
-
-		    	/*
-		    	// review order page		    		
-		    		Thread.sleep(4000);			    		
-
-		    		if(Actionsss.displayElement(pp.getReviewOrderBtn())) {
-			    		Actionsss.click(pp.getReviewOrderBtn());
-			    		logger.info("Clicked on review order button");
-			    		Thread.sleep(2000);
-			    	
-		    		}
-		    		if(Actionsss.displayElement(pp.getSelectPlaceOrderBtn())) {
-		    			Actionsss.scrollWindowsByPixel(300);
-		    			 Thread.sleep(3000);
-		    			 Actionsss.javascriptClick(pp.getSelectPlaceOrderBtn());		    			
-		    			 Thread.sleep(5000);
-			    		 logger.info("successfully click on the place order button by normal click");
-			    		
-			    		}	*/				
+		    	logger.info("Clicked on paypal button");	
 			}
+    		
     	}else if(Actionsss.elementSize(pp.getSalesforcePaypalList())) {	 
     	
     		test.info("salesoforce payment integration is activated");  
@@ -63,41 +46,13 @@ public class CheckOutPaypal extends baseClass{
 		    Thread.sleep(2000);
 		    PaypalMethod.paypalPopup();
 	    	logger.info("Clicked on paypal button");
+	    	
     	}else {
     		test.info("Cybersouce payment OR stripe payment integration  is activated so, No paypal for cybersouce and stripe");
         	test.pass("No paypal integration for cybersource and stripe , choose another integration to do the payment with payment");
     	}
 	  }
-    	  /*
-    	  if(driver.findElements(By.cssSelector("button.place-order")).size()>0) {
-    			//placeorder
-	    		WebElement placeOrder= driver.findElement(By.cssSelector("button.place-order"));	
-	    		List<WebElement> placeOrderList= driver.findElements(By.cssSelector("button.place-order"));
-	    		if (placeOrder.isDisplayed()) { 
-	    			 js.executeScript("window.scrollBy(0,350)", "");
-	    			 Thread.sleep(3000);
-	    			 WebElement placeOrderButton= driver.findElement(By.cssSelector("button.place-order"));		    		
-	    				
-	    			 js.executeScript("arguments[0].click();", placeOrderButton);
-	    			 Thread.sleep(5000);
-		    		 logger.info("successfully click on the place order button by normal click");
-		    		
-		    		}	
-    	  }
-    		  
-    	  
-		Thread.sleep(10000);
-		if(driver.getTitle().endsWith("Order Confirmation | Providio")) {
-			
-			 Checkout_Validation checkout= new Checkout_Validation();
-		 //validate the final place the order page
-			 checkout.validatePlacetheOrderPage();
-		
-	     //ordernumberandOrderdate
-			 checkout.ordernumberandOrderdate();
-			 Thread.sleep(3000);
-			}
-	}*/
+
 
 
 //After the paypal button click

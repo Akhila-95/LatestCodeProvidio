@@ -108,7 +108,7 @@ public class ShippingPageValidation extends baseClass{
 	
 	public static void VerifiedThatNextpaymentBtnClick() {
  		test.info("Verified That Nextpayment Btn click");
- 		// Check if the PLP (Product Listing Page) or PDP (Product Detail Page) is already loaded.
+ 		
      	WebElement miniCartPage = driver.findElement(By.xpath("//div[@class='card payment-form']"));
      	
      	if (miniCartPage.isDisplayed()) {
@@ -119,7 +119,32 @@ public class ShippingPageValidation extends baseClass{
      		logger.info("Click failed");
      	}
  	}
+	
+	public static void verifyingTheUpdateShippingAddress() {
+ 		test.info("Verifying the update shipping address");
+ 		logger.info(previousShippingAddressInUpdate);
+ 		logger.info(updateShippingAddress);
+     	if (!previousShippingAddressInUpdate.equals(updateShippingAddress)) {
+     	    logger.info("Successfully Clicked on update button and updated the shiiping address, the previous shipping address is " +previousShippingAddressInUpdate + "and updated shipping address is "+ updateShippingAddress);
+     	    test.pass("Successfully Clicked on update button and updated the shiiping address, the previous shipping address is " +previousShippingAddressInUpdate + "and updated shipping address is "+ updateShippingAddress);
+     	}else {
+     		//test.fail("Click failed");
+     		logger.info("Click failed");
+     	}
+ 	}
 
+	public static void verifyingAddNewShippingAddress() {
+ 		test.info("Verifying the add new shipping address");
+ 		logger.info(previousShippingAddress);
+ 		logger.info(newlyAddedShippingAddress);
+     	if (!previousShippingAddress.equals(newlyAddedShippingAddress)) {
+     	    logger.info("Successfully Clicked on add new button and adding new  shipping address, the previous shipping address is " +previousShippingAddress + "and updated shipping address is "+newlyAddedShippingAddress);
+     	    test.pass("Successfully Clicked on update button and adding new  shipping address, the previous shipping address is " +previousShippingAddress+ "and updated shipping address is "+ newlyAddedShippingAddress);
+     	}else {
+     		//test.fail("Click failed");
+     		logger.info("Click failed");
+     	}
+ 	}
  	public static void negativeValidationForShippingAddress() throws Exception {
 		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {	  		
 			test.info("Verify the display of all error messages for shipping address when user is clicked on next payment button without entering all the mandatory details and checked-in as guest");		

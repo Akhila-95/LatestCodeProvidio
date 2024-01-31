@@ -106,14 +106,14 @@ public class homepage extends baseClass{
         //int randomNumberitem = random.nextInt(countdropdown) + 1;
         int randomNumberitem = 3;
         WebElement NavigationRandomMenu = driver.findElement(By.xpath("(//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + randomNumbermenu + "]"));
-        Thread.sleep(5000L);
+       // Thread.sleep(5000L);
         Actions action = new Actions(driver);
         action.moveToElement(NavigationRandomMenu).perform();
-        Thread.sleep(5000L);
+       // Thread.sleep(5000L);
         WebElement NavigationMenuitem = driver.findElement(By.xpath("((//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + randomNumbermenu + "]/following::a[@role='menuitem'])[" + randomNumberitem + "]"));
         JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("arguments[0].click();", new Object[]{NavigationMenuitem});
-        Thread.sleep(10000L);
+        //Thread.sleep(10000L);
         
         List<WebElement> newArrivalplp = driver.findElements(By.xpath("(//a[contains(text(), 'New Arrivals')])[2]"));
         List<WebElement> womensplp = driver.findElements(By.xpath("//li[@class='breadcrumb-item']/a[contains(text(), 'Women')]"));
@@ -146,6 +146,47 @@ public class homepage extends baseClass{
                 logger.info("click Success Mens of  " + pageTitleText + "");
         	}
         }else {
+        	String[] electronicsCategory= {"TELEVISIONS","DIGITAL CAMERAS","IPOD & MP3 PLAYERS","GPS NAVIGATION","GAMING"};
+        	WebElement pageTitle = driver.findElement(By.xpath("//h1[contains(@class, 'page-title')]"));
+        	String pageTitleText = pageTitle.getText();
+        	test.info("verify that Electronics of  " + pageTitleText + " ");
+        	if (pageTitleText.equals(electronicsCategory[randomNumberitem-1])) {
+        		test.pass("Successfully clicked on the Electronics of  " + pageTitleText + " ");
+                logger.info("click Success Electronics of  " + pageTitleText + "");
+        	}
+        }
+      }
+    }
+
+
+	public void selectGpsNavigation() throws InterruptedException {
+
+        int randomNumbermenu = 4;
+        if(randomNumbermenu==4) {
+   
+        int randomNumberitem = 4;
+        WebElement navigatingElectronics = driver.findElement(By.xpath("(//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + randomNumbermenu + "]"));
+       // Thread.sleep(5000L);
+        Actions action = new Actions(driver);
+        action.moveToElement(navigatingElectronics).perform();
+      //  Thread.sleep(5000L);
+        WebElement navigatingToGPS = driver.findElement(By.xpath("((//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + randomNumbermenu + "]/following::a[@role='menuitem'])[" + randomNumberitem + "]"));
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", new Object[]{ navigatingToGPS});
+       // Thread.sleep(10000L);
+        
+        List<WebElement> newArrivalplp = driver.findElements(By.xpath("(//a[contains(text(), 'New Arrivals')])[2]"));
+       
+        if(newArrivalplp.size()>0) {
+        	String[] newArrivalsCategory= {"WOMENS", "MENS", "ELECTRONICS"};
+        	WebElement pageTitle = driver.findElement(By.xpath("//h1[contains(@class, 'page-title')]"));
+        	String pageTitleText = pageTitle.getText();
+        	test.info("verify that NewArrivals of  " + pageTitleText + " ");
+        	if(pageTitleText.equals(newArrivalsCategory[randomNumberitem-1])) {
+        		test.pass("Successfully clicked on the NewArrivals of  " + pageTitleText + " ");
+                logger.info("click Success NewArrivals of  " + pageTitleText + "");
+             }
+        	}else {
         	String[] electronicsCategory= {"TELEVISIONS","DIGITAL CAMERAS","IPOD & MP3 PLAYERS","GPS NAVIGATION","GAMING"};
         	WebElement pageTitle = driver.findElement(By.xpath("//h1[contains(@class, 'page-title')]"));
         	String pageTitleText = pageTitle.getText();

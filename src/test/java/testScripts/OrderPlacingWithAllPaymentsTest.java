@@ -9,29 +9,41 @@ import tasks.PlaceOrderWithDifferentPayments;
 public class OrderPlacingWithAllPaymentsTest extends baseClass{
 
 	@Test(groups = {"smoke", "regression"})
-    public void verifingOrderIsPlacingWithCreditCard() throws Exception {
-		PlaceOrderWithDifferentPayments.OrderPlacingWithCreditCard();
+    public void verifyingOrderIsPlacingWithCreditCard() throws Exception {
+		PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard();
     }
 	
-
-    
 	@Test(groups = {"smoke", "regression"})
-    public void verifingOrderIsPlacingWithGiftCard() throws Exception {
-		PlaceOrderWithDifferentPayments.OrderPlacingWithGiftCard();
+    public void verifyingOrderIsPlacingWithGiftCard() throws Exception {
+		PlaceOrderWithDifferentPayments.orderPlacingWithGiftCard();
     }
 	@Test(groups = {"smoke", "regression"})
-    public void verifingOrderIsPlacingWithCombinationOfGcAndCreditCard() throws Exception {
-		PlaceOrderWithDifferentPayments.OrderPlacingWithCombinationOfGcAndCreditCard();
+    public void verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard() throws Exception {
+		PlaceOrderWithDifferentPayments.orderPlacingWithCombinationOfGcAndCreditCard();
     }
 
 	
 	@Test(groups = {"smoke", "regression"})
-    public void verifingOrderIsPlacingWithPaypalFromCheckoutPage() throws Exception {
+    public void verifyingOrderIsPlacingWithPaypalFromCheckoutPage() throws Exception {
 		PlaceOrderWithDifferentPayments.orderPlacingWithPaypalFromCheckoutPage();
     }
 	
 	@Test(groups = {"smoke", "regression"})
-    public void verifingOrderIsPlacingWithCombinationOfGcAndPaypal() throws Exception {
-		PlaceOrderWithDifferentPayments.OrderPlacingWithCombinationOfGcAndPaypal();
+    public void verifyingOrderIsPlacingWithCombinationOfGcAndPaypal() throws Exception {
+		PlaceOrderWithDifferentPayments.orderPlacingWithCombinationOfGcAndPaypal();
+    }
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingOrderIsPlacingWithMiniCartPaypal() throws Exception {
+		PlaceOrderWithDifferentPayments.orderPlacingWithMiniCartPaypal();
+    }
+	
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingOrderIsPlacingWithCartPagePaypal() throws Exception {
+		PlaceOrderWithDifferentPayments.orderPlacingWithCartPagePaypal();
+    }
+	
+	@Test(groups = {"smoke", "regression"})
+    public void verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage() throws Exception {
+		PlaceOrderWithDifferentPayments.orderPlacingWithPaypalInPdpPage();
     }
 }

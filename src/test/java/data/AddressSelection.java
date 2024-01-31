@@ -86,6 +86,14 @@ public class AddressSelection extends baseClass{
 		 }
 		 
 	}
+	
+	public static void updateShippingAddress() throws InterruptedException {
+		  Actionsss.sendKeys(SAP.getSelectfirstNameInput(), "akhila", fName);			  
+		  Actionsss.sendKeys(SAP.getSelectLastNameInput(), "akhi", lName);
+		  Actionsss.updateShippingAddress(SAP.getShippingAddress());		
+		  Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+	}
+	
 	public static void editBillingAddress() throws InterruptedException {
 		Actionsss.sendKeys(cop3.getBillingFName(), fakeFirstName, "Billing address first name");
 		Actionsss.sendKeys(cop3.getBillingLName(), fakelastName, "Billing address last name");
@@ -124,16 +132,11 @@ public class AddressSelection extends baseClass{
 		  //this method send the shipping first name,last name and address details , phonenumber by checking the display of firstname 
 		  Thread.sleep(1000);
 		  if(Actionsss.displayElement(SAP.getFirstName())) {
-			  Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);
-			  Thread.sleep(1000);	
+			  Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);			  
 			  Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
-			  Actionsss.addressFromDropDown(SAP.getShippingAddress());
-			
-			  Thread.sleep(2000);	
+			  Actionsss.addressFromDropDown(SAP.getShippingAddress());		
 			  Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
  
-		  }else {
-			  //if()
 		  }
 	  }
 	  

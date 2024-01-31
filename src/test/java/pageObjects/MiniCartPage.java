@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,4 +31,27 @@ public class MiniCartPage extends baseClass{
 		return checkOutBtn;
 	}
 
+	@FindBy(xpath = "//div[contains(@class,'salesforce')]")
+	List<WebElement> salesforcePaypalInMiniCartList;
+	public List<WebElement> getSalesforcePaypalInMiniCartList() {
+		return salesforcePaypalInMiniCartList;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'js_braintree_paypal_cart_button')]")
+	List<WebElement> brainTreePaypalInMiniCartList;
+	public List<WebElement> getBrainTreePaypalInMiniCartList() {
+		return brainTreePaypalInMiniCartList;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'salesforce')]")
+	WebElement salesforcePaypalInMiniCart;
+	public WebElement getSalesforcePaypalInMiniCart() {
+		return salesforcePaypalInMiniCart;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'js_braintree_paypal_cart_button')]")
+	WebElement brainTreePaypalInMiniCart;
+	public WebElement getBrainTreePaypalInMiniCart() {
+		return brainTreePaypalInMiniCart;
+	}
 }

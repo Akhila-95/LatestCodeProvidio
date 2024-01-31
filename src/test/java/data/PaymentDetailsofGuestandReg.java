@@ -16,7 +16,7 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 
 	
  public static void brainTreeMethod() throws InterruptedException {
-
+	 	Actionsss.scrollWindowsByPixel(500);
 		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
 			test.info("User is in guest-check in so entering a random credit card details");
 			pm.braintree();
@@ -40,8 +40,8 @@ public class PaymentDetailsofGuestandReg extends baseClass{
  
 	//cyberSource
 	public static void cyberSource() throws Exception {
-
-		if(!Actionsss.elementSize(pp.getContinueAsAGuest())) {
+		Actionsss.scrollWindowsByPixel(500);
+		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
 			test.info("User is in guest-check in so entering a random credit card details");
 			pm.cyberSource();
 			
@@ -62,9 +62,8 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 	
 	//salesforce
 		public static void salesForce() throws Exception {
-	
-			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
-											
+			Actionsss.scrollWindowsByPixel(500);
+			if(Actionsss.elementSize(pp.getContinueAsAGuest())) {											
 				//guest user payment	
 				test.info("User is in guest-check in so entering a random credit card details");
 				pm.salesforcePayment();
@@ -136,7 +135,7 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
 					// pop up in stripe unable to inpect that pop up   video :https://muskuakhila-gmial.tinytake.com/msc/OTE3MjI4OV8yMjY5NDU4Mw
-					test.pass("Unable click the ok in pop up in stripe by automation to test without entering any of the details");
+					test.pass("Unable to click the ok in pop up in stripe by automation to test without entering any of the details");
 					
 				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
 					//cybersource 
@@ -407,7 +406,7 @@ public class PaymentDetailsofGuestandReg extends baseClass{
 				}else if (Actionsss.elementSize(pp.getStripePayment())) {
 					//stripe 
 					// pop up in stripe unable to inpect that pop up   video :https://muskuakhila-gmial.tinytake.com/msc/OTE3MjMyMV8yMjY5NDYxNQ
-					test.pass("Unable click the ok in pop up in stripe by automation to test  without entering  cvc and zip code details");
+					test.pass("Unable to click the ok in pop up in stripe by automation to test  without entering  cvc and zip code details");
 					
 				}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
 					//cybersource 

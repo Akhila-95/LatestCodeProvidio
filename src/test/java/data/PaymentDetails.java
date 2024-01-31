@@ -4,6 +4,7 @@ import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
 import pageObjects.PaymentPage;
+import tasks.PaymentPageTasks;
 import validations.PaymentPageValidation;
 import validations.PlaceOrderPageValidation;
 
@@ -32,18 +33,12 @@ public class PaymentDetails extends baseClass{
 				PaymentDetailsofGuestandReg.adyen();
 			}
 			
-			if(Actionsss.elementSize(pp.getReviewOrderBtnList())) {
-				if(Actionsss.displayElement(pp.getReviewOrderBtn())) {
-					Actionsss.CombinedClick(pp.getReviewOrderBtn());
-					Thread.sleep(3000);
-					PlaceOrderPageValidation.VerifyingReviewOrderBtn();		
-				}
-			}
+			PaymentPageTasks.clickReviewOrderButton();
 			
 		}else {
-			logger.info("Gift code was redemeed already");
-			test.info("Gift code was redemeed already");
-			test.pass("Gift code was redemeed already");
+			logger.info("Other payment details are entered");
+			test.info("Other payment details are entered");
+			test.pass("Other payment details are entered");
 		}
 	}
 	

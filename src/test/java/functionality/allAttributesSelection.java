@@ -14,6 +14,7 @@ import com.providio.testcases.baseClass;
 
 import pageObjects.ProductListingPage;
 import pageObjects.homepage;
+import tasks.ProductListingPageTasks;
 import validations.ProductListingPageValidations;
 
 public class allAttributesSelection extends baseClass{
@@ -124,6 +125,39 @@ public class allAttributesSelection extends baseClass{
 		}
 	}
 	
+	public static void selectTheAttributesInPdpPage() throws Exception {
+		//slect the filters
+		quickshopallAttributes();
+		Thread.sleep(3000);
+		List<WebElement> InStock = driver.findElements(By.xpath("//div[text()='In Stock']"));
+		List<WebElement> backOrderInStock= driver.findElements(By.xpath("//div[text()='In Stock']"));
+		if(InStock.size()>0 || backOrderInStock.size()>0) {
+			logger.info("Product is in stock");
+		}else {
+			//Actionsss.click(homePage.getCookies_Yes_Btn());
+			//homePage.selectRandomMegaMenu(driver);
+			//Thread.sleep(4000);
+			ProductListingPageTasks.productclick();
+			selectTheAttributesInPdpPage();
+		}
+	}
+	
+	public static void selectTheAttributesInPdpPageForGPSMenu() throws Exception {
+		//slect the filters
+		quickshopallAttributes();
+		Thread.sleep(3000);
+		List<WebElement> InStock = driver.findElements(By.xpath("//div[text()='In Stock']"));
+		List<WebElement> backOrderInStock= driver.findElements(By.xpath("//div[text()='In Stock']"));
+		if(InStock.size()>0 || backOrderInStock.size()>0) {
+			logger.info("Product is in stock");
+		}else {
+			//Actionsss.click(homePage.getCookies_Yes_Btn());
+			//homePage.selectRandomMegaMenu(driver);
+			//Thread.sleep(4000);
+			ProductListingPageTasks.gpsProducts();
+			selectTheAttributesInPdpPage();
+		}
+	}
 	public static void quickshopallAttributes() throws InterruptedException {
 		
 		List<WebElement> colorElement = driver.findElements(By.xpath("//select[contains(@class,'select-color-swatch')]"));

@@ -42,9 +42,8 @@ public class loginPage extends baseClass{
     }
     
     // Element for Sign In button
-    @FindBy(xpath = "//span[contains(text(), 'Sign In')]")
+    @FindBy(xpath = "(//span[contains(text(), 'Sign In')])[1]")
     List<WebElement> signInList;
-
     // Method to click on the Sign In button
     public List<WebElement> getSignInList() {
        return signInList;
@@ -53,7 +52,6 @@ public class loginPage extends baseClass{
     // Element for Sign In button
     @FindBy(xpath = "//a[@aria-label='Login to your account']")
     WebElement loginSignIn;
-
     // Method to click on the Sign In button
     public WebElement getLoginSignIn() {
        return loginSignIn;
@@ -63,7 +61,6 @@ public class loginPage extends baseClass{
  // Element for email input field
     @FindBy(name = "loginEmail")
     private WebElement email;
-
     // Method to get the email input field
     public WebElement getEmail() {
         return email;
@@ -72,7 +69,6 @@ public class loginPage extends baseClass{
     // Element for password input field
     @FindBy(name = "loginPassword")
     private WebElement password;
-
     // Method to get the password input field
     public WebElement getPassword() {
         return password;
@@ -81,7 +77,6 @@ public class loginPage extends baseClass{
     // Element for Login button
     @FindBy(xpath = "//button[contains(text(), 'Login')]")
 	public WebElement btnLogin;
-
     // Method to click on the Login button
     public WebElement clickBtnLogin() {
         return btnLogin;
@@ -90,7 +85,6 @@ public class loginPage extends baseClass{
     // Element for Login button (JavaScript click)
     @FindBy(xpath = "//button[contains(text(), 'Login')]")
     private WebElement btnLoginjs;
-
     // Method to perform JavaScript click on the Login button
     public WebElement clickBtnLoginJs() {
         return btnLoginjs;
@@ -99,55 +93,49 @@ public class loginPage extends baseClass{
     // Element for Home page logo
     @FindBy(xpath = "//img[@class='logo']")
     private WebElement forHomePage;
-
     // Method to get the Home page logo
     public WebElement getForHomePage() {
         return forHomePage;
     }
 	
     @FindBy(xpath = " //h1[@class ='account-page-title']")
-    private WebElement loginTitle;
-    
+    private WebElement loginTitle;   
     public WebElement getLoginTitle() {
     	return loginTitle;
     }
     
     @FindBy(xpath = "(//dd)[1]")
-    private WebElement userName;
-    
+    private WebElement userName;    
     public WebElement getUserName() {
     	return  userName;
     }
     
     @FindBy(xpath = "(//dd)[2]")
-    private WebElement userEmail ;
-    
+    private WebElement userEmail ;    
     public WebElement getUserEmail() {
     	return  userEmail;
     }
     
     @FindBy(xpath = "//div[contains(@class, 'alert') and contains(@class, 'alert-danger')]")
-    private WebElement invalidLoginError;
-    
+    private WebElement invalidLoginError;    
     public WebElement getinvalidLoginError() {
     	return invalidLoginError;
     }
-    @FindBy(xpath = "(//div[@id= 'form-email-error'])[1]")
-    private WebElement mailError;
     
+    @FindBy(xpath = "(//div[@id= 'form-email-error'])[1]")
+    private WebElement mailError;   
     public WebElement getMailError() {
     	return mailError;
     }
     
     @FindBy(xpath = "(//div[@id= 'form-password-error'])[1]")
-    private WebElement passwordError;
-    
+    private WebElement passwordError;    
     public WebElement getPasswordError() {
     	return  passwordError;
     }
-    @FindBy(xpath = "(//div[@class='invalid-feedback' and @id='form-email-error'])[1]")
-    WebElement invalidEmail;
     
+    @FindBy(xpath = "(//div[@class='invalid-feedback' and @id='form-email-error'])[1]")
+    WebElement invalidEmail;    
     public WebElement getInvalidEmailFormatError() {
     	return invalidEmail;
     }

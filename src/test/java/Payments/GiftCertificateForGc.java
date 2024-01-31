@@ -1,24 +1,32 @@
 package Payments;
 
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
 import pageObjects.PaymentPage;
+import tasks.PaymentPageTasks;
+import validations.PlaceOrderPageValidation;
 
 public class GiftCertificateForGc extends baseClass {
 
 	private static final PaymentPage pp = new PaymentPage(driver);
 	
 	 public static void giftCodeForGc() throws Exception{
-		 
+		 Actionsss.scrollWindowsByPixel(500);
 		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
 	        // Provided data
 	        String data =GiftCerificateCodeforGc;
 
 	        // Split the data using commas as a delimiter and store it in an array
 	        String[] dataArray = data.split(",");
-	        Actionsss.scrollWindowsByPixel(500);
+
+	     // Count the number of elements in the array
+	        int arrayLength = dataArray.length;
+	        logger.info(arrayLength);
         	Actionsss.javascriptClick(pp.getGiftcertificateInput());
 	        // Iterate over the array and print each data
 	        for (String gcCodes : dataArray) {
@@ -28,7 +36,7 @@ public class GiftCertificateForGc extends baseClass {
 	            Thread.sleep(1000);
 
                 Actionsss.javascriptClick(pp.getApplyGiftCardButton());
-                	    logger.info("Apply button is selected");
+                logger.info("Apply button is selected");
               
                 	    	Thread.sleep(2000);
 							if(Actionsss.elementSize(pp.getInsufficientGiftCodeBalError())) {
@@ -41,13 +49,63 @@ public class GiftCertificateForGc extends baseClass {
 								logger.info("This " + gcCodes + "is invalid gift code");
 								Actionsss.clearText(pp.getGiftcertificateInput());
 							}else if(Actionsss.elementSize(pp.getRedemptionWithGcMsg())) {
-								 logger.info("Your order has been paid using gift certificates message is displayed.");						    
+								 logger.info("Your order has been paid using gift certificates message is displayed.");
+								 PaymentPageTasks.clickReviewOrderButton();
 						    	 break;
-							}					
+							}// Check if it's the last iteration
+						    if (gcCodes.equals(dataArray[dataArray.length - 1])) {
+						        logger.info("Last iteration completed");
+						        test.info("No balance in Gift certicates ,so payment is doing with credit card");
+						        PaymentPageTasks.creditCardWithValidDetails();
+						    }
+						      
 	             }
+	        
+	        // if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsgList())) {
+		    //	getSuccessMsg(); 
+		   // }
 	    }else {
 	    	test.info("Gift certificate is in cart");
 	    	test.pass("No element to redeem the Gift code");
 	    }
+	 }
+	 
+	 public static void getSuccessMsg() throws InterruptedException {
+		 float extractedAmount =(float) 0;
+		 if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsgList())) {
+			String gcRedeemedMsg= Actionsss.getTextOfElement(pp.getsuccessGiftCodeRedemptionMsg());
+
+		        // Define a regular expression pattern to match the amount pattern
+		        Pattern amountPattern = Pattern.compile("\\$([0-9]+\\.[0-9]{2})");
+
+		        // Create a matcher object
+		        Matcher matcher = amountPattern.matcher(gcRedeemedMsg);
+
+		        // Check if the pattern is found
+		        if (matcher.find()) {
+		            // Extract the matched amount
+		            String extractedAmountStr = matcher.group(1);
+		            extractedAmount = Float.parseFloat(extractedAmountStr);
+		            logger.info("Extracted Amount: " + extractedAmount);
+		            totalGcDetechedAmount= totalGcDetechedAmount+extractedAmount;
+		            logger.info(totalGcDetechedAmount);
+		            String gcAmountDetechedStr =Actionsss.getTextOfElement(pp.getGiftCertificateBalDetected());
+		          
+		         // Remove "-" and "$" symbols
+		            String result =gcAmountDetechedStr.replace("-", "").replace("$", "");
+		            logger.info(result);
+		            float  expectedAmountDeteched = Float.parseFloat(result);
+		            if(totalGcDetechedAmount.equals(expectedAmountDeteched)) {
+		            	logger.info("Gc got redeemed and the amount is " +totalGcDetechedAmount + "and the total amount is "+Actionsss.getTextOfElement(pp.getTotalPriceInPaymentPage())+" amount detected from total is " +expectedAmountDeteched);
+		            	test.pass("Gc got redeemed and the amount is " +totalGcDetechedAmount + "and the total amount is "+Actionsss.getTextOfElement(pp.getTotalPriceInPaymentPage())+" amount detected from total is " +expectedAmountDeteched);
+		            }else {
+		            	logger.info("No Gc got redeemed and the amount is " +totalGcDetechedAmount + "and the total amount is "+Actionsss.getTextOfElement(pp.getTotalPriceInPaymentPage())+" amount detected from total is " +expectedAmountDeteched);
+		            	test.fail("No Gc got redeemed and the amount is " +totalGcDetechedAmount + "and the total amount is "+Actionsss.getTextOfElement(pp.getTotalPriceInPaymentPage())+" amount detected from total is " +expectedAmountDeteched);
+		            }
+		        } else {
+		            System.out.println("No amount found in the input string.");
+
+		        }
+		 }
 	 }
 }

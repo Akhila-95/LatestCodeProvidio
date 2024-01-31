@@ -17,6 +17,49 @@ public class PaymentPage extends baseClass{
 		PageFactory.initElements(rDriver, this);
 	}
 	
+	@FindBy(xpath="//div[@class='card shipping-summary']")
+	WebElement shippingPageList;
+	public WebElement getshippingInfo() {
+		return shippingPageList;
+	}
+	
+	@FindBy(css="div.customer-summary")
+	WebElement customerInfo;
+	public WebElement getCustomerInfo() {
+		return customerInfo;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'card order-product-summary')]//a[contains(@class,'line-item-text')]")
+	List<WebElement> productsInCheckoutPage2;
+	public List<WebElement> getproductsInCheckoutPage2() {
+		return productsInCheckoutPage2;
+	}
+	
+	@FindBy(css="a.back-to-cart")
+	WebElement backToCart;
+	public WebElement getBackToCart() {
+		return backToCart;
+	}
+	
+	@FindBy(xpath="//h2[contains(text(),'Order Summary')]")
+	WebElement orderSummaryDiv;
+	public WebElement getOrderSummaryDiv() {
+		return orderSummaryDiv;
+	}
+	
+	@FindBy(css = "div.product-detail")
+	WebElement pdpPage;
+	public WebElement getPdpPage() {
+		return pdpPage;
+	}
+	
+	@FindBy(css="div.payment-form")
+	WebElement paymentInfoDiv;
+	public WebElement getPaymentInfoDiv() {
+		return paymentInfoDiv;
+	}
+	
+	
 	@FindBy(xpath = "//label[contains(text(), 'Payment Method')]")
     private WebElement paymentPage;		
 	public WebElement getPaymentPage() {
@@ -682,8 +725,14 @@ public class PaymentPage extends baseClass{
  	
 	
  	@FindBy(xpath = "//div[@class='success giftcert-pi']")
- 	List<WebElement> successGiftCodeRedemptionMsg;
- 	public List<WebElement> getsuccessGiftCodeRedemptionMsg() {
+ 	List<WebElement> successGiftCodeRedemptionMsgList;
+ 	public List<WebElement> getsuccessGiftCodeRedemptionMsgList() {
+ 		return successGiftCodeRedemptionMsgList;
+ 	}
+ 	
+ 	@FindBy(xpath = "//div[@class='success giftcert-pi']")
+ 	WebElement successGiftCodeRedemptionMsg;
+ 	public WebElement getsuccessGiftCodeRedemptionMsg() {
  		return successGiftCodeRedemptionMsg;
  	}
 
@@ -691,6 +740,19 @@ public class PaymentPage extends baseClass{
  	List<WebElement> giftCertificateLabel;
  	public List<WebElement> getGiftCertificateLabel() {
  		return giftCertificateLabel;
+ 	}
+ 	
+	
+	@FindBy(css = "span.gift-certificate-total")
+ 	WebElement giftCertificateBalDetected;
+ 	public WebElement getGiftCertificateBalDetected() {
+ 		return giftCertificateBalDetected;
+ 	}
+ 	
+ 	@FindBy(css = "span.grand-total-sum")
+ 	WebElement totalPriceInPaymentPage;
+ 	public WebElement getTotalPriceInPaymentPage() {
+ 		return totalPriceInPaymentPage;
  	}
  	
 
@@ -709,7 +771,7 @@ public class PaymentPage extends baseClass{
  	
  	//paypal
 
- 	@FindBy(xpath = "img[title='PayPal Credit']")
+ 	@FindBy(xpath = "//img[@title='PayPal Credit']")
  	List<WebElement> brainPaypalAcc;
  	public List<WebElement> getBrainPaypalAcc() {
  		return brainPaypalAcc;

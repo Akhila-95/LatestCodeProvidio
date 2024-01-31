@@ -27,6 +27,7 @@ public class CheckOutPage2 {
 		public WebElement getshippingPage() {
 			return shippingPage;
 		}
+		
 		@FindBy(css="div.customer-summary")
 		WebElement customerInfo;
 		public WebElement getCustomerInfo() {
@@ -48,6 +49,19 @@ public class CheckOutPage2 {
 		WebElement orderSummaryDiv;
 		public WebElement getOrderSummaryDiv() {
 			return orderSummaryDiv;
+		}
+		
+
+		@FindBy(xpath="(//button[contains(@class,'btn-add-new')])[1]")
+		WebElement addNewShippingAddress;
+		public WebElement getAddNewShippingAddress() {
+			return addNewShippingAddress;
+		}
+		
+		@FindBy(xpath="(//button[contains(@class,'btn-show-details ')])[1]")
+		WebElement updateShippingAddress;
+		public WebElement getUpdateShippingAddress() {
+			return updateShippingAddress;
 		}
 		
 		@FindBy(css="a.back-to-cart")
@@ -73,16 +87,19 @@ public class CheckOutPage2 {
 		public List<WebElement> getproductsInCheckoutPage2() {
 			return productsInCheckoutPage2;
 		}
+		
 		@FindBy(css = "div.product-detail")
 		WebElement pdpPage;
 		public WebElement getPdpPage() {
 			return pdpPage;
 		}
+		
 		@FindBy(xpath = "(//fieldset[@class='gift-message-block '])[1]//label[contains(@class,'checkout-checkbox')]")
 		WebElement giftMessageCheckButton;
 		public WebElement getGiftMessageCheckButton() {
 			return giftMessageCheckButton;
 		}
+		
 		@FindBy(xpath = "(//fieldset[@class='gift-message-block '])[1]//textarea")
 		WebElement giftMessageTextArea;
 		public WebElement getGiftMessagegiftMessageTextArea() {

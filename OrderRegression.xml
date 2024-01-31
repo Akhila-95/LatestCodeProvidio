@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Providio Regression Test">
+
+	 <test name="Order Regression">
+       
+     <classes>
+   
+			<class name="browser.launchBrowsering"/>
+			
+			<class name ="testScripts.LoginPageTest"/>
+           
+             <methods>
+             		<include name ="VerifyingLoginWithValidCredentials"/>  
+             		 
+             </methods>
+	 <!-- 
+				   <class name="OrderRegression.OnlyGcInCart"/>
+				
+				  <methods>				 		  		                  
+	           			 <include name="verifyingPlacingOrderWithCreditCardWhenOnlyGcInCart"></include>  	  	    
+	             </methods>
+	           
+	             <class name="OrderRegression.PlaceOrderWithBuyNowButton"/>
+	               <methods>				 		  		                  
+	    				<include name="verifyingPlacingOrderWithBuyNowButtonWithCreditCard"></include>   
+	               </methods>
+	               -->  
+	              <class name="OrderRegression.PlaceOrderWithBuyNowPopUp"/>
+	               <methods>				 		  		                  
+	    				<include name="verifyingPlacingOrderWithBuyNowPopUp"></include>   
+	               </methods>   
+	          
+			<!--  <class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
+			<methods>
+			
+			  	<include name="verifyingOrderIsPlacingWithCreditCard"/>	
+			  			  				
+			 	<include name="verifyingOrderIsPlacingWithGiftCard"/>					
+				<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
+				
+			 	<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>							
+				<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
+												 
+				<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
+				<include name="verifyingOrderIsPlacingWithCartPagePaypal"/>  
+				<include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/>
+				
+			</methods>	
+		-->
+         </classes>	
+			
+  
+           
+    </test>
+</suite>

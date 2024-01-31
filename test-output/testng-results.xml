@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="23" total="35" passed="11" failed="1" skipped="0">
+<testng-results ignored="12" total="15" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-25T18:15:03 IST" name="Providio Regression Test" finished-at="2024-01-25T18:26:39 IST" duration-ms="695898">
+  <suite started-at="2024-01-31T17:18:12 IST" name="Providio Regression Test" finished-at="2024-01-31T17:19:24 IST" duration-ms="72459">
     <groups>
       <group name="regression">
-        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@60cf62ad]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
-        <method signature="OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndCreditCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" name="verifingOrderIsPlacingWithCombinationOfGcAndCreditCard" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
-        <method signature="OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" name="verifingOrderIsPlacingWithCombinationOfGcAndPaypal" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
-        <method signature="OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCreditCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" name="verifingOrderIsPlacingWithCreditCard" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
-        <method signature="OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithGiftCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" name="verifingOrderIsPlacingWithGiftCard" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
-        <method signature="OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithPaypalFromCheckoutPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" name="verifingOrderIsPlacingWithPaypalFromCheckoutPage" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
+        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@60cf62ad]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
-        <method signature="OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndCreditCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" name="verifingOrderIsPlacingWithCombinationOfGcAndCreditCard" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
-        <method signature="OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" name="verifingOrderIsPlacingWithCombinationOfGcAndPaypal" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
-        <method signature="OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCreditCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" name="verifingOrderIsPlacingWithCreditCard" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
-        <method signature="OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithGiftCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" name="verifingOrderIsPlacingWithGiftCard" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
-        <method signature="OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithPaypalFromCheckoutPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" name="verifingOrderIsPlacingWithPaypalFromCheckoutPage" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
+        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-01-25T18:15:03 IST" name="SmokeTest" finished-at="2024-01-25T18:26:39 IST" duration-ms="695898">
+    <test started-at="2024-01-31T17:18:12 IST" name="SmokeTest" finished-at="2024-01-31T17:19:24 IST" duration-ms="72459">
       <class name="browser.launchBrowsering">
-        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:browser.launchBrowsering@60cf62ad]" started-at="2024-01-25T18:14:56 IST" name="setUpforReport" finished-at="2024-01-25T18:15:03 IST" duration-ms="6512" status="PASS">
+        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:18:05 IST" name="setUpforReport" finished-at="2024-01-31T17:18:12 IST" duration-ms="7285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpforReport -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:browser.launchBrowsering@60cf62ad]" started-at="2024-01-25T18:15:03 IST" name="setUp" finished-at="2024-01-25T18:15:05 IST" duration-ms="2037" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:18:12 IST" name="setUp" finished-at="2024-01-31T17:18:14 IST" duration-ms="2051" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:browser.launchBrowsering@60cf62ad]" started-at="2024-01-25T18:15:05 IST" name="afterClass" finished-at="2024-01-25T18:15:05 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:18:14 IST" name="afterClass" finished-at="2024-01-31T17:18:14 IST" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -42,176 +32,70 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method signature="verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@60cf62ad]" started-at="2024-01-25T18:15:05 IST" name="verifyHomePageLaunching" finished-at="2024-01-25T18:15:11 IST" duration-ms="5690" status="PASS">
+        <test-method signature="verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:18:14 IST" name="verifyHomePageLaunching" finished-at="2024-01-31T17:18:22 IST" duration-ms="7560" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePageLaunching -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:browser.launchBrowsering@60cf62ad]" started-at="2024-01-25T18:15:11 IST" name="afterMethod" finished-at="2024-01-25T18:15:11 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:18:22 IST" name="afterMethod" finished-at="2024-01-31T17:18:22 IST" duration-ms="17" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@60cf62ad] output={null}]]]>
+                <![CDATA[[TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:browser.launchBrowsering@60cf62ad]" started-at="2024-01-25T18:26:39 IST" name="tearDown" finished-at="2024-01-25T18:26:47 IST" duration-ms="7831" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:19:24 IST" name="tearDown" finished-at="2024-01-31T17:19:34 IST" duration-ms="9137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- browser.launchBrowsering -->
-      <class name="testScripts.OrderPlacingWithAllPaymentsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:17:27 IST" name="setUp" finished-at="2024-01-25T18:17:29 IST" duration-ms="2016" status="PASS">
+      <class name="testScripts.PlaceOrderTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.PlaceOrderTest@15400fff]" started-at="2024-01-31T17:18:24 IST" name="setUp" finished-at="2024-01-31T17:18:26 IST" duration-ms="2008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifingOrderIsPlacingWithCreditCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:17:29 IST" name="verifingOrderIsPlacingWithCreditCard" finished-at="2024-01-25T18:17:52 IST" duration-ms="22487" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifingOrderIsPlacingWithCreditCard -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:17:29 IST" name="afterClass" finished-at="2024-01-25T18:17:29 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PlaceOrderTest@15400fff]" started-at="2024-01-31T17:18:26 IST" name="afterClass" finished-at="2024-01-31T17:18:26 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCreditCard() throws java.lang.Exception]]>
+                <![CDATA[public void testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage() throws java.lang.InterruptedException,java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:17:52 IST" name="afterMethod" finished-at="2024-01-25T18:17:52 IST" duration-ms="8" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifingOrderIsPlacingWithCreditCard status=SUCCESS method=OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCreditCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifingOrderIsPlacingWithGiftCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:17:52 IST" name="verifingOrderIsPlacingWithGiftCard" finished-at="2024-01-25T18:20:18 IST" duration-ms="146469" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifingOrderIsPlacingWithGiftCard -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:17:52 IST" name="afterClass" finished-at="2024-01-25T18:17:52 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithGiftCard() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:20:18 IST" name="afterMethod" finished-at="2024-01-25T18:20:18 IST" duration-ms="11" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifingOrderIsPlacingWithGiftCard status=SUCCESS method=OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithGiftCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifingOrderIsPlacingWithCombinationOfGcAndCreditCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:20:18 IST" name="verifingOrderIsPlacingWithCombinationOfGcAndCreditCard" finished-at="2024-01-25T18:22:35 IST" duration-ms="136354" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifingOrderIsPlacingWithCombinationOfGcAndCreditCard -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:20:18 IST" name="afterClass" finished-at="2024-01-25T18:20:18 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndCreditCard() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:22:35 IST" name="afterMethod" finished-at="2024-01-25T18:22:35 IST" duration-ms="12" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifingOrderIsPlacingWithCombinationOfGcAndCreditCard status=SUCCESS method=OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndCreditCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifingOrderIsPlacingWithPaypalFromCheckoutPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:22:35 IST" name="verifingOrderIsPlacingWithPaypalFromCheckoutPage" finished-at="2024-01-25T18:25:20 IST" duration-ms="164921" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifingOrderIsPlacingWithPaypalFromCheckoutPage -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:22:35 IST" name="afterClass" finished-at="2024-01-25T18:22:35 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithPaypalFromCheckoutPage() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:25:20 IST" name="afterMethod" finished-at="2024-01-25T18:25:20 IST" duration-ms="10" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifingOrderIsPlacingWithPaypalFromCheckoutPage status=SUCCESS method=OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithPaypalFromCheckoutPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifingOrderIsPlacingWithCombinationOfGcAndPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:25:20 IST" name="verifingOrderIsPlacingWithCombinationOfGcAndPaypal" finished-at="2024-01-25T18:26:38 IST" duration-ms="78431" status="FAIL">
-          <exception class="org.openqa.selenium.UnhandledAlertException">
+        <test-method signature="verifyingTheEditPaymentToPaypalFromPlaceOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@15400fff]" started-at="2024-01-31T17:18:26 IST" name="verifyingTheEditPaymentToPaypalFromPlaceOrderPage" finished-at="2024-01-31T17:19:24 IST" duration-ms="58245" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[unexpected alert open: {Alert text : No details available for input: "345"}
-  (Session info: chrome=120.0.6099.225): No details available for input: "345"
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success add-to-basket-alert text-center'] (tried for 30 second(s) with 1000 milliseconds interval)
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8f6e98d23343ca90aeabe7cabc8a997a, findElement {using=xpath, value=//input[@id='shippingAddressOnedefault']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.225, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51992}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51992/devtoo..., se:cdpVersion: 120.0.6099.225, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8f6e98d23343ca90aeabe7cabc8a997a]]>
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : No details available for input: "345"}
-  (Session info: chrome=120.0.6099.225): No details available for input: "345"
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success add-to-basket-alert text-center'] (tried for 30 second(s) with 1000 milliseconds interval)
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8f6e98d23343ca90aeabe7cabc8a997a, findElement {using=xpath, value=//input[@id='shippingAddressOnedefault']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.225, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51992}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51992/devtoo..., se:cdpVersion: 120.0.6099.225, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8f6e98d23343ca90aeabe7cabc8a997a
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.getAttribute(Unknown Source)
-at functionality.Actionsss.addressFromDropDown(Actionsss.java:291)
-at data.AddressSelection.Address(AddressSelection.java:30)
-at tasks.CheckOutPage2Tasks.enterValidAddress(CheckOutPage2Tasks.java:125)
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:261)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at validations.ProductListingPageValidations.validatingProductisAddtoCart(ProductListingPageValidations.java:123)
+at tasks.ProductListingPageTasks.quickShop(ProductListingPageTasks.java:75)
+at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
+at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
+at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:30)
+at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:132)
 at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-at tasks.PaymentPageTasks.gcRedemptionInCombinationWithPaypal(PaymentPageTasks.java:389)
-at tasks.PlaceOrderWithDifferentPayments.OrderPlacingWithCombinationOfGcAndPaypal(PlaceOrderWithDifferentPayments.java:110)
-at testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndPaypal(OrderPlacingWithAllPaymentsTest.java:35)
+at tasks.PaymentPageTasks.gcRedemption(PaymentPageTasks.java:418)
+at tasks.PlaceOrderPageTask.placeOrderPage(PlaceOrderPageTask.java:26)
+at tasks.PlaceOrderPageTask.editPaymentToPaypal(PlaceOrderPageTask.java:139)
+at testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage(PlaceOrderTest.java:12)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -242,195 +126,54 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifingOrderIsPlacingWithCombinationOfGcAndPaypal -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:25:20 IST" name="afterClass" finished-at="2024-01-25T18:25:20 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyingTheEditPaymentToPaypalFromPlaceOrderPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PlaceOrderTest@15400fff]" started-at="2024-01-31T17:19:24 IST" name="afterMethod" finished-at="2024-01-31T17:19:24 IST" duration-ms="405" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testScripts.OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndPaypal() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a]" started-at="2024-01-25T18:26:38 IST" name="afterMethod" finished-at="2024-01-25T18:26:39 IST" duration-ms="455" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifingOrderIsPlacingWithCombinationOfGcAndPaypal status=FAILURE method=OrderPlacingWithAllPaymentsTest.verifingOrderIsPlacingWithCombinationOfGcAndPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@33899f7a] output={null}]]]>
+                <![CDATA[[TestResult name=verifyingTheEditPaymentToPaypalFromPlaceOrderPage status=FAILURE method=PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@15400fff] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testScripts.OrderPlacingWithAllPaymentsTest -->
-      <class name="testScripts.PaymentPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:15:11 IST" name="setUp" finished-at="2024-01-25T18:15:13 IST" duration-ms="2014" status="PASS">
+      </class> <!-- testScripts.PlaceOrderTest -->
+      <class name="testScripts.FindAStoreTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.FindAStoreTest@26cb5207]" started-at="2024-01-31T17:18:22 IST" name="setUp" finished-at="2024-01-31T17:18:24 IST" duration-ms="2018" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyingEnterGiftCodeErrorMsg()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:15:13 IST" name="verifyingEnterGiftCodeErrorMsg" finished-at="2024-01-25T18:16:48 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="95538" status="PASS">
+        <test-method signature="verifyFindAStore()[pri:0, instance:testScripts.FindAStoreTest@26cb5207]" started-at="2024-01-31T17:18:24 IST" name="verifyFindAStore" finished-at="2024-01-31T17:18:24 IST" duration-ms="47" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyingEnterGiftCodeErrorMsg -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:15:13 IST" name="afterClass" finished-at="2024-01-25T18:15:13 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyFindAStore -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.FindAStoreTest@26cb5207]" started-at="2024-01-31T17:18:24 IST" name="afterClass" finished-at="2024-01-31T17:18:24 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testScripts.PaymentPageTest.verifyingEnterGiftCodeErrorMsg() throws java.lang.Exception]]>
+                <![CDATA[public static void testScripts.FindAStoreTest.verifyFindAStore() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:16:48 IST" name="afterMethod" finished-at="2024-01-25T18:16:48 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.FindAStoreTest@26cb5207]" started-at="2024-01-31T17:18:24 IST" name="afterMethod" finished-at="2024-01-31T17:18:24 IST" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyingEnterGiftCodeErrorMsg status=SUCCESS method=PaymentPageTest.verifyingEnterGiftCodeErrorMsg()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e] output={null}]]]>
+                <![CDATA[[TestResult name=verifyFindAStore status=SUCCESS method=FindAStoreTest.verifyFindAStore()[pri:0, instance:testScripts.FindAStoreTest@26cb5207] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:16:48 IST" name="afterClass" finished-at="2024-01-25T18:16:48 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testScripts.PaymentPageTest.verifyingInvalidGcErrorMsg() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method signature="verifyingInvalidGcErrorMsg()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:16:48 IST" name="verifyingInvalidGcErrorMsg" finished-at="2024-01-25T18:16:55 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="6370" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyingInvalidGcErrorMsg -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:16:55 IST" name="afterMethod" finished-at="2024-01-25T18:16:55 IST" duration-ms="8" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyingInvalidGcErrorMsg status=SUCCESS method=PaymentPageTest.verifyingInvalidGcErrorMsg()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifyingCheckBalanceOfValidGc()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:16:55 IST" name="verifyingCheckBalanceOfValidGc" finished-at="2024-01-25T18:17:02 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="7432" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyingCheckBalanceOfValidGc -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:16:55 IST" name="afterClass" finished-at="2024-01-25T18:16:55 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testScripts.PaymentPageTest.verifyingCheckBalanceOfValidGc() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:17:02 IST" name="afterMethod" finished-at="2024-01-25T18:17:02 IST" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyingCheckBalanceOfValidGc status=SUCCESS method=PaymentPageTest.verifyingCheckBalanceOfValidGc()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:17:02 IST" name="afterClass" finished-at="2024-01-25T18:17:02 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testScripts.PaymentPageTest.verifyingCheckBalanceOfInvalidGcErrorMsg() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method signature="verifyingCheckBalanceOfInvalidGcErrorMsg()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:17:02 IST" name="verifyingCheckBalanceOfInvalidGcErrorMsg" finished-at="2024-01-25T18:17:08 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="6333" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyingCheckBalanceOfInvalidGcErrorMsg -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:17:08 IST" name="afterMethod" finished-at="2024-01-25T18:17:08 IST" duration-ms="27" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyingCheckBalanceOfInvalidGcErrorMsg status=SUCCESS method=PaymentPageTest.verifyingCheckBalanceOfInvalidGcErrorMsg()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:17:08 IST" name="afterClass" finished-at="2024-01-25T18:17:08 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testScripts.PaymentPageTest.verifyingSuccesMessageForValidGcApplied() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method signature="verifyingSuccesMessageForValidGcApplied()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:17:08 IST" name="verifyingSuccesMessageForValidGcApplied" finished-at="2024-01-25T18:17:15 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="6314" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyingSuccesMessageForValidGcApplied -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:17:15 IST" name="afterMethod" finished-at="2024-01-25T18:17:15 IST" duration-ms="13" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyingSuccesMessageForValidGcApplied status=SUCCESS method=PaymentPageTest.verifyingSuccesMessageForValidGcApplied()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:17:15 IST" name="afterClass" finished-at="2024-01-25T18:17:15 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testScripts.PaymentPageTest.verifyingRemovalOfAppliedGc() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method signature="verifyingRemovalOfAppliedGc()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:17:15 IST" name="verifyingRemovalOfAppliedGc" finished-at="2024-01-25T18:17:25 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="10433" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyingRemovalOfAppliedGc -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PaymentPageTest@4b6d92e]" started-at="2024-01-25T18:17:25 IST" name="afterMethod" finished-at="2024-01-25T18:17:27 IST" duration-ms="2351" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyingRemovalOfAppliedGc status=SUCCESS method=PaymentPageTest.verifyingRemovalOfAppliedGc()[pri:0, instance:testScripts.PaymentPageTest@4b6d92e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- testScripts.PaymentPageTest -->
+      </class> <!-- testScripts.FindAStoreTest -->
     </test> <!-- SmokeTest -->
   </suite> <!-- Providio Regression Test -->
 </testng-results>

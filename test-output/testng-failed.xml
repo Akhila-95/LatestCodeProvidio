@@ -3,16 +3,16 @@
 <suite name="Failed suite [Providio Regression Test]">
   <test thread-count="5" name="SmokeTest(failed)">
     <classes>
-      <class name="testScripts.OrderPlacingWithAllPaymentsTest">
+      <class name="testScripts.PlaceOrderTest">
         <methods>
           <include name="setUpforReport"/>
-          <include name="verifingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
+          <include name="verifyingTheEditPaymentToPaypalFromPlaceOrderPage"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testScripts.OrderPlacingWithAllPaymentsTest -->
+      </class> <!-- testScripts.PlaceOrderTest -->
     </classes>
   </test> <!-- SmokeTest(failed) -->
 </suite> <!-- Failed suite [Providio Regression Test] -->

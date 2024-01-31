@@ -78,15 +78,15 @@ public class PaypalMethod extends baseClass {
 	        // test.info("Entered into paypal window");
 	        //	List<WebElement> paypalPage = driver.findElements(By.id("headerText"));
 	        //	System.out.println("The url for payapal is " + paypalPage.size());
-	         Thread.sleep(3000);
+	         Thread.sleep(2000);
 	         if(Actionsss.elementSize(pp.getEmailLoginList())) {
 	        	Actionsss.sendKeys( pp.getEmailLogin(),"rahulnaik@etisbew.com", "User email");       	 
 	        	 test.info("Entered username");
 	         }
-	         Thread.sleep(3000);
+	         //Thread.sleep(3000);
 	         if(Actionsss.elementSize(pp.getNextButtonList())) {
 	        	Actionsss.click(pp.getNextButton());         
-	             Thread.sleep(1000);
+	             //Thread.sleep(1000);
 	         }
 	         if(Actionsss.elementSize(pp.getPasswordList())) {
 	        	 Actionsss.sendKeys(pp.getPassword(),"Etgsfcc245@", "password");               

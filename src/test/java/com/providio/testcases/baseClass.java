@@ -32,8 +32,13 @@ import org.testng.xml.XmlSuite;
 
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.ViewName;
+import com.providio.pageObjects.homePage;
 import com.providio.utilities.readConfig;
 import com.providio.utilities.reportToMail;
+
+import functionality.Actionsss;
+import pageObjects.homepage;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -48,6 +53,7 @@ public class baseClass {
 	protected static Random random = new Random();
 	// Create a SoftAssert instance
     protected static SoftAssert softAssert = new SoftAssert();
+    
 	
 	//test case type  
 	protected static boolean RegressionTestCase = false;
@@ -58,35 +64,49 @@ public class baseClass {
 		protected static String   fakeFirstName = "";
 		protected static String   fakelastName = "";
 		protected static String   fakeFullName= "";
-		protected static String  addresses  = "";
+		protected static String   addresses  = "";
 		
 	
-		protected static String  previousAddresses  = "";
+		protected static String   previousAddresses  = "";
 		protected static String   editedFirstName = "";
 		protected static String   editedlastName = "";
 		protected static String   editedFullName= "";
-		protected static String  editedAddress  = "";
-		protected static String  previousMail  = "";
-		protected  static String   editedEmailFromCop3= "";
+		protected static String   editedAddress  = "";
+		protected static String   previousMail  = "";
+		protected  static String  editedEmailFromCop3= "";
 		
-		protected static String  previousBillingAddress  = "";
-		protected  static String   editedBillingAddress= "";
+		protected static String   previousBillingAddress  = "";
+		protected  static String  editedBillingAddress= "";
 		protected  static String  prevoiusBillingPhoneNumber= "";
-		protected  static String   editedBillingPhoneNumber= "";
+		protected  static String  editedBillingPhoneNumber= "";
+		
+
+		protected static String emailEditedInCop2 = ""; // Edited email in cop2
+		protected static String emailEditedInCop3 = ""; // Edited email in cop2
+		
+
+		protected static String previousShippingAddressInUpdate = ""; // Edited email in cop2
+		protected static String updateShippingAddress = "";
+		protected static String previousShippingAddress = ""; // Edited email in cop2
+		protected static String newlyAddedShippingAddress = "";
+				
+		protected static String previousPaymentInPlaceorderPage = "";
+		protected static String paymentafterEditInPlaceorderPage = "";
+		protected static String getTextOfPaypalInPaymentPage = "";
+		protected static String creditCardNumber = "";
 		
 		// count of gc applied
 		protected  static int   countOfGcApplied= 0;
 		protected  static int   countOfGcAppliedAfterItsRemoval= 0;
 		
+		// GC amount detected
+		protected static Float totalGcDetechedAmount=(float) 0;
 		// Excel file locations
 		public  static String GiftCerificateCodeforGc = readconfig.GiftCerificateCodeforGc(); // Gift certificate code for Gift Card
 		public  static String GiftCerificateCodeCombination = readconfig.GiftCerificateCodeCombination();
 		
 		public static String Report = readconfig.Report(); // Location for the report
 		public static String ReportScreenshot = readconfig.ReportScreenshot(); // Location for report screenshots
-	
-		
-	
 
 
 	// Login details
@@ -163,11 +183,6 @@ public class baseClass {
 	protected static boolean giftCard = false; // Flag indicating whether a gift card is used
 
 
-	protected static String emailEditedInCop2 = ""; // Edited email in cop2
-	protected static String emailEditedInCop3 = ""; // Edited email in cop2
-	
-	protected static boolean giftMessageInCop2= false;
-
 	// ExtentReports and ExtentTest instances for reporting
 	protected static ExtentReports report = new ExtentReports();
 	private ExtentSparkReporter reporter = new ExtentSparkReporter(Report);
@@ -175,6 +190,8 @@ public class baseClass {
 	// Reporting
 	// static ExtentReports report;
 	protected static ExtentTest test;
+	
+	private static homepage homePage = new homepage(driver);
 
 	@BeforeSuite
 	public void setUpforReport() throws InterruptedException {
@@ -249,11 +266,14 @@ public class baseClass {
 
 	            // Attach the screenshot to the test report
 	            test.fail("Screenshot", MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+	            
+	            
 
 	        } catch (IOException e) {
 	            // Log an exception message if there's an issue with taking the screenshot
 	            System.out.println("Exception while taking screenshot: " + e.getMessage());
 	        }
+	        //Actionsss.click(homePage.clickOnLogo());
 	    }
 	}
 

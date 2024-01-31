@@ -28,6 +28,60 @@ public class PlaceOrderPage {
 		return summaryOfBillingAddressList;
 	}
 	
+	@FindBy(xpath="//button[@aria-label='Edit Payment']")
+	WebElement  editPaymentInPlaceOrderPage;
+	public WebElement getEditPaymentInPlaceOrderPage() {
+		return editPaymentInPlaceOrderPage;
+	}
+	
+	@FindBy(xpath="//div[@class='bt-credit-masknumber']")
+	List<WebElement>  creditCardPaymentBeforeEditList;
+	public List<WebElement> getCreditCardPaymentBeforeEditList() {
+		return  creditCardPaymentBeforeEditList;
+	}
+	
+	@FindBy(xpath="//div[@class='bt-credit-masknumber']")
+	WebElement  creditCardPaymentBeforeEdit;
+	public WebElement getCreditCardPaymentBeforeEdit() {
+		return  creditCardPaymentBeforeEdit;
+	}
+	
+	@FindBy(css="div.paypal-email")
+	List<WebElement>  paypalPaymentBeforeEditList;
+	public List<WebElement> getpaypalPaymentBeforeEditList() {
+		return  paypalPaymentBeforeEditList;
+	}
+	
+	@FindBy(css="div.paypal-email")
+	WebElement  paypalPaymentBeforeEdit;
+	public WebElement getpaypalPaymentBeforeEdit() {
+		return  paypalPaymentBeforeEdit;
+	}
+	
+	@FindBy(xpath="//span[@class='gift-certificate']")
+	List<WebElement>  gcPaymentBeforeEditList;
+	public List<WebElement> getGcPaymentBeforeEditList() {
+		return  gcPaymentBeforeEditList;
+	}
+	
+	@FindBy(xpath="//span[@class='gift-certificate']")
+	WebElement  gcPaymentBeforeEdit;
+	public WebElement getGcPaymentBeforeEdit() {
+		return  gcPaymentBeforeEdit;
+	}
+	
+	@FindBy(css="div.braintree-payment-details")
+	List<WebElement>  brainTreeDisplay;
+	public List<WebElement> getBrainTreeDisplay() {
+		return  brainTreeDisplay;
+	}
+	
+	@FindBy(xpath="//option[@id='braintreePaypalAccount']")
+	WebElement  paypalAccText;
+	public WebElement getPaypalAccText() {
+		return  paypalAccText;
+	}
+		
 	@FindBy(xpath="(//div[@class='address1'])[2]")
 	WebElement  billingAddress;
 	public WebElement getBillingAddress() {
@@ -51,4 +105,46 @@ public class PlaceOrderPage {
 	public WebElement getEditPaymentInPlaceOrderBtnPage() {
 		return  editPaymentInPlaceOrderBtnPage;
 	}
+	
+	@FindBy(css="a.back-to-cart")
+	WebElement backToCart;
+	public WebElement getBackToCart() {
+		return backToCart;
+	}
+	
+	@FindBy(xpath="//h2[contains(text(),'Order Summary')]")
+	WebElement orderSummaryDiv;
+	public WebElement getOrderSummaryDiv() {
+		return orderSummaryDiv;
+	}
+	
+	@FindBy(xpath="//div[@class='card shipping-summary']")
+	WebElement shippingPageList;
+	public WebElement getshippingInfo() {
+		return shippingPageList;
+	}
+	
+	@FindBy(css="div.customer-summary")
+	WebElement customerInfo;
+	public WebElement getCustomerInfo() {
+		return customerInfo;
+	}
+	
+	@FindBy(css = "div.product-detail")
+	WebElement pdpPage;
+	public WebElement getPdpPage() {
+		return pdpPage;
+	}
+	
+	@FindBy(css = "//img[@title='logo']")
+	WebElement etgLogo;
+	public WebElement getEtgLogo() {
+		return etgLogo;
+	}
+	
+    @FindBy(xpath ="//button[contains(text(),'Place Order')]")
+  	WebElement PlaceOrderBtn;    
+  	public WebElement getSelectPlaceOrderBtn(){
+  		return PlaceOrderBtn;
+  	}
 }

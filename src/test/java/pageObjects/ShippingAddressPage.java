@@ -111,25 +111,35 @@ public class ShippingAddressPage extends baseClass{
 	// WebElement for addressDropDownSelect
 	@FindBy(xpath = "//select[@id='shipmentSelector-default']")
 	WebElement addressDropDownSelect;
-
 	public WebElement getAddressDropDownSelect() {
 	    return addressDropDownSelect;
 	}
+	
 	// WebElement for addressDropDownSelect
 	@FindBy(xpath = "//select[@id='shipmentSelector-default']//option[contains(@value,'ab_')]")
 	List<WebElement> savedShippingAddressList;
-
 	public List<WebElement> getsavedShippingAddressList() {
 	    return savedShippingAddressList;
 	}
+	
 	// WebElement for addressDropDownSelect
 	@FindBy(xpath = "//select[@id='shipmentSelector-default']//option[contains(@value,'ab_')]")
 	WebElement savedShippingAddress;
-
 	public WebElement getsavedShippingAddress() {
 	    return savedShippingAddress;
 	}
 	
+	@FindBy(xpath = "//select[@id='billingAddressSelector']//option[@value!='new']")
+	WebElement savedBillingAddress;
+	public WebElement getsavedBillingAddress() {
+	    return savedBillingAddress;
+	}
+	
+	@FindBy(xpath = "//select[@id='billingAddressSelector']//option[@value!='new']")
+	List<WebElement> savedBillingAddressList;
+	public List<WebElement> getsavedBillingAddressList() {
+	    return savedBillingAddressList;
+	}
 
 	// List of WebElements for savedAddress
 	@FindBy(xpath = "//select[@id='shipmentSelector-default']/option")
