@@ -52,30 +52,66 @@
 				<include name="VerifyingOrderConfirmationPage"/>
 	
 			</methods>	
-			-->
+			
 		
 	<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
 			<methods>
 			
-			 	<!-- <include name="verifyingOrderIsPlacingWithCreditCard"/>			  				
-			   <include name="verifyingOrderIsPlacingWithGiftCard"/>				  
-			<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
+			 	 <include name="verifyingOrderIsPlacingWithCreditCard"/>			  				
+			     <include name="verifyingOrderIsPlacingWithGiftCard"/>	  
+				<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
 				
-				<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>	 -->											
+				<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>											
 				<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
-				 	  
+					  
 			    <include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
 			 	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/> 		
-			    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
+			   <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
 		 		 	
-			</methods>	
+			</methods>
 
-  			<!--  
+  			
    			<class name="OrderRegression.PlaceOrderWithBuyNowPopUp"/>
 	               <methods>				 		  		                  
 	    				<include name="verifyingPlacingOrderWithBuyNowPopUp"></include>   
 	               </methods>
 	               -->
+	               
+	               <class name ="testScripts.PlaceOrderTest"/>
+			<methods>
+				
+				 <include name="verifyingPlaceOrderButton"/>
+				<include name="verifyingTheCustomerInfoInPaymntPage"/>
+				<!--<include name="verifyingPaginationOfProductsInPaymentPage"/>-->
+				<include name="verifyingOrderSummaryDisplayInPaymentPage"/>
+				<include name="verifyingPaymentInfoDisplayInPaymentPage"/>
+				<include name="verifyingEtgLogoDisplayInPaymentPage"/>
+				<!--<include name="verifyingBackToCartInPaymentPage"/>-->
+				<include name="verifyingTheEditPaymentToPaypalFromPlaceOrderPage"/>
+				
+	
+			</methods>
+			<!-- 
+				<class name ="testScripts.OrderDetailsTests"/>
+			<methods>
+				<include name="VerifyingOrderConfirmationPage"/>
+	
+			</methods>-->
+			<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
+			<methods>
+			
+			 	<!-- <include name="verifyingOrderIsPlacingWithCreditCard"/>			  				
+			    <include name="verifyingOrderIsPlacingWithGiftCard"/>	  -->
+				<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
+				
+				<!--<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>	-->										
+				<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
+					  
+				<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
+			   <!--	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/> -->		
+			    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
+		 		 	
+			</methods>	
          </classes>
     </test>
 </suite>

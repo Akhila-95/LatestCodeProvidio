@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="12" total="15" passed="2" failed="1" skipped="0">
+<testng-results ignored="13" total="22" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-31T17:18:12 IST" name="Providio Regression Test" finished-at="2024-01-31T17:19:24 IST" duration-ms="72459">
+  <suite started-at="2024-02-01T00:13:20 IST" name="Providio Regression Test" finished-at="2024-02-01T00:23:24 IST" duration-ms="604050">
     <groups>
       <group name="regression">
-        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
+        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@77b919a3]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
+        <method signature="OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
+        <method signature="OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithMiniCartPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" name="verifyingOrderIsPlacingWithMiniCartPaypal" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
+        <method signature="OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
+        <method signature="OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalFromCheckoutPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
+        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@77b919a3]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
+        <method signature="OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
+        <method signature="OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithMiniCartPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" name="verifyingOrderIsPlacingWithMiniCartPaypal" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
+        <method signature="OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
+        <method signature="OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalFromCheckoutPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage" class="testScripts.OrderPlacingWithAllPaymentsTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-01-31T17:18:12 IST" name="SmokeTest" finished-at="2024-01-31T17:19:24 IST" duration-ms="72459">
+    <test started-at="2024-02-01T00:13:20 IST" name="SmokeTest" finished-at="2024-02-01T00:23:24 IST" duration-ms="604050">
       <class name="browser.launchBrowsering">
-        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:18:05 IST" name="setUpforReport" finished-at="2024-01-31T17:18:12 IST" duration-ms="7285" status="PASS">
+        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:browser.launchBrowsering@77b919a3]" started-at="2024-02-01T00:13:13 IST" name="setUpforReport" finished-at="2024-02-01T00:13:20 IST" duration-ms="7741" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpforReport -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:18:12 IST" name="setUp" finished-at="2024-01-31T17:18:14 IST" duration-ms="2051" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:browser.launchBrowsering@77b919a3]" started-at="2024-02-01T00:13:20 IST" name="setUp" finished-at="2024-02-01T00:13:23 IST" duration-ms="2262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:18:14 IST" name="afterClass" finished-at="2024-01-31T17:18:14 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:browser.launchBrowsering@77b919a3]" started-at="2024-02-01T00:13:23 IST" name="afterClass" finished-at="2024-02-01T00:13:23 IST" duration-ms="36" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,109 +40,129 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method signature="verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:18:14 IST" name="verifyHomePageLaunching" finished-at="2024-01-31T17:18:22 IST" duration-ms="7560" status="PASS">
+        <test-method signature="verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@77b919a3]" started-at="2024-02-01T00:13:23 IST" name="verifyHomePageLaunching" finished-at="2024-02-01T00:13:29 IST" duration-ms="6525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePageLaunching -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:18:22 IST" name="afterMethod" finished-at="2024-01-31T17:18:22 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:browser.launchBrowsering@77b919a3]" started-at="2024-02-01T00:13:29 IST" name="afterMethod" finished-at="2024-02-01T00:13:29 IST" duration-ms="15" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449] output={null}]]]>
+                <![CDATA[[TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@77b919a3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-01-31T17:19:24 IST" name="tearDown" finished-at="2024-01-31T17:19:34 IST" duration-ms="9137" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:browser.launchBrowsering@77b919a3]" started-at="2024-02-01T00:23:24 IST" name="tearDown" finished-at="2024-02-01T00:23:32 IST" duration-ms="7566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- browser.launchBrowsering -->
       <class name="testScripts.PlaceOrderTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.PlaceOrderTest@15400fff]" started-at="2024-01-31T17:18:24 IST" name="setUp" finished-at="2024-01-31T17:18:26 IST" duration-ms="2008" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:13:29 IST" name="setUp" finished-at="2024-02-01T00:13:31 IST" duration-ms="2008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PlaceOrderTest@15400fff]" started-at="2024-01-31T17:18:26 IST" name="afterClass" finished-at="2024-01-31T17:18:26 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:13:31 IST" name="afterClass" finished-at="2024-02-01T00:13:31 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage() throws java.lang.InterruptedException,java.lang.Exception]]>
+                <![CDATA[public void testScripts.PlaceOrderTest.verifyingOrderSummaryDisplayInReviewOrderPage() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method signature="verifyingTheEditPaymentToPaypalFromPlaceOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@15400fff]" started-at="2024-01-31T17:18:26 IST" name="verifyingTheEditPaymentToPaypalFromPlaceOrderPage" finished-at="2024-01-31T17:19:24 IST" duration-ms="58245" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success add-to-basket-alert text-center'] (tried for 30 second(s) with 1000 milliseconds interval)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success add-to-basket-alert text-center'] (tried for 30 second(s) with 1000 milliseconds interval)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:261)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-at validations.ProductListingPageValidations.validatingProductisAddtoCart(ProductListingPageValidations.java:123)
-at tasks.ProductListingPageTasks.quickShop(ProductListingPageTasks.java:75)
-at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
-at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
-at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
-at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
-at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:30)
-at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:132)
-at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-at tasks.PaymentPageTasks.gcRedemption(PaymentPageTasks.java:418)
-at tasks.PlaceOrderPageTask.placeOrderPage(PlaceOrderPageTask.java:26)
-at tasks.PlaceOrderPageTask.editPaymentToPaypal(PlaceOrderPageTask.java:139)
-at testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage(PlaceOrderTest.java:12)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="verifyingOrderSummaryDisplayInReviewOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:13:31 IST" name="verifyingOrderSummaryDisplayInReviewOrderPage" finished-at="2024-02-01T00:15:16 IST" duration-ms="104424" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyingTheEditPaymentToPaypalFromPlaceOrderPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PlaceOrderTest@15400fff]" started-at="2024-01-31T17:19:24 IST" name="afterMethod" finished-at="2024-01-31T17:19:24 IST" duration-ms="405" status="PASS">
+        </test-method> <!-- verifyingOrderSummaryDisplayInReviewOrderPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:15:16 IST" name="afterMethod" finished-at="2024-02-01T00:15:16 IST" duration-ms="20" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyingTheEditPaymentToPaypalFromPlaceOrderPage status=FAILURE method=PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@15400fff] output={null}]]]>
+                <![CDATA[[TestResult name=verifyingOrderSummaryDisplayInReviewOrderPage status=SUCCESS method=PlaceOrderTest.verifyingOrderSummaryDisplayInReviewOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@121bb45b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:15:16 IST" name="afterClass" finished-at="2024-02-01T00:15:16 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PlaceOrderTest.verifyingPaymentInfoDisplayInReviewOrderPage() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingPaymentInfoDisplayInReviewOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:15:16 IST" name="verifyingPaymentInfoDisplayInReviewOrderPage" finished-at="2024-02-01T00:15:16 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingPaymentInfoDisplayInReviewOrderPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:15:16 IST" name="afterMethod" finished-at="2024-02-01T00:15:16 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingPaymentInfoDisplayInReviewOrderPage status=SUCCESS method=PlaceOrderTest.verifyingPaymentInfoDisplayInReviewOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@121bb45b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:15:16 IST" name="afterClass" finished-at="2024-02-01T00:15:16 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PlaceOrderTest.verifyingEtgLogoDisplayInReviewOrderPage() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingEtgLogoDisplayInReviewOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:15:16 IST" name="verifyingEtgLogoDisplayInReviewOrderPage" finished-at="2024-02-01T00:15:16 IST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingEtgLogoDisplayInReviewOrderPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:15:16 IST" name="afterMethod" finished-at="2024-02-01T00:15:16 IST" duration-ms="12" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingEtgLogoDisplayInReviewOrderPage status=SUCCESS method=PlaceOrderTest.verifyingEtgLogoDisplayInReviewOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@121bb45b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyingTheEditPaymentToPaypalFromReviewOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:15:16 IST" name="verifyingTheEditPaymentToPaypalFromReviewOrderPage" finished-at="2024-02-01T00:16:42 IST" duration-ms="86340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingTheEditPaymentToPaypalFromReviewOrderPage -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:15:16 IST" name="afterClass" finished-at="2024-02-01T00:15:16 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromReviewOrderPage() throws java.lang.InterruptedException,java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.PlaceOrderTest@121bb45b]" started-at="2024-02-01T00:16:42 IST" name="afterMethod" finished-at="2024-02-01T00:16:42 IST" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingTheEditPaymentToPaypalFromReviewOrderPage status=SUCCESS method=PlaceOrderTest.verifyingTheEditPaymentToPaypalFromReviewOrderPage()[pri:0, instance:testScripts.PlaceOrderTest@121bb45b] output={null}]]]>
               </value>
             </param>
           </params>
@@ -142,38 +170,116 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- testScripts.PlaceOrderTest -->
-      <class name="testScripts.FindAStoreTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.FindAStoreTest@26cb5207]" started-at="2024-01-31T17:18:22 IST" name="setUp" finished-at="2024-01-31T17:18:24 IST" duration-ms="2018" status="PASS">
+      <class name="testScripts.OrderPlacingWithAllPaymentsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:16:42 IST" name="setUp" finished-at="2024-02-01T00:16:44 IST" duration-ms="2005" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyFindAStore()[pri:0, instance:testScripts.FindAStoreTest@26cb5207]" started-at="2024-01-31T17:18:24 IST" name="verifyFindAStore" finished-at="2024-01-31T17:18:24 IST" duration-ms="47" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyFindAStore -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.FindAStoreTest@26cb5207]" started-at="2024-01-31T17:18:24 IST" name="afterClass" finished-at="2024-01-31T17:18:24 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:16:44 IST" name="afterClass" finished-at="2024-02-01T00:16:44 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public static void testScripts.FindAStoreTest.verifyFindAStore() throws java.lang.Exception]]>
+                <![CDATA[public void testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalFromCheckoutPage() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.FindAStoreTest@26cb5207]" started-at="2024-01-31T17:18:24 IST" name="afterMethod" finished-at="2024-01-31T17:18:24 IST" duration-ms="8" status="PASS">
+        <test-method signature="verifyingOrderIsPlacingWithPaypalFromCheckoutPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:16:44 IST" name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage" finished-at="2024-02-01T00:19:40 IST" duration-ms="175423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingOrderIsPlacingWithPaypalFromCheckoutPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:19:40 IST" name="afterMethod" finished-at="2024-02-01T00:19:40 IST" duration-ms="13" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyFindAStore status=SUCCESS method=FindAStoreTest.verifyFindAStore()[pri:0, instance:testScripts.FindAStoreTest@26cb5207] output={null}]]]>
+                <![CDATA[[TestResult name=verifyingOrderIsPlacingWithPaypalFromCheckoutPage status=SUCCESS method=OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalFromCheckoutPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testScripts.FindAStoreTest -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:19:40 IST" name="afterClass" finished-at="2024-02-01T00:19:40 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndPaypal() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:19:40 IST" name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal" finished-at="2024-02-01T00:21:55 IST" duration-ms="134602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingOrderIsPlacingWithCombinationOfGcAndPaypal -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:21:55 IST" name="afterMethod" finished-at="2024-02-01T00:21:55 IST" duration-ms="15" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingOrderIsPlacingWithCombinationOfGcAndPaypal status=SUCCESS method=OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:21:55 IST" name="afterClass" finished-at="2024-02-01T00:21:55 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithMiniCartPaypal() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingOrderIsPlacingWithMiniCartPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:21:55 IST" name="verifyingOrderIsPlacingWithMiniCartPaypal" finished-at="2024-02-01T00:23:01 IST" duration-ms="66750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingOrderIsPlacingWithMiniCartPaypal -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:23:01 IST" name="afterMethod" finished-at="2024-02-01T00:23:01 IST" duration-ms="17" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingOrderIsPlacingWithMiniCartPaypal status=SUCCESS method=OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithMiniCartPaypal()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:23:01 IST" name="afterClass" finished-at="2024-02-01T00:23:01 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:23:01 IST" name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage" finished-at="2024-02-01T00:23:24 IST" duration-ms="22959" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298]" started-at="2024-02-01T00:23:24 IST" name="afterMethod" finished-at="2024-02-01T00:23:24 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage status=SUCCESS method=OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@4faa298] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testScripts.OrderPlacingWithAllPaymentsTest -->
     </test> <!-- SmokeTest -->
   </suite> <!-- Providio Regression Test -->
 </testng-results>

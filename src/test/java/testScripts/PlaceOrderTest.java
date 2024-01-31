@@ -8,43 +8,43 @@ import tasks. PlaceOrderPageTask;
 public class PlaceOrderTest extends baseClass{
 	
 	@Test
-	public  void verifyingTheEditPaymentToPaypalFromPlaceOrderPage() throws InterruptedException, Exception {
+	public  void verifyingTheEditPaymentToPaypalFromReviewOrderPage() throws InterruptedException, Exception {
 		 PlaceOrderPageTask.editPaymentToPaypal();
 	}
 	
 	@Test
-	public static void  verifyingPlaceOrderButton() throws Exception {
-		PlaceOrderPageTask.placeOrder();
+	public static void  verifyingPlaceOrderButtonInReviewOrderPage() throws Exception {
+		PlaceOrderPageTask.getPlaceOrder() ;
 	}
 	
 	@Test
-	public  void verifyingTheCustomerInfoInPaymntPage() throws InterruptedException, Exception {
+	public  void verifyingTheCustomerInfoInReviewOrderPage() throws InterruptedException, Exception {
 		 PlaceOrderPageTask.getCutomerInfoInPaymentPage();
 	}
 	
 	@Test
-	public void verifyingPaginationOfProductsInPaymentPage() throws Exception {
+	public void verifyingPaginationOfProductsInReviewOrderPage() throws Exception {
 		// PlaceOrderPageTask.paginationOfProductsInPaymentPage();
 	}
 	
 
 	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyingOrderSummaryDisplayInPaymentPage() throws Exception {
+	public void verifyingOrderSummaryDisplayInReviewOrderPage() throws Exception {
 		 PlaceOrderPageTask.getOrderSummary();
 	}
 	
 	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyingPaymentInfoDisplayInPaymentPage() throws Exception {
+	public void verifyingPaymentInfoDisplayInReviewOrderPage() throws Exception {
 		 PlaceOrderPageTask.getPaymentInfo();
 	}
 	
 	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyingEtgLogoDisplayInPaymentPage() throws Exception {
+	public void verifyingEtgLogoDisplayInReviewOrderPage() throws Exception {
 		 PlaceOrderPageTask.getEtgLogo();
 	}
 	
 	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
-	public void verifyingBackToCartInPaymentPage() throws Exception {
+	public void verifyingBackToCartInReviewOrderPage() throws Exception {
 		// PlaceOrderPageTask.getBackToCart();
 	}
 	

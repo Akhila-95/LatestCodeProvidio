@@ -6,13 +6,34 @@
       <class name="testScripts.PlaceOrderTest">
         <methods>
           <include name="setUpforReport"/>
-          <include name="verifyingTheEditPaymentToPaypalFromPlaceOrderPage"/>
+          <include name="verifyingPaymentInfoDisplayInReviewOrderPage"/>
+          <include name="verifyingTheEditPaymentToPaypalFromReviewOrderPage"/>
+          <include name="verifyingEtgLogoDisplayInReviewOrderPage"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
+          <include name="verifyingOrderSummaryDisplayInReviewOrderPage"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testScripts.PlaceOrderTest -->
+      <class name="browser.launchBrowsering">
+        <methods>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- browser.launchBrowsering -->
+      <class name="testScripts.OrderPlacingWithAllPaymentsTest">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
+          <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/>
+          <include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testScripts.OrderPlacingWithAllPaymentsTest -->
     </classes>
   </test> <!-- SmokeTest(failed) -->
 </suite> <!-- Failed suite [Providio Regression Test] -->

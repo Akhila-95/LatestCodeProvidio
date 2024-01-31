@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>SmokeTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 31 17:18:12 IST 2024</td>
+<td>Started on:</td><td>Thu Feb 01 00:13:20 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>72 seconds (72459 ms)</td>
+<tr><td>Total time:</td><td>604 seconds (604050 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,88 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage()'><b>verifyingTheEditPaymentToPaypalFromPlaceOrderPage</b><br>Test class: testScripts.PlaceOrderTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;alert alert-success add-to-basket-alert text-center&apos;] (tried for 30 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:261)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at validations.ProductListingPageValidations.validatingProductisAddtoCart(ProductListingPageValidations.java:123)
-	at tasks.ProductListingPageTasks.quickShop(ProductListingPageTasks.java:75)
-	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
-	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
-	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
-	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
-	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:30)
-	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:132)
-	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-	at tasks.PaymentPageTasks.gcRedemption(PaymentPageTasks.java:418)
-	at tasks.PlaceOrderPageTask.placeOrderPage(PlaceOrderPageTask.java:26)
-	at tasks.PlaceOrderPageTask.editPaymentToPaypal(PlaceOrderPageTask.java:139)
-	at testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage(PlaceOrderTest.java:12)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1321433666", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1321433666'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;alert alert-success add-to-basket-alert text-center&apos;] (tried for 30 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:261)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at validations.ProductListingPageValidations.validatingProductisAddtoCart(ProductListingPageValidations.java:123)
-	at tasks.ProductListingPageTasks.quickShop(ProductListingPageTasks.java:75)
-	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
-	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
-	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
-	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
-	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:30)
-	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:132)
-	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-	at tasks.PaymentPageTasks.gcRedemption(PaymentPageTasks.java:418)
-	at tasks.PlaceOrderPageTask.placeOrderPage(PlaceOrderPageTask.java:26)
-	at tasks.PlaceOrderPageTask.editPaymentToPaypal(PlaceOrderPageTask.java:139)
-	at testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage(PlaceOrderTest.java:12)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>58</td>
-<td>testScripts.PlaceOrderTest@15400fff</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -158,15 +76,50 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScripts.FindAStoreTest.verifyFindAStore()'><b>verifyFindAStore</b><br>Test class: testScripts.FindAStoreTest</td>
+<td title='testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromReviewOrderPage()'><b>verifyingTheEditPaymentToPaypalFromReviewOrderPage</b><br>Test class: testScripts.PlaceOrderTest</td>
+<td></td>
+<td>86</td>
+<td>testScripts.PlaceOrderTest@121bb45b</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndPaypal()'><b>verifyingOrderIsPlacingWithCombinationOfGcAndPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>134</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4faa298</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithMiniCartPaypal()'><b>verifyingOrderIsPlacingWithMiniCartPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>66</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4faa298</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage()'><b>verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>22</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4faa298</td></tr>
+<tr>
+<td title='testScripts.PlaceOrderTest.verifyingOrderSummaryDisplayInReviewOrderPage()'><b>verifyingOrderSummaryDisplayInReviewOrderPage</b><br>Test class: testScripts.PlaceOrderTest</td>
+<td></td>
+<td>104</td>
+<td>testScripts.PlaceOrderTest@121bb45b</td></tr>
+<tr>
+<td title='testScripts.PlaceOrderTest.verifyingEtgLogoDisplayInReviewOrderPage()'><b>verifyingEtgLogoDisplayInReviewOrderPage</b><br>Test class: testScripts.PlaceOrderTest</td>
 <td></td>
 <td>0</td>
-<td>testScripts.FindAStoreTest@26cb5207</td></tr>
+<td>testScripts.PlaceOrderTest@121bb45b</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalFromCheckoutPage()'><b>verifyingOrderIsPlacingWithPaypalFromCheckoutPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>175</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4faa298</td></tr>
 <tr>
 <td title='browser.launchBrowsering.verifyHomePageLaunching()'><b>verifyHomePageLaunching</b><br>Test class: browser.launchBrowsering</td>
 <td></td>
-<td>7</td>
-<td>browser.launchBrowsering@55e42449</td></tr>
+<td>6</td>
+<td>browser.launchBrowsering@77b919a3</td></tr>
+<tr>
+<td title='testScripts.PlaceOrderTest.verifyingPaymentInfoDisplayInReviewOrderPage()'><b>verifyingPaymentInfoDisplayInReviewOrderPage</b><br>Test class: testScripts.PlaceOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.PlaceOrderTest@121bb45b</td></tr>
 </table><p>
 </body>
 </html>

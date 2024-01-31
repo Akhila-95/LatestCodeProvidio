@@ -1,5 +1,8 @@
 package tasks;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import com.providio.testcases.baseClass;
 
 import data.PaymentDetails;
@@ -94,6 +97,7 @@ public class PlaceOrderPageTask extends baseClass{
 		}else {
 			logger.info("Other paymnet activated");
 			logger.info("Place order page is loaded");
+			Thread.sleep(2000);
 			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
 			Thread.sleep(5000);
 			PaymentPageValidation.VerifiedThatPlaceOrderClick();
@@ -110,7 +114,7 @@ public class PlaceOrderPageTask extends baseClass{
 			Actionsss.click(placeOrder.getEditPaymentInPlaceOrderPage());
 		}else if(Actionsss.elementSize(placeOrder.getpaypalPaymentBeforeEditList())) {
 			logger.info("paypal");
-			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getpaypalPaymentBeforeEdit());
+		//	previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getpaypalPaymentBeforeEdit());
 			logger.info(previousPaymentInPlaceorderPage);
 			Actionsss.click(placeOrder.getEditPaymentInPlaceOrderPage());
 		}else if(Actionsss.elementSize(placeOrder.getGcPaymentBeforeEditList())){
@@ -145,34 +149,47 @@ public class PlaceOrderPageTask extends baseClass{
 			Actionsss.click(placeOrder.getEditPaymentInPlaceOrderPage());
 		}else if(Actionsss.elementSize(placeOrder.getpaypalPaymentBeforeEditList())) {
 			logger.info("paypal");
-			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getpaypalPaymentBeforeEdit());
+			if(Actionsss.elementSize(placeOrder.getBrainTreeDisplay())) {
+			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getBrainPaypalPaymentInReviewOrderPage());
 			logger.info(previousPaymentInPlaceorderPage);
+			}
 			Actionsss.click(placeOrder.getEditPaymentInPlaceOrderPage());
 		}else if(Actionsss.elementSize(placeOrder.getGcPaymentBeforeEditList())){
 			logger.info("gc");
 			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getGcPaymentBeforeEdit());
 			logger.info(previousPaymentInPlaceorderPage);
-			Actionsss.click(placeOrder.getEditPaymentInPlaceOrderPage());
+			Actionsss.javascriptClick(placeOrder.getEditPaymentInPlaceOrderPage());
 			PaymentPageTasks.removeAppliedGc();
 			PaymentPageTasks.paypal();
 			logger.info("edit paypal");			
-			//logger.info("Entered credit card num is " +creditCardNumber);
-			paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getpaypalPaymentBeforeEdit());
-			logger.info(paymentafterEditInPlaceorderPage);
+			
+			Thread.sleep(2000);
+			//paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getBrainPaypalPaymentBeforeEdit());
+			//logger.info(paymentafterEditInPlaceorderPage);
 						
-			if(Actionsss.elementSize(placeOrder.getBrainTreeDisplay())) {	
+			if(Actionsss.elementSize(placeOrder.getBrainTreeDisplay())) {
+				logger.info("brain tree activated");
+				paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getBrainPaypalPaymentInReviewOrderPage());
+				logger.info(paymentafterEditInPlaceorderPage);
 				logger.info("If payment is brain tree then clicked on edit and check the edited payment");
 				Actionsss.click(placeOrder.getEditPaymentInPlaceOrderPage());
-				
-				getTextOfPaypalInPaymentPage=Actionsss.getTextOfElement(placeOrder.getPaypalAccText());
-				//String shippingaddress = placeOrder.getPaypalAccText.getAttribute("value");
+				WebElement paypal= driver.findElement(By.xpath("//option[@id='braintreePaypalAccount']"));
+				getTextOfPaypalInPaymentPage= paypal.getAttribute("value");
 				logger.info(getTextOfPaypalInPaymentPage);
+				
 				PaymentPageTasks.clickReviewOrderButton();
+				PlaceOrderPageValidation.editPaymentToPaypalReviewOrderPage();
 				placeOrder();
+				OrderPageValidation.validatePlacetheOrderPage();
+				OrderPageValidation.orderNumberAndOrderDate();
 			}else {
+				logger.info("");
 				placeOrder();
 				PlaceOrderPageValidation.editPaymentInReviewOrderPage();
+				OrderPageValidation.validatePlacetheOrderPage();
+				OrderPageValidation.orderNumberAndOrderDate();
+				
 			}
-		}	
+		}
 	}
 }

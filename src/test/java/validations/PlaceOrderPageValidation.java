@@ -106,6 +106,7 @@ public class PlaceOrderPageValidation extends baseClass {
 			 test.pass("No  Payment info div is displayed in  place order page");
 		 }
 	}
+
 	public static void editPaymentInReviewOrderPage() {
 		test.info("Verifying the gift certificate payment edited with credit card from review order page");
 		logger.info(previousPaymentInPlaceorderPage);
@@ -120,13 +121,13 @@ public class PlaceOrderPageValidation extends baseClass {
 		}
 	}
 	
-	public static void editPaymentToPaypalReviewOrderPage() {
-		test.info("Verifying the gift certificate payment edited with paypal from review order page");
-		logger.info(previousPaymentInPlaceorderPage);
+	public static void editPaypalPaymentInReviewOrderPage() {
+		test.info("Verifying the display of paypal once edited payment edited is edited with paypal in review order page");
+		logger.info(getTextOfPaypalInPaymentPage);
 		logger.info(paymentafterEditInPlaceorderPage);
-		logger.info(creditCardNumber);
-		if((!previousPaymentInPlaceorderPage.equals(paymentafterEditInPlaceorderPage)) && (creditCardNumber.equals(paymentafterEditInPlaceorderPage))){
-			test.pass("Successfully  gift certificate payment is  edited with credit card from review order page");
+		//logger.info(creditCardNumber);
+		if(getTextOfPaypalInPaymentPage.equals(paymentafterEditInPlaceorderPage)){
+			test.pass("Successfully  paypal is displayed after updating the Gc with paypal and clicks on edit it shows paypal,and also after review order button click same paypal is dispalyed in review order page");
 			logger.info("Successfully  gift certificate payment is  edited with credit card from review order page");
 		}else {
 			test.fail("No  gift certificate payment is  edited with credit card from review order page");
@@ -134,4 +135,17 @@ public class PlaceOrderPageValidation extends baseClass {
 		}
 	}
 	
+	public static void editPaymentToPaypalReviewOrderPage() {
+		test.info("Verifying the display of paypal in review order page");
+		logger.info(getTextOfPaypalInPaymentPage);
+		logger.info(paymentafterEditInPlaceorderPage);
+		//logger.info(creditCardNumber);
+		if(getTextOfPaypalInPaymentPage.equals(paymentafterEditInPlaceorderPage)){
+			test.pass("Successfully  paypal is displayed after updating the Gc with paypal and clicks on edit it shows paypal,and also after review order button click same paypal is dispalyed in review order page");
+			logger.info("Successfully  paypal is displayed after updating the Gc with paypal and clicks on edit it shows paypal,and also after review order button click same paypal is dispalyed in review order page");
+		}else {
+			test.fail("No paypal is displayed after updating the Gc with paypal and clicks on edit it shows paypal,and also after review order button click same paypal is dispalyed in review order page");
+			logger.info("No  paypal is displayed after updating the Gc with paypal and clicks on edit it shows paypal,and also after review order button click same paypal is dispalyed in review order page");
+		}
+	}
 }

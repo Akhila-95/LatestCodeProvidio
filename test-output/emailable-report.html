@@ -9,32 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Providio Regression Test</th></tr>
-<tr><td><a href="#t0">SmokeTest</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">72,459</td><td></td><td></td></tr>
+<tr><td><a href="#t0">SmokeTest</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">604,050</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Providio Regression Test</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SmokeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testScripts.PlaceOrderTest</td><td><a href="#m0">verifyingTheEditPaymentToPaypalFromPlaceOrderPage</a></td><td rowspan="1">1706701706179</td><td rowspan="1">58245</td></tr><tr><th colspan="4">SmokeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">browser.launchBrowsering</td><td><a href="#m1">verifyHomePageLaunching</a></td><td rowspan="1">1706701694491</td><td rowspan="1">7560</td></tr><tr class="passedodd"><td rowspan="1">testScripts.FindAStoreTest</td><td><a href="#m2">verifyFindAStore</a></td><td rowspan="1">1706701704112</td><td rowspan="1">47</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Providio Regression Test</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SmokeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">browser.launchBrowsering</td><td><a href="#m0">verifyHomePageLaunching</a></td><td rowspan="1">1706726603192</td><td rowspan="1">6525</td></tr><tr class="passedodd"><td rowspan="4">testScripts.OrderPlacingWithAllPaymentsTest</td><td><a href="#m1">verifyingOrderIsPlacingWithCombinationOfGcAndPaypal</a></td><td rowspan="1">1706726980432</td><td rowspan="1">134602</td></tr><tr class="passedodd"><td><a href="#m2">verifyingOrderIsPlacingWithMiniCartPaypal</a></td><td rowspan="1">1706727115051</td><td rowspan="1">66750</td></tr><tr class="passedodd"><td><a href="#m3">verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage</a></td><td rowspan="1">1706727181821</td><td rowspan="1">22959</td></tr><tr class="passedodd"><td><a href="#m4">verifyingOrderIsPlacingWithPaypalFromCheckoutPage</a></td><td rowspan="1">1706726804993</td><td rowspan="1">175423</td></tr><tr class="passedeven"><td rowspan="4">testScripts.PlaceOrderTest</td><td><a href="#m5">verifyingEtgLogoDisplayInReviewOrderPage</a></td><td rowspan="1">1706726716417</td><td rowspan="1">191</td></tr><tr class="passedeven"><td><a href="#m6">verifyingOrderSummaryDisplayInReviewOrderPage</a></td><td rowspan="1">1706726611757</td><td rowspan="1">104424</td></tr><tr class="passedeven"><td><a href="#m7">verifyingPaymentInfoDisplayInReviewOrderPage</a></td><td rowspan="1">1706726716207</td><td rowspan="1">192</td></tr><tr class="passedeven"><td><a href="#m8">verifyingTheEditPaymentToPaypalFromReviewOrderPage</a></td><td rowspan="1">1706726716624</td><td rowspan="1">86340</td></tr></tbody>
 </table>
-<h2>SmokeTest</h2><h3 id="m0">testScripts.PlaceOrderTest#verifyingTheEditPaymentToPaypalFromPlaceOrderPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;alert alert-success add-to-basket-alert text-center&apos;] (tried for 30 second(s) with 1000 milliseconds interval)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:261)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at validations.ProductListingPageValidations.validatingProductisAddtoCart(ProductListingPageValidations.java:123)
-	at tasks.ProductListingPageTasks.quickShop(ProductListingPageTasks.java:75)
-	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
-	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
-	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
-	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
-	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:30)
-	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:132)
-	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-	at tasks.PaymentPageTasks.gcRedemption(PaymentPageTasks.java:418)
-	at tasks.PlaceOrderPageTask.placeOrderPage(PlaceOrderPageTask.java:26)
-	at tasks.PlaceOrderPageTask.editPaymentToPaypal(PlaceOrderPageTask.java:139)
-	at testScripts.PlaceOrderTest.verifyingTheEditPaymentToPaypalFromPlaceOrderPage(PlaceOrderTest.java:12)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">browser.launchBrowsering#verifyHomePageLaunching</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testScripts.FindAStoreTest#verifyFindAStore</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SmokeTest</h2><h3 id="m0">browser.launchBrowsering#verifyHomePageLaunching</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testScripts.OrderPlacingWithAllPaymentsTest#verifyingOrderIsPlacingWithCombinationOfGcAndPaypal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testScripts.OrderPlacingWithAllPaymentsTest#verifyingOrderIsPlacingWithMiniCartPaypal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testScripts.OrderPlacingWithAllPaymentsTest#verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testScripts.OrderPlacingWithAllPaymentsTest#verifyingOrderIsPlacingWithPaypalFromCheckoutPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testScripts.PlaceOrderTest#verifyingEtgLogoDisplayInReviewOrderPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testScripts.PlaceOrderTest#verifyingOrderSummaryDisplayInReviewOrderPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testScripts.PlaceOrderTest#verifyingPaymentInfoDisplayInReviewOrderPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testScripts.PlaceOrderTest#verifyingTheEditPaymentToPaypalFromReviewOrderPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

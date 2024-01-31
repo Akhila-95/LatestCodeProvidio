@@ -52,10 +52,10 @@ public class PlaceOrderPage {
 		return  paypalPaymentBeforeEditList;
 	}
 	
-	@FindBy(css="div.paypal-email")
-	WebElement  paypalPaymentBeforeEdit;
-	public WebElement getpaypalPaymentBeforeEdit() {
-		return  paypalPaymentBeforeEdit;
+	@FindBy(css="div.bt-credit-paypal")
+	WebElement  brainPaypalPaymentBeforeEdit;
+	public WebElement getBrainPaypalPaymentInReviewOrderPage() {
+		return  brainPaypalPaymentBeforeEdit;
 	}
 	
 	@FindBy(xpath="//span[@class='gift-certificate']")
@@ -136,7 +136,7 @@ public class PlaceOrderPage {
 		return pdpPage;
 	}
 	
-	@FindBy(css = "//img[@title='logo']")
+	@FindBy(xpath= "//img[@title='logo']")
 	WebElement etgLogo;
 	public WebElement getEtgLogo() {
 		return etgLogo;

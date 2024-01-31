@@ -6,9 +6,9 @@
         <classes>
      
 			<class name="browser.launchBrowsering"/>
-
+<!--  
 	  	   <class name="testScripts.FindAStoreTest"/>
-				<!--  
+				
 				  <methods>	
 				 		  		                  
 	             	<include name="verifyFindAStore"></include>   
@@ -139,14 +139,16 @@
   
 			<class name ="testScripts.PlaceOrderTest"/>
 			<methods>
-				<include name="verifyingTheEditPaymentToPaypalFromPlaceOrderPage"/>
-				<!-- <include name="verifyingPlaceOrderButton"/>
-				<include name="verifyingTheCustomerInfoInPaymntPage"/>
-				<include name="verifyingPaginationOfProductsInPaymentPage"/>
-				<include name="verifyingOrderSummaryDisplayInPaymentPage"/>
-				<include name="verifyingPaymentInfoDisplayInPaymentPage"/>
-				<include name="verifyingEtgLogoDisplayInPaymentPage"/>
-				<include name="verifyingBackToCartInPaymentPage"/> -->
+				
+				
+				<include name=" verifyingPlaceOrderButtonInReviewOrderPage"/>
+				<!--<include name="verifyingPaginationOfProductsInReviewOrderPage"/>-->
+				<include name="verifyingOrderSummaryDisplayInReviewOrderPage"/>
+				<include name="verifyingPaymentInfoDisplayInReviewOrderPage"/>
+				<include name="verifyingEtgLogoDisplayInReviewOrderPage"/>
+				<!--<include name="verifyingBackToCartInReviewOrderPage"/>-->
+				 <include name="verifyingTheEditPaymentToPaypalFromReviewOrderPage"/>
+				
 				
 	
 			</methods>
@@ -155,24 +157,23 @@
 			<methods>
 				<include name="VerifyingOrderConfirmationPage"/>
 	
-			</methods>
-			
+			</methods>-->
 			<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
-				<methods>
-			 
-				  	<include name="verifyingOrderIsPlacingWithCreditCard"/>				  				
-					<include name="verifyingOrderIsPlacingWithGiftCard"/>								
-					<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
-					
-					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>								
-					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
-													 
-					<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
-					<include name="verifyingOrderIsPlacingWithCartPagePaypal"/> 
-					<include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/>
-					
-				</methods>	
-			-->
+			<methods>
+			
+			 	<!-- <include name="verifyingOrderIsPlacingWithCreditCard"/>			  				
+			    <include name="verifyingOrderIsPlacingWithGiftCard"/>	  -->
+				<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
+				
+				<!--<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>	-->										
+				<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
+					  
+				<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
+			   <!--	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/> -->		
+			    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
+		 		 	
+			</methods>	
+			
          </classes>
     </test>
 </suite>
