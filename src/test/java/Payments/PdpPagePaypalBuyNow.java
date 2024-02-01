@@ -6,11 +6,11 @@ import Paypal.PaypalMethod;
 import functionality.Actionsss;
 import functionality.allAttributesSelection;
 import pageObjects.ProductDetailPage;
-import pageObjects.ProductListingPage;
 import tasks.OrderDetailPageTasks;
-import tasks.PlaceOrderPageTask;
 import tasks.ProductListingPageTasks;
-import validations.ProductListingPageValidations;
+import tasks.ReviewOrderPageTask;
+import validations.OrderPageValidation;
+
 
 public class PdpPagePaypalBuyNow extends baseClass{
 
@@ -33,7 +33,8 @@ public class PdpPagePaypalBuyNow extends baseClass{
 		if(Actionsss.elementSize(pdp.getSalesforcePaypalBuyNowList())){
 			Actionsss.click(pdp.getSalesforcePaypalBuyNow());
 			PaypalMethod.paypalPopup();
-			PlaceOrderPageTask.placeOrder();
+			ReviewOrderPageTask.placeOrder();
+			OrderPageValidation.paymentInOrderConfirmationPage();
 			OrderDetailPageTasks.getOrderConfirmationPage();	
 		}else {
 			logger.info("No paypal buy now configuration in PDP in this payment");

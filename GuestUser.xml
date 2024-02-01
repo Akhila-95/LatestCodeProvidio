@@ -6,112 +6,41 @@
         <classes>
      
 			<class name="browser.launchBrowsering"/>
-	 			  <!--  
-				<class name ="testScripts.PaymentPageTest"/> 
+              <!-- 
+	       <class name ="testScripts.PlaceOrderTest"/>
+				<methods>				
+				   <include name="verifyingPlaceOrderButtonDisplayInReviewOrderPage"/>
+				 <include name="verifyingTheDisplayOfCustomerInfoInReviewOrderPage"/>				
+				 <include name="verifyingOrderSummaryDisplayInReviewOrderPage"/>
+				 <include name="verifyingPaymentInfoDisplayInReviewOrderPage"/>
+				 <include name="verifyingEtgLogoDisplayInReviewOrderPage"/>					 			
+				 <include name="verifyingTheEditPaymentToPaypalFromReviewOrderPage"/>
+				 	
+				 <include name="verifyingBackToCartInReviewOrderPagee"/>
+				 <include name="verifyingPaginationOfProductsInReviewOrderPage"/>			
+			</methods>
+			
+			 -->
+			<class name ="testScripts.PaymentPageTest"/> 
 				 <methods>
-
-			      <include name="verifyingEditShippingAddress" />					
-				  <include name="verifyingEditCustomerInfoFromCop3" />  					 
-		  		  <include name="verifyingUpdateBillingAddress" />					 				   
-				  <include name="verifyingAddNewBillingAddress" />	
-				  <include name="verifyingBillingPhoneNumberError" />
-				  <include name="verifyingEditPhoneNumberInBillingAddress" />
-				  <include name="verifyingPaginationOfProductsFromPaymentPage" />	
-				  <include name="verifyingAllTheErrorsInCreditCard" />
-				  <include name="verifyingCvvAndExpErrorInCreditCard" /> 					
-				  <include name="verifyingCvvErrorInCreditCard" />				
-				  <include name ="verifyingCreditcardNumberInValidError"></include>
-		  		  <include name ="verifyingCreditCardExpDateInValid"></include>
-			 	  <include name ="verifyingCreditCardNumberInCompleteError"></include>
-				  <include name ="verifyingCreditCardInCompleteExpYearError"></include>
-				  <include name ="verifyingCreditCardInCompleteCvvError"></include>  		 
-				  <include name="verifyingAddnewCreditCard" />	 
-				  <include name="verifyingCreditcardWithValidDetails" /> 
+				
+				 	  <include name="verifyingTheCustomerInfoInPaymntPage" />					
+					  <include name="verifyingPaginationOfProductsInPaymentPage" />  					 
+			  		  <include name="verifyingOrderSummaryDisplayInPaymentPage" />		
+			  		  <include name="verifyingEtgLogoDisplayInPaymentPage" />
+			  		  <include name="verifyingDisplayOfPaymentFormInPaymentPage" />	
+			  		  <include name="verifyingPaymentInfoDisplayInPaymentPage" />
+			  		  <include name="verifyingBackToCartInPaymentPage" />	
 				 
-             		
-             		
-             		<include name="verifyingEnterGiftCodeErrorMsg" />
-             		<include name="verifyingInvalidGcErrorMsg" />
-             		<include name="verifyingInsufficientGcErrorMsg" />             		
-             		<include name="verifyingCheckBalanceOfValidGc" />           		
-             		<include name="verifyingCheckBalanceOfInvalidGcErrorMsg" />
-             		<include name="verifyingSuccesMessageForValidGcApplied" />
-             		
-             		<include name="verifyingRemovalOfAppliedGc" />
-				</methods>  
-				
-<
-		<class name ="testScripts.PlaceOrderTest"/>
-			<methods>
-				<include name="verifyingPlaceOrderButton"/>
-	
-			</methods>
-		
-		<class name ="testScripts.OrderDetailsTests"/>
-			<methods>
-				<include name="VerifyingOrderConfirmationPage"/>
-	
-			</methods>	
-			
-		
-	<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
-			<methods>
-			
-			 	 <include name="verifyingOrderIsPlacingWithCreditCard"/>			  				
-			     <include name="verifyingOrderIsPlacingWithGiftCard"/>	  
-				<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
-				
-				<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>											
-				<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
-					  
-			    <include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
-			 	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/> 		
-			   <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
-		 		 	
-			</methods>
-
-  			
-   			<class name="OrderRegression.PlaceOrderWithBuyNowPopUp"/>
-	               <methods>				 		  		                  
-	    				<include name="verifyingPlacingOrderWithBuyNowPopUp"></include>   
-	               </methods>
-	               -->
-	               
-	               <class name ="testScripts.PlaceOrderTest"/>
-			<methods>
-				
-				 <include name="verifyingPlaceOrderButton"/>
-				<include name="verifyingTheCustomerInfoInPaymntPage"/>
-				<!--<include name="verifyingPaginationOfProductsInPaymentPage"/>-->
-				<include name="verifyingOrderSummaryDisplayInPaymentPage"/>
-				<include name="verifyingPaymentInfoDisplayInPaymentPage"/>
-				<include name="verifyingEtgLogoDisplayInPaymentPage"/>
-				<!--<include name="verifyingBackToCartInPaymentPage"/>-->
-				<include name="verifyingTheEditPaymentToPaypalFromPlaceOrderPage"/>
-				
-	
-			</methods>
-			<!-- 
-				<class name ="testScripts.OrderDetailsTests"/>
-			<methods>
-				<include name="VerifyingOrderConfirmationPage"/>
-	
-			</methods>-->
-			<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
-			<methods>
-			
-			 	<!-- <include name="verifyingOrderIsPlacingWithCreditCard"/>			  				
-			    <include name="verifyingOrderIsPlacingWithGiftCard"/>	  -->
-				<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
-				
-				<!--<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>	-->										
-				<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
-					  
-				<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
-			   <!--	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/> -->		
-			    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
-		 		 	
-			</methods>	
+			  		  <include name="verifyingEditShippingAddress" />					
+					  <include name="verifyingEditCustomerInfoFromCop3" />  					 
+			  		  <include name="verifyingUpdateBillingAddress" />		
+			  		  <include name="verifyingAddNewBillingAddress" />
+			  		  <include name="verifyingEditPhoneNumberInBillingAddress" />	
+			  		  <include name="verifyingGiftMessage" />	 
+		  			
+		  			
+		  			 </methods>
          </classes>
     </test>
 </suite>

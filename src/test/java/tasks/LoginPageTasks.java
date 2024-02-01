@@ -139,8 +139,8 @@ public class LoginPageTasks extends baseClass {
     	test.info("Verify with valid credentials");
     	   
         // Enter valid email and password
-        Actionsss.sendKeys(lp.getEmail(), "akhila.m+4@etg.digital",mail);      
-        Actionsss.sendKeys(lp.getPassword(), "Akhireddy@07",password);      
+        Actionsss.sendKeys(lp.getEmail(), "akhila.m+5@etg.digital",mail);      
+        Actionsss.sendKeys(lp.getPassword(), "Testing@123",password);      
         Thread.sleep(4000);     // Click the login button
         Actionsss.click(lp.btnLogin);
 

@@ -94,6 +94,7 @@ public class baseClass {
 		protected static String paymentafterEditInPlaceorderPage = "";
 		protected static String getTextOfPaypalInPaymentPage = "";
 		protected static String creditCardNumber = "";
+		protected static String gcCodeRedeemed= "";
 		
 		// count of gc applied
 		protected  static int   countOfGcApplied= 0;

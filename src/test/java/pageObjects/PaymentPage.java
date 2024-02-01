@@ -688,10 +688,17 @@ public class PaymentPage extends baseClass{
  	}
     
  	@FindBy(xpath = "//a[@class='remove']")
- 	List<WebElement> removeGc;
- 	public List<WebElement> getRemoveGc() {
+ 	List<WebElement> removeGcList;
+ 	public List<WebElement> getRemoveGcList() {
+ 		return removeGcList;
+ 	}
+ 	
+ 	@FindBy(xpath = "//a[@class='remove']")
+ 	WebElement removeGc;
+ 	public WebElement getRemoveGc() {
  		return removeGc;
  	}
+ 	
 //check gift card bal 
  	@FindBy(xpath = "//div[contains(@class,'balance success')]")
  	WebElement giftCardBalMsg;

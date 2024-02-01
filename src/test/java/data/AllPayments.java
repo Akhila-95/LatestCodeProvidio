@@ -56,7 +56,9 @@ public class AllPayments extends baseClass{
         int randomIndex = rand.nextInt(cardNumbers.length);
         // Send the randomly selected card number
 		Actionsss.sendKeys(pp.getBrainTreeCardNum(),cardNumbers[randomIndex],cardNum);
-		creditCardNumber=cardNum;
+		 // Extract the last four digits
+        String lastFourDigits = cardNum.substring(cardNum.length() - 4);
+		creditCardNumber=lastFourDigits;
 		test.info("Entered card number");
 		driver.switchTo().defaultContent();
 	}
@@ -118,7 +120,8 @@ public class AllPayments extends baseClass{
 	        Actionsss.sendKeys(pp.getSalesforceCardNumber(),cardNumbers[randomIndex],cardNum);
 			String cardNumber = pp.getSalesforceCardNumber().getAttribute("value");
 			test.info("Credit card number entered is " + cardNumber);
-			creditCardNumber= cardNumber;
+			String lastFourDigits = cardNumber.substring(cardNumber.length() - 4);
+			creditCardNumber=lastFourDigits;		
 			driver.switchTo().defaultContent();
 	}
 	public  void salesforceExpDate() throws InterruptedException {
@@ -166,7 +169,9 @@ public class AllPayments extends baseClass{
         // Send the randomly selected card number
         test.info("Credit card number entered is " + cardNumbers[randomIndex]);
         Actionsss.sendKeys(pp.getStripeCardNumber(),cardNumbers[randomIndex],cardNum);
-        creditCardNumber=cardNum;
+        String lastFourDigits = cardNum.substring(cardNum.length() - 4);
+		creditCardNumber=lastFourDigits;
+      //  creditCardNumber=cardNum;
  
 	}
 	
@@ -220,6 +225,9 @@ public class AllPayments extends baseClass{
 	      test.info("Entered credit card number is " +cardNumbers[randomIndex] );
 	     Actionsss.clearText(pp.getCyberSourceCreditcard());
 	     Actionsss.sendKeys(pp.getCyberSourceCreditcard(),cardNumbers[randomIndex],cardNum);
+	     // Extract the last four digits
+	     String lastFourDigits = cardNum.substring(cardNum.length() - 4);
+	     creditCardNumber=lastFourDigits;
 	     Thread.sleep(2000);
 	}
 	public void cyberSourceExpMonth() throws InterruptedException {
@@ -343,7 +351,8 @@ public class AllPayments extends baseClass{
 		     Actionsss.clearText(pp.getAdyenCardNumInput());
 		     Actionsss.sendKeys(pp.getAdyenCardNumInput(),cardNumbers[randomIndex],cardNum);
 		     driver.switchTo().defaultContent();
-		     creditCardNumber=cardNum;
+		     String lastFourDigits = cardNum.substring(cardNum.length() - 4);
+			 creditCardNumber=lastFourDigits;
 	    }
 	    
 		public  void expDateInAdyen() throws Exception {

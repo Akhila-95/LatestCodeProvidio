@@ -3,34 +3,13 @@
 <suite name="Failed suite [Providio Regression Test]">
   <test thread-count="5" name="SmokeTest(failed)">
     <classes>
-      <class name="testScripts.PlaceOrderTest">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="verifyingPaymentInfoDisplayInReviewOrderPage"/>
-          <include name="verifyingTheEditPaymentToPaypalFromReviewOrderPage"/>
-          <include name="verifyingEtgLogoDisplayInReviewOrderPage"/>
-          <include name="setUp"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="verifyingOrderSummaryDisplayInReviewOrderPage"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testScripts.PlaceOrderTest -->
-      <class name="browser.launchBrowsering">
-        <methods>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- browser.launchBrowsering -->
       <class name="testScripts.OrderPlacingWithAllPaymentsTest">
         <methods>
           <include name="setUpforReport"/>
-          <include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
           <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/>
-          <include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
-          <include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testScripts.OrderPlacingWithAllPaymentsTest -->

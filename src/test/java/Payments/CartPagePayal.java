@@ -6,7 +6,7 @@ import Paypal.PaypalMethod;
 import functionality.Actionsss;
 import pageObjects.ViewCartPage;
 import tasks.OrderDetailPageTasks;
-import tasks.PlaceOrderPageTask;
+import tasks.ReviewOrderPageTask;
 import tasks.ViewCartPageTasks;
 
 public class CartPagePayal extends baseClass{
@@ -35,7 +35,7 @@ public class CartPagePayal extends baseClass{
         	test.pass("No paypal integration for cybersource and stripe , choose another integration to do the payment with payment");
         }
 	  	Actionsss.scrollWindowsByPixel(-300);
-        PlaceOrderPageTask.placeOrder();
+        ReviewOrderPageTask.placeOrder();
         Thread.sleep(2000);
         OrderDetailPageTasks.getOrderConfirmationPage();	
 	}

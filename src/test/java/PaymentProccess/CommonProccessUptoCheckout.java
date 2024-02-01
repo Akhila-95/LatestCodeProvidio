@@ -49,6 +49,6 @@ public class CommonProccessUptoCheckout extends baseClass {
 			test.info("User is registered");
 		}
 		
-		AddressSelection.billingAddress();
+	//	AddressSelection.billingAddress();
 	}
 }

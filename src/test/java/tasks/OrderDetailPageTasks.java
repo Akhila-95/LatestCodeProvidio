@@ -16,7 +16,7 @@ public class OrderDetailPageTasks extends baseClass{
 		if(Actionsss.elementSize(orderPage.getOrderThankMessageList())){
 			logger.info("Order confirmation page is loaded");
 		}else {
-			PlaceOrderPageTask.clickPlaceOrderButton();
+			ReviewOrderPageTask.clickPlaceOrderButton();
 		}
 	}
 
@@ -25,5 +25,8 @@ public class OrderDetailPageTasks extends baseClass{
 		Actionsss.scrollWindowsByPixel(400);
 		OrderPageValidation.validatePlacetheOrderPage();
 		OrderPageValidation.orderNumberAndOrderDate();
+	}
+	public static void payment() throws InterruptedException {
+		OrderPageValidation.paymentInOrderConfirmationPage();
 	}
 }

@@ -14,9 +14,9 @@ import pageObjects.CheckOutPage;
 import pageObjects.CheckOutPage2;
 import pageObjects.CheckOutPage3;
 import pageObjects.PaymentPage;
-import pageObjects.PlaceOrderPage;
+import pageObjects.ReviewOrderPage;
 import validations.PaymentPageValidation;
-import validations.PlaceOrderPageValidation;
+import validations.ReviewOrderPageValidation;
 import validations.ShippingPageValidation;
 
 public class PaymentPageTasks extends baseClass {
@@ -25,7 +25,7 @@ public class PaymentPageTasks extends baseClass {
 	private static final CheckOutPage2 cop2 = new CheckOutPage2(driver);
 	private static CheckOutPage CP = new CheckOutPage(driver);
 	private static final PaymentPageValidation cop3v = new PaymentPageValidation();
-	private static final PlaceOrderPage placeOrder = new PlaceOrderPage(driver);
+	private static final ReviewOrderPage reviewOrder = new ReviewOrderPage(driver);
 	private static final 	PaymentPage pp = new PaymentPage(driver);
 	
 	public static void paymentPageView() throws Exception {
@@ -168,7 +168,7 @@ public class PaymentPageTasks extends baseClass {
 			
 		PaymentDetails.creditCardDetails();	
 		Thread.sleep(1000);
-		editedBillingAddress=Actionsss.getTextOfElement(placeOrder.getBillingAddress());
+		editedBillingAddress=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());
 		logger.info(editedBillingAddress);
 		cop3v.updateBillingAddressValidation();
 		
@@ -186,16 +186,16 @@ public class PaymentPageTasks extends baseClass {
 	
 		PaymentDetails.creditCardDetails();	
 		Thread.sleep(1000);
-		editedBillingAddress=Actionsss.getTextOfElement(placeOrder.getBillingAddress());
+		editedBillingAddress=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());
 		logger.info(editedBillingAddress);
 		cop3v.addNewBillingAddressValidation();
 	}
 	
 	public static void editPhoneNumber() throws Exception {
 		paymentPageView();
-		if(Actionsss.elementSize(placeOrder.getEditPaymentInPlaceOrderBtnPageList())) {
-			if(Actionsss.displayElement(placeOrder.getEditPaymentInPlaceOrderBtnPage())) {
-				Actionsss.click(placeOrder.getEditPaymentInPlaceOrderBtnPage());
+		if(Actionsss.elementSize(reviewOrder.getEditPaymentInPlaceOrderBtnPageList())) {
+			if(Actionsss.displayElement(reviewOrder.getEditPaymentInPlaceOrderBtnPage())) {
+				Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderBtnPage());
 			}else {
 				logger.info("payment page already loaded");
 			}
@@ -206,7 +206,7 @@ public class PaymentPageTasks extends baseClass {
 		Actionsss.sendKeys(cop3.getBillingPhoneNumber(), "9876543567", "edited phone number  in billing address");
 		PaymentDetails.creditCardDetails();	
 		Thread.sleep(1000);
-		editedBillingPhoneNumber=Actionsss.getTextOfElement(placeOrder.getPhoneNumberInBillingAddress());
+		editedBillingPhoneNumber=Actionsss.getTextOfElement(reviewOrder.getPhoneNumberInBillingAddress());
 		logger.info(editedBillingPhoneNumber);
 		cop3v.phoneNumberInBillingAddressValidation();		
 	}
@@ -397,15 +397,16 @@ public class PaymentPageTasks extends baseClass {
 			paymentPageView();
 			Actionsss.scrollWindowsByPixel(300);
 			 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
-				 Actionsss.sendKeys(pp.getGiftcertificateInput(),"HYWALAYACRIGHDWG", "HYWALAYACRIGHDWG gift code");					         
+				 Actionsss.sendKeys(pp.getGiftcertificateInput(),"CHVCLPRPVYSJICGW", "CHVCLPRPVYSJICGW gift code");					         
 	             Actionsss.javascriptClick(pp.getApplyGiftCardButton());
 	             Thread.sleep(1000);
-	             countOfGcApplied= Actionsss.getSizeOfList(pp.getRemoveGc());
+	         /*    countOfGcApplied= Actionsss.getSizeOfList(pp.getRemoveGcList());
 	 			 logger.info(countOfGcApplied);
-	             Actionsss.randomElementFromList(pp.getRemoveGc());
+	             Actionsss.randomElementFromList(pp.getRemoveGcList());
 	             logger.info("Apply button is selected");
 	             logger.info(countOfGcAppliedAfterItsRemoval);
-	             Thread.sleep(1000);
+	             Thread.sleep(1000);*/
+	             Actionsss.click(pp.getRemoveGc());
 	             PaymentPageValidation.gcRemoveValidation();
 			 }else 	if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsgList())) {
 				 
@@ -448,7 +449,7 @@ public class PaymentPageTasks extends baseClass {
 					Thread.sleep(1000);
 					Actionsss.CombinedClick(pp.getReviewOrderBtn());
 					Thread.sleep(3000);
-					PlaceOrderPageValidation.VerifyingReviewOrderBtn();		
+					ReviewOrderPageValidation.VerifyingReviewOrderBtn();		
 				}
 			}
 		}

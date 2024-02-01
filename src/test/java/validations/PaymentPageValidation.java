@@ -797,14 +797,22 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		
 		public static void gcRemoveValidation() throws InterruptedException {
 			test.info("Verifying the removal of Gc when a valid Gc is applied ");
-			
+		/*	
 			if(!(countOfGcApplied==countOfGcAppliedAfterItsRemoval)) {
 				 logger.info("Successfully applied gc is removed  ");	
 				 test.pass("Successfully applied gc is removed");
 			}else{
 				 logger.info("No Successfully applied gc is removed ");	
 				 test.fail("No Successfully applied gc is removed ");
-			}	
+			}	*/
+			
+			if(!Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsgList())) {
+				 logger.info("Successfully applied gc is removed  ");	
+				 test.pass("Successfully applied gc is removed");
+			}else{
+				 logger.info("No Successfully applied gc is removed ");	
+				 test.fail("No Successfully applied gc is removed ");
+			}
 		}
 		
 		public static void billingPhoneNumberErrorValidation() throws InterruptedException {

@@ -30,8 +30,7 @@ public class AddressSelection extends baseClass{
 			 Actionsss.addressFromDropDown(SAP.getShippingAddress());			
 			 Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
 			 
-		 }else {
-			 
+		 }else {			 
 			test.info("Verify the shipping address entered in Registered user");
 				if(Actionsss.displayElement(SAP.getShippingToDisplay()) && Actionsss.displayElement(SAP.getSaveShippingAddress()) && Actionsss.elementSize(SAP.getsavedShippingAddressList())) {
 					if(Actionsss.elementSize(SAP.getSavedAddress())) {

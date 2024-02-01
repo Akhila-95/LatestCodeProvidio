@@ -8,9 +8,7 @@ import pageObjects.MiniCartPage;
 import pageObjects.PaymentPage;
 import tasks.HomePageTasks;
 import tasks.OrderDetailPageTasks;
-import tasks.PlaceOrderPageTask;
-import validations.PlaceOrderPageValidation;
-
+import tasks.ReviewOrderPageTask;
 public class MiniCartPaypal extends baseClass {
 
 	private static MiniCartPage miniCart = new MiniCartPage(driver);
@@ -42,7 +40,7 @@ public class MiniCartPaypal extends baseClass {
 				test.info("CYBERSOURCE payment OR STRIPE payment OR ADYEN integration  is activated so, No paypal for cybersouce and stripe");
             	test.pass("No paypal integration for CYBERSOURCE payment OR STRIPE payment OR ADYEN integration, choose another integration to do the payment with paypal");
 			}	
-			PlaceOrderPageTask.placeOrder();
+			ReviewOrderPageTask.placeOrder();
 			OrderDetailPageTasks.getOrderConfirmationPage();
 	}
 }

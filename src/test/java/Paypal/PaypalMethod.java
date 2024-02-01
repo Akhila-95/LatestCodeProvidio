@@ -45,10 +45,11 @@ public class PaypalMethod extends baseClass {
         
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,700)", "");
-        js.executeScript("arguments[0].click();", paypalCheckout);
+     //   js.executeScript("arguments[0].click();", paypalCheckout);
        
-        Thread.sleep(3000);
-       // paypalCheckout.click();
+       // Thread.sleep(3000);
+        paypalCheckout.click();
+      //  Actionsss.CombinedClick(paypalCheckout);
        // Thread.sleep(10000);
         List<WebElement> salesforcePaypalCheckout=parentDiv.findElements(By.xpath("//div[contains(@class,'paypal-buttons-context-iframe paypal-buttons-label-paypal')]"));  
         if(salesforcePaypalCheckout.size()>0) {
@@ -82,6 +83,8 @@ public class PaypalMethod extends baseClass {
 	         if(Actionsss.elementSize(pp.getEmailLoginList())) {
 	        	Actionsss.sendKeys( pp.getEmailLogin(),"rahulnaik@etisbew.com", "User email");       	 
 	        	 test.info("Entered username");
+	        	 WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
+	        	 getTextOfPaypalInPaymentPage=email.getAttribute("value");
 	         }
 	         //Thread.sleep(3000);
 	         if(Actionsss.elementSize(pp.getNextButtonList())) {

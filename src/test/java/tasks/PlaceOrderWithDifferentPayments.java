@@ -19,13 +19,14 @@ public class PlaceOrderWithDifferentPayments  extends baseClass{
 	
 	public static void orderPlacingWithCreditCard() throws Exception {
 		PaymentPageTasks.creditCardWithValidDetails();
-		if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
+	/*	if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
 			if(Actionsss.displayElement(orderPage.getOrderThankMessage())) {	
 			logger.info("Salesforce payment activated");
 			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
 			Thread.sleep(8000);
 			PaymentPageValidation.VerifiedThatPlaceOrderClick();
 			Thread.sleep(1000);
+		
 			OrderPageValidation.validatePlacetheOrderPage();
 			OrderPageValidation.orderNumberAndOrderDate();
 			}
@@ -38,37 +39,25 @@ public class PlaceOrderWithDifferentPayments  extends baseClass{
 			Thread.sleep(5000);
 			PaymentPageValidation.VerifiedThatPlaceOrderClick();
 			Thread.sleep(1000);
-			OrderPageValidation.validatePlacetheOrderPage();
-			OrderPageValidation.orderNumberAndOrderDate();
-		}
-		
+			
+		}*/
+		ReviewOrderPageTask.placeOrder();
+		OrderPageValidation.paymentInOrderConfirmationPage();
+		OrderPageValidation.validatePlacetheOrderPage();
+		OrderPageValidation.orderNumberAndOrderDate();
 	}
 	
 	public static void orderPlacingWithGiftCard() throws Exception {
 		PaymentPageTasks.gcRedemption();
-		if(Actionsss.elementSize(pp.getSalesforcePaypalList())) {	
-			logger.info("Salesforce payment activated");
-			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
-			Thread.sleep(8000);
-			PaymentPageValidation.VerifiedThatPlaceOrderClick();
-			Thread.sleep(1000);
-			OrderPageValidation.validatePlacetheOrderPage();
-			OrderPageValidation.orderNumberAndOrderDate();
-		}else {
-			logger.info("Other paymnet activated");
-			logger.info("Place order page is loaded");
-			Thread.sleep(1000);
-			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
-			Thread.sleep(5000);
-			PaymentPageValidation.VerifiedThatPlaceOrderClick();
-			Thread.sleep(1000);
-			OrderPageValidation.validatePlacetheOrderPage();
-			OrderPageValidation.orderNumberAndOrderDate();
-		}
+		ReviewOrderPageTask.placeOrder();
+		OrderPageValidation.paymentInOrderConfirmationPage();
+		OrderPageValidation.validatePlacetheOrderPage();
+		OrderPageValidation.orderNumberAndOrderDate();
 	}
 	
 	public static void orderPlacingWithCombinationOfGcAndCreditCard() throws Exception {		
 		PaymentPageTasks.gcRedemptionInCombinationWithCreditCard();
+		/*
 		if(Actionsss.elementSize(pp.getSalesforcePaypalList())) {	
 			logger.info("Salesforce payment activated");
 			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
@@ -86,7 +75,12 @@ public class PlaceOrderWithDifferentPayments  extends baseClass{
 			Thread.sleep(1000);
 			OrderPageValidation.validatePlacetheOrderPage();
 			OrderPageValidation.orderNumberAndOrderDate();
-		}
+		}*/
+		
+		ReviewOrderPageTask.placeOrder();
+		OrderPageValidation.paymentInOrderConfirmationPage();
+		OrderPageValidation.validatePlacetheOrderPage();
+		OrderPageValidation.orderNumberAndOrderDate();
 	}
 	
 	public static void orderPlacingWithPaypalFromCheckoutPage() throws Exception {
@@ -95,7 +89,8 @@ public class PlaceOrderWithDifferentPayments  extends baseClass{
 		if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
 			if(Actionsss.displayElement(orderPage.getOrderThankMessage())) {	
 			logger.info("Salesforce payment activated");			
-			Thread.sleep(8000);			
+			Thread.sleep(8000);		
+			OrderPageValidation.paymentInOrderConfirmationPage();
 			OrderPageValidation.validatePlacetheOrderPage();
 			OrderPageValidation.orderNumberAndOrderDate();
 			}
@@ -107,6 +102,7 @@ public class PlaceOrderWithDifferentPayments  extends baseClass{
 			Thread.sleep(8000);
 			PaymentPageValidation.VerifiedThatPlaceOrderClick();
 			Thread.sleep(1000);
+			OrderPageValidation.paymentInOrderConfirmationPage();
 			OrderPageValidation.validatePlacetheOrderPage();
 			OrderPageValidation.orderNumberAndOrderDate();
 		}else {
@@ -120,7 +116,8 @@ public class PlaceOrderWithDifferentPayments  extends baseClass{
 		if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
 			if(Actionsss.displayElement(orderPage.getOrderThankMessage())) {	
 			logger.info("Salesforce payment activated");			
-			Thread.sleep(8000);			
+			Thread.sleep(8000);	
+			OrderPageValidation.paymentInOrderConfirmationPage();
 			OrderPageValidation.validatePlacetheOrderPage();
 			OrderPageValidation.orderNumberAndOrderDate();
 			}
@@ -132,6 +129,7 @@ public class PlaceOrderWithDifferentPayments  extends baseClass{
 			Thread.sleep(8000);
 			PaymentPageValidation.VerifiedThatPlaceOrderClick();
 			Thread.sleep(1000);
+			OrderPageValidation.paymentInOrderConfirmationPage();
 			OrderPageValidation.validatePlacetheOrderPage();
 			OrderPageValidation.orderNumberAndOrderDate();
 		}else {

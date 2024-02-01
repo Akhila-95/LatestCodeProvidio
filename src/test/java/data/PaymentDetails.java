@@ -5,8 +5,8 @@ import com.providio.testcases.baseClass;
 import functionality.Actionsss;
 import pageObjects.PaymentPage;
 import tasks.PaymentPageTasks;
-import validations.PaymentPageValidation;
-import validations.PlaceOrderPageValidation;
+
+
 
 
 public class PaymentDetails extends baseClass{

@@ -1,5 +1,8 @@
 package Payments;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
@@ -43,6 +46,23 @@ public class GiftCertificateInCombination extends baseClass{
 						logger.info("This " + gcCodes + "is invalid gift code");
 						Actionsss.clearText(pp.getGiftcertificateInput());
 					}else if(sizeOfGc==1) {
+						 String gcRedeemedMsg= Actionsss.getTextOfElement(pp.getsuccessGiftCodeRedemptionMsg());
+						 String lastFourDigits = gcRedeemedMsg.substring(gcRedeemedMsg.length() - 4);
+						// Define a regular expression pattern to match uppercase letters
+					        Pattern pattern = Pattern.compile("[A-Z]+");
+
+					        // Create a matcher with the input text
+					        Matcher matcher = pattern.matcher(gcRedeemedMsg);
+
+					        // Find the first match
+					        if (matcher.find()) {
+					            // Extract the matched uppercase letters
+					            String uppercaseLetters = matcher.group();
+
+					            // Print the result
+					            System.out.println("Uppercase letters: " + uppercaseLetters);
+					            gcCodeRedeemed=uppercaseLetters;
+					        }
 	                    logger.info("Gift certificate codes are applied");
 	                    test.info("Gift certificate codes are applied");	                    
 	                    break;			                    

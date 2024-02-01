@@ -11,4 +11,8 @@ public class OrderDetailsTests extends baseClass{
 		OrderDetailPageTasks.getOrderConfirmationPage();
     }
 
+	@Test
+	public static void verifyingThePaymentDetails() throws InterruptedException {
+		OrderDetailPageTasks.payment();
+	}
 }

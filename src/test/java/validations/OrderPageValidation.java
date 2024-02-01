@@ -8,6 +8,55 @@ import pageObjects.OrderPageDetails;
 public class OrderPageValidation extends baseClass{
 	
 	private static OrderPageDetails  orderPage = new OrderPageDetails(driver);
+	static String lastFourDigits="";
+	static String paymentText="";
+	static String lastFourDigitsInGc="";
+	static String gcPaymentText ="";
+	public static void paymentInOrderConfirmationPage() throws InterruptedException {
+		
+		if(Actionsss.elementSize(orderPage.getPaymentInOrderConfirmationPageList())) {
+			if(Actionsss.displayElement(orderPage.getPaymentInOrderConfirmationPage())){
+				 paymentText = Actionsss.getTextOfElement(orderPage.getPaymentInOrderConfirmationPage());
+				logger.info("Paypal " +paymentText);
+				lastFourDigits =paymentText.substring(paymentText.length() - 4);
+				logger.info("credit card "+lastFourDigits);
+			}
+		}
+		if(Actionsss.elementSize(orderPage.getGiftCodeInOrderConfirmationPageList())) {
+			gcPaymentText = Actionsss.getTextOfElement(orderPage.getGiftCodeInOrderConfirmationPage());
+			logger.info(gcPaymentText);
+			lastFourDigitsInGc =gcPaymentText.substring(gcPaymentText .length() - 4);
+			logger.info("Gc last 4 digits "+lastFourDigitsInGc);
+		}
+		logger.info(creditCardNumber +"and" +lastFourDigits);
+		logger.info(gcCodeRedeemed + "and " +lastFourDigitsInGc);
+		logger.info(getTextOfPaypalInPaymentPage + "and " + paymentText);
+		
+		
+		if((getTextOfPaypalInPaymentPage.equals(paymentText))&&((gcCodeRedeemed.equals(lastFourDigitsInGc))))  {
+			logger.info("gc and paypal");
+		    test.info("Verifying the provided paypal and Gc payment display in order confirmation page ");
+		    test.pass("Successfully order is placed with provided paypal and gc code, the provided paypal and gc code is " + getTextOfPaypalInPaymentPage + " and " + gcCodeRedeemed + " and displayed card number is " + paymentText + " and " + lastFourDigitsInGc);
+		} else if((creditCardNumber.equals(lastFourDigits))&& ((gcCodeRedeemed.equals(lastFourDigitsInGc)))) {
+			logger.info("gc and credit");
+		    test.info("Verifying the provided credit card and Gc payment display in order confirmation page ");
+		    test.pass("Successfully order is placed with provided card number and gc code, the provided card number and gc code is " + creditCardNumber + " and " + gcCodeRedeemed + " and displayed card number is " + lastFourDigits + " and " + lastFourDigits);
+		}else if (creditCardNumber.equals(lastFourDigits)) {
+			logger.info("cc");
+		    test.info("Verifying the provided card number  display in order confirmation page ");
+		    test.pass("Successfully order is placed with provided card number, the provided card number is " + creditCardNumber + " and displayed card number is " + paymentText);		    
+		} else  if(gcCodeRedeemed.equals(lastFourDigitsInGc))  {
+			logger.info("gc");
+		    test.info("Verifying the provided Gc code display in order confirmation page");
+		    test.pass("Successfully order is placed with gift certificate, the provided gift certificate is " + gcCodeRedeemed + " and displayed gift certificate is " + lastFourDigitsInGc);
+		    
+		}else if (getTextOfPaypalInPaymentPage.equals(paymentText)) {
+			logger.info("paypal");
+		    test.info("Verifying the provided paypal payment display in order confirmation page  ");
+		    test.pass("Successfully order is placed with provided PayPal, the PayPal is " + getTextOfPaypalInPaymentPage + " and displayed PayPal is " + getTextOfPaypalInPaymentPage);
+		    
+		} 
+	}
 	
 	public static void validatePlacetheOrderPage() throws InterruptedException {
 		if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {

@@ -8,7 +8,8 @@ import PaymentProccess.CommonProccessUptoCheckout;
 import data.PaymentDetails;
 import pageObjects.PaymentPage;
 import tasks.GiftCertificatePageTasks;
-import tasks.PlaceOrderPageTask;
+
+import tasks.ReviewOrderPageTask;
 import validations.OrderPageValidation;
 
 public class OnlyGcInCart extends baseClass {
@@ -22,7 +23,7 @@ public class OnlyGcInCart extends baseClass {
 		CommonProccessUptoCheckout.commonProccess();
 		
 		PaymentDetails.creditCardDetails();
-		PlaceOrderPageTask.placeOrder();
+		ReviewOrderPageTask.placeOrder();
 		OrderPageValidation.validatePlacetheOrderPage();
 		OrderPageValidation.orderNumberAndOrderDate();
 	}

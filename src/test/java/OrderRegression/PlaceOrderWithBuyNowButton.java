@@ -12,8 +12,8 @@ import pageObjects.ProductDetailPage;
 import tasks.CheckOutPageTasks;
 import tasks.OrderDetailPageTasks;
 import tasks.PaymentPageTasks;
-import tasks.PlaceOrderPageTask;
 import tasks.ProductListingPageTasks;
+import tasks.ReviewOrderPageTask;
 import tasks.ShippingPageTasks;
 
 public class PlaceOrderWithBuyNowButton extends baseClass {
@@ -40,7 +40,7 @@ public class PlaceOrderWithBuyNowButton extends baseClass {
 			 CheckOutPageTasks.GuestMailCheckOut();
 			 ShippingPageTasks.enterValidAddress();
 			 PaymentPageTasks.creditCardWithValidDetails();
-			 PlaceOrderPageTask.placeOrder();
+			 ReviewOrderPageTask.placeOrder();
 			 OrderDetailPageTasks.getOrderConfirmationPage();
 	}
 }

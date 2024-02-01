@@ -46,4 +46,28 @@ public class OrderPageDetails {
 	public WebElement getPaymentDetailsInOrderConfirmationPage() {
 		return paymentDetailsInOrderConfirmationPage;
 	}
+	
+	@FindBy(css="div.payment-credential")
+	List<WebElement>  paymentInOrderConfirmationPageList;
+	public List<WebElement> getPaymentInOrderConfirmationPageList() {
+		return paymentInOrderConfirmationPageList;
+	}
+	
+	@FindBy(css="div.payment-credential")
+	WebElement  paymentInOrderConfirmationPage;
+	public WebElement getPaymentInOrderConfirmationPage() {
+		return paymentInOrderConfirmationPage;
+	}
+	
+	@FindBy(css="div.gift-cert-code")
+	WebElement  giftCodeInOrderConfirmationPage;
+	public WebElement getGiftCodeInOrderConfirmationPage() {
+		return giftCodeInOrderConfirmationPage;
+	}
+	
+	@FindBy(css="div.gift-cert-code")
+	List<WebElement>  giftCodeInOrderConfirmationPageList;
+	public List<WebElement> getGiftCodeInOrderConfirmationPageList() {
+		return giftCodeInOrderConfirmationPageList;
+	}
 }

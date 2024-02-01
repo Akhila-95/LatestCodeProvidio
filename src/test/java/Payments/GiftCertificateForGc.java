@@ -9,7 +9,6 @@ import com.providio.testcases.baseClass;
 import functionality.Actionsss;
 import pageObjects.PaymentPage;
 import tasks.PaymentPageTasks;
-import validations.PlaceOrderPageValidation;
 
 public class GiftCertificateForGc extends baseClass {
 
@@ -50,6 +49,24 @@ public class GiftCertificateForGc extends baseClass {
 								Actionsss.clearText(pp.getGiftcertificateInput());
 							}else if(Actionsss.elementSize(pp.getRedemptionWithGcMsg())) {
 								 logger.info("Your order has been paid using gift certificates message is displayed.");
+								 String gcRedeemedMsg= Actionsss.getTextOfElement(pp.getsuccessGiftCodeRedemptionMsg());									
+								
+								// Define a regular expression pattern to match uppercase letters
+							        Pattern pattern = Pattern.compile("[A-Z]+");
+
+							        // Create a matcher with the input text
+							        Matcher matcher = pattern.matcher(gcRedeemedMsg);
+
+							        // Find the first match
+							        if (matcher.find()) {
+							            // Extract the matched uppercase letters
+							            String uppercaseLetters = matcher.group();
+
+							            // Print the result
+							            System.out.println("Uppercase letters: " + uppercaseLetters);
+							            gcCodeRedeemed=uppercaseLetters;
+							        } 
+								 logger.info(gcCodeRedeemed);
 								 PaymentPageTasks.clickReviewOrderButton();
 						    	 break;
 							}// Check if it's the last iteration
@@ -74,7 +91,9 @@ public class GiftCertificateForGc extends baseClass {
 		 float extractedAmount =(float) 0;
 		 if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsgList())) {
 			String gcRedeemedMsg= Actionsss.getTextOfElement(pp.getsuccessGiftCodeRedemptionMsg());
-
+			
+			 String lastFourDigits = gcRedeemedMsg.substring(gcRedeemedMsg.length() - 4);
+			 gcCodeRedeemed =lastFourDigits;
 		        // Define a regular expression pattern to match the amount pattern
 		        Pattern amountPattern = Pattern.compile("\\$([0-9]+\\.[0-9]{2})");
 
