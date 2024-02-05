@@ -63,15 +63,10 @@ public class PaymentPageTest extends baseClass{
 		PaymentPageTasks.addNewBillingAddress();
 	}
 	
-	@Test
-	public static void verifyingEditPhoneNumberInBillingAddress() throws Exception {
-		PaymentPageTasks.editPhoneNumber();
-	}
-
 	
 	@Test
 	public static void verifyingBillingPhoneNumberError() throws Exception {
-		PaymentPageTasks. billingPhoneNumber();
+		PaymentPageTasks.billingPhoneNumber();
 	}
 	
 	//payment

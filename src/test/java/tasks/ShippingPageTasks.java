@@ -4,12 +4,14 @@ import com.github.javafaker.Faker;
 import com.providio.testcases.baseClass;
 
 import data.AddressSelection;
+import data.PaymentDetails;
 import functionality.Actionsss;
 import pageObjects.CheckOutPage;
 import pageObjects.CheckOutPage2;
 import pageObjects.CheckOutPage3;
 import pageObjects.ShippingAddressPage;
 import pageObjects.homepage;
+import validations.OrderPageValidation;
 import validations.ShippingPageValidation;
 
 public class ShippingPageTasks extends baseClass{
@@ -22,15 +24,14 @@ public class ShippingPageTasks extends baseClass{
 	private static homepage homePage = new homepage(driver);
 	
 	public static void shippingPage() throws InterruptedException, Exception {
-		
-		if(Actionsss.elementSize(shippingPage.getshippingPageList())) {
-			if(Actionsss.displayElement(shippingPage.getshippingPage()))
-			logger.info("Shipping page alreday loaded");
+		if(Actionsss.elementSize(shippingPage.getshippingPageList()) && Actionsss.elementSize(shippingPage.getNextPaymentButtonList())) {
+			if(Actionsss.displayElement(shippingPage.getshippingPage()) && Actionsss.displayElement(shippingPage.getNextPaymentButton())) {
+				logger.info("Shipping page alreday loaded");
+			}
 		}else {
 			CheckOutPageTasks.GuestMailCheckOut();
 		}
 	}
-	
 	public static void getCutomerInfo() throws Exception {	
 		shippingPage();
 		ShippingPageValidation.customerInfoValidationInCOP2_Page();
@@ -49,10 +50,17 @@ public class ShippingPageTasks extends baseClass{
 		     String editedEmailInCop2 = randomFirstName + "EditedFromCOP2@etg.digital"; 
 		     emailEditedInCop2 =editedEmailInCop2;
 		     logger.info(emailEditedInCop2);
-			Actionsss.sendKeys(CP.getSelectGuestEmailInput(),  emailEditedInCop2, "Edited email");			
-			Actionsss.click(CP.getSelectContinueasGuesttBtn());
-			editedEmailFromCop3= Actionsss.getTextOfElement(paymentpage.getEditCustomerInfo());
-			shipping.editEmailValidationInCOP2();
+			 Actionsss.sendKeys(CP.getSelectGuestEmailInput(),  emailEditedInCop2, "Edited email");			
+			 Actionsss.click(CP.getSelectContinueasGuesttBtn());
+			 editedEmailFromCop3= Actionsss.getTextOfElement(paymentpage.getEditCustomerInfo());
+			 shipping.editEmailValidationInCOP2();
+			 ShippingPageTasks.enterValidAddress();
+			 PaymentDetails.creditCardDetails();
+			 ReviewOrderPageTask.placeOrder();
+			 OrderPageValidation.validatePlacetheOrderPage();
+			 OrderPageValidation.orderNumberAndOrderDate();
+			
+			
 		}else {			
 			test.info("User is checked in as registered so edit button ");
 			test.pass("No edit button to edit cutomer info for registered user");

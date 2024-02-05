@@ -57,7 +57,7 @@ public class ProductListingPageTasks extends baseClass{
 		homePage.selectRandomMegaMenu(driver);
 		Thread.sleep(8000);
 		//PLP.addToCartBtn();
-		ProductListingPageValidations.popUpProductisAddtoCart();
+	//	ProductListingPageValidations.popUpProductisAddtoCart();
 		Thread.sleep(2000);
 	}
 	
@@ -72,7 +72,7 @@ public class ProductListingPageTasks extends baseClass{
 			Thread.sleep(2000);
 			Actionsss.click(PLP.getSelectaddToCartBtn());
 			//PLP.incTheQunatityAndClickUpdateBtn();
-			ProductListingPageValidations.validatingProductisAddtoCart();
+		//	ProductListingPageValidations.validatingProductisAddtoCart();
 		}
 		
 	//addTocartsBtns

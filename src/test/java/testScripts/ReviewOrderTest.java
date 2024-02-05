@@ -2,6 +2,8 @@ package testScripts;
 
 import org.testng.annotations.Test;
 import com.providio.testcases.baseClass;
+
+import tasks.PaymentPageTasks;
 import tasks. ReviewOrderPageTask;
 
 
@@ -39,6 +41,8 @@ public class ReviewOrderTest extends baseClass{
 		 ReviewOrderPageTask.getEtgLogo();
 	}
 	
+	
+	
 	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
 	public void verifyingBackToCartInReviewOrderPage() throws Exception {
 		 ReviewOrderPageTask.getBackToCart();
@@ -47,6 +51,27 @@ public class ReviewOrderTest extends baseClass{
 	@Test
 	public  void verifyingTheEditPaymentToPaypalFromReviewOrderPage() throws InterruptedException, Exception {
 		 ReviewOrderPageTask.editPaymentToPaypal();
+	}
+	
+	@Test
+	public  void verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder() throws InterruptedException, Exception {
+		 ReviewOrderPageTask.editShippingAddressFromReviewOrderPage();
+	}
+	
+	@Test
+	public  void verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder() throws InterruptedException, Exception {
+		 ReviewOrderPageTask.editPhoneNumInShippingAddressFromReviewOrderPage();
+	}
+	
+
+	@Test
+	public  void verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder() throws InterruptedException, Exception {
+		 ReviewOrderPageTask.editBillingAddressFromReviewOrderPage();
+	}
+	
+	@Test
+	public static void verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder() throws Exception {
+		ReviewOrderPageTask.editPhoneNumberInBillingAddress();
 	}
 	
 }

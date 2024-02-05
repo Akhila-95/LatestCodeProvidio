@@ -96,6 +96,16 @@ public class baseClass {
 		protected static String creditCardNumber = "";
 		protected static String gcCodeRedeemed= "";
 		
+		
+		protected static String previousShippingAddressInRop="";
+		protected static String editedShippingAddressInRop="";
+		
+		protected static String previousPhoneNumInShippingAddressInRop="";
+		protected static String editedPhoneNumInShippingAddressInRop="";
+		
+		protected static String previousBillingAddressInRop="";
+		protected static String editedBillingAddressInRop="";
+		
 		// count of gc applied
 		protected  static int   countOfGcApplied= 0;
 		protected  static int   countOfGcAppliedAfterItsRemoval= 0;
@@ -274,7 +284,12 @@ public class baseClass {
 	            // Log an exception message if there's an issue with taking the screenshot
 	            System.out.println("Exception while taking screenshot: " + e.getMessage());
 	        }
-	        //Actionsss.click(homePage.clickOnLogo());
+	        
+	    }
+	    if(result.getStatus() == ITestResult.FAILURE) {
+	    	Actionsss.click(homePage.clickOnLogo());
+            logger.info("Test case failed and returned into homepage");
+            Thread.sleep(2000);
 	    }
 	}
 

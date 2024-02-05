@@ -206,4 +206,38 @@ public class ReviewOrderPageValidation extends baseClass {
 			test.info("No review order page in salesforce payment");
 		}
 	}
+		public static void editShippingAddressValidation() {
+			logger.info(previousShippingAddressInRop);
+			logger.info(editedShippingAddressInRop);
+			if(!previousShippingAddressInRop.equals(editedShippingAddressInRop)) {
+				test.pass("Successfully  shipping address is edited from review order page ,the previous shipping address is " +previousShippingAddressInRop + " and edited shipping address is " +editedShippingAddressInRop);
+				logger.info("Successfully  shipping address is edited from review order page ,the previous shipping address is " +previousShippingAddressInRop + " and edited shipping address is " +editedShippingAddressInRop);
+			}else {
+				test.fail("No shipping address is edited from review order page ,the previous shipping order is " +previousShippingAddressInRop + " and edited shipping address is " +editedShippingAddressInRop);
+				logger.info("No shipping address is edited from review order page ,the previous shipping order is " +previousShippingAddressInRop + " and edited shipping address is " +editedShippingAddressInRop);
+			}
+		}
+		
+		public static void editPhoneNumShippingAddressValidation() {
+			logger.info( previousPhoneNumInShippingAddressInRop);
+			logger.info(editedPhoneNumInShippingAddressInRop);
+			if(!editedPhoneNumInShippingAddressInRop.equals( previousPhoneNumInShippingAddressInRop)) {
+				test.pass("Successfully  phone number is edited from review order page ,the previous phone number is " + previousPhoneNumInShippingAddressInRop + " and edited phone number is " +editedPhoneNumInShippingAddressInRop);
+				logger.info("Successfully  phone number is edited from review order page ,the previous phone number is " + previousPhoneNumInShippingAddressInRop +  " and edited phone number is " +editedPhoneNumInShippingAddressInRop);
+			}else {
+				test.fail("No phone number is edited from review order page ,the previous phone number is " + previousPhoneNumInShippingAddressInRop + " and edited phone number is " +editedPhoneNumInShippingAddressInRop);
+				logger.info("No phone number is edited from review order page ,the previous phone number is " + previousPhoneNumInShippingAddressInRop +  " and edited phone number is " +editedPhoneNumInShippingAddressInRop);
+			}
+		}
+		public static void editedBillingAddressValidation() {
+			logger.info(previousBillingAddressInRop);
+			logger.info(editedBillingAddressInRop);
+			if(!previousBillingAddressInRop.equals(editedBillingAddressInRop)) {
+				test.pass("Successfully  billing address is edited from review order page ,the previous  billing address  is " +previousBillingAddressInRop + " and edited  billing address  is " +editedBillingAddressInRop);
+				logger.info("Successfully  billing address is edited from review order page ,the previous  billing address  is " +previousBillingAddressInRop + " and edited  billing address  is " +editedBillingAddressInRop);
+			}else {
+				test.fail("No billing address is edited from review order page ,the previous  billing address  is " +previousBillingAddressInRop + " and edited  billing address  is " +editedBillingAddressInRop);
+				logger.info("No billing address is edited from review order page ,the previous  billing address  is " +previousBillingAddressInRop + " and edited  billing address  is " +editedBillingAddressInRop);
+			}
+		}
 }

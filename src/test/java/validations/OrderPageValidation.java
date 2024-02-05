@@ -33,29 +33,35 @@ public class OrderPageValidation extends baseClass{
 		logger.info(getTextOfPaypalInPaymentPage + "and " + paymentText);
 		
 		
-		if((getTextOfPaypalInPaymentPage.equals(paymentText))&&((gcCodeRedeemed.equals(lastFourDigitsInGc))))  {
-			logger.info("gc and paypal");
-		    test.info("Verifying the provided paypal and Gc payment display in order confirmation page ");
-		    test.pass("Successfully order is placed with provided paypal and gc code, the provided paypal and gc code is " + getTextOfPaypalInPaymentPage + " and " + gcCodeRedeemed + " and displayed card number is " + paymentText + " and " + lastFourDigitsInGc);
-		} else if((creditCardNumber.equals(lastFourDigits))&& ((gcCodeRedeemed.equals(lastFourDigitsInGc)))) {
-			logger.info("gc and credit");
-		    test.info("Verifying the provided credit card and Gc payment display in order confirmation page ");
-		    test.pass("Successfully order is placed with provided card number and gc code, the provided card number and gc code is " + creditCardNumber + " and " + gcCodeRedeemed + " and displayed card number is " + lastFourDigits + " and " + lastFourDigits);
-		}else if (creditCardNumber.equals(lastFourDigits)) {
-			logger.info("cc");
-		    test.info("Verifying the provided card number  display in order confirmation page ");
-		    test.pass("Successfully order is placed with provided card number, the provided card number is " + creditCardNumber + " and displayed card number is " + paymentText);		    
-		} else  if(gcCodeRedeemed.equals(lastFourDigitsInGc))  {
-			logger.info("gc");
-		    test.info("Verifying the provided Gc code display in order confirmation page");
-		    test.pass("Successfully order is placed with gift certificate, the provided gift certificate is " + gcCodeRedeemed + " and displayed gift certificate is " + lastFourDigitsInGc);
-		    
-		}else if (getTextOfPaypalInPaymentPage.equals(paymentText)) {
-			logger.info("paypal");
-		    test.info("Verifying the provided paypal payment display in order confirmation page  ");
-		    test.pass("Successfully order is placed with provided PayPal, the PayPal is " + getTextOfPaypalInPaymentPage + " and displayed PayPal is " + getTextOfPaypalInPaymentPage);
-		    
-		} 
+
+		 if (!getTextOfPaypalInPaymentPage.isEmpty() && !gcCodeRedeemed.isEmpty() && getTextOfPaypalInPaymentPage.equals(paymentText) && gcCodeRedeemed.equals(lastFourDigitsInGc)) {
+	        logger.info("gc and paypal");
+	        test.info("Verifying the provided paypal and Gc payment display in order confirmation page ");
+	        test.pass("Successfully order is placed with provided paypal and gc code, the provided paypal and gc code is " + getTextOfPaypalInPaymentPage + " and " + gcCodeRedeemed + " and displayed card number is " + paymentText + " and " + lastFourDigitsInGc);
+	     }else if (!creditCardNumber.isEmpty() && !lastFourDigits.isEmpty() && creditCardNumber.equals(lastFourDigits) && !gcCodeRedeemed.isEmpty() && gcCodeRedeemed.equals(lastFourDigitsInGc)) {
+	        logger.info("gc and credit");
+	        test.info("Verifying the provided credit card and Gc payment display in order confirmation page ");
+	        test.pass("Successfully order is placed with provided card number and gc code, the provided card number and gc code is " + creditCardNumber + " and " + gcCodeRedeemed + " and displayed card number is " + lastFourDigits + " and " + lastFourDigits);
+	     }else if (!creditCardNumber.isEmpty() && !lastFourDigits.isEmpty() && creditCardNumber.equals(lastFourDigits)) {
+	        logger.info("cc");
+	        test.info("Verifying the provided card number display in order confirmation page ");
+	        test.pass("Successfully order is placed with provided card number, the provided card number is " + creditCardNumber + " and displayed card number is " + paymentText);
+	    } else if (!gcCodeRedeemed.isEmpty() && gcCodeRedeemed.equals(lastFourDigitsInGc)) {
+	        logger.info("gc");
+	        test.info("Verifying the provided Gc code display in order confirmation page");
+	        test.pass("Successfully order is placed with gift certificate, the provided gift certificate is " + gcCodeRedeemed + " and displayed gift certificate is " + lastFourDigitsInGc);
+	    } else if (!getTextOfPaypalInPaymentPage.isEmpty() && getTextOfPaypalInPaymentPage.equals(paymentText)) {
+	        logger.info("paypal");
+	        test.info("Verifying the provided paypal payment display in order confirmation page  ");
+	        test.pass("Successfully order is placed with provided PayPal, the PayPal is " + getTextOfPaypalInPaymentPage + " and displayed PayPal is " + getTextOfPaypalInPaymentPage);
+	    }
+		 
+		 logger.info("After order confirmation page");
+		 logger.info(getTextOfPaypalInPaymentPage="");
+		 logger.info(gcCodeRedeemed="");
+		 logger.info(creditCardNumber="");
+		 
+		 
 	}
 	
 	public static void validatePlacetheOrderPage() throws InterruptedException {

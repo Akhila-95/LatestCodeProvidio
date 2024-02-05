@@ -11,6 +11,7 @@ import validations.MiniCartValidation;
 public class MiniCartPageTasks extends baseClass{
 	private static MiniCartPage MCP = new MiniCartPage(driver);
 	private static homepage homePage = new homepage(driver);
+	
 	public static void ViewCartbtnClick() throws Exception {
 		HomePageTasks.miniCartBtnClick();
 		Actionsss.click(MCP.getSelectviewCartBtn());

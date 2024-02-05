@@ -36,13 +36,13 @@ public class ReviewOrderPage {
 	
 	@FindBy(xpath="//div[@class='bt-credit-masknumber']")
 	List<WebElement>  creditCardPaymentBeforeEditList;
-	public List<WebElement> getCreditCardPaymentBeforeEditList() {
+	public List<WebElement> getCreditCardPaymentBrainTreeBeforeEditList() {
 		return  creditCardPaymentBeforeEditList;
 	}
 	
 	@FindBy(xpath="//div[@class='bt-credit-masknumber']")
 	WebElement  creditCardPaymentBeforeEdit;
-	public WebElement getCreditCardPaymentBeforeEdit() {
+	public WebElement getCreditCardPaymentBrainTreeBeforeEdit() {
 		return  creditCardPaymentBeforeEdit;
 	}
 	
@@ -56,6 +56,12 @@ public class ReviewOrderPage {
 	WebElement  brainPaypalPaymentBeforeEdit;
 	public WebElement getBrainPaypalPaymentInReviewOrderPage() {
 		return  brainPaypalPaymentBeforeEdit;
+	}
+	
+	@FindBy(css="div.bt-credit-paypal")
+	List<WebElement>  brainPaypalPaymentBeforeEditList;
+	public List<WebElement> getBrainPaypalPaymentInReviewOrderPageList() {
+		return  brainPaypalPaymentBeforeEditList;
 	}
 	
 	@FindBy(xpath="//span[@class='gift-certificate']")
@@ -72,7 +78,7 @@ public class ReviewOrderPage {
 	
 	@FindBy(css="div.braintree-payment-details")
 	List<WebElement>  brainTreeDisplay;
-	public List<WebElement> getBrainTreeDisplay() {
+	public List<WebElement> getBrainTreeDisplayList() {
 		return  brainTreeDisplay;
 	}
 	
@@ -82,10 +88,47 @@ public class ReviewOrderPage {
 		return  paypalAccText;
 	}
 		
+	//stripe
+	@FindBy(css="div.payment-details-stripe")
+	List<WebElement>  stripePaymentInReviewOrderPageList;
+	public List<WebElement> getStripePaymentInReviewOrderPageList() {
+		return  stripePaymentInReviewOrderPageList;
+	}
+	
+	@FindBy(xpath="//span[contains(text(),'GIFT CERTIFICATE')]")
+	List<WebElement>  gcInstripePaymentInReviewOrderPageList;
+	public List<WebElement> getGcStripePaymentInReviewOrderPageList() {
+		return  gcInstripePaymentInReviewOrderPageList;
+	}
+	
+	@FindBy(xpath="(//span[@class='gift-certificate']//div)[1]")
+	WebElement  gcCodeInstripePaymentInReviewOrderPage;
+	public WebElement getGcCodeInstripePaymentInReviewOrderPage() {
+		return  gcCodeInstripePaymentInReviewOrderPage;
+	}
+	
+	
 	@FindBy(xpath="(//div[@class='address1'])[2]")
 	WebElement  billingAddress;
 	public WebElement getBillingAddress() {
 		return billingAddress;
+	}
+	
+	@FindBy(xpath="(//div[@class='address1'])[1]")
+	WebElement  shippingAddressInRop;
+	public WebElement getShippingAddressInRop() {
+		return shippingAddressInRop;
+	}
+	
+	@FindBy(css="div.shipping-phone")
+	WebElement  phoneNumInshippingAddressInRop;
+	public WebElement getPhoneNumInshippingAddressInRop() {
+		return phoneNumInshippingAddressInRop;
+	}
+	@FindBy(css="button[aria-label='Edit Shipping']")
+	WebElement  editShippingAddressInRop;
+	public WebElement getEditShippingAddressInRop() {
+		return editShippingAddressInRop;
 	}
 	
 	
@@ -143,8 +186,14 @@ public class ReviewOrderPage {
 	}
 	
     @FindBy(xpath ="//button[contains(text(),'Place Order')]")
-  	WebElement PlaceOrderBtn;    
-  	public WebElement getSelectPlaceOrderBtn(){
-  		return PlaceOrderBtn;
+  	List<WebElement> PlaceOrderBtnList;    
+  	public List<WebElement> getSelectPlaceOrderBtnList(){
+  		return PlaceOrderBtnList;
   	}
+  	
+  	 @FindBy(xpath ="//button[contains(text(),'Place Order')]")
+   	WebElement PlaceOrderBtn;    
+   	public WebElement getSelectPlaceOrderBtn(){
+   		return PlaceOrderBtn;
+   	}
 }

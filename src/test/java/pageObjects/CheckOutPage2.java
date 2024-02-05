@@ -76,6 +76,12 @@ public class CheckOutPage2 {
 			return nextPaymentButton;
 		}
 		
+		@FindBy(css="button.submit-shipping")
+		List<WebElement>  nextPaymentButtonList;
+		public List<WebElement> getNextPaymentButtonList() {
+			return nextPaymentButtonList;
+		}
+		
 		@FindBy(css="img.logo")
 		WebElement  etgLogo;
 		public WebElement getEtgLogo() {

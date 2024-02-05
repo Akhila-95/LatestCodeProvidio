@@ -29,9 +29,9 @@ public class PaymentPageTasks extends baseClass {
 	private static final 	PaymentPage pp = new PaymentPage(driver);
 	
 	public static void paymentPageView() throws Exception {
-
-		if(Actionsss.elementSize(cop3.getpaymentPageList()) ) {
-			if(Actionsss.displayElement(cop3.getpaymentPage())){
+//&& (Actionsss.displayElement(cop3.getNextReviewOrderBtn()) || Actionsss.displayElement(pp.getSelectPlaceOrderBtn()))
+		if((Actionsss.elementSize(cop3.getpaymentPageList()))&& (Actionsss.elementSize(cop3.getNextReviewOrderBtnList()) || Actionsss.elementSize(pp.getSelectPlaceOrderBtnList()))) {
+			if((Actionsss.displayElement(cop3.getpaymentPage())) ){
 				logger.info("Paymnet page is loaded");
 			}
 		}else {
@@ -190,27 +190,6 @@ public class PaymentPageTasks extends baseClass {
 		logger.info(editedBillingAddress);
 		cop3v.addNewBillingAddressValidation();
 	}
-	
-	public static void editPhoneNumber() throws Exception {
-		paymentPageView();
-		if(Actionsss.elementSize(reviewOrder.getEditPaymentInPlaceOrderBtnPageList())) {
-			if(Actionsss.displayElement(reviewOrder.getEditPaymentInPlaceOrderBtnPage())) {
-				Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderBtnPage());
-			}else {
-				logger.info("payment page already loaded");
-			}
-		}
-		Thread.sleep(2000);
-		prevoiusBillingPhoneNumber =cop3.getBillingPhoneNumber().getAttribute("value");		
-		logger.info(prevoiusBillingPhoneNumber);
-		Actionsss.sendKeys(cop3.getBillingPhoneNumber(), "9876543567", "edited phone number  in billing address");
-		PaymentDetails.creditCardDetails();	
-		Thread.sleep(1000);
-		editedBillingPhoneNumber=Actionsss.getTextOfElement(reviewOrder.getPhoneNumberInBillingAddress());
-		logger.info(editedBillingPhoneNumber);
-		cop3v.phoneNumberInBillingAddressValidation();		
-	}
-	
 	
 	public static void paginationOfProductsFromPaymentPage() throws InterruptedException, Exception {
 		paymentPageView();
@@ -407,6 +386,7 @@ public class PaymentPageTasks extends baseClass {
 	             logger.info(countOfGcAppliedAfterItsRemoval);
 	             Thread.sleep(1000);*/
 	             Actionsss.click(pp.getRemoveGc());
+	             Thread.sleep(1000);
 	             PaymentPageValidation.gcRemoveValidation();
 			 }else 	if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsgList())) {
 				 
@@ -443,11 +423,11 @@ public class PaymentPageTasks extends baseClass {
 			CheckOutPaypal.paypalFromCheckout();
 		}
 	
-		public static void clickReviewOrderButton() throws InterruptedException {
+		public static void clickReviewOrderButton() throws Exception {
 			if(Actionsss.elementSize(pp.getReviewOrderBtnList())) {
 				if(Actionsss.displayElement(pp.getReviewOrderBtn())) {
 					Thread.sleep(1000);
-					Actionsss.CombinedClick(pp.getReviewOrderBtn());
+					Actionsss.javascriptClick(pp.getReviewOrderBtn());
 					Thread.sleep(3000);
 					ReviewOrderPageValidation.VerifyingReviewOrderBtn();		
 				}

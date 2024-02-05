@@ -2,11 +2,11 @@
 
 <suite name="Providio Regression Test">
 
-	 <test name="SmokeTest">
+	 <test name="Regression Testing">
         <classes>
      
 			<class name="browser.launchBrowsering"/>
-  
+  	 
 	  	   <class name="testScripts.FindAStoreTest"/>
 				
 				  <methods>	
@@ -92,7 +92,7 @@
 					<include name="verifyingWithValidShippingAddress" /> 
     				 
     			</methods>
-  
+
 			 	<class name ="testScripts.PaymentPageTest"/> 
 				 <methods>
 				
@@ -105,12 +105,13 @@
 			  		  <include name="verifyingBackToCartInPaymentPage" />	
 				 
 			  		  <include name="verifyingEditShippingAddress" />					
-					  <include name="verifyingEditCustomerInfoFromCop3" />  					 
-			  		  <!-- <include name="verifyingUpdateBillingAddress" />		
-			  		  <include name="verifyingAddNewBillingAddress" /> -->
-			  		  <include name="verifyingEditPhoneNumberInBillingAddress" />	
-			  		<!--    <include name="verifyingGiftMessage" />	 -->
-		  			
+					  <include name="verifyingEditCustomerInfoFromCop3" /> 
+					   					 
+			  <!-- 
+					  <include name="verifyingUpdateBillingAddress" />		
+			  		  <include name="verifyingAddNewBillingAddress" />				  		
+			  	  	   <include name="verifyingGiftMessage" />	 
+		  			 -->
 		  			
 		  			
 			  		  <include name="verifyingEnterGiftCodeErrorMsg" />
@@ -118,23 +119,24 @@
 	             	  <include name="verifyingInsufficientGcErrorMsg" />            		
 	             	  <include name="verifyingCheckBalanceOfValidGc" />           		
 	             	  <include name="verifyingCheckBalanceOfInvalidGcErrorMsg" />
-	             	 <!--  <include name="verifyingSuccesMessageForValidGcApplied" /> -->
 	             	  <include name="verifyingRemovalOfAppliedGc" />
-	             	  			 				   
+	             	  
+	          	 	<!--    <include name="verifyingSuccesMessageForValidGcApplied" />-->
+			 				   
 					
 					  <include name="verifyingAllTheErrorsInCreditCard" />
 					  <include name="verifyingCvvAndExpErrorInCreditCard" /> 					
-					  <include name="verifyingCvvErrorInCreditCard" />				
+				      <include name="verifyingCvvErrorInCreditCard" />				
 					  <include name ="verifyingCreditcardNumberInValidError"></include>
 			  		  <include name ="verifyingCreditCardExpDateInValid"></include>
 				 	  <include name ="verifyingCreditCardNumberInCompleteError"></include>
 					  <include name ="verifyingCreditCardInCompleteExpYearError"></include>
 					  <include name ="verifyingCreditCardInCompleteCvvError"></include>  		 
 					  <include name="verifyingAddnewCreditCard" />	 
-					 <include name="verifyingCreditcardWithValidDetails" />
+					  <include name="verifyingCreditcardWithValidDetails" />
 		</methods>  
 		
- 
+  
 		   <class name ="testScripts.ReviewOrderTest"/>
 				<methods>				
 					 <include name="verifyingPlaceOrderButtonDisplayInReviewOrderPage"/>
@@ -142,18 +144,18 @@
 					 <include name="verifyingOrderSummaryDisplayInReviewOrderPage"/>
 					 <include name="verifyingPaymentInfoDisplayInReviewOrderPage"/>
 					 <include name="verifyingEtgLogoDisplayInReviewOrderPage"/>					 			
-					 <include name="verifyingTheEditPaymentToPaypalFromReviewOrderPage"/>
-					
+					 <include name="verifyingTheEditPaymentToPaypalFromReviewOrderPage"/>					
 					 <include name="verifyingBackToCartInReviewOrderPagee"/>
-					 <include name="verifyingPaginationOfProductsInReviewOrderPage"/>	 		
-				</methods>
-			<!-- 
+					 <include name="verifyingPaginationOfProductsInReviewOrderPage"/>	
+					<include name="verifyingEditPhoneNumberInBillingAddressFromReviewOrderPage" />		 	
+				</methods> 
+		 
 				<class name ="testScripts.OrderDetailsTests"/>
 			<methods>
 				<include name="VerifyingOrderConfirmationPage"/>
 	
 			</methods>
-			-->
+			
 				<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
 				<methods>			
 				 	 <include name="verifyingOrderIsPlacingWithCreditCard"/> 			  				
@@ -162,14 +164,14 @@
 					
 					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>										
 					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
-						  
+					  
 					<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
-				   	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/> 
+				   	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/>	
 				    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
 		 		 	
 				</methods>
-			
-			
+		
+		
 				<class name="OrderRegression.PlaceOrderWithBuyNowPopUp"/>
 	               <methods>				 		  		                  
 	    				<include name="verifyingPlacingOrderWithBuyNowPopUp"></include>   
@@ -179,20 +181,7 @@
 	               <methods>				 		  		                  
 	    				<include name="verifyingPlacingOrderWithBuyNowButtonWithCreditCard"></include>   
 	               </methods>
-	               
-	             	<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
-				<methods>			
-				 	 <include name="verifyingOrderIsPlacingWithCreditCard"/>		  								  
-				    <include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/> 	
-				    <include name="verifyingOrderIsPlacingWithGiftCard"/>	
-				    <include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>									
-			 	    <include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
-			 	    
-			 	    <!-- <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/>  -->
-			 	    <include name="verifyingOrderIsPlacingWithCartPagePaypal"/> 
-			 	    <include name="verifyingOrderIsPlacingWithMiniCartPaypal"/> 
-			 	    
-			</methods>  
+	              
          </classes>
     </test>
 </suite>

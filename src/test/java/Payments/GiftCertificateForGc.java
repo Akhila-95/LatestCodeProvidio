@@ -15,6 +15,7 @@ public class GiftCertificateForGc extends baseClass {
 	private static final PaymentPage pp = new PaymentPage(driver);
 	
 	 public static void giftCodeForGc() throws Exception{
+		 
 		 Actionsss.scrollWindowsByPixel(500);
 		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
 	        // Provided data

@@ -6,6 +6,7 @@ import Paypal.PaypalMethod;
 import functionality.Actionsss;
 import functionality.allAttributesSelection;
 import pageObjects.ProductDetailPage;
+import pageObjects.homepage;
 import tasks.OrderDetailPageTasks;
 import tasks.ProductListingPageTasks;
 import tasks.ReviewOrderPageTask;
@@ -15,6 +16,7 @@ import validations.OrderPageValidation;
 public class PdpPagePaypalBuyNow extends baseClass{
 
 	private static final ProductDetailPage pdp = new ProductDetailPage(driver);
+	private static homepage homePage = new homepage(driver);
 	
 	public static void pdpPage() throws Exception {
 		if(Actionsss.elementSize(pdp.getPdpPagination())) {
@@ -34,12 +36,14 @@ public class PdpPagePaypalBuyNow extends baseClass{
 			Actionsss.click(pdp.getSalesforcePaypalBuyNow());
 			PaypalMethod.paypalPopup();
 			ReviewOrderPageTask.placeOrder();
-			OrderPageValidation.paymentInOrderConfirmationPage();
-			OrderDetailPageTasks.getOrderConfirmationPage();	
+			OrderPageValidation.paymentInOrderConfirmationPage();			
+			OrderDetailPageTasks.getOrderConfirmationPage();
+			Actionsss.click(homePage.clickOnLogo());
 		}else {
 			logger.info("No paypal buy now configuration in PDP in this payment");
 			test.info("No paypal buy now configuration in PDP in this payment");
 			test.pass("No paypal buy now configuration in PDP in this payment");
+			Actionsss.click(homePage.clickOnLogo());
 		}
 	}
 }

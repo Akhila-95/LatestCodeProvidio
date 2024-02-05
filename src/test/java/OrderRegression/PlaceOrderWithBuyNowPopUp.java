@@ -16,6 +16,7 @@ import tasks.PaymentPageTasks;
 import tasks.ProductListingPageTasks;
 import tasks.ReviewOrderPageTask;
 import tasks.ShippingPageTasks;
+import validations.OrderPageValidation;
 
 public class PlaceOrderWithBuyNowPopUp extends baseClass{
 	
@@ -39,6 +40,7 @@ public class PlaceOrderWithBuyNowPopUp extends baseClass{
 				 ShippingPageTasks.enterValidAddress();
 				 PaymentPageTasks.creditCardWithValidDetails();
 				 ReviewOrderPageTask.placeOrder();
+				 OrderPageValidation.paymentInOrderConfirmationPage();
 				 OrderDetailPageTasks.getOrderConfirmationPage();
 		 }else {
 			 Actionsss.scrollWindowsByPixel(150);

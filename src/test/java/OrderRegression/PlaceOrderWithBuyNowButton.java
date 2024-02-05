@@ -15,6 +15,7 @@ import tasks.PaymentPageTasks;
 import tasks.ProductListingPageTasks;
 import tasks.ReviewOrderPageTask;
 import tasks.ShippingPageTasks;
+import validations.OrderPageValidation;
 
 public class PlaceOrderWithBuyNowButton extends baseClass {
 	private static final ProductDetailPage pdp = new ProductDetailPage(driver);
@@ -41,6 +42,7 @@ public class PlaceOrderWithBuyNowButton extends baseClass {
 			 ShippingPageTasks.enterValidAddress();
 			 PaymentPageTasks.creditCardWithValidDetails();
 			 ReviewOrderPageTask.placeOrder();
+			 OrderPageValidation.paymentInOrderConfirmationPage();
 			 OrderDetailPageTasks.getOrderConfirmationPage();
 	}
 }

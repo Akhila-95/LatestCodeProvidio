@@ -61,8 +61,7 @@ public class PaypalMethod extends baseClass {
           }if(salesforcePaypalCheckout1.isDisplayed()) {    
               js.executeScript("arguments[0].click();", salesforcePaypalCheckout1);
              
-          }
-            	
+          }            	
         }
     }
 	

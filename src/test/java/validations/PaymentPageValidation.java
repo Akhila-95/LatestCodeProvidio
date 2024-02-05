@@ -216,11 +216,10 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		public  void salesforceCvvAndExpError() throws Exception {
 			
 			test.info("Verifying with negative validations for exp and cvv");
-			allPay.salesforceCardNumber();
-			Thread.sleep(3000);
-			
+			allPay.salesforceCardNumber();					
 			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
 			Actionsss.scrollWindowsByPixel(300);
+			Thread.sleep(3000);
 			if((Actionsss.displayElement(pp.getsalesforceCreditCardExpDateError()) && Actionsss.displayElement(pp.getsalesforceCreditCvvError()))) {
 				test.pass("Successfully error messages are displayed for exp date and cvv");
 				logger.info("Successfully error messages are displayed for exp date and cvv");
@@ -255,7 +254,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 	        test.info("Credit card number entered is " + "2132 1312 4214 1241");
 	        Actionsss.sendKeys(pp.getSalesforceCardNumber(),"2132 1312 4214 1241"," invalid cardNum");
 			driver.switchTo().defaultContent();
-			
+			Thread.sleep(1000);
 			if(Actionsss.displayElement(pp.getSalesforceCardInvalidError())) {
 				test.pass("Error msg displayed when invalid credit card  details are entered");
 				logger.info("Error msg displayed when invalid credit card details are entered");

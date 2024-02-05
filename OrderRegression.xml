@@ -7,29 +7,20 @@
      <classes>
    
 			<class name="browser.launchBrowsering"/>
-			<!--  	
-		   <class name ="testScripts.ReviewOrderTest"/>
-				<methods>				
-					 <include name="verifyingPlaceOrderButtonDisplayInReviewOrderPage"/>
-					 <include name="verifyingTheDisplayOfCustomerInfoInReviewOrderPage"/>				
-					 <include name="verifyingOrderSummaryDisplayInReviewOrderPage"/>
-					 <include name="verifyingPaymentInfoDisplayInReviewOrderPage"/>
-					 <include name="verifyingEtgLogoDisplayInReviewOrderPage"/>					 			
-					 <include name="verifyingTheEditPaymentToPaypalFromReviewOrderPage"/>
-					
-					 <include name="verifyingBackToCartInReviewOrderPagee"/>
-					 <include name="verifyingPaginationOfProductsInReviewOrderPage"/>	 		
-				</methods>-->
-				
-					<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
+			<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
 				<methods>			
-				  <!--  	 <include name="verifyingOrderIsPlacingWithCreditCard"/>		  				
-				  
-				   <include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/> 	
-				    <include name="verifyingOrderIsPlacingWithGiftCard"/>	 -->
-				  	<!--   <include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>-->										
-			 	<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/> 
-				  </methods>
+				 	<!--  <include name="verifyingOrderIsPlacingWithCreditCard"/> 			  				
+				    <include name="verifyingOrderIsPlacingWithGiftCard"/>	 --> 
+					<!-- <include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
+					
+					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/> -->										
+					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
+						  
+					<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
+				   	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/> 
+			<!-- 	    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 -->
+		 		 	
+				</methods>
       
     </classes>	
 			

@@ -26,12 +26,13 @@ public class attributesSelection extends baseClass{
 		if(sizeBox.size()>0) {
 			//total sizes
 			List<WebElement> sizeBoxs= driver.findElements(By.xpath("//div[contains(@class, 'select-size')]//span[@class='text-center']"));
-			int randomIndexofsize = random.nextInt(sizeBoxs.size())+1;
-			if(randomIndexofsize>0) {
-				WebElement sizeBtn = driver.findElement(By.xpath("(//div[contains(@class, 'select-size')]//span[@class='text-center'])[" + randomIndexofsize + "]"));
-				Actionsss.CombinedClick(sizeBtn);
-				//sizeBtn.click();
-			}
+
+		    if (sizeBoxs.size() > 0) {
+		        int randomIndexofsize = random.nextInt(sizeBoxs.size()) + 1;
+		        WebElement sizeBtn = driver.findElement(By.xpath("(//div[contains(@class, 'select-size')]//span[@class='text-center'])[" + randomIndexofsize + "]"));
+		        Actionsss.CombinedClick(sizeBtn);
+		        //sizeBtn.click();
+		    } 
 
 		}else if(sizeDropDown.size()>0) {
 		List<WebElement> sizedropdown= driver.findElements(By.xpath("//select[contains(@class, 'select-size')]"));

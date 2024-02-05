@@ -5,23 +5,34 @@ import org.openqa.selenium.WebElement;
 
 import com.providio.testcases.baseClass;
 
+import Payments.CheckOutPaypal;
+import Payments.GiftCertificateForGc;
 import data.PaymentDetails;
 import functionality.Actionsss;
+import pageObjects.CheckOutPage2;
+import pageObjects.CheckOutPage3;
 import pageObjects.PaymentPage;
 import pageObjects.ReviewOrderPage;
+import pageObjects.ShippingAddressPage;
 import validations.OrderPageValidation;
 import validations.PaymentPageValidation;
 import validations.ReviewOrderPageValidation ;
+import validations.ShippingPageValidation;
 
 public class ReviewOrderPageTask extends baseClass{
 
 	private static final ReviewOrderPage reviewOrder = new ReviewOrderPage(driver);
 	private static final PaymentPage pp = new PaymentPage(driver);
+	private static final CheckOutPage3 cop3 = new CheckOutPage3(driver);
+	private static final PaymentPageValidation cop3v = new PaymentPageValidation();
+	private static final ShippingAddressPage shippingAddressPage = new ShippingAddressPage(driver);
+	private static final CheckOutPage2 shippingPage = new CheckOutPage2(driver);
+	private static ShippingAddressPage SAP = new ShippingAddressPage(driver);
 	
 	public static void reviewOrderPage() throws Exception {
-		if(Actionsss.elementSize(reviewOrder.getgsummaryOfBillingAddressList())) {
-			if(Actionsss.displayElement(reviewOrder.getgsummaryOfBillingAddress())) {
-				logger.info("Placing order page is loaded");
+		if(Actionsss.elementSize(reviewOrder.getgsummaryOfBillingAddressList()) && Actionsss.elementSize(reviewOrder.getSelectPlaceOrderBtnList())) {
+			if(Actionsss.displayElement(reviewOrder.getgsummaryOfBillingAddress()) && (Actionsss.displayElement(reviewOrder.getSelectPlaceOrderBtn()))   ) {
+				logger.info("Review order page is loaded");
 				PaymentDetails.creditCardDetails();
 			}
 		}else {
@@ -92,6 +103,7 @@ public class ReviewOrderPageTask extends baseClass{
 		placeOrder();
 	}
 	
+	
 	public static void placeOrder() throws InterruptedException {
 		Actionsss.scrollWindowsByPixel(500);
 		if(Actionsss.elementSize(pp.getSalesforcePaypalList())) {	
@@ -110,95 +122,216 @@ public class ReviewOrderPageTask extends baseClass{
 		}
 	}
 	
+	
+	public static void editShippingAddressFromReviewOrderPage() throws Exception {
+		reviewOrderPage();	
+		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+			previousShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getShippingAddressInRop());
+			Actionsss.click(reviewOrder.getEditShippingAddressInRop());
+			Actionsss.editShippingAddressFromRop(shippingAddressPage.getShippingAddress());
+			 Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
+			 Thread.sleep(1000);
+			 ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
+			 PaymentPageTasks.clickReviewOrderButton();
+			 Thread.sleep(1000);
+			 editedShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getShippingAddressInRop());
+			 ReviewOrderPageValidation.editShippingAddressValidation();
+			 placeOrder();
+			 OrderPageValidation.validatePlacetheOrderPage();
+			 OrderPageValidation.orderNumberAndOrderDate();
+			 
+			
+		}else {
+			test.info("Salesforce payment is activated");
+			test.info("No review order page in salesforce payment");
+		}
+	}
+	public static void editPhoneNumInShippingAddressFromReviewOrderPage() throws Exception {
+		reviewOrderPage();	
+		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+			 previousPhoneNumInShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getPhoneNumInshippingAddressInRop());
+			 Actionsss.click(reviewOrder.getEditShippingAddressInRop());
+			 Actionsss.sendKeys(SAP.getSelectPhoneInput(), "8765987653","shipping phone number");
+			 Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
+			 Thread.sleep(1000);
+			 ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
+			 PaymentPageTasks.clickReviewOrderButton();
+			 Thread.sleep(1000);
+			 editedPhoneNumInShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getPhoneNumInshippingAddressInRop());
+			 ReviewOrderPageValidation.editedBillingAddressValidation();
+			 placeOrder();
+			 OrderPageValidation.validatePlacetheOrderPage();
+			 OrderPageValidation.orderNumberAndOrderDate();
+			 
+			
+		}else {
+			test.info("Salesforce payment is activated");
+			test.info("No review order page in salesforce payment");
+		}
+	}
+	
+	public static void editBillingAddressFromReviewOrderPage() throws Exception {
+		reviewOrderPage();	
+		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+			 previousBillingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());			 
+			 Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderBtnPage());
+			 Actionsss.click(pp.getUpdateBillingAddress());
+			 Thread.sleep(1000);
+			 Actionsss.scrollWindowsByPixel(200);
+			 Actionsss.editBillingAddressFromRop(pp.getBillingAddress());			 
+			 PaymentPageTasks.clickReviewOrderButton();
+			 Thread.sleep(2000);
+			 editedBillingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());
+			 ReviewOrderPageValidation.editedBillingAddressValidation();
+			 placeOrder();
+			 OrderPageValidation.validatePlacetheOrderPage();
+			 OrderPageValidation.orderNumberAndOrderDate();
+			 
+			
+		}else {
+			test.info("Salesforce payment is activated");
+			test.info("No review order page in salesforce payment");
+		}
+	}
+	
+	
+	public static void editPhoneNumberInBillingAddress() throws Exception {
+		reviewOrderPage();	
+		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+			Thread.sleep(2000);				
+			prevoiusBillingPhoneNumber =Actionsss.getTextOfElement(reviewOrder.getPhoneNumberInBillingAddress());			
+			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderBtnPage());		
+			Actionsss.sendKeys(cop3.getBillingPhoneNumber(), "9876543567", "edited phone number  in billing address");
+			PaymentDetails.creditCardDetails();				
+			editedBillingPhoneNumber=Actionsss.getTextOfElement(reviewOrder.getPhoneNumberInBillingAddress());				
+			cop3v.phoneNumberInBillingAddressValidation();	
+			placeOrder();
+			OrderPageValidation.validatePlacetheOrderPage();
+			OrderPageValidation.orderNumberAndOrderDate();
+		}else {
+			test.info("Salesforce payment is activated");
+			test.info("No review order page in salesforce payment");
+		}
+	}
 	public static void editPaymentToCreditCard() throws Exception {
 		reviewOrderPage();
-	
-		if(Actionsss.elementSize(reviewOrder.getCreditCardPaymentBeforeEditList())) {
-			logger.info("credit card");
-			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBeforeEdit());
-			logger.info(previousPaymentInPlaceorderPage);
-			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-		}else if(Actionsss.elementSize(reviewOrder.getpaypalPaymentBeforeEditList())) {
-			logger.info("paypal");
-		//	previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getpaypalPaymentBeforeEdit());
-			logger.info(previousPaymentInPlaceorderPage);
-			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-		}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())){
-			logger.info("gc");
-			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
-			logger.info(previousPaymentInPlaceorderPage);
-			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-			PaymentPageTasks.removeAppliedGc();
-			logger.info("edit credit card");
-			PaymentPageTasks.creditCardWithValidDetails();
-			logger.info("Entered credit card num is " +creditCardNumber);
-			paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
-			logger.info(paymentafterEditInPlaceorderPage);
-						
-			if(Actionsss.elementSize(pp.getBrainTree())) {	
-				logger.info("If payment is brain tree then clicked on edit and check the edited payment");
-				Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-			}else {
-				placeOrder();
-				ReviewOrderPageValidation .editPaymentInReviewOrderPage();
+		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+				logger.info("Brain tree activated");
+				
+					if(Actionsss.elementSize(reviewOrder.getCreditCardPaymentBrainTreeBeforeEditList())) {
+						logger.info("credit card details entered");
+						previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());						
+						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+						if(Actionsss.elementSize(pp.getSalesforcePaypalList()) || Actionsss.elementSize(pp.getBrainPaypalAcc()) ) {
+								CheckOutPaypal.paypalFromCheckout();
+						}
+					}else if (Actionsss.elementSize(reviewOrder.getBrainPaypalPaymentInReviewOrderPageList())) {
+						logger.info("Paypal details entered");
+						previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());		
+						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+						PaymentPageTasks.creditCardWithValidDetails();
+					
+					}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())) {
+						logger.info("gc entered");
+						if(Actionsss.elementSize(pp.getSalesforcePaypalList()) || Actionsss.elementSize(pp.getBrainPaypalAcc()) ) {
+							CheckOutPaypal.paypalFromCheckout();
+						}else {
+							PaymentPageTasks.creditCardWithValidDetails();
+						}
+						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+					}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())){
+						logger.info("gc");
+						previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
+						logger.info(previousPaymentInPlaceorderPage);
+						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+						PaymentPageTasks.removeAppliedGc();
+						logger.info("edit credit card");
+						PaymentPageTasks.creditCardWithValidDetails();
+						logger.info("Entered credit card num is " +creditCardNumber);
+						paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
+						logger.info(paymentafterEditInPlaceorderPage);
+									
+						if(Actionsss.elementSize(pp.getBrainTree())) {	
+							logger.info("If payment is brain tree then clicked on edit and check the edited payment");
+							Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+						}else {
+							placeOrder();
+							ReviewOrderPageValidation.editPaymentInReviewOrderPage();
+						}
+					}	
 			}
-		}	
+			
+		}
 	}
 	
 	public static void editPaymentToPaypal() throws Exception {
 		reviewOrderPage();
-
-		if(Actionsss.elementSize(reviewOrder.getCreditCardPaymentBeforeEditList())) {
-			logger.info("credit card");
-			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBeforeEdit());
-			logger.info(previousPaymentInPlaceorderPage);
-			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-		}else if(Actionsss.elementSize(reviewOrder.getpaypalPaymentBeforeEditList())) {
-			logger.info("paypal");
-			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplay())) {
-			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());
-			logger.info(previousPaymentInPlaceorderPage);
-			}
-			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-		}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())){
-			logger.info("gc");
-			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
-			logger.info(previousPaymentInPlaceorderPage);
-			Actionsss.javascriptClick(reviewOrder.getEditPaymentInPlaceOrderPage());
-			PaymentPageTasks.removeAppliedGc();
-			PaymentPageTasks.paypal();
-			logger.info("edit paypal");			
-			
-			Thread.sleep(2000);
-			//paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getBrainPaypalPaymentBeforeEdit());
-			//logger.info(paymentafterEditInPlaceorderPage);
-						
-			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplay())) {
-				logger.info("brain tree activated");
-				paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());
-				logger.info(paymentafterEditInPlaceorderPage);
-				logger.info("If payment is brain tree then clicked on edit and check the edited payment");
+		if(Actionsss.elementSize(reviewOrder.getStripePaymentInReviewOrderPageList())) {
+			logger.info("stripe activated");
+			if(Actionsss.elementSize(reviewOrder.getGcStripePaymentInReviewOrderPageList())) {
+				logger.info("gc");
+				previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcCodeInstripePaymentInReviewOrderPage());
 				Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-				WebElement paypal= driver.findElement(By.xpath("//option[@id='braintreePaypalAccount']"));
-				getTextOfPaypalInPaymentPage= paypal.getAttribute("value");
-				logger.info(getTextOfPaypalInPaymentPage);
-				
-				PaymentPageTasks.clickReviewOrderButton();
-				ReviewOrderPageValidation .editPaymentToPaypalReviewOrderPage();
-				placeOrder();
-				OrderPageValidation.validatePlacetheOrderPage();
-				OrderPageValidation.orderNumberAndOrderDate();
-			}else {
-				logger.info("");
-				placeOrder();
-				ReviewOrderPageValidation .editPaymentInReviewOrderPage();
-				OrderPageValidation.validatePlacetheOrderPage();
-				OrderPageValidation.orderNumberAndOrderDate();
+			} {
 				
 			}
-		}else {
-			test.info("Salesforce payment is activated");
-			test.info("No review order page in salesforce payment");
+			
+			
+		}else if(Actionsss.elementSize(reviewOrder.getBrainPaypalPaymentInReviewOrderPageList())) {
+			logger.info("brain tree activated");
+			if(Actionsss.elementSize(reviewOrder.getCreditCardPaymentBrainTreeBeforeEditList())) {
+				logger.info("credit card");
+				previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());
+				logger.info(previousPaymentInPlaceorderPage);
+				Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+			}else if(Actionsss.elementSize(reviewOrder.getpaypalPaymentBeforeEditList())) {
+				logger.info("paypal");
+				if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+				previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());
+				logger.info(previousPaymentInPlaceorderPage);
+				}
+				Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+			}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())){
+				logger.info("gc");
+				previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
+				logger.info(previousPaymentInPlaceorderPage);
+				Actionsss.javascriptClick(reviewOrder.getEditPaymentInPlaceOrderPage());
+				PaymentPageTasks.removeAppliedGc();
+				PaymentPageTasks.paypal();
+				logger.info("edit paypal");			
+				
+				Thread.sleep(2000);
+				//paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(placeOrder.getBrainPaypalPaymentBeforeEdit());
+				//logger.info(paymentafterEditInPlaceorderPage);
+							
+				if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+					logger.info("brain tree activated");
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());
+					logger.info(paymentafterEditInPlaceorderPage);
+					logger.info("If payment is brain tree then clicked on edit and check the edited payment");
+					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+					WebElement paypal= driver.findElement(By.xpath("//option[@id='braintreePaypalAccount']"));
+					getTextOfPaypalInPaymentPage= paypal.getAttribute("value");
+					logger.info(getTextOfPaypalInPaymentPage);
+					
+					PaymentPageTasks.clickReviewOrderButton();
+					ReviewOrderPageValidation.editPaymentToPaypalReviewOrderPage();
+					placeOrder();
+					OrderPageValidation.validatePlacetheOrderPage();
+					OrderPageValidation.orderNumberAndOrderDate();
+				}else {
+					logger.info("");
+					placeOrder();
+					ReviewOrderPageValidation .editPaymentInReviewOrderPage();
+					OrderPageValidation.validatePlacetheOrderPage();
+					OrderPageValidation.orderNumberAndOrderDate();
+					
+				}
+			}else {
+				test.info("Salesforce payment is activated");
+				test.info("No review order page in salesforce payment");
+			}
 		}
 	}
 }

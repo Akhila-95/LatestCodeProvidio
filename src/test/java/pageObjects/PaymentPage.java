@@ -883,6 +883,17 @@ public class PaymentPage extends baseClass{
   		return saveAndContinue;
   	}
  	
+ 	@FindBy(xpath = "(//button[contains(@class,'btn-show-details')])[3]")
+    WebElement updateBillingAddress;
+	public WebElement getUpdateBillingAddress() {
+ 		return updateBillingAddress;
+ 	}
+	
+	@FindBy(id = "billingAddressOne")
+    WebElement billingAddress;
+	public WebElement getBillingAddress() {
+ 		return billingAddress;
+ 	}
 }
 
 

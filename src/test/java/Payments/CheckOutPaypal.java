@@ -10,11 +10,17 @@ import com.providio.testcases.baseClass;
 
 import Paypal.PaypalMethod;
 import functionality.Actionsss;
+import pageObjects.OrderPageDetails;
 import pageObjects.PaymentPage;
+import pageObjects.homepage;
+import validations.OrderPageValidation;
+import validations.PaymentPageValidation;
 
 public class CheckOutPaypal extends baseClass{
 
 	private static final PaymentPage pp =new PaymentPage(driver);
+	private static homepage homePage = new homepage(driver);
+	private static OrderPageDetails  orderPage = new OrderPageDetails(driver);
 	
 	public static void paypalFromCheckout() throws InterruptedException, Exception {
 		
@@ -35,6 +41,29 @@ public class CheckOutPaypal extends baseClass{
 				logger.info("A click to Enter into paypal");				
 				PaypalMethod.paypalPopup();
 		    	logger.info("Clicked on paypal button");	
+		    	Thread.sleep(1000);
+				if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
+					if(Actionsss.displayElement(orderPage.getOrderThankMessage())) {	
+					logger.info("Salesforce payment activated");			
+					Thread.sleep(8000);		
+					OrderPageValidation.paymentInOrderConfirmationPage();
+					OrderPageValidation.validatePlacetheOrderPage();
+					OrderPageValidation.orderNumberAndOrderDate();
+					Actionsss.click(homePage.clickOnLogo());
+					}
+				}
+				else if(Actionsss.elementSize(pp.getSelectPlaceOrderBtnList())) {	
+					logger.info("Other paymnet activated");
+					logger.info("Place order page is loaded");
+					Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
+					Thread.sleep(8000);
+					PaymentPageValidation.VerifiedThatPlaceOrderClick();
+					Thread.sleep(1000);
+					OrderPageValidation.paymentInOrderConfirmationPage();
+					OrderPageValidation.validatePlacetheOrderPage();
+					OrderPageValidation.orderNumberAndOrderDate();
+					Actionsss.click(homePage.clickOnLogo());
+				}
 			}
     		
     	}else if(Actionsss.elementSize(pp.getSalesforcePaypalList())) {	 
@@ -46,6 +75,29 @@ public class CheckOutPaypal extends baseClass{
 		    Thread.sleep(2000);
 		    PaypalMethod.paypalPopup();
 	    	logger.info("Clicked on paypal button");
+	    	Thread.sleep(1000);
+			if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
+				if(Actionsss.displayElement(orderPage.getOrderThankMessage())) {	
+				logger.info("Salesforce payment activated");			
+				Thread.sleep(8000);		
+				OrderPageValidation.paymentInOrderConfirmationPage();
+				OrderPageValidation.validatePlacetheOrderPage();
+				OrderPageValidation.orderNumberAndOrderDate();
+				Actionsss.click(homePage.clickOnLogo());
+				}
+			}
+			else if(Actionsss.elementSize(pp.getSelectPlaceOrderBtnList())) {	
+				logger.info("Other paymnet activated");
+				logger.info("Place order page is loaded");
+				Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
+				Thread.sleep(8000);
+				PaymentPageValidation.VerifiedThatPlaceOrderClick();
+				Thread.sleep(1000);
+				OrderPageValidation.paymentInOrderConfirmationPage();
+				OrderPageValidation.validatePlacetheOrderPage();
+				OrderPageValidation.orderNumberAndOrderDate();
+				Actionsss.click(homePage.clickOnLogo());
+			}
 	    	
     	}else {
     		test.info("Cybersouce payment OR stripe payment integration  is activated so, No paypal for cybersouce and stripe");

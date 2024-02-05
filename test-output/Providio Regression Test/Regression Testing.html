@@ -1,0 +1,532 @@
+<html>
+<head>
+<title>TestNG:  Regression Testing</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression Testing</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>73/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Feb 05 12:38:31 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>1969 seconds (1969853 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='OrderRegression.PlaceOrderWithBuyNowButton.verifyingPlacingOrderWithBuyNowButtonWithCreditCard()'><b>verifyingPlacingOrderWithBuyNowButtonWithCreditCard</b><br>Test class: OrderRegression.PlaceOrderWithBuyNowButton</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=121.0.6167.140)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0cf097ed194f4aa8e34285cef9901abd, clickElement {id=E7BCBEE3D1618F29DA2AEA42CC4CD062_element_7882}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53275}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53275/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (0cf097ed194f4aa8e34285cef9901abd)] -&gt; xpath: //button[contains(@class,&apos;buy-now&apos;)]]
+Session ID: 0cf097ed194f4aa8e34285cef9901abd
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at OrderRegression.PlaceOrderWithBuyNowButton.verifyingPlacingOrderWithBuyNowButtonWithCreditCard(PlaceOrderWithBuyNowButton.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace82909977", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace82909977'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=121.0.6167.140)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0cf097ed194f4aa8e34285cef9901abd, clickElement {id=E7BCBEE3D1618F29DA2AEA42CC4CD062_element_7882}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53275}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53275/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (0cf097ed194f4aa8e34285cef9901abd)] -&gt; xpath: //button[contains(@class,&apos;buy-now&apos;)]]
+Session ID: 0cf097ed194f4aa8e34285cef9901abd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at OrderRegression.PlaceOrderWithBuyNowButton.verifyingPlacingOrderWithBuyNowButtonWithCreditCard(PlaceOrderWithBuyNowButton.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>40</td>
+<td>OrderRegression.PlaceOrderWithBuyNowButton@27d33393</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalFromCheckoutPage()'><b>verifyingOrderIsPlacingWithPaypalFromCheckoutPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>141</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifytheErrorsFromName_Recipients_confirmRecipientEMail()'><b>verifytheErrorsFromName_Recipients_confirmRecipientEMail</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>8</td>
+<td>testScripts.GiftCertificateTest@a098d76</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingOrderSummaryDisplayInPaymentPage()'><b>verifyingOrderSummaryDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyCreateAccountWithValidCredentials()'><b>verifyCreateAccountWithValidCredentials</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>21</td>
+<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardInCompleteCvvError()'><b>verifyingCreditCardInCompleteCvvError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardExpDateInValid()'><b>verifyingCreditCardExpDateInValid</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>7</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingBackToCartInPaymentPage()'><b>verifyingBackToCartInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>39</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingEtgLogoDisplayInReviewOrderPage()'><b>verifyingEtgLogoDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheErrorsInLastName()'><b>verifyingTheErrorsInLastName</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>16</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyPhoneNumError()'><b>verifyPhoneNumError</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>21</td>
+<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingEnterGiftCodeErrorMsg()'><b>verifyingEnterGiftCodeErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>3</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.OrderDetailsTests.VerifyingOrderConfirmationPage()'><b>VerifyingOrderConfirmationPage</b><br>Test class: testScripts.OrderDetailsTests</td>
+<td></td>
+<td>10</td>
+<td>testScripts.OrderDetailsTests@599e4d41</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingTheDisplayOfCustomerInfoInReviewOrderPage()'><b>verifyingTheDisplayOfCustomerInfoInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingEditShippingAddress()'><b>verifyingEditShippingAddress</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>30</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingInvalidGcErrorMsg()'><b>verifyingInvalidGcErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingUpdateShippingAddress()'><b>verifyingUpdateShippingAddress</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardInCompleteExpYearError()'><b>verifyingCreditCardInCompleteExpYearError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditcardNumberInValidError()'><b>verifyingCreditcardNumberInValidError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyPasswordMismatch()'><b>verifyPasswordMismatch</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>21</td>
+<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheErrorsInFirstName()'><b>verifyingTheErrorsInFirstName</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>16</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheAddressError()'><b>verifyingTheAddressError</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>14</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingTheEditPaymentToPaypalFromReviewOrderPage()'><b>verifyingTheEditPaymentToPaypalFromReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingAddNewShippingAddress()'><b>verifyingAddNewShippingAddress</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingEditPhoneNumberInBillingAddressFromReviewOrderPage()'><b>verifyingEditPhoneNumberInBillingAddressFromReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage()'><b>verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>78</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingAllTheErrorsInCreditCard()'><b>verifyingAllTheErrorsInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>7</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingAddnewCreditCard()'><b>verifyingAddnewCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingTheCustomerInfoInPaymntPage()'><b>verifyingTheCustomerInfoInPaymntPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingAllErrorsInShippingForm()'><b>verifyingAllErrorsInShippingForm</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>4</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingWithValidShippingAddress()'><b>verifyingWithValidShippingAddress</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>14</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingPaymentInfoDisplayInReviewOrderPage()'><b>verifyingPaymentInfoDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingEditCustomerInfoFromCop3()'><b>verifyingEditCustomerInfoFromCop3</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>22</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingOrderSummaryDisplayInReviewOrderPage()'><b>verifyingOrderSummaryDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCvvAndExpErrorInCreditCard()'><b>verifyingCvvAndExpErrorInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>13</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardNumberInCompleteError()'><b>verifyingCreditCardNumberInCompleteError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingPaginationOfProductsInReviewOrderPage()'><b>verifyingPaginationOfProductsInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCvvErrorInCreditCard()'><b>verifyingCvvErrorInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>11</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithIncorrectCredentials()'><b>VerifyingLoginFailureWithIncorrectCredentials</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>20</td>
+<td>testScripts.LoginPageTest@40e37b06</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifyErrorMsgsInGiftCard()'><b>verifyErrorMsgsInGiftCard</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>7</td>
+<td>testScripts.GiftCertificateTest@a098d76</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCheckBalanceOfInvalidGcErrorMsg()'><b>verifyingCheckBalanceOfInvalidGcErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingRemovalOfAppliedGc()'><b>verifyingRemovalOfAppliedGc</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>12</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingPaymentInfoDisplayInPaymentPage()'><b>verifyingPaymentInfoDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyPassword()'><b>VerifyingLoginFailureWithEmptyPassword</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.LoginPageTest@40e37b06</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifyErrorsForConfirmMail()'><b>verifyErrorsForConfirmMail</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>11</td>
+<td>testScripts.GiftCertificateTest@a098d76</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheCustomerInfoInCheckoutPage2()'><b>verifyingTheCustomerInfoInCheckoutPage2</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCreditCard()'><b>verifyingOrderIsPlacingWithCreditCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>139</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard()'><b>verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>112</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingPaginationOfProductsInCheckOutPage2()'><b>verifyingPaginationOfProductsInCheckOutPage2</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>60</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingphoneNumberError()'><b>verifyingphoneNumberError</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>15</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmailAndPassword()'><b>VerifyingLoginFailureWithEmptyEmailAndPassword</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.LoginPageTest@40e37b06</td></tr>
+<tr>
+<td title='testScripts.LogOutTest.verifyLogout()'><b>verifyLogout</b><br>Test class: testScripts.LogOutTest</td>
+<td></td>
+<td>11</td>
+<td>testScripts.LogOutTest@6dcc40f5</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithGiftCard()'><b>verifyingOrderIsPlacingWithGiftCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>118</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditcardWithValidDetails()'><b>verifyingCreditcardWithValidDetails</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>12</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCheckBalanceOfValidGc()'><b>verifyingCheckBalanceOfValidGc</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>7</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingPlaceOrderButtonDisplayInReviewOrderPage()'><b>verifyingPlaceOrderButtonDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyEmailformatError()'><b>verifyEmailformatError</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>21</td>
+<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingEditEmailInCheckoutPage2()'><b>verifyingEditEmailInCheckoutPage2</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>65</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifyGiftCardToCart()'><b>verifyGiftCardToCart</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>22</td>
+<td>testScripts.GiftCertificateTest@a098d76</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithMiniCartPaypal()'><b>verifyingOrderIsPlacingWithMiniCartPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>119</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyEmailAndConfirmEmail()'><b>verifyEmailAndConfirmEmail</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>45</td>
+<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyinginvalidEmailInEmailSignUpBox()'><b>verifyinginvalidEmailInEmailSignUpBox</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>3</td>
+<td>testScripts.FooterPageTest@b52b755</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCartPagePaypal()'><b>verifyingOrderIsPlacingWithCartPagePaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>101</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<tr>
+<td title='browser.launchBrowsering.verifyHomePageLaunching()'><b>verifyHomePageLaunching</b><br>Test class: browser.launchBrowsering</td>
+<td></td>
+<td>6</td>
+<td>browser.launchBrowsering@726aa968</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndPaypal()'><b>verifyingOrderIsPlacingWithCombinationOfGcAndPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>129</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<tr>
+<td title='testScripts.FindAStoreTest.verifyFindAStore()'><b>verifyFindAStore</b><br>Test class: testScripts.FindAStoreTest</td>
+<td></td>
+<td>12</td>
+<td>testScripts.FindAStoreTest@5a6d30e2</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithInvalidEmailFormat()'><b>VerifyingLoginFailureWithInvalidEmailFormat</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.LoginPageTest@40e37b06</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifyTheErrorsRecipientEmailAndConfirmEmail()'><b>verifyTheErrorsRecipientEmailAndConfirmEmail</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.GiftCertificateTest@a098d76</td></tr>
+<tr>
+<td title='OrderRegression.PlaceOrderWithBuyNowPopUp.verifyingPlacingOrderWithBuyNowPopUp()'><b>verifyingPlacingOrderWithBuyNowPopUp</b><br>Test class: OrderRegression.PlaceOrderWithBuyNowPopUp</td>
+<td></td>
+<td>122</td>
+<td>OrderRegression.PlaceOrderWithBuyNowPopUp@36480b2d</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginWithValidCredentials()'><b>VerifyingLoginWithValidCredentials</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>13</td>
+<td>testScripts.LoginPageTest@40e37b06</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingEtgLogoDisplayInPaymentPage()'><b>verifyingEtgLogoDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingPaginationOfProductsInPaymentPage()'><b>verifyingPaginationOfProductsInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>80</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmail()'><b>VerifyingLoginFailureWithEmptyEmail</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.LoginPageTest@40e37b06</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyingResourceFooterLinks()'><b>verifyingResourceFooterLinks</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>4</td>
+<td>testScripts.FooterPageTest@b52b755</td></tr>
+</table><p>
+</body>
+</html>
