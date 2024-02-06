@@ -45,9 +45,9 @@ public class CheckOutPageTasks extends baseClass{
 		if(Actionsss.elementSize(CP. getSelectGuestCheckoutBtnList())) {	
 			test.info("User is guest");
 			Actionsss.CombinedClick(CP.getSelectGuestCheckoutBtn());
-			Thread.sleep(1000);
+		//	Thread.sleep(1000);
 			Actionsss.sendKeys(CP.getSelectGuestEmailInput(), guestmail, Email);
-			Thread.sleep(1000);
+			//Thread.sleep(1000);
 			Actionsss.CombinedClick(CP.getSelectContinueasGuesttBtn());
 			CheckOutPageValidation.VerifiedThatGuestLogin();
 		}else {

@@ -27,7 +27,8 @@ public class AddressSelection extends baseClass{
 			 test.info("Verifed that shipping address is Entered in Guest user");
 			 Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);
 			 Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
-			 Actionsss.addressFromDropDown(SAP.getShippingAddress());			
+			 Actionsss.addressFromDropDown(SAP.getShippingAddress());	
+			 Thread.sleep(1000);
 			 Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
 			 
 		 }else {			 
@@ -106,6 +107,21 @@ public class AddressSelection extends baseClass{
 		 Actionsss.editAddress(SAP.getShippingAddress());			
 		 Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
 	}
+	
+
+	public static void addNewShippingAddressWithName() throws InterruptedException {
+				
+			  //this method send the shipping first name,last name and address details , phonenumber by checking the display of firstname
+			  Thread.sleep(1000);
+			  if(Actionsss.displayElement(SAP.getFirstName())) {
+				  Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);			  
+				  Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
+				  Actionsss.addNewShippinggAddress(SAP.getShippingAddress());	
+				  Thread.sleep(1000);		  
+				  Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+	 
+			  }
+		  }
 	
 	public static void selectingRandomSavedShippingAddress() throws InterruptedException {
 		

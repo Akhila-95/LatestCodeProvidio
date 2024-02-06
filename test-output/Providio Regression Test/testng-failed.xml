@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Providio Regression Test]">
-  <test thread-count="5" name="SmokeTest(failed)">
+  <test thread-count="5" name="Regression Testing(failed)">
     <classes>
+      <class name="browser.launchBrowsering">
+        <methods>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- browser.launchBrowsering -->
       <class name="testScripts.ReviewOrderTest">
         <methods>
           <include name="setUpforReport"/>
+          <include name="verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder"/>
           <include name="verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder"/>
-          <include name="verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testScripts.ReviewOrderTest -->
+      <class name="testScripts.OrderPlacingWithAllPaymentsTest">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
+          <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/>
+          <include name="verifyingOrderIsPlacingWithGiftCard"/>
+          <include name="verifyingOrderIsPlacingWithCartPagePaypal"/>
+          <include name="verifyingOrderIsPlacingWithCreditCard"/>
+          <include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="afterClass"/>
+          <include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
+          <include name="tearDown"/>
+          <include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>
+        </methods>
+      </class> <!-- testScripts.OrderPlacingWithAllPaymentsTest -->
     </classes>
-  </test> <!-- SmokeTest(failed) -->
+  </test> <!-- Regression Testing(failed) -->
 </suite> <!-- Failed suite [Providio Regression Test] -->

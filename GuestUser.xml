@@ -7,23 +7,30 @@
      
 			<class name="browser.launchBrowsering"/>
            	 	
-		   <class name ="testScripts.ReviewOrderTest"/>
-				<methods>	
-				<!--		
-					 <include name="verifyingPlaceOrderButtonDisplayInReviewOrderPage"/>
-					 <include name="verifyingTheDisplayOfCustomerInfoInReviewOrderPage"/>				
-					 <include name="verifyingOrderSummaryDisplayInReviewOrderPage"/>
-					 <include name="verifyingPaymentInfoDisplayInReviewOrderPage"/>
-					 <include name="verifyingEtgLogoDisplayInReviewOrderPage"/>					 			
-					 <include name="verifyingTheEditPaymentToPaypalFromReviewOrderPage"/>					
-					 <include name="verifyingBackToCartInReviewOrderPagee"/>
-					 <include name="verifyingPaginationOfProductsInReviewOrderPage"/>	--> 
-					 <include name="verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder" />		 		
-					 <include name="verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder" /> 
-					 <include name="verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder" />
-					 <include name="verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder" />		
-				</methods> 
-		 
+           <!--  
+           	<class name ="testScripts.LoginPageTest"/>
+	           	  <methods> 
+	             		<include name ="VerifyingLoginWithValidCredentials"/>  
+	             		 
+	             </methods>
+	   -->
+    		 
+		
+    			<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
+				<methods>			
+				 	 <include name="verifyingOrderIsPlacingWithCreditCard"/> 			  				
+				    <include name="verifyingOrderIsPlacingWithGiftCard"/>	 
+					<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
+					
+					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>										
+					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
+					  
+					<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
+				   	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/>	
+				    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
+		 		 	
+				</methods>
+    		
          </classes>
     </test>
 </suite>

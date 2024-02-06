@@ -13,6 +13,7 @@ import data.AllPayments;
 import functionality.Actionsss;
 import pageObjects.CheckOutPage3;
 import pageObjects.PaymentPage;
+import tasks.PaymentPageTasks;
 
 public class PaymentPageValidation extends baseClass{
 	
@@ -147,7 +148,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		public  void updateBillingAddressValidation() {
 			test.info("Verifying the update billing address");
 			  logger.info(previousBillingAddress );
-			  logger.info( editedBillingAddress);
+			  logger.info(editedBillingAddress);
 			if(!(previousBillingAddress.equals(editedBillingAddress))) {
 				test.pass("Successfully billing addresss is edited the previous address is " + previousBillingAddress +" and edited billing addresss    is "+ editedBillingAddress);
 				logger.info("Successfully billing addresss  is edited the previous address is " + previousBillingAddress +" and edited billing addresss    is "+ editedBillingAddress);
@@ -160,7 +161,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		public  void addNewBillingAddressValidation() {
 			test.info("Verifying the add new  billing address");
 			  logger.info(previousBillingAddress );
-			  logger.info( editedBillingAddress);
+			  logger.info(editedBillingAddress);
 			if(!(previousBillingAddress.equals(editedBillingAddress))) {
 				test.pass("Successfully new billing addresss is added the previous address is " + previousBillingAddress +" and added new billing addresss    is "+ editedBillingAddress);
 				logger.info("Successfully new billing addresss is added the previous address is " + previousBillingAddress +" and added new billing addresss   is "+ editedBillingAddress);
@@ -280,18 +281,10 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 				test.fail("No Error msg displayed when invalid exp date details are entered");
 				logger.info("No Error msg displayed when invalid exp date details are entered");
 			}
-		}
-		
-	
-		
-		
-		
+		}	
 		
 		public void brainTreeAllPaymentsError() throws Exception {
-			Actionsss.scrollWindowsByPixel(1100);
-			Actionsss.javascriptClick(pp.getReviewOrderBtn());
-			Thread.sleep(4000);
-		
+			PaymentPageTasks.brainTreeReviewOrderButton();			
 			if(Actionsss.displayElement(pp.getErrorMsgInBrainTree())){
 				test.pass("Error msg displayed when no mandatory details are entered");
 				logger.info("Error msg displayed when no mandatory details are entered");

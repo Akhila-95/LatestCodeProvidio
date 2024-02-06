@@ -14,6 +14,7 @@ import pageObjects.CheckOutPage3;
 import pageObjects.PaymentPage;
 import pageObjects.ReviewOrderPage;
 import pageObjects.ShippingAddressPage;
+import pageObjects.homepage;
 import validations.OrderPageValidation;
 import validations.PaymentPageValidation;
 import validations.ReviewOrderPageValidation ;
@@ -28,16 +29,17 @@ public class ReviewOrderPageTask extends baseClass{
 	private static final ShippingAddressPage shippingAddressPage = new ShippingAddressPage(driver);
 	private static final CheckOutPage2 shippingPage = new CheckOutPage2(driver);
 	private static ShippingAddressPage SAP = new ShippingAddressPage(driver);
+	private static homepage homePage = new homepage(driver);
 	
 	public static void reviewOrderPage() throws Exception {
 		if(Actionsss.elementSize(reviewOrder.getgsummaryOfBillingAddressList()) && Actionsss.elementSize(reviewOrder.getSelectPlaceOrderBtnList())) {
 			if(Actionsss.displayElement(reviewOrder.getgsummaryOfBillingAddress()) && (Actionsss.displayElement(reviewOrder.getSelectPlaceOrderBtn()))   ) {
 				logger.info("Review order page is loaded");
-				PaymentDetails.creditCardDetails();
+			//	PaymentDetails.creditCardDetails();
 			}
 		}else {
-			//PaymentPageTasks.creditCardWithValidDetails();
-			PaymentPageTasks.gcRedemption();
+			PaymentPageTasks.creditCardWithValidDetails();
+			//PaymentPageTasks.gcRedemption();
 		}
 	}
 	
@@ -104,7 +106,8 @@ public class ReviewOrderPageTask extends baseClass{
 	}
 	
 	
-	public static void placeOrder() throws InterruptedException {
+	public static void placeOrder() throws Exception {
+		//reviewOrderPage();
 		Actionsss.scrollWindowsByPixel(500);
 		if(Actionsss.elementSize(pp.getSalesforcePaypalList())) {	
 			logger.info("Salesforce payment activated");	
@@ -129,18 +132,16 @@ public class ReviewOrderPageTask extends baseClass{
 			previousShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getShippingAddressInRop());
 			Actionsss.click(reviewOrder.getEditShippingAddressInRop());
 			Actionsss.editShippingAddressFromRop(shippingAddressPage.getShippingAddress());
-			 Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
-			 Thread.sleep(1000);
-			 ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
-			 PaymentPageTasks.clickReviewOrderButton();
-			 Thread.sleep(1000);
-			 editedShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getShippingAddressInRop());
-			 ReviewOrderPageValidation.editShippingAddressValidation();
-			 placeOrder();
-			 OrderPageValidation.validatePlacetheOrderPage();
-			 OrderPageValidation.orderNumberAndOrderDate();
-			 
-			
+			Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
+			Thread.sleep(1000);
+			ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
+			PaymentPageTasks.clickReviewOrderButton();
+			Thread.sleep(1000);
+			editedShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getShippingAddressInRop());
+			ReviewOrderPageValidation.editShippingAddressValidation();
+			placeOrder();
+			OrderPageValidation.validatePlacetheOrderPage();
+			OrderPageValidation.orderNumberAndOrderDate();		 			
 		}else {
 			test.info("Salesforce payment is activated");
 			test.info("No review order page in salesforce payment");
@@ -199,10 +200,17 @@ public class ReviewOrderPageTask extends baseClass{
 		reviewOrderPage();	
 		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
 			Thread.sleep(2000);				
-			prevoiusBillingPhoneNumber =Actionsss.getTextOfElement(reviewOrder.getPhoneNumberInBillingAddress());			
+			prevoiusBillingPhoneNumber =Actionsss.getTextOfElement(reviewOrder.getPhoneNumberInBillingAddress());	
+			Thread.sleep(1000);
 			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderBtnPage());		
 			Actionsss.sendKeys(cop3.getBillingPhoneNumber(), "9876543567", "edited phone number  in billing address");
-			PaymentDetails.creditCardDetails();				
+			
+			 if(Actionsss.elementSize(pp.getBrainTree())) {
+			    	PaymentPageTasks.brainTreeReviewOrderButton();	
+			    	ReviewOrderPageValidation.VerifyingReviewOrderBtn();
+			    	Thread.sleep(15000);
+		    	}
+			
 			editedBillingPhoneNumber=Actionsss.getTextOfElement(reviewOrder.getPhoneNumberInBillingAddress());				
 			cop3v.phoneNumberInBillingAddressValidation();	
 			placeOrder();
@@ -212,6 +220,7 @@ public class ReviewOrderPageTask extends baseClass{
 			test.info("Salesforce payment is activated");
 			test.info("No review order page in salesforce payment");
 		}
+		Actionsss.click(homePage.clickOnLogo());
 	}
 	public static void editPaymentToCreditCard() throws Exception {
 		reviewOrderPage();

@@ -5,6 +5,7 @@ import com.providio.testcases.baseClass;
 import functionality.Actionsss;
 import pageObjects.PaymentPage;
 import tasks.PaymentPageTasks;
+import validations.ReviewOrderPageValidation;
 
 
 
@@ -31,9 +32,14 @@ public class PaymentDetails extends baseClass{
 				PaymentDetailsofGuestandReg.cyberSource();				
 			}else if(Actionsss.elementSize(pp.getAdyenPayment())) {				
 				PaymentDetailsofGuestandReg.adyen();
-			}
+			}			
 			
-			PaymentPageTasks.clickReviewOrderButton();
+		    if(Actionsss.elementSize(pp.getBrainTree())) {
+		    	PaymentPageTasks.brainTreeReviewOrderButton();	
+		    	ReviewOrderPageValidation.VerifyingReviewOrderBtn();
+	    	}else {
+	    		PaymentPageTasks.clickReviewOrderButton();
+	    	}
 			
 		}else {
 			logger.info("Other payment details are entered");
@@ -44,25 +50,16 @@ public class PaymentDetails extends baseClass{
 	
 	public static void addNewCardThoughExistingCards() throws Exception {
 		
-		if(!Actionsss.elementSize(pp.getContinueAsAGuest())) {
-			
-			test.info("User is checked in as registered and also have saved card even though, adding a saved card to account to check the add payment functionality in register user.");
-			
-			if(Actionsss.elementSize(pp.getBrainTree())) {
-				
-				//PaymentDetailsofGuestandReg.brainTreeMethod();
-				 
-			}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
-				
-				PaymentDetailsofGuestandReg.addNewCardThoughExistingCardsInSalesforce() ;
-				
-			}else if (Actionsss.elementSize(pp.getStripePayment())) {
-				
+		if(!Actionsss.elementSize(pp.getContinueAsAGuest())) {			
+			test.info("User is checked in as registered and also have saved card even though, adding a saved card to account to check the add payment functionality in register user.");			
+			if(Actionsss.elementSize(pp.getBrainTree())) {				
+				//PaymentDetailsofGuestandReg.brainTreeMethod();				 
+			}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {				
+				PaymentDetailsofGuestandReg.addNewCardThoughExistingCardsInSalesforce() ;				
+			}else if (Actionsss.elementSize(pp.getStripePayment())) {				
 				PaymentDetailsofGuestandReg.addNewCardThoughExistingCardsInStripe();
-				PaymentDetailsofGuestandReg.useSaveCardInStripe();
-				 
-			}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {
-				
+				PaymentDetailsofGuestandReg.useSaveCardInStripe();				 
+			}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {				
 				PaymentDetailsofGuestandReg.addNewCardThoughExistingCardsInCybersource();
 			}else {
 				test.pass("No add new payment is configured in adyen payment");
@@ -72,6 +69,6 @@ public class PaymentDetails extends baseClass{
 			test.pass("No User will have saved cards ");
 		}
 	}
-	}
+}
 
 

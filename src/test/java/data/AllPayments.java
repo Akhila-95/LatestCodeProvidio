@@ -32,8 +32,8 @@ public class AllPayments extends baseClass{
 	public  void brainTreeCardHolderName() throws InterruptedException {
 		// card holder name
 		driver.switchTo().frame("braintree-hosted-field-cardholderName");
-		test.info("Entered card holder name");
-		Actionsss.sendKeys(pp.getBrainTreeHoldername(),"Test123",cardHolderName );		
+		Actionsss.sendKeys(pp.getBrainTreeHoldername(),"Test123",cardHolderName );	
+		test.pass("Entered card holder name as " +cardHolderName);
 		driver.switchTo().defaultContent();
 		
 	}
@@ -58,24 +58,26 @@ public class AllPayments extends baseClass{
 		Actionsss.sendKeys(pp.getBrainTreeCardNum(),cardNumbers[randomIndex],cardNum);
 		 // Extract the last four digits
         String lastFourDigits = cardNum.substring(cardNum.length() - 4);
-		creditCardNumber=lastFourDigits;
-		test.info("Entered card number");
+		creditCardNumber=lastFourDigits;	
 		driver.switchTo().defaultContent();
+		logger.info(cardNum);
+		test.pass("Entered card number is " +cardNumbers[randomIndex] );
 	}
 	
 	public  void brainTreeCvv() throws InterruptedException {
 		// cvv
-			test.info("Entered cvv");
+			
 			driver.switchTo().frame("braintree-hosted-field-cvv");
-			Actionsss.sendKeys(pp.getBrainTreeCvv(), "3455",creditCardCvv);			
+			Actionsss.sendKeys(pp.getBrainTreeCvv(), "3455",creditCardCvv);	
+			test.pass("Entered cvv is 3455 ");
 			driver.switchTo().defaultContent();
 	}
 	
 	public  void brainTreeExpDate() throws InterruptedException {
-		//exp date
-		test.info("entered Exp date");
+		//exp date		
 		driver.switchTo().frame("braintree-hosted-field-expirationDate");
 		Actionsss.sendKeys(pp.getBrainTreeExp(), "1230",expDate);	
+		test.pass("Entered Exp date is 1230 ");
 		driver.switchTo().defaultContent();
 	}
 	
@@ -88,8 +90,8 @@ public class AllPayments extends baseClass{
 		
 		Actionsss.randomElementFromList(pp.getSavedCardsBrainTree()); 
 	
-		logger.info("Selectd the new card");
-		pm.braintree();
+		//logger.info("Selectd the new card");
+		//pm.braintree();
 		
 	}
 	

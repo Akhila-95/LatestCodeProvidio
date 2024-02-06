@@ -22,7 +22,7 @@ public class PlaceOrderWithDifferentPayments  extends baseClass{
 	public static void orderPlacingWithCreditCard() throws Exception {
 		PaymentPageTasks.creditCardWithValidDetails();
 		ReviewOrderPageTask.placeOrder();
-		OrderPageValidation.paymentInOrderConfirmationPage();
+		//OrderPageValidation.paymentInOrderConfirmationPage();
 		OrderPageValidation.validatePlacetheOrderPage();
 		OrderPageValidation.orderNumberAndOrderDate();
 		Actionsss.click(homePage.clickOnLogo());

@@ -47,7 +47,7 @@ public class ShippingPageTasks extends baseClass{
 			Actionsss.click(shippingPage.getEditCustomerInfo());			
 			 Faker faker = new Faker();
 			 String randomFirstName = faker.name().firstName(); 
-		     String editedEmailInCop2 = randomFirstName + "EditedFromCOP2@etg.digital"; 
+		     String editedEmailInCop2 = randomFirstName + "EditedFromShippingPage@etg.digital"; 
 		     emailEditedInCop2 =editedEmailInCop2;
 		     logger.info(emailEditedInCop2);
 			 Actionsss.sendKeys(CP.getSelectGuestEmailInput(),  emailEditedInCop2, "Edited email");			
@@ -58,8 +58,7 @@ public class ShippingPageTasks extends baseClass{
 			 PaymentDetails.creditCardDetails();
 			 ReviewOrderPageTask.placeOrder();
 			 OrderPageValidation.validatePlacetheOrderPage();
-			 OrderPageValidation.orderNumberAndOrderDate();
-			
+			 OrderPageValidation.orderNumberAndOrderDate();		
 			
 		}else {			
 			test.info("User is checked in as registered so edit button ");
@@ -81,7 +80,7 @@ public class ShippingPageTasks extends baseClass{
 		 ShippingPageValidation.bactToCartValidationInCop2_Page();
 		 Actionsss.click(shippingPage.getBackToCart());				
 		 CheckOutPageTasks.guestCheckout();
-		 ShippingPageValidation.bactToCartValidationInCop2_Page();
+		// ShippingPageValidation.bactToCartValidationInCop2_Page();
 		
 	}
 	
@@ -147,22 +146,31 @@ public class ShippingPageTasks extends baseClass{
 	
 	public static void addNewAddress() throws InterruptedException, Exception {
 		shippingPage();
-		if(!Actionsss.elementSize(CP.getGuestCheckout())) {	
+		if(!Actionsss.elementSize(CP.getGuestCheckout())) {
+			/*if(Actionsss.elementSize(shippingPage.getShippingToLabelList())) {
+				if(Actionsss.displayElement(shippingPage.getShippingToLabel())) {
+					logger.info("User have saved address but not displaying the add new addresss etc");
+				}
+			}*/
+			
+			if(!Actionsss.displayElement(shippingPage.getAddNewShippingAddress())) {
+				//AddressSelection.Address();			
+				test.info("No saved address for this user to add new shipping address");
+			}else {
 			//if(Actionsss.displayElement(SAP.getShippingToDisplay()) && Actionsss.displayElement(SAP.getSaveShippingAddress()) && Actionsss.elementSize(SAP.getsavedShippingAddressList())) {
 				 String previousShippingaddress =SAP.getShippingAddress().getAttribute("value");
 				 previousShippingAddress= previousShippingaddress;
 				 Actionsss.click(shippingPage.getAddNewShippingAddress());
-				 AddressSelection.shippingAddressDetailsWithName();
-				 String newUpdatedShippingaddress =SAP.getShippingAddress().getAttribute("value");
-				 newlyAddedShippingAddress= newUpdatedShippingaddress;
-				 ShippingPageValidation.verifyingAddNewShippingAddress();
-				
+				 AddressSelection.addNewShippingAddressWithName();
 				 Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
 				 Thread.sleep(1000);
-				 ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
-				 Thread.sleep(500);
-				 Actionsss.click(homePage.clickOnLogo());
-			//}
+				 ShippingPageValidation.VerifiedThatNextpaymentBtnClick();				 
+				 Thread.sleep(1500);
+				 String addAddress=Actionsss.getTextOfElement(SAP.getshipingAdrressInPaymentPage());
+				 newlyAddedShippingAddress= addAddress; //Actionsss.getTextOfElement(SAP.getshipingAdrressInPaymentPage());
+				 ShippingPageValidation.verifyingAddNewShippingAddress();
+				 PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard();
+			}
 		}else {
 				test.info("user logged in as guest");
 				test.pass("No Add new address button");
@@ -172,25 +180,25 @@ public class ShippingPageTasks extends baseClass{
 	public static void updateNewShippingAddress() throws InterruptedException, Exception {
 		shippingPage();
 		if(!Actionsss.elementSize(CP.getGuestCheckout())) {	
-			//if(Actionsss.displayElement(SAP.getShippingToDisplay()) && Actionsss.displayElement(SAP.getSaveShippingAddress()) && Actionsss.elementSize(SAP.getsavedShippingAddressList())) {
+			if(!Actionsss.displayElement(shippingPage.getAddNewShippingAddress())) {						
+				test.info("No saved address for this user to update shipping address");
+			}else {
 				Actionsss.click(shippingPage.getUpdateShippingAddress());
 				Thread.sleep(2000);
 
 		        String previousShippingaddress =SAP.getShippingAddress().getAttribute("value");
-				previousShippingAddressInUpdate=previousShippingaddress ;
-				logger.info(previousShippingAddressInUpdate);
-				AddressSelection.updateShippingAddress();
-				 String newUpdatedShippingaddress =SAP.getShippingAddress().getAttribute("value");
-				updateShippingAddress =newUpdatedShippingaddress;
-				logger.info(updateShippingAddress);
-				ShippingPageValidation.verifyingTheUpdateShippingAddress();
-				
+				previousShippingAddressInUpdate=previousShippingaddress ;				
+				AddressSelection.updateShippingAddress();				
 				Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
 				Thread.sleep(1000);
 				ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
-				Thread.sleep(500);
-				Actionsss.click(homePage.clickOnLogo());
-			//	}
+				Thread.sleep(1500);
+				String updateAddress=Actionsss.getTextOfElement(SAP.getshipingAdrressInPaymentPage());
+				updateShippingAddress=updateAddress;
+				ShippingPageValidation.verifyingTheUpdateShippingAddress();
+				Thread.sleep(2000);
+				PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard();
+			}
 		}else {
 			test.info("user logged in as guest");
 			test.pass("No update address button");

@@ -58,6 +58,18 @@ public class CheckOutPage2 {
 			return addNewShippingAddress;
 		}
 		
+		@FindBy(xpath="(//label[contains(text(),'Shipping To')])[1]]")
+		WebElement shippingToLabel;
+		public WebElement getShippingToLabel() {
+			return shippingToLabel;
+		}
+		
+		
+		@FindBy(xpath="(//label[contains(text(),'Shipping To')])[1]]")
+		List<WebElement> shippingToLabelList;
+		public List<WebElement> getShippingToLabelList() {
+			return shippingToLabelList;
+		}
 		@FindBy(xpath="(//button[contains(@class,'btn-show-details ')])[1]")
 		WebElement updateShippingAddress;
 		public WebElement getUpdateShippingAddress() {

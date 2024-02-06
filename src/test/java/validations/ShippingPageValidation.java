@@ -138,8 +138,8 @@ public class ShippingPageValidation extends baseClass{
  		logger.info(previousShippingAddress);
  		logger.info(newlyAddedShippingAddress);
      	if (!previousShippingAddress.equals(newlyAddedShippingAddress)) {
-     	    logger.info("Successfully Clicked on add new button and adding new  shipping address, the previous shipping address is " +previousShippingAddress + "and updated shipping address is "+newlyAddedShippingAddress);
-     	    test.pass("Successfully Clicked on update button and adding new  shipping address, the previous shipping address is " +previousShippingAddress+ "and updated shipping address is "+ newlyAddedShippingAddress);
+     	    logger.info("Successfully Clicked on add new button and adding new  shipping address, the previous shipping address is " +previousShippingAddress + "and added new shipping address is "+newlyAddedShippingAddress);
+     	    test.pass("Successfully Clicked on add  new  button and adding new  shipping address, the previous shipping address is " +previousShippingAddress+ "and added new  shipping address is "+ newlyAddedShippingAddress);
      	}else {
      		//test.fail("Click failed");
      		logger.info("Click failed");

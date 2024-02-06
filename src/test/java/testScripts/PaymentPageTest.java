@@ -39,27 +39,29 @@ public class PaymentPageTest extends baseClass{
 	public void verifyingBackToCartInPaymentPage() throws Exception {
 		PaymentPageTasks.getBackToCart();
 	}
-	@Test
-	public static void verifyingEditShippingAddress() throws Exception {
-		PaymentPageTasks.editShippindAddressAndUpdate();
-	}
 	
 	@Test
 	public static void verifyingGiftMessage() throws Exception {
 		PaymentPageTasks.editGiftMessageInCop2();
 	}
 	@Test
-	public static void verifyingEditCustomerInfoFromCop3() throws Exception {
+	public static void verifyingEditCustomerInfoFromPaymentPageAndPlaceOrder() throws Exception {
 		PaymentPageTasks.editCustomerInfoFromCop3();
 	}
 	
 	@Test
-	public static void verifyingUpdateBillingAddress() throws Exception {
+	public static void verifyingEditShippingAddressFromPaymentPageAndPlaceOrder() throws Exception {
+		PaymentPageTasks.editShippindAddressFromPaymentPage();
+	}
+	
+	
+	@Test
+	public static void verifyingUpdateBillingAddressAndPlaceOrder() throws Exception {
 		PaymentPageTasks.updateBillingAddress();
 	}
 	
 	@Test
-	public static void verifyingAddNewBillingAddress() throws Exception {
+	public static void verifyingAddNewBillingAddressFromPaymentPageAndPlaceOrder() throws Exception {
 		PaymentPageTasks.addNewBillingAddress();
 	}
 	

@@ -355,8 +355,13 @@ public class ShippingAddressPage extends baseClass{
     
     @FindBy(xpath = "(//button[@class='text-center btn-show-details btn mx-2'])[1]")
     private WebElement updateAddress;
-
     public WebElement getUpdateAddress() {
         return  updateAddress;
+    }
+    
+    @FindBy(xpath = "//div[@class='summary-details shipping']//div[@class='address1']")
+    private WebElement shipingAdrressInPaymentPage;
+    public WebElement getshipingAdrressInPaymentPage() {
+        return  shipingAdrressInPaymentPage;
     }
 }

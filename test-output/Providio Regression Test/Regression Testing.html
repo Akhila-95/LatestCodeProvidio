@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Regression Testing</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>73/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>70/2/8</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 05 12:38:31 IST 2024</td>
+<td>Started on:</td><td>Tue Feb 06 20:04:55 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1969 seconds (1969853 ms)</td>
+<tr><td>Total time:</td><td>1785 seconds (1785944 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,242 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.afterMethod()'><b>afterMethod</b><br>Test class: testScripts.ReviewOrderTest<br>Parameters: [TestResult name=verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder status=FAILURE method=ReviewOrderTest.verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder()[pri:0, instance:testScripts.ReviewOrderTest@56da7487] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1419640968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1419640968'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterMethod()'><b>afterMethod</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest<br>Parameters: [TestResult name=verifyingOrderIsPlacingWithCreditCard status=FAILURE method=OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCreditCard()[pri:0, instance:testScripts.OrderPlacingWithAllPaymentsTest@599e4d41] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2132831833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2132831833'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterMethod()'><b>afterMethod</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterMethod()'><b>afterMethod</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterMethod()'><b>afterMethod</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterClass()'><b>afterClass</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterMethod()'><b>afterMethod</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.afterMethod()'><b>afterMethod</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterMethod()'><b>afterMethod</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterClass()'><b>afterClass</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterClass()'><b>afterClass</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterClass()'><b>afterClass</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.afterClass()'><b>afterClass</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterClass()'><b>afterClass</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterClass()'><b>afterClass</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterClass()'><b>afterClass</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterMethod()'><b>afterMethod</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.afterMethod()'><b>afterMethod</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,52 +312,53 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='OrderRegression.PlaceOrderWithBuyNowButton.verifyingPlacingOrderWithBuyNowButtonWithCreditCard()'><b>verifyingPlacingOrderWithBuyNowButtonWithCreditCard</b><br>Test class: OrderRegression.PlaceOrderWithBuyNowButton</td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=121.0.6167.140)
+<td title='testScripts.ReviewOrderTest.verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder()'><b>verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : We&apos;re sorry that your order could not be placed. This probably happened due to a high order volume or temporary connection errors. Please wait a few minutes and resubmit your order. We won&apos;t process your payment until you successfully place your order. If you have further questions, please contact us.}
+  (Session info: chrome=121.0.6167.140): We&apos;re sorry that your order could not be placed. This probably happened due to a high order volume or temporary connection errors. Please wait a few minutes and resubmit your order. We won&apos;t process your payment until you successfully place your order. If you have further questions, please contact us.
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0cf097ed194f4aa8e34285cef9901abd, clickElement {id=E7BCBEE3D1618F29DA2AEA42CC4CD062_element_7882}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53275}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53275/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (0cf097ed194f4aa8e34285cef9901abd)] -&gt; xpath: //button[contains(@class,&apos;buy-now&apos;)]]
-Session ID: 0cf097ed194f4aa8e34285cef9901abd
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+Command: [4b0bac046bfaa81710643379bc08bb9b, findElement {using=xpath, value=//h2[@class=&apos;order-thank-you-msg&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56069}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56069/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b0bac046bfaa81710643379bc08bb9b
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at OrderRegression.PlaceOrderWithBuyNowButton.verifyingPlacingOrderWithBuyNowButtonWithCreditCard(PlaceOrderWithBuyNowButton.java:38)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at validations.PaymentPageValidation.VerifiedThatPlaceOrderClick(PaymentPageValidation.java:191)
+	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:124)
+	at tasks.ReviewOrderPageTask.editShippingAddressFromReviewOrderPage(ReviewOrderPageTask.java:142)
+	at testScripts.ReviewOrderTest.verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder(ReviewOrderTest.java:58)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace82909977", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace82909977'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=121.0.6167.140)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1067212457", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1067212457'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : We&apos;re sorry that your order could not be placed. This probably happened due to a high order volume or temporary connection errors. Please wait a few minutes and resubmit your order. We won&apos;t process your payment until you successfully place your order. If you have further questions, please contact us.}
+  (Session info: chrome=121.0.6167.140): We&apos;re sorry that your order could not be placed. This probably happened due to a high order volume or temporary connection errors. Please wait a few minutes and resubmit your order. We won&apos;t process your payment until you successfully place your order. If you have further questions, please contact us.
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0cf097ed194f4aa8e34285cef9901abd, clickElement {id=E7BCBEE3D1618F29DA2AEA42CC4CD062_element_7882}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53275}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53275/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (0cf097ed194f4aa8e34285cef9901abd)] -&gt; xpath: //button[contains(@class,&apos;buy-now&apos;)]]
-Session ID: 0cf097ed194f4aa8e34285cef9901abd
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+Command: [4b0bac046bfaa81710643379bc08bb9b, findElement {using=xpath, value=//h2[@class=&apos;order-thank-you-msg&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56069}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56069/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b0bac046bfaa81710643379bc08bb9b
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at OrderRegression.PlaceOrderWithBuyNowButton.verifyingPlacingOrderWithBuyNowButtonWithCreditCard(PlaceOrderWithBuyNowButton.java:38)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at validations.PaymentPageValidation.VerifiedThatPlaceOrderClick(PaymentPageValidation.java:191)
+	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:124)
+	at tasks.ReviewOrderPageTask.editShippingAddressFromReviewOrderPage(ReviewOrderPageTask.java:142)
+	at testScripts.ReviewOrderTest.verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder(ReviewOrderTest.java:58)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -151,8 +388,108 @@ Session ID: 0cf097ed194f4aa8e34285cef9901abd
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>40</td>
-<td>OrderRegression.PlaceOrderWithBuyNowButton@27d33393</td></tr>
+<td>34</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCreditCard()'><b>verifyingOrderIsPlacingWithCreditCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;col-sm-7 col-md-8&apos;]&quot;}
+  (Session info: chrome=121.0.6167.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4b0bac046bfaa81710643379bc08bb9b, findElement {using=xpath, value=//div[@class=&apos;col-sm-7 col-md-8&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56069}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56069/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b0bac046bfaa81710643379bc08bb9b
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at validations.MiniCartValidation.VerifiedThatViewcartBtnClick(MiniCartValidation.java:28)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:42)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:32)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:139)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:40)
+	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:262)
+	at tasks.PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard(PlaceOrderWithDifferentPayments.java:23)
+	at testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCreditCard(OrderPlacingWithAllPaymentsTest.java:13)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace136358885", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace136358885'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;col-sm-7 col-md-8&apos;]&quot;}
+  (Session info: chrome=121.0.6167.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4b0bac046bfaa81710643379bc08bb9b, findElement {using=xpath, value=//div[@class=&apos;col-sm-7 col-md-8&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56069}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56069/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b0bac046bfaa81710643379bc08bb9b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at validations.MiniCartValidation.VerifiedThatViewcartBtnClick(MiniCartValidation.java:28)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:42)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:32)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:139)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:40)
+	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:262)
+	at tasks.PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard(PlaceOrderWithDifferentPayments.java:23)
+	at testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCreditCard(OrderPlacingWithAllPaymentsTest.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>87</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -163,214 +500,149 @@ Session ID: 0cf097ed194f4aa8e34285cef9901abd
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalFromCheckoutPage()'><b>verifyingOrderIsPlacingWithPaypalFromCheckoutPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
-<td></td>
-<td>141</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
-<tr>
-<td title='testScripts.GiftCertificateTest.verifytheErrorsFromName_Recipients_confirmRecipientEMail()'><b>verifytheErrorsFromName_Recipients_confirmRecipientEMail</b><br>Test class: testScripts.GiftCertificateTest</td>
-<td></td>
-<td>8</td>
-<td>testScripts.GiftCertificateTest@a098d76</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingOrderSummaryDisplayInPaymentPage()'><b>verifyingOrderSummaryDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>2</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.CreateAccountPageTest.verifyCreateAccountWithValidCredentials()'><b>verifyCreateAccountWithValidCredentials</b><br>Test class: testScripts.CreateAccountPageTest</td>
-<td></td>
-<td>21</td>
-<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingCreditCardInCompleteCvvError()'><b>verifyingCreditCardInCompleteCvvError</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>9</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingCreditCardExpDateInValid()'><b>verifyingCreditCardExpDateInValid</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>7</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingBackToCartInPaymentPage()'><b>verifyingBackToCartInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>39</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.ReviewOrderTest.verifyingEtgLogoDisplayInReviewOrderPage()'><b>verifyingEtgLogoDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
-<td></td>
-<td>0</td>
-<td>testScripts.ReviewOrderTest@56da7487</td></tr>
-<tr>
-<td title='testScripts.ShippingPageTest.verifyingTheErrorsInLastName()'><b>verifyingTheErrorsInLastName</b><br>Test class: testScripts.ShippingPageTest</td>
-<td></td>
-<td>16</td>
-<td>testScripts.ShippingPageTest@2b680207</td></tr>
-<tr>
-<td title='testScripts.CreateAccountPageTest.verifyPhoneNumError()'><b>verifyPhoneNumError</b><br>Test class: testScripts.CreateAccountPageTest</td>
-<td></td>
-<td>21</td>
-<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingEnterGiftCodeErrorMsg()'><b>verifyingEnterGiftCodeErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>3</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.OrderDetailsTests.VerifyingOrderConfirmationPage()'><b>VerifyingOrderConfirmationPage</b><br>Test class: testScripts.OrderDetailsTests</td>
-<td></td>
-<td>10</td>
-<td>testScripts.OrderDetailsTests@599e4d41</td></tr>
-<tr>
-<td title='testScripts.ReviewOrderTest.verifyingTheDisplayOfCustomerInfoInReviewOrderPage()'><b>verifyingTheDisplayOfCustomerInfoInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
-<td></td>
-<td>0</td>
-<td>testScripts.ReviewOrderTest@56da7487</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingEditShippingAddress()'><b>verifyingEditShippingAddress</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>30</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingInvalidGcErrorMsg()'><b>verifyingInvalidGcErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>6</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.ShippingPageTest.verifyingUpdateShippingAddress()'><b>verifyingUpdateShippingAddress</b><br>Test class: testScripts.ShippingPageTest</td>
-<td></td>
-<td>0</td>
-<td>testScripts.ShippingPageTest@2b680207</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingCreditCardInCompleteExpYearError()'><b>verifyingCreditCardInCompleteExpYearError</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>9</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingCreditcardNumberInValidError()'><b>verifyingCreditcardNumberInValidError</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>6</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.CreateAccountPageTest.verifyPasswordMismatch()'><b>verifyPasswordMismatch</b><br>Test class: testScripts.CreateAccountPageTest</td>
-<td></td>
-<td>21</td>
-<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
-<tr>
 <td title='testScripts.ShippingPageTest.verifyingTheErrorsInFirstName()'><b>verifyingTheErrorsInFirstName</b><br>Test class: testScripts.ShippingPageTest</td>
 <td></td>
-<td>16</td>
+<td>15</td>
 <td>testScripts.ShippingPageTest@2b680207</td></tr>
-<tr>
-<td title='testScripts.ShippingPageTest.verifyingTheAddressError()'><b>verifyingTheAddressError</b><br>Test class: testScripts.ShippingPageTest</td>
-<td></td>
-<td>14</td>
-<td>testScripts.ShippingPageTest@2b680207</td></tr>
-<tr>
-<td title='testScripts.ReviewOrderTest.verifyingTheEditPaymentToPaypalFromReviewOrderPage()'><b>verifyingTheEditPaymentToPaypalFromReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
-<td></td>
-<td>0</td>
-<td>testScripts.ReviewOrderTest@56da7487</td></tr>
-<tr>
-<td title='testScripts.ShippingPageTest.verifyingAddNewShippingAddress()'><b>verifyingAddNewShippingAddress</b><br>Test class: testScripts.ShippingPageTest</td>
-<td></td>
-<td>0</td>
-<td>testScripts.ShippingPageTest@2b680207</td></tr>
-<tr>
-<td title='testScripts.ReviewOrderTest.verifyingEditPhoneNumberInBillingAddressFromReviewOrderPage()'><b>verifyingEditPhoneNumberInBillingAddressFromReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
-<td></td>
-<td>0</td>
-<td>testScripts.ReviewOrderTest@56da7487</td></tr>
-<tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage()'><b>verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
-<td></td>
-<td>78</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingAllTheErrorsInCreditCard()'><b>verifyingAllTheErrorsInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>7</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingAddnewCreditCard()'><b>verifyingAddnewCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>2</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingTheCustomerInfoInPaymntPage()'><b>verifyingTheCustomerInfoInPaymntPage</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>2</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.ShippingPageTest.verifyingAllErrorsInShippingForm()'><b>verifyingAllErrorsInShippingForm</b><br>Test class: testScripts.ShippingPageTest</td>
-<td></td>
-<td>4</td>
-<td>testScripts.ShippingPageTest@2b680207</td></tr>
-<tr>
-<td title='testScripts.ShippingPageTest.verifyingWithValidShippingAddress()'><b>verifyingWithValidShippingAddress</b><br>Test class: testScripts.ShippingPageTest</td>
-<td></td>
-<td>14</td>
-<td>testScripts.ShippingPageTest@2b680207</td></tr>
-<tr>
-<td title='testScripts.ReviewOrderTest.verifyingPaymentInfoDisplayInReviewOrderPage()'><b>verifyingPaymentInfoDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
-<td></td>
-<td>0</td>
-<td>testScripts.ReviewOrderTest@56da7487</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingEditCustomerInfoFromCop3()'><b>verifyingEditCustomerInfoFromCop3</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>22</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
 <tr>
 <td title='testScripts.ReviewOrderTest.verifyingOrderSummaryDisplayInReviewOrderPage()'><b>verifyingOrderSummaryDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
 <td></td>
 <td>0</td>
 <td>testScripts.ReviewOrderTest@56da7487</td></tr>
 <tr>
-<td title='testScripts.PaymentPageTest.verifyingCvvAndExpErrorInCreditCard()'><b>verifyingCvvAndExpErrorInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>13</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingCreditCardNumberInCompleteError()'><b>verifyingCreditCardNumberInCompleteError</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>9</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
-<tr>
-<td title='testScripts.ReviewOrderTest.verifyingPaginationOfProductsInReviewOrderPage()'><b>verifyingPaginationOfProductsInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
-<td></td>
-<td>0</td>
-<td>testScripts.ReviewOrderTest@56da7487</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingCvvErrorInCreditCard()'><b>verifyingCvvErrorInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td title='testScripts.LogOutTest.verifyLogout()'><b>verifyLogout</b><br>Test class: testScripts.LogOutTest</td>
 <td></td>
 <td>11</td>
+<td>testScripts.LogOutTest@6dcc40f5</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyCreateAccountWithValidCredentials()'><b>verifyCreateAccountWithValidCredentials</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>22</td>
+<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingPaginationOfProductsInCheckOutPage2()'><b>verifyingPaginationOfProductsInCheckOutPage2</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>88</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingPaginationOfProductsInPaymentPage()'><b>verifyingPaginationOfProductsInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>101</td>
 <td>testScripts.PaymentPageTest@70887727</td></tr>
 <tr>
-<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithIncorrectCredentials()'><b>VerifyingLoginFailureWithIncorrectCredentials</b><br>Test class: testScripts.LoginPageTest</td>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithInvalidEmailFormat()'><b>VerifyingLoginFailureWithInvalidEmailFormat</b><br>Test class: testScripts.LoginPageTest</td>
 <td></td>
-<td>20</td>
+<td>9</td>
 <td>testScripts.LoginPageTest@40e37b06</td></tr>
-<tr>
-<td title='testScripts.GiftCertificateTest.verifyErrorMsgsInGiftCard()'><b>verifyErrorMsgsInGiftCard</b><br>Test class: testScripts.GiftCertificateTest</td>
-<td></td>
-<td>7</td>
-<td>testScripts.GiftCertificateTest@a098d76</td></tr>
 <tr>
 <td title='testScripts.PaymentPageTest.verifyingCheckBalanceOfInvalidGcErrorMsg()'><b>verifyingCheckBalanceOfInvalidGcErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
 <td></td>
 <td>6</td>
 <td>testScripts.PaymentPageTest@70887727</td></tr>
 <tr>
-<td title='testScripts.PaymentPageTest.verifyingRemovalOfAppliedGc()'><b>verifyingRemovalOfAppliedGc</b><br>Test class: testScripts.PaymentPageTest</td>
+<td title='testScripts.PaymentPageTest.verifyingBillingPhoneNumberError()'><b>verifyingBillingPhoneNumberError</b><br>Test class: testScripts.PaymentPageTest</td>
 <td></td>
-<td>12</td>
+<td>104</td>
 <td>testScripts.PaymentPageTest@70887727</td></tr>
 <tr>
-<td title='testScripts.PaymentPageTest.verifyingPaymentInfoDisplayInPaymentPage()'><b>verifyingPaymentInfoDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td title='testScripts.GiftCertificateTest.verifyTheErrorsRecipientEmailAndConfirmEmail()'><b>verifyTheErrorsRecipientEmailAndConfirmEmail</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>10</td>
+<td>testScripts.GiftCertificateTest@a098d76</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingEditCustomerInfoFromPaymentPageAndPlaceOrder()'><b>verifyingEditCustomerInfoFromPaymentPageAndPlaceOrder</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>56</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingWithValidShippingAddress()'><b>verifyingWithValidShippingAddress</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>14</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingTheDisplayOfCustomerInfoInReviewOrderPage()'><b>verifyingTheDisplayOfCustomerInfoInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCheckBalanceOfValidGc()'><b>verifyingCheckBalanceOfValidGc</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>7</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingAllTheErrorsInCreditCard()'><b>verifyingAllTheErrorsInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
 <td></td>
 <td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheCustomerInfoInCheckoutPage2()'><b>verifyingTheCustomerInfoInCheckoutPage2</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>72</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='OrderRegression.PlaceOrderWithBuyNowPopUp.verifyingPlacingOrderWithBuyNowPopUp()'><b>verifyingPlacingOrderWithBuyNowPopUp</b><br>Test class: OrderRegression.PlaceOrderWithBuyNowPopUp</td>
+<td></td>
+<td>86</td>
+<td>OrderRegression.PlaceOrderWithBuyNowPopUp@53b7ce6</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmail()'><b>VerifyingLoginFailureWithEmptyEmail</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.LoginPageTest@40e37b06</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingInvalidGcErrorMsg()'><b>verifyingInvalidGcErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithIncorrectCredentials()'><b>VerifyingLoginFailureWithIncorrectCredentials</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>19</td>
+<td>testScripts.LoginPageTest@40e37b06</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingAddNewBillingAddressFromPaymentPageAndPlaceOrder()'><b>verifyingAddNewBillingAddressFromPaymentPageAndPlaceOrder</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>152</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='OrderRegression.PlaceOrderWithBuyNowButton.verifyingPlacingOrderWithBuyNowButtonWithCreditCard()'><b>verifyingPlacingOrderWithBuyNowButtonWithCreditCard</b><br>Test class: OrderRegression.PlaceOrderWithBuyNowButton</td>
+<td></td>
+<td>87</td>
+<td>OrderRegression.PlaceOrderWithBuyNowButton@36480b2d</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmailAndPassword()'><b>VerifyingLoginFailureWithEmptyEmailAndPassword</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.LoginPageTest@40e37b06</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyPasswordMismatch()'><b>verifyPasswordMismatch</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>21</td>
+<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCvvErrorInCreditCard()'><b>verifyingCvvErrorInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifyGiftCardToCart()'><b>verifyGiftCardToCart</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>21</td>
+<td>testScripts.GiftCertificateTest@a098d76</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingAllErrorsInShippingForm()'><b>verifyingAllErrorsInShippingForm</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>4</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingOrderSummaryDisplayInPaymentPage()'><b>verifyingOrderSummaryDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingUpdateBillingAddressAndPlaceOrder()'><b>verifyingUpdateBillingAddressAndPlaceOrder</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>119</td>
 <td>testScripts.PaymentPageTest@70887727</td></tr>
 <tr>
 <td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyPassword()'><b>VerifyingLoginFailureWithEmptyPassword</b><br>Test class: testScripts.LoginPageTest</td>
@@ -378,29 +650,129 @@ Session ID: 0cf097ed194f4aa8e34285cef9901abd
 <td>9</td>
 <td>testScripts.LoginPageTest@40e37b06</td></tr>
 <tr>
+<td title='testScripts.FindAStoreTest.verifyFindAStore()'><b>verifyFindAStore</b><br>Test class: testScripts.FindAStoreTest</td>
+<td></td>
+<td>12</td>
+<td>testScripts.FindAStoreTest@5a6d30e2</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyPhoneNumError()'><b>verifyPhoneNumError</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>20</td>
+<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingTheCustomerInfoInPaymntPage()'><b>verifyingTheCustomerInfoInPaymntPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
 <td title='testScripts.GiftCertificateTest.verifyErrorsForConfirmMail()'><b>verifyErrorsForConfirmMail</b><br>Test class: testScripts.GiftCertificateTest</td>
 <td></td>
-<td>11</td>
+<td>12</td>
 <td>testScripts.GiftCertificateTest@a098d76</td></tr>
 <tr>
-<td title='testScripts.ShippingPageTest.verifyingTheCustomerInfoInCheckoutPage2()'><b>verifyingTheCustomerInfoInCheckoutPage2</b><br>Test class: testScripts.ShippingPageTest</td>
+<td title='testScripts.PaymentPageTest.verifyingAddnewCreditCard()'><b>verifyingAddnewCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyinginvalidEmailInEmailSignUpBox()'><b>verifyinginvalidEmailInEmailSignUpBox</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>3</td>
+<td>testScripts.FooterPageTest@b52b755</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardExpDateInValid()'><b>verifyingCreditCardExpDateInValid</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditcardNumberInValidError()'><b>verifyingCreditcardNumberInValidError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>12</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingOrderSummaryDisplayInShippingPageTasks_Page()'><b>verifyingOrderSummaryDisplayInShippingPageTasks_Page</b><br>Test class: testScripts.ShippingPageTest</td>
 <td></td>
 <td>0</td>
 <td>testScripts.ShippingPageTest@2b680207</td></tr>
 <tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCreditCard()'><b>verifyingOrderIsPlacingWithCreditCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td title='testScripts.ShippingPageTest.verifyingAddNewShippingAddressAndPlaceOrder()'><b>verifyingAddNewShippingAddressAndPlaceOrder</b><br>Test class: testScripts.ShippingPageTest</td>
 <td></td>
-<td>139</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<td>0</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
 <tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard()'><b>verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td title='testScripts.ShippingPageTest.verifyingNextPaymentButtonDisplayInShippingPageTasks_Page()'><b>verifyingNextPaymentButtonDisplayInShippingPageTasks_Page</b><br>Test class: testScripts.ShippingPageTest</td>
 <td></td>
-<td>112</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<td>0</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
 <tr>
-<td title='testScripts.ShippingPageTest.verifyingPaginationOfProductsInCheckOutPage2()'><b>verifyingPaginationOfProductsInCheckOutPage2</b><br>Test class: testScripts.ShippingPageTest</td>
+<td title='testScripts.CreateAccountPageTest.verifyEmailformatError()'><b>verifyEmailformatError</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>21</td>
+<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingEditEmailFromShippingPageAndPlaceOrder()'><b>verifyingEditEmailFromShippingPageAndPlaceOrder</b><br>Test class: testScripts.ShippingPageTest</td>
 <td></td>
 <td>60</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingUpdateShippingAddressAndPlaceOrder()'><b>verifyingUpdateShippingAddressAndPlaceOrder</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>53</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingPaymentInfoDisplayInPaymentPage()'><b>verifyingPaymentInfoDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingPaymentInfoDisplayInReviewOrderPage()'><b>verifyingPaymentInfoDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheErrorsInLastName()'><b>verifyingTheErrorsInLastName</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>15</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyingResourceFooterLinks()'><b>verifyingResourceFooterLinks</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.FooterPageTest@b52b755</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheAddressError()'><b>verifyingTheAddressError</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>14</td>
+<td>testScripts.ShippingPageTest@2b680207</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditcardWithValidDetails()'><b>verifyingCreditcardWithValidDetails</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>20</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCvvAndExpErrorInCreditCard()'><b>verifyingCvvAndExpErrorInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingEnterGiftCodeErrorMsg()'><b>verifyingEnterGiftCodeErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>3</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardInCompleteCvvError()'><b>verifyingCreditCardInCompleteCvvError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifyErrorMsgsInGiftCard()'><b>verifyErrorMsgsInGiftCard</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.GiftCertificateTest@a098d76</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingEtgLogoDisplayInShippingPageTasks_Page()'><b>verifyingEtgLogoDisplayInShippingPageTasks_Page</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>0</td>
 <td>testScripts.ShippingPageTest@2b680207</td></tr>
 <tr>
 <td title='testScripts.ShippingPageTest.verifyingphoneNumberError()'><b>verifyingphoneNumberError</b><br>Test class: testScripts.ShippingPageTest</td>
@@ -408,125 +780,636 @@ Session ID: 0cf097ed194f4aa8e34285cef9901abd
 <td>15</td>
 <td>testScripts.ShippingPageTest@2b680207</td></tr>
 <tr>
-<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmailAndPassword()'><b>VerifyingLoginFailureWithEmptyEmailAndPassword</b><br>Test class: testScripts.LoginPageTest</td>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardNumberInCompleteError()'><b>verifyingCreditCardNumberInCompleteError</b><br>Test class: testScripts.PaymentPageTest</td>
 <td></td>
-<td>5</td>
-<td>testScripts.LoginPageTest@40e37b06</td></tr>
-<tr>
-<td title='testScripts.LogOutTest.verifyLogout()'><b>verifyLogout</b><br>Test class: testScripts.LogOutTest</td>
-<td></td>
-<td>11</td>
-<td>testScripts.LogOutTest@6dcc40f5</td></tr>
-<tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithGiftCard()'><b>verifyingOrderIsPlacingWithGiftCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
-<td></td>
-<td>118</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
-<tr>
-<td title='testScripts.PaymentPageTest.verifyingCreditcardWithValidDetails()'><b>verifyingCreditcardWithValidDetails</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>12</td>
+<td>9</td>
 <td>testScripts.PaymentPageTest@70887727</td></tr>
 <tr>
-<td title='testScripts.PaymentPageTest.verifyingCheckBalanceOfValidGc()'><b>verifyingCheckBalanceOfValidGc</b><br>Test class: testScripts.PaymentPageTest</td>
+<td title='testScripts.CreateAccountPageTest.verifyEmailAndConfirmEmail()'><b>verifyEmailAndConfirmEmail</b><br>Test class: testScripts.CreateAccountPageTest</td>
 <td></td>
-<td>7</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
+<td>44</td>
+<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
 <tr>
 <td title='testScripts.ReviewOrderTest.verifyingPlaceOrderButtonDisplayInReviewOrderPage()'><b>verifyingPlaceOrderButtonDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
 <td></td>
 <td>0</td>
 <td>testScripts.ReviewOrderTest@56da7487</td></tr>
 <tr>
-<td title='testScripts.CreateAccountPageTest.verifyEmailformatError()'><b>verifyEmailformatError</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td title='testScripts.ShippingPageTest.verifyingBackToCartFromShippingPage()'><b>verifyingBackToCartFromShippingPage</b><br>Test class: testScripts.ShippingPageTest</td>
 <td></td>
-<td>21</td>
-<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
-<tr>
-<td title='testScripts.ShippingPageTest.verifyingEditEmailInCheckoutPage2()'><b>verifyingEditEmailInCheckoutPage2</b><br>Test class: testScripts.ShippingPageTest</td>
-<td></td>
-<td>65</td>
+<td>7</td>
 <td>testScripts.ShippingPageTest@2b680207</td></tr>
-<tr>
-<td title='testScripts.GiftCertificateTest.verifyGiftCardToCart()'><b>verifyGiftCardToCart</b><br>Test class: testScripts.GiftCertificateTest</td>
-<td></td>
-<td>22</td>
-<td>testScripts.GiftCertificateTest@a098d76</td></tr>
-<tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithMiniCartPaypal()'><b>verifyingOrderIsPlacingWithMiniCartPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
-<td></td>
-<td>119</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
-<tr>
-<td title='testScripts.CreateAccountPageTest.verifyEmailAndConfirmEmail()'><b>verifyEmailAndConfirmEmail</b><br>Test class: testScripts.CreateAccountPageTest</td>
-<td></td>
-<td>45</td>
-<td>testScripts.CreateAccountPageTest@733aa9d8</td></tr>
-<tr>
-<td title='testScripts.FooterPageTest.verifyinginvalidEmailInEmailSignUpBox()'><b>verifyinginvalidEmailInEmailSignUpBox</b><br>Test class: testScripts.FooterPageTest</td>
-<td></td>
-<td>3</td>
-<td>testScripts.FooterPageTest@b52b755</td></tr>
-<tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCartPagePaypal()'><b>verifyingOrderIsPlacingWithCartPagePaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
-<td></td>
-<td>101</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
 <tr>
 <td title='browser.launchBrowsering.verifyHomePageLaunching()'><b>verifyHomePageLaunching</b><br>Test class: browser.launchBrowsering</td>
 <td></td>
-<td>6</td>
+<td>7</td>
 <td>browser.launchBrowsering@726aa968</td></tr>
 <tr>
-<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndPaypal()'><b>verifyingOrderIsPlacingWithCombinationOfGcAndPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td title='testScripts.ReviewOrderTest.verifyingTheEditPaymentToPaypalFromReviewOrderPage()'><b>verifyingTheEditPaymentToPaypalFromReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
 <td></td>
-<td>129</td>
-<td>testScripts.OrderPlacingWithAllPaymentsTest@328d044f</td></tr>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
 <tr>
-<td title='testScripts.FindAStoreTest.verifyFindAStore()'><b>verifyFindAStore</b><br>Test class: testScripts.FindAStoreTest</td>
+<td title='testScripts.ReviewOrderTest.verifyingPaginationOfProductsInReviewOrderPage()'><b>verifyingPaginationOfProductsInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
 <td></td>
-<td>12</td>
-<td>testScripts.FindAStoreTest@5a6d30e2</td></tr>
+<td>101</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
 <tr>
-<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithInvalidEmailFormat()'><b>VerifyingLoginFailureWithInvalidEmailFormat</b><br>Test class: testScripts.LoginPageTest</td>
+<td title='testScripts.PaymentPageTest.verifyingBackToCartInPaymentPage()'><b>verifyingBackToCartInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
 <td></td>
-<td>9</td>
-<td>testScripts.LoginPageTest@40e37b06</td></tr>
-<tr>
-<td title='testScripts.GiftCertificateTest.verifyTheErrorsRecipientEmailAndConfirmEmail()'><b>verifyTheErrorsRecipientEmailAndConfirmEmail</b><br>Test class: testScripts.GiftCertificateTest</td>
-<td></td>
-<td>9</td>
-<td>testScripts.GiftCertificateTest@a098d76</td></tr>
-<tr>
-<td title='OrderRegression.PlaceOrderWithBuyNowPopUp.verifyingPlacingOrderWithBuyNowPopUp()'><b>verifyingPlacingOrderWithBuyNowPopUp</b><br>Test class: OrderRegression.PlaceOrderWithBuyNowPopUp</td>
-<td></td>
-<td>122</td>
-<td>OrderRegression.PlaceOrderWithBuyNowPopUp@36480b2d</td></tr>
+<td>38</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
 <tr>
 <td title='testScripts.LoginPageTest.VerifyingLoginWithValidCredentials()'><b>VerifyingLoginWithValidCredentials</b><br>Test class: testScripts.LoginPageTest</td>
 <td></td>
 <td>13</td>
 <td>testScripts.LoginPageTest@40e37b06</td></tr>
 <tr>
+<td title='testScripts.ReviewOrderTest.verifyingEtgLogoDisplayInReviewOrderPage()'><b>verifyingEtgLogoDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifytheErrorsFromName_Recipients_confirmRecipientEMail()'><b>verifytheErrorsFromName_Recipients_confirmRecipientEMail</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.GiftCertificateTest@a098d76</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingRemovalOfAppliedGc()'><b>verifyingRemovalOfAppliedGc</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>7</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardInCompleteExpYearError()'><b>verifyingCreditCardInCompleteExpYearError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.PaymentPageTest@70887727</td></tr>
+<tr>
 <td title='testScripts.PaymentPageTest.verifyingEtgLogoDisplayInPaymentPage()'><b>verifyingEtgLogoDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
 <td></td>
 <td>2</td>
 <td>testScripts.PaymentPageTest@70887727</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='testScripts.PaymentPageTest.verifyingPaginationOfProductsInPaymentPage()'><b>verifyingPaginationOfProductsInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
-<td></td>
-<td>80</td>
-<td>testScripts.PaymentPageTest@70887727</td></tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndPaypal()'><b>verifyingOrderIsPlacingWithCombinationOfGcAndPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1163161620", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1163161620'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
 <tr>
-<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmail()'><b>VerifyingLoginFailureWithEmptyEmail</b><br>Test class: testScripts.LoginPageTest</td>
-<td></td>
-<td>9</td>
-<td>testScripts.LoginPageTest@40e37b06</td></tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard()'><b>verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1387003338", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1387003338'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
 <tr>
-<td title='testScripts.FooterPageTest.verifyingResourceFooterLinks()'><b>verifyingResourceFooterLinks</b><br>Test class: testScripts.FooterPageTest</td>
-<td></td>
-<td>4</td>
-<td>testScripts.FooterPageTest@b52b755</td></tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCartPagePaypal()'><b>verifyingOrderIsPlacingWithCartPagePaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace219875081", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace219875081'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalFromCheckoutPage()'><b>verifyingOrderIsPlacingWithPaypalFromCheckoutPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace136534423", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace136534423'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder()'><b>verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1476865617", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1476865617'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@56da7487</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithGiftCard()'><b>verifyingOrderIsPlacingWithGiftCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1054539203", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1054539203'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage()'><b>verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace652278729", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace652278729'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithMiniCartPaypal()'><b>verifyingOrderIsPlacingWithMiniCartPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1842021952", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1842021952'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.javascriptClick(Actionsss.java:69)
+	at com.providio.testcases.baseClass.afterMethod(baseClass.java:290)
+	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@599e4d41</td></tr>
 </table><p>
 </body>
 </html>

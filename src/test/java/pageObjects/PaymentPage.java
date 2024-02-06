@@ -547,6 +547,13 @@ public class PaymentPage extends baseClass{
     }
     
     // WebElement for Review Order button
+    @FindBy(css = "button.submit-payment")
+    private WebElement brainTreeReviewOrderBtn;
+    public WebElement getBrainTreeReviewOrderBtn() {
+        return brainTreeReviewOrderBtn;
+    }
+    
+    // WebElement for Review Order button
     @FindBy(xpath = "//button[contains(text(), 'Next: Review Order')]")
     private List<WebElement> reviewOrderBtnList;
     public List<WebElement> getReviewOrderBtnList() {

@@ -14,11 +14,6 @@ public class ShippingPageTest extends baseClass {
 	}
 	
 	@Test
-	public void verifyingEditEmailInCheckoutPage2() throws Exception {
-		ShippingPageTasks.editEmailInCheckoutPage2();
-	}
-	
-	@Test
 	public void verifyingBackToCartFromShippingPage() throws Exception {
 		ShippingPageTasks.getBackToCart();
 	}
@@ -73,14 +68,20 @@ public class ShippingPageTest extends baseClass {
     }
 	
 	@Test(groups = {"smoke", "regression"})
-    public void verifyingAddNewShippingAddress() throws Exception {
+    public void verifyingAddNewShippingAddressAndPlaceOrder() throws Exception {
 		ShippingPageTasks.addNewAddress();
     }
 	
 	@Test(groups = {"smoke", "regression"})
-    public void verifyingUpdateShippingAddress() throws Exception {
+    public void verifyingUpdateShippingAddressAndPlaceOrder() throws Exception {
 		ShippingPageTasks.updateNewShippingAddress();
 
 	}
+
+	@Test
+	public void verifyingEditEmailFromShippingPageAndPlaceOrder() throws Exception {
+		ShippingPageTasks.editEmailInCheckoutPage2();
+	}
+	
 	
 }

@@ -15,6 +15,8 @@ import pageObjects.CheckOutPage2;
 import pageObjects.CheckOutPage3;
 import pageObjects.PaymentPage;
 import pageObjects.ReviewOrderPage;
+import pageObjects.homepage;
+import validations.OrderPageValidation;
 import validations.PaymentPageValidation;
 import validations.ReviewOrderPageValidation;
 import validations.ShippingPageValidation;
@@ -27,9 +29,9 @@ public class PaymentPageTasks extends baseClass {
 	private static final PaymentPageValidation cop3v = new PaymentPageValidation();
 	private static final ReviewOrderPage reviewOrder = new ReviewOrderPage(driver);
 	private static final 	PaymentPage pp = new PaymentPage(driver);
+	private static homepage homePage = new homepage(driver);
 	
 	public static void paymentPageView() throws Exception {
-//&& (Actionsss.displayElement(cop3.getNextReviewOrderBtn()) || Actionsss.displayElement(pp.getSelectPlaceOrderBtn()))
 		if((Actionsss.elementSize(cop3.getpaymentPageList()))&& (Actionsss.elementSize(cop3.getNextReviewOrderBtnList()) || Actionsss.elementSize(pp.getSelectPlaceOrderBtnList()))) {
 			if((Actionsss.displayElement(cop3.getpaymentPage())) ){
 				logger.info("Paymnet page is loaded");
@@ -89,11 +91,10 @@ public class PaymentPageTasks extends baseClass {
 		PaymentPageValidation.reviewOrderButtonInPaymentPage();
 	
 	}
-	public static void editShippindAddressAndUpdate() throws Exception {
+	public static void editShippindAddressFromPaymentPage() throws Exception {
 		paymentPageView();
 		Thread.sleep(2000);
-		previousAddresses=Actionsss.getTextOfElement(cop3.getShippingAddress());
-		logger.info(previousAddresses);
+		previousAddresses=Actionsss.getTextOfElement(cop3.getShippingAddress());		
 		Actionsss.click(cop3.getEditShipping());
 		if(Actionsss.elementSize(CP.getSelectGuestCheckoutBtnList())) {			
 			AddressSelection.editShippingAddress();
@@ -107,10 +108,11 @@ public class PaymentPageTasks extends baseClass {
 		ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
 		Thread.sleep(2000);
 		editedAddress=Actionsss.getTextOfElement(cop3.getShippingAddress());
-		logger.info(editedAddress);
-		
 		PaymentPageValidation.editShippingValidationInCOP3();
 		Thread.sleep(1000);
+		
+		PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard();
+		
 	}
 	public static void editGiftMessageInCop2() throws Exception {
 		paymentPageView();
@@ -129,15 +131,12 @@ public class PaymentPageTasks extends baseClass {
 		Thread.sleep(2000);
 		if(Actionsss.elementSize(CP.getSelectGuestCheckoutBtnList())) {			
 			Thread.sleep(1000);
-			previousMail=Actionsss.getTextOfElement(cop3.getEditCustomerInfo());
-			logger.info(previousMail);
-			
+			previousMail=Actionsss.getTextOfElement(cop3.getEditCustomerInfo());		
 			Actionsss.click(cop3.getCustomerInfoFromCop3());		
 			Faker faker = new Faker();
 			String randomFirstName = faker.name().firstName(); 
-		    String editedEmailInCop3 = randomFirstName + "EditedFromCOP3@etg.digital"; 
-		    emailEditedInCop3 =editedEmailInCop3;
-		    logger.info(emailEditedInCop3);
+		    String editedEmailInCop3 = randomFirstName + "EditedFromPaymentPage@etg.digital"; 
+		    emailEditedInCop3 =editedEmailInCop3;		
 			Actionsss.sendKeys(CP.getSelectGuestEmailInput(),  emailEditedInCop3, "Edited email form check out page 3");			
 			Actionsss.click(CP.getSelectContinueasGuesttBtn());
 
@@ -146,6 +145,8 @@ public class PaymentPageTasks extends baseClass {
 			editedEmailFromCop3= Actionsss.getTextOfElement(cop3.getEditCustomerInfo());
 			 
 			cop3v.editEmailValidationInCOP3();
+			
+			PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard();
 		}else {			
 			logger.info("User is checked in as registered so edit button");
 			test.info("User is checked in as registered so edit button");
@@ -156,8 +157,7 @@ public class PaymentPageTasks extends baseClass {
 	
 	public static void updateBillingAddress() throws Exception {
 		paymentPageView();
-		previousBillingAddress=Actionsss.getTextOfElement(cop3.getUpdateAddressBtnForBillingAddress());
-		logger.info(previousBillingAddress);
+		previousBillingAddress=Actionsss.getTextOfElement(cop3.getUpdateAddressBtnForBillingAddress());		
 		Thread.sleep(3000);
 		//Actionsss.doubleClick(cop2.getUpdateAddressBtn());
 		Actionsss.javascriptClick(cop2.getUpdateAddressBtn());
@@ -165,30 +165,35 @@ public class PaymentPageTasks extends baseClass {
 		Thread.sleep(1000);
 		AddressSelection.editBillingAddress();
 		Thread.sleep(2000);
-			
-		PaymentDetails.creditCardDetails();	
-		Thread.sleep(1000);
-		editedBillingAddress=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());
-		logger.info(editedBillingAddress);
+		PaymentPageTasks.creditCardWithValidDetails();				
+		editedBillingAddress=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());		
 		cop3v.updateBillingAddressValidation();
-		
-	}	
-	
+		ReviewOrderPageTask.placeOrder();
+		OrderPageValidation.validatePlacetheOrderPage();
+		OrderPageValidation.orderNumberAndOrderDate();
+		Actionsss.click(homePage.clickOnLogo());
+	}
 	public static void addNewBillingAddress() throws Exception {
 		paymentPageView();
 		previousBillingAddress=Actionsss.getTextOfElement(cop3.getUpdateAddressBtnForBillingAddress());
-		logger.info(previousBillingAddress);
 		Thread.sleep(2000);
 		Actionsss.javascriptClick(cop2.getnewAddressBtn());	
 		Actionsss.click(cop2.getnewAddressBtn());		
 		Thread.sleep(1000);
-		AddressSelection.editBillingAddress();
-	
-		PaymentDetails.creditCardDetails();	
+		AddressSelection.editBillingAddress();	
 		Thread.sleep(1000);
-		editedBillingAddress=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());
-		logger.info(editedBillingAddress);
+		PaymentPageTasks.creditCardWithValidDetails();				
+		editedBillingAddress=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());		
+		cop3v.updateBillingAddressValidation();
+		ReviewOrderPageTask.placeOrder();
+		OrderPageValidation.validatePlacetheOrderPage();
+		OrderPageValidation.orderNumberAndOrderDate();
+		Actionsss.click(homePage.clickOnLogo());
+	/*	String newAddress= reviewOrder.getBillingAddress().getAttribute("value");
+		editedBillingAddress=newAddress;
 		cop3v.addNewBillingAddressValidation();
+		
+		PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard();*/
 	}
 	
 	public static void paginationOfProductsFromPaymentPage() throws InterruptedException, Exception {
@@ -428,9 +433,19 @@ public class PaymentPageTasks extends baseClass {
 				if(Actionsss.displayElement(pp.getReviewOrderBtn())) {
 					Thread.sleep(1000);
 					Actionsss.javascriptClick(pp.getReviewOrderBtn());
-					Thread.sleep(3000);
-					ReviewOrderPageValidation.VerifyingReviewOrderBtn();		
+					Thread.sleep(3000);							
 				}
 			}
+		}
+		public static void brainTreeReviewOrderButton() throws InterruptedException {
+			//Thread.sleep(3000);
+	    	if(Actionsss.displayElement(pp.getReviewOrderBtn())) {
+	    		Actionsss.scrollWindowsByPixel(100);				    		
+	    	//	 Thread.sleep(1000);
+	    		 Actionsss.click(pp.getReviewOrderBtn());					    		 
+	    		 test.info("Clicked on review order button");
+	    		 pp.getReviewOrderBtn();
+	    		 ReviewOrderPageValidation.VerifyingReviewOrderBtn();
+	    	}
 		}
 }

@@ -275,22 +275,18 @@ public class Actionsss extends baseClass{
 		    	Thread.sleep(1000);
 		        Random random = new Random();
 		        int randomNumber = 345; // Generates a random number between 100 and 999
-		    //    random.nextInt(900) + 100;
+		    //   random.nextInt(900) + 100;
 		        addresses = String.valueOf(randomNumber);
-		      Thread.sleep(1000);
+		        Thread.sleep(1000);
 		        locatorName.sendKeys(addresses);
-
 		        // to perform the keyboard activities
 		        WebElement shipping = driver.switchTo().activeElement();
 
-		      Thread.sleep(1000);
+		        Thread.sleep(1000);
 		        shipping.sendKeys(Keys.ARROW_DOWN);
-
 		        shipping.sendKeys(Keys.ENTER);
 
 		        String shippingaddress = locatorName.getAttribute("value");
-		       // previousAddresses=shippingaddress;
-		        System.out.println("The address entered is " +  previousAddresses);
 		        logger.info("The address entered is " + shippingaddress);
 		        test.info("The address entered is " + shippingaddress);
 		    }
@@ -471,6 +467,24 @@ public class Actionsss extends baseClass{
 		    	Thread.sleep(1000);
 		        Random random = new Random();
 		        String randomNumber = "43"; // Generates a random number between 100 and 999
+		       //random.nextInt(900) + 100;
+		       // addresses = String.valueOf(randomNumber);	        
+		        locatorName.sendKeys(randomNumber);
+		        Thread.sleep(2000);		       
+		        WebElement shipping = driver.switchTo().activeElement();
+		        Thread.sleep(2000);
+		        shipping.sendKeys(Keys.ARROW_DOWN);
+		        shipping.sendKeys(Keys.ENTER);
+		        String shippingaddress = locatorName.getAttribute("value");	
+		        logger.info("The address entered is " + shippingaddress);
+		        test.info("The address entered is " + shippingaddress);
+		    }
+		    
+		    public static void addNewShippinggAddress(WebElement locatorName) throws InterruptedException {
+		    	locatorName.clear();
+		    	Thread.sleep(1000);
+		        Random random = new Random();
+		        String randomNumber = "7868"; // Generates a random number between 100 and 999
 		       //random.nextInt(900) + 100;
 		       // addresses = String.valueOf(randomNumber);	        
 		        locatorName.sendKeys(randomNumber);

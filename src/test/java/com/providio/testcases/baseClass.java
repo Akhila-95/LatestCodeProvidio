@@ -239,7 +239,7 @@ public class baseClass {
 	}
 
 	@AfterMethod
-	public void afterMethod(ITestResult result) throws InterruptedException {
+	public void afterMethod(ITestResult result) throws Exception {
 	    // Check if the browser has crashed
 	    if (!isBrowserRunning()) {
 	        // Log a message indicating that the browser is relaunching
@@ -287,8 +287,9 @@ public class baseClass {
 	        
 	    }
 	    if(result.getStatus() == ITestResult.FAILURE) {
-	    	Actionsss.click(homePage.clickOnLogo());
+	    	Actionsss.javascriptClick(homePage.clickOnLogo());
             logger.info("Test case failed and returned into homepage");
+            test.info("Test case failed and returned into homepage");
             Thread.sleep(2000);
 	    }
 	}
