@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 
 import com.providio.testcases.baseClass;
 
-import Payments.CheckOutPaypal;
-import Payments.GiftCertificateForGc;
-import data.PaymentDetails;
+import CreditCardPayment.CreditCardDetails;
+import GifCertificatePayment.GiftCertificateForGc;
+import PaypalPayment.CheckOutPaypal;
 import functionality.Actionsss;
 import pageObjects.CheckOutPage2;
 import pageObjects.CheckOutPage3;
@@ -35,7 +35,7 @@ public class ReviewOrderPageTask extends baseClass{
 		if(Actionsss.elementSize(reviewOrder.getgsummaryOfBillingAddressList()) && Actionsss.elementSize(reviewOrder.getSelectPlaceOrderBtnList())) {
 			if(Actionsss.displayElement(reviewOrder.getgsummaryOfBillingAddress()) && (Actionsss.displayElement(reviewOrder.getSelectPlaceOrderBtn()))   ) {
 				logger.info("Review order page is loaded");
-			//	PaymentDetails.creditCardDetails();
+			//	CreditCardDetails.creditCardDetails();
 			}
 		}else {
 			PaymentPageTasks.creditCardWithValidDetails();

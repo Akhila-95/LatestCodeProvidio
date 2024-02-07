@@ -3,8 +3,8 @@ package tasks;
 import com.github.javafaker.Faker;
 import com.providio.testcases.baseClass;
 
+import CreditCardPayment.CreditCardDetails;
 import data.AddressSelection;
-import data.PaymentDetails;
 import functionality.Actionsss;
 import pageObjects.CheckOutPage;
 import pageObjects.CheckOutPage2;
@@ -55,7 +55,7 @@ public class ShippingPageTasks extends baseClass{
 			 editedEmailFromCop3= Actionsss.getTextOfElement(paymentpage.getEditCustomerInfo());
 			 shipping.editEmailValidationInCOP2();
 			 ShippingPageTasks.enterValidAddress();
-			 PaymentDetails.creditCardDetails();
+			 CreditCardDetails.creditCardDetails();
 			 ReviewOrderPageTask.placeOrder();
 			 OrderPageValidation.validatePlacetheOrderPage();
 			 OrderPageValidation.orderNumberAndOrderDate();		

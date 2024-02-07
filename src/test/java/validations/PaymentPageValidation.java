@@ -2,6 +2,7 @@ package validations;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,7 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.providio.testcases.baseClass;
 
-import data.AllPayments;
+import CreditCardPayment.AdyenPayment;
+import CreditCardPayment.CyberSourcePayment;
+import CreditCardPayment.SalesforcePayment;
 import functionality.Actionsss;
 import pageObjects.CheckOutPage3;
 import pageObjects.PaymentPage;
@@ -18,7 +21,6 @@ import tasks.PaymentPageTasks;
 public class PaymentPageValidation extends baseClass{
 	
 private static final PaymentPage pp = new PaymentPage(driver);	
-private static final AllPayments allPay = new AllPayments();
 
 private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 
@@ -118,7 +120,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 				logger.info("Gift message is not displayed");
 			}
 		}
-		public  void editEmailValidationInCOP3() {
+		public static void editEmailValidationInCOP3() {
 			test.info("Verifying that the email ID is being edited on checkout page 3");
 			  logger.info(editedEmailFromCop3);
 			  logger.info(previousMail);
@@ -145,7 +147,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			}
 		}
 		
-		public  void updateBillingAddressValidation() {
+		public static void updateBillingAddressValidation() {
 			test.info("Verifying the update billing address");
 			  logger.info(previousBillingAddress );
 			  logger.info(editedBillingAddress);
@@ -158,7 +160,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			}
 		}
 
-		public  void addNewBillingAddressValidation() {
+		public static void addNewBillingAddressValidation() {
 			test.info("Verifying the add new  billing address");
 			  logger.info(previousBillingAddress );
 			  logger.info(editedBillingAddress);
@@ -172,7 +174,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		}
 		
 
-		public  void phoneNumberInBillingAddressValidation() {
+		public static void phoneNumberInBillingAddressValidation() {
 			test.info("Verifying the phone number in billing address");
 			  logger.info(prevoiusBillingPhoneNumber );
 			  logger.info(editedBillingPhoneNumber);
@@ -199,7 +201,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 	 	}
 	 	
 
-	public  void salesforcePaymentAllErrors() throws InterruptedException {
+	public static void salesforcePaymentAllErrors() throws InterruptedException {
 			
 			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
 			Thread.sleep(4000);
@@ -214,10 +216,10 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			}
 		}
 		
-		public  void salesforceCvvAndExpError() throws Exception {
+		public static void salesforceCvvAndExpError() throws Exception {
 			
 			test.info("Verifying with negative validations for exp and cvv");
-			allPay.salesforceCardNumber();					
+			SalesforcePayment.salesforceCardNumber();					
 			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
 			Actionsss.scrollWindowsByPixel(300);
 			Thread.sleep(3000);
@@ -230,13 +232,10 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			}
 		}
 		
-		public void  salesforceCvvError() throws Exception {
-			test.info("Verifying with negative validations  cvv");
-			
-			allPay.salesforceCardNumber();
-			
-			allPay.salesforceExpDate();
-			
+		public static void  salesforceCvvError() throws Exception {
+			test.info("Verifying with negative validations  cvv");			
+			SalesforcePayment.salesforceCardNumber();			
+			SalesforcePayment.salesforceExpDate();			
 			Thread.sleep(2000);
 			Actionsss.scrollWindowsByPixel(300);
 			if(Actionsss.displayElement(pp.getsalesforceCreditCvvError())){
@@ -248,7 +247,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			}
 		}
 		
-		public void salesforceInvalidCardNumber() throws Exception {
+		public static void salesforceInvalidCardNumber() throws Exception {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card number input frame']"))); 
 	        Actionsss.clearText(pp.getSalesforceCardNumber());
@@ -266,14 +265,13 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		}
 		
 		
-		public void salesforceInvalidExpYear() throws Exception {
+		public static void salesforceInvalidExpYear() throws Exception {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-			allPay.salesforceCardNumber();         	  
+			SalesforcePayment.salesforceCardNumber();         	  
 	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure expiration date input frame']")));
 			test.info("credit card exp date entered is 1211" );
 	        Actionsss.sendKeys(pp.getSalesforceExpiryDate(), "1211","invalid expDate");
-			driver.switchTo().defaultContent();
-			
+			driver.switchTo().defaultContent();			
 			if(Actionsss.displayElement(pp.getSalesforceExpInvalidError())) {
 				test.pass("Error msg displayed when invalid exp date details are entered");
 				logger.info("Error msg displayed when invalid exp date details are entered");
@@ -283,7 +281,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			}
 		}	
 		
-		public void brainTreeAllPaymentsError() throws Exception {
+		public static void brainTreeAllPaymentsError() throws Exception {
 			PaymentPageTasks.brainTreeReviewOrderButton();			
 			if(Actionsss.displayElement(pp.getErrorMsgInBrainTree())){
 				test.pass("Error msg displayed when no mandatory details are entered");
@@ -294,12 +292,73 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			}
 		}
 		
-		public void stripeCardInvalidCardError() throws Exception {
+		public static void stripePopUpErrorNoDetailsEntered() throws Exception {
+			PaymentPageTasks.clickReviewOrderButton();
+			Alert alert = driver.switchTo().alert();        
+	        String alertText = alert.getText();
+	        logger.info("Alert Text: " + alertText);      
+	        alert.accept(); // Clicks the "OK" button
+	        if(alertText.equals("OK")) {	        	
+	        	test.pass("Error msg displayed when no card details are entered");
+				logger.info("Error msg displayed when no card  details are entered");
+			}else {
+				test.fail("Error msg displayed when no card details are entered");
+				logger.info("Error msg displayed when no card details are entered");
+			}   
+		}
+		
+		public static void stripePopUpErrorCvvAndExpiryEntered() throws Exception {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
+	        test.info("Credit card number entered is " + "4111 1111 1111 1154");	        
+	        Actionsss.sendKeys(pp.getStripeCardNumber(),"4111 1111 1111 1154","Invalid cardNum");
+	        Thread.sleep(2000);
+	        //driver.switchTo().defaultContent();
+			PaymentPageTasks.clickReviewOrderButton();
+			Alert alert = driver.switchTo().alert();        
+	        String alertText = alert.getText();
+	        logger.info("Alert Text: " + alertText);      
+	        alert.accept(); // Clicks the "OK" button
+	        if(alertText.equals("OK")) {	        	
+	        	test.pass("Error msg displayed when no card details are entered");
+				logger.info("Error msg displayed when no card  details are entered");
+			}else {
+				test.fail("Error msg displayed when no card details are entered");
+				logger.info("Error msg displayed when no card details are entered");
+			}   
+		}
+		
+		public static void stripePopUpErrorNoCvvEntered() throws Exception {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
+	        test.info("Credit card number entered is " + "4111 1111 1111 1154");	        
+	        Actionsss.sendKeys(pp.getStripeCardNumber(),"4111 1111 1111 1154","Invalid cardNum");
+	        Thread.sleep(2000);
+	        //driver.switchTo().defaultContent();
+	        test.info("Credit card number entered is " + "11 12");
+	        Actionsss.clearText(pp.getStripeExpDate());
+	        Actionsss.sendKeys(pp.getStripeExpDate(), "11 12 ", " invalid expDate");
+	        driver.switchTo().defaultContent();
+			PaymentPageTasks.clickReviewOrderButton();
+			Alert alert = driver.switchTo().alert();        
+	        String alertText = alert.getText();
+	        logger.info("Alert Text: " + alertText);      
+	        alert.accept(); // Clicks the "OK" button
+	        if(alertText.equals("OK")) {	        	
+	        	test.pass("Error msg displayed when no card details are entered");
+				logger.info("Error msg displayed when no card  details are entered");
+			}else {
+				test.fail("Error msg displayed when no card details are entered");
+				logger.info("Error msg displayed when no card details are entered");
+			}   
+		}
+		
+		
+		public static void stripeCardInvalidCardError() throws Exception {
 			
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
-	        test.info("Credit card number entered is " + "4111 1111 1111 1154");
-	        
+	        test.info("Credit card number entered is " + "4111 1111 1111 1154");	        
 	        Actionsss.sendKeys(pp.getStripeCardNumber(),"4111 1111 1111 1154","Invalid cardNum");
 	        Thread.sleep(2000);
 	        driver.switchTo().defaultContent();
@@ -313,7 +372,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 	       
 		}
 		
-		public void stripeCardInvalidExpDate() throws Exception {
+		public static void stripeCardInvalidExpDate() throws Exception {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
 	        test.info("Credit card number entered is " + "11 12");
@@ -326,11 +385,10 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			}else {
 				test.fail("Error msg displayed when invalid exp year details are entered");
 				logger.info("Error msg displayed when invalid exp year  details are entered");  
-	        }
-	        
+	        }	        		
+		}
 		
-}
-		public void stripeIncompleteCardError() throws Exception {
+		public static void stripeIncompleteCardError() throws Exception {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
 	        Actionsss.clearText(pp.getStripeCardNumber());
@@ -348,7 +406,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 	        
 		}
 		
-		public void stripeIncompleteExpYearError() throws Exception {
+		public static void stripeIncompleteExpYearError() throws Exception {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
 	        Actionsss.clearText(pp.getStripeExpDate());
@@ -366,8 +424,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 	        
 		}
 		
-		public void getStripeCardSecurityCodeIncompleteError() throws Exception {
-			
+		public static void getStripeCardSecurityCodeIncompleteError() throws Exception {			
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
 	        Actionsss.clearText(pp.getStripeCvv());
@@ -384,7 +441,8 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 	        }
 			
 		}
-		public void getStripeCardPostalCodeInComplete() throws Exception {
+		
+		public static void getStripeCardPostalCodeInComplete() throws Exception {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
 	        Actionsss.clearText(pp.getPostalCodeInStripe());
@@ -401,13 +459,11 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		 	
 		}
 		
-		public void getallErrosInCybersource() throws InterruptedException {
-			
+		public static void getallErrosInCybersource() throws InterruptedException {			
 			Actionsss.CombinedClick(pp.getReviewOrderBtn());
 			Thread.sleep(3000);
 			int countOfError =Actionsss.getSizeOfList(pp.getErrorMsgsInCybersource());
-			System.out.println(countOfError);
-			 
+			System.out.println(countOfError);			 
 			if(countOfError==3 && Actionsss.displayElement(pp.getErrorMsgForSecurityCodeInCybersource())) {
 			 	test.pass("Error msg are displayed when no  card details are entered");
 				logger.info("Error msg are displayed when  no  card details are entered");
@@ -417,11 +473,10 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 	        }
 		}
 		
-		public void getCreditCardCvvAndExpMonthYearErrorInCybersource() throws Exception {
+		public static void getCreditCardCvvAndExpMonthYearErrorInCybersource() throws Exception {
 			
-			  allPay.cyberSourceCardNumber();
-		      logger.info("entered card number");
-		      
+			  CyberSourcePayment.cyberSourceCardNumber();
+		      logger.info("entered card number");		      
 		      Actionsss.CombinedClick(pp.getReviewOrderBtn());
 		      Thread.sleep(2000);
 		      int countOfError =Actionsss.getSizeOfList(pp.getErrorMsgsInCybersource());
@@ -434,14 +489,12 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		      }
 		}
 		
-		public void getCreditCardCvvAndExpYearErrorInCybersource() throws Exception {
+		public static void getCreditCardCvvAndExpYearErrorInCybersource() throws Exception {
 			
-			  allPay.cyberSourceCardNumber();
-		      logger.info("entered card number");
-		      
-		      allPay.cyberSourceExpMonth();
-		      logger.info("entered exp month");
-		      
+			  CyberSourcePayment.cyberSourceCardNumber();
+		      logger.info("entered card number");		      
+		      CyberSourcePayment.cyberSourceExpMonth();
+		      logger.info("entered exp month");		      
 		      Actionsss.CombinedClick(pp.getReviewOrderBtn());
 		      Thread.sleep(2000);
 		      int countOfError =Actionsss.getSizeOfList(pp.getErrorMsgsInCybersource());
@@ -454,17 +507,14 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		      }
 		}
 		
-		public void getCreditCardCvvErrorInCybersource() throws Exception {
+		public static void getCreditCardCvvErrorInCybersource() throws Exception {
 			  
-			  allPay.cyberSourceCardNumber();
-		      logger.info("entered card number");
-		      
-		      allPay.cyberSourceExpMonth();
-		      logger.info("entered exp month");
-		      
-		      allPay.cyberSourceExpYear();
-		      logger.info("entered exp year");
-		      
+			  CyberSourcePayment.cyberSourceCardNumber();
+		      logger.info("entered card number");		      
+		      CyberSourcePayment.cyberSourceExpMonth();
+		      logger.info("entered exp month");		      
+		      CyberSourcePayment.cyberSourceExpYear();
+		      logger.info("entered exp year");	      
 		      Actionsss.CombinedClick(pp.getReviewOrderBtn());
 		      Thread.sleep(3000);
 		      if(Actionsss.displayElement(pp.getErrorMsgForSecurityCodeInCybersource())){
@@ -476,19 +526,15 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		      }
 		}
 		
-		public void getcreditCardNumberInvalidErrorInCybersource() throws Exception {
+		public static void getcreditCardNumberInvalidErrorInCybersource() throws Exception {
 			
 			  test.info("Entered credit card number is  2132421421412412"  );   
-			  Actionsss.sendKeys(pp.getCyberSourceCreditcard(),"2132421421412412 ","invalid cardNum");
-			  
-			  allPay.cyberSourceExpMonth();
-		      logger.info("entered exp month");
-		      
-		      allPay.cyberSourceExpYear();
-		      logger.info("entered exp year");
-		      
-		      allPay.cyberSourceSecurityCode() ;
-		      
+			  Actionsss.sendKeys(pp.getCyberSourceCreditcard(),"2132421421412412 ","invalid cardNum");		  
+			  CyberSourcePayment.cyberSourceExpMonth();
+		      logger.info("entered exp month");		      
+		      CyberSourcePayment.cyberSourceExpYear();
+		      logger.info("entered exp year");		      
+		      CyberSourcePayment.cyberSourceSecurityCode() ;		      
 		      Actionsss.CombinedClick(pp.getReviewOrderBtn());
 		      Thread.sleep(3000);
 			  if(Actionsss.displayElement(pp.getErrorMsgForInvalidCreditCardInCybersource())) {
@@ -500,19 +546,15 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		      } 
 		}
 		
-		public void getcreditCardNumberInCompleteErrorInCybersource() throws Exception {
+		public static void getcreditCardNumberInCompleteErrorInCybersource() throws Exception {
 			
 			  test.info("Entered credit card number is  41111111"  );   
-			  Actionsss.sendKeys(pp.getCyberSourceCreditcard(),"41111111","incomplete cardNum");
-			  
-			  allPay.cyberSourceExpMonth();
-		      logger.info("entered exp month");
-		      
-		      allPay.cyberSourceExpYear();
-		      logger.info("entered exp year");
-		      
-		      allPay.cyberSourceSecurityCode() ;
-		      
+			  Actionsss.sendKeys(pp.getCyberSourceCreditcard(),"41111111","incomplete cardNum");			  
+			  CyberSourcePayment.cyberSourceExpMonth();
+		      logger.info("entered exp month");		      
+		      CyberSourcePayment.cyberSourceExpYear();
+		      logger.info("entered exp year");		      
+		      CyberSourcePayment.cyberSourceSecurityCode() ;		      
 		      Actionsss.CombinedClick(pp.getReviewOrderBtn());
 		      Thread.sleep(3000);
 			  if(Actionsss.displayElement(pp.getErrorMsgForInvalidCreditCardInCybersource())) {
@@ -525,20 +567,15 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		}
 		
 		
-		public void getIncompleteSecurityCodeErrorInCybersource() throws Exception {
-			  test.info("Entered security code is  23"  );  
-			  
-			  allPay.cyberSourceCardNumber();
-		      logger.info("entered card number");
-			  
-			  allPay.cyberSourceExpMonth();
-		      logger.info("entered exp month");
-		      
-		      allPay.cyberSourceExpYear();
-		      logger.info("entered exp year");
-			  
-			  Actionsss.sendKeys(pp.getCyberSourceSceuritycode(),"23","invalid security code");
-			  
+		public static void getIncompleteSecurityCodeErrorInCybersource() throws Exception {
+			  test.info("Entered security code is  23"  );  			  
+			  CyberSourcePayment.cyberSourceCardNumber();
+		      logger.info("entered card number");			  
+		      CyberSourcePayment.cyberSourceExpMonth();
+		      logger.info("entered exp month");		      
+		      CyberSourcePayment.cyberSourceExpYear();
+		      logger.info("entered exp year");			  
+			  Actionsss.sendKeys(pp.getCyberSourceSceuritycode(),"23","invalid security code");			  
 			  Actionsss.CombinedClick(pp.getReviewOrderBtn());
 		      Thread.sleep(3000);
 			  if(Actionsss.displayElement(pp.getErrorMsgForInvalidSecurityCodeInCybersource())) {
@@ -551,7 +588,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 		}
 		
 		//adyen payemnet
-		public void getallErrorsInAdyen() throws InterruptedException {
+		public static void getallErrorsInAdyen() throws InterruptedException {
 			Actionsss.CombinedClick(pp.getReviewOrderBtn());
 			if(Actionsss.displayElement(pp.getAdyenExpiryDateError()) && (Actionsss.displayElement(pp.getAdyenSecurityCodeError()) && (Actionsss.displayElement(pp.getAdyenHolderNameError())))){
 				test.pass("Error msg are displayed when no  card details are entered");
@@ -562,9 +599,8 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			}
 		}
 		
-		public void getCreditCardCvvAndExpErrorMessage() throws Exception {
-			allPay.cardNumberInAdyenPayment();
-			
+		public static void getCreditCardCvvAndExpErrorMessage() throws Exception {
+			AdyenPayment.cardNumberInAdyenPayment();			
 			Actionsss.CombinedClick(pp.getReviewOrderBtn());
 			if(Actionsss.displayElement(pp.getAdyenExpiryDateError())&& Actionsss.displayElement(pp.getAdyenSecurityCodeError()) && Actionsss.displayElement(pp.getAdyenHolderNameError())) {
 				test.pass("Error msg are displayed when only valid card number details are entered and clicked on next review order button");
@@ -575,10 +611,9 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			}
 		}
 		
-		public void getCreditCardCvvErrorMessage() throws Exception {
-			allPay.cardNumberInAdyenPayment();
-			
-			 allPay.expDateInAdyen();
+		public static void getCreditCardCvvErrorMessage() throws Exception {
+			AdyenPayment.cardNumberInAdyenPayment();			
+			AdyenPayment.expDateInAdyen();
 			 Actionsss.CombinedClick(pp.getReviewOrderBtn());
 			 Thread.sleep(1000);
 			 if(Actionsss.displayElement(pp.getAdyenSecurityCodeError()) && Actionsss.displayElement(pp.getAdyenHolderNameError())) {
@@ -587,18 +622,14 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 				}else {
 					test.fail("No Error msg are displayed when valid card number and expiry date are entered and clicked on next review order button");
 					logger.info("No Error msg are displayed when  valid card number and expiry date are entered and clicked on next review order button");  
-				}
-		
+				}		
 		}
 		
-		public void getcreditCardNumberInvalidErrorInAdyen() throws Exception {
-			
-				     
+		public static void getcreditCardNumberInvalidErrorInAdyen() throws Exception {						     
 		     driver.switchTo().frame(pp.getAdyenCardNumIframe());
 		     Actionsss.clearText(pp.getAdyenCardNumInput());
 		     Actionsss.sendKeys(pp.getAdyenCardNumInput(),"2312 4242 3121 3231","invalid card Number" );
-		     driver.switchTo().defaultContent();
-		     
+		     driver.switchTo().defaultContent();		     
 		     Actionsss.CombinedClick(pp.getReviewOrderBtn());
 		     test.info("Entered invalid credit card number is 2312 4242 3121 3231"  );	
 		     if(Actionsss.displayElement(pp.getAdyenInvalidCardNumError())) {
@@ -610,13 +641,11 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 				}
 		}
 		
-		public void getcreditCardExpMonthInValidInAdyen() throws Exception {
-			
+		public static void getcreditCardExpMonthInValidInAdyen() throws Exception {	
 			 driver.switchTo().frame(pp. getAdyenExpDateIframe());
 		     Actionsss.clearText(pp.getAdyenExpDateInput());
 		     Actionsss.sendKeys(pp.getAdyenExpDateInput(),"03 23","Invalid Expiry date");
-		     driver.switchTo().defaultContent();
-		     
+		     driver.switchTo().defaultContent();		     
 		     Actionsss.CombinedClick(pp.getReviewOrderBtn());
 		     test.info("Entered invalid expiry date is 11 23"  );
 		     if(Actionsss.displayElement(pp.getAdyenInvalidExpiryDateError())) {
@@ -628,7 +657,7 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 				}
 		}
 		
-		public void getCreditCardNumberInCompleteErrorInAdyen() throws Exception {
+		public static void getCreditCardNumberInCompleteErrorInAdyen() throws Exception {
 			
 			 driver.switchTo().frame(pp.getAdyenCardNumIframe());
 		     Actionsss.clearText(pp.getAdyenCardNumInput());
@@ -644,19 +673,15 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 				 logger.info("No Error msg displayed when  incomplete card number is entered");  
 				}		     
 		}
-		public void getCreditCardInCompleteExpYearError() throws Exception {
-			  allPay.cardNumberInAdyenPayment();
-			
-				     
+		
+		public static void getCreditCardInCompleteExpYearError() throws Exception {
+			  AdyenPayment.cardNumberInAdyenPayment();	     
 			  driver.switchTo().frame(pp. getAdyenExpDateIframe());
 			  Actionsss.clearText(pp.getAdyenExpDateInput());
 			  Actionsss.sendKeys(pp.getAdyenExpDateInput(),"03 3","Incomplete Expiry date");
-			  driver.switchTo().defaultContent();
-			  
-			  allPay.secCodeInAdyen();
-			  
-			  allPay.holderNameInAdyen();
-			  
+			  driver.switchTo().defaultContent();			  
+			  AdyenPayment.secCodeInAdyen();			  
+			  AdyenPayment.holderNameInAdyen();		  
 			  Actionsss.CombinedClick(pp.getReviewOrderBtn());
 			  test.info("Entered incomplete expiry year is 03 3"  );	
 			  if(Actionsss.displayElement(pp.getAdyenIncompleteExpYearError())) {
@@ -665,29 +690,25 @@ private static CheckOutPage3 cop3= new CheckOutPage3(driver);
 			  }else {
 				 test.fail("No Error msg displayed when  incomplete expiry year  is entered");
 				 logger.info("No Error msg displayed when  incomplete expiry year  is entered");  
-				}	  
+			}	  
 		}
-		public void getCreditCardInCompleteCvvError() throws Exception {
-			allPay.cardNumberInAdyenPayment();
-			
-			allPay.expDateInAdyen();
-			
+		public static void getCreditCardInCompleteCvvError() throws Exception {
+			AdyenPayment.cardNumberInAdyenPayment();			
+			AdyenPayment.expDateInAdyen();		
 			driver.switchTo().frame(pp.getAdyenSecCodeIframe());
 		    Actionsss.clearText(pp.getAdyenSecCodeInput());
 		    Actionsss.sendKeys(pp.getAdyenSecCodeInput(),"73","invalid Security code");
-		    driver.switchTo().defaultContent();
-			
-			 allPay.holderNameInAdyen();
-			 Actionsss.CombinedClick(pp.getReviewOrderBtn());
-			 test.info("Entered incomplete cvv number is 73 "  );
+		    driver.switchTo().defaultContent();			
+		    AdyenPayment.holderNameInAdyen();
+			Actionsss.CombinedClick(pp.getReviewOrderBtn());
+			test.info("Entered incomplete cvv number is 73 "  );
 			 if(Actionsss.displayElement(pp.getAdyenIncompleteSecurityCodeError())) {
 				 test.pass("Error msg are displayed when incomplete security code is entered");
 				 logger.info("Error msg are displayed when  incomplete security code  is entered");
 			  }else {
 				 test.fail("No Error msg displayed when  incomplete security code  is entered");
 				 logger.info("No Error msg displayed when  incomplete security code  is entered");  
-			  }
-			 
+			  }			 
 		}
 		
 		public static void redemptionOfGcValidation() throws InterruptedException {

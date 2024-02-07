@@ -2,10 +2,10 @@
 
 import com.providio.testcases.baseClass;
 
-import Payments.CartPagePayal;
-import Payments.GiftCertificateInCombination;
-import Payments.MiniCartPaypal;
-import Payments.PdpPagePaypalBuyNow;
+import GifCertificatePayment.GiftCertificateInCombination;
+import PaypalPayment.CartPagePayal;
+import PaypalPayment.MiniCartPaypal;
+import PaypalPayment.PdpPagePaypalBuyNow;
 import functionality.Actionsss;
 import pageObjects.OrderPageDetails;
 import pageObjects.PaymentPage;

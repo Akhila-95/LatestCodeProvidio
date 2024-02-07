@@ -1,41 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Providio Regression Test]">
-  <test thread-count="5" name="Regression Testing(failed)">
+  <test thread-count="5" name="SmokeTest(failed)">
     <classes>
+      <class name="testScripts.PaymentPageTest">
+        <methods>
+          <include name="verifyingCreditCardExpDateInValid"/>
+          <include name="setUpforReport"/>
+          <include name="verifyingCreditCardNumberInCompleteError"/>
+          <include name="verifyingCreditCardInCompleteExpYearError"/>
+          <include name="verifyingCreditcardNumberInValidError"/>
+          <include name="verifyingCreditCardInCompleteCvvError"/>
+          <include name="verifyingCvvAndExpErrorInCreditCard"/>
+          <include name="verifyingCvvErrorInCreditCard"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testScripts.PaymentPageTest -->
       <class name="browser.launchBrowsering">
         <methods>
+          <include name="setUpforReport"/>
+          <include name="verifyHomePageLaunching"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="afterClass"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- browser.launchBrowsering -->
-      <class name="testScripts.ReviewOrderTest">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder"/>
-          <include name="verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder"/>
-          <include name="setUp"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testScripts.ReviewOrderTest -->
-      <class name="testScripts.OrderPlacingWithAllPaymentsTest">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
-          <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/>
-          <include name="verifyingOrderIsPlacingWithGiftCard"/>
-          <include name="verifyingOrderIsPlacingWithCartPagePaypal"/>
-          <include name="verifyingOrderIsPlacingWithCreditCard"/>
-          <include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
-          <include name="afterMethod"/>
-          <include name="setUp"/>
-          <include name="afterClass"/>
-          <include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
-          <include name="tearDown"/>
-          <include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>
-        </methods>
-      </class> <!-- testScripts.OrderPlacingWithAllPaymentsTest -->
     </classes>
-  </test> <!-- Regression Testing(failed) -->
+  </test> <!-- SmokeTest(failed) -->
 </suite> <!-- Failed suite [Providio Regression Test] -->

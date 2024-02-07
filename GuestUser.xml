@@ -7,29 +7,20 @@
      
 			<class name="browser.launchBrowsering"/>
            	 	
-           <!--  
-           	<class name ="testScripts.LoginPageTest"/>
-	           	  <methods> 
-	             		<include name ="VerifyingLoginWithValidCredentials"/>  
-	             		 
-	             </methods>
-	   -->
-    		 
+          	<class name ="testScripts.PaymentPageTest"/> 
+				 <methods>
 		
-    			<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
-				<methods>			
-				 	 <include name="verifyingOrderIsPlacingWithCreditCard"/> 			  				
-				    <include name="verifyingOrderIsPlacingWithGiftCard"/>	 
-					<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
-					
-					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>										
-					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
-					  
-					<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
-				   	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/>	
-				    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
-		 		 	
-				</methods>
+					 <include name="verifyingAllTheErrorsInCreditCard" />
+					  <include name="verifyingCvvAndExpErrorInCreditCard" /> 					
+				      <include name="verifyingCvvErrorInCreditCard" />				
+					  <include name ="verifyingCreditcardNumberInValidError"></include>
+			  		  <include name ="verifyingCreditCardExpDateInValid"></include>
+				 	  <include name ="verifyingCreditCardNumberInCompleteError"></include>
+					  <include name ="verifyingCreditCardInCompleteExpYearError"></include>
+					  <include name ="verifyingCreditCardInCompleteCvvError"></include>  
+	
+		</methods>  
+		
     		
          </classes>
     </test>

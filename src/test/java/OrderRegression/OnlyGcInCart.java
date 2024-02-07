@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 
 import com.providio.testcases.baseClass;
 
+import CreditCardPayment.CreditCardDetails;
 import PaymentProccess.CommonProccessUptoCheckout;
-import data.PaymentDetails;
 import pageObjects.PaymentPage;
 import tasks.GiftCertificatePageTasks;
 
@@ -22,7 +22,7 @@ public class OnlyGcInCart extends baseClass {
 		
 		CommonProccessUptoCheckout.commonProccess();
 		
-		PaymentDetails.creditCardDetails();
+		CreditCardDetails.creditCardDetails();
 		ReviewOrderPageTask.placeOrder();
 		OrderPageValidation.validatePlacetheOrderPage();
 		OrderPageValidation.orderNumberAndOrderDate();

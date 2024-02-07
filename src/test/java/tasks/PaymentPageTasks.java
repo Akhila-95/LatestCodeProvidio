@@ -3,12 +3,12 @@ package tasks;
 import com.github.javafaker.Faker;
 import com.providio.testcases.baseClass;
 
-import Payments.CheckOutPaypal;
-import Payments.GiftCertificateForGc;
-import Payments.GiftCertificateInCombination;
+import CreditCardPayment.CreditCardDetails;
+import CreditCardPayment.creditCardAllTypeValidation;
+import GifCertificatePayment.GiftCertificateForGc;
+import GifCertificatePayment.GiftCertificateInCombination;
+import PaypalPayment.CheckOutPaypal;
 import data.AddressSelection;
-import data.PaymentDetails;
-import data.PaymentDetailsofGuestandReg;
 import functionality.Actionsss;
 import pageObjects.CheckOutPage;
 import pageObjects.CheckOutPage2;
@@ -209,63 +209,63 @@ public class PaymentPageTasks extends baseClass {
 	public static void billingPhoneNumber() throws Exception {
 		paymentPageView();
 		Actionsss.clearText(cop3.getBillingPhoneNumber());
-		PaymentDetails.creditCardDetails();	
+		CreditCardDetails.creditCardDetails();	
 		PaymentPageValidation.billingPhoneNumberErrorValidation();
 	}
 	
 	public static void allErrorsInCreditCard() throws Exception {
 			paymentPageView();
-			PaymentDetailsofGuestandReg.allErrorsInCreditCard();
+			creditCardAllTypeValidation.allErrorsInCreditCard();
 	
 	}
 	
 	public static void CreditCardCvvAndExpErrorMessage() throws Exception {
 			paymentPageView();
-			PaymentDetailsofGuestandReg.creditCardCvvAndExpError();
+			creditCardAllTypeValidation.creditCardCvvAndExpError();
 		
 	}
 
 	public static void CreditCardCvvErrorMessage() throws Exception {
 			paymentPageView();
-			PaymentDetailsofGuestandReg.creditCvvError();
+			creditCardAllTypeValidation.creditCvvError();
 		
 	}
 	public static void creditcardNumberInValidError() throws Exception {
 			paymentPageView();
-			PaymentDetailsofGuestandReg.creditcardNumberInValidError();
+			creditCardAllTypeValidation.creditcardNumberInValidError();
 		
 	}
 	
 	public static void creditCardExpDateInValid() throws Exception {
 			paymentPageView();
-			PaymentDetailsofGuestandReg.creditCardExpMonthInValid();
+			creditCardAllTypeValidation.creditCardExpMonthInValid();
 		
 	}
 	
 	public static void creditCardNumberInCompleteError() throws Exception {
 			paymentPageView();
-			PaymentDetailsofGuestandReg.creditCardNumberInCompleteError();
+			creditCardAllTypeValidation.creditCardNumberInCompleteError();
 		
 	}
 	public static void creditCardInCompleteExpYearError() throws Exception {
 			paymentPageView();
-			PaymentDetailsofGuestandReg.creditCardNumberInCompleteExpYearError();
+			creditCardAllTypeValidation.creditCardNumberInCompleteExpYearError();
 		
 	}
 	public static void creditCardInCompleteCvvError() throws Exception {
 			paymentPageView();
-			PaymentDetailsofGuestandReg.creditCardInCompleteCvvError();
+			creditCardAllTypeValidation.creditCardInCompleteCvvError();
 		
 	}
 	
 	public static void  creditCardWithValidDetails() throws Exception {
 			paymentPageView();
-			PaymentDetails.creditCardDetails();
+			CreditCardDetails.creditCardDetails();
 		
 	}
 	public static void  addNewCreditCard() throws Exception {
 			paymentPageView();
-			PaymentDetails.addNewCardThoughExistingCards();	
+			CreditCardDetails.addNewCardThoughExistingCards();	
 	}
 	
 	
