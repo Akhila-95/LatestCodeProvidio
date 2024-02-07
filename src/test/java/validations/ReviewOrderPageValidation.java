@@ -3,14 +3,14 @@ package validations;
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
-import pageObjects.PaymentPage;
+import pageObjects.PaymentPageObjects;
 import pageObjects.ReviewOrderPage;
 
 public class ReviewOrderPageValidation extends baseClass {
 	
 
 	private static final ReviewOrderPage reviwOrder = new ReviewOrderPage(driver);
-	private static final 	PaymentPage pp = new PaymentPage(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
 	public  static void VerifyingReviewOrderBtn() throws InterruptedException {
  		test.info("Verifying the review order Btn click");
  
@@ -26,7 +26,7 @@ public class ReviewOrderPageValidation extends baseClass {
 	
 
 	public static void bactToCartValidationInreviewOrderPage() throws InterruptedException{
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the back to cart  display in review order page");
 			 if(Actionsss.displayElement(reviwOrder.getBackToCart())) {
 				 logger.info("Back to cart is displayed in review order page");
@@ -42,7 +42,7 @@ public class ReviewOrderPageValidation extends baseClass {
 	}
 
 	public static void customerInfoValidationInreviewOrderPage() throws InterruptedException {
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			 test.info("Verifying the customer information is displayed in review order page ");
 			 if(Actionsss.displayElement(reviwOrder.getCustomerInfo())) {
 				 logger.info("Customer information is displayed in review order page");
@@ -58,7 +58,7 @@ public class ReviewOrderPageValidation extends baseClass {
 	}
 	
 	public static void shippingDetailInfoValidationInreviewOrderPage() throws InterruptedException {
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the shipping details form  is displayed in review order page ");
 			 if(Actionsss.displayElement(reviwOrder.getshippingInfo())) {
 				 logger.info("shipping details form  is displayed in review order page");
@@ -74,7 +74,7 @@ public class ReviewOrderPageValidation extends baseClass {
 	}
 	
 	public static void orderSummaryValidationInreviewOrderPage() throws InterruptedException {
-		if(!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if(!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the orderSummary display in review order page ");
 			 if(Actionsss.displayElement(reviwOrder.getOrderSummaryDiv())) {
 				 logger.info("orderSummary  is displayed in review order page");
@@ -90,7 +90,7 @@ public class ReviewOrderPageValidation extends baseClass {
 	}
 	
 	public static void etgLogoValidationInreviewOrderPage() throws InterruptedException {
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the  etg logo display in review order page ");
 			 if(Actionsss.displayElement(reviwOrder.getEtgLogo())) {
 				 logger.info(" Etg logo  is displayed in review order page");
@@ -105,7 +105,7 @@ public class ReviewOrderPageValidation extends baseClass {
 		}
 	}
 	public static void pdpPageValidation() throws InterruptedException {
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the pagination of product from review order page");
 			if(Actionsss.displayElement(reviwOrder.getPdpPage())) {
 				 logger.info("Succesfully paginated to PDP page by clicking the product from review order page");
@@ -120,7 +120,7 @@ public class ReviewOrderPageValidation extends baseClass {
 		}
 	}
 	public static void placeOrderButtonInPaymentPage() throws InterruptedException {
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the  place order button display in review order page ");
 			 if(Actionsss.displayElement(reviwOrder.getSelectPlaceOrderBtn())) {
 				 logger.info("Place order button is displayed in review order page");
@@ -135,7 +135,7 @@ public class ReviewOrderPageValidation extends baseClass {
 		}
 	}
 	public static void billingFormInreviewOrderPage() throws InterruptedException {
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the payment info display in review order page ");
 			 if(Actionsss.displayElement(reviwOrder.getgsummaryOfBillingAddress())) {
 				 logger.info(" Payment info div is displayed in review order page");
@@ -151,7 +151,7 @@ public class ReviewOrderPageValidation extends baseClass {
 	}
 
 	public static void editPaymentInReviewOrderPage() throws InterruptedException {
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the gift certificate payment edited with credit card from review order page");
 			logger.info(previousPaymentInPlaceorderPage);
 			logger.info(paymentafterEditInPlaceorderPage);
@@ -170,7 +170,7 @@ public class ReviewOrderPageValidation extends baseClass {
 	}
 	
 	public static void editPaypalPaymentInReviewOrderPage() throws InterruptedException {
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the display of paypal once edited payment edited is edited with paypal in review order page");
 			logger.info(getTextOfPaypalInPaymentPage);
 			logger.info(paymentafterEditInPlaceorderPage);
@@ -189,7 +189,7 @@ public class ReviewOrderPageValidation extends baseClass {
 	}
 	
 	public static void editPaymentToPaypalReviewOrderPage() throws InterruptedException {
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the display of paypal in review order page");
 			logger.info(getTextOfPaypalInPaymentPage);
 			logger.info(paymentafterEditInPlaceorderPage);

@@ -1,33 +1,31 @@
 package CreditCardPayment;
 
-import java.util.Random;
-
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
-import pageObjects.PaymentPage;
+import pageObjects.PaymentPageObjects;
+
 
 public class AdyenPayment extends baseClass{
-
-	   private static final  Random rand = new Random();	
-	   private static final PaymentPage pp = new PaymentPage(driver);  
-	   private static final String cardNum = "cardNumber";
 	
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
+	   private static String  adyenExpiryDate ="03 30";
+	   
 	   public static void adyenPayment() throws Exception {
-    	 cardNumberInAdyenPayment();
-    	 test.info("Entered card number for adyen payment");
-    	 expDateInAdyen();
-    	 test.info("Entered exp date for adyen payment");	
-    	 secCodeInAdyen();
-    	 test.info("Entered cvv for adyen payment");
-    	 holderNameInAdyen();
-    	 test.info("Entered holder name for adyen payment");	    	 
+		   test.info("Entering card number for adyen payment");
+		   cardNumberInAdyenPayment(); 
+		   test.info("Entering exp date for adyen payment");	
+	       expDateInAdyen();
+	       test.info("Entering cvv for adyen payment");
+	       secCodeInAdyen();
+	       test.info("Entering holder name for adyen payment");	  
+	       holderNameInAdyen();	    	  	 
 	     }
 	   
 	   public static void adyen() throws Exception {
 	  		Actionsss.scrollWindowsByPixel(700);
 	  		Thread.sleep(3000);
-	  		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+	  		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {
 	  		  //guest user payment
 	  			test.info("User is checked in as guest  so entering a random credit card details");
 	  			adyenPayment();
@@ -38,42 +36,31 @@ public class AdyenPayment extends baseClass{
 	  	}
 	   
 	   public static void cardNumberInAdyenPayment() throws Exception {
-			String[] cardNumbers = {
-	  			 	// "3700 0000 0000 002",
-			         "3700 0000 0100 018",
-			        // "4035 5010 0000 0008",
-			       //  "4360 0000 0100 0005",			        
-	          };
-			
-		     int randomIndex = rand.nextInt(cardNumbers.length);
-		     test.info("Entered credit card number is " +cardNumbers[randomIndex] );		     
-		     driver.switchTo().frame(pp.getAdyenCardNumIframe());
-		     Actionsss.clearText(pp.getAdyenCardNumInput());
-		     Actionsss.sendKeys(pp.getAdyenCardNumInput(),cardNumbers[randomIndex],cardNum);
+		     driver.switchTo().frame(paymentPage.getAdyenCardNumIframe());
+		     String adyenCreditCardNumber="3700 0000 0100 018";
+		     Actionsss.clearText(paymentPage.getAdyenCardNumInput());
+		     Actionsss.sendKeys(paymentPage.getAdyenCardNumInput(),"3700 0000 0100 018" ,adyenCreditCardNumber);
 		     driver.switchTo().defaultContent();
-		     String lastFourDigits = cardNum.substring(cardNum.length() - 4);
+		     String lastFourDigits = adyenCreditCardNumber.substring(adyenCreditCardNumber.length() - 4);
 			 creditCardNumber=lastFourDigits;
 	    }
 	    
-		public static void expDateInAdyen() throws Exception {
-		     test.info("Entered expiry date for card number is 03 30"  );		     
-		     driver.switchTo().frame(pp. getAdyenExpDateIframe());
-		     Actionsss.clearText(pp.getAdyenExpDateInput());
-		     Actionsss.sendKeys(pp.getAdyenExpDateInput(),"03 30","Expiry date");
+		public static void expDateInAdyen() throws Exception {		     
+		     driver.switchTo().frame(paymentPage. getAdyenExpDateIframe());
+		     Actionsss.clearText(paymentPage.getAdyenExpDateInput());
+		     Actionsss.sendKeys(paymentPage.getAdyenExpDateInput(),adyenExpiryDate ,"Expiry date" +adyenExpiryDate );
 		     driver.switchTo().defaultContent();
 		}
 		
-		public static void secCodeInAdyen() throws Exception {
-		     test.info("Entered security code for card number is 7373"  );		     
-		     driver.switchTo().frame(pp.getAdyenSecCodeIframe());
-		     Actionsss.clearText(pp.getAdyenSecCodeInput());
-		     Actionsss.sendKeys(pp.getAdyenSecCodeInput(),"7373","Security code");
+		public static void secCodeInAdyen() throws Exception {	     
+		     driver.switchTo().frame(paymentPage.getAdyenSecCodeIframe());
+		     Actionsss.clearText(paymentPage.getAdyenSecCodeInput());
+		     Actionsss.sendKeys(paymentPage.getAdyenSecCodeInput(),"7373","Security code is 7373");
 		     driver.switchTo().defaultContent();
 		}
 		
-		public static void holderNameInAdyen() throws Exception {
-		     test.info("Entered holder name for card number is " +fakeEmail  );		     		   
-		     Actionsss.clearText(pp.getAdyenHolderNameInput());
-		     Actionsss.sendKeys(pp.getAdyenHolderNameInput(),fakeEmail,"holder name");		    
+		public static void holderNameInAdyen() throws Exception {	     		   
+		     Actionsss.clearText(paymentPage.getAdyenHolderNameInput());
+		     Actionsss.sendKeys(paymentPage.getAdyenHolderNameInput(),fakeEmail,"holder name is " +fakeEmail);		    
 		}
 }

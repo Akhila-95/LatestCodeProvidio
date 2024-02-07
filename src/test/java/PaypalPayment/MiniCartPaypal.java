@@ -4,7 +4,7 @@ import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
 import pageObjects.MiniCartPage;
-import pageObjects.PaymentPage;
+import pageObjects.PaymentPageObjects;
 import pageObjects.homepage;
 import tasks.HomePageTasks;
 import tasks.OrderDetailPageTasks;
@@ -13,7 +13,6 @@ import validations.OrderPageValidation;
 public class MiniCartPaypal extends baseClass {
 
 	private static MiniCartPage miniCart = new MiniCartPage(driver);
-	private static final 	PaymentPage pp = new PaymentPage(driver);
 	private static homepage homePage = new homepage(driver);
 	
 	public static void miniCartPaypal() throws InterruptedException, Exception {
@@ -24,7 +23,7 @@ public class MiniCartPaypal extends baseClass {
 			test.info("Verifying payment with Mini cart paypal");
 			if(Actionsss.elementSize(miniCart.getSalesforcePaypalInMiniCartList())) {
 				logger.info("Salesforce paypal integration activated");
-				Actionsss.click(miniCart.getSalesforcePaypalInMiniCart());
+				Actionsss.CombinedClick(miniCart.getSalesforcePaypalInMiniCart());
 				Thread.sleep(3000);
 				 PaypalMethod.paypalPopup();
 				logger.info("Entered into paypal window and entered the paypal details");

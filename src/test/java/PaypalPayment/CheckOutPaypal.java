@@ -10,14 +10,14 @@ import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
 import pageObjects.OrderPageDetails;
-import pageObjects.PaymentPage;
+import pageObjects.PaymentPageObjects;
 import pageObjects.homepage;
 import validations.OrderPageValidation;
 import validations.PaymentPageValidation;
 
 public class CheckOutPaypal extends baseClass{
 
-	private static final PaymentPage pp =new PaymentPage(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
 	private static homepage homePage = new homepage(driver);
 	private static OrderPageDetails  orderPage = new OrderPageDetails(driver);
 	
@@ -25,15 +25,15 @@ public class CheckOutPaypal extends baseClass{
 		
 		Actionsss.scrollWindowsByPixel(500);
 		 test.info("Verifying payment with checkout paypal");
-		if(Actionsss.elementSize(pp.getBrainPaypalAcc())) {	 
+		if(Actionsss.elementSize(paymentPage.getBrainPaypalAcc())) {	 
 			
     		test.info("Brain tree payment integration is activated");    		   
     		//
-    		Actionsss.javascriptClick(pp.getBrainTreePaypalButton());
+    		Actionsss.javascriptClick(paymentPage.getBrainTreePaypalButton());
     		Thread.sleep(7000);
     		
-    		if (Actionsss.displayElement(pp.getReviewOrderBtn())) {
-    			Actionsss.javascriptClick(pp.getReviewOrderBtn());
+    		if (Actionsss.displayElement(paymentPage.getReviewOrderBtn())) {
+    			Actionsss.javascriptClick(paymentPage.getReviewOrderBtn());
 			}else  {
 				brainTreeAfterClick();
 				Thread.sleep(2000);
@@ -51,10 +51,10 @@ public class CheckOutPaypal extends baseClass{
 					Actionsss.click(homePage.clickOnLogo());
 					}
 				}
-				else if(Actionsss.elementSize(pp.getSelectPlaceOrderBtnList())) {	
+				else if(Actionsss.elementSize(paymentPage.getSelectPlaceOrderBtnList())) {	
 					logger.info("Other paymnet activated");
 					logger.info("Place order page is loaded");
-					Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
+					Actionsss.CombinedClick(paymentPage.getSelectPlaceOrderBtn());
 					Thread.sleep(8000);
 					PaymentPageValidation.VerifiedThatPlaceOrderClick();
 					Thread.sleep(1000);
@@ -65,7 +65,7 @@ public class CheckOutPaypal extends baseClass{
 				}
 			}
     		
-    	}else if(Actionsss.elementSize(pp.getSalesforcePaypalList())) {	 
+    	}else if(Actionsss.elementSize(paymentPage.getSalesforcePaypalList())) {	 
     	
     		test.info("salesoforce payment integration is activated");  
 		    Thread.sleep(1000);
@@ -85,10 +85,10 @@ public class CheckOutPaypal extends baseClass{
 				Actionsss.click(homePage.clickOnLogo());
 				}
 			}
-			else if(Actionsss.elementSize(pp.getSelectPlaceOrderBtnList())) {	
+			else if(Actionsss.elementSize(paymentPage.getSelectPlaceOrderBtnList())) {	
 				logger.info("Other paymnet activated");
 				logger.info("Place order page is loaded");
-				Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
+				Actionsss.CombinedClick(paymentPage.getSelectPlaceOrderBtn());
 				Thread.sleep(8000);
 				PaymentPageValidation.VerifiedThatPlaceOrderClick();
 				Thread.sleep(1000);

@@ -20,22 +20,22 @@ public class PaymentPageTest extends baseClass{
 	}
 	
 
-	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	@Test// 
 	public void verifyingOrderSummaryDisplayInPaymentPage() throws Exception {
 		PaymentPageTasks.getOrderSummary();
 	}
 	
-	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	@Test// 
 	public void verifyingPaymentInfoDisplayInPaymentPage() throws Exception {
 		PaymentPageTasks.getPaymentForm();
 	}
 	
-	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	@Test// 
 	public void verifyingEtgLogoDisplayInPaymentPage() throws Exception {
 		PaymentPageTasks.getEtgLogo();
 	}
 	
-	@Test//(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+	@Test// 
 	public void verifyingBackToCartInPaymentPage() throws Exception {
 		PaymentPageTasks.getBackToCart();
 	}
@@ -72,96 +72,96 @@ public class PaymentPageTest extends baseClass{
 	}
 	
 	//payment
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingAllTheErrorsInCreditCard() throws Exception {
         
     	PaymentPageTasks.allErrorsInCreditCard();
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingCvvAndExpErrorInCreditCard() throws Exception {
         
     	PaymentPageTasks.CreditCardCvvAndExpErrorMessage();
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingCvvErrorInCreditCard() throws Exception {
         
     	PaymentPageTasks.CreditCardCvvErrorMessage();
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingCreditcardNumberInValidError() throws Exception {
         
     	PaymentPageTasks.creditcardNumberInValidError() ;
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingCreditCardExpDateInValid() throws Exception {
         
     	PaymentPageTasks.creditCardExpDateInValid();
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingCreditCardNumberInCompleteError() throws Exception {
         
     	PaymentPageTasks.creditCardNumberInCompleteError();
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingCreditCardInCompleteExpYearError() throws Exception {
         
     	PaymentPageTasks.creditCardInCompleteExpYearError();
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingCreditCardInCompleteCvvError() throws Exception {
         
     	PaymentPageTasks.creditCardInCompleteCvvError();
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingCreditcardWithValidDetails() throws Exception {
         
     	PaymentPageTasks.creditCardWithValidDetails();
     }
     
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingAddnewCreditCard() throws Exception {       
     	PaymentPageTasks.addNewCreditCard();
     }
     
     //gc
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test
     public void verifyingEnterGiftCodeErrorMsg() throws Exception {       
     	PaymentPageTasks.getEnterGiftCodeErrorMsg();
     }
     
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test 
     public void verifyingInvalidGcErrorMsg() throws Exception {       
     	PaymentPageTasks.getInvalidGcCode();
     }
     
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test 
     public void verifyingCheckBalanceOfValidGc() throws Exception {       
     	PaymentPageTasks.getCheckBalOfValidGc();
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test 
     public void verifyingCheckBalanceOfInvalidGcErrorMsg() throws Exception {       
     	PaymentPageTasks.getCheckBalOfInvalidGc();
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test 
     public void verifyingSuccesMessageForValidGcApplied() throws Exception {       
     	PaymentPageTasks.applyValidGc();
     }
     
-    @Test(dependsOnMethods = "browser.launchBrowsering.verifyHomePageLaunching")
+    @Test 
     public void verifyingRemovalOfAppliedGc() throws Exception {       
     	PaymentPageTasks.removeAppliedGc();
     }

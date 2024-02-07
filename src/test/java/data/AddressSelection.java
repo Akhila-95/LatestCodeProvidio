@@ -7,34 +7,32 @@ import org.openqa.selenium.WebElement;
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
-import pageObjects.CheckOutPage2;
-import pageObjects.CheckOutPage3;
-import pageObjects.PaymentPage;
-import pageObjects.ShippingAddressPage;
+import pageObjects.PaymentPageObjects;
+import pageObjects.ShippingPageObject;
 
 public class AddressSelection extends baseClass{
 	
 	static final String fName = "FirstName";
 	private static final String lName = "LastName";
 	private static final String Phone = "PhoneNumber";
-	private static ShippingAddressPage SAP = new ShippingAddressPage(driver);
-	private static final CheckOutPage3 cop3 = new CheckOutPage3(driver);
+	private static ShippingPageObject shippingPage = new ShippingPageObject(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
 
 	
 	public static void Address() throws Exception {
 		 List<WebElement> guestCheckOut = driver.findElements(By.xpath("//div[@data-customer-type='guest']"));
 		 if(guestCheckOut.size()>0) {
 			 test.info("Verifed that shipping address is Entered in Guest user");
-			 Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);
-			 Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
-			 Actionsss.addressFromDropDown(SAP.getShippingAddress());	
+			 Actionsss.sendKeys(shippingPage.getSelectfirstNameInput(), fname, fName);
+			 Actionsss.sendKeys(shippingPage.getSelectLastNameInput(), lname, lName);
+			 Actionsss.addressFromDropDown(shippingPage.getShippingAddress());	
 			 Thread.sleep(1000);
-			 Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+			 Actionsss.sendKeys(shippingPage.getSelectPhoneInput(), phonenumber, Phone);
 			 
 		 }else {			 
 			test.info("Verify the shipping address entered in Registered user");
-				if(Actionsss.displayElement(SAP.getShippingToDisplay()) && Actionsss.displayElement(SAP.getSaveShippingAddress()) && Actionsss.elementSize(SAP.getsavedShippingAddressList())) {
-					if(Actionsss.elementSize(SAP.getSavedAddress())) {
+				if(Actionsss.displayElement(shippingPage.getShippingToDisplay()) && Actionsss.displayElement(shippingPage.getSaveShippingAddress()) && Actionsss.elementSize(shippingPage.getsavedShippingAddressList())) {
+					if(Actionsss.elementSize(shippingPage.getSavedAddress())) {
 						test.info("User logged-in and having  saved  address");
 				          //randomizing the saved address
 						selectingRandomSavedShippingAddress();
@@ -62,8 +60,8 @@ public class AddressSelection extends baseClass{
 		 }else {
 			 
 			test.info("Verify the shipping address entered in Registered user");
-				if(Actionsss.displayElement(SAP.getShippingToDisplay()) && Actionsss.displayElement(SAP.getSaveShippingAddress()) && Actionsss.elementSize(SAP.getsavedShippingAddressList())) {
-					//if(Actionsss.elementSize(SAP.getSavedAddress())) {
+				if(Actionsss.displayElement(shippingPage.getShippingToDisplay()) && Actionsss.displayElement(shippingPage.getSaveShippingAddress()) && Actionsss.elementSize(shippingPage.getsavedShippingAddressList())) {
+					//if(Actionsss.elementSize(shippingPage.getSavedAddress())) {
 						//test.info("User logged-in and having  saved  address");
 				          //randomizing the saved address
 						//selectingRandomSavedShippingAddress();
@@ -72,7 +70,7 @@ public class AddressSelection extends baseClass{
 						//addNewAddress();
 						
 						// UPDATE ADDRE
-						//Actionsss.CombinedClick(SAP.getUpdateAddress());
+						//Actionsss.CombinedClick(shippingPage.getUpdateAddress());
 						 addressEdit();
 						
 					//}else {
@@ -88,24 +86,24 @@ public class AddressSelection extends baseClass{
 	}
 	
 	public static void updateShippingAddress() throws InterruptedException {
-		  Actionsss.sendKeys(SAP.getSelectfirstNameInput(), "akhila", fName);			  
-		  Actionsss.sendKeys(SAP.getSelectLastNameInput(), "akhi", lName);
-		  Actionsss.updateShippingAddress(SAP.getShippingAddress());		
-		  Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+		  Actionsss.sendKeys(shippingPage.getSelectfirstNameInput(), "akhila", fName);			  
+		  Actionsss.sendKeys(shippingPage.getSelectLastNameInput(), "akhi", lName);
+		  Actionsss.updateShippingAddress(shippingPage.getShippingAddress());		
+		  Actionsss.sendKeys(shippingPage.getSelectPhoneInput(), phonenumber, Phone);
 	}
 	
 	public static void editBillingAddress() throws InterruptedException {
-		Actionsss.sendKeys(cop3.getBillingFName(), fakeFirstName, "Billing address first name");
-		Actionsss.sendKeys(cop3.getBillingLName(), fakelastName, "Billing address last name");
-		 Actionsss.editAddress(SAP.getBillingAddress());			
-		 Actionsss.sendKeys(cop3.getBillingPhoneNumber(), "7868764789", "Billing phone number");
+		Actionsss.sendKeys(paymentPage.getBillingFName(), fakeFirstName, "Billing address first name");
+		Actionsss.sendKeys(paymentPage.getBillingLName(), fakelastName, "Billing address last name");
+		Actionsss.editAddress(shippingPage.getBillingAddress());			
+		Actionsss.sendKeys(paymentPage.getBillingPhoneNumber(), "7868764789", "Billing phone number");
 	}
 	
 	public static void addressEdit() throws InterruptedException {
-		Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fakeFirstName, "edited first name");
-		 Actionsss.sendKeys(SAP.getSelectLastNameInput(),fakelastName, "edited last name");
-		 Actionsss.editAddress(SAP.getShippingAddress());			
-		 Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+		Actionsss.sendKeys(shippingPage.getSelectfirstNameInput(), fakeFirstName, "edited first name");
+		 Actionsss.sendKeys(shippingPage.getSelectLastNameInput(),fakelastName, "edited last name");
+		 Actionsss.editAddress(shippingPage.getShippingAddress());			
+		 Actionsss.sendKeys(shippingPage.getSelectPhoneInput(), phonenumber, Phone);
 	}
 	
 
@@ -113,12 +111,12 @@ public class AddressSelection extends baseClass{
 				
 			  //this method send the shipping first name,last name and address details , phonenumber by checking the display of firstname
 			  Thread.sleep(1000);
-			  if(Actionsss.displayElement(SAP.getFirstName())) {
-				  Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);			  
-				  Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
-				  Actionsss.addNewShippinggAddress(SAP.getShippingAddress());	
+			  if(Actionsss.displayElement(shippingPage.getFirstName())) {
+				  Actionsss.sendKeys(shippingPage.getSelectfirstNameInput(), fname, fName);			  
+				  Actionsss.sendKeys(shippingPage.getSelectLastNameInput(), lname, lName);
+				  Actionsss.addNewShippinggAddress(shippingPage.getShippingAddress());	
 				  Thread.sleep(1000);		  
-				  Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+				  Actionsss.sendKeys(shippingPage.getSelectPhoneInput(), phonenumber, Phone);
 	 
 			  }
 		  }
@@ -126,11 +124,11 @@ public class AddressSelection extends baseClass{
 	public static void selectingRandomSavedShippingAddress() throws InterruptedException {
 		
 		  test.info("User logged in and have saved  Address ");		
-		  if(Actionsss.displayElement(SAP.getAddressDropDownSelect())) {
-			  Actionsss.click(SAP.getAddressDropDownSelect());	
-			int savedAddressCount=Actionsss.getSizeOfList(SAP.getsavedShippingAddressList());
+		  if(Actionsss.displayElement(shippingPage.getAddressDropDownSelect())) {
+			  Actionsss.click(shippingPage.getAddressDropDownSelect());	
+			int savedAddressCount=Actionsss.getSizeOfList(shippingPage.getsavedShippingAddressList());
 			if(savedAddressCount>1) {
-				Actionsss.selectByOptions(SAP.getsavedShippingAddressList());
+				Actionsss.selectByOptions(shippingPage.getsavedShippingAddressList());
 				test.pass("Randomly selected the saved address");
 			}
 		  }
@@ -138,37 +136,37 @@ public class AddressSelection extends baseClass{
 	
 	 public void addNewAddress() throws Exception {
 			
-		  if(Actionsss.displayElement(SAP.getAddNewAddress())) {
-			  Actionsss.javascriptClick(SAP.getAddNewAddress());
+		  if(Actionsss.displayElement(shippingPage.getAddNewAddress())) {
+			  Actionsss.javascriptClick(shippingPage.getAddNewAddress());
 		  }
 	  }
 	  public static void shippingAddressDetailsWithName() throws InterruptedException {
 		
 		  //this method send the shipping first name,last name and address details , phonenumber by checking the display of firstname 
 		  Thread.sleep(1000);
-		  if(Actionsss.displayElement(SAP.getFirstName())) {
-			  Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, fName);			  
-			  Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, lName);
-			  Actionsss.addressFromDropDown(SAP.getShippingAddress());		
-			  Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, Phone);
+		  if(Actionsss.displayElement(shippingPage.getFirstName())) {
+			  Actionsss.sendKeys(shippingPage.getSelectfirstNameInput(), fname, fName);			  
+			  Actionsss.sendKeys(shippingPage.getSelectLastNameInput(), lname, lName);
+			  Actionsss.addressFromDropDown(shippingPage.getShippingAddress());		
+			  Actionsss.sendKeys(shippingPage.getSelectPhoneInput(), phonenumber, Phone);
  
 		  }
 	  }
 	  
 	  public static void saveTheShippingAddress() throws Exception {
 		 
-		  if(Actionsss.elementSize(SAP.getSaveShippingAddressList())) {
-			  if(Actionsss.displayElement(SAP.getSaveShippingAddress())) {
-				  Actionsss.javascriptClick(SAP.getSaveShippingAddress());
+		  if(Actionsss.elementSize(shippingPage.getSaveShippingAddressList())) {
+			  if(Actionsss.displayElement(shippingPage.getSaveShippingAddress())) {
+				  Actionsss.javascriptClick(shippingPage.getSaveShippingAddress());
 			  }
 		  }
 	  }
 	  public void selectPaymentMethod() throws Exception {
 		 
-		  if(Actionsss.elementSize(SAP.getPaymentButtonList())) {
+		  if(Actionsss.elementSize(shippingPage.getPaymentButtonList())) {
 			  Thread.sleep(2000);	 
-			  if(Actionsss.displayElement(SAP.getPaymentButton())) {
-				  Actionsss.javascriptClick(SAP.getPaymentButton());
+			  if(Actionsss.displayElement(shippingPage.getPaymentButton())) {
+				  Actionsss.javascriptClick(shippingPage.getPaymentButton());
 			  }
 		  }
 	  }
@@ -176,18 +174,18 @@ public class AddressSelection extends baseClass{
 	  public void selectBillingAddress() throws InterruptedException {
 		  
 		 
-		  if(Actionsss.displayElement(SAP.getBillingAddressDisplay())) {
+		  if(Actionsss.displayElement(shippingPage.getBillingAddressDisplay())) {
 			  
-			  if(Actionsss.displayElement(SAP.getBillingFName())) {
+			  if(Actionsss.displayElement(shippingPage.getBillingFName())) {
 				  
 				  Thread.sleep(1000);		
-				  Actionsss.sendKeys(SAP.getBillingFName(), fakeFirstName,fName);
+				  Actionsss.sendKeys(shippingPage.getBillingFName(), fakeFirstName,fName);
 				  logger.info("Entered fname");
-				  Actionsss.sendKeys(SAP.getBillingLName(),fakelastName,lName);
+				  Actionsss.sendKeys(shippingPage.getBillingLName(),fakelastName,lName);
 				  logger.info("Entered lname");	
-				  Actionsss.addressFromDropDown(SAP.getBillingAddress());
+				  Actionsss.addressFromDropDown(shippingPage.getBillingAddress());
 				  
-				  Actionsss.sendKeys(SAP.getBillingPhoneNumber(), phonenumber, Phone);
+				  Actionsss.sendKeys(shippingPage.getBillingPhoneNumber(), phonenumber, Phone);
 				  logger.info("Entered phone number");
 				  Thread.sleep(2000);
 			  }

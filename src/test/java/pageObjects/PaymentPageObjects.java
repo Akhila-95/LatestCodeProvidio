@@ -9,13 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.providio.testcases.baseClass;
 
-public class PaymentPage extends baseClass{
+public class PaymentPageObjects extends baseClass{
 	WebDriver lDriver;
     //pageFactory constructor for this page
-	public PaymentPage(WebDriver rDriver){
+	public PaymentPageObjects(WebDriver rDriver){
 		lDriver =rDriver;
 		PageFactory.initElements(rDriver, this);
 	}
+	
+	
 	
 	@FindBy(xpath="//div[@class='card shipping-summary']")
 	WebElement shippingPageList;
@@ -59,13 +61,6 @@ public class PaymentPage extends baseClass{
 		return paymentInfoDiv;
 	}
 	
-	
-	@FindBy(xpath = "//label[contains(text(), 'Payment Method')]")
-    private WebElement paymentPage;		
-	public WebElement getPaymentPage() {
-		return paymentPage;
-	}
-
 	@FindBy(xpath = "//div[@class='js-payment-options ']")
     private List<WebElement> creditCardDiv;		
 	public List<WebElement> getPaymentPagecreditCardDivList() {
@@ -547,14 +542,14 @@ public class PaymentPage extends baseClass{
     }
     
     // WebElement for Review Order button
-    @FindBy(css = "button.submit-payment")
+    @FindBy(css ="button.submit-payment")
     private WebElement brainTreeReviewOrderBtn;
     public WebElement getBrainTreeReviewOrderBtn() {
         return brainTreeReviewOrderBtn;
     }
     
     // WebElement for Review Order button
-    @FindBy(xpath = "//button[contains(text(), 'Next: Review Order')]")
+    @FindBy(css = "button.submit-payment")
     private List<WebElement> reviewOrderBtnList;
     public List<WebElement> getReviewOrderBtnList() {
         return reviewOrderBtnList;
@@ -849,6 +844,12 @@ public class PaymentPage extends baseClass{
   		return loginbuttonList;
   	}
  	
+ 	@FindBy(id="headerText")
+ 	WebElement paypalText;
+ 	public WebElement getPaypalPopUpText() {
+ 		return paypalText;
+ 	}
+ 	
  	@FindBy(xpath = "//button[contains(text(), 'Log In')]")
      WebElement loginbutton;
  	public WebElement getloginbutton() {
@@ -901,6 +902,146 @@ public class PaymentPage extends baseClass{
 	public WebElement getBillingAddress() {
  		return billingAddress;
  	}
+	
+	@FindBy(xpath="(//div[contains(@class,'gift-summary')])[3]")
+	WebElement  giftMessageInCop3;
+	public WebElement getgiftMessageInCop3() {
+		return giftMessageInCop3;
+	}
+	@FindBy(xpath="//button[@aria-label='Edit Shipping']")
+	WebElement  editShipping;
+	public WebElement getEditShipping() {
+		return editShipping;
+	}
+
+	// update billing addres
+	@FindBy(css = "select#billingAddressSelector")
+	WebElement updateAddressBtnForBillingAddress;
+	public WebElement getUpdateAddressBtnForBillingAddress() {
+		return updateAddressBtnForBillingAddress;
+	}
+	
+	
+	@FindBy(css="button.submit-payment")
+	WebElement  nextReviewOrderBtn;
+	public WebElement getNextReviewOrderBtn() {
+		return nextReviewOrderBtn;
+	}
+	
+	@FindBy(css="button.submit-payment")
+	List<WebElement>  nextReviewOrderBtnList;
+	public List<WebElement> getNextReviewOrderBtnList() {
+		return nextReviewOrderBtnList;
+	}
+	
+	@FindBy(xpath="//label[contains(text(),'Payment Method')]")
+	List<WebElement>  paymentPageList;
+	public List<WebElement> getpaymentPageList() {
+		return paymentPageList;
+	}
+	
+	@FindBy(xpath="//label[contains(text(),'Payment Method')]")
+	WebElement  paymentPage;
+	public WebElement getpaymentPage() {
+		return paymentPage;
+	}
+	@FindBy(xpath="//button[@aria-label='action.edit.step.msg.customer']")
+	WebElement  customerInfoFromCop3;
+	public WebElement getCustomerInfoFromCop3() {
+		return customerInfoFromCop3;
+	}
+	
+	@FindBy(css="span.customer-summary-email")
+	WebElement  editCustomerInfo;
+	public WebElement getEditCustomerInfo() {
+		return editCustomerInfo;
+	}
+	
+	@FindBy(xpath="(//div[@class='address-summary'])[1]//div[@class='address1']")
+	WebElement   shippingAddress;
+	public WebElement getShippingAddress() {
+		return shippingAddress;
+	}
+	
+//    @FindBy(xpath = "//label[contains(text(),'Billing Address')]")
+//    private List<WebElement> billingAddress;
+//    public List<WebElement> getBillingAddressDisplayList() {
+//        return billingAddress;
+//    }
+    
+    @FindBy(xpath = "//label[contains(text(),'Billing Address')]")
+    private WebElement billingAddressDisplay;
+    public WebElement getBillingAddressDisplay() {
+        return billingAddressDisplay;
+    }
+    
+    @FindBy(xpath = "//label[contains(text(),'Billing Address')]")
+    private List<WebElement> billingAddressDisplayList;
+    public List<WebElement> getBillingAddressList() {
+        return billingAddressDisplayList;
+    }
+    
+    @FindBy(id = "billingFirstName")
+    private WebElement billingFName;
+    public WebElement getBillingFName() {
+        return billingFName;
+    }
+    
+    @FindBy(id = "billingLastName")
+    private WebElement billingLName;
+    public WebElement getBillingLName() {
+        return billingLName;
+    }
+
+    @FindBy(id = "phoneNumber")
+    private WebElement billingPhoneNumber;
+    public WebElement getBillingPhoneNumber() {
+        return billingPhoneNumber;
+    }
+
+    
+    @FindBy(id = "defaultFirstName")
+    private WebElement firstNameError;
+    public WebElement getFirstNameErrorMsg() {
+        return firstNameError;
+    }
+    
+    @FindBy(id = "defaultLastName")
+    private WebElement lastNameError;
+    public WebElement getlastNameErrorMsg() {
+        return lastNameError;
+    }
+    
+    @FindBy(id = "defaultAddressLine1")
+    private WebElement address1Error;
+    public WebElement getAddress1ErrorMsg() {
+        return address1Error;
+    }
+    
+    @FindBy(id = "defaultCity")
+    private WebElement cityError;
+    public WebElement getCityErrorMsg() {
+        return cityError;
+    }
+    
+    @FindBy(id = "defaultState")
+    private WebElement stateError;
+    public WebElement getStateErrorMsg() {
+        return stateError;
+    }
+    
+    @FindBy(id = "defaultZipCode")
+    private WebElement zipCodeError;
+    public WebElement getZipCodeErrorMsg() {
+        return zipCodeError;
+    }
+    
+    @FindBy(id = "defaultTelephoneNumber")
+    private WebElement phoneNumberError;
+    public WebElement getphoneNumberErrorMsg() {
+    return  phoneNumberError;
+    }
+	    
 }
 
 

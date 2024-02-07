@@ -3,18 +3,17 @@ package tasks;
 import com.github.javafaker.Faker;
 import com.providio.testcases.baseClass;
 
+import CreditCardPayment.AllValidationErrorMessagesOfCreditCard;
 import CreditCardPayment.CreditCardDetails;
-import CreditCardPayment.creditCardAllTypeValidation;
 import GifCertificatePayment.GiftCertificateForGc;
 import GifCertificatePayment.GiftCertificateInCombination;
 import PaypalPayment.CheckOutPaypal;
 import data.AddressSelection;
 import functionality.Actionsss;
 import pageObjects.CheckOutPage;
-import pageObjects.CheckOutPage2;
-import pageObjects.CheckOutPage3;
-import pageObjects.PaymentPage;
+import pageObjects.PaymentPageObjects;
 import pageObjects.ReviewOrderPage;
+import pageObjects.ShippingPageObject;
 import pageObjects.homepage;
 import validations.OrderPageValidation;
 import validations.PaymentPageValidation;
@@ -23,17 +22,16 @@ import validations.ShippingPageValidation;
 
 public class PaymentPageTasks extends baseClass {
 
-	private static final CheckOutPage3 cop3 = new CheckOutPage3(driver);
-	private static final CheckOutPage2 cop2 = new CheckOutPage2(driver);
+
 	private static CheckOutPage CP = new CheckOutPage(driver);
-	private static final PaymentPageValidation cop3v = new PaymentPageValidation();
 	private static final ReviewOrderPage reviewOrder = new ReviewOrderPage(driver);
-	private static final 	PaymentPage pp = new PaymentPage(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
+	private static final ShippingPageObject shippingPage = new ShippingPageObject(driver);
 	private static homepage homePage = new homepage(driver);
 	
 	public static void paymentPageView() throws Exception {
-		if((Actionsss.elementSize(cop3.getpaymentPageList()))&& (Actionsss.elementSize(cop3.getNextReviewOrderBtnList()) || Actionsss.elementSize(pp.getSelectPlaceOrderBtnList()))) {
-			if((Actionsss.displayElement(cop3.getpaymentPage())) ){
+		if((Actionsss.elementSize(paymentPage.getpaymentPageList()))&& (Actionsss.elementSize(paymentPage.getNextReviewOrderBtnList()) || Actionsss.elementSize(paymentPage.getSelectPlaceOrderBtnList()))) {
+			if((Actionsss.displayElement(paymentPage.getpaymentPage())) ){
 				logger.info("Paymnet page is loaded");
 			}
 		}else {
@@ -46,7 +44,7 @@ public class PaymentPageTasks extends baseClass {
 	public static void getBackToCart() throws Exception {	
 		 paymentPageView();
 		 PaymentPageValidation.bactToCartValidationInPaymentPage();
-		 Actionsss.click(pp.getBackToCart());				
+		 Actionsss.click(paymentPage.getBackToCart());				
 		 CheckOutPageTasks.guestCheckout();
 		 ShippingPageTasks.enterValidAddress();
 		 PaymentPageValidation.bactToCartValidationInPaymentPage();
@@ -74,7 +72,7 @@ public class PaymentPageTasks extends baseClass {
 	
 	public static void paginationOfProductsInPaymentPage() throws InterruptedException, Exception {
 		paymentPageView();
-		Actionsss.randomElementFromList(pp.getproductsInCheckoutPage2());
+		Actionsss.randomElementFromList(paymentPage.getproductsInCheckoutPage2());
 		PaymentPageValidation.pdpPageValidation();
 		ViewCartPageTasks.viewCartpage();
 		CheckOutPageTasks.GuestMailCheckOut();
@@ -91,23 +89,24 @@ public class PaymentPageTasks extends baseClass {
 		PaymentPageValidation.reviewOrderButtonInPaymentPage();
 	
 	}
+	
 	public static void editShippindAddressFromPaymentPage() throws Exception {
 		paymentPageView();
 		Thread.sleep(2000);
-		previousAddresses=Actionsss.getTextOfElement(cop3.getShippingAddress());		
-		Actionsss.click(cop3.getEditShipping());
+		previousAddresses=Actionsss.getTextOfElement(paymentPage.getShippingAddress());		
+		Actionsss.click(paymentPage.getEditShipping());
 		if(Actionsss.elementSize(CP.getSelectGuestCheckoutBtnList())) {			
 			AddressSelection.editShippingAddress();
 		}else {
 			AddressSelection.selectingRandomSavedShippingAddress();
-			Actionsss.click(cop2.getUpdateAddressBtn());
+			Actionsss.click(shippingPage.getUpdateAddressBtn());
 			AddressSelection.editShippingAddress();
 		}
 		Thread.sleep(2000);
-		Actionsss.CombinedClick(cop2.getNextPaymentButton());				
+		Actionsss.CombinedClick(shippingPage.getNextPaymentButton());				
 		ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
 		Thread.sleep(2000);
-		editedAddress=Actionsss.getTextOfElement(cop3.getShippingAddress());
+		editedAddress=Actionsss.getTextOfElement(shippingPage.getShippingAddress());
 		PaymentPageValidation.editShippingValidationInCOP3();
 		Thread.sleep(1000);
 		
@@ -117,11 +116,11 @@ public class PaymentPageTasks extends baseClass {
 	public static void editGiftMessageInCop2() throws Exception {
 		paymentPageView();
 		Thread.sleep(1000);
-		Actionsss.CombinedClick(cop3.getEditShipping());
-		Actionsss.CombinedClick(cop2.getGiftMessageCheckButton());
+		Actionsss.CombinedClick(paymentPage.getEditShipping());
+		Actionsss.CombinedClick(shippingPage.getGiftMessageCheckButton());
 		String giftMessage ="Birthday gift";			
-		Actionsss.sendKeys(cop2.getGiftMessagegiftMessageTextArea(), giftMessage,"gift message");
-		Actionsss.CombinedClick(cop2.getNextPaymentButton());	
+		Actionsss.sendKeys(shippingPage.getGiftMessagegiftMessageTextArea(), giftMessage,"gift message");
+		Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
 		Thread.sleep(2000);
 		PaymentPageValidation.displayOfGiftMessageInCheckoutPage3();
 	}
@@ -131,8 +130,8 @@ public class PaymentPageTasks extends baseClass {
 		Thread.sleep(2000);
 		if(Actionsss.elementSize(CP.getSelectGuestCheckoutBtnList())) {			
 			Thread.sleep(1000);
-			previousMail=Actionsss.getTextOfElement(cop3.getEditCustomerInfo());		
-			Actionsss.click(cop3.getCustomerInfoFromCop3());		
+			previousMail=Actionsss.getTextOfElement(paymentPage.getEditCustomerInfo());		
+			Actionsss.click(paymentPage.getCustomerInfoFromCop3());		
 			Faker faker = new Faker();
 			String randomFirstName = faker.name().firstName(); 
 		    String editedEmailInCop3 = randomFirstName + "EditedFromPaymentPage@etg.digital"; 
@@ -141,10 +140,10 @@ public class PaymentPageTasks extends baseClass {
 			Actionsss.click(CP.getSelectContinueasGuesttBtn());
 
 			//CheckOutPage2Tasks.enterValidAddress();
-			Actionsss.CombinedClick(cop2.getNextPaymentButton());	
-			editedEmailFromCop3= Actionsss.getTextOfElement(cop3.getEditCustomerInfo());
+			Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
+			editedEmailFromCop3= Actionsss.getTextOfElement(paymentPage.getEditCustomerInfo());
 			 
-			cop3v.editEmailValidationInCOP3();
+			PaymentPageValidation.editEmailValidationInCOP3();
 			
 			PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard();
 		}else {			
@@ -157,17 +156,17 @@ public class PaymentPageTasks extends baseClass {
 	
 	public static void updateBillingAddress() throws Exception {
 		paymentPageView();
-		previousBillingAddress=Actionsss.getTextOfElement(cop3.getUpdateAddressBtnForBillingAddress());		
+		previousBillingAddress=Actionsss.getTextOfElement(paymentPage.getUpdateAddressBtnForBillingAddress());		
 		Thread.sleep(3000);
 		//Actionsss.doubleClick(cop2.getUpdateAddressBtn());
-		Actionsss.javascriptClick(cop2.getUpdateAddressBtn());
-		Actionsss.click(cop2.getUpdateAddressBtn());
+		Actionsss.javascriptClick(shippingPage.getUpdateAddressBtn());
+		Actionsss.click(shippingPage.getUpdateAddressBtn());
 		Thread.sleep(1000);
 		AddressSelection.editBillingAddress();
 		Thread.sleep(2000);
 		PaymentPageTasks.creditCardWithValidDetails();				
 		editedBillingAddress=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());		
-		cop3v.updateBillingAddressValidation();
+		PaymentPageValidation.updateBillingAddressValidation();
 		ReviewOrderPageTask.placeOrder();
 		OrderPageValidation.validatePlacetheOrderPage();
 		OrderPageValidation.orderNumberAndOrderDate();
@@ -175,16 +174,16 @@ public class PaymentPageTasks extends baseClass {
 	}
 	public static void addNewBillingAddress() throws Exception {
 		paymentPageView();
-		previousBillingAddress=Actionsss.getTextOfElement(cop3.getUpdateAddressBtnForBillingAddress());
+		previousBillingAddress=Actionsss.getTextOfElement(paymentPage.getUpdateAddressBtnForBillingAddress());
 		Thread.sleep(2000);
-		Actionsss.javascriptClick(cop2.getnewAddressBtn());	
-		Actionsss.click(cop2.getnewAddressBtn());		
+		Actionsss.javascriptClick(shippingPage.getnewAddressBtn());	
+		Actionsss.click(shippingPage.getnewAddressBtn());		
 		Thread.sleep(1000);
 		AddressSelection.editBillingAddress();	
 		Thread.sleep(1000);
 		PaymentPageTasks.creditCardWithValidDetails();				
 		editedBillingAddress=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());		
-		cop3v.updateBillingAddressValidation();
+		PaymentPageValidation.updateBillingAddressValidation();
 		ReviewOrderPageTask.placeOrder();
 		OrderPageValidation.validatePlacetheOrderPage();
 		OrderPageValidation.orderNumberAndOrderDate();
@@ -198,63 +197,63 @@ public class PaymentPageTasks extends baseClass {
 	
 	public static void paginationOfProductsFromPaymentPage() throws InterruptedException, Exception {
 		paymentPageView();
-		Actionsss.randomElementFromList(cop2.getproductsInCheckoutPage2());
+		Actionsss.randomElementFromList(shippingPage.getproductsInCheckoutPage2());
 		ShippingPageValidation.pdpPageValidation();
 		ViewCartPageTasks.viewCartpage();
 		CheckOutPageTasks.GuestMailCheckOut();
 		AddressSelection.editShippingAddress();
-		Actionsss.CombinedClick(cop2.getNextPaymentButton());	
+		Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
 	}
 	
 	public static void billingPhoneNumber() throws Exception {
 		paymentPageView();
-		Actionsss.clearText(cop3.getBillingPhoneNumber());
+		Actionsss.clearText(paymentPage.getBillingPhoneNumber());
 		CreditCardDetails.creditCardDetails();	
 		PaymentPageValidation.billingPhoneNumberErrorValidation();
 	}
 	
 	public static void allErrorsInCreditCard() throws Exception {
 			paymentPageView();
-			creditCardAllTypeValidation.allErrorsInCreditCard();
+			AllValidationErrorMessagesOfCreditCard.allErrorsInCreditCard();
 	
 	}
 	
 	public static void CreditCardCvvAndExpErrorMessage() throws Exception {
 			paymentPageView();
-			creditCardAllTypeValidation.creditCardCvvAndExpError();
+			AllValidationErrorMessagesOfCreditCard.creditCardCvvAndExpError();
 		
 	}
 
 	public static void CreditCardCvvErrorMessage() throws Exception {
 			paymentPageView();
-			creditCardAllTypeValidation.creditCvvError();
+			AllValidationErrorMessagesOfCreditCard.creditCvvError();
 		
 	}
 	public static void creditcardNumberInValidError() throws Exception {
 			paymentPageView();
-			creditCardAllTypeValidation.creditcardNumberInValidError();
+			AllValidationErrorMessagesOfCreditCard.creditcardNumberInValidError();
 		
 	}
 	
 	public static void creditCardExpDateInValid() throws Exception {
 			paymentPageView();
-			creditCardAllTypeValidation.creditCardExpMonthInValid();
+			AllValidationErrorMessagesOfCreditCard.creditCardExpMonthInValid();
 		
 	}
 	
 	public static void creditCardNumberInCompleteError() throws Exception {
 			paymentPageView();
-			creditCardAllTypeValidation.creditCardNumberInCompleteError();
+			AllValidationErrorMessagesOfCreditCard.creditCardNumberInCompleteError();
 		
 	}
 	public static void creditCardInCompleteExpYearError() throws Exception {
 			paymentPageView();
-			creditCardAllTypeValidation.creditCardNumberInCompleteExpYearError();
+			AllValidationErrorMessagesOfCreditCard.creditCardNumberInCompleteExpYearError();
 		
 	}
 	public static void creditCardInCompleteCvvError() throws Exception {
 			paymentPageView();
-			creditCardAllTypeValidation.creditCardInCompleteCvvError();
+			AllValidationErrorMessagesOfCreditCard.creditCardInCompleteCvvError();
 		
 	}
 	
@@ -273,8 +272,8 @@ public class PaymentPageTasks extends baseClass {
 	public static void getEnterGiftCodeErrorMsg() throws InterruptedException, Exception {
 		paymentPageView();
 		Actionsss.scrollWindowsByPixel(300);
-		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
-			 Actionsss.javascriptClick(pp.getApplyGiftCardButton());			
+		 if(Actionsss.elementSize(paymentPage.getGiftCertificateLabel())) {
+			 Actionsss.javascriptClick(paymentPage.getApplyGiftCardButton());			
 			 PaymentPageValidation.enterGiftCodeErrorMsgValidation();
 		 }else {
 		    	test.info("Gift certificate is in cart");
@@ -287,9 +286,9 @@ public class PaymentPageTasks extends baseClass {
 	public static void getInvalidGcCode() throws Exception {
 		paymentPageView();
 		Actionsss.scrollWindowsByPixel(300);
-		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
-			 Actionsss.sendKeys(pp.getGiftcertificateInput(),"VODJMTWPTOAVVOZG", " VODJMTWPTOAVVOZG gift code");					         
-             Actionsss.javascriptClick(pp.getApplyGiftCardButton());
+		 if(Actionsss.elementSize(paymentPage.getGiftCertificateLabel())) {
+			 Actionsss.sendKeys(paymentPage.getGiftcertificateInput(),"VODJMTWPTOAVVOZG", " VODJMTWPTOAVVOZG gift code");					         
+             Actionsss.javascriptClick(paymentPage.getApplyGiftCardButton());
              logger.info("Apply button is selected");
              Thread.sleep(1000);
              PaymentPageValidation.invalidGiftCodeErrorMsgValidation();
@@ -303,9 +302,9 @@ public class PaymentPageTasks extends baseClass {
 	public static void getInsufficientGcCode() throws Exception {
 		paymentPageView();
 		Actionsss.scrollWindowsByPixel(300);
-		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
-			 Actionsss.sendKeys(pp.getGiftcertificateInput(),"GLOIWCSCSCTVGYIF", "GLOIWCSCSCTVGYIF gift code");					         
-             Actionsss.javascriptClick(pp.getApplyGiftCardButton());
+		 if(Actionsss.elementSize(paymentPage.getGiftCertificateLabel())) {
+			 Actionsss.sendKeys(paymentPage.getGiftcertificateInput(),"GLOIWCSCSCTVGYIF", "GLOIWCSCSCTVGYIF gift code");					         
+             Actionsss.javascriptClick(paymentPage.getApplyGiftCardButton());
              logger.info("Apply button is selected");
              Thread.sleep(1000);
              PaymentPageValidation.insufficientGiftCodeErrorMsgValidation();
@@ -318,9 +317,9 @@ public class PaymentPageTasks extends baseClass {
 	public static void getGcBelongsToDifferentCustomer() throws Exception {
 		paymentPageView();
 		Actionsss.scrollWindowsByPixel(300);
-		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
-			 Actionsss.sendKeys(pp.getGiftcertificateInput(),"GLOIWCSCSCTVGYIF", "GLOIWCSCSCTVGYIF gift code");					         
-            Actionsss.javascriptClick(pp.getApplyGiftCardButton());
+		 if(Actionsss.elementSize(paymentPage.getGiftCertificateLabel())) {
+			 Actionsss.sendKeys(paymentPage.getGiftcertificateInput(),"GLOIWCSCSCTVGYIF", "GLOIWCSCSCTVGYIF gift code");					         
+            Actionsss.javascriptClick(paymentPage.getApplyGiftCardButton());
             logger.info("Apply button is selected");
             Thread.sleep(1000);
             PaymentPageValidation.insufficientGiftCodeErrorMsgValidation();
@@ -334,9 +333,9 @@ public class PaymentPageTasks extends baseClass {
 	public static void getCheckBalOfValidGc() throws Exception {
 		paymentPageView();
 		Actionsss.scrollWindowsByPixel(300);
-		 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
-			 Actionsss.sendKeys(pp.getGiftcertificateInput(),"JYKCFKIMMVAPOFDV", "JYKCFKIMMVAPOFDV gift code");					         
-			 Actionsss.javascriptClick(pp.getCheckBalanceButton());
+		 if(Actionsss.elementSize(paymentPage.getGiftCertificateLabel())) {
+			 Actionsss.sendKeys(paymentPage.getGiftcertificateInput(),"JYKCFKIMMVAPOFDV", "JYKCFKIMMVAPOFDV gift code");					         
+			 Actionsss.javascriptClick(paymentPage.getCheckBalanceButton());
              logger.info("check button is selected");
              Thread.sleep(2000);
              PaymentPageValidation.checkBalOfValidGiftCodeValidation();
@@ -349,9 +348,9 @@ public class PaymentPageTasks extends baseClass {
 		public static void getCheckBalOfInvalidGc() throws Exception {
 			paymentPageView();
 			Actionsss.scrollWindowsByPixel(300);
-			 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
-				 Actionsss.sendKeys(pp.getGiftcertificateInput(),"VODJMTWPTOAVVOZG", "VODJMTWPTOAVVOZG gift code");					         
-	             Actionsss.javascriptClick(pp.getCheckBalanceButton());
+			 if(Actionsss.elementSize(paymentPage.getGiftCertificateLabel())) {
+				 Actionsss.sendKeys(paymentPage.getGiftcertificateInput(),"VODJMTWPTOAVVOZG", "VODJMTWPTOAVVOZG gift code");					         
+	             Actionsss.javascriptClick(paymentPage.getCheckBalanceButton());
 	             logger.info("check button is selected");
 	             Thread.sleep(1000);
 	             PaymentPageValidation.checkBalOfInvalidGiftCodeValidation();
@@ -364,9 +363,9 @@ public class PaymentPageTasks extends baseClass {
 		public static void applyValidGc() throws Exception {
 			paymentPageView();
 			Actionsss.scrollWindowsByPixel(300);
-			 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
-				 Actionsss.sendKeys(pp.getGiftcertificateInput(),"FGMLWZFQFGVOIVZP", "FGMLWZFQFGVOIVZP gift code");					         
-	             Actionsss.javascriptClick(pp.getApplyGiftCardButton());
+			 if(Actionsss.elementSize(paymentPage.getGiftCertificateLabel())) {
+				 Actionsss.sendKeys(paymentPage.getGiftcertificateInput(),"FGMLWZFQFGVOIVZP", "FGMLWZFQFGVOIVZP gift code");					         
+	             Actionsss.javascriptClick(paymentPage.getApplyGiftCardButton());
 	             logger.info("Apply button is selected");
 	             Thread.sleep(2000);
 	             PaymentPageValidation.succesMsgForValidGcAppliedValidation();
@@ -380,9 +379,9 @@ public class PaymentPageTasks extends baseClass {
 		public static void removeAppliedGc() throws Exception {
 			paymentPageView();
 			Actionsss.scrollWindowsByPixel(300);
-			 if(Actionsss.elementSize(pp.getGiftCertificateLabel())) {
-				 Actionsss.sendKeys(pp.getGiftcertificateInput(),"CHVCLPRPVYSJICGW", "CHVCLPRPVYSJICGW gift code");					         
-	             Actionsss.javascriptClick(pp.getApplyGiftCardButton());
+			 if(Actionsss.elementSize(paymentPage.getGiftCertificateLabel())) {
+				 Actionsss.sendKeys(paymentPage.getGiftcertificateInput(),"CHVCLPRPVYSJICGW", "CHVCLPRPVYSJICGW gift code");					         
+	             Actionsss.javascriptClick(paymentPage.getApplyGiftCardButton());
 	             Thread.sleep(1000);
 	         /*    countOfGcApplied= Actionsss.getSizeOfList(pp.getRemoveGcList());
 	 			 logger.info(countOfGcApplied);
@@ -390,10 +389,10 @@ public class PaymentPageTasks extends baseClass {
 	             logger.info("Apply button is selected");
 	             logger.info(countOfGcAppliedAfterItsRemoval);
 	             Thread.sleep(1000);*/
-	             Actionsss.click(pp.getRemoveGc());
+	             Actionsss.click(paymentPage.getRemoveGc());
 	             Thread.sleep(1000);
 	             PaymentPageValidation.gcRemoveValidation();
-			 }else 	if(Actionsss.elementSize(pp.getsuccessGiftCodeRedemptionMsgList())) {
+			 }else 	if(Actionsss.elementSize(paymentPage.getsuccessGiftCodeRedemptionMsgList())) {
 				 
 			 } else {
 			    	test.info("Gift certificate is in cart");
@@ -429,23 +428,24 @@ public class PaymentPageTasks extends baseClass {
 		}
 	
 		public static void clickReviewOrderButton() throws Exception {
-			if(Actionsss.elementSize(pp.getReviewOrderBtnList())) {
-				if(Actionsss.displayElement(pp.getReviewOrderBtn())) {
-					Thread.sleep(1000);
-					Actionsss.javascriptClick(pp.getReviewOrderBtn());
-					Thread.sleep(3000);							
+		   if(Actionsss.elementSize(paymentPage.getBrainTree())) {
+			   Thread.sleep(3000);
+				 if(Actionsss.displayElement(paymentPage.getReviewOrderBtn())) {
+			    		Actionsss.scrollWindowsByPixel(100);				    			    
+			    		Actionsss.click(paymentPage.getReviewOrderBtn());					    		 	    		
+			    		paymentPage.getReviewOrderBtn();
+			    		ReviewOrderPageValidation.VerifyingReviewOrderBtn();
+			    	}
+	    	}else {
+	    		Actionsss.scrollWindowsByPixel(200);
+	    		Thread.sleep(1000);
+	    		if(Actionsss.elementSize(paymentPage.getReviewOrderBtnList())) {
+					if(Actionsss.displayElement(paymentPage.getReviewOrderBtn())) {
+						Thread.sleep(1000);
+						Actionsss.javascriptClick(paymentPage.getReviewOrderBtn());
+						Thread.sleep(3000);							
+					}
 				}
-			}
-		}
-		public static void brainTreeReviewOrderButton() throws InterruptedException {
-			//Thread.sleep(3000);
-	    	if(Actionsss.displayElement(pp.getReviewOrderBtn())) {
-	    		Actionsss.scrollWindowsByPixel(100);				    		
-	    	//	 Thread.sleep(1000);
-	    		 Actionsss.click(pp.getReviewOrderBtn());					    		 
-	    		 test.info("Clicked on review order button");
-	    		 pp.getReviewOrderBtn();
-	    		 ReviewOrderPageValidation.VerifyingReviewOrderBtn();
 	    	}
 		}
 }

@@ -48,7 +48,6 @@ public class CartPagePayal extends baseClass{
         }else {
         	test.info("Cybersouce payment OR stripe payment integration  is activated so, No paypal for cybersouce and stripe");
         	test.pass("No paypal integration for cybersource and stripe , choose another integration to do the payment with payment");
-        }
-	  	
+        }	  	
 	}
 }

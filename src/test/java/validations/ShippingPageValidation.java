@@ -7,20 +7,19 @@ import com.providio.testcases.baseClass;
 
 import data.AddressSelection;
 import functionality.Actionsss;
-import pageObjects.CheckOutPage2;
-import pageObjects.PaymentPage;
-import pageObjects.ShippingAddressPage;
+import pageObjects.PaymentPageObjects;
+import pageObjects.ShippingPageObject;
 
 public class ShippingPageValidation extends baseClass{
 
-	private static final CheckOutPage2 cop2 = new CheckOutPage2(driver);
-	private static ShippingAddressPage SAP = new ShippingAddressPage(driver);
-	private static PaymentPage pp = new PaymentPage(driver);
+	
+	private static ShippingPageObject shippingPage = new ShippingPageObject(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
 	static AddressSelection addresSelect = new AddressSelection();
 	
 	public static void customerInfoValidationInCOP2_Page() {
 		 test.info("Verifying the customer information is displayed in checkout 2 page ");
-		 if(Actionsss.displayElement(cop2.getCustomerInfo())) {
+		 if(Actionsss.displayElement(shippingPage.getCustomerInfo())) {
 			 logger.info("Customer information is displayed in check out page 2");
 			 test.pass("Customer information is displayed in check out page 2");
 		 }else {
@@ -42,7 +41,7 @@ public class ShippingPageValidation extends baseClass{
 	}
 	public static void shippingDetailValidationInCop2_Page() {
 		test.info("Verifying the shipping details form  is displayed in checkout 2 page ");
-		 if(Actionsss.displayElement(cop2.getshippingInfo())) {
+		 if(Actionsss.displayElement(shippingPage.getshippingInfo())) {
 			 logger.info("shipping details form  is displayed in check out page 2");
 			 test.pass("shipping details form is displayed in check out page 2");
 		 }else {
@@ -53,7 +52,7 @@ public class ShippingPageValidation extends baseClass{
 	
 	public static void orderSummaryValidationInCop2_Page() {
 		test.info("Verifying the orderSummary display in checkout 2 page ");
-		 if(Actionsss.displayElement(cop2.getOrderSummaryDiv())) {
+		 if(Actionsss.displayElement(shippingPage.getOrderSummaryDiv())) {
 			 logger.info("orderSummary  is displayed in check out page 2");
 			 test.pass("orderSummary  is displayed in check out page 2");
 		 }else {
@@ -64,7 +63,7 @@ public class ShippingPageValidation extends baseClass{
 	
 	public static void bactToCartValidationInCop2_Page() {
 		test.info("Verifying the back to cart  display in checkout 2 page ");
-		 if(Actionsss.displayElement(cop2.getBackToCart())) {
+		 if(Actionsss.displayElement(shippingPage.getBackToCart())) {
 			 logger.info("Back to cart is displayed in check out page 2");
 			 test.pass("Back to cart is displayed in check out page 2");
 		 }else {
@@ -75,7 +74,7 @@ public class ShippingPageValidation extends baseClass{
 	
 	public static void nextPaymentButtonValidationInCop2_Page() {
 		test.info("Verifying the Next Payment Button   display in checkout 2 page ");
-		 if(Actionsss.displayElement(cop2.getNextPaymentButton())) {
+		 if(Actionsss.displayElement(shippingPage.getNextPaymentButton())) {
 			 logger.info("Next Payment Button  is displayed in check out page 2");
 			 test.pass("Next Payment Button  is displayed in check out page 2");
 		 }else {
@@ -86,7 +85,7 @@ public class ShippingPageValidation extends baseClass{
 	
 	public static void etgLogoValidationInCop2_Page() {
 		test.info("Verifying the  etg logo display in checkout 2 page ");
-		 if(Actionsss.displayElement(cop2.getOrderSummaryDiv())) {
+		 if(Actionsss.displayElement(shippingPage.getOrderSummaryDiv())) {
 			 logger.info(" Etg logo  is displayed in check out page 2");
 			 test.pass(" Etg logo is displayed in check out page 2");
 		 }else {
@@ -97,7 +96,7 @@ public class ShippingPageValidation extends baseClass{
 	
 	public static void pdpPageValidation() {
 		test.info("Verifying the pagination of product from checkout page 2 ");
-		if(Actionsss.displayElement(cop2.getPdpPage())) {
+		if(Actionsss.displayElement(shippingPage.getPdpPage())) {
 			 logger.info("Succesfully paginated to PDP page by clicking the product from check out page 2");
 			 test.pass("Succesfully paginated to PDP page by clicking the product from check out page 2");
 		 }else {
@@ -107,10 +106,8 @@ public class ShippingPageValidation extends baseClass{
 	}
 	
 	public static void VerifiedThatNextpaymentBtnClick() {
- 		test.info("Verified That Nextpayment Btn click");
- 		
-     	WebElement miniCartPage = driver.findElement(By.xpath("//div[@class='card payment-form']"));
-     	
+ 		test.info("Verified That Nextpayment Btn click");		
+     	WebElement miniCartPage = driver.findElement(By.xpath("//div[@class='card payment-form']"));    	
      	if (miniCartPage.isDisplayed()) {
      	    logger.info("Successfully Clicked on the Nextpayment Btn and navigated to payment page");
      	    test.pass("Successfully Clicked on the Nextpayment Btn  and navigated to payment page");
@@ -146,13 +143,13 @@ public class ShippingPageValidation extends baseClass{
      	}
  	}
  	public static void negativeValidationForShippingAddress() throws Exception {
-		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {	  		
+		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {	  		
 			test.info("Verify the display of all error messages for shipping address when user is clicked on next payment button without entering all the mandatory details and checked-in as guest");		
 			addresSelect.selectPaymentMethod();
 			 Thread.sleep(1000);
-			if(Actionsss.displayElement(SAP.getFirstNameErrorMsg()) && Actionsss.displayElement(SAP.getlastNameErrorMsg()) && Actionsss.displayElement(SAP.getAddress1ErrorMsg())
-					&& Actionsss.displayElement(SAP.getStateErrorMsg()) && Actionsss.displayElement(SAP.getCityErrorMsg()) && Actionsss.displayElement(SAP.getZipCodeErrorMsg())
-					&& Actionsss.displayElement(SAP.getphoneNumberErrorMsg())) {
+			if(Actionsss.displayElement(shippingPage.getFirstNameErrorMsg()) && Actionsss.displayElement(shippingPage.getlastNameErrorMsg()) && Actionsss.displayElement(shippingPage.getAddress1ErrorMsg())
+					&& Actionsss.displayElement(shippingPage.getStateErrorMsg()) && Actionsss.displayElement(shippingPage.getCityErrorMsg()) && Actionsss.displayElement(shippingPage.getZipCodeErrorMsg())
+					&& Actionsss.displayElement(shippingPage.getphoneNumberErrorMsg())) {
 				test.pass("Successfully all the error messages are displayed for shipping address,first name, last name phone number");
 				logger.info("Successfully all the error messages are displayed for shipping address,first name, last name phone number");
 			}else {
@@ -164,16 +161,16 @@ public class ShippingPageValidation extends baseClass{
 		}
 	  }
 	public static void firstNameError() throws Exception {
-		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {		
+		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {		
 			test.info("User is checked-in as guest  verifying the display of error message for first Name by entering all the mandataory details expect first name.");
-			Actionsss.clearText(SAP.getSelectfirstNameInput());
-			Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, "last name");
-			Actionsss.addressFromDropDown(SAP.getShippingAddress());			
-			Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, "phone number");
+			Actionsss.clearText(shippingPage.getSelectfirstNameInput());
+			Actionsss.sendKeys(shippingPage.getSelectLastNameInput(), lname, "last name");
+			Actionsss.addressFromDropDown(shippingPage.getShippingAddress());			
+			Actionsss.sendKeys(shippingPage.getSelectPhoneInput(), phonenumber, "phone number");
 			Thread.sleep(3000);
 			addresSelect.selectPaymentMethod();
 			Thread.sleep(2000);
-			if(Actionsss.displayElement(SAP.getFirstNameErrorMsg())) {
+			if(Actionsss.displayElement(shippingPage.getFirstNameErrorMsg())) {
 				test.pass("Successfully  the error messages are displayed for first name.");
 				logger.info("Successfully the error messages are displayed for first name.");
 			}else {
@@ -187,17 +184,17 @@ public class ShippingPageValidation extends baseClass{
 	
 	public static void lastNameError() throws Exception {
 		
-		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {
 			test.info("User is checked-in as guest  verifying the display of error message for last Name by entering all the mandataory details expect last name.");
 			
-			Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, "first name");
-			Actionsss.clearText(SAP.getSelectLastNameInput());
-			Actionsss.addressFromDropDown(SAP.getShippingAddress());			
-			Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber, "phone number");
+			Actionsss.sendKeys(shippingPage.getSelectfirstNameInput(), fname, "first name");
+			Actionsss.clearText(shippingPage.getSelectLastNameInput());
+			Actionsss.addressFromDropDown(shippingPage.getShippingAddress());			
+			Actionsss.sendKeys(shippingPage.getSelectPhoneInput(), phonenumber, "phone number");
 			Thread.sleep(3000);
 			addresSelect.selectPaymentMethod();
 			Thread.sleep(2000);
-			if(Actionsss.displayElement(SAP.getlastNameErrorMsg())) {
+			if(Actionsss.displayElement(shippingPage.getlastNameErrorMsg())) {
 				test.pass("Successfully  the error messages are displayed for last name.");
 				logger.info("Successfully the error messages are displayed for last name.");
 			}else {
@@ -210,18 +207,18 @@ public class ShippingPageValidation extends baseClass{
 	}
 	
 	public static void addressMessageError() throws Exception {
-		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {
 			test.info("User is checked-in as guest  verifying the display of error message for address Message by entering all the mandataory details expect address.");
 			
-			Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, "first name");
-			Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, "last name");
-			Actionsss.clearText(SAP.getShippingAddress());	
-			Actionsss.sendKeys(SAP.getSelectPhoneInput(), phonenumber,"phone number");
+			Actionsss.sendKeys(shippingPage.getSelectfirstNameInput(), fname, "first name");
+			Actionsss.sendKeys(shippingPage.getSelectLastNameInput(), lname, "last name");
+			Actionsss.clearText(shippingPage.getShippingAddress());	
+			Actionsss.sendKeys(shippingPage.getSelectPhoneInput(), phonenumber,"phone number");
 			
 			Thread.sleep(3000);
 			addresSelect.selectPaymentMethod();
 			Thread.sleep(2000);
-			if(Actionsss.displayElement(SAP.getAddress1ErrorMsg())){
+			if(Actionsss.displayElement(shippingPage.getAddress1ErrorMsg())){
 				test.pass("Successfully the error messages are displayed for shipping address");
 				logger.info("Successfully the error messages are displayed for shipping address");
 			}else {
@@ -234,17 +231,17 @@ public class ShippingPageValidation extends baseClass{
 	}
 	
 	public static void phoneNumberError() throws Exception {
-		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {
 			test.info("User is checked-in as guest verifying the display of error message for phone number by entering all the mandataory details expect phone number.");
 			
-			Actionsss.sendKeys(SAP.getSelectfirstNameInput(), fname, "first name");
-			Actionsss.sendKeys(SAP.getSelectLastNameInput(), lname, "last name");
-			Actionsss.addressFromDropDown(SAP.getShippingAddress());
-			Actionsss.clearText(SAP.getSelectPhoneInput());
+			Actionsss.sendKeys(shippingPage.getSelectfirstNameInput(), fname, "first name");
+			Actionsss.sendKeys(shippingPage.getSelectLastNameInput(), lname, "last name");
+			Actionsss.addressFromDropDown(shippingPage.getShippingAddress());
+			Actionsss.clearText(shippingPage.getSelectPhoneInput());
 			Thread.sleep(3000);
 			addresSelect.selectPaymentMethod();
 			Thread.sleep(2000);
-			if(Actionsss.displayElement(SAP.getphoneNumberErrorMsg())) {
+			if(Actionsss.displayElement(shippingPage.getphoneNumberErrorMsg())) {
 				test.pass("Successfully the error messages are displayed for  phone number");
 				logger.info("Successfully the error messages are displayed for  phone number");
 			}else {

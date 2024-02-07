@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
-import pageObjects.CheckOutPage3;
+import pageObjects.PaymentPageObjects;
 
 public class CheckOutPageValidation extends baseClass{
 	
-	private static final CheckOutPage3 cop3 = new CheckOutPage3(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
 	
 	//View cart btn in mini cart
  	public static void VerifiedThatGuestLogin() {
@@ -31,7 +31,7 @@ public class CheckOutPageValidation extends baseClass{
  		test.info("Verified That GuestLogin click when only Gc in cart");
  	
      	
-     	if(Actionsss.elementSize(cop3.getpaymentPageList()) ) {
+     	if(Actionsss.elementSize( paymentPage .getpaymentPageList()) ) {
      	    logger.info("Successfully Clicked on the GuestLogin");
      	    test.pass("Successfully Clicked on the GuestLogin");
      	}else {

@@ -2,21 +2,16 @@
 
 import com.providio.testcases.baseClass;
 
-import GifCertificatePayment.GiftCertificateInCombination;
 import PaypalPayment.CartPagePayal;
 import PaypalPayment.MiniCartPaypal;
 import PaypalPayment.PdpPagePaypalBuyNow;
 import functionality.Actionsss;
-import pageObjects.OrderPageDetails;
-import pageObjects.PaymentPage;
 import pageObjects.homepage;
 import validations.OrderPageValidation;
-import validations.PaymentPageValidation;
 
 public class PlaceOrderWithDifferentPayments  extends baseClass{
 	
-	private static final PaymentPage pp = new PaymentPage(driver);
-	private static OrderPageDetails  orderPage = new OrderPageDetails(driver);
+
 	private static homepage homePage = new homepage(driver);
 	
 	public static void orderPlacingWithCreditCard() throws Exception {

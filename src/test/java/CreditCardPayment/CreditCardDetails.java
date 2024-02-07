@@ -3,39 +3,34 @@ package CreditCardPayment;
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
-import pageObjects.PaymentPage;
+import pageObjects.PaymentPageObjects;
 import tasks.PaymentPageTasks;
 import validations.ReviewOrderPageValidation;
 
 public class CreditCardDetails extends baseClass{
 	
-	private static final 	PaymentPage pp = new PaymentPage(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
 	
 	public static void creditCardDetails() throws InterruptedException, Exception {
 
-		if(Actionsss.elementSize(pp.getPaymentPagecreditCardDivList())) {		
+		if(Actionsss.elementSize(paymentPage.getPaymentPagecreditCardDivList())) {		
 			test.info("Verifying by entering the valid credit card details");	
 			
-			if(Actionsss.elementSize(pp.getBrainTree())) {			
+			if(Actionsss.elementSize(paymentPage.getBrainTree())) {			
 				BrainTreePayment.brainTreeMethod();				 
-			}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
-				Actionsss.javascriptClick(pp.getSalesforceCreditcardRadioBtn());
+			}else if (Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+				Actionsss.javascriptClick(paymentPage.getSalesforceCreditcardRadioBtn());
 				SalesforcePayment.salesForce();				
-			}else if (Actionsss.elementSize(pp.getStripePayment())) {				
-				Actionsss.click(pp.getStripeCreditCard());
+			}else if (Actionsss.elementSize(paymentPage.getStripePayment())) {				
+				Actionsss.click(paymentPage.getStripeCreditCard());
 				StripePayment.stripe();				 
-			}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {			
+			}else if (Actionsss.elementSize(paymentPage.getCyberSourcePayment())) {			
 				CyberSourcePayment.cyberSource();				
-			}else if(Actionsss.elementSize(pp.getAdyenPayment())) {				
+			}else if(Actionsss.elementSize(paymentPage.getAdyenPayment())) {				
 				AdyenPayment.adyen();
 			}			
 			
-		    if(Actionsss.elementSize(pp.getBrainTree())) {
-		    	PaymentPageTasks.brainTreeReviewOrderButton();	
-		    	ReviewOrderPageValidation.VerifyingReviewOrderBtn();
-	    	}else {
-	    		PaymentPageTasks.clickReviewOrderButton();
-	    	}
+			PaymentPageTasks.clickReviewOrderButton();
 			
 		}else {
 			logger.info("Other payment details are entered");
@@ -46,16 +41,16 @@ public class CreditCardDetails extends baseClass{
 	
 	public static void addNewCardThoughExistingCards() throws Exception {
 		
-		if(!Actionsss.elementSize(pp.getContinueAsAGuest())) {			
+		if(!Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {			
 			test.info("User is checked in as registered and also have saved card even though, adding a saved card to account to check the add payment functionality in register user.");			
-			if(Actionsss.elementSize(pp.getBrainTree())) {				
+			if(Actionsss.elementSize(paymentPage.getBrainTree())) {				
 				//PaymentDetailsofGuestandReg.brainTreeMethod();				 
-			}else if (Actionsss.elementSize(pp.getCreditcardsSalesForce())) {				
+			}else if (Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {				
 				SalesforcePayment.addNewCardThoughExistingCardsInSalesforce() ;				
-			}else if (Actionsss.elementSize(pp.getStripePayment())) {				
+			}else if (Actionsss.elementSize(paymentPage.getStripePayment())) {				
 				StripePayment.addNewCardThoughExistingCardsInStripe();
 				StripePayment.useSaveCardInStripe();				 
-			}else if (Actionsss.elementSize(pp.getCyberSourcePayment())) {				
+			}else if (Actionsss.elementSize(paymentPage.getCyberSourcePayment())) {				
 				CyberSourcePayment.addNewCardThoughExistingCardsInCyberSource();
 			}else {
 				test.pass("No add new payment is configured in adyen payment");

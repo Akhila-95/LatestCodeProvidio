@@ -8,41 +8,41 @@ import tasks.PlaceOrderWithDifferentPayments;
 
 public class OrderPlacingWithAllPaymentsTest extends baseClass{
 
-	@Test(groups = {"smoke", "regression"})
+	@Test
     public void verifyingOrderIsPlacingWithCreditCard() throws Exception {
 		PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard();
     }
 	
-	@Test(groups = {"smoke", "regression"})
+	@Test
     public void verifyingOrderIsPlacingWithGiftCard() throws Exception {
 		PlaceOrderWithDifferentPayments.orderPlacingWithGiftCard();
     }
-	@Test(groups = {"smoke", "regression"})
+	@Test
     public void verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard() throws Exception {
 		PlaceOrderWithDifferentPayments.orderPlacingWithCombinationOfGcAndCreditCard();
     }
 
 	
-	@Test(groups = {"smoke", "regression"})
+	@Test
     public void verifyingOrderIsPlacingWithPaypalFromCheckoutPage() throws Exception {
 		PlaceOrderWithDifferentPayments.orderPlacingWithPaypalFromCheckoutPage();
     }
 	
-	@Test(groups = {"smoke", "regression"})
+	@Test
     public void verifyingOrderIsPlacingWithCombinationOfGcAndPaypal() throws Exception {
 		PlaceOrderWithDifferentPayments.orderPlacingWithCombinationOfGcAndPaypal();
     }
-	@Test(groups = {"smoke", "regression"})
+	@Test
     public void verifyingOrderIsPlacingWithMiniCartPaypal() throws Exception {
 		PlaceOrderWithDifferentPayments.orderPlacingWithMiniCartPaypal();
     }
 	
-	@Test(groups = {"smoke", "regression"})
+	@Test
     public void verifyingOrderIsPlacingWithCartPagePaypal() throws Exception {
 		PlaceOrderWithDifferentPayments.orderPlacingWithCartPagePaypal();
     }
 	
-	@Test(groups = {"smoke", "regression"})
+	@Test
     public void verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage() throws Exception {
 		PlaceOrderWithDifferentPayments.orderPlacingWithPaypalInPdpPage();
     }

@@ -5,15 +5,11 @@ import org.openqa.selenium.WebElement;
 
 import com.providio.testcases.baseClass;
 
-import CreditCardPayment.CreditCardDetails;
-import GifCertificatePayment.GiftCertificateForGc;
 import PaypalPayment.CheckOutPaypal;
 import functionality.Actionsss;
-import pageObjects.CheckOutPage2;
-import pageObjects.CheckOutPage3;
-import pageObjects.PaymentPage;
+import pageObjects.PaymentPageObjects;
 import pageObjects.ReviewOrderPage;
-import pageObjects.ShippingAddressPage;
+import pageObjects.ShippingPageObject;
 import pageObjects.homepage;
 import validations.OrderPageValidation;
 import validations.PaymentPageValidation;
@@ -23,12 +19,8 @@ import validations.ShippingPageValidation;
 public class ReviewOrderPageTask extends baseClass{
 
 	private static final ReviewOrderPage reviewOrder = new ReviewOrderPage(driver);
-	private static final PaymentPage pp = new PaymentPage(driver);
-	private static final CheckOutPage3 cop3 = new CheckOutPage3(driver);
-	private static final PaymentPageValidation cop3v = new PaymentPageValidation();
-	private static final ShippingAddressPage shippingAddressPage = new ShippingAddressPage(driver);
-	private static final CheckOutPage2 shippingPage = new CheckOutPage2(driver);
-	private static ShippingAddressPage SAP = new ShippingAddressPage(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
+	private static final ShippingPageObject shippingPage = new ShippingPageObject(driver);
 	private static homepage homePage = new homepage(driver);
 	
 	public static void reviewOrderPage() throws Exception {
@@ -46,7 +38,7 @@ public class ReviewOrderPageTask extends baseClass{
 	public static void getBackToCart() throws Exception {	
 		 reviewOrderPage();
 		 ReviewOrderPageValidation.bactToCartValidationInreviewOrderPage();
-		 Actionsss.click(pp.getBackToCart());				
+		 Actionsss.click(paymentPage.getBackToCart());				
 		 CheckOutPageTasks.guestCheckout();
 		 ShippingPageTasks.enterValidAddress();
 		 PaymentPageTasks.creditCardWithValidDetails();
@@ -77,8 +69,8 @@ public class ReviewOrderPageTask extends baseClass{
 	
 	public static void paginationOfProductsInReviewOrderPage() throws InterruptedException, Exception {
 		reviewOrderPage();
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
-			Actionsss.randomElementFromList(pp.getproductsInCheckoutPage2());
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			Actionsss.randomElementFromList(paymentPage.getproductsInCheckoutPage2());
 			ReviewOrderPageValidation.pdpPageValidation();
 			ViewCartPageTasks.viewCartpage();
 			CheckOutPageTasks.GuestMailCheckOut();
@@ -109,17 +101,17 @@ public class ReviewOrderPageTask extends baseClass{
 	public static void placeOrder() throws Exception {
 		//reviewOrderPage();
 		Actionsss.scrollWindowsByPixel(500);
-		if(Actionsss.elementSize(pp.getSalesforcePaypalList())) {	
+		if(Actionsss.elementSize(paymentPage.getSalesforcePaypalList())) {	
 			logger.info("Salesforce payment activated");	
 			Thread.sleep(1000);
-			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
+			Actionsss.CombinedClick(paymentPage.getSelectPlaceOrderBtn());
 			Thread.sleep(8000);
 			PaymentPageValidation.VerifiedThatPlaceOrderClick();
 		}else {
 			logger.info("Other paymnet activated");
 			logger.info("Place order page is loaded");
 			Thread.sleep(2000);
-			Actionsss.CombinedClick(pp.getSelectPlaceOrderBtn());
+			Actionsss.CombinedClick(paymentPage.getSelectPlaceOrderBtn());
 			Thread.sleep(5000);
 			PaymentPageValidation.VerifiedThatPlaceOrderClick();
 		}
@@ -128,10 +120,10 @@ public class ReviewOrderPageTask extends baseClass{
 	
 	public static void editShippingAddressFromReviewOrderPage() throws Exception {
 		reviewOrderPage();	
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			previousShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getShippingAddressInRop());
 			Actionsss.click(reviewOrder.getEditShippingAddressInRop());
-			Actionsss.editShippingAddressFromRop(shippingAddressPage.getShippingAddress());
+			Actionsss.editShippingAddressFromRop(shippingPage.getShippingAddress());
 			Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
 			Thread.sleep(1000);
 			ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
@@ -149,10 +141,10 @@ public class ReviewOrderPageTask extends baseClass{
 	}
 	public static void editPhoneNumInShippingAddressFromReviewOrderPage() throws Exception {
 		reviewOrderPage();	
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			 previousPhoneNumInShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getPhoneNumInshippingAddressInRop());
 			 Actionsss.click(reviewOrder.getEditShippingAddressInRop());
-			 Actionsss.sendKeys(SAP.getSelectPhoneInput(), "8765987653","shipping phone number");
+			 Actionsss.sendKeys(shippingPage.getSelectPhoneInput(), "8765987653","shipping phone number");
 			 Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
 			 Thread.sleep(1000);
 			 ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
@@ -173,13 +165,13 @@ public class ReviewOrderPageTask extends baseClass{
 	
 	public static void editBillingAddressFromReviewOrderPage() throws Exception {
 		reviewOrderPage();	
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			 previousBillingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());			 
 			 Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderBtnPage());
-			 Actionsss.click(pp.getUpdateBillingAddress());
+			 Actionsss.click(paymentPage.getUpdateBillingAddress());
 			 Thread.sleep(1000);
 			 Actionsss.scrollWindowsByPixel(200);
-			 Actionsss.editBillingAddressFromRop(pp.getBillingAddress());			 
+			 Actionsss.editBillingAddressFromRop(paymentPage.getBillingAddress());			 
 			 PaymentPageTasks.clickReviewOrderButton();
 			 Thread.sleep(2000);
 			 editedBillingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());
@@ -198,21 +190,20 @@ public class ReviewOrderPageTask extends baseClass{
 	
 	public static void editPhoneNumberInBillingAddress() throws Exception {
 		reviewOrderPage();	
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			Thread.sleep(2000);				
 			prevoiusBillingPhoneNumber =Actionsss.getTextOfElement(reviewOrder.getPhoneNumberInBillingAddress());	
 			Thread.sleep(1000);
 			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderBtnPage());		
-			Actionsss.sendKeys(cop3.getBillingPhoneNumber(), "9876543567", "edited phone number  in billing address");
+			Actionsss.sendKeys(paymentPage.getBillingPhoneNumber(), "9876543567", "edited phone number  in billing address");
 			
-			 if(Actionsss.elementSize(pp.getBrainTree())) {
-			    	PaymentPageTasks.brainTreeReviewOrderButton();	
-			    	ReviewOrderPageValidation.VerifyingReviewOrderBtn();
+			 if(Actionsss.elementSize(paymentPage.getBrainTree())) {
+			    	PaymentPageTasks.clickReviewOrderButton();				    	
 			    	Thread.sleep(15000);
 		    	}
 			
 			editedBillingPhoneNumber=Actionsss.getTextOfElement(reviewOrder.getPhoneNumberInBillingAddress());				
-			cop3v.phoneNumberInBillingAddressValidation();	
+			PaymentPageValidation.phoneNumberInBillingAddressValidation();	
 			placeOrder();
 			OrderPageValidation.validatePlacetheOrderPage();
 			OrderPageValidation.orderNumberAndOrderDate();
@@ -224,7 +215,7 @@ public class ReviewOrderPageTask extends baseClass{
 	}
 	public static void editPaymentToCreditCard() throws Exception {
 		reviewOrderPage();
-		if (!Actionsss.elementSize(pp.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
 				logger.info("Brain tree activated");
 				
@@ -232,7 +223,7 @@ public class ReviewOrderPageTask extends baseClass{
 						logger.info("credit card details entered");
 						previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());						
 						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-						if(Actionsss.elementSize(pp.getSalesforcePaypalList()) || Actionsss.elementSize(pp.getBrainPaypalAcc()) ) {
+						if(Actionsss.elementSize(paymentPage.getSalesforcePaypalList()) || Actionsss.elementSize(paymentPage.getBrainPaypalAcc()) ) {
 								CheckOutPaypal.paypalFromCheckout();
 						}
 					}else if (Actionsss.elementSize(reviewOrder.getBrainPaypalPaymentInReviewOrderPageList())) {
@@ -243,7 +234,7 @@ public class ReviewOrderPageTask extends baseClass{
 					
 					}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())) {
 						logger.info("gc entered");
-						if(Actionsss.elementSize(pp.getSalesforcePaypalList()) || Actionsss.elementSize(pp.getBrainPaypalAcc()) ) {
+						if(Actionsss.elementSize(paymentPage.getSalesforcePaypalList()) || Actionsss.elementSize(paymentPage.getBrainPaypalAcc()) ) {
 							CheckOutPaypal.paypalFromCheckout();
 						}else {
 							PaymentPageTasks.creditCardWithValidDetails();
@@ -261,7 +252,7 @@ public class ReviewOrderPageTask extends baseClass{
 						paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
 						logger.info(paymentafterEditInPlaceorderPage);
 									
-						if(Actionsss.elementSize(pp.getBrainTree())) {	
+						if(Actionsss.elementSize(paymentPage.getBrainTree())) {	
 							logger.info("If payment is brain tree then clicked on edit and check the edited payment");
 							Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
 						}else {

@@ -5,15 +5,14 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-
 import com.providio.testcases.baseClass;
-
 import functionality.Actionsss;
-import pageObjects.PaymentPage;
+
+import pageObjects.PaymentPageObjects;
 
 public class PaypalMethod extends baseClass {
 	
-	static final PaymentPage pp= new PaymentPage(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
 	
     
     //After the paypal button click
@@ -30,7 +29,7 @@ public class PaypalMethod extends baseClass {
            	   js.executeScript("arguments[0].click();", paypalCheckout);                	
                Thread.sleep(1000);
 	        	if(paypalCheckout.isDisplayed()) {
-	        		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  paypalCheckout);
+
 	        		paypalCheckout.click();
 	            }
             }	                 
@@ -41,16 +40,10 @@ public class PaypalMethod extends baseClass {
     public static void salesforcePaypalCheckout() throws InterruptedException {
         WebElement parentDiv= driver.findElement(By.xpath("//div[contains(@class,'sfpp-payment-method-header-paypal')]"));
         Thread.sleep(4000);
-        WebElement paypalCheckout=parentDiv.findElement(By.xpath("//div[contains(text(),'Pay with PayPal')]"));
-        
+        WebElement paypalCheckout=parentDiv.findElement(By.xpath("//div[contains(text(),'Pay with PayPal')]"));       
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,700)", "");
-     //   js.executeScript("arguments[0].click();", paypalCheckout);
-       
-       // Thread.sleep(3000);
+        js.executeScript("window.scrollBy(0,700)", "");      
         paypalCheckout.click();
-      //  Actionsss.CombinedClick(paypalCheckout);
-       // Thread.sleep(10000);
         List<WebElement> salesforcePaypalCheckout=parentDiv.findElements(By.xpath("//div[contains(@class,'paypal-buttons-context-iframe paypal-buttons-label-paypal')]"));  
         if(salesforcePaypalCheckout.size()>0) {
             WebElement salesforcePaypalCheckout1=parentDiv.findElement(By.xpath("(//iframe[@title='PayPal'])[2]"));
@@ -72,65 +65,75 @@ public class PaypalMethod extends baseClass {
 	        for (String handle : driver.getWindowHandles()) {
 	            if (!handle.equals(mainWindowHandle)) {
 	                driver.switchTo().window(handle);
+	                popUpDisplayValidation();	    	     
 	                break;
 	            }
 	        }
 	        // test.info("Entered into paypal window");
-	        //	List<WebElement> paypalPage = driver.findElements(By.id("headerText"));
-	        //	System.out.println("The url for payapal is " + paypalPage.size());
+	        
 	         Thread.sleep(2000);
-	         if(Actionsss.elementSize(pp.getEmailLoginList())) {
-	        	Actionsss.sendKeys( pp.getEmailLogin(),"rahulnaik@etisbew.com", "User email");       	 
+	         if(Actionsss.elementSize(paymentPage.getEmailLoginList())) {
 	        	 test.info("Entered username");
+	        	 Actionsss.sendKeys( paymentPage.getEmailLogin(),"rahulnaik@etisbew.com", "User email is rahulnaik@etisbew.com");       	 	        	
 	        	 WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
 	        	 getTextOfPaypalInPaymentPage=email.getAttribute("value");
 	         }
-	         //Thread.sleep(3000);
-	         if(Actionsss.elementSize(pp.getNextButtonList())) {
-	        	Actionsss.click(pp.getNextButton());         
-	             //Thread.sleep(1000);
+	         if(Actionsss.elementSize(paymentPage.getNextButtonList())) {
+	        	Actionsss.click(paymentPage.getNextButton());         
 	         }
-	         if(Actionsss.elementSize(pp.getPasswordList())) {
-	        	 Actionsss.sendKeys(pp.getPassword(),"Etgsfcc245@", "password");               
-	             test.info("Entered password");
+	         if(Actionsss.elementSize(paymentPage.getPasswordList())) {
+	        	 test.info("Entered password");
+	        	 Actionsss.sendKeys(paymentPage.getPassword(),"Etgsfcc245@", "password is Etgsfcc245@");               	          
 	             Thread.sleep(1000);
 	         }
-	         if(Actionsss.elementSize(pp.getloginbuttonList())) {
-	        	 Actionsss.click(pp.getloginbutton());           
+	         if(Actionsss.elementSize(paymentPage.getloginbuttonList())) {
+	        	 Actionsss.click(paymentPage.getloginbutton());           
 	             Thread.sleep(1000);
 	         }
 	        
-
 	         Thread.sleep(2000);
-	         if(Actionsss.elementSize(pp.getReviewOrderButtonList())) {
+	         if(Actionsss.elementSize(paymentPage.getReviewOrderButtonList())) {
 	        	
 	         	try {
-	         		Actionsss.click(pp.getReviewOrderButton());      		
+	         		Actionsss.click(paymentPage.getReviewOrderButton());      		
 	 	            Thread.sleep(1000);
-	 	          //  Thread.sleep(4000);
 	 	        } catch (Exception e) {
-	 	        	Actionsss.javascriptClick(pp.getReviewOrderButton());
-	 	            System.err.println("Exception while clicking the element: " + pp.getReviewOrderButton());
+	 	        	Actionsss.javascriptClick(paymentPage.getReviewOrderButton());
+	 	            System.err.println("Exception while clicking the element: " + paymentPage.getReviewOrderButton());
 	 	        }
 	         	
 	         	logger.info("complete order");
 	         	Thread.sleep(4000);
 	   	
 	            	try {
-	            		Actionsss.click(pp.getCompletePurcharseButton());
+	            		Actionsss.click(paymentPage.getCompletePurcharseButton());
 	 	           		Thread.sleep(4000);
 	            	} catch (Exception e) {
-		 	        	Actionsss.javascriptClick(pp.getCompletePurcharseButton());
-		 	            System.err.println("Exception while clicking the element: " +pp.getCompletePurcharseButton());
+		 	        	Actionsss.javascriptClick(paymentPage.getCompletePurcharseButton());
+		 	            System.err.println("Exception while clicking the element: " +paymentPage.getCompletePurcharseButton());
 	            	}         	
 	        	                	
 	         }else {
-	        	 if(Actionsss.elementSize(pp.getSaveAndContinueList())) {
-	        		 Actionsss.click(pp.getSaveAndContinue());
+	        	 if(Actionsss.elementSize(paymentPage.getSaveAndContinueList())) {
+	        		 Actionsss.click(paymentPage.getSaveAndContinue());
 	        	 }
 	         }                 
 	         driver.switchTo().window(mainWindowHandle);
 	         Thread.sleep(1000);
 	         
-	      }    
+	      } 
+	 
+	 public static void popUpDisplayValidation() {
+		 test.info("Verifying the display of pop up window ");
+		 String actualText= Actionsss.getTextOfElement(paymentPage.getPaypalPopUpText());
+		 String expectedText ="Pay with PayPal";
+		 if(actualText.equals(expectedText)) {			   
+			  test.pass("Successfully clicked on paypal button and pop up window is displayed");
+			  logger.info("Successfully clicked on paypal button and pop up window is displayed");
+		}else {
+			 test.fail("Not clicked on paypal button and no  pop up window is displayed");
+			  logger.info("Not clicked on paypal button and no  pop up window is displayed");
+		}
+		 
+	 }
 }

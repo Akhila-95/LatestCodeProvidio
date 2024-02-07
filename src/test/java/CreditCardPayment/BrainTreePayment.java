@@ -4,27 +4,28 @@ import java.util.Random;
 
 import com.providio.testcases.baseClass;
 import functionality.Actionsss;
-import pageObjects.PaymentPage;
+import pageObjects.PaymentPageObjects;
 
 public class BrainTreePayment extends baseClass {
 
-	private static final PaymentPage pp = new PaymentPage(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
 	private static final  Random rand = new Random();	
 	
 	private static final String cardHolderName = "Test123";
 	private static final String cardNum = "cardNumber";
 	private static final String  expDate = "Expired date";
 	private static final String  creditCardCvv= "Cvv";
+	private static final String  braintreeexpDate = "12/30";
 	
 
 	
 	public static void brainTreeMethod() throws InterruptedException {
 	 	Actionsss.scrollWindowsByPixel(500);
-		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {
 			test.info("User is in guest-check in so entering a random credit card details");
 			BrainTreePayment.braintree();			
 		}else {
-			if(Actionsss.elementSize(pp.getSavedCardsBrainTree())) {				
+			if(Actionsss.elementSize(paymentPage.getSavedCardsBrainTree())) {				
 				//if user is registered and have saved cards then  this if will execute
 				test.info("User is checked-in as registered and have saved cards so randomly selecting a saved card");
 				BrainTreePayment.savedCardsBrainTree();				
@@ -37,27 +38,23 @@ public class BrainTreePayment extends baseClass {
 	}
 		
 	public static void braintree() throws InterruptedException {
+		 test.info("Entering card name for brain tree payment");
 		 brainTreeCardHolderName();
-		 logger.info("Entered card name for brain tree payment");
+		 test.info("Entering card number for brain tree payment ");
 		 brainTreeCardNumber();
-		 logger.info("Entered card number for brain tree payment ");
+		 test.info("Entering cvv for brain tree payment");
 		 brainTreeCvv();
-		 logger.info("Entered cvv for brain tree payment");
-		 brainTreeExpDate();
-		 logger.info("Entered exp for brain tree payment");
-		
+		 test.info("Entering exp for brain tree payment");
+		 brainTreeExpDate();	
 	}
 	
 	public static  void brainTreeCardHolderName() throws InterruptedException {
 		driver.switchTo().frame("braintree-hosted-field-cardholderName");
-		Actionsss.sendKeys(pp.getBrainTreeHoldername(),"Test123",cardHolderName );	
-		test.pass("Entered card holder name as " +cardHolderName);
-		driver.switchTo().defaultContent();
-		
+		Actionsss.sendKeys(paymentPage.getBrainTreeHoldername(),"Test123",cardHolderName +"is Test123 ");	
+		driver.switchTo().defaultContent();	
 	}
 	
 	public static void brainTreeCardNumber() throws InterruptedException {				
-		test.info("Entered card Number");
 		driver.switchTo().frame("braintree-hosted-field-number");
 		String[] cardNumbers = {
     			
@@ -71,46 +68,38 @@ public class BrainTreePayment extends baseClass {
      
         int randomIndex = rand.nextInt(cardNumbers.length);
         // Send the randomly selected card number
-		Actionsss.sendKeys(pp.getBrainTreeCardNum(),cardNumbers[randomIndex],cardNum);
+		Actionsss.sendKeys(paymentPage.getBrainTreeCardNum(),cardNumbers[randomIndex],cardNum + cardNumbers[randomIndex]);
 		 // Extract the last four digits
         String lastFourDigits = cardNum.substring(cardNum.length() - 4);
 		creditCardNumber=lastFourDigits;	
 		driver.switchTo().defaultContent();
-		logger.info(cardNum);
-		test.pass("Entered card number is " +cardNumbers[randomIndex] );
 	}
 	
 	public static void brainTreeCvv() throws InterruptedException {			
 		driver.switchTo().frame("braintree-hosted-field-cvv");
-		Actionsss.sendKeys(pp.getBrainTreeCvv(), "3455",creditCardCvv);	
-		test.pass("Entered cvv is 3455 ");
+		Actionsss.sendKeys(paymentPage.getBrainTreeCvv(), "3455",creditCardCvv  +" is 3455");	
 		driver.switchTo().defaultContent();
 	}
 	
 	public static void brainTreeExpDate() throws InterruptedException {	
 		driver.switchTo().frame("braintree-hosted-field-expirationDate");
-		Actionsss.sendKeys(pp.getBrainTreeExp(), "1230",expDate);	
-		test.pass("Entered Exp date is 1230 ");
+		Actionsss.sendKeys(paymentPage.getBrainTreeExp(),  braintreeexpDate ,expDate +  braintreeexpDate  );	
 		driver.switchTo().defaultContent();
 	}
 	
-	
 	//register user and select the new card and save the card
 	public static void savedCardsBrainTree() throws InterruptedException {
-
-		test.info("User already have saved cards");
-		Actionsss.click(pp.getBrainTreeNewCardDropdown());
-		
-		Actionsss.randomElementFromList(pp.getSavedCardsBrainTree()); 
-	
+		Actionsss.click(paymentPage.getBrainTreeNewCardDropdown());		
+		Actionsss.randomElementFromList(paymentPage.getSavedCardsBrainTree()); 	
 		//logger.info("Selectd the new card");
-		//pm.braintree();
-		
+		//pm.braintree();		
 	}
 	
 	public static void brainTreeReguser() throws InterruptedException {
-		Actionsss.selectValue(pp.getBrainTreeNewCardDropdown());
+		Actionsss.selectValue(paymentPage.getBrainTreeNewCardDropdown());
 		Thread.sleep(3000);
 	}
 
 }
+
+

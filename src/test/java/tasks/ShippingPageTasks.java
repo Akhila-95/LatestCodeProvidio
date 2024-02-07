@@ -7,21 +7,17 @@ import CreditCardPayment.CreditCardDetails;
 import data.AddressSelection;
 import functionality.Actionsss;
 import pageObjects.CheckOutPage;
-import pageObjects.CheckOutPage2;
-import pageObjects.CheckOutPage3;
-import pageObjects.ShippingAddressPage;
-import pageObjects.homepage;
+import pageObjects.PaymentPageObjects;
+import pageObjects.ShippingPageObject;
 import validations.OrderPageValidation;
 import validations.ShippingPageValidation;
 
 public class ShippingPageTasks extends baseClass{
 
-	private static final CheckOutPage3 paymentpage = new CheckOutPage3(driver);
-	private static final CheckOutPage2 shippingPage = new CheckOutPage2(driver);
+	private static final PaymentPageObjects paymentpage = new PaymentPageObjects(driver);
 	private static CheckOutPage CP = new CheckOutPage(driver);
-	private static final ShippingPageValidation shipping = new ShippingPageValidation();
-	private static ShippingAddressPage SAP = new ShippingAddressPage(driver);
-	private static homepage homePage = new homepage(driver);
+	private static final ShippingPageValidation shipping = new ShippingPageValidation();	
+	private static ShippingPageObject shippingPage = new ShippingPageObject(driver);
 	
 	public static void shippingPage() throws InterruptedException, Exception {
 		if(Actionsss.elementSize(shippingPage.getshippingPageList()) && Actionsss.elementSize(shippingPage.getNextPaymentButtonList())) {
@@ -157,8 +153,8 @@ public class ShippingPageTasks extends baseClass{
 				//AddressSelection.Address();			
 				test.info("No saved address for this user to add new shipping address");
 			}else {
-			//if(Actionsss.displayElement(SAP.getShippingToDisplay()) && Actionsss.displayElement(SAP.getSaveShippingAddress()) && Actionsss.elementSize(SAP.getsavedShippingAddressList())) {
-				 String previousShippingaddress =SAP.getShippingAddress().getAttribute("value");
+			//if(Actionsss.displayElement(shippingPage.getShippingToDisplay()) && Actionsss.displayElement(shippingPage.getSaveShippingAddress()) && Actionsss.elementSize(shippingPage.getsavedShippingAddressList())) {
+				 String previousShippingaddress =shippingPage.getShippingAddress().getAttribute("value");
 				 previousShippingAddress= previousShippingaddress;
 				 Actionsss.click(shippingPage.getAddNewShippingAddress());
 				 AddressSelection.addNewShippingAddressWithName();
@@ -166,8 +162,8 @@ public class ShippingPageTasks extends baseClass{
 				 Thread.sleep(1000);
 				 ShippingPageValidation.VerifiedThatNextpaymentBtnClick();				 
 				 Thread.sleep(1500);
-				 String addAddress=Actionsss.getTextOfElement(SAP.getshipingAdrressInPaymentPage());
-				 newlyAddedShippingAddress= addAddress; //Actionsss.getTextOfElement(SAP.getshipingAdrressInPaymentPage());
+				 String addAddress=Actionsss.getTextOfElement(shippingPage.getshipingAdrressInPaymentPage());
+				 newlyAddedShippingAddress= addAddress; //Actionsss.getTextOfElement(shippingPage.getshipingAdrressInPaymentPage());
 				 ShippingPageValidation.verifyingAddNewShippingAddress();
 				 PlaceOrderWithDifferentPayments.orderPlacingWithCreditCard();
 			}
@@ -186,14 +182,14 @@ public class ShippingPageTasks extends baseClass{
 				Actionsss.click(shippingPage.getUpdateShippingAddress());
 				Thread.sleep(2000);
 
-		        String previousShippingaddress =SAP.getShippingAddress().getAttribute("value");
+		        String previousShippingaddress =shippingPage.getShippingAddress().getAttribute("value");
 				previousShippingAddressInUpdate=previousShippingaddress ;				
 				AddressSelection.updateShippingAddress();				
 				Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
 				Thread.sleep(1000);
 				ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
 				Thread.sleep(1500);
-				String updateAddress=Actionsss.getTextOfElement(SAP.getshipingAdrressInPaymentPage());
+				String updateAddress=Actionsss.getTextOfElement(shippingPage.getshipingAdrressInPaymentPage());
 				updateShippingAddress=updateAddress;
 				ShippingPageValidation.verifyingTheUpdateShippingAddress();
 				Thread.sleep(2000);

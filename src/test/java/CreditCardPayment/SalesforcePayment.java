@@ -10,25 +10,26 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
-import pageObjects.PaymentPage;
+import pageObjects.PaymentPageObjects;
 
 public class SalesforcePayment extends baseClass {
 	
 	private static final  Random rand = new Random();	
-	private static final PaymentPage pp = new PaymentPage(driver);  
 	private static final String cardNum = "cardNumber";
 	private static final String  expDate = "Expired date";
 	private static final String  creditCardCvv= "Cvv";
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
+	private static final String  salesforceExpiryDate= "1245";
 	
 
 	public static void salesForce() throws Exception {
 		Actionsss.scrollWindowsByPixel(500);
-		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {											
+		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {											
 			//guest user payment	
 			test.info("User is in guest-check in so entering a random credit card details");
 			salesforcePayment();	
 		}else {
-			if(Actionsss.elementSize(pp.getSavedCardsSalesforce())) {
+			if(Actionsss.elementSize(paymentPage.getSavedCardsSalesforce())) {
 				//if user is registered and have saved cards then  this if will execute
 				test.info("User is checked-in as registered and have saved cards so randomly selecting a saved card");
 				savedCardsSalesforce();
@@ -42,12 +43,12 @@ public class SalesforcePayment extends baseClass {
 
 	
 	public static void salesforcePayment() throws Exception {
+		test.info("Entering card number for salesforce payment");
 		salesforceCardNumber();
-    	logger.info("Entered card number for salesforce payment");
+		test.info("Entering cvv for salesforce payment");
     	salesforceExpDate();
-    	logger.info("Entered cvv for salesforce payment");
-    	salesforceCvv();
-    	logger.info("Entered exp for salesforce payment");
+    	test.info("Entering exp for salesforce payment");
+    	salesforceCvv();  	
 	}
 	
 	public static void salesforceCardNumber() throws Exception {	  
@@ -67,10 +68,9 @@ public class SalesforcePayment extends baseClass {
         int randomIndex = rand.nextInt(cardNumbers.length);
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card number input frame']"))); 
-        Actionsss.clearText(pp.getStripeCardNumber());
-        Actionsss.sendKeys(pp.getSalesforceCardNumber(),cardNumbers[randomIndex],cardNum);
-		String cardNumber = pp.getSalesforceCardNumber().getAttribute("value");
-		test.info("Credit card number entered is " + cardNumber);
+        Actionsss.clearText(paymentPage.getStripeCardNumber());
+        Actionsss.sendKeys(paymentPage.getSalesforceCardNumber(),cardNumbers[randomIndex],cardNum);
+		String cardNumber = paymentPage.getSalesforceCardNumber().getAttribute("value");
 		String lastFourDigits = cardNumber.substring(cardNumber.length() - 4);
 		creditCardNumber=lastFourDigits;		
 		driver.switchTo().defaultContent();
@@ -79,39 +79,31 @@ public class SalesforcePayment extends baseClass {
 	public static void salesforceExpDate() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure expiration date input frame']")));
-		Actionsss.sendKeys(pp.getSalesforceExpiryDate(), "1229",expDate);
-		Thread.sleep(2000);
-		String expDate = pp.getSalesforceExpiryDate().getAttribute("value");
-		test.info("Credit card expiry date entered is " +expDate);
+		Actionsss.sendKeys(paymentPage.getSalesforceExpiryDate(), salesforceExpiryDate ,expDate + "is " +salesforceExpiryDate);
 	    driver.switchTo().defaultContent();
 	}
 	
 	public static void salesforceCvv() throws InterruptedException {
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure CVC input frame']")));
-		Actionsss.sendKeys(pp.getSalesforceCvv(), "345",creditCardCvv);
-		String cvv = pp.getSalesforceCvv().getAttribute("value");
-		test.info("Credit card cvv entered is " +cvv);
+		Actionsss.sendKeys(paymentPage.getSalesforceCvv(), "345",creditCardCvv +"is 345");
 		driver.switchTo().defaultContent();
 	}
 
     public static void addNewCardThoughExistingCardsInSalesforce() throws Exception {
-    	Actionsss.javascriptClick(pp.getSalesforceCreditCard());
+    	Actionsss.javascriptClick(paymentPage.getSalesforceCreditCard());
     	salesforcePayment();    	
-    	Actionsss.CombinedClick(pp.getSaveToaccountInSalesforce());
+    	Actionsss.CombinedClick(paymentPage.getSaveToaccountInSalesforce());
     }
     
    public static  void savedCardsSalesforce() throws InterruptedException {	    
-    	Actionsss.randomElementFromList(pp.getSavedCardsSalesforce());
+    	Actionsss.randomElementFromList(paymentPage.getSavedCardsSalesforce());
     	logger.info("Selected random card");
-	    test.info("Selected random saved card");
     }
 	
     public  static void withoutSavedCardSalesforceReg() throws Exception {
-   	 test.info("User don't have saved cards as new user");
-   	 salesforcePayment();
-   	 Actionsss.javascriptClick(pp.getSaveToaccountInSalesforce());
-   	 
+   	   	salesforcePayment();
+   	   	Actionsss.javascriptClick(paymentPage.getSaveToaccountInSalesforce());   	 
    }
 
 }

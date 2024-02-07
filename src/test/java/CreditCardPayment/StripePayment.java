@@ -12,37 +12,39 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.providio.testcases.baseClass;
 
 import functionality.Actionsss;
-import pageObjects.PaymentPage;
+import pageObjects.PaymentPageObjects;
 
 public class StripePayment extends baseClass{
 
-	private static final PaymentPage pp = new PaymentPage(driver);
+	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
 	
 	private static final String cardNum = "cardNumber";
 	private static final String  expDate = "Expired date";
 	private static final String  creditCardCvv= "Cvv";
 	private static final String  postalCode= "postal code";
+	
+	private static final String  stripeExpiryDate = "12 33";
 
-    public static void stripePayment() throws InterruptedException {		
+    public static void stripePayment() throws InterruptedException {	
+    	test.info("Entering card number for stripe payment");
     	stripeCardNumber();
-		test.info("Entered card number for stripe payment");
+    	test.info("Entering exp date for stripe payment");	
 		stripeExpDate();
-		test.info("Entered exp date for stripe payment");		
+		test.info("Entering cvv for stripe payment");	
 		stripeCvv();
-		test.info("Entered cvv for stripe payment");
-		stripePostalCode();
-		test.info("Entered postal code for stripe payment");		
+		test.info("Entering postal code for stripe payment");	
+		stripePostalCode();		
 	}
 	
   	public static void stripe() throws Exception {
   		Actionsss.scrollWindowsByPixel(300);
-  		if(Actionsss.elementSize(pp.getContinueAsAGuest())) {
+  		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {
   		  //guest user payment
   			test.info("User is in guest-check in so entering a random credit card details");
   			stripePayment();
   		}else {
   				//if user is registered and have saved cards then  this if will execute
-  				if(Actionsss.elementSize(pp.getStripeSavedCards())) {
+  				if(Actionsss.elementSize(paymentPage.getStripeSavedCards())) {
   					test.info("User is checked-in as registered and have saved cards so randomly selecting a saved card");
   					savedCardsStripe();
   				}else {
@@ -71,56 +73,50 @@ public class StripePayment extends baseClass{
 	            };
 	    	// Generate a random index to select a card number
 	        int randomIndex = random.nextInt(cardNumbers.length);
-	        // Send the randomly selected card number
-	        test.info("Credit card number entered is " + cardNumbers[randomIndex]);
-	        Actionsss.sendKeys(pp.getStripeCardNumber(),cardNumbers[randomIndex],cardNum);
+	        // Send the randomly selected card number	    
+	        Actionsss.sendKeys(paymentPage.getStripeCardNumber(),cardNumbers[randomIndex], cardNum +cardNumbers[randomIndex]);
 	        String lastFourDigits = cardNum.substring(cardNum.length() - 4);
 			creditCardNumber=lastFourDigits;
 		}
 		
 		public static void stripeExpDate() throws InterruptedException {
-	        test.info("Credit card expiry date entered is " +"11 33");
-	    	Actionsss.sendKeys(pp.getStripeExpDate(), "11 33 ",  expDate);
+	    	Actionsss.sendKeys(paymentPage.getStripeExpDate(), stripeExpiryDate,  expDate +stripeExpiryDate);
 		}
 		
-		public static void stripeCvv() throws InterruptedException {
-			test.info("Credit card expiry date entered is " + "748");
-			Actionsss.sendKeys(pp.getStripeCvv(), "748",creditCardCvv);
+		public static void stripeCvv() throws InterruptedException {	
+			Actionsss.sendKeys(paymentPage.getStripeCvv(), "748",creditCardCvv);
 		}
 		
 		public static void stripePostalCode() throws InterruptedException {	 
-			test.info("Credit card expiry date entered is " + "8777890044");
-		 	Actionsss.sendKeys(pp.getPostalCodeInStripe(), "98777890044", postalCode);
+		 	Actionsss.sendKeys(paymentPage.getPostalCodeInStripe(), "98777890044", postalCode);
 		 	driver.switchTo().defaultContent();
 		}
 		
-	  public static void savedCardsStripe() throws InterruptedException {
+	   public static void savedCardsStripe() throws InterruptedException {
 		// to randomaize the saved cards -randomly pick any saved card 
 	    	 List<WebElement> countOfSavedCards= driver.findElements(By.xpath("//input[@name='saved_card_id']"));
 			 if(!countOfSavedCards.isEmpty()) {
-				Actionsss.randomElementFromList(pp.getCountOfSavedCards());
+				Actionsss.randomElementFromList(paymentPage.getCountOfSavedCards());
 		    	System.out.println("Selected random card");	    		
 			    }
 	     } 
-	  public static void withoutSavedCardStripeReg() throws Exception {
+	  
+	   public static void withoutSavedCardStripeReg() throws Exception {
 	    	 stripePayment(); 
-	    	 Actionsss.javascriptClick(pp.getStripeSaveCardsButtons());
+	    	 Actionsss.javascriptClick(paymentPage.getStripeSaveCardsButtons());
 	  	}
 	   
-	  public static void useSaveCardInStripe() throws Exception {
-	  	Actionsss.javascriptClick(pp.getswitchToSavedCardsStripe());
-	  	Actionsss.randomElementFromList(pp.getCountOfSavedCards());
+	   public static void useSaveCardInStripe() throws Exception {
+		   Actionsss.javascriptClick(paymentPage.getswitchToSavedCardsStripe());
+		   Actionsss.randomElementFromList(paymentPage.getCountOfSavedCards());
 	  }
 	  
 	  public static void addNewCardThoughExistingCardsInStripe() throws Exception {	
-	 	test.info("Though user have saved cards want to add new card");
-	  	PaymentPage pp = new PaymentPage(driver);
-	  	//clicks on credit card label
-	  	Actionsss.javascriptClick(pp.getStripeCreditCard());  	
-	  	//add new card
-	  	Actionsss.javascriptClick(pp.getAddNewCardStripe());	  	 
-	    stripePayment(); 
-		Actionsss.javascriptClick(pp.getStripeSaveCardsButtons());	
+	  	  Actionsss.javascriptClick(paymentPage.getStripeCreditCard());  	
+	  	  //add new card
+	  	  Actionsss.javascriptClick(paymentPage.getAddNewCardStripe());	  	 
+	  	  stripePayment(); 
+	  	  Actionsss.javascriptClick(paymentPage.getStripeSaveCardsButtons());	
 	  }
 	  
 	

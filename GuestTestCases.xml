@@ -104,11 +104,11 @@
 			  		  <include name="verifyingBackToCartInPaymentPage" />	
 				 <!--   <include name="verifyingGiftMessage" />	  -->
 			  				
-					 <include name="verifyingEditCustomerInfoFromPaymentPageAndPlaceOrder" />	
-				 	<include name="verifyingEditShippingAddressFromPaymentPage" />		
+					<include name="verifyingEditCustomerInfoFromPaymentPageAndPlaceOrder" />	
+				 	<include name="verifyingEditShippingAddressFromPaymentPage" />					  		
+			  		<include name="verifyingBillingPhoneNumberError" />	
 			  		<include name="verifyingUpdateBillingAddressAndPlaceOrder" />	
-			  		<include name="verifyingAddNewBillingAddressFromPaymentPageAndPlaceOrder" />
-			  		<include name="verifyingBillingPhoneNumberError" />							   					
+			  		<include name="verifyingAddNewBillingAddressFromPaymentPageAndPlaceOrder" />						   					
 		  			
 		  			
 			  		  <include name="verifyingEnterGiftCodeErrorMsg" />
@@ -147,8 +147,9 @@
 					 
 					 <include name="verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder"/>
 					 <include name="verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder"/>
-				 <!--<include name="verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder"/> 
-					 <include name="verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder"/>	-->								
+					 
+				     <include name="verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder"/> 
+					 <include name="verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder"/>								
 				</methods> 
 	
 				<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
