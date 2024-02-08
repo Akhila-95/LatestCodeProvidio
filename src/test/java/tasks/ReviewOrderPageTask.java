@@ -260,8 +260,30 @@ public class ReviewOrderPageTask extends baseClass{
 							ReviewOrderPageValidation.editPaymentInReviewOrderPage();
 						}
 					}	
+			}else if (Actionsss.elementSize(paymentPage.getCyberSourcePayment())) {
+				logger.info("cybersource activated");			
+					if(Actionsss.elementSize(reviewOrder.getcybersourceCardDetailsInReviewOrderPageList())) {
+						previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceCardDetailsInReviewOrderPage());
+						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+						PaymentPageTasks.gcRedemption();
+						if(Actionsss.elementSize(paymentPage.getNextReviewOrderBtnList())) {
+							if(Actionsss.displayElement(paymentPage.getNextReviewOrderBtn())) {
+								PaymentPageTasks.gcRedemptionInCombinationWithCreditCard();	
+							}
+						}
+						if(Actionsss.elementSize(reviewOrder.getcybersourceGcDetailsInReviewOrderPageList())) {
+							paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
+							ReviewOrderPageValidation.editPaymentInReviewOrderPage();			
+						}else if(Actionsss.elementSize(reviewOrder.getcybersourceGiftCertificateInReviewOrderPageList())&& Actionsss.elementSize(reviewOrder.getcybersourceVisaInReviewOrderPageList())) {
+							paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceCardDetailsInReviewOrderPage());
+							combinationPaymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
+							ReviewOrderPageValidation.editPaymentInReviewOrderPage();
+						}							
+				}else {
+					previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
+					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+				}
 			}
-			
 		}
 	}
 	

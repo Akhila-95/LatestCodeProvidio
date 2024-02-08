@@ -92,6 +92,7 @@ public class baseClass {
 				
 		protected static String previousPaymentInPlaceorderPage = "";
 		protected static String paymentafterEditInPlaceorderPage = "";
+		protected static String combinationPaymentafterEditInPlaceorderPage = "";
 		protected static String getTextOfPaypalInPaymentPage = "";
 		protected static String creditCardNumber = "";
 		protected static String gcCodeRedeemed= "";

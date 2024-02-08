@@ -108,6 +108,48 @@ public class ReviewOrderPage {
 	}
 	
 	
+	////////////////////////////////////////////////////////////
+	
+	//cybersource
+	
+	@FindBy(xpath="(//div[@class='payment-details']//div)[1]")
+	List<WebElement>  cybersourceCardDetailsInReviewOrderPageList;
+	public List<WebElement> getcybersourceCardDetailsInReviewOrderPageList() {
+		return  cybersourceCardDetailsInReviewOrderPageList;
+	}
+	
+	@FindBy(xpath="(//div[@class='payment-details']//div)[1]")
+	WebElement  cybersourceCardDetailsInReviewOrderPage;
+	public WebElement getcybersourceCardDetailsInReviewOrderPage() {
+		return  cybersourceCardDetailsInReviewOrderPage;
+	}
+	
+	@FindBy(xpath="(//span[@class='gift-certificate']//div)[1]")
+	WebElement  cybersourceGcDetailsInReviewOrderPage;
+	public WebElement getcybersourceGcDetailsInReviewOrderPage() {
+		return  cybersourceGcDetailsInReviewOrderPage;
+	}
+	
+	@FindBy(xpath="(//span[@class='gift-certificate']//div)[1]")
+	List<WebElement>   cybersourceGcDetailsInReviewOrderPageList;
+	public List<WebElement>  getcybersourceGcDetailsInReviewOrderPageList() {
+		return  cybersourceGcDetailsInReviewOrderPageList;
+	}
+	
+	@FindBy(xpath="//span[contains(text(),'Credit Visa')]")
+	List<WebElement>   cybersourceVisaInReviewOrderPageList;
+	public List<WebElement>  getcybersourceVisaInReviewOrderPageList() {
+		return  cybersourceVisaInReviewOrderPageList;
+	}
+	
+	@FindBy(xpath="//span[contains(text(),' Gift Certificate')]")
+	List<WebElement>   cybersourceGiftCertificateInReviewOrderPageList;
+	public List<WebElement>  getcybersourceGiftCertificateInReviewOrderPageList() {
+		return   cybersourceGiftCertificateInReviewOrderPageList;
+	}
+	
+	/////////////////////////////////////////////////////////////////////
+	
 	@FindBy(xpath="(//div[@class='address1'])[2]")
 	WebElement  billingAddress;
 	public WebElement getBillingAddress() {

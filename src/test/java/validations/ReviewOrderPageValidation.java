@@ -151,7 +151,7 @@ public class ReviewOrderPageValidation extends baseClass {
 	}
 
 	public static void editPaymentInReviewOrderPage() throws InterruptedException {
-		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+	/*	if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the gift certificate payment edited with credit card from review order page");
 			logger.info(previousPaymentInPlaceorderPage);
 			logger.info(paymentafterEditInPlaceorderPage);
@@ -166,6 +166,17 @@ public class ReviewOrderPageValidation extends baseClass {
 		}else {
 			test.info("Salesforce payment is activated");
 			test.info("No review order page in salesforce payment");
+		}*/
+		
+		logger.info(previousPaymentInPlaceorderPage);
+		logger.info(paymentafterEditInPlaceorderPage);
+		logger.info(combinationPaymentafterEditInPlaceorderPage);
+		if(!previousPaymentInPlaceorderPage.equals(paymentafterEditInPlaceorderPage)) {
+			test.pass("Successfully payment is edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
+			logger.info("Successfully payment is edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
+		}else {
+			test.fail("Payment is not edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
+			logger.info("Payment is not edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
 		}
 	}
 	
@@ -238,6 +249,18 @@ public class ReviewOrderPageValidation extends baseClass {
 			}else {
 				test.fail("No billing address is edited from review order page ,the previous  billing address  is " +previousBillingAddressInRop + " and edited  billing address  is " +editedBillingAddressInRop);
 				logger.info("No billing address is edited from review order page ,the previous  billing address  is " +previousBillingAddressInRop + " and edited  billing address  is " +editedBillingAddressInRop);
+			}
+		}
+		
+		public static void editPaymentsInReviewOrderPage() {
+			logger.info(previousPaymentInPlaceorderPage);
+			logger.info(paymentafterEditInPlaceorderPage);
+			if(!previousPaymentInPlaceorderPage.equals(paymentafterEditInPlaceorderPage)) {
+				test.pass("Successfully payment is edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
+				logger.info("Successfully payment is edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
+			}else {
+				test.fail("Payment is not edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
+				logger.info("Payment is not edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
 			}
 		}
 }
