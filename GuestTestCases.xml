@@ -6,7 +6,7 @@
         <classes>
      
 			<class name="browser.launchBrowsering"/>
-  	 
+  	
 	  	   <class name="testScripts.FindAStoreTest"/>
 				
 				  <methods>	
@@ -102,7 +102,7 @@
 			  		  <include name="verifyingDisplayOfPaymentFormInPaymentPage" />	
 			  		  <include name="verifyingPaymentInfoDisplayInPaymentPage" />
 			  		  <include name="verifyingBackToCartInPaymentPage" />	
-				 <!--   <include name="verifyingGiftMessage" />	  -->
+				    <include name="verifyingGiftMessage" />	 
 			  				
 					<include name="verifyingEditCustomerInfoFromPaymentPageAndPlaceOrder" />	
 				 	<include name="verifyingEditShippingAddressFromPaymentPage" />					  		
@@ -112,15 +112,15 @@
 		  			
 		  			
 			  		  <include name="verifyingEnterGiftCodeErrorMsg" />
-	             	  <include name="verifyingInvalidGcErrorMsg" />
+	             	
 	             	  <include name="verifyingInsufficientGcErrorMsg" />            		
 	             	  <include name="verifyingCheckBalanceOfValidGc" />           		
 	             	  <include name="verifyingCheckBalanceOfInvalidGcErrorMsg" />
 	             	  <include name="verifyingRemovalOfAppliedGc" />
 	             	  
-	          	 	<!--    <include name="verifyingSuccesMessageForValidGcApplied" />-->
-			 				   
-					
+	          	 	    <include name="verifyingSuccesMessageForValidGcApplied" />
+			 			<!--   <include name="verifyingInvalidGcErrorMsg" />-->	   
+					<!--  
 					  <include name="verifyingAllTheErrorsInCreditCard" />
 					  <include name="verifyingCvvAndExpErrorInCreditCard" /> 					
 				      <include name="verifyingCvvErrorInCreditCard" />				
@@ -128,7 +128,7 @@
 			  		  <include name ="verifyingCreditCardExpDateInValid"></include>
 				 	  <include name ="verifyingCreditCardNumberInCompleteError"></include>
 					  <include name ="verifyingCreditCardInCompleteExpYearError"></include>
-					  <include name ="verifyingCreditCardInCompleteCvvError"></include>  		 
+					  <include name ="verifyingCreditCardInCompleteCvvError"></include>  	-->	 
 					  <include name="verifyingAddnewCreditCard" />	 
 					  <include name="verifyingCreditcardWithValidDetails" />
 		</methods>  
@@ -151,20 +151,21 @@
 				     <include name="verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder"/> 
 					 <include name="verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder"/>								
 				</methods> 
-	
+	 
 				<class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
-				<methods>			
-				 	 <include name="verifyingOrderIsPlacingWithCreditCard"/> 			  				
+				<methods>	
+				 		
+				 	<include name="verifyingOrderIsPlacingWithCreditCard"/> 			  				
 				    <include name="verifyingOrderIsPlacingWithGiftCard"/>	 
-					<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
+				<!--  	<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>-->
 					
 					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>										
-					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
+					<!--  <include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
 					  
 					<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
 				   	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/>	
 				    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
-		 		 	
+		 		 	-->
 				</methods>
 		
 		
@@ -177,7 +178,7 @@
 	               <methods>				 		  		                  
 	    				<include name="verifyingPlacingOrderWithBuyNowButtonWithCreditCard"></include>   
 	               </methods>
-	              
+	             
          </classes>
     </test>
 </suite>

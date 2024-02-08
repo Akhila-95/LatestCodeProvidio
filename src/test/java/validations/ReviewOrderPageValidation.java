@@ -151,32 +151,35 @@ public class ReviewOrderPageValidation extends baseClass {
 	}
 
 	public static void editPaymentInReviewOrderPage() throws InterruptedException {
-	/*	if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
-			test.info("Verifying the gift certificate payment edited with credit card from review order page");
-			logger.info(previousPaymentInPlaceorderPage);
-			logger.info(paymentafterEditInPlaceorderPage);
-			logger.info(creditCardNumber);
-			if((!previousPaymentInPlaceorderPage.equals(paymentafterEditInPlaceorderPage)) && (creditCardNumber.equals(paymentafterEditInPlaceorderPage))){
-				test.pass("Successfully  gift certificate payment is  edited with credit card from review order page");
-				logger.info("Successfully  gift certificate payment is  edited with credit card from review order page");
-			}else {
-				test.fail("No  gift certificate payment is  edited with credit card from review order page");
-				logger.info("NO gift certificate payment is  edited with credit card from review order page");
-			}
-		}else {
-			test.info("Salesforce payment is activated");
-			test.info("No review order page in salesforce payment");
-		}*/
-		
+
+		test.info("Verifying the  payment edited from review order page");
 		logger.info(previousPaymentInPlaceorderPage);
 		logger.info(paymentafterEditInPlaceorderPage);
-		logger.info(combinationPaymentafterEditInPlaceorderPage);
 		if(!previousPaymentInPlaceorderPage.equals(paymentafterEditInPlaceorderPage)) {
 			test.pass("Successfully payment is edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
 			logger.info("Successfully payment is edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
 		}else {
 			test.fail("Payment is not edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
 			logger.info("Payment is not edited to " + paymentafterEditInPlaceorderPage +" from " +previousPaymentInPlaceorderPage);
+		}
+	}
+	
+	public static void editCombinationOfPaymentToSinglePaymentInReviewOrderPage() {
+		test.info("Verifying the combination of is payment edited from review order page");
+		logger.info(previousFirstcombinationOfPaymentInPlaceorderPage);
+		logger.info(previousSecondcombinationOfPaymentInPlaceorderPage);
+		logger.info(paymentafterEditInPlaceorderPage);
+		if (!(previousFirstcombinationOfPaymentInPlaceorderPage.equals(paymentafterEditInPlaceorderPage) &&
+			      previousSecondcombinationOfPaymentInPlaceorderPage.equals(paymentafterEditInPlaceorderPage))) {
+			
+			  test.pass("Succesfully the combination of payment is edited to single payment ,the combination of payment are " +			     
+					previousFirstcombinationOfPaymentInPlaceorderPage +" and " +previousSecondcombinationOfPaymentInPlaceorderPage + "are edited to " +paymentafterEditInPlaceorderPage);
+			  logger.info("Succesfully the combination of payment is edited to single payment ,the combination of payment are " +
+			      previousFirstcombinationOfPaymentInPlaceorderPage +" and " +previousSecondcombinationOfPaymentInPlaceorderPage + "are edited to " +paymentafterEditInPlaceorderPage);
+			
+		}else {
+			test.fail("combination of payment is not edited to single payment");
+			logger.info("combination of payment is not edited to single payment");
 		}
 	}
 	

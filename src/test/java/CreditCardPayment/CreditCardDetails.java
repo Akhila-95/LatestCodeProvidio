@@ -30,7 +30,13 @@ public class CreditCardDetails extends baseClass{
 				AdyenPayment.adyen();
 			}			
 			
-			PaymentPageTasks.clickReviewOrderButton();
+			//PaymentPageTasks.clickReviewOrderButton();
+			if(Actionsss.elementSize(paymentPage.getBrainTree())) {
+		    	PaymentPageTasks.brainTreeReviewOrderButton();	
+		    	//ReviewOrderPageValidation.VerifyingReviewOrderBtn();
+	    	}else {
+	    		PaymentPageTasks.clickReviewOrderButton();
+	    	}
 			
 		}else {
 			logger.info("Other payment details are entered");

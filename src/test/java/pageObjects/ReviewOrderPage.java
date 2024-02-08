@@ -63,17 +63,23 @@ public class ReviewOrderPage {
 	public List<WebElement> getBrainPaypalPaymentInReviewOrderPageList() {
 		return  brainPaypalPaymentBeforeEditList;
 	}
-	
-	@FindBy(xpath="//span[@class='gift-certificate']")
-	List<WebElement>  gcPaymentBeforeEditList;
-	public List<WebElement> getGcPaymentBeforeEditList() {
-		return  gcPaymentBeforeEditList;
+//	
+//	@FindBy(xpath="//span[@class='gift-certificate']")
+//	List<WebElement>  gcPaymentBeforeEditList;
+//	public List<WebElement> getGcPaymentInROPList() {
+//		return  gcPaymentBeforeEditList;
+//	}
+//	
+	@FindBy(xpath="(//span[@class='gift-certificate']//div)[1]")
+	WebElement  gcPaymentBeforeEdit;
+	public WebElement getGcPaymentInROP() {
+		return  gcPaymentBeforeEdit;
 	}
 	
-	@FindBy(xpath="//span[@class='gift-certificate']")
-	WebElement  gcPaymentBeforeEdit;
-	public WebElement getGcPaymentBeforeEdit() {
-		return  gcPaymentBeforeEdit;
+	@FindBy(xpath="(//span[@class='gift-certificate']//div)[1]")
+	List<WebElement>  gcPaymentBeforeEditList;
+	public List<WebElement>  getGcPaymentInROPList() {
+		return  gcPaymentBeforeEditList;
 	}
 	
 	@FindBy(css="div.braintree-payment-details")

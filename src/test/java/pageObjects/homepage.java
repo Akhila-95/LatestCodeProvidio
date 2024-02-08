@@ -113,6 +113,7 @@ public class homepage extends baseClass{
         WebElement NavigationMenuitem = driver.findElement(By.xpath("((//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + randomNumbermenu + "]/following::a[@role='menuitem'])[" + randomNumberitem + "]"));
         JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("arguments[0].click();", new Object[]{NavigationMenuitem});
+        Actionsss.highlightElement(NavigationMenuitem);
         //Thread.sleep(10000L);
         
         List<WebElement> newArrivalplp = driver.findElements(By.xpath("(//a[contains(text(), 'New Arrivals')])[2]"));

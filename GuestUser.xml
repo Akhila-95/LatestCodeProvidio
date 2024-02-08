@@ -6,23 +6,30 @@
         <classes>
      
 			<class name="browser.launchBrowsering"/>
-           	 	
-          <class name ="testScripts.OrderPlacingWithAllPaymentsTest"/>
+           	<!--   	
+          <class name ="testScripts.EditPaymentsFromReviewOrderPageTest"/>
 				<methods>			
-				 	 <include name="verifyingOrderIsPlacingWithCreditCard"/> 			  				
-			        <include name="verifyingOrderIsPlacingWithGiftCard"/>	 
-					<include name="verifyingOrderIsPlacingWithPaypalFromCheckoutPage"/>
-					
-					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard"/>										
-					<include name="verifyingOrderIsPlacingWithCombinationOfGcAndPaypal"/>
-					  
-					<include name="verifyingOrderIsPlacingWithMiniCartPaypal"/>
-				   	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/>	
-				    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	    
-		 		 	
-				</methods>
-		
-    		
+					 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate"/> 
+				 	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToPaypal"/> 
+			 		 <include name="verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard"/> 
+				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToPaypal"/> 
+				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificate"/> 
+				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCreditCard"/> 
+				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate"/>	          	    		 		 	
+				</methods> 		-->
+				
+				 <class name ="testScripts.LoginPageTest"/>
+	           
+	             <methods> 
+	   		 
+	             		<!--  <include name ="VerifyingLoginFailureWithIncorrectCredentials"/>          		       	
+	             		<include name ="VerifyingLoginFailureWithEmptyEmailAndPassword"/> 
+	             		<include name ="VerifyingLoginFailureWithInvalidEmailFormat"/> 
+	             		<include name ="VerifyingLoginFailureWithEmptyEmail"/> 
+	             		<include name ="VerifyingLoginFailureWithEmptyPassword"/> -->
+	             		<include name ="VerifyingLoginWithValidCredentials"/>  
+	             		 
+	             </methods>
          </classes>
     </test>
 </suite>

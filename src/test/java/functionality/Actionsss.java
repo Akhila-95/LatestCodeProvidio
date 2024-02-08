@@ -1,5 +1,6 @@
 package functionality;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Random;
@@ -9,7 +10,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.providio.testcases.baseClass;
 
@@ -20,7 +23,7 @@ import pageObjects.ProductListingPage;
 public class Actionsss extends baseClass{
 	
 	 private static ProductListingPage PLP = new ProductListingPage(driver);
-
+	 private static  final  JavascriptExecutor js = (JavascriptExecutor) driver;
 	static int addtoBagRandomIndex = 0;
 		 //to hower the action
 		 public static void hover(WebElement element) {
@@ -66,6 +69,7 @@ public class Actionsss extends baseClass{
 				
 			 Thread.sleep(1000);
 			 JavascriptExecutor js = (JavascriptExecutor)driver;
+			 js.executeScript("arguments[0].style.border = '2px solid yellow';", element);
 			 js.executeScript("arguments[0].click();",element);
 			
 		}
@@ -103,12 +107,14 @@ public class Actionsss extends baseClass{
 		 // Click on an element and log the result
 		    public static void CombinedClick(WebElement locatorName) throws InterruptedException {
 		        try {
+		        	 js.executeScript("arguments[0].style.border = '2px solid yellow';", locatorName);
 		            locatorName.click();
 		            Thread.sleep(1000);
 //		            test.pass("Successfully clicked on " + locatorName.getText());
 		            
 		        } catch (Exception e) {
 		        	Thread.sleep(4000);
+		        	 js.executeScript("arguments[0].style.border = '2px solid yellow';", locatorName);
 		        	JavascriptExecutor executor = (JavascriptExecutor) driver;
 		            executor.executeScript("arguments[0].click();", locatorName);
 		            System.err.println("Exception while clicking the element: " + e.getMessage());
@@ -117,6 +123,9 @@ public class Actionsss extends baseClass{
 		    // Click on an element and log the result
 		    public static void click(WebElement locatorName) throws InterruptedException {
 		        try {
+		        	 JavascriptExecutor js = (JavascriptExecutor) driver;
+		             // Execute JavaScript to add a border around the element
+		             js.executeScript("arguments[0].style.border = '2px solid yellow';", locatorName);
 		            locatorName.click();
 		            Thread.sleep(1000);
 //		            test.pass("Successfully clicked on " + locatorName.getText());
@@ -207,14 +216,43 @@ public class Actionsss extends baseClass{
 		        }
 		    }
 
+		    
+		   
+		    
+		    public static boolean sendKeys(WebElement ele, String value, String elementName) throws InterruptedException {
+		    	try {
+		            test.info("Verify " + elementName + " of sendKeys");    
+		            // Clear and send keys
+		            highlightElement(ele);
+		            ele.clear();
+		            ele.sendKeys(value);
+
+		            logger.info("Successfully send keys of " + elementName);
+		            test.pass("Successfully send keys of " + elementName);
+		            return true;
+		        } catch (Exception e) {
+		            logger.info("Keys not sent to " + elementName);
+		            return false;
+		        }
+		    }
+
+		    // Function to highlight the element using JavaScript
+		    public static void highlightElement(WebElement element) {
+		        JavascriptExecutor js = (JavascriptExecutor) driver;
+		        // Execute JavaScript to highlight the element
+		        js.executeScript("arguments[0].style.background = 'yellow';", element);
+		    }
+		    /*
 		    // Send keys to an element after clearing its existing content
 		    public static boolean sendKeys(WebElement ele, String value, String elementName) throws InterruptedException {
 		        Thread.sleep(2000);
 		        boolean flag = false;
 		        try {
-		        	test.info("Verify " + elementName +" of sendKeys");
-		            ele.clear();
+		        	test.info("Verify " + elementName +" of sendKeys");		
+		        	
+		            ele.clear();		          
 		            ele.sendKeys(value);
+		            js.executeScript("arguments[0].style.background = 'yellow';", ele);
 		            logger.info("Successfully send keys of "+elementName);
 		            test.pass("Successfully send keys of "+elementName);
 		            flag = true;
@@ -224,13 +262,14 @@ public class Actionsss extends baseClass{
 		            return false;
 		        }
 		    }
-		    
+		    */
 		 // Send keys to an element after clearing its existing content
 		    public static boolean SendKeys(WebElement ele, int input, String elementName) throws InterruptedException {
 		        Thread.sleep(2000);
 		        boolean flag = false;
 		        try {
 		        	test.info("Verify " + elementName +" of sendKeys");
+		        	highlightElement(ele);
 		            ele.clear();
 		            ele.sendKeys(Integer.toString(input));
 		            ele.sendKeys(Keys.ENTER);
@@ -273,6 +312,7 @@ public class Actionsss extends baseClass{
 		    public static void addressFromDropDown(WebElement locatorName) throws InterruptedException {
 		    	locatorName.clear();
 		    	Thread.sleep(1000);
+		    	highlightElement(locatorName);
 		        Random random = new Random();
 		        int randomNumber = 345; // Generates a random number between 100 and 999
 		    //   random.nextInt(900) + 100;
@@ -293,6 +333,7 @@ public class Actionsss extends baseClass{
 		    
 		    // Enter a random address from a dropdown
 		    public static void updateShippingAddress(WebElement locatorName) throws InterruptedException {
+		    	highlightElement(locatorName);
 		    	locatorName.clear();
 		    	Thread.sleep(1000);
 		        Random random = new Random();
@@ -319,6 +360,7 @@ public class Actionsss extends baseClass{
 		    
 		    // Enter a random address from a dropdown
 		    public static void editAddress(WebElement locatorName) throws InterruptedException {
+		    	highlightElement(locatorName);
 		    	locatorName.clear();
 		    	Thread.sleep(1000);
 		        Random random = new Random();
@@ -445,6 +487,7 @@ public class Actionsss extends baseClass{
 
  
 		    public static void editShippingAddressFromRop(WebElement locatorName) throws InterruptedException {
+		    	highlightElement(locatorName);
 		    	locatorName.clear();
 		    	Thread.sleep(1000);
 		        Random random = new Random();
@@ -463,6 +506,7 @@ public class Actionsss extends baseClass{
 		    
 
 		    public static void editBillingAddressFromRop(WebElement locatorName) throws InterruptedException {
+		    	highlightElement(locatorName);
 		    	locatorName.clear();
 		    	Thread.sleep(1000);
 		        Random random = new Random();
@@ -481,6 +525,7 @@ public class Actionsss extends baseClass{
 		    }
 		    
 		    public static void addNewShippinggAddress(WebElement locatorName) throws InterruptedException {
+		    	highlightElement(locatorName);
 		    	locatorName.clear();
 		    	Thread.sleep(1000);
 		        Random random = new Random();

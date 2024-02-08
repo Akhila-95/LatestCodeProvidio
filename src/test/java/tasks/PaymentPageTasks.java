@@ -427,6 +427,28 @@ public class PaymentPageTasks extends baseClass {
 			CheckOutPaypal.paypalFromCheckout();
 		}
 	
+		
+		public static void clickReviewOrderButton() throws Exception {
+			if(Actionsss.elementSize(paymentPage.getReviewOrderBtnList())) {
+				if(Actionsss.displayElement(paymentPage.getReviewOrderBtn())) {
+					Thread.sleep(1000);
+					Actionsss.javascriptClick(paymentPage.getReviewOrderBtn());
+					Thread.sleep(3000);							
+				}
+			}
+		}
+		public static void brainTreeReviewOrderButton() throws InterruptedException {
+			//Thread.sleep(3000);
+	    	if(Actionsss.displayElement(paymentPage.getReviewOrderBtn())) {
+	    		Actionsss.scrollWindowsByPixel(100);				    		
+	    		Thread.sleep(3000);
+	    		 Actionsss.click(paymentPage.getReviewOrderBtn());					    		 
+	    		 test.info("Clicked on review order button");
+	    		// paymentPage.getReviewOrderBtn();
+	    		 ReviewOrderPageValidation.VerifyingReviewOrderBtn();
+	    	}
+		}
+		/*
 		public static void clickReviewOrderButton() throws Exception {
 		   if(Actionsss.elementSize(paymentPage.getBrainTree())) {
 			   Thread.sleep(3000);
@@ -447,5 +469,5 @@ public class PaymentPageTasks extends baseClass {
 					}
 				}
 	    	}
-		}
+		}*/
 }

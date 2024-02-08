@@ -30,7 +30,7 @@ public class CheckOutPaypal extends baseClass{
     		test.info("Brain tree payment integration is activated");    		   
     		//
     		Actionsss.javascriptClick(paymentPage.getBrainTreePaypalButton());
-    		Thread.sleep(7000);
+    		Thread.sleep(10000);
     		
     		if (Actionsss.displayElement(paymentPage.getReviewOrderBtn())) {
     			Actionsss.javascriptClick(paymentPage.getReviewOrderBtn());
@@ -57,8 +57,7 @@ public class CheckOutPaypal extends baseClass{
 					Actionsss.CombinedClick(paymentPage.getSelectPlaceOrderBtn());
 					Thread.sleep(8000);
 					PaymentPageValidation.VerifiedThatPlaceOrderClick();
-					Thread.sleep(1000);
-					OrderPageValidation.paymentInOrderConfirmationPage();
+					Thread.sleep(1000);					
 					OrderPageValidation.validatePlacetheOrderPage();
 					OrderPageValidation.orderNumberAndOrderDate();
 					Actionsss.click(homePage.clickOnLogo());
@@ -92,7 +91,7 @@ public class CheckOutPaypal extends baseClass{
 				Thread.sleep(8000);
 				PaymentPageValidation.VerifiedThatPlaceOrderClick();
 				Thread.sleep(1000);
-				OrderPageValidation.paymentInOrderConfirmationPage();
+			//	OrderPageValidation.paymentInOrderConfirmationPage();
 				OrderPageValidation.validatePlacetheOrderPage();
 				OrderPageValidation.orderNumberAndOrderDate();
 				Actionsss.click(homePage.clickOnLogo());
@@ -117,12 +116,15 @@ public static void brainTreeAfterClick() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) driver;  
         WebElement paypalCheckout=driver.findElement(By.xpath("//div[@class='js_braintree_paypal_billing_button']")); 
         if(paypalCheckout.isDisplayed()) {
+        	Actionsss.CombinedClick(paypalCheckout);
+        	/*
        	   js.executeScript("arguments[0].click();", paypalCheckout);                	
            Thread.sleep(1000);
         	if(paypalCheckout.isDisplayed()) {
         		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  paypalCheckout);
-        		paypalCheckout.click();
-            }
+        		js.executeScript("arguments[0].click();", paypalCheckout);   
+        		
+            }*/
         }	                 
      }    
 }

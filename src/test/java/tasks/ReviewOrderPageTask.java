@@ -213,79 +213,7 @@ public class ReviewOrderPageTask extends baseClass{
 		}
 		Actionsss.click(homePage.clickOnLogo());
 	}
-	public static void editPaymentToCreditCard() throws Exception {
-		reviewOrderPage();
-		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
-			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
-				logger.info("Brain tree activated");
-				
-					if(Actionsss.elementSize(reviewOrder.getCreditCardPaymentBrainTreeBeforeEditList())) {
-						logger.info("credit card details entered");
-						previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());						
-						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-						if(Actionsss.elementSize(paymentPage.getSalesforcePaypalList()) || Actionsss.elementSize(paymentPage.getBrainPaypalAcc()) ) {
-								CheckOutPaypal.paypalFromCheckout();
-						}
-					}else if (Actionsss.elementSize(reviewOrder.getBrainPaypalPaymentInReviewOrderPageList())) {
-						logger.info("Paypal details entered");
-						previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());		
-						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-						PaymentPageTasks.creditCardWithValidDetails();
-					
-					}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())) {
-						logger.info("gc entered");
-						if(Actionsss.elementSize(paymentPage.getSalesforcePaypalList()) || Actionsss.elementSize(paymentPage.getBrainPaypalAcc()) ) {
-							CheckOutPaypal.paypalFromCheckout();
-						}else {
-							PaymentPageTasks.creditCardWithValidDetails();
-						}
-						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-					}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())){
-						logger.info("gc");
-						previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
-						logger.info(previousPaymentInPlaceorderPage);
-						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-						PaymentPageTasks.removeAppliedGc();
-						logger.info("edit credit card");
-						PaymentPageTasks.creditCardWithValidDetails();
-						logger.info("Entered credit card num is " +creditCardNumber);
-						paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
-						logger.info(paymentafterEditInPlaceorderPage);
-									
-						if(Actionsss.elementSize(paymentPage.getBrainTree())) {	
-							logger.info("If payment is brain tree then clicked on edit and check the edited payment");
-							Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-						}else {
-							placeOrder();
-							ReviewOrderPageValidation.editPaymentInReviewOrderPage();
-						}
-					}	
-			}else if (Actionsss.elementSize(paymentPage.getCyberSourcePayment())) {
-				logger.info("cybersource activated");			
-					if(Actionsss.elementSize(reviewOrder.getcybersourceCardDetailsInReviewOrderPageList())) {
-						previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceCardDetailsInReviewOrderPage());
-						Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-						PaymentPageTasks.gcRedemption();
-						if(Actionsss.elementSize(paymentPage.getNextReviewOrderBtnList())) {
-							if(Actionsss.displayElement(paymentPage.getNextReviewOrderBtn())) {
-								PaymentPageTasks.gcRedemptionInCombinationWithCreditCard();	
-							}
-						}
-						if(Actionsss.elementSize(reviewOrder.getcybersourceGcDetailsInReviewOrderPageList())) {
-							paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
-							ReviewOrderPageValidation.editPaymentInReviewOrderPage();			
-						}else if(Actionsss.elementSize(reviewOrder.getcybersourceGiftCertificateInReviewOrderPageList())&& Actionsss.elementSize(reviewOrder.getcybersourceVisaInReviewOrderPageList())) {
-							paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceCardDetailsInReviewOrderPage());
-							combinationPaymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
-							ReviewOrderPageValidation.editPaymentInReviewOrderPage();
-						}							
-				}else {
-					previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
-					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-				}
-			}
-		}
-	}
+	
 	
 	public static void editPaymentToPaypal() throws Exception {
 		reviewOrderPage();
@@ -314,7 +242,7 @@ public class ReviewOrderPageTask extends baseClass{
 				logger.info(previousPaymentInPlaceorderPage);
 				}
 				Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
-			}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())){
+			}else if(Actionsss.elementSize(reviewOrder.getGcPaymentInROPList())){
 				logger.info("gc");
 				previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
 				logger.info(previousPaymentInPlaceorderPage);
@@ -355,5 +283,270 @@ public class ReviewOrderPageTask extends baseClass{
 				test.info("No review order page in salesforce payment");
 			}
 		}
+	}
+	
+	public static void cybersource() throws InterruptedException, Exception {
+		logger.info("cybersource activated");			
+		if(Actionsss.elementSize(reviewOrder.getcybersourceCardDetailsInReviewOrderPageList())) {
+			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceCardDetailsInReviewOrderPage());
+			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+			PaymentPageTasks.gcRedemption();
+			if(Actionsss.elementSize(paymentPage.getNextReviewOrderBtnList())) {
+				if(Actionsss.displayElement(paymentPage.getNextReviewOrderBtn())) {
+					PaymentPageTasks.gcRedemptionInCombinationWithCreditCard();	
+				}
+			}
+			if(Actionsss.elementSize(reviewOrder.getcybersourceGcDetailsInReviewOrderPageList())) {
+				paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
+				ReviewOrderPageValidation.editPaymentInReviewOrderPage();			
+			}else if(Actionsss.elementSize(reviewOrder.getcybersourceGiftCertificateInReviewOrderPageList())&& Actionsss.elementSize(reviewOrder.getcybersourceVisaInReviewOrderPageList())) {
+				paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceCardDetailsInReviewOrderPage());
+				combinationPaymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
+				ReviewOrderPageValidation.editPaymentInReviewOrderPage();
+			}							
+	}else {
+		previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
+		Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+	}
+  }
+	
+	public static void editPaymentFromCreditCardToGiftCerticficate() throws Exception {
+		reviewOrderPage();
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+				logger.info("Brain tree activated");				
+				if(Actionsss.elementSize(reviewOrder.getCreditCardPaymentBrainTreeBeforeEditList())) {
+					logger.info("credit card details entered");
+					previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());						
+					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+					PaymentPageTasks.gcRedemption();
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());
+					ReviewOrderPageValidation.editPaymentInReviewOrderPage();
+				}			
+			}else if (Actionsss.elementSize(paymentPage.getCyberSourcePayment())) {
+				cybersource();
+			}
+			ReviewOrderPageTask.placeOrder();
+			OrderPageValidation.validatePlacetheOrderPage();
+			OrderPageValidation.orderNumberAndOrderDate();
+			Actionsss.click(homePage.clickOnLogo());			
+		}
+	}
+	
+	public static void creditCardToPaypal() throws Exception {
+		reviewOrderPage();
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+				logger.info("Brain tree activated");				
+				if(Actionsss.elementSize(reviewOrder.getCreditCardPaymentBrainTreeBeforeEditList())){
+					logger.info("credit card details entered");
+					previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());						
+					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+					if( Actionsss.elementSize(paymentPage.getBrainPaypalAcc()) ) {
+						CheckOutPaypal.paypalFromCheckout();
+					}
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());
+					ReviewOrderPageValidation.editPaymentInReviewOrderPage();
+				}
+			}else {
+				logger.info("");
+			}
+			ReviewOrderPageTask.placeOrder();
+			OrderPageValidation.validatePlacetheOrderPage();
+			OrderPageValidation.orderNumberAndOrderDate();
+			Actionsss.click(homePage.clickOnLogo());
+		}
+	}
+	
+	
+	
+	public static void editPaymentFromGiftCertificateToCreditCard() throws Exception {
+		reviewOrderPage();
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+				logger.info("brain tree");
+				if(Actionsss.elementSize(reviewOrder.getGcPaymentInROPList())){
+					logger.info("gc entered");
+					previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());
+					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+					PaymentPageTasks.removeAppliedGc();					
+					Thread.sleep(2000);
+					PaymentPageTasks.creditCardWithValidDetails();
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());
+					ReviewOrderPageValidation.editPaymentInReviewOrderPage();
+				}
+			}else {
+				logger.info("");
+			}
+				ReviewOrderPageTask.placeOrder();
+				OrderPageValidation.validatePlacetheOrderPage();
+				OrderPageValidation.orderNumberAndOrderDate();
+				Actionsss.click(homePage.clickOnLogo());	
+		}
+	}
+	
+	public static void editPaymentFromGiftCertificateToPaypal() throws Exception {
+		reviewOrderPage();
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+				logger.info("brain tree");
+				if(Actionsss.elementSize(reviewOrder.getGcPaymentInROPList())){
+					logger.info("gc entered");
+					previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());
+					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+					PaymentPageTasks.removeAppliedGc();
+					Thread.sleep(2000);
+					if( Actionsss.elementSize(paymentPage.getBrainPaypalAcc()) ) {
+						CheckOutPaypal.paypalFromCheckout();
+					}
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());
+					ReviewOrderPageValidation.editPaymentInReviewOrderPage();
+				}else {
+					logger.info("");
+				}
+				ReviewOrderPageTask.placeOrder();
+				OrderPageValidation.validatePlacetheOrderPage();
+				OrderPageValidation.orderNumberAndOrderDate();
+				Actionsss.click(homePage.clickOnLogo());
+			}
+		}
+	}
+	
+	public static void editPaymentFromPaypalToGiftCertificate() throws Exception {
+		reviewOrderPage();
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+				logger.info("brain tree");
+				if(Actionsss.elementSize(reviewOrder.getBrainPaypalPaymentInReviewOrderPageList())) {					
+					previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());	
+					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+					PaymentPageTasks.gcRedemption();
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());
+				}
+			}else {
+				logger.info("");
+			}						
+			ReviewOrderPageValidation.editPaymentInReviewOrderPage();	
+			ReviewOrderPageTask.placeOrder();
+			OrderPageValidation.validatePlacetheOrderPage();
+			OrderPageValidation.orderNumberAndOrderDate();
+			Actionsss.click(homePage.clickOnLogo());
+			
+		}
+	}
+	
+	public static void editPaymentFromPaypalToCreditCard() throws Exception {
+		reviewOrderPage();
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+				logger.info("brain tree");
+				if(Actionsss.elementSize(reviewOrder.getBrainPaypalPaymentInReviewOrderPageList())) {	
+					previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());
+					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+					PaymentPageTasks.creditCardWithValidDetails();
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());					
+				}
+			}else {
+				logger.info("");
+			}
+			ReviewOrderPageValidation.editPaymentInReviewOrderPage();	
+			ReviewOrderPageTask.placeOrder();
+			OrderPageValidation.validatePlacetheOrderPage();
+			OrderPageValidation.orderNumberAndOrderDate();
+			Actionsss.click(homePage.clickOnLogo());
+		}
+	}
+	
+	public static void editPaymentFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate() throws Exception {
+		reviewOrderPage();
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+				logger.info("Brain tree");
+				if(Actionsss.elementSize(reviewOrder.getGcPaymentInROPList()) && Actionsss.elementSize(reviewOrder.getCreditCardPaymentBrainTreeBeforeEditList())) {
+					previousFirstcombinationOfPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());
+					previousSecondcombinationOfPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());	
+					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+					PaymentPageTasks.removeAppliedGc();
+					Thread.sleep(2000);
+					PaymentPageTasks.gcRedemption();
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());
+					
+				}
+				
+			}else {
+				logger.info("other paymnet");
+			}
+			ReviewOrderPageValidation.editCombinationOfPaymentToSinglePaymentInReviewOrderPage();
+			ReviewOrderPageTask.placeOrder();
+			OrderPageValidation.validatePlacetheOrderPage();
+			OrderPageValidation.orderNumberAndOrderDate();
+			Actionsss.click(homePage.clickOnLogo());			
+		}
+		
+	}
+	
+	public static void editPaymentFromCombinationOfGiftCertificateAndCreditCardToCreditCard() throws Exception {
+		reviewOrderPage();
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
+				logger.info("Brain tree");
+				if(Actionsss.elementSize(reviewOrder.getGcPaymentInROPList()) && Actionsss.elementSize(reviewOrder.getCreditCardPaymentBrainTreeBeforeEditList())) {
+					previousFirstcombinationOfPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());
+					previousSecondcombinationOfPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());	
+					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+					PaymentPageTasks.removeAppliedGc();
+					Thread.sleep(2000);
+					PaymentPageTasks.creditCardWithValidDetails();
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());
+				}
+			}else {
+				logger.info("other payment");
+			}
+			ReviewOrderPageValidation.editCombinationOfPaymentToSinglePaymentInReviewOrderPage();
+			ReviewOrderPageTask.placeOrder();
+			OrderPageValidation.validatePlacetheOrderPage();
+			OrderPageValidation.orderNumberAndOrderDate();
+			Actionsss.click(homePage.clickOnLogo());
+		}
+		
+	}
+	
+	public static void brainTree() throws InterruptedException, Exception {
+		
+	/*	
+		else if (Actionsss.elementSize(reviewOrder.getBrainPaypalPaymentInReviewOrderPageList())) {
+			logger.info("Paypal details entered");
+			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());		
+			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+			PaymentPageTasks.creditCardWithValidDetails();
+		
+		}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())) {
+			logger.info("gc entered");
+			if( Actionsss.elementSize(paymentPage.getBrainPaypalAcc()) ) {
+				CheckOutPaypal.paypalFromCheckout();
+			}else {
+				PaymentPageTasks.creditCardWithValidDetails();
+			}
+			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+		}else if(Actionsss.elementSize(reviewOrder.getGcPaymentBeforeEditList())){
+			logger.info("gc");
+			previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
+			logger.info(previousPaymentInPlaceorderPage);
+			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+			PaymentPageTasks.removeAppliedGc();
+			logger.info("edit credit card");
+			PaymentPageTasks.creditCardWithValidDetails();
+			logger.info("Entered credit card num is " +creditCardNumber);
+			paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentBeforeEdit());
+			logger.info(paymentafterEditInPlaceorderPage);
+						
+			if(Actionsss.elementSize(paymentPage.getBrainTree())) {	
+				logger.info("If payment is brain tree then clicked on edit and check the edited payment");
+				Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+			}else {
+				placeOrder();
+				ReviewOrderPageValidation.editPaymentInReviewOrderPage();
+			}
+		}*/
 	}
 }

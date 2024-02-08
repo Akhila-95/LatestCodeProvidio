@@ -56,7 +56,7 @@ public class CyberSourcePayment extends baseClass{
           };
 		
 	     int randomIndex = rand.nextInt(cardNumbers.length);
-	     Actionsss.clearText(paymentPage.getCyberSourceCreditcard());
+	  //   Actionsss.clearText(paymentPage.getCyberSourceCreditcard());
 	     Actionsss.sendKeys(paymentPage.getCyberSourceCreditcard(),cardNumbers[randomIndex],cardNum +cardNumbers[randomIndex]);
 	     // Extract the last four digits
 	     String lastFourDigits = cardNum.substring(cardNum.length() - 4);
@@ -73,7 +73,7 @@ public class CyberSourcePayment extends baseClass{
 	}
 	
 	public  static void cyberSourceSecurityCode() throws Exception {
-		Actionsss.clearText(paymentPage.getCyberSourceSceuritycode());
+	//	Actionsss.clearText(paymentPage.getCyberSourceSceuritycode());
 		Actionsss.sendKeys(paymentPage.getCyberSourceSceuritycode(),"2345",creditCardCvv + "is 2345");
 	}
 	

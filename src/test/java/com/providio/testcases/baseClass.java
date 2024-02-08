@@ -92,7 +92,11 @@ public class baseClass {
 				
 		protected static String previousPaymentInPlaceorderPage = "";
 		protected static String paymentafterEditInPlaceorderPage = "";
-		protected static String combinationPaymentafterEditInPlaceorderPage = "";
+		protected static String firstcombinationOfPaymentInPlaceorderPage = "";
+		protected static String secondcombinationOfPaymentInPlaceorderPage = "";
+		protected static String previousFirstcombinationOfPaymentInPlaceorderPage = "";
+		protected static String previousSecondcombinationOfPaymentInPlaceorderPage = "";
+		
 		protected static String getTextOfPaypalInPaymentPage = "";
 		protected static String creditCardNumber = "";
 		protected static String gcCodeRedeemed= "";
@@ -286,13 +290,7 @@ public class baseClass {
 	            System.out.println("Exception while taking screenshot: " + e.getMessage());
 	        }
 	        
-	    }
-	    if(result.getStatus() == ITestResult.FAILURE) {
-	    	Actionsss.javascriptClick(homePage.clickOnLogo());
-            logger.info("Test case failed and returned into homepage");
-            test.info("Test case failed and returned into homepage");
-            Thread.sleep(2000);
-	    }
+	    }	   
 	}
 
 	
