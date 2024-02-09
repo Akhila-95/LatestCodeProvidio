@@ -91,7 +91,7 @@ public class homepage extends baseClass{
 	
 	//Mega menu
 	
-	public void selectRandomMegaMenu(WebDriver driver) throws InterruptedException {
+	public void selectRandomMegaMenu() throws InterruptedException {
 		
         List<WebElement> elements = driver.findElements(By.xpath("//ul[contains(@class, 'nav navbar-nav')]//li[contains(@class, 'nav-item') and @role='presentation']"));
         int count = elements.size();
@@ -112,8 +112,9 @@ public class homepage extends baseClass{
        // Thread.sleep(5000L);
         WebElement NavigationMenuitem = driver.findElement(By.xpath("((//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + randomNumbermenu + "]/following::a[@role='menuitem'])[" + randomNumberitem + "]"));
         JavascriptExecutor js = (JavascriptExecutor)driver;
-        js.executeScript("arguments[0].click();", new Object[]{NavigationMenuitem});
         Actionsss.highlightElement(NavigationMenuitem);
+        js.executeScript("arguments[0].click();", new Object[]{NavigationMenuitem}); 
+        
         //Thread.sleep(10000L);
         
         List<WebElement> newArrivalplp = driver.findElements(By.xpath("(//a[contains(text(), 'New Arrivals')])[2]"));
@@ -173,6 +174,7 @@ public class homepage extends baseClass{
       //  Thread.sleep(5000L);
         WebElement navigatingToGPS = driver.findElement(By.xpath("((//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + randomNumbermenu + "]/following::a[@role='menuitem'])[" + randomNumberitem + "]"));
         JavascriptExecutor js = (JavascriptExecutor)driver;
+        Actionsss.highlightElement(navigatingToGPS);
         js.executeScript("arguments[0].click();", new Object[]{ navigatingToGPS});
        // Thread.sleep(10000L);
         

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Providio_Regression_Test" class="navigator-link">
-              <span class="suite-name border-passed">Providio Regression Test</span>
+              <span class="suite-name border-failed">Providio Regression Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Providio_Regression_Test" class="hide-methods failed suite-Providio_Regression_Test"> (hide)</a> <!-- hide-methods failed suite-Providio_Regression_Test -->
+                      <a href="#" panel-name="suite-Providio_Regression_Test" class="show-methods failed suite-Providio_Regression_Test"> (show)</a> <!-- show-methods failed suite-Providio_Regression_Test -->
+                    </span>
+                    <div class="method-list-content failed suite-Providio_Regression_Test">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.EditPaymentsFromReviewOrderPageTest" class="method navigator-link" hash-for-method="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal">verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Providio_Regression_Test -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,11 +115,6 @@
                       <a href="#" panel-name="suite-Providio_Regression_Test" class="show-methods passed suite-Providio_Regression_Test"> (show)</a> <!-- show-methods passed suite-Providio_Regression_Test -->
                     </span>
                     <div class="method-list-content passed suite-Providio_Regression_Test">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Providio_Regression_Test" title="testScripts.LoginPageTest" class="method navigator-link" hash-for-method="VerifyingLoginWithValidCredentials">VerifyingLoginWithValidCredentials</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Providio_Regression_Test" title="browser.launchBrowsering" class="method navigator-link" hash-for-method="verifyHomePageLaunching">verifyHomePageLaunching</a> <!-- method navigator-link -->
@@ -123,6 +132,58 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Providio_Regression_Test" class="panel Providio_Regression_Test">
+          <div class="suite-Providio_Regression_Test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testScripts.EditPaymentsFromReviewOrderPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal">
+                  </a> <!-- verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal -->
+                  <span class="method-name">verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class, &apos;product-detail product&apos;)]&quot;}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4646d89c577b6b4ca3d02f32f919b102, findElement {using=xpath, value=//div[contains(@class, &apos;product-detail product&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49644}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49644/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4646d89c577b6b4ca3d02f32f919b102
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at validations.ProductListingPageValidations.verifyPLPProductClick(ProductListingPageValidations.java:87)
+	at tasks.ProductListingPageTasks.productclick(ProductListingPageTasks.java:84)
+	at tasks.ProductDetailPageTasks.addtoCart(ProductDetailPageTasks.java:24)
+	at tasks.MiniCartPageTasks.miniCartValue(MiniCartPageTasks.java:29)
+	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:28)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:135)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
+	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:261)
+	at tasks.EditPaymentsFromReviewOrderPageTasks.editCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTasks.java:90)
+	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTest.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Providio_Regression_Test-class-failed -->
           <div class="suite-Providio_Regression_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -134,21 +195,6 @@
                   <a name="verifyHomePageLaunching">
                   </a> <!-- verifyHomePageLaunching -->
                   <span class="method-name">verifyHomePageLaunching</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Providio_Regression_Test-class-passed -->
-          <div class="suite-Providio_Regression_Test-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testScripts.LoginPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifyingLoginWithValidCredentials">
-                  </a> <!-- VerifyingLoginWithValidCredentials -->
-                  <span class="method-name">VerifyingLoginWithValidCredentials</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -166,11 +212,11 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;SmokeTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;browser.launchBrowsering&quot;/&gt;
-      &lt;class name=&quot;testScripts.LoginPageTest&quot;&gt;
+      &lt;class name=&quot;testScripts.EditPaymentsFromReviewOrderPageTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;VerifyingLoginWithValidCredentials&quot;/&gt;
+          &lt;include name=&quot;verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testScripts.LoginPageTest --&gt;
+      &lt;/class&gt; &lt;!-- testScripts.EditPaymentsFromReviewOrderPageTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- SmokeTest --&gt;
 &lt;/suite&gt; &lt;!-- Providio Regression Test --&gt;
@@ -228,18 +274,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifyingLoginWithValidCredentials')
-data.setCell(0, 2, 'testScripts.LoginPageTest')
-data.setCell(0, 3, 26078);
+data.setCell(0, 1, 'verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal')
+data.setCell(0, 2, 'testScripts.EditPaymentsFromReviewOrderPageTest')
+data.setCell(0, 3, 7357);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyHomePageLaunching')
 data.setCell(1, 2, 'browser.launchBrowsering')
-data.setCell(1, 3, 11090);
+data.setCell(1, 3, 6827);
 window.suiteTableData['Providio_Regression_Test']= { tableData: data, tableDiv: 'times-div-Providio_Regression_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Providio_Regression_Test">
               </div> <!-- times-div-Providio_Regression_Test -->
             </div> <!-- times-div -->
@@ -254,25 +300,39 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Providio_Regression_Test" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">7 ignored methods</span>
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testScripts.LoginPageTest</span>
+              <span class="ignored-class-name">testScripts.EditPaymentsFromReviewOrderPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpforReport</span>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard</span>
                 <br/>
-                <span class="ignored-method-name">VerifyingLoginFailureWithEmptyPassword</span>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToPaypal</span>
                 <br/>
-                <span class="ignored-method-name">VerifyingLoginFailureWithInvalidEmailFormat</span>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificateAndPaypal</span>
                 <br/>
-                <span class="ignored-method-name">VerifyingLoginFailureWithEmptyEmail</span>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToPaypal</span>
                 <br/>
-                <span class="ignored-method-name">VerifyingLoginFailureWithIncorrectCredentials</span>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToGiftCertificate</span>
+                <br/>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToPaypal</span>
+                <br/>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCombinationOfGiftCertificateAndCreditCard</span>
                 <br/>
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
-                <span class="ignored-method-name">VerifyingLoginFailureWithEmptyEmailAndPassword</span>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToCreditCard</span>
+                <br/>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate</span>
+                <br/>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate</span>
+                <br/>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificate</span>
+                <br/>
+                <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+                <span class="ignored-method-name">verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCreditCard</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -291,45 +351,47 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">6473 ms</span>
+                <span class="method-start">5925 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">afterClass(public void browser.launchBrowsering.verifyHomePageLaunching() throws java.lang.InterruptedException)</span>
-                <span class="method-start">8528 ms</span>
+                <span class="method-start">7989 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageLaunching</span>
-                <span class="method-start">8534 ms</span>
+                <span class="method-start">7995 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunch...)</span>
-                <span class="method-start">19631 ms</span>
+                <span class="method-start">14832 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testScripts.EditPaymentsFromReviewOrderPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">19746 ms</span>
+                <span class="method-start">14875 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">afterClass(public void testScripts.LoginPageTest.VerifyingLoginWithValidCredentials() throws java.lang.Exceptio...)</span>
-                <span class="method-start">21763 ms</span>
+                <span class="method-name">afterClass(public static void testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReview...)</span>
+                <span class="method-start">16906 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">VerifyingLoginWithValidCredentials</span>
-                <span class="method-start">21766 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal</span>
+                <span class="method-start">16907 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=VerifyingLoginWithValidCredentials status=SUCCESS method=LoginPageTest.VerifyingLog...)</span>
-                <span class="method-start">47848 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertific...)</span>
+                <span class="method-start">24267 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">browser.launchBrowsering</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">47928 ms</span>
+                <span class="method-start">24627 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

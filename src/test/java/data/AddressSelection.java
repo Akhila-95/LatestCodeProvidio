@@ -26,7 +26,7 @@ public class AddressSelection extends baseClass{
 			 Actionsss.sendKeys(shippingPage.getSelectfirstNameInput(), fname, fName);
 			 Actionsss.sendKeys(shippingPage.getSelectLastNameInput(), lname, lName);
 			 Actionsss.addressFromDropDown(shippingPage.getShippingAddress());	
-			 Thread.sleep(1000);
+			 Thread.sleep(2000);
 			 Actionsss.sendKeys(shippingPage.getSelectPhoneInput(), phonenumber, Phone);
 			 
 		 }else {			 

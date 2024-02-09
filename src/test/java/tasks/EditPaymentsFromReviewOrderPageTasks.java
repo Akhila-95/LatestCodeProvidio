@@ -55,4 +55,40 @@ public class EditPaymentsFromReviewOrderPageTasks extends baseClass {
 		ReviewOrderPageTask.editPaymentFromCombinationOfGiftCertificateAndCreditCardToCreditCard();
 		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
+	
+	public static void editCombinationOfGiftCertificateAndPaypalToPaypal() throws Exception {
+		PaymentPageTasks.gcRedemptionInCombinationWithPaypal();
+		ReviewOrderPageTask.editPaymentFromCombinationOfGiftCertificateAndPaypalToPaypal();
+		Actionsss.javascriptClick(homePage.clickOnLogo());
+	}
+	
+	public static void editCombinationOfGiftCertificateAndPaypalToGiftCertificate() throws Exception {
+		PaymentPageTasks.gcRedemptionInCombinationWithPaypal();
+		ReviewOrderPageTask.editPaymentFromCombinationOfGiftCertificateAndPaypalToGiftCertificate();
+		Actionsss.javascriptClick(homePage.clickOnLogo());
+	}
+	
+	public static void editPaypalToCombinationOfGiftCertificateAndPaypal() throws Exception {
+		PaymentPageTasks.paypal();
+		ReviewOrderPageTask.editPaymentFromPaypalToCombinationOfGiftCertificateAndPaypal();
+		Actionsss.javascriptClick(homePage.clickOnLogo());		
+	}
+	
+	public static void editPaypalToCombinationOfGiftCertificateAndCreditCard() throws Exception {
+		PaymentPageTasks.paypal();
+		ReviewOrderPageTask.editPaymentFromPaypalToCombinationOfGiftCertificateAndCreditCard();
+		Actionsss.javascriptClick(homePage.clickOnLogo());		
+	}
+	
+	public static void editCreditCardToCombinationOfGiftCertificateAndCreditCard() throws Exception {
+		PaymentPageTasks.creditCardWithValidDetails();
+		ReviewOrderPageTask.editPaymentFromCreditCardToCombinationOfGiftCertificateAndCreditCard();
+		Actionsss.javascriptClick(homePage.clickOnLogo());		
+	}
+	
+	public static void editCreditCardToCombinationOfGiftCertificateAndPaypal() throws Exception {
+		PaymentPageTasks.creditCardWithValidDetails();
+		ReviewOrderPageTask.editPaymentFromCreditCardToCombinationOfGiftCertificateAndPaypal();
+		Actionsss.javascriptClick(homePage.clickOnLogo());		
+	}
 }

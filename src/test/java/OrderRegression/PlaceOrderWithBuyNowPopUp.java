@@ -26,7 +26,7 @@ public class PlaceOrderWithBuyNowPopUp extends baseClass{
 	@Test
 	public static void verifyingPlacingOrderWithBuyNowPopUp() throws Exception {
 		 ProductListingPageTasks.gpsProducts();
-		 allAttributesSelection.selectTheAttributesInPdpPage();
+		 allAttributesSelection.selectTheAttributesInPdp();
 		
 		 Thread.sleep(3000);
 		 

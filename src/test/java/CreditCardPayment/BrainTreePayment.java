@@ -19,8 +19,10 @@ public class BrainTreePayment extends baseClass {
 	
 
 	
-	public static void brainTreeMethod() throws InterruptedException {
+	public static void brainTreeMethod() throws Exception {
 	 	Actionsss.scrollWindowsByPixel(500);
+	 	Thread.sleep(1000);
+	 	
 		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {
 			test.info("User is in guest-check in so entering a random credit card details");
 			BrainTreePayment.braintree();			

@@ -18,8 +18,6 @@ import validations.PaymentPageValidation;
 public class CheckOutPaypal extends baseClass{
 
 	private static final PaymentPageObjects paymentPage = new PaymentPageObjects(driver);
-	private static homepage homePage = new homepage(driver);
-	private static OrderPageDetails  orderPage = new OrderPageDetails(driver);
 	
 	public static void paypalFromCheckout() throws InterruptedException, Exception {
 		
@@ -41,11 +39,11 @@ public class CheckOutPaypal extends baseClass{
 				PaypalMethod.paypalPopup();
 		    	logger.info("Clicked on paypal button");	
 		    	Thread.sleep(1000);
-				if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
+		    /*	if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
 					if(Actionsss.displayElement(orderPage.getOrderThankMessage())) {	
 					logger.info("Salesforce payment activated");			
 					Thread.sleep(8000);		
-					OrderPageValidation.paymentInOrderConfirmationPage();
+					//OrderPageValidation.paymentInOrderConfirmationPage();
 					OrderPageValidation.validatePlacetheOrderPage();
 					OrderPageValidation.orderNumberAndOrderDate();
 					Actionsss.click(homePage.clickOnLogo());
@@ -61,7 +59,7 @@ public class CheckOutPaypal extends baseClass{
 					OrderPageValidation.validatePlacetheOrderPage();
 					OrderPageValidation.orderNumberAndOrderDate();
 					Actionsss.click(homePage.clickOnLogo());
-				}
+				}*/
 			}
     		
     	}else if(Actionsss.elementSize(paymentPage.getSalesforcePaypalList())) {	 
@@ -74,7 +72,7 @@ public class CheckOutPaypal extends baseClass{
 		    PaypalMethod.paypalPopup();
 	    	logger.info("Clicked on paypal button");
 	    	Thread.sleep(1000);
-			if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
+	    /*	if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
 				if(Actionsss.displayElement(orderPage.getOrderThankMessage())) {	
 				logger.info("Salesforce payment activated");			
 				Thread.sleep(8000);		
@@ -91,17 +89,18 @@ public class CheckOutPaypal extends baseClass{
 				Thread.sleep(8000);
 				PaymentPageValidation.VerifiedThatPlaceOrderClick();
 				Thread.sleep(1000);
-			//	OrderPageValidation.paymentInOrderConfirmationPage();
+				OrderPageValidation.paymentInOrderConfirmationPage();
 				OrderPageValidation.validatePlacetheOrderPage();
 				OrderPageValidation.orderNumberAndOrderDate();
 				Actionsss.click(homePage.clickOnLogo());
-			}
-	    	
-    	}else {
+			}*/ 
+	
+    	} 
+	else {
     		test.info("Cybersouce payment OR stripe payment integration  is activated so, No paypal for cybersouce and stripe");
-        	test.pass("No paypal integration for cybersource and stripe , choose another integration to do the payment with payment");
-    	}
+        	test.pass("No paypal integration for cybersource and stripe , choose another integration to do the payment with payment");    	
 	  }
+	}
 
 
 

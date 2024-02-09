@@ -43,8 +43,8 @@ public class reportToMail extends baseClass{
 	    //smtp.office365.com
 	    
 	    String reportFilePath = Report;
-        String subject1 = "FMG Automation Test Report And Screenshot";
-        String body1 = "Please find the attached Automation Test Report of FMG Project.";
+        String subject1 = "Providio Automation Test Report And Screenshot";
+        String body1 = "Please find the attached Automation Test Report of Providio Project.";
 
 	    String reportScreenshot = ReportScreenshot;
 	    //String subject2 = "";

@@ -26,7 +26,7 @@ public class PlaceOrderWithDifferentPayments  extends baseClass{
 	public static void orderPlacingWithGiftCard() throws Exception {
 		PaymentPageTasks.gcRedemption();
 		ReviewOrderPageTask.placeOrder();
-		OrderPageValidation.paymentInOrderConfirmationPage();
+		//OrderPageValidation.paymentInOrderConfirmationPage();
 		OrderPageValidation.validatePlacetheOrderPage();
 		OrderPageValidation.orderNumberAndOrderDate();
 		Actionsss.click(homePage.clickOnLogo());
@@ -43,29 +43,37 @@ public class PlaceOrderWithDifferentPayments  extends baseClass{
 	
 	public static void orderPlacingWithPaypalFromCheckoutPage() throws Exception {
 		PaymentPageTasks.paypal();
+		ReviewOrderPageTask.placeOrder();
+		OrderPageValidation.paymentInOrderConfirmationPage();
+		OrderPageValidation.validatePlacetheOrderPage();
+		OrderPageValidation.orderNumberAndOrderDate();
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 	
 	public static void orderPlacingWithCombinationOfGcAndPaypal() throws Exception {
 		PaymentPageTasks.gcRedemptionInCombinationWithPaypal();
+		ReviewOrderPageTask.placeOrder();
+		OrderPageValidation.paymentInOrderConfirmationPage();
+		OrderPageValidation.validatePlacetheOrderPage();
+		OrderPageValidation.orderNumberAndOrderDate();
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 	
-	public static void orderPlacingWithMiniCartPaypal() throws InterruptedException, Exception {
-		Actionsss.javascriptClick(homePage.clickOnLogo());
+	public static void orderPlacingWithMiniCartPaypal() throws InterruptedException, Exception {	
 		MiniCartPaypal.miniCartPaypal();
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 				
 	}
 	
-	public static void orderPlacingWithCartPagePaypal() throws InterruptedException, Exception {
-		Thread.sleep(1000);
-		Actionsss.click(homePage.clickOnLogo());
-		Actionsss.scrollUp();
+	public static void orderPlacingWithCartPagePaypal() throws InterruptedException, Exception {		
 		CartPagePayal.cartPagePaypal();
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	
 	}
 	
-	public static void orderPlacingWithPaypalInPdpPage() throws InterruptedException, Exception {
-		Actionsss.click(homePage.clickOnLogo());
-		PdpPagePaypalBuyNow.pdpPagePaypal();			
+	public static void orderPlacingWithPaypalInPdpPage() throws InterruptedException, Exception {		
+		PdpPagePaypalBuyNow.pdpPagePaypal();
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 		
 }

@@ -11,29 +11,24 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.providio.testcases.baseClass;
 
+import pageObjects.ProductDetailPage;
+
 public class attributesSelection extends baseClass{
+	
+	static ProductDetailPage PDP = new ProductDetailPage(driver);
 	
 	
     //SizeSelection
 	//@FindBy(xpath ="//select[contains(@class,'select-size')]" )
 	
 	//WebElement Size;
-	public static void sizeSelction() throws InterruptedException {
+	public static void sizeSelction() throws Exception {
 		
 		//sizes in boxess
 		List<WebElement> sizeBox= driver.findElements(By.xpath("//div[contains(@class, 'select-size')]"));
 		List<WebElement> sizeDropDown= driver.findElements(By.xpath("//select[contains(@class,'select-size')]"));
 		if(sizeBox.size()>0) {
-			//total sizes
-			List<WebElement> sizeBoxs= driver.findElements(By.xpath("//div[contains(@class, 'select-size')]//span[@class='text-center']"));
-
-		    if (sizeBoxs.size() > 0) {
-		        int randomIndexofsize = random.nextInt(sizeBoxs.size()) + 1;
-		        WebElement sizeBtn = driver.findElement(By.xpath("(//div[contains(@class, 'select-size')]//span[@class='text-center'])[" + randomIndexofsize + "]"));
-		        Actionsss.CombinedClick(sizeBtn);
-		        //sizeBtn.click();
-		    } 
-
+			Actionsss.randomElementFromList(PDP.getSelectSize());
 		}else if(sizeDropDown.size()>0) {
 		List<WebElement> sizedropdown= driver.findElements(By.xpath("//select[contains(@class, 'select-size')]"));
 		logger.info(sizedropdown.size());
@@ -53,7 +48,9 @@ public class attributesSelection extends baseClass{
 	            	String value = option.getAttribute("data-attr-value");
 	                enabledSizes.add(value);
 	                //System.out.println(value);
-	                option.click();
+	                Actionsss.highlightElement(Size);
+	                Actionsss.CombinedClick(option);	
+	                //option.click();
 	                break; 
 	                // Select the first enabled size and exit the loop
 	            }
@@ -69,7 +66,7 @@ public class attributesSelection extends baseClass{
 	
 
 //	WebElement memorySize;
-	public static void memorySelection() throws InterruptedException {
+	public static void memorySelection() throws Exception {
 		List<WebElement> memoryBox = driver.findElements(By.xpath(" //div[contains(@class, 'select-memorySize')]"));
 		if(memoryBox.size()>0) {
 			//total memory sizes
@@ -77,7 +74,14 @@ public class attributesSelection extends baseClass{
 			int randomIndexofmemory = random.nextInt(memoryBoxs.size())+1;
 			if(randomIndexofmemory>0) {
 				WebElement memoryBtn = driver.findElement(By.xpath("(//div[contains(@class, 'select-memorySize')]//span[@class='text-center  '])[" + randomIndexofmemory + "]"));
-				memoryBtn.click();
+				try {
+					memoryBtn.click();
+		            Thread.sleep(2000);
+		        } catch (Exception e) {
+		        	JavascriptExecutor executor = (JavascriptExecutor) driver;
+		            executor.executeScript("arguments[0].click();", memoryBtn);
+		            System.err.println("Exception while clicking the element: " + e.getMessage());
+		        }
 			}
 		}else {
 		// Create a Select object and select the first enabled size
@@ -96,7 +100,8 @@ public class attributesSelection extends baseClass{
 	            	String value = option.getAttribute("data-attr-value");
 	                enabledSizes.add(value);
 	                //System.out.println(value);
-	                option.click();
+	                Actionsss.highlightElement(memorySize);
+	                Actionsss.CombinedClick(option);
 	                break; 
 	                // Select the first enabled size and exit the loop
 	            }
@@ -111,7 +116,7 @@ public class attributesSelection extends baseClass{
 	
 	
 	//color Selection
-	public static void colorSelection() throws InterruptedException {
+	public static void colorSelection() throws Exception {
 		List<WebElement> colorBoxpresnet = driver.findElements(By.xpath("//button[contains(@class, 'color-attribute')]"));
 		if(colorBoxpresnet.size()>0) {
 			//total memory sizes
@@ -119,7 +124,14 @@ public class attributesSelection extends baseClass{
 			int randomIndexofcolor = random.nextInt(colorBoxs.size())+1;
 			if(randomIndexofcolor>0) {
 				WebElement colorBtn = driver.findElement(By.xpath("(//button[contains(@class, 'color-attribute')])[" + randomIndexofcolor + "]"));
-				colorBtn.click();
+				try {
+					colorBtn.click();
+		            Thread.sleep(2000);
+		        } catch (Exception e) {
+		        	JavascriptExecutor executor = (JavascriptExecutor) driver;
+		            executor.executeScript("arguments[0].click();", colorBtn);
+		            System.err.println("Exception while clicking the element: " + e.getMessage());
+		        }
 			}
  		}else {
  		    // Create a Select object and select the first enabled size
@@ -141,7 +153,8 @@ public class attributesSelection extends baseClass{
 		            	String value = option.getAttribute("data-attr-value");
 		                enabledSizes.add(value);
 		                //System.out.println(value);
-		                option.click();
+		                Actionsss.highlightElement(color);
+		                Actionsss.CombinedClick(option);
 		                Thread.sleep(2000);
 		                break; 				                
 		            }
@@ -156,7 +169,7 @@ public class attributesSelection extends baseClass{
 }			
 	
 	//width Selection
- 	public static void widthSelection() throws InterruptedException {
+ 	public static void widthSelection() throws Exception {
  		List<WebElement> widthBoxpresent = driver.findElements(By.xpath("//div[contains(@class, 'select-width')]//span[@class='text-center' and not(contains(@disabled, 'disabled'))]"));
 		if(widthBoxpresent.size()>0) {
 			//total memory sizes
@@ -164,7 +177,14 @@ public class attributesSelection extends baseClass{
 			int randomIndexofwidth = random.nextInt(widthBoxs.size())+1;
 			if(randomIndexofwidth>0) {
 				WebElement widthBtn = driver.findElement(By.xpath("(//div[contains(@class, 'select-width')]//span[@class='text-center' and not(contains(@disabled, 'disabled'))])[" + randomIndexofwidth + "]"));
-				widthBtn.click();
+				try {
+					widthBtn.click();
+		            Thread.sleep(2000);
+		        } catch (Exception e) {
+		        	JavascriptExecutor executor = (JavascriptExecutor) driver;
+		            executor.executeScript("arguments[0].click();", widthBtn);
+		            System.err.println("Exception while clicking the element: " + e.getMessage());
+		        }
 			}
  		}else {
  		// Create a Select object and select the first enabled size
@@ -186,8 +206,9 @@ public class attributesSelection extends baseClass{
 		            if (!text.isEmpty()) {      	
 		            	String value = option.getAttribute("data-attr-value");
 		                enabledSizes.add(value);
-		                //System.out.println(value);
-		                option.click();
+		                //System.out.println(value);\
+		                Actionsss.highlightElement(width);
+		                Actionsss.CombinedClick(option);
 		                Thread.sleep(2000);
 		                break; 				                
 		            }
@@ -270,7 +291,7 @@ public class attributesSelection extends baseClass{
    
    
    //AcceriessizeSelection
-   public static void AccsizeSelction() {
+   public static void AccsizeSelction() throws Exception {
 		List<WebElement> AccSizeBoxpresent = driver.findElements(By.xpath("//div[contains(@class, 'select-accessorySize')]//span[@class='text-center  ']"));
 		if(AccSizeBoxpresent.size()>0) {
 			//total memory sizes
@@ -278,7 +299,14 @@ public class attributesSelection extends baseClass{
 			int randomIndexofwidth = random.nextInt(AccSizeBoxs.size())+1;
 			if(randomIndexofwidth>0) {
 				WebElement AccSizeBtn = driver.findElement(By.xpath("(//div[contains(@class, 'select-accessorySize')]//span[@class='text-center  '])[" + randomIndexofwidth + "]"));
-				AccSizeBtn.click();
+				try {
+					AccSizeBtn.click();
+		            Thread.sleep(2000);
+		        } catch (Exception e) {
+		        	JavascriptExecutor executor = (JavascriptExecutor) driver;
+		            executor.executeScript("arguments[0].click();", AccSizeBtn);
+		            System.err.println("Exception while clicking the element: " + e.getMessage());
+		        }
 			}
 		}else {
 		WebElement sizeElement = driver.findElement(By.xpath("//select[contains(@class, 'select-accessorySize')]"));
@@ -295,7 +323,8 @@ public class attributesSelection extends baseClass{
 			            	String value = option.getAttribute("data-attr-value");
 			                enabledSizes.add(value);
 			                System.out.println(value);
-			                option.click();
+			                Actionsss.highlightElement(sizeElement);
+			                Actionsss.CombinedClick(option);
 			                logger.info("Selected the size");
 			                test.pass("Successfully selected the size");
 			                break; 

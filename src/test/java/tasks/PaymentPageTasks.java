@@ -400,6 +400,21 @@ public class PaymentPageTasks extends baseClass {
 			    }
 		}
 		
+		
+		public static void gcRemoved() throws Exception {
+			paymentPageView();
+			Actionsss.scrollWindowsByPixel(300);
+			 if(Actionsss.elementSize(paymentPage.getGiftCertificateLabel())) {				
+	             Actionsss.click(paymentPage.getRemoveGc());
+	             Thread.sleep(1000);
+	             PaymentPageValidation.gcRemoveValidation();
+			 }else 	if(Actionsss.elementSize(paymentPage.getsuccessGiftCodeRedemptionMsgList())) {
+				 
+			 } else {
+			    	test.info("Gift certificate is in cart");
+			    	test.pass("No Gift certificate div");
+			    }
+		}
 	//gift card
 		public static void gcRedemption() throws Exception {
 			paymentPageView();
@@ -428,7 +443,7 @@ public class PaymentPageTasks extends baseClass {
 		}
 	
 		
-		public static void clickReviewOrderButton() throws Exception {
+	/*	public static void clickReviewOrderButton() throws Exception {
 			if(Actionsss.elementSize(paymentPage.getReviewOrderBtnList())) {
 				if(Actionsss.displayElement(paymentPage.getReviewOrderBtn())) {
 					Thread.sleep(1000);
@@ -447,13 +462,14 @@ public class PaymentPageTasks extends baseClass {
 	    		// paymentPage.getReviewOrderBtn();
 	    		 ReviewOrderPageValidation.VerifyingReviewOrderBtn();
 	    	}
-		}
-		/*
+		}*/
+		
 		public static void clickReviewOrderButton() throws Exception {
 		   if(Actionsss.elementSize(paymentPage.getBrainTree())) {
 			   Thread.sleep(3000);
 				 if(Actionsss.displayElement(paymentPage.getReviewOrderBtn())) {
-			    		Actionsss.scrollWindowsByPixel(100);				    			    
+			    		Actionsss.scrollWindowsByPixel(100);	
+			    		Thread.sleep(3000);
 			    		Actionsss.click(paymentPage.getReviewOrderBtn());					    		 	    		
 			    		paymentPage.getReviewOrderBtn();
 			    		ReviewOrderPageValidation.VerifyingReviewOrderBtn();
@@ -469,5 +485,5 @@ public class PaymentPageTasks extends baseClass {
 					}
 				}
 	    	}
-		}*/
+		}
 }

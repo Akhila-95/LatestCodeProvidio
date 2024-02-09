@@ -22,8 +22,6 @@ import pageObjects.ProductListingPage;
 
 public class Actionsss extends baseClass{
 	
-	 private static ProductListingPage PLP = new ProductListingPage(driver);
-	 private static  final  JavascriptExecutor js = (JavascriptExecutor) driver;
 	static int addtoBagRandomIndex = 0;
 		 //to hower the action
 		 public static void hover(WebElement element) {
@@ -34,6 +32,7 @@ public class Actionsss extends baseClass{
 		 // To click any button 
 		 public static void waitAndClick(WebElement element){		   
 			 Waits.WaitForClickableElement(element);
+			 highlightElement(element);
 			 element.click();  
 			    	   
 		   }
@@ -57,7 +56,7 @@ public class Actionsss extends baseClass{
 	 
 			        // Select the option at the random index
 			        dropdown.selectByIndex(randomIndex);
-	 
+			        
 			        // Get the value of the randomly selected option
 			        String selectedOptionValue = dropdown.getFirstSelectedOption().getAttribute("value");
 			        logger.info("Value of the randomly selected option: " + selectedOptionValue);
@@ -69,7 +68,7 @@ public class Actionsss extends baseClass{
 				
 			 Thread.sleep(1000);
 			 JavascriptExecutor js = (JavascriptExecutor)driver;
-			 js.executeScript("arguments[0].style.border = '2px solid yellow';", element);
+			 highlightElement(element);
 			 js.executeScript("arguments[0].click();",element);
 			
 		}
@@ -106,15 +105,15 @@ public class Actionsss extends baseClass{
 
 		 // Click on an element and log the result
 		    public static void CombinedClick(WebElement locatorName) throws InterruptedException {
-		        try {
-		        	 js.executeScript("arguments[0].style.border = '2px solid yellow';", locatorName);
+		    	
+		        try {	
+		        	highlightElement(locatorName);
 		            locatorName.click();
 		            Thread.sleep(1000);
-//		            test.pass("Successfully clicked on " + locatorName.getText());
 		            
 		        } catch (Exception e) {
 		        	Thread.sleep(4000);
-		        	 js.executeScript("arguments[0].style.border = '2px solid yellow';", locatorName);
+		        	highlightElement(locatorName);
 		        	JavascriptExecutor executor = (JavascriptExecutor) driver;
 		            executor.executeScript("arguments[0].click();", locatorName);
 		            System.err.println("Exception while clicking the element: " + e.getMessage());
@@ -123,9 +122,7 @@ public class Actionsss extends baseClass{
 		    // Click on an element and log the result
 		    public static void click(WebElement locatorName) throws InterruptedException {
 		        try {
-		        	 JavascriptExecutor js = (JavascriptExecutor) driver;
-		             // Execute JavaScript to add a border around the element
-		             js.executeScript("arguments[0].style.border = '2px solid yellow';", locatorName);
+		        	highlightElement(locatorName);
 		            locatorName.click();
 		            Thread.sleep(1000);
 //		            test.pass("Successfully clicked on " + locatorName.getText());
@@ -135,13 +132,6 @@ public class Actionsss extends baseClass{
 		        }
 		    }
 
-		    public static void doubleClick(WebElement locatorName) {	    	
-		        // Create an Actions object
-		        Actions actions = new Actions(driver);
-
-		        // Perform double-click action
-		        actions.doubleClick(locatorName).perform();
-		    }
 		    // Check if a list of elements has a size greater than 0
 		    public static boolean elementSize(List<WebElement> locatorName) throws InterruptedException {
 		        boolean flag = false;
@@ -222,7 +212,6 @@ public class Actionsss extends baseClass{
 		    public static boolean sendKeys(WebElement ele, String value, String elementName) throws InterruptedException {
 		    	try {
 		            test.info("Verify " + elementName + " of sendKeys");    
-		            // Clear and send keys
 		            highlightElement(ele);
 		            ele.clear();
 		            ele.sendKeys(value);
@@ -240,29 +229,9 @@ public class Actionsss extends baseClass{
 		    public static void highlightElement(WebElement element) {
 		        JavascriptExecutor js = (JavascriptExecutor) driver;
 		        // Execute JavaScript to highlight the element
-		        js.executeScript("arguments[0].style.background = 'yellow';", element);
+		        js.executeScript("arguments[0].style.border='1px solid orange'", element);
 		    }
-		    /*
-		    // Send keys to an element after clearing its existing content
-		    public static boolean sendKeys(WebElement ele, String value, String elementName) throws InterruptedException {
-		        Thread.sleep(2000);
-		        boolean flag = false;
-		        try {
-		        	test.info("Verify " + elementName +" of sendKeys");		
-		        	
-		            ele.clear();		          
-		            ele.sendKeys(value);
-		            js.executeScript("arguments[0].style.background = 'yellow';", ele);
-		            logger.info("Successfully send keys of "+elementName);
-		            test.pass("Successfully send keys of "+elementName);
-		            flag = true;
-		            return true;
-		        } catch (Exception e) {
-		            logger.info(" keys not send to ");
-		            return false;
-		        }
-		    }
-		    */
+	
 		 // Send keys to an element after clearing its existing content
 		    public static boolean SendKeys(WebElement ele, int input, String elementName) throws InterruptedException {
 		        Thread.sleep(2000);
@@ -422,7 +391,7 @@ public class Actionsss extends baseClass{
 		        CombinedClick(randomElement);			
 			}
 		
-		    
+		/*    
 		    public  static void randomElementFromList(List<WebElement> e) throws InterruptedException {
 				// Use the Random class to generate a random index
 		        Random random = new Random();
@@ -433,6 +402,15 @@ public class Actionsss extends baseClass{
 		        Thread.sleep(2000);
 		        CombinedClick(randomElement);
 		        Thread.sleep(1000);
+			}*/
+		    public  static void randomElementFromList(List<WebElement> e) throws Exception {
+				// Use the Random class to generate a random index
+		        Random random = new Random();
+		        int randomIndex = random.nextInt(e.size());
+		        WebElement randomElement= e.get(randomIndex);
+		        Thread.sleep(2000);
+		        highlightElement(randomElement);
+		        CombinedClick(randomElement);			
 			}
 		    
 		    
@@ -442,8 +420,7 @@ public class Actionsss extends baseClass{
 		        WebElement randomElement= e.get(randomIndex);
 		        scrollIntoCenterView(randomElement);
 		        Thread.sleep(2000);
-		        hover(randomElement);
-		        
+		        hover(randomElement);		        
 			}
 		    
 		    
@@ -478,6 +455,7 @@ public class Actionsss extends baseClass{
 			         selectedLinkText = e.get(randomIndex).getText();
 	 
 			         JavascriptExecutor js = (JavascriptExecutor)driver;
+			         highlightElement(e.get(randomIndex));
 					 js.executeScript("arguments[0].click();",e.get(randomIndex));
 			        // Click on the randomly selected link
 			       // e.get(randomIndex).click();   

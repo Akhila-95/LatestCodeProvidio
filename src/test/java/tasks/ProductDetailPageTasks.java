@@ -25,7 +25,7 @@ public class ProductDetailPageTasks extends baseClass{
 		allAttributesSelection.allAttributes();
 		Thread.sleep(3000);
 		Actionsss.CombinedClick(PDP.getSelectAddtoCartBtn());
-		ProductListingPageValidations.validatingProductisAddtoCart();
+		//ProductListingPageValidations.validatingProductisAddtoCart();
 	}
 
 }

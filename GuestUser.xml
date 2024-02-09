@@ -6,30 +6,28 @@
         <classes>
      
 			<class name="browser.launchBrowsering"/>
-           	<!--   	
-          <class name ="testScripts.EditPaymentsFromReviewOrderPageTest"/>
+           	 
+       
+	
+	    <class name ="testScripts.EditPaymentsFromReviewOrderPageTest"/>
 				<methods>			
 					 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate"/> 
-				 	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToPaypal"/> 
-			 		 <include name="verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard"/> 
-				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToPaypal"/> 
+				 	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToPaypal"/>  
+			 	     <include name="verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard"/> 
+				     <include name="verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToPaypal"/> 
 				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificate"/> 
 				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCreditCard"/> 
-				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate"/>	          	    		 		 	
-				</methods> 		-->
+				  	 
+				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate"/>
+				  	<include name="verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToCreditCard"/>
+				    <include name="verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToPaypal"/>	
+				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToGiftCertificate"/>	  
+				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificateAndPaypal"/>	 
+				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificateAndCreditCard"/>	     
+				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCombinationOfGiftCertificateAndCreditCard"/>	
+				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal"/>		           	    		 		 	
+				</methods> 		
 				
-				 <class name ="testScripts.LoginPageTest"/>
-	           
-	             <methods> 
-	   		 
-	             		<!--  <include name ="VerifyingLoginFailureWithIncorrectCredentials"/>          		       	
-	             		<include name ="VerifyingLoginFailureWithEmptyEmailAndPassword"/> 
-	             		<include name ="VerifyingLoginFailureWithInvalidEmailFormat"/> 
-	             		<include name ="VerifyingLoginFailureWithEmptyEmail"/> 
-	             		<include name ="VerifyingLoginFailureWithEmptyPassword"/> -->
-	             		<include name ="VerifyingLoginWithValidCredentials"/>  
-	             		 
-	             </methods>
          </classes>
     </test>
 </suite>

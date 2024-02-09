@@ -45,6 +45,12 @@ public class ProductListingPage extends baseClass{
 		return addToCartBtn;
 	}
 	
+	//QuickShopBtn click
+		@FindBy(xpath ="//a[contains(text(), 'Quick Shop')]")
+		List<WebElement> QuickShopBtn;
+		public List<WebElement> getSelectQuickShopBtn(){
+			return QuickShopBtn;
+		}
 		
 	//FilterResetButton
 	@FindBy(xpath ="//button[@class = 'reset btn p-0']")
@@ -89,7 +95,7 @@ public class ProductListingPage extends baseClass{
         // Check if there are any products found on the page
         if (totalProductcount > 0) {
             // Generate a random number within the range of the total product count
-            int randomSelectProduct = random.nextInt(totalProductcount) + 1;
+            int randomSelectProduct = 4 ;//random.nextInt(totalProductcount) + 1;
             logger.info(randomSelectProduct);
             // Find the randomly selected product element based on the generated random number
             WebElement randomSelectProductFromPLP = driver.findElement(By.xpath("(//a[@class ='tile-img-contain'])[" + randomSelectProduct + "]"));

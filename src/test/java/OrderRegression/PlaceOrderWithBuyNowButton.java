@@ -31,7 +31,7 @@ public class PlaceOrderWithBuyNowButton extends baseClass {
 	@Test
 		public static void verifyingPlacingOrderWithBuyNowButtonWithCreditCard() throws Exception {
 			 ProductListingPageTasks.gpsProducts();
-			 allAttributesSelection.selectTheAttributesInPdpPage();
+			 allAttributesSelection.selectTheAttributesInPdp();
 			 Actionsss.scrollWindowsByPixel(150);
 			 Thread.sleep(3000);
 			 WebElement buyNow= driver.findElement(By.xpath("//button[contains(@class,'buy-now')]"));

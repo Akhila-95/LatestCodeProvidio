@@ -19,21 +19,21 @@ public class ProductListingPageTasks extends baseClass{
 	//sort by
 	public static void selectSortBy() throws InterruptedException{		
 		//Actionsss.click(homePage.getCookies_Yes_Btn());
-		homePage.selectRandomMegaMenu(driver);
+		homePage.selectRandomMegaMenu();
 		PLP.selecttheSortBy();
 	}  
 	
 	//filters
 	public static void selectFilters() throws InterruptedException{		
 		//Actionsss.click(homePage.getCookies_Yes_Btn());
-		homePage.selectRandomMegaMenu(driver);
+		homePage.selectRandomMegaMenu();
 		PLP.selectaFilterFormPLP();
 	}
 	
 	//filters
 	public static void clickOnReSetBtn() throws Exception{		
 		//Actionsss.click(homePage.getCookies_Yes_Btn());
-		homePage.selectRandomMegaMenu(driver);
+		homePage.selectRandomMegaMenu();
 		PLP.selectaFilterFormPLP();
 		Thread.sleep(4000);
 		Actionsss.scrollUp(driver);
@@ -45,7 +45,7 @@ public class ProductListingPageTasks extends baseClass{
 	//addToMyFav
 	public static void addToWishList() throws Exception{		
 		//Actionsss.click(homePage.getCookies_Yes_Btn());
-		homePage.selectRandomMegaMenu(driver);
+		homePage.selectRandomMegaMenu();
 		Thread.sleep(4000);
 		PLP.selecttheWishlist();
 		ProductListingPageValidations.popUpProductisAddtoWishList();
@@ -54,7 +54,7 @@ public class ProductListingPageTasks extends baseClass{
 	//addTocartsBtns
 	public static void addTocart() throws Exception{		
 		//Actionsss.click(homePage.getCookies_Yes_Btn());
-		homePage.selectRandomMegaMenu(driver);
+		homePage.selectRandomMegaMenu();
 		Thread.sleep(8000);
 		//PLP.addToCartBtn();
 	//	ProductListingPageValidations.popUpProductisAddtoCart();
@@ -64,7 +64,7 @@ public class ProductListingPageTasks extends baseClass{
 	//quick shop
 		public static void quickShop() throws Exception{		
 			//Actionsss.click(homePage.getCookies_Yes_Btn());
-			homePage.selectRandomMegaMenu(driver);
+			homePage.selectRandomMegaMenu();
 			Thread.sleep(4000);
 			PLP.selectthequickshope();
 			ProductListingPageValidations.verifyPLPQuickshopClick();
@@ -78,7 +78,7 @@ public class ProductListingPageTasks extends baseClass{
 	//addTocartsBtns
 		public static void productclick() throws Exception{		
 			//Actionsss.click(homePage.getCookies_Yes_Btn());
-			homePage.selectRandomMegaMenu(driver);
+			homePage.selectRandomMegaMenu();
 			Thread.sleep(4000);
 			PLP.selectRandomProduct();
 			ProductListingPageValidations.verifyPLPProductClick();

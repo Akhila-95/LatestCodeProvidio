@@ -32,6 +32,13 @@ public class ProductDetailPage extends baseClass{
 		return addtoCartBtn;
 	}
 	
+	//size attribute
+		@FindBy(xpath ="//div[contains(@class, 'select-size')]//span[@class='text-center' and not(contains(@disabled, 'disabled'))]")
+		List<WebElement> Size;
+		public List<WebElement> getSelectSize(){
+			return Size;
+		}
+	
     // WebElement for the "Paypal Buy Now" button
     @FindBy(xpath = "//div[contains(@class,'salesforce-buynow-element ')]")
     WebElement salesforcePaypalBuyNow;

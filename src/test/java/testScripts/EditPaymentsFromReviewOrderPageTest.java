@@ -48,4 +48,29 @@ public class EditPaymentsFromReviewOrderPageTest extends baseClass {
 		EditPaymentsFromReviewOrderPageTasks.editCombinationOfGiftCertificateAndCreditCardToCreditCard();
 	}
 	
+	@Test
+	public static void verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToPaypal() throws Exception {
+		EditPaymentsFromReviewOrderPageTasks.editCombinationOfGiftCertificateAndPaypalToPaypal();
+	}
+	
+	
+	@Test
+	public static void verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToGiftCertificate() throws Exception {
+		EditPaymentsFromReviewOrderPageTasks.editCombinationOfGiftCertificateAndPaypalToGiftCertificate();
+	}
+	
+	@Test
+	public static void verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificateAndPaypal() throws Exception {
+		EditPaymentsFromReviewOrderPageTasks.editPaypalToCombinationOfGiftCertificateAndPaypal();
+	}
+	
+	@Test
+	public static void verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCombinationOfGiftCertificateAndCreditCard() throws Exception {
+		EditPaymentsFromReviewOrderPageTasks.editPaypalToCombinationOfGiftCertificateAndCreditCard();
+	}
+	
+	@Test
+	public static void verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal() throws Exception {
+		EditPaymentsFromReviewOrderPageTasks.editCreditCardToCombinationOfGiftCertificateAndPaypal();
+	}
 }

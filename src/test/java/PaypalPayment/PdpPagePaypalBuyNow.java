@@ -27,7 +27,7 @@ public class PdpPagePaypalBuyNow extends baseClass{
 	
 	public static void pdpPagePaypal() throws Exception {
 		pdpPage();
-		allAttributesSelection.selectTheAttributesInPdpPage();
+		allAttributesSelection.selectTheAttributesInPdp();
 		Actionsss.scrollWindowsByPixel(150);
 		Thread.sleep(1000);
 		test.info("Verifying payment with paypal buy Now in PDP page");

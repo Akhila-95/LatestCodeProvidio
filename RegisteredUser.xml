@@ -6,7 +6,14 @@
         <classes>
      
 			<class name="browser.launchBrowsering"/>
-
+			
+			 <class name ="testScripts.LoginPageTest"/>
+	           
+	             <methods> 
+	             		<include name ="VerifyingLoginWithValidCredentials"/>  
+	             		 
+	             </methods>
+<!-- 
 	  	   		 <class name="testScripts.FindAStoreTest"/>			
 				  <methods>					 		  		                  
 	             	<include name="verifyFindAStore"></include>   	             	    
@@ -86,7 +93,7 @@
 			  		  <include name="verifyingDisplayOfPaymentFormInPaymentPage" />	
 			  		  <include name="verifyingPaymentInfoDisplayInPaymentPage" />
 			  		  <include name="verifyingBackToCartInPaymentPage" />	
-				 <!--   <include name="verifyingGiftMessage" />	  -->
+				  <include name="verifyingGiftMessage" />	 
 			  				
 					 <include name="verifyingEditCustomerInfoFromPaymentPageAndPlaceOrder" />	
 				 	<include name="verifyingEditShippingAddressFromPaymentPage" />		
@@ -102,7 +109,7 @@
 	             	  <include name="verifyingCheckBalanceOfInvalidGcErrorMsg" />
 	             	  <include name="verifyingRemovalOfAppliedGc" />
 	             	  
-	          	 	<!--    <include name="verifyingSuccesMessageForValidGcApplied" />-->
+	          	 	    <include name="verifyingSuccesMessageForValidGcApplied" />
 			 				   
 					
 					  <include name="verifyingAllTheErrorsInCreditCard" />
@@ -131,8 +138,8 @@
 					 
 					 <include name="verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder"/>
 					 <include name="verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder"/>
-				 <!--<include name="verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder"/> 
-					 <include name="verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder"/>	-->								
+				 <include name="verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder"/> 
+					 <include name="verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder"/>								
 				</methods> 
 				
 				
@@ -162,7 +169,7 @@
                <methods>				 		  		                  
     				<include name="verifyingPlacingOrderWithBuyNowButtonWithCreditCard"></include>   
                </methods>
-	                     
+	                     --> 
          </classes>
     </test>
 </suite>

@@ -94,13 +94,18 @@ public class PaymentPageObjects extends baseClass{
     public List<WebElement> getCyberSourcePayment() {
         return cyberSourcePayment;
     }
-    @FindBy(xpath = "//button[contains(text(),'Guest Checkout')]")
-    private List<WebElement> continueAsAGuest;
     
+    @FindBy(xpath = "//button[contains(text(),'Guest Checkout')]")
+    private List<WebElement> continueAsAGuest;    
     public List<WebElement> getContinueAsAGuest() {
         return continueAsAGuest;
     }
 
+    @FindBy(css = "a.creditcard-tab ")
+    private WebElement brainTreeCreditCardTab;    
+    public WebElement getBrainTreeCreditCardTab() {
+        return brainTreeCreditCardTab;
+    }
 
     
     //brain tree paymnet 

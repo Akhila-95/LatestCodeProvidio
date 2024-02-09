@@ -183,6 +183,25 @@ public class ReviewOrderPageValidation extends baseClass {
 		}
 	}
 	
+	public static void editSinglePaymentToCombinationOfPaymentsInReviewOrderPage() {
+		test.info("Verifying the single payment to combination of payments");
+		logger.info(previousPaymentInPlaceorderPage);
+		logger.info(firstcombinationOfPaymentInPlaceorderPage);
+		logger.info(secondcombinationOfPaymentInPlaceorderPage);
+		if (!(previousPaymentInPlaceorderPage.equals(firstcombinationOfPaymentInPlaceorderPage) &&
+				!(previousPaymentInPlaceorderPage.equals(secondcombinationOfPaymentInPlaceorderPage)))) {
+			
+			  test.pass("Succesfully the single payment is edited to the combination of payments ,the single payment is " +			     
+					  previousPaymentInPlaceorderPage +" is edited to " +firstcombinationOfPaymentInPlaceorderPage + "and"  +secondcombinationOfPaymentInPlaceorderPage);
+			  logger.info("Succesfully the single payment is edited to the combination of payments   ,the single payment is " 		
+			  		+ 	previousPaymentInPlaceorderPage +" is edited to "+   firstcombinationOfPaymentInPlaceorderPage + "and"  +secondcombinationOfPaymentInPlaceorderPage);
+			
+		}else {
+			test.fail("The single payment is not edited to combination of payment");
+			logger.info("The single payment is not edited to combination of payment");
+		}
+	}
+	
 	public static void editPaypalPaymentInReviewOrderPage() throws InterruptedException {
 		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			test.info("Verifying the display of paypal once edited payment edited is edited with paypal in review order page");

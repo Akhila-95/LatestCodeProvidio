@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="9" passed="2" failed="0" skipped="0">
+<testng-results ignored="14" total="16" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-08T21:28:09 IST" name="Providio Regression Test" finished-at="2024-02-08T21:28:51 IST" duration-ms="41448">
+  <suite started-at="2024-02-09T18:12:45 IST" name="Providio Regression Test" finished-at="2024-02-09T18:13:03 IST" duration-ms="18673">
     <groups>
       <group name="regression">
-        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@3804a9a8]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
+        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@3804a9a8]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
+        <method signature="launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449]" name="verifyHomePageLaunching" class="browser.launchBrowsering"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-02-08T21:28:09 IST" name="SmokeTest" finished-at="2024-02-08T21:28:51 IST" duration-ms="41448">
+    <test started-at="2024-02-09T18:12:45 IST" name="SmokeTest" finished-at="2024-02-09T18:13:03 IST" duration-ms="18673">
       <class name="browser.launchBrowsering">
-        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:browser.launchBrowsering@3804a9a8]" started-at="2024-02-08T21:28:03 IST" name="setUpforReport" finished-at="2024-02-08T21:28:09 IST" duration-ms="6427" status="PASS">
+        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-02-09T18:12:39 IST" name="setUpforReport" finished-at="2024-02-09T18:12:45 IST" duration-ms="5898" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpforReport -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:browser.launchBrowsering@3804a9a8]" started-at="2024-02-08T21:28:09 IST" name="setUp" finished-at="2024-02-08T21:28:11 IST" duration-ms="2047" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-02-09T18:12:45 IST" name="setUp" finished-at="2024-02-09T18:12:47 IST" duration-ms="2050" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:browser.launchBrowsering@3804a9a8]" started-at="2024-02-08T21:28:11 IST" name="afterClass" finished-at="2024-02-08T21:28:11 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-02-09T18:12:47 IST" name="afterClass" finished-at="2024-02-09T18:12:47 IST" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,58 +32,141 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method signature="verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@3804a9a8]" started-at="2024-02-08T21:28:11 IST" name="verifyHomePageLaunching" finished-at="2024-02-08T21:28:23 IST" duration-ms="11090" status="PASS">
+        <test-method signature="verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-02-09T18:12:47 IST" name="verifyHomePageLaunching" finished-at="2024-02-09T18:12:54 IST" duration-ms="6827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePageLaunching -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:browser.launchBrowsering@3804a9a8]" started-at="2024-02-08T21:28:23 IST" name="afterMethod" finished-at="2024-02-08T21:28:23 IST" duration-ms="109" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-02-09T18:12:54 IST" name="afterMethod" finished-at="2024-02-09T18:12:54 IST" duration-ms="30" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@3804a9a8] output={null}]]]>
+                <![CDATA[[TestResult name=verifyHomePageLaunching status=SUCCESS method=launchBrowsering.verifyHomePageLaunching()[pri:0, instance:browser.launchBrowsering@55e42449] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:browser.launchBrowsering@3804a9a8]" started-at="2024-02-08T21:28:51 IST" name="tearDown" finished-at="2024-02-08T21:28:59 IST" duration-ms="8062" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:browser.launchBrowsering@55e42449]" started-at="2024-02-09T18:13:03 IST" name="tearDown" finished-at="2024-02-09T18:13:11 IST" duration-ms="7600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- browser.launchBrowsering -->
-      <class name="testScripts.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.LoginPageTest@e57e5d6]" started-at="2024-02-08T21:28:23 IST" name="setUp" finished-at="2024-02-08T21:28:25 IST" duration-ms="2014" status="PASS">
+      <class name="testScripts.EditPaymentsFromReviewOrderPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207]" started-at="2024-02-09T18:12:54 IST" name="setUp" finished-at="2024-02-09T18:12:56 IST" duration-ms="2024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.LoginPageTest@e57e5d6]" started-at="2024-02-08T21:28:25 IST" name="afterClass" finished-at="2024-02-08T21:28:25 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterClass(java.lang.reflect.Method)[pri:0, instance:testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207]" started-at="2024-02-09T18:12:56 IST" name="afterClass" finished-at="2024-02-09T18:12:56 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testScripts.LoginPageTest.VerifyingLoginWithValidCredentials() throws java.lang.Exception]]>
+                <![CDATA[public static void testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method signature="VerifyingLoginWithValidCredentials()[pri:0, instance:testScripts.LoginPageTest@e57e5d6]" started-at="2024-02-08T21:28:25 IST" name="VerifyingLoginWithValidCredentials" finished-at="2024-02-08T21:28:51 IST" depends-on-methods="browser.launchBrowsering.verifyHomePageLaunching" duration-ms="26078" status="PASS">
+        <test-method signature="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal()[pri:0, instance:testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207]" started-at="2024-02-09T18:12:56 IST" name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal" finished-at="2024-02-09T18:13:03 IST" duration-ms="7357" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, 'product-detail product')]"}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4646d89c577b6b4ca3d02f32f919b102, findElement {using=xpath, value=//div[contains(@class, 'product-detail product')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49644}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49644/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4646d89c577b6b4ca3d02f32f919b102]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, 'product-detail product')]"}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4646d89c577b6b4ca3d02f32f919b102, findElement {using=xpath, value=//div[contains(@class, 'product-detail product')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49644}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49644/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4646d89c577b6b4ca3d02f32f919b102
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at validations.ProductListingPageValidations.verifyPLPProductClick(ProductListingPageValidations.java:87)
+at tasks.ProductListingPageTasks.productclick(ProductListingPageTasks.java:84)
+at tasks.ProductDetailPageTasks.addtoCart(ProductDetailPageTasks.java:24)
+at tasks.MiniCartPageTasks.miniCartValue(MiniCartPageTasks.java:29)
+at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
+at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
+at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:28)
+at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:135)
+at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
+at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:261)
+at tasks.EditPaymentsFromReviewOrderPageTasks.editCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTasks.java:90)
+at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTest.java:74)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyingLoginWithValidCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.LoginPageTest@e57e5d6]" started-at="2024-02-08T21:28:51 IST" name="afterMethod" finished-at="2024-02-08T21:28:51 IST" duration-ms="28" status="PASS">
+        </test-method> <!-- verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207]" started-at="2024-02-09T18:13:03 IST" name="afterMethod" finished-at="2024-02-09T18:13:03 IST" duration-ms="306" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=VerifyingLoginWithValidCredentials status=SUCCESS method=LoginPageTest.VerifyingLoginWithValidCredentials()[pri:0, instance:testScripts.LoginPageTest@e57e5d6] output={null}]]]>
+                <![CDATA[[TestResult name=verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal status=FAILURE method=EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal()[pri:0, instance:testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testScripts.LoginPageTest -->
+      </class> <!-- testScripts.EditPaymentsFromReviewOrderPageTest -->
     </test> <!-- SmokeTest -->
   </suite> <!-- Providio Regression Test -->
 </testng-results>

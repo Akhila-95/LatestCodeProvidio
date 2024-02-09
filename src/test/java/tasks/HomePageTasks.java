@@ -16,7 +16,7 @@ public class HomePageTasks extends baseClass{
 	
 	//Home page mega menu
     public static void randomMegaMenu() throws InterruptedException {
-  	homePage.selectRandomMegaMenu(driver);
+  	homePage.selectRandomMegaMenu();
   }
     
     //wishlist
@@ -92,15 +92,16 @@ public class HomePageTasks extends baseClass{
 		
 	}
     
-   //mini cart btn check
+  //mini cart btn check
     public static void miniCartBtnClick() throws Exception {
-    	ProductListingPageTasks.quickShop();
+    	MiniCartPageTasks.miniCartValue();
     	Thread.sleep(3000);
-    	Actionsss.click(homePage.getMiniCartLink());
+    	Actionsss.CombinedClick(homePage.getMiniCartLink());
+    	Thread.sleep(2000);
     	MiniCartValidation.VerifiedThatMinicartBtnClick();
+        Thread.sleep(3000);
     	
     }
-    
 
 	
 
