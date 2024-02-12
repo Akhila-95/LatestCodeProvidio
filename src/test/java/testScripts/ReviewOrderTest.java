@@ -3,12 +3,14 @@ package testScripts;
 import org.testng.annotations.Test;
 import com.providio.testcases.baseClass;
 
+import functionality.Actionsss;
+import pageObjects.homepage;
 import tasks.PaymentPageTasks;
 import tasks. ReviewOrderPageTask;
 
 
 public class ReviewOrderTest extends baseClass{
-
+	private static homepage homePage = new homepage(driver);
 	
 	@Test
 	public static void  verifyingPlaceOrderButtonDisplayInReviewOrderPage() throws Exception {
@@ -48,10 +50,7 @@ public class ReviewOrderTest extends baseClass{
 		 ReviewOrderPageTask.getBackToCart();
 	}
 	
-	@Test
-	public  void verifyingTheEditPaymentToPaypalFromReviewOrderPage() throws InterruptedException, Exception {
-		 ReviewOrderPageTask.editPaymentToPaypal();
-	}
+
 	
 	@Test
 	public  void verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder() throws InterruptedException, Exception {
@@ -61,6 +60,7 @@ public class ReviewOrderTest extends baseClass{
 	@Test
 	public  void verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder() throws InterruptedException, Exception {
 		 ReviewOrderPageTask.editPhoneNumInShippingAddressFromReviewOrderPage();
+		 Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 	
 

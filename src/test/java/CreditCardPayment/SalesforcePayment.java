@@ -96,7 +96,7 @@ public class SalesforcePayment extends baseClass {
     	Actionsss.CombinedClick(paymentPage.getSaveToaccountInSalesforce());
     }
     
-   public static  void savedCardsSalesforce() throws InterruptedException {	    
+   public static  void savedCardsSalesforce() throws Exception {	    
     	Actionsss.randomElementFromList(paymentPage.getSavedCardsSalesforce());
     	logger.info("Selected random card");
     }

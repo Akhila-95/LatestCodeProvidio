@@ -120,7 +120,7 @@
 	             	  <!-- 
 	          	 	    <include name="verifyingSuccesMessageForValidGcApplied" />
 			 			   <include name="verifyingInvalidGcErrorMsg" />
-					 
+					 -->	
 					  <include name="verifyingAllTheErrorsInCreditCard" />
 					  <include name="verifyingCvvAndExpErrorInCreditCard" /> 					
 				      <include name="verifyingCvvErrorInCreditCard" />				
@@ -128,7 +128,7 @@
 			  		  <include name ="verifyingCreditCardExpDateInValid"></include>
 				 	  <include name ="verifyingCreditCardNumberInCompleteError"></include>
 					  <include name ="verifyingCreditCardInCompleteExpYearError"></include>
-					  <include name ="verifyingCreditCardInCompleteCvvError"></include>  	 -->	 
+					  <include name ="verifyingCreditCardInCompleteCvvError"></include>  	  
 					  <include name="verifyingAddnewCreditCard" />	 
 					  <include name="verifyingCreditcardWithValidDetails" />
 		</methods>  
@@ -142,8 +142,7 @@
 					 <include name="verifyingOrderSummaryDisplayInReviewOrderPage"/>
 					 <include name="verifyingPaymentInfoDisplayInReviewOrderPage"/>
 					 <include name="verifyingEtgLogoDisplayInReviewOrderPage"/>					 													
-					 <include name="verifyingBackToCartInReviewOrderPagee"/>
-					 <include name="verifyingTheEditPaymentToPaypalFromReviewOrderPage"/>
+					 <include name="verifyingBackToCartInReviewOrderPagee"/>				
 					 
 					 <include name="verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder"/>
 					 <include name="verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder"/>
@@ -166,19 +165,8 @@
 				   	<include name="verifyingOrderIsPlacingWithCartPagePaypal"/>	
 				    <include name="verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage"/> 	 
 		 		 	
-				</methods>
-		
-		
-				<class name="OrderRegression.PlaceOrderWithBuyNowPopUp"/>
-	               <methods>				 		  		                  
-	    				<include name="verifyingPlacingOrderWithBuyNowPopUp"></include>   
-	               </methods>
-	             
-	               <class name="OrderRegression.PlaceOrderWithBuyNowButton"/>
-	               <methods>				 		  		                  
-	    				<include name="verifyingPlacingOrderWithBuyNowButtonWithCreditCard"></include>   
-	               </methods>
-	             
+				</methods>		
+	
 	           
 	             <class name ="testScripts.EditPaymentsFromReviewOrderPageTest"/>
 				<methods>			
@@ -198,6 +186,24 @@
 				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCombinationOfGiftCertificateAndCreditCard"/>	
 				  	 <include name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal"/>	            	    		 		 	
 				</methods>
+				
+				<class name ="testScripts.ProductsAndItsOrderTest"/>
+		     	<methods>
+		      	<include name="VerifyingPlaceOrderWithCreditCardWhenOnlyGcInCart"/>
+		     	<include name="VerifyingPlaceOrderWithBuyNowButton"/>
+		     	<include name="VerifyingPlaceOrderWithBuyNowPopUp"/>
+		     	</methods>
+      
+  
+   
+   			<class name ="GiftCertificateFunctionalties.gcInCart"/>
+				<methods>	
+				    <include name="VerifyingPlaceOrderWithCreditCardWhenOnlyGcInCart"/>							 
+				 	<include name="VerifyingPlaceOrderWithPaypalWhenOnlyGcInCart"/>
+				    <include name="VerifyingNoVisibilityOfGiftCertificateSectionWhenGcInCart"/>	 			 
+			  		<include name="VerifyingPlaceOrderOfGiftCertificateAndSimpleProductInCartWithCreditCard"/>
+			        <include name="VerifyingPlaceOrderOfGiftCertificateAndSimpleProductInCartWithPaypal"/>						
+				</methods> 
          </classes>
     </test>
 </suite>

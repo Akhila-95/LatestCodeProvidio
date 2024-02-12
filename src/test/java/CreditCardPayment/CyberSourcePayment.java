@@ -18,20 +18,21 @@ public class CyberSourcePayment extends baseClass{
 	private static final String cardNum = "cardNumber";
 	private static final String  creditCardCvv= "Cvv";
 	private static final String emailInPayment= "email";
+	private static final String phoneNumberInCybersource= "phone number in cybersource";
 	
 	public static void cyberSource() throws Exception {
 		Actionsss.scrollWindowsByPixel(500);
 		if(Actionsss.elementSize(paymentPage.getContinueAsAGuest())) {
-			test.info("User is in guest-check in so entering a random credit card details");
+			test.info("Cybersource payment is actived,User is in guest-check in so entering a random credit card details");
 			cyberSourcePayment();			
 		}else {
 			if(Actionsss.elementSize(paymentPage.getSavedCardsCyberSource())) {				
 				//if user is registered and have saved cards then  this if will execute
-				test.info("User is checked-in as registered and have saved cards so randomly selecting a saved card");
+				test.info("Cybersource payment is actived,User is checked-in as registered and have saved cards so randomly selecting a saved card");
 				savedCardsCyberSource();
 			}else {
 				//if user want to add new card  into account without having the saved cards
-				test.info("User is checked-in as registered but don't have saved cards so entering the random credit card details");
+				test.info("Cybersource payment is actived,User is checked-in as registered but don't have saved cards so entering the random credit card details");
 				withoutSavedCardsCyberReg();
 			}
 		}
@@ -45,8 +46,13 @@ public class CyberSourcePayment extends baseClass{
          cyberSourceExpMonth();
          test.info("Entering exp year for cybersource payment");
          cyberSourceExpYear();
-         test.info("Entering scecode for cybersource paymentS");	
-         cyberSourceSecurityCode() ;      	
+         test.info("Entering scecode for cybersource payment");	
+         cyberSourceSecurityCode() ; 
+         test.info("Entering the email id for cybersource payment ");
+         cyberSourceEmailId();
+         test.info("Entering the phone number for cybersource payment");
+         cyberSourcePhoneNumber();
+         
 	}
 	
 	public static void cyberSourceCardNumber() throws Exception {
@@ -59,6 +65,7 @@ public class CyberSourcePayment extends baseClass{
 	  //   Actionsss.clearText(paymentPage.getCyberSourceCreditcard());
 	     Actionsss.sendKeys(paymentPage.getCyberSourceCreditcard(),cardNumbers[randomIndex],cardNum +cardNumbers[randomIndex]);
 	     // Extract the last four digits
+	     logger.info(cardNumbers[randomIndex]);
 	     String lastFourDigits = cardNum.substring(cardNum.length() - 4);
 	     creditCardNumber=lastFourDigits;
 	     Thread.sleep(2000);
@@ -72,11 +79,17 @@ public class CyberSourcePayment extends baseClass{
 		Actionsss.selectValue(paymentPage.getCyberSourceExpYear());
 	}
 	
-	public  static void cyberSourceSecurityCode() throws Exception {
-	//	Actionsss.clearText(paymentPage.getCyberSourceSceuritycode());
-		Actionsss.sendKeys(paymentPage.getCyberSourceSceuritycode(),"2345",creditCardCvv + "is 2345");
+	public  static void cyberSourceSecurityCode() throws Exception {	
+		Actionsss.sendKeys(paymentPage.getCyberSourceSceuritycode(),"2345 ",creditCardCvv + " is 2345");
+	}
+
+	public  static void cyberSourceEmailId() throws Exception {		
+		Actionsss.sendKeys(paymentPage.getEmailInRegInCybersource(), "akhila.m@etg.digital",emailInPayment + " is akhila.m@etg.digital ");
 	}
 	
+	public  static void cyberSourcePhoneNumber() throws Exception {		
+		Actionsss.sendKeys(paymentPage.getPhoneNumberInCybersource(),"9876543212 ",phoneNumberInCybersource + " is 9876543212");
+	}
 	
 	public static void savedCardsCyberSource() throws Exception {	
 		//select one and send the cvv number of that card	

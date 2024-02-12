@@ -90,7 +90,7 @@ public class BrainTreePayment extends baseClass {
 	}
 	
 	//register user and select the new card and save the card
-	public static void savedCardsBrainTree() throws InterruptedException {
+	public static void savedCardsBrainTree() throws Exception {
 		Actionsss.click(paymentPage.getBrainTreeNewCardDropdown());		
 		Actionsss.randomElementFromList(paymentPage.getSavedCardsBrainTree()); 	
 		//logger.info("Selectd the new card");

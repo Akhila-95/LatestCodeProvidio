@@ -1,8 +1,5 @@
 package tasks;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import com.providio.testcases.baseClass;
 
 import CreditCardPayment.CreditCardDetails;
@@ -101,37 +98,41 @@ public class ReviewOrderPageTask extends baseClass{
 	
 	public static void placeOrder() throws Exception {
 		//reviewOrderPage();
-		Actionsss.scrollWindowsByPixel(500);
+	
 		if(Actionsss.elementSize(paymentPage.getSalesforcePaypalList())) {	
+			Actionsss.scrollWindowsByPixel(700);
 			logger.info("Salesforce payment activated");	
 			Thread.sleep(1000);
 			Actionsss.CombinedClick(paymentPage.getSelectPlaceOrderBtn());
 			Thread.sleep(8000);
 			PaymentPageValidation.VerifiedThatPlaceOrderClick();
 		}else {
+			Actionsss.scrollWindowsByPixel(700);
 			logger.info("Other paymnet activated");
 			logger.info("Place order page is loaded");
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			Actionsss.CombinedClick(paymentPage.getSelectPlaceOrderBtn());
 			Thread.sleep(8000);
 			PaymentPageValidation.VerifiedThatPlaceOrderClick();
 		}
 	}
-	
-	
+		
 	public static void editShippingAddressFromReviewOrderPage() throws Exception {
 		reviewOrderPage();	
 		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
 			previousShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getShippingAddressInRop());
-			Actionsss.click(reviewOrder.getEditShippingAddressInRop());
+			Actionsss.javascriptClick(reviewOrder.getEditShippingAddressInRop());
+			Thread.sleep(1000);
 			Actionsss.editShippingAddressFromRop(shippingPage.getShippingAddress());
 			Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
 			Thread.sleep(1000);
 			ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
+			PaymentPageTasks.creditCardWithValidDetails();			
 			PaymentPageTasks.clickReviewOrderButton();
 			Thread.sleep(1000);
 			editedShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getShippingAddressInRop());
 			ReviewOrderPageValidation.editShippingAddressValidation();
+			PaymentPageTasks.clickReviewOrderButton();
 			placeOrder();
 			OrderPageValidation.validatePlacetheOrderPage();
 			OrderPageValidation.orderNumberAndOrderDate();		 			
@@ -139,7 +140,10 @@ public class ReviewOrderPageTask extends baseClass{
 			test.info("Salesforce payment is activated");
 			test.info("No review order page in salesforce payment");
 		}
+		
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
+	
 	public static void editPhoneNumInShippingAddressFromReviewOrderPage() throws Exception {
 		reviewOrderPage();	
 		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
@@ -149,19 +153,22 @@ public class ReviewOrderPageTask extends baseClass{
 			 Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
 			 Thread.sleep(1000);
 			 ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
-			 PaymentPageTasks.clickReviewOrderButton();
-			 Thread.sleep(1000);
+			 PaymentPageTasks.creditCardWithValidDetails();		
+			 Actionsss.scrollIntoCenterView(paymentPage.getReviewOrderBtn());
+			 Actionsss.scrollWindowsByPixel(400);
+			 Actionsss.javascriptClick(paymentPage.getReviewOrderBtn());
+			 Thread.sleep(5000);
 			 editedPhoneNumInShippingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getPhoneNumInshippingAddressInRop());
-			 ReviewOrderPageValidation.editedBillingAddressValidation();
+			 ReviewOrderPageValidation.editPhoneNumShippingAddressValidation();
+			 Thread.sleep(1000);
 			 placeOrder();
 			 OrderPageValidation.validatePlacetheOrderPage();
-			 OrderPageValidation.orderNumberAndOrderDate();
-			 
-			
+			 OrderPageValidation.orderNumberAndOrderDate();		
 		}else {
 			test.info("Salesforce payment is activated");
 			test.info("No review order page in salesforce payment");
 		}
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 	
 	public static void editBillingAddressFromReviewOrderPage() throws Exception {
@@ -172,9 +179,12 @@ public class ReviewOrderPageTask extends baseClass{
 			 Actionsss.click(paymentPage.getUpdateBillingAddress());
 			 Thread.sleep(1000);
 			 Actionsss.scrollWindowsByPixel(200);
-			 Actionsss.editBillingAddressFromRop(paymentPage.getBillingAddress());			 
-			 PaymentPageTasks.clickReviewOrderButton();
-			 Thread.sleep(2000);
+			 Actionsss.editBillingAddressFromRop(paymentPage.getBillingAddress());
+			 PaymentPageTasks.creditCardWithValidDetails();		
+			 Actionsss.scrollWindowsByPixel(200);
+			 Actionsss.scrollIntoCenterView(paymentPage.getReviewOrderBtn());
+			 Actionsss.javascriptClick(paymentPage.getReviewOrderBtn());
+			 Thread.sleep(5000);
 			 editedBillingAddressInRop=Actionsss.getTextOfElement(reviewOrder.getBillingAddress());
 			 ReviewOrderPageValidation.editedBillingAddressValidation();
 			 placeOrder();
@@ -186,6 +196,7 @@ public class ReviewOrderPageTask extends baseClass{
 			test.info("Salesforce payment is activated");
 			test.info("No review order page in salesforce payment");
 		}
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 	
 	
@@ -197,10 +208,13 @@ public class ReviewOrderPageTask extends baseClass{
 			Thread.sleep(1000);
 			Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderBtnPage());		
 			Actionsss.sendKeys(paymentPage.getBillingPhoneNumber(), "9876543567", "edited phone number  in billing address");
-			
+			PaymentPageTasks.creditCardWithValidDetails();		
 			 if(Actionsss.elementSize(paymentPage.getBrainTree())) {
-			    	PaymentPageTasks.clickReviewOrderButton();				    	
-			    	Thread.sleep(15000);
+				 Actionsss.scrollWindowsByPixel(200);
+				 Actionsss.scrollIntoCenterView(paymentPage.getReviewOrderBtn());
+				 Actionsss.scrollWindowsByPixel(400);
+				 Actionsss.javascriptClick(paymentPage.getReviewOrderBtn());			    	
+			    	Thread.sleep(5000);
 		    	}
 			
 			editedBillingPhoneNumber=Actionsss.getTextOfElement(reviewOrder.getPhoneNumberInBillingAddress());				
@@ -212,10 +226,10 @@ public class ReviewOrderPageTask extends baseClass{
 			test.info("Salesforce payment is activated");
 			test.info("No review order page in salesforce payment");
 		}
-		Actionsss.click(homePage.clickOnLogo());
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 	
-	
+/*	
 	public static void editPaymentToPaypal() throws Exception {
 		reviewOrderPage();
 		if(Actionsss.elementSize(reviewOrder.getStripePaymentInReviewOrderPageList())) {
@@ -310,10 +324,14 @@ public class ReviewOrderPageTask extends baseClass{
 		Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
 	}
   }
+	*/
+	
 	
 	public static void editPaymentFromCreditCardToGiftCerticficate() throws Exception {
+		
 		reviewOrderPage();
 		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			test.info("Verifying the payment change from credit card to gift certificate from review order page");
 			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
 				logger.info("Brain tree activated");				
 				if(Actionsss.elementSize(reviewOrder.getCreditCardPaymentBrainTreeBeforeEditList())) {
@@ -323,11 +341,20 @@ public class ReviewOrderPageTask extends baseClass{
 					Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
 					PaymentPageTasks.gcRedemption();
 					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());
-					ReviewOrderPageValidation.editPaymentInReviewOrderPage();
+					
 				}			
 			}else if (Actionsss.elementSize(paymentPage.getCyberSourcePayment())) {
-				cybersource();
+				 logger.info("Cybersource payment activated");
+				 	if(Actionsss.elementSize(reviewOrder.getcybersourceCardDetailsInReviewOrderPageList())) {
+				 		logger.info("credit card details entered");
+				 		Actionsss.scrollWindowsByPixel(100);
+				 		previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceCardDetailsInReviewOrderPage());
+				 		Actionsss.click(reviewOrder.getEditPaymentInPlaceOrderPage());
+				 		PaymentPageTasks.gcRedemption();
+				 		paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
+				 	}				 
 			}
+			ReviewOrderPageValidation.editPaymentInReviewOrderPage();
 			ReviewOrderPageTask.placeOrder();
 			OrderPageValidation.validatePlacetheOrderPage();
 			OrderPageValidation.orderNumberAndOrderDate();
@@ -338,6 +365,7 @@ public class ReviewOrderPageTask extends baseClass{
 	public static void creditCardToPaypal() throws Exception {
 		reviewOrderPage();
 		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			test.info("Verifying the payment change from Credit card to Paypal from review order page");
 			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
 				logger.info("Brain tree activated");				
 				if(Actionsss.elementSize(reviewOrder.getCreditCardPaymentBrainTreeBeforeEditList())){
@@ -353,7 +381,8 @@ public class ReviewOrderPageTask extends baseClass{
 					ReviewOrderPageValidation.editPaymentInReviewOrderPage();
 				}
 			}else {
-				logger.info("");
+				test.pass("No paypal configuration for Stripe,Cybersource and Adyen payments ");
+				logger.info("No paypal configuration for Stripe,Cybersource and Adyen payments");
 			}
 			ReviewOrderPageTask.placeOrder();
 			OrderPageValidation.validatePlacetheOrderPage();
@@ -367,6 +396,8 @@ public class ReviewOrderPageTask extends baseClass{
 	public static void editPaymentFromGiftCertificateToCreditCard() throws Exception {
 		reviewOrderPage();
 		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			test.info("Verifying the payment change from Gift certificate to Credit card from review order page");
+			
 			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
 				logger.info("brain tree");
 				if(Actionsss.elementSize(reviewOrder.getGcPaymentInROPList())){
@@ -377,12 +408,20 @@ public class ReviewOrderPageTask extends baseClass{
 					PaymentPageTasks.gcRemoved();				
 					Thread.sleep(2000);
 					PaymentPageTasks.creditCardWithValidDetails();
-					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());
-					ReviewOrderPageValidation.editPaymentInReviewOrderPage();
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());			
 				}
-			}else {
-				logger.info("");
+				
+			}else  if(Actionsss.elementSize(reviewOrder.getcybersourceGcDetailsInReviewOrderPageList())) {				
+					logger.info("cybersource activated");
+					Actionsss.scrollWindowsByPixel(100);
+					previousPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
+					PaymentPageTasks.gcRemoved();				
+					Thread.sleep(2000);
+					PaymentPageTasks.creditCardWithValidDetails();
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceCardDetailsInReviewOrderPage());
 			}
+			
+				ReviewOrderPageValidation.editPaymentInReviewOrderPage();
 				ReviewOrderPageTask.placeOrder();
 				OrderPageValidation.validatePlacetheOrderPage();
 				OrderPageValidation.orderNumberAndOrderDate();
@@ -392,7 +431,9 @@ public class ReviewOrderPageTask extends baseClass{
 	
 	public static void editPaymentFromGiftCertificateToPaypal() throws Exception {
 		reviewOrderPage();
-		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {			
+			test.info("Verifying the payment change from Gift certificate to Paypal from review order page");
+			
 			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
 				logger.info("brain tree");
 				Actionsss.scrollWindowsByPixel(100);
@@ -408,7 +449,8 @@ public class ReviewOrderPageTask extends baseClass{
 					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getBrainPaypalPaymentInReviewOrderPage());
 					ReviewOrderPageValidation.editPaymentInReviewOrderPage();
 				}else {
-					logger.info("");
+					test.pass("No paypal configuration for Stripe,Cybersource and Adyen payments");
+					logger.info("No paypal configuration for Stripe,Cybersource and Adyen payments");
 				}
 				ReviewOrderPageTask.placeOrder();
 				OrderPageValidation.validatePlacetheOrderPage();
@@ -421,6 +463,7 @@ public class ReviewOrderPageTask extends baseClass{
 	public static void editPaymentFromPaypalToGiftCertificate() throws Exception {
 		reviewOrderPage();
 		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			test.info("Verifying the payment change from  Paypal to Gift certificate from review order page");
 			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
 				Actionsss.scrollWindowsByPixel(100);
 				logger.info("brain tree");
@@ -431,7 +474,8 @@ public class ReviewOrderPageTask extends baseClass{
 					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());
 				}
 			}else {
-				logger.info("");
+				test.pass("No paypal configuration for Stripe,Cybersource and Adyen payments");
+				logger.info("No paypal configuration for Stripe,Cybersource and Adyen payments");
 			}						
 			ReviewOrderPageValidation.editPaymentInReviewOrderPage();	
 			ReviewOrderPageTask.placeOrder();
@@ -445,6 +489,7 @@ public class ReviewOrderPageTask extends baseClass{
 	public static void editPaymentFromPaypalToCreditCard() throws Exception {
 		reviewOrderPage();
 		if (!Actionsss.elementSize(paymentPage.getCreditcardsSalesForce())) {
+			test.info("Verifying the payment change from  Paypal to Credit Card from review order page");
 			if(Actionsss.elementSize(reviewOrder.getBrainTreeDisplayList())) {
 				logger.info("brain tree");
 				Actionsss.scrollWindowsByPixel(100);
@@ -456,7 +501,8 @@ public class ReviewOrderPageTask extends baseClass{
 					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getCreditCardPaymentBrainTreeBeforeEdit());					
 				}
 			}else {
-				logger.info("");
+				test.pass("No paypal configuration for Stripe,Cybersource and Adyen payments");
+				logger.info("No paypal configuration for Stripe,Cybersource and Adyen payments");
 			}
 			ReviewOrderPageValidation.editPaymentInReviewOrderPage();	
 			ReviewOrderPageTask.placeOrder();
@@ -479,20 +525,19 @@ public class ReviewOrderPageTask extends baseClass{
 					PaymentPageTasks.gcRemoved();
 					Thread.sleep(2000);
 					PaymentPageTasks.gcRedemption();
-					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());
-					
-				}
-				
-			}else {
-				logger.info("other paymnet");
+					paymentafterEditInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getGcPaymentInROP());					
+				}				
+			}else if(Actionsss.elementSize(reviewOrder.getcybersourceVisaInReviewOrderPageList())&& Actionsss.elementSize(reviewOrder.getcybersourceGiftCertificateInReviewOrderPageList())){
+				logger.info("cybersource activated");
+				previousFirstcombinationOfPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceCardDetailsInReviewOrderPage());
+				previousSecondcombinationOfPaymentInPlaceorderPage=Actionsss.getTextOfElement(reviewOrder.getcybersourceGcDetailsInReviewOrderPage());
 			}
 			ReviewOrderPageValidation.editCombinationOfPaymentToSinglePaymentInReviewOrderPage();
 			ReviewOrderPageTask.placeOrder();
 			OrderPageValidation.validatePlacetheOrderPage();
 			OrderPageValidation.orderNumberAndOrderDate();
 			Actionsss.click(homePage.clickOnLogo());			
-		}
-		
+		}		
 	}
 	
 	public static void editPaymentFromCombinationOfGiftCertificateAndCreditCardToCreditCard() throws Exception {

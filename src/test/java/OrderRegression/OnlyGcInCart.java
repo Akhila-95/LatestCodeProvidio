@@ -19,7 +19,7 @@ public class OnlyGcInCart extends baseClass {
 		
 		GiftCertificatePageTasks.giftCertificateForm();
 		
-		CommonProccessUptoCheckout.commonProccess();
+		CommonProccessUptoCheckout.commonCheckoutProccess();
 		
 		CreditCardDetails.creditCardDetails();
 		ReviewOrderPageTask.placeOrder();

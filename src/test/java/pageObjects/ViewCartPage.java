@@ -50,4 +50,12 @@ public class ViewCartPage extends baseClass{
 	public WebElement getBrainTreePaypalInCartPage() {
 		return brainTreePaypalInCartPage;
 	}
+	
+	@FindBy(css = "div.gift-certificate")
+	WebElement gcProdcuctInInCartPage;
+	public WebElement getgcProdcuctInInCartPage() {
+		return gcProdcuctInInCartPage;
+	}
+	
+	
 }

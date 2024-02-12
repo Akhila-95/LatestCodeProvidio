@@ -12,8 +12,10 @@ import com.providio.pageObjects.productDescriptionPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.testcases.baseClass;
 
+import pageObjects.ProductDetailPage;
 import pageObjects.ProductListingPage;
 import pageObjects.homepage;
+import tasks.ProductListingPageTasks;
 import validations.ProductListingPageValidations;
 
 public class allAttributesSelection extends baseClass{
@@ -21,6 +23,7 @@ public class allAttributesSelection extends baseClass{
 	
 	private static homepage homePage = new homepage(driver);
 	private static ProductListingPage PLP = new ProductListingPage(driver);
+	private static ProductDetailPage pdpPage = new ProductDetailPage(driver);
 	
 	
 	public static void selectTheAttributesInPdp() throws Exception {
@@ -32,22 +35,32 @@ public class allAttributesSelection extends baseClass{
 	     WebElement cartEnabled =driver.findElement(By.xpath("//button[contains(@class,'add-to-cart')]"));
 	     List<WebElement> inStock =driver.findElements(By.xpath("//div[contains(text(), 'In Stock')]"));
 	     if(cartEnabled.isEnabled()&& inStock.size()>0) {
-		     //pdp.clickcartbutton(driver);    
+		     pdp.clickcartbutton(driver);    
 	     }else {
 	    	 System.out.println("Product is out of stock so searching for new product");
-            //selecting a random menu
-	    	 navigationPage navPage =new navigationPage(driver);
-	    	 navPage.selectRandomMenu(driver);
-
-	    	//selecting a random product in the plp page
-	    	 productListingPage plp = new productListingPage(driver);
-	    	 plp.selectProductRandom(driver);
+	    	 ProductListingPageTasks.simpleProductsGloves();
 	
 	    	 //Reselecting the all attributes
 	    	 selectTheAttributesInPdp();
 	    	 
 	    	//validating the product is add to the cart
 	  	    //validationpopupMessages.validatingProductisAddtoCart(driver);  
+	     }	     
+	}
+	
+	public static void selectTheAttributesInPdpForBuyNow() throws Exception {
+
+		//selecting attributes
+		 allAttributes();
+	     Thread.sleep(2000);	     
+	     WebElement cartEnabled =driver.findElement(By.xpath("//button[contains(@class,'add-to-cart')]"));
+	     List<WebElement> inStock =driver.findElements(By.xpath("//div[contains(text(), 'In Stock')]"));
+	     if(cartEnabled.isEnabled()&& inStock.size()>0) {
+	    	Actionsss.javascriptClick(pdpPage.getBuyNowButton());
+	     }else {
+	    	 System.out.println("Product is out of stock so searching for new product");
+	    	 ProductListingPageTasks.gpsProducts();  	    	 
+	    	 selectTheAttributesInPdpForBuyNow();
 	     }	     
 	}
 

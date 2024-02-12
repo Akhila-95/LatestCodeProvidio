@@ -67,7 +67,7 @@ public class ProductDetailPage extends baseClass{
     }
     
     // WebElement for the "Paypal Buy Now" button
-    @FindBy(xpath = "(//button[contains(text(),'Place Order')])[1]")
+    @FindBy(xpath = "(//a[contains(@class,'buynow-placeorder')])[1]")
     WebElement placeOrderInBuyNow;
     public  WebElement getplaceOrderInBuyNow() {
     	return placeOrderInBuyNow;

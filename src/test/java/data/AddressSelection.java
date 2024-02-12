@@ -171,7 +171,7 @@ public class AddressSelection extends baseClass{
 		  }
 	  }
 	  
-	  public void selectBillingAddress() throws InterruptedException {
+	  public static void selectBillingAddress() throws InterruptedException {
 		  
 		 
 		  if(Actionsss.displayElement(shippingPage.getBillingAddressDisplay())) {

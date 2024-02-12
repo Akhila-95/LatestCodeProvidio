@@ -204,5 +204,33 @@ public class homepage extends baseClass{
 
 
 
-	
+	public static void selectSimpleProducts() throws InterruptedException {
+
+        int randomNumbermenu = 3;
+        if(randomNumbermenu==3) {
+   
+        int randomNumberitem = 6;
+        WebElement navigatingGloves = driver.findElement(By.xpath("(//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + randomNumbermenu + "]"));     
+        Actions action = new Actions(driver);
+        action.moveToElement(navigatingGloves).perform();     
+        WebElement navigatingToGloves = driver.findElement(By.xpath("((//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + randomNumbermenu + "]/following::a[@role='menuitem'])[" + randomNumberitem + "]"));
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        Actionsss.highlightElement(navigatingToGloves);
+        js.executeScript("arguments[0].click();", new Object[]{ navigatingToGloves});          
+     
+        List<WebElement> menplp = driver.findElements(By.xpath("//li[@class='breadcrumb-item']/a[contains(text(), 'Men')]"));
+        if(menplp.size()>0) {
+        	String[] mensCategory= {"SUITS","JACKETS & COATS","DRESS SHIRTS","SHORTS","PANTS","TIES","GLOVES","LUGGAGE"};
+        	WebElement pageTitle = driver.findElement(By.xpath("//h1[contains(@class, 'page-title')]"));
+        	String pageTitleText = pageTitle.getText();
+        	test.info("verify that Mens of  " + pageTitleText + " ");
+        	if (pageTitleText.equals(mensCategory[randomNumberitem-1])) {
+        		test.pass("Successfully clicked on the Mens of  " + pageTitleText + " ");
+                logger.info("click Success Mens of  " + pageTitleText + "");
+        	}
+        }
+      }
+    }	
 }
+
+

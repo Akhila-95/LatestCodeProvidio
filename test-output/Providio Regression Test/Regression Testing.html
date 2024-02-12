@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Regression Testing</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>85/9/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 09 17:47:37 IST 2024</td>
+<td>Started on:</td><td>Mon Feb 12 13:10:42 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>853 seconds (853096 ms)</td>
+<tr><td>Total time:</td><td>4279 seconds (4279744 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,64 +76,37 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[@class=&apos;order-thank-you-msg&apos;]&quot;}
-  (Session info: chrome=121.0.6167.161)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [05e7e849c8a90ecb73836de628af67ed, findElement {using=xpath, value=//h2[@class=&apos;order-thank-you-msg&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57048/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 05e7e849c8a90ecb73836de628af67ed
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at validations.PaymentPageValidation.VerifiedThatPlaceOrderClick(PaymentPageValidation.java:125)
-	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:117)
-	at tasks.ReviewOrderPageTask.editPaymentFromCreditCardToGiftCerticficate(ReviewOrderPageTask.java:331)
-	at tasks.EditPaymentsFromReviewOrderPageTasks.editCreditToGiftCertificate(EditPaymentsFromReviewOrderPageTasks.java:13)
-	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate(EditPaymentsFromReviewOrderPageTest.java:13)
+<td title='testScripts.PaymentPageTest.verifyingCreditcardWithValidDetails()'><b>verifyingCreditcardWithValidDetails</b><br>Test class: testScripts.PaymentPageTest</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:678)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at tasks.MiniCartPageTasks.miniCartValue(MiniCartPageTasks.java:25)
+	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:32)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:38)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:28)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:135)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
+	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:263)
+	at testScripts.PaymentPageTest.verifyingCreditcardWithValidDetails(PaymentPageTest.java:126)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1784029781", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1784029781'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[@class=&apos;order-thank-you-msg&apos;]&quot;}
-  (Session info: chrome=121.0.6167.161)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [05e7e849c8a90ecb73836de628af67ed, findElement {using=xpath, value=//h2[@class=&apos;order-thank-you-msg&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57048/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 05e7e849c8a90ecb73836de628af67ed
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at validations.PaymentPageValidation.VerifiedThatPlaceOrderClick(PaymentPageValidation.java:125)
-	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:117)
-	at tasks.ReviewOrderPageTask.editPaymentFromCreditCardToGiftCerticficate(ReviewOrderPageTask.java:331)
-	at tasks.EditPaymentsFromReviewOrderPageTasks.editCreditToGiftCertificate(EditPaymentsFromReviewOrderPageTasks.java:13)
-	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate(EditPaymentsFromReviewOrderPageTest.java:13)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace919901232", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace919901232'><pre>java.lang.NumberFormatException: For input string: &quot;&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:678)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at tasks.MiniCartPageTasks.miniCartValue(MiniCartPageTasks.java:25)
+	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:32)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:38)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:28)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:135)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
+	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:263)
+	at testScripts.PaymentPageTest.verifyingCreditcardWithValidDetails(PaymentPageTest.java:126)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -163,18 +136,376 @@ Session ID: 05e7e849c8a90ecb73836de628af67ed
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>93</td>
-<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<td>0</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
 <tr>
-<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td title='testScripts.ProductsAndItsOrderTest.VerifyingPlaceOrderWithBuyNowButton()'><b>VerifyingPlaceOrderWithBuyNowButton</b><br>Test class: testScripts.ProductsAndItsOrderTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[@class=&apos;nav-link dropdown-toggle text-uppercase font-weight-bold level-1&apos;])[4]&quot;}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b282cf5035d575c7b29f439c4e575db4, findElement {using=xpath, value=(//a[@class=&apos;nav-link dropdown-toggle text-uppercase font-weight-bold level-1&apos;])[4]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b282cf5035d575c7b29f439c4e575db4
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at pageObjects.homepage.selectGpsNavigation(homepage.java:170)
+	at tasks.ProductListingPageTasks.gpsProducts(ProductListingPageTasks.java:90)
+	at tasks.ProductsAndItsOrdersTasks.pdpPagebuyNowButton(ProductsAndItsOrdersTasks.java:41)
+	at testScripts.ProductsAndItsOrderTest.VerifyingPlaceOrderWithBuyNowButton(ProductsAndItsOrderTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2051768909", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2051768909'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[@class=&apos;nav-link dropdown-toggle text-uppercase font-weight-bold level-1&apos;])[4]&quot;}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b282cf5035d575c7b29f439c4e575db4, findElement {using=xpath, value=(//a[@class=&apos;nav-link dropdown-toggle text-uppercase font-weight-bold level-1&apos;])[4]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b282cf5035d575c7b29f439c4e575db4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at pageObjects.homepage.selectGpsNavigation(homepage.java:170)
+	at tasks.ProductListingPageTasks.gpsProducts(ProductListingPageTasks.java:90)
+	at tasks.ProductsAndItsOrdersTasks.pdpPagebuyNowButton(ProductsAndItsOrdersTasks.java:41)
+	at testScripts.ProductsAndItsOrderTest.VerifyingPlaceOrderWithBuyNowButton(ProductsAndItsOrderTest.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.ProductsAndItsOrderTest@6b350309</td></tr>
+<tr>
+<td title='testScripts.ProductsAndItsOrderTest.VerifyingPlaceOrderWithCreditCardWhenOnlyGcInCart()'><b>VerifyingPlaceOrderWithCreditCardWhenOnlyGcInCart</b><br>Test class: testScripts.ProductsAndItsOrderTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[@class=&apos;order-thank-you-msg&apos;]&quot;}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b282cf5035d575c7b29f439c4e575db4, findElement {using=xpath, value=//h2[@class=&apos;order-thank-you-msg&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b282cf5035d575c7b29f439c4e575db4
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at validations.PaymentPageValidation.VerifiedThatPlaceOrderClick(PaymentPageValidation.java:125)
+	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:116)
+	at tasks.ProductsAndItsOrdersTasks.OnlyGcInCartWithCreditCard(ProductsAndItsOrdersTasks.java:32)
+	at testScripts.ProductsAndItsOrderTest.VerifyingPlaceOrderWithCreditCardWhenOnlyGcInCart(ProductsAndItsOrderTest.java:13)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace476518592", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace476518592'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[@class=&apos;order-thank-you-msg&apos;]&quot;}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b282cf5035d575c7b29f439c4e575db4, findElement {using=xpath, value=//h2[@class=&apos;order-thank-you-msg&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b282cf5035d575c7b29f439c4e575db4
+	at jdk.internal.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at validations.PaymentPageValidation.VerifiedThatPlaceOrderClick(PaymentPageValidation.java:125)
+	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:116)
+	at tasks.ProductsAndItsOrdersTasks.OnlyGcInCartWithCreditCard(ProductsAndItsOrdersTasks.java:32)
+	at testScripts.ProductsAndItsOrderTest.VerifyingPlaceOrderWithCreditCardWhenOnlyGcInCart(ProductsAndItsOrderTest.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>76</td>
+<td>testScripts.ProductsAndItsOrderTest@6b350309</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCartPagePaypal()'><b>verifyingOrderIsPlacingWithCartPagePaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Place Order&apos;)]&quot;}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b282cf5035d575c7b29f439c4e575db4, findElement {using=xpath, value=//button[contains(text(),&apos;Place Order&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b282cf5035d575c7b29f439c4e575db4
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.highlightElement(Actionsss.java:232)
+	at functionality.Actionsss.CombinedClick(Actionsss.java:116)
+	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:114)
+	at PaypalPayment.CartPagePayal.cartPagePaypal(CartPagePayal.java:32)
+	at tasks.PlaceOrderWithDifferentPayments.orderPlacingWithCartPagePaypal(PlaceOrderWithDifferentPayments.java:69)
+	at testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCartPagePaypal(OrderPlacingWithAllPaymentsTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace860095852", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace860095852'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Place Order&apos;)]&quot;}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b282cf5035d575c7b29f439c4e575db4, findElement {using=xpath, value=//button[contains(text(),&apos;Place Order&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b282cf5035d575c7b29f439c4e575db4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:466)
+	at functionality.Actionsss.highlightElement(Actionsss.java:232)
+	at functionality.Actionsss.CombinedClick(Actionsss.java:116)
+	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:114)
+	at PaypalPayment.CartPagePayal.cartPagePaypal(CartPagePayal.java:32)
+	at tasks.PlaceOrderWithDifferentPayments.orderPlacingWithCartPagePaypal(PlaceOrderWithDifferentPayments.java:69)
+	at testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCartPagePaypal(OrderPlacingWithAllPaymentsTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>87</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4a163575</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder()'><b>verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:678)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at tasks.MiniCartPageTasks.miniCartValue(MiniCartPageTasks.java:25)
+	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:32)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:38)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:28)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:135)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
+	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:263)
+	at tasks.ReviewOrderPageTask.reviewOrderPage(ReviewOrderPageTask.java:31)
+	at tasks.ReviewOrderPageTask.editPhoneNumberInBillingAddress(ReviewOrderPageTask.java:200)
+	at testScripts.ReviewOrderTest.verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder(ReviewOrderTest.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace366267503", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace366267503'><pre>java.lang.NumberFormatException: For input string: &quot;&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:678)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at tasks.MiniCartPageTasks.miniCartValue(MiniCartPageTasks.java:25)
+	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:32)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:38)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:28)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:135)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
+	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:263)
+	at tasks.ReviewOrderPageTask.reviewOrderPage(ReviewOrderPageTask.java:31)
+	at tasks.ReviewOrderPageTask.editPhoneNumberInBillingAddress(ReviewOrderPageTask.java:200)
+	at testScripts.ReviewOrderTest.verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder(ReviewOrderTest.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@12e0f1cb</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
 <td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : No details available for input: &quot;345&quot;}
   (Session info: chrome=121.0.6167.161): No details available for input: &quot;345&quot;
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [05e7e849c8a90ecb73836de628af67ed, findElement {using=xpath, value=//input[@id=&apos;shippingAddressOnedefault&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57048/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 05e7e849c8a90ecb73836de628af67ed
+Command: [b282cf5035d575c7b29f439c4e575db4, findElement {using=xpath, value=//input[@id=&apos;shippingAddressOnedefault&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b282cf5035d575c7b29f439c4e575db4
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
@@ -192,19 +523,19 @@ Session ID: 05e7e849c8a90ecb73836de628af67ed
 	at data.AddressSelection.Address(AddressSelection.java:28)
 	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:136)
 	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-	at tasks.PaymentPageTasks.gcRedemptionInCombinationWithCreditCard(PaymentPageTasks.java:412)
-	at tasks.EditPaymentsFromReviewOrderPageTasks.editCombinationOfGiftCertificateAndCreditCardToGiftCertificate(EditPaymentsFromReviewOrderPageTasks.java:48)
-	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate(EditPaymentsFromReviewOrderPageTest.java:43)
+	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:263)
+	at tasks.EditPaymentsFromReviewOrderPageTasks.editCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTasks.java:90)
+	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTest.java:74)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1419169026", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1419169026'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : No details available for input: &quot;345&quot;}
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1390112295", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1390112295'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : No details available for input: &quot;345&quot;}
   (Session info: chrome=121.0.6167.161): No details available for input: &quot;345&quot;
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [05e7e849c8a90ecb73836de628af67ed, findElement {using=xpath, value=//input[@id=&apos;shippingAddressOnedefault&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57048/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 05e7e849c8a90ecb73836de628af67ed
+Command: [b282cf5035d575c7b29f439c4e575db4, findElement {using=xpath, value=//input[@id=&apos;shippingAddressOnedefault&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b282cf5035d575c7b29f439c4e575db4
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
@@ -222,9 +553,9 @@ Session ID: 05e7e849c8a90ecb73836de628af67ed
 	at data.AddressSelection.Address(AddressSelection.java:28)
 	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:136)
 	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-	at tasks.PaymentPageTasks.gcRedemptionInCombinationWithCreditCard(PaymentPageTasks.java:412)
-	at tasks.EditPaymentsFromReviewOrderPageTasks.editCombinationOfGiftCertificateAndCreditCardToGiftCertificate(EditPaymentsFromReviewOrderPageTasks.java:48)
-	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate(EditPaymentsFromReviewOrderPageTest.java:43)
+	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:263)
+	at tasks.EditPaymentsFromReviewOrderPageTasks.editCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTasks.java:90)
+	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTest.java:74)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -254,19 +585,173 @@ Session ID: 05e7e849c8a90ecb73836de628af67ed
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>60</td>
-<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<td>72</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
 <tr>
-<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToCreditCard()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToCreditCard</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[@class=&apos;order-thank-you-msg&apos;]&quot;}
+<td title='testScripts.ReviewOrderTest.verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder()'><b>verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=121.0.6167.161)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b282cf5035d575c7b29f439c4e575db4, clearElement {id=4C8463D6E22399A497548DFB1F1AE865_element_4877}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b282cf5035d575c7b29f439c4e575db4)] -&gt; xpath: //input[@id=&apos;shippingAddressOnedefault&apos;]]
+Session ID: b282cf5035d575c7b29f439c4e575db4
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.clear(Unknown Source)
+	at functionality.Actionsss.editShippingAddressFromRop(Actionsss.java:469)
+	at tasks.ReviewOrderPageTask.editShippingAddressFromReviewOrderPage(ReviewOrderPageTask.java:125)
+	at testScripts.ReviewOrderTest.verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder(ReviewOrderTest.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1523378833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1523378833'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=121.0.6167.161)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b282cf5035d575c7b29f439c4e575db4, clearElement {id=4C8463D6E22399A497548DFB1F1AE865_element_4877}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b282cf5035d575c7b29f439c4e575db4)] -&gt; xpath: //input[@id=&apos;shippingAddressOnedefault&apos;]]
+Session ID: b282cf5035d575c7b29f439c4e575db4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
+	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.clear(Unknown Source)
+	at functionality.Actionsss.editShippingAddressFromRop(Actionsss.java:469)
+	at tasks.ReviewOrderPageTask.editShippingAddressFromReviewOrderPage(ReviewOrderPageTask.java:125)
+	at testScripts.ReviewOrderTest.verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder(ReviewOrderTest.java:55)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>testScripts.ReviewOrderTest@12e0f1cb</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCombinationOfGiftCertificateAndCreditCard()'><b>verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCombinationOfGiftCertificateAndCreditCard</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:678)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at tasks.MiniCartPageTasks.miniCartValue(MiniCartPageTasks.java:25)
+	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:32)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:38)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:28)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:135)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
+	at tasks.PaymentPageTasks.paypal(PaymentPageTasks.java:438)
+	at tasks.EditPaymentsFromReviewOrderPageTasks.editPaypalToCombinationOfGiftCertificateAndCreditCard(EditPaymentsFromReviewOrderPageTasks.java:78)
+	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCombinationOfGiftCertificateAndCreditCard(EditPaymentsFromReviewOrderPageTest.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1447625", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1447625'><pre>java.lang.NumberFormatException: For input string: &quot;&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:678)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at tasks.MiniCartPageTasks.miniCartValue(MiniCartPageTasks.java:25)
+	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
+	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
+	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:32)
+	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:38)
+	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:28)
+	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:135)
+	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
+	at tasks.PaymentPageTasks.paypal(PaymentPageTasks.java:438)
+	at tasks.EditPaymentsFromReviewOrderPageTasks.editPaypalToCombinationOfGiftCertificateAndCreditCard(EditPaymentsFromReviewOrderPageTasks.java:78)
+	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCombinationOfGiftCertificateAndCreditCard(EditPaymentsFromReviewOrderPageTest.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.ProductsAndItsOrderTest.VerifyingPlaceOrderWithBuyNowPopUp()'><b>VerifyingPlaceOrderWithBuyNowPopUp</b><br>Test class: testScripts.ProductsAndItsOrderTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[contains(text(),&apos;Login&apos;)]&quot;}
   (Session info: chrome=121.0.6167.161)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [05e7e849c8a90ecb73836de628af67ed, findElement {using=xpath, value=//h2[@class=&apos;order-thank-you-msg&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57048/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 05e7e849c8a90ecb73836de628af67ed
+Command: [b282cf5035d575c7b29f439c4e575db4, findElement {using=xpath, value=//h1[contains(text(),&apos;Login&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b282cf5035d575c7b29f439c4e575db4
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -278,24 +763,27 @@ Session ID: 05e7e849c8a90ecb73836de628af67ed
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at validations.PaymentPageValidation.VerifiedThatPlaceOrderClick(PaymentPageValidation.java:125)
-	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:117)
-	at tasks.ReviewOrderPageTask.editPaymentFromCombinationOfGiftCertificateAndCreditCardToCreditCard(ReviewOrderPageTask.java:517)
-	at tasks.EditPaymentsFromReviewOrderPageTasks.editCombinationOfGiftCertificateAndCreditCardToCreditCard(EditPaymentsFromReviewOrderPageTasks.java:55)
-	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToCreditCard(EditPaymentsFromReviewOrderPageTest.java:48)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at functionality.Actionsss.displayElement(Actionsss.java:158)
+	at validations.LoginValidation.loginPageValidation(LoginValidation.java:13)
+	at tasks.LoginPageTasks.loginPageView(LoginPageTasks.java:48)
+	at tasks.LoginPageTasks.verifyThatuserLogin(LoginPageTasks.java:138)
+	at tasks.ProductsAndItsOrdersTasks.pdpPageBuyNowPopUp(ProductsAndItsOrdersTasks.java:58)
+	at testScripts.ProductsAndItsOrderTest.VerifyingPlaceOrderWithBuyNowPopUp(ProductsAndItsOrderTest.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1803942588", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1803942588'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[@class=&apos;order-thank-you-msg&apos;]&quot;}
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace489140424", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace489140424'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[contains(text(),&apos;Login&apos;)]&quot;}
   (Session info: chrome=121.0.6167.161)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [05e7e849c8a90ecb73836de628af67ed, findElement {using=xpath, value=//h2[@class=&apos;order-thank-you-msg&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57048/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 05e7e849c8a90ecb73836de628af67ed
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+Command: [b282cf5035d575c7b29f439c4e575db4, findElement {using=xpath, value=//h1[contains(text(),&apos;Login&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63381/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b282cf5035d575c7b29f439c4e575db4
+	at jdk.internal.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
@@ -310,11 +798,15 @@ Session ID: 05e7e849c8a90ecb73836de628af67ed
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at validations.PaymentPageValidation.VerifiedThatPlaceOrderClick(PaymentPageValidation.java:125)
-	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:117)
-	at tasks.ReviewOrderPageTask.editPaymentFromCombinationOfGiftCertificateAndCreditCardToCreditCard(ReviewOrderPageTask.java:517)
-	at tasks.EditPaymentsFromReviewOrderPageTasks.editCombinationOfGiftCertificateAndCreditCardToCreditCard(EditPaymentsFromReviewOrderPageTasks.java:55)
-	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToCreditCard(EditPaymentsFromReviewOrderPageTest.java:48)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at functionality.Actionsss.displayElement(Actionsss.java:158)
+	at validations.LoginValidation.loginPageValidation(LoginValidation.java:13)
+	at tasks.LoginPageTasks.loginPageView(LoginPageTasks.java:48)
+	at tasks.LoginPageTasks.verifyThatuserLogin(LoginPageTasks.java:138)
+	at tasks.ProductsAndItsOrdersTasks.pdpPageBuyNowPopUp(ProductsAndItsOrdersTasks.java:58)
+	at testScripts.ProductsAndItsOrderTest.VerifyingPlaceOrderWithBuyNowPopUp(ProductsAndItsOrderTest.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -344,8 +836,8 @@ Session ID: 05e7e849c8a90ecb73836de628af67ed
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>51</td>
-<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<td>1</td>
+<td>testScripts.ProductsAndItsOrderTest@6b350309</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -356,35 +848,430 @@ Session ID: 05e7e849c8a90ecb73836de628af67ed
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='browser.launchBrowsering.verifyHomePageLaunching()'><b>verifyHomePageLaunching</b><br>Test class: browser.launchBrowsering</td>
+<td title='testScripts.ReviewOrderTest.verifyingTheDisplayOfCustomerInfoInReviewOrderPage()'><b>verifyingTheDisplayOfCustomerInfoInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
 <td></td>
-<td>6</td>
-<td>browser.launchBrowsering@55e42449</td></tr>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@12e0f1cb</td></tr>
 <tr>
-<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td title='testScripts.PaymentPageTest.verifyingBillingPhoneNumberError()'><b>verifyingBillingPhoneNumberError</b><br>Test class: testScripts.PaymentPageTest</td>
 <td></td>
-<td>139</td>
-<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<td>89</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
 <tr>
-<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard()'><b>verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificateAndPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificateAndPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
 <td></td>
-<td>123</td>
-<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<td>198</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginWithValidCredentials()'><b>VerifyingLoginWithValidCredentials</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>10</td>
+<td>testScripts.LoginPageTest@75de29c0</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCvvAndExpErrorInCreditCard()'><b>verifyingCvvAndExpErrorInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>13</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.LogOutTest.verifyLogout()'><b>verifyLogout</b><br>Test class: testScripts.LogOutTest</td>
+<td></td>
+<td>11</td>
+<td>testScripts.LogOutTest@296e281a</td></tr>
 <tr>
 <td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCreditCard()'><b>verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCreditCard</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
 <td></td>
-<td>136</td>
-<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<td>154</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingRemovalOfAppliedGc()'><b>verifyingRemovalOfAppliedGc</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingEtgLogoDisplayInShippingPageTasks_Page()'><b>verifyingEtgLogoDisplayInShippingPageTasks_Page</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditcardNumberInValidError()'><b>verifyingCreditcardNumberInValidError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>13</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard()'><b>verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>132</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingOrderSummaryDisplayInReviewOrderPage()'><b>verifyingOrderSummaryDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@12e0f1cb</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingOrderSummaryDisplayInPaymentPage()'><b>verifyingOrderSummaryDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyPhoneNumError()'><b>verifyPhoneNumError</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.CreateAccountPageTest@fc807c1</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingTheCustomerInfoInPaymntPage()'><b>verifyingTheCustomerInfoInPaymntPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyingResourceFooterLinks()'><b>verifyingResourceFooterLinks</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.FooterPageTest@4745e9c</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingBackToCartFromShippingPage()'><b>verifyingBackToCartFromShippingPage</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>8</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder()'><b>verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>122</td>
+<td>testScripts.ReviewOrderTest@12e0f1cb</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingNextPaymentButtonDisplayInShippingPageTasks_Page()'><b>verifyingNextPaymentButtonDisplayInShippingPageTasks_Page</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifyTheErrorsRecipientEmailAndConfirmEmail()'><b>verifyTheErrorsRecipientEmailAndConfirmEmail</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.GiftCertificateTest@2f2bff16</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardExpDateInValid()'><b>verifyingCreditCardExpDateInValid</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>13</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingPaginationOfProductsInCheckOutPage2()'><b>verifyingPaginationOfProductsInCheckOutPage2</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>39</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingEtgLogoDisplayInPaymentPage()'><b>verifyingEtgLogoDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCreditCard()'><b>verifyingOrderIsPlacingWithCreditCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>108</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4a163575</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>153</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardInCompleteExpYearError()'><b>verifyingCreditCardInCompleteExpYearError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>13</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheAddressError()'><b>verifyingTheAddressError</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>8</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingAllTheErrorsInCreditCard()'><b>verifyingAllTheErrorsInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>13</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>203</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingOrderSummaryDisplayInShippingPageTasks_Page()'><b>verifyingOrderSummaryDisplayInShippingPageTasks_Page</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingEtgLogoDisplayInReviewOrderPage()'><b>verifyingEtgLogoDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@12e0f1cb</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingphoneNumberError()'><b>verifyingphoneNumberError</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>11</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyEmailformatError()'><b>verifyEmailformatError</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.CreateAccountPageTest@fc807c1</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingEnterGiftCodeErrorMsg()'><b>verifyingEnterGiftCodeErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>73</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage()'><b>verifyingOrderIsPlacingWithPaypalBuyNowInPdpPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>39</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4a163575</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithMiniCartPaypal()'><b>verifyingOrderIsPlacingWithMiniCartPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>82</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4a163575</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>209</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.FindAStoreTest.verifyFindAStore()'><b>verifyFindAStore</b><br>Test class: testScripts.FindAStoreTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.FindAStoreTest@10f7c76</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardNumberInCompleteError()'><b>verifyingCreditCardNumberInCompleteError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>13</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
 <tr>
 <td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
 <td></td>
+<td>151</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyPassword()'><b>VerifyingLoginFailureWithEmptyPassword</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.LoginPageTest@75de29c0</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToCreditCard()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToCreditCard</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>196</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmailAndPassword()'><b>VerifyingLoginFailureWithEmptyEmailAndPassword</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.LoginPageTest@75de29c0</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithGiftCard()'><b>verifyingOrderIsPlacingWithGiftCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>114</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4a163575</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>109</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithEmptyEmail()'><b>VerifyingLoginFailureWithEmptyEmail</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.LoginPageTest@75de29c0</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingPaginationOfProductsInPaymentPage()'><b>verifyingPaginationOfProductsInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>45</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingEditEmailFromShippingPageAndPlaceOrder()'><b>verifyingEditEmailFromShippingPageAndPlaceOrder</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>52</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingUpdateBillingAddressAndPlaceOrder()'><b>verifyingUpdateBillingAddressAndPlaceOrder</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
 <td>85</td>
-<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingPaymentInfoDisplayInReviewOrderPage()'><b>verifyingPaymentInfoDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ReviewOrderTest@12e0f1cb</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingPaymentInfoDisplayInPaymentPage()'><b>verifyingPaymentInfoDisplayInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>2</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithIncorrectCredentials()'><b>VerifyingLoginFailureWithIncorrectCredentials</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>15</td>
+<td>testScripts.LoginPageTest@75de29c0</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCvvErrorInCreditCard()'><b>verifyingCvvErrorInCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>13</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard()'><b>verifyingOrderIsPlacingWithCombinationOfGcAndCreditCard</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>139</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4a163575</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCheckBalanceOfInvalidGcErrorMsg()'><b>verifyingCheckBalanceOfInvalidGcErrorMsg</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>4</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyCreateAccountWithValidCredentials()'><b>verifyCreateAccountWithValidCredentials</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.CreateAccountPageTest@fc807c1</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyPasswordMismatch()'><b>verifyPasswordMismatch</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.CreateAccountPageTest@fc807c1</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingAddnewCreditCard()'><b>verifyingAddnewCreditCard</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithPaypalFromCheckoutPage()'><b>verifyingOrderIsPlacingWithPaypalFromCheckoutPage</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>142</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4a163575</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingUpdateShippingAddressAndPlaceOrder()'><b>verifyingUpdateShippingAddressAndPlaceOrder</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>50</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.CreateAccountPageTest.verifyEmailAndConfirmEmail()'><b>verifyEmailAndConfirmEmail</b><br>Test class: testScripts.CreateAccountPageTest</td>
+<td></td>
+<td>31</td>
+<td>testScripts.CreateAccountPageTest@fc807c1</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheCustomerInfoInCheckoutPage2()'><b>verifyingTheCustomerInfoInCheckoutPage2</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>56</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingEditCustomerInfoFromPaymentPageAndPlaceOrder()'><b>verifyingEditCustomerInfoFromPaymentPageAndPlaceOrder</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>62</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifyErrorsForConfirmMail()'><b>verifyErrorsForConfirmMail</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.GiftCertificateTest@2f2bff16</td></tr>
+<tr>
+<td title='testScripts.LoginPageTest.VerifyingLoginFailureWithInvalidEmailFormat()'><b>VerifyingLoginFailureWithInvalidEmailFormat</b><br>Test class: testScripts.LoginPageTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.LoginPageTest@75de29c0</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingAllErrorsInShippingForm()'><b>verifyingAllErrorsInShippingForm</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>4</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingAddNewShippingAddressAndPlaceOrder()'><b>verifyingAddNewShippingAddressAndPlaceOrder</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>0</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingAddNewBillingAddressFromPaymentPageAndPlaceOrder()'><b>verifyingAddNewBillingAddressFromPaymentPageAndPlaceOrder</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>114</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifyGiftCardToCart()'><b>verifyGiftCardToCart</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>12</td>
+<td>testScripts.GiftCertificateTest@2f2bff16</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheErrorsInFirstName()'><b>verifyingTheErrorsInFirstName</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>11</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingPlaceOrderButtonDisplayInReviewOrderPage()'><b>verifyingPlaceOrderButtonDisplayInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>56</td>
+<td>testScripts.ReviewOrderTest@12e0f1cb</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>195</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.OrderPlacingWithAllPaymentsTest.verifyingOrderIsPlacingWithCombinationOfGcAndPaypal()'><b>verifyingOrderIsPlacingWithCombinationOfGcAndPaypal</b><br>Test class: testScripts.OrderPlacingWithAllPaymentsTest</td>
+<td></td>
+<td>158</td>
+<td>testScripts.OrderPlacingWithAllPaymentsTest@4a163575</td></tr>
+<tr>
+<td title='testScripts.FooterPageTest.verifyinginvalidEmailInEmailSignUpBox()'><b>verifyinginvalidEmailInEmailSignUpBox</b><br>Test class: testScripts.FooterPageTest</td>
+<td></td>
+<td>1</td>
+<td>testScripts.FooterPageTest@4745e9c</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder()'><b>verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>36</td>
+<td>testScripts.ReviewOrderTest@12e0f1cb</td></tr>
+<tr>
+<td title='browser.launchBrowsering.verifyHomePageLaunching()'><b>verifyHomePageLaunching</b><br>Test class: browser.launchBrowsering</td>
+<td></td>
+<td>5</td>
+<td>browser.launchBrowsering@a098d76</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingBackToCartInPaymentPage()'><b>verifyingBackToCartInPaymentPage</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>30</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCheckBalanceOfValidGc()'><b>verifyingCheckBalanceOfValidGc</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>5</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifytheErrorsFromName_Recipients_confirmRecipientEMail()'><b>verifytheErrorsFromName_Recipients_confirmRecipientEMail</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>7</td>
+<td>testScripts.GiftCertificateTest@2f2bff16</td></tr>
+<tr>
+<td title='testScripts.ReviewOrderTest.verifyingPaginationOfProductsInReviewOrderPage()'><b>verifyingPaginationOfProductsInReviewOrderPage</b><br>Test class: testScripts.ReviewOrderTest</td>
+<td></td>
+<td>59</td>
+<td>testScripts.ReviewOrderTest@12e0f1cb</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingTheErrorsInLastName()'><b>verifyingTheErrorsInLastName</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>11</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
+<tr>
+<td title='testScripts.ShippingPageTest.verifyingWithValidShippingAddress()'><b>verifyingWithValidShippingAddress</b><br>Test class: testScripts.ShippingPageTest</td>
+<td></td>
+<td>9</td>
+<td>testScripts.ShippingPageTest@59cda16e</td></tr>
 <tr>
 <td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
 <td></td>
-<td>150</td>
-<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<td>164</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@7e642b88</td></tr>
+<tr>
+<td title='testScripts.GiftCertificateTest.verifyErrorMsgsInGiftCard()'><b>verifyErrorMsgsInGiftCard</b><br>Test class: testScripts.GiftCertificateTest</td>
+<td></td>
+<td>6</td>
+<td>testScripts.GiftCertificateTest@2f2bff16</td></tr>
+<tr>
+<td title='testScripts.PaymentPageTest.verifyingCreditCardInCompleteCvvError()'><b>verifyingCreditCardInCompleteCvvError</b><br>Test class: testScripts.PaymentPageTest</td>
+<td></td>
+<td>13</td>
+<td>testScripts.PaymentPageTest@5dd903be</td></tr>
 </table><p>
 </body>
 </html>

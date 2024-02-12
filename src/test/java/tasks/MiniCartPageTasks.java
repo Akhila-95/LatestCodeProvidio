@@ -22,6 +22,7 @@ public class MiniCartPageTasks extends baseClass{
 	public static void miniCartValue() throws Exception {
         WebElement productCountInCart = driver.findElement(By.xpath("//span[contains(@class,'minicart')]"));
         String countOfMinicart = productCountInCart.getText();
+        logger.info(countOfMinicart);
         int minicartProductCountValue = Integer.parseInt(countOfMinicart);
         if(minicartProductCountValue>0) {
         	logger.info("Products are avaliable");

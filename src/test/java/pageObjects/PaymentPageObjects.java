@@ -83,14 +83,12 @@ public class PaymentPageObjects extends baseClass{
     
     @FindBy(xpath = "(//div[contains(@class,'StripeElement')])[1]")
     private List<WebElement> stripePayment;
-
     public List<WebElement> getStripePayment() {
         return stripePayment;
     }
 
     @FindBy(xpath = "//li[@data-method-id='CREDIT_CARD']")
     private List<WebElement> cyberSourcePayment;   
-
     public List<WebElement> getCyberSourcePayment() {
         return cyberSourcePayment;
     }
@@ -187,28 +185,34 @@ public class PaymentPageObjects extends baseClass{
     }
     @FindBy(xpath = "//select[@id ='expirationYear']")
     private WebElement newExpYear;
-
     public WebElement getCyberSourceExpYear() {
         return newExpYear;
     }
+    
     @FindBy(xpath = "//input[@id ='securityCode']")
     private WebElement newSceuritycode;
-
     public WebElement getCyberSourceSceuritycode() {
         return newSceuritycode;
     }
+    
+    @FindBy(xpath = "//input[@name='dwfrm_billing_creditCardFields_phone']")
+    private WebElement phoneNumberInCybersource;
+    public WebElement getPhoneNumberInCybersource() {
+        return phoneNumberInCybersource;
+    }
+    
     @FindBy(xpath = "//button[contains(@class,'add-payment')]")
     private WebElement addPaymentBtn;
-
     public WebElement getCyberSourceAddPaymentBtn() {
         return addPaymentBtn;
     }
-    @FindBy(css = "div.saved-payment-instrument")
-    private List<WebElement> savedCardsCyberSource;
     
+    @FindBy(css = "div.saved-payment-instrument")
+    private List<WebElement> savedCardsCyberSource;    
     public List<WebElement> getSavedCardsCyberSource() {
         return savedCardsCyberSource;
-    }    
+    }  
+    
     @FindBy(xpath = "//div[@class='row saved-payment-instrument selected-payment']")
     private WebElement selectedCardCyberSource;
 

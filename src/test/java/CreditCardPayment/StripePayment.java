@@ -92,7 +92,7 @@ public class StripePayment extends baseClass{
 		 	driver.switchTo().defaultContent();
 		}
 		
-	   public static void savedCardsStripe() throws InterruptedException {
+	   public static void savedCardsStripe() throws Exception {
 		// to randomaize the saved cards -randomly pick any saved card 
 	    	 List<WebElement> countOfSavedCards= driver.findElements(By.xpath("//input[@name='saved_card_id']"));
 			 if(!countOfSavedCards.isEmpty()) {

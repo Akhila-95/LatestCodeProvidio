@@ -1,18 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Providio Regression Test]">
-  <test thread-count="5" name="SmokeTest(failed)">
+  <test thread-count="5" name="Order Regression(failed)">
     <classes>
-      <class name="testScripts.EditPaymentsFromReviewOrderPageTest">
+      <class name="testScripts.ProductsAndItsOrderTest">
         <methods>
           <include name="setUpforReport"/>
-          <include name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal"/>
+          <include name="VerifyingPlaceOrderWithBuyNowButton"/>
+          <include name="VerifyingPlaceOrderWithBuyNowPopUp"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
+          <include name="VerifyingPlaceOrderWithCreditCardWhenOnlyGcInCart"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testScripts.ProductsAndItsOrderTest -->
+      <class name="browser.launchBrowsering">
+        <methods>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- browser.launchBrowsering -->
+      <class name="testScripts.EditPaymentsFromReviewOrderPageTest">
+        <methods>
+          <include name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate"/>
+          <include name="setUpforReport"/>
+          <include name="verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToPaypal"/>
+          <include name="verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCreditCard"/>
+          <include name="verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificate"/>
+          <include name="verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard"/>
+          <include name="afterMethod"/>
+          <include name="verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToPaypal"/>
+          <include name="setUp"/>
           <include name="afterClass"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testScripts.EditPaymentsFromReviewOrderPageTest -->
+      <class name="testScripts.ReviewOrderTest">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="verifyingTheEditBillingAddressFromReviewOrderPageAndPlaceOrder"/>
+          <include name="verifyingTheEditShippingAddressFromReviewOrderPageAndPlaceOrder"/>
+          <include name="verifyingEditPhoneNumberInBillingAddressFromReviewOrderPageAndPlaceOrder"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="verifyingTheEditPhoneNumInShippingAddressFromReviewOrderPageAndPlaceOrder"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testScripts.ReviewOrderTest -->
+      <class name="GiftCertificateFunctionalties.gcInCart">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="VerifyingPlaceOrderOfGiftCertificateAndSimpleProductInCartWithPaypal"/>
+          <include name="VerifyingPlaceOrderOfGiftCertificateAndSimpleProductInCartWithCreditCard"/>
+          <include name="VerifyingPlaceOrderWithCreditCardWhenOnlyGcInCart"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
+          <include name="VerifyingPlaceOrderWithPaypalWhenOnlyGcInCart"/>
+          <include name="VerifyingNoVisibilityOfGiftCertificateSectionWhenGcInCart"/>
+        </methods>
+      </class> <!-- GiftCertificateFunctionalties.gcInCart -->
     </classes>
-  </test> <!-- SmokeTest(failed) -->
+  </test> <!-- Order Regression(failed) -->
 </suite> <!-- Failed suite [Providio Regression Test] -->

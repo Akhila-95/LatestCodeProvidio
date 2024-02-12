@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>SmokeTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 09 18:12:45 IST 2024</td>
+<td>Started on:</td><td>Fri Feb 09 18:16:54 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18673 ms)</td>
+<tr><td>Total time:</td><td>1850 seconds (1850145 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class, &apos;product-detail product&apos;)]&quot;}
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard()'><b>verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[@class=&apos;order-thank-you-msg&apos;]&quot;}
   (Session info: chrome=121.0.6167.161)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4646d89c577b6b4ca3d02f32f919b102, findElement {using=xpath, value=//div[contains(@class, &apos;product-detail product&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49644}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49644/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4646d89c577b6b4ca3d02f32f919b102
+Command: [f67b207839018af91d7cdaea2f9e75f0, findElement {using=xpath, value=//h2[@class=&apos;order-thank-you-msg&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57670}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57670/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f67b207839018af91d7cdaea2f9e75f0
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -97,31 +97,22 @@ Session ID: 4646d89c577b6b4ca3d02f32f919b102
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at validations.ProductListingPageValidations.verifyPLPProductClick(ProductListingPageValidations.java:87)
-	at tasks.ProductListingPageTasks.productclick(ProductListingPageTasks.java:84)
-	at tasks.ProductDetailPageTasks.addtoCart(ProductDetailPageTasks.java:24)
-	at tasks.MiniCartPageTasks.miniCartValue(MiniCartPageTasks.java:29)
-	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
-	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
-	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
-	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
-	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:28)
-	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:135)
-	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:261)
-	at tasks.EditPaymentsFromReviewOrderPageTasks.editCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTasks.java:90)
-	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTest.java:74)
+	at validations.PaymentPageValidation.VerifiedThatPlaceOrderClick(PaymentPageValidation.java:125)
+	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:117)
+	at tasks.ReviewOrderPageTask.editPaymentFromGiftCertificateToCreditCard(ReviewOrderPageTask.java:386)
+	at tasks.EditPaymentsFromReviewOrderPageTasks.editGiftCertificateToCredit(EditPaymentsFromReviewOrderPageTasks.java:25)
+	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard(EditPaymentsFromReviewOrderPageTest.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1095290435", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1095290435'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class, &apos;product-detail product&apos;)]&quot;}
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace855329415", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace855329415'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h2[@class=&apos;order-thank-you-msg&apos;]&quot;}
   (Session info: chrome=121.0.6167.161)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4646d89c577b6b4ca3d02f32f919b102, findElement {using=xpath, value=//div[contains(@class, &apos;product-detail product&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49644}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49644/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4646d89c577b6b4ca3d02f32f919b102
+Command: [f67b207839018af91d7cdaea2f9e75f0, findElement {using=xpath, value=//h2[@class=&apos;order-thank-you-msg&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57670}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57670/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f67b207839018af91d7cdaea2f9e75f0
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -138,20 +129,11 @@ Session ID: 4646d89c577b6b4ca3d02f32f919b102
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at validations.ProductListingPageValidations.verifyPLPProductClick(ProductListingPageValidations.java:87)
-	at tasks.ProductListingPageTasks.productclick(ProductListingPageTasks.java:84)
-	at tasks.ProductDetailPageTasks.addtoCart(ProductDetailPageTasks.java:24)
-	at tasks.MiniCartPageTasks.miniCartValue(MiniCartPageTasks.java:29)
-	at tasks.HomePageTasks.miniCartBtnClick(HomePageTasks.java:97)
-	at tasks.ViewCartPageTasks.viewCartpage(ViewCartPageTasks.java:40)
-	at tasks.CheckOutPageTasks.CheckOutPageLoaded(CheckOutPageTasks.java:33)
-	at tasks.CheckOutPageTasks.GuestMailCheckOut(CheckOutPageTasks.java:39)
-	at tasks.ShippingPageTasks.shippingPage(ShippingPageTasks.java:28)
-	at tasks.ShippingPageTasks.enterValidAddress(ShippingPageTasks.java:135)
-	at tasks.PaymentPageTasks.paymentPageView(PaymentPageTasks.java:38)
-	at tasks.PaymentPageTasks.creditCardWithValidDetails(PaymentPageTasks.java:261)
-	at tasks.EditPaymentsFromReviewOrderPageTasks.editCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTasks.java:90)
-	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal(EditPaymentsFromReviewOrderPageTest.java:74)
+	at validations.PaymentPageValidation.VerifiedThatPlaceOrderClick(PaymentPageValidation.java:125)
+	at tasks.ReviewOrderPageTask.placeOrder(ReviewOrderPageTask.java:117)
+	at tasks.ReviewOrderPageTask.editPaymentFromGiftCertificateToCreditCard(ReviewOrderPageTask.java:386)
+	at tasks.EditPaymentsFromReviewOrderPageTasks.editGiftCertificateToCredit(EditPaymentsFromReviewOrderPageTasks.java:25)
+	at testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToCreditCard(EditPaymentsFromReviewOrderPageTest.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -181,7 +163,7 @@ Session ID: 4646d89c577b6b4ca3d02f32f919b102
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>7</td>
+<td>116</td>
 <td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -193,10 +175,70 @@ Session ID: 4646d89c577b6b4ca3d02f32f919b102
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>155</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>139</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>149</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCreditCard()'><b>verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCreditCard</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>140</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>133</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCreditCardToCombinationOfGiftCertificateAndPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>158</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToCreditCard()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndCreditCardToCreditCard</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>147</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToGiftCertificate()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToGiftCertificate</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>158</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromGiftCertificateToPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>78</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificateAndPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromPaypalToGiftCertificateAndPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>152</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
 <td title='browser.launchBrowsering.verifyHomePageLaunching()'><b>verifyHomePageLaunching</b><br>Test class: browser.launchBrowsering</td>
 <td></td>
-<td>6</td>
+<td>7</td>
 <td>browser.launchBrowsering@55e42449</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToPaypal()'><b>verifyingTheEditInPaymentInReviewOrderPageFromCombinationOfGiftCertificateAndPaypalToPaypal</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>152</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
+<tr>
+<td title='testScripts.EditPaymentsFromReviewOrderPageTest.verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCombinationOfGiftCertificateAndCreditCard()'><b>verifyingTheEditInPaymentInReviewOrderPageFromPaypalToCombinationOfGiftCertificateAndCreditCard</b><br>Test class: testScripts.EditPaymentsFromReviewOrderPageTest</td>
+<td></td>
+<td>155</td>
+<td>testScripts.EditPaymentsFromReviewOrderPageTest@26cb5207</td></tr>
 </table><p>
 </body>
 </html>

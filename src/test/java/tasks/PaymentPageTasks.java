@@ -152,13 +152,13 @@ public class PaymentPageTasks extends baseClass {
 			test.pass("No edit button to edit cutomer info for registered user");
 		}	
 		
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 	
 	public static void updateBillingAddress() throws Exception {
 		paymentPageView();
 		previousBillingAddress=Actionsss.getTextOfElement(paymentPage.getUpdateAddressBtnForBillingAddress());		
 		Thread.sleep(3000);
-		//Actionsss.doubleClick(cop2.getUpdateAddressBtn());
 		Actionsss.javascriptClick(shippingPage.getUpdateAddressBtn());
 		Actionsss.click(shippingPage.getUpdateAddressBtn());
 		Thread.sleep(1000);
@@ -170,7 +170,7 @@ public class PaymentPageTasks extends baseClass {
 		ReviewOrderPageTask.placeOrder();
 		OrderPageValidation.validatePlacetheOrderPage();
 		OrderPageValidation.orderNumberAndOrderDate();
-		Actionsss.click(homePage.clickOnLogo());
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 	public static void addNewBillingAddress() throws Exception {
 		paymentPageView();
@@ -187,7 +187,7 @@ public class PaymentPageTasks extends baseClass {
 		ReviewOrderPageTask.placeOrder();
 		OrderPageValidation.validatePlacetheOrderPage();
 		OrderPageValidation.orderNumberAndOrderDate();
-		Actionsss.click(homePage.clickOnLogo());
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	/*	String newAddress= reviewOrder.getBillingAddress().getAttribute("value");
 		editedBillingAddress=newAddress;
 		cop3v.addNewBillingAddressValidation();
@@ -209,7 +209,9 @@ public class PaymentPageTasks extends baseClass {
 		paymentPageView();
 		Actionsss.clearText(paymentPage.getBillingPhoneNumber());
 		CreditCardDetails.creditCardDetails();	
+		Thread.sleep(2000);
 		PaymentPageValidation.billingPhoneNumberErrorValidation();
+		Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 	
 	public static void allErrorsInCreditCard() throws Exception {
@@ -265,6 +267,8 @@ public class PaymentPageTasks extends baseClass {
 	public static void  addNewCreditCard() throws Exception {
 			paymentPageView();
 			CreditCardDetails.addNewCardThoughExistingCards();	
+			ReviewOrderPageTask.getPlaceOrder();
+			Actionsss.javascriptClick(homePage.clickOnLogo());
 	}
 	
 	
@@ -471,7 +475,7 @@ public class PaymentPageTasks extends baseClass {
 			    		Actionsss.scrollWindowsByPixel(100);	
 			    		Thread.sleep(3000);
 			    		Actionsss.click(paymentPage.getReviewOrderBtn());					    		 	    		
-			    		paymentPage.getReviewOrderBtn();
+			    	//	paymentPage.getReviewOrderBtn();
 			    		ReviewOrderPageValidation.VerifyingReviewOrderBtn();
 			    	}
 	    	}else {
@@ -481,7 +485,8 @@ public class PaymentPageTasks extends baseClass {
 					if(Actionsss.displayElement(paymentPage.getReviewOrderBtn())) {
 						Thread.sleep(1000);
 						Actionsss.javascriptClick(paymentPage.getReviewOrderBtn());
-						Thread.sleep(3000);							
+						Thread.sleep(3000);	
+						ReviewOrderPageValidation.VerifyingReviewOrderBtn();
 					}
 				}
 	    	}

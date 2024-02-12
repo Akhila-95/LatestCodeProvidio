@@ -2,14 +2,16 @@ package PaymentProccess;
 
 import com.providio.testcases.baseClass;
 
+import data.AddressSelection;
 import functionality.Actionsss;
 import pageObjects.CheckOutPage;
 import pageObjects.MiniCartPage;
-import pageObjects.PaymentPageObjects;
+import pageObjects.ShippingPageObject;
 import pageObjects.ViewCartPage;
 import pageObjects.homepage;
 import validations.CheckOutPageValidation;
 import validations.MiniCartValidation;
+import validations.ShippingPageValidation;
 
 public class CommonProccessUptoCheckout extends baseClass {
 	
@@ -17,8 +19,9 @@ public class CommonProccessUptoCheckout extends baseClass {
 	private static ViewCartPage VCP = new ViewCartPage(driver);
 	private static MiniCartPage MCP = new MiniCartPage(driver);
 	private static CheckOutPage CP = new CheckOutPage(driver);
+	private static ShippingPageObject shippingPage = new ShippingPageObject(driver);
 	
-	public static void commonProccess() throws Exception {
+	public static void commonCheckoutProccess() throws Exception {
 		
 		Actionsss.click(homePage.getMiniCartLink());
     	MiniCartValidation.VerifiedThatMinicartBtnClick();
@@ -35,12 +38,27 @@ public class CommonProccessUptoCheckout extends baseClass {
 			Actionsss.sendKeys(CP.getSelectGuestEmailInput(), guestmail, "email");
 			Thread.sleep(1000);
 			Actionsss.CombinedClick(CP.getSelectContinueasGuesttBtn());
-			 CheckOutPageValidation.verifyingThatGuestLoginForGc();
-			
+			 CheckOutPageValidation.verifyingThatGuestLoginForGc();			
 		}else {
 			test.info("User is registered");
+		}		
+		addressForm();			
+	}
+	
+	public static void addressForm() throws InterruptedException, Exception {
+		Thread.sleep(1000);
+		if(Actionsss.elementSize(shippingPage.getshippingPageList()) && Actionsss.elementSize(shippingPage.getNextPaymentButtonList())) {
+			if(Actionsss.displayElement(shippingPage.getshippingPage()) && Actionsss.displayElement(shippingPage.getNextPaymentButton())) {
+				logger.info("gc and products in cart");
+				AddressSelection.Address();
+			}
+		}else {
+			AddressSelection.selectBillingAddress();		
 		}
 		
-	//	AddressSelection.billingAddress();
+		Thread.sleep(2000);
+		Actionsss.CombinedClick(shippingPage.getNextPaymentButton());	
+		Thread.sleep(1000);
+		ShippingPageValidation.VerifiedThatNextpaymentBtnClick();
 	}
 }

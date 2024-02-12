@@ -12,6 +12,7 @@ import functionality.Actionsss;
 import pageObjects.OrderPageDetails;
 import pageObjects.PaymentPageObjects;
 import pageObjects.homepage;
+import tasks.PaymentPageTasks;
 import validations.OrderPageValidation;
 import validations.PaymentPageValidation;
 
@@ -38,7 +39,8 @@ public class CheckOutPaypal extends baseClass{
 				logger.info("A click to Enter into paypal");				
 				PaypalMethod.paypalPopup();
 		    	logger.info("Clicked on paypal button");	
-		    	Thread.sleep(1000);
+		    	Thread.sleep(1000);		    	
+		    	PaymentPageTasks.clickReviewOrderButton();
 		    /*	if(Actionsss.elementSize(orderPage.getOrderThankMessageList())) {	
 					if(Actionsss.displayElement(orderPage.getOrderThankMessage())) {	
 					logger.info("Salesforce payment activated");			

@@ -29,7 +29,7 @@ public class CreditCardDetails extends baseClass{
 			}else if(Actionsss.elementSize(paymentPage.getAdyenPayment())) {				
 				AdyenPayment.adyen();
 			}			
-				
+				Thread.sleep(1000);
 	    		PaymentPageTasks.clickReviewOrderButton();
 	    	
 		
@@ -56,6 +56,9 @@ public class CreditCardDetails extends baseClass{
 			}else {
 				test.pass("No add new payment is configured in adyen payment");
 			}
+			
+			PaymentPageTasks.clickReviewOrderButton();
+			
 		}else {
 			test.info("User is guest check-in ");
 			test.pass("No User will have saved cards ");

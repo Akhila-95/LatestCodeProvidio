@@ -275,9 +275,9 @@ public class attributesSelection extends baseClass{
    public static void selectExtendedWarranty	() {
 	 
 	 // Locate the dropdown element.
-       List<WebElement> dropdownElement = driver.findElements(By.className("options-select"));
+       List<WebElement> dropdownElement = driver.findElements(By.cssSelector("select.options-select"));
        if(!dropdownElement.isEmpty()) {
-	        WebElement dropdownElements = driver.findElement(By.className("options-select"));
+	        WebElement dropdownElements = driver.findElement(By.cssSelector("select.options-select"));
 	        // Create a Select object from the dropdown element.
 	        Select select = new Select(dropdownElements);
 	        // Get all available options in the dropdown.

@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.ShippingPageTest">
+      <class name="OrderRegression.PlaceOrderWithBuyNowPopUp">
         <methods>
           <include name="setUpforReport"/>
-          <include name="verifyingAddNewShippingAddressAndPlaceOrder"/>
-          <include name="afterMethod"/>
+          <include name="verifyingPlacingOrderWithBuyNowPopUp"/>
           <include name="setUp"/>
+          <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testScripts.ShippingPageTest -->
+      </class> <!-- OrderRegression.PlaceOrderWithBuyNowPopUp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
